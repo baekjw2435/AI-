@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 # 끄투 봇
-# !공격 <글자>  → ⚡한방 / 🔥준공격 / 🎣유도  3분류 (각각 별도 박스)
+# !공격 <글자>  → ⚡한방 / 🔥준공격 / 🎣유도  (각각 별도 박스)
 # !한방 <글자>  → 한방만
-# 규칙: 깊이는 무시(깊이1만 한방). 준공격/유도 = 그 글자로 시작 + 끝글자가 준공격/유도 목록.
+# !장문 <글자>  → 그 글자로 시작하는 가장 긴 단어 TOP 30
+# 규칙: 깊이 무시(깊이1만 한방). 준공격/유도 = 시작글자 + 끝글자가 준공격/유도 목록.
 
-import os, re, glob
+import os, re, glob, heapq
 import discord
 
-# ===== 설정: 특정 채널만 답하려면 채널 ID 입력 (0 = 전체 채널) =====
+# ===== 특정 채널만 답하려면 채널 ID 입력 (0 = 전체) =====
 CHANNEL_ID = 0
-# ==============================================================
+# =====================================================
 
 CHO = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ']
 def dec(ch):
@@ -32,12 +33,12 @@ def find_file(pats):
         if hit: return hit[0]
     return None
 
-# ---- 공격 데이터 (한방용) ----
+# ---- 공격 데이터 (한방) ----
 ATTACK = {}
 def load_attack():
     path = find_file(["attack_data.txt", "끄글_공격*.txt", "*공격*.txt"])
     if not path:
-        print("[경고] attack_data.txt 를 못 찾음"); return
+        print("[경고] attack_data.txt 못 찾음"); return
     sec = None
     with open(path, encoding="utf-8") as f:
         for line in f:
@@ -53,12 +54,13 @@ def load_attack():
                     ATTACK[sec][w] = d
     print(f"[로드] 공격 {len(ATTACK)}글자")
 
-# ---- 준공격/유도 (끝글자 분류) : 첫글자 -> [(단어, 'J'/'Y')] ----
+# ---- 준공격/유도 (끝글자 분류): 첫글자 -> [(단어,'J'/'Y')] ----
 FIRST = {}
+ENDSYL = {}   # 끝글자 -> 'J'(준공격)/'Y'(유도)
 def load_endcat():
     path = find_file(["endcat.txt"])
     if not path:
-        print("[경고] endcat.txt 를 못 찾음"); return
+        print("[경고] endcat.txt 못 찾음"); return
     n = 0
     with open(path, encoding="utf-8") as f:
         for line in f:
@@ -66,8 +68,31 @@ def load_endcat():
             if '\t' not in line: continue
             w, cat = line.split('\t', 1)
             if not w: continue
-            FIRST.setdefault(w[0], []).append((w, cat)); n += 1
+            FIRST.setdefault(w[0], []).append((w, cat)); ENDSYL[w[-1]] = cat; n += 1
     print(f"[로드] 준공격/유도 {n}단어")
+
+# ---- 장문 (우샘 읽으며 글자별 최장 30개만 메모리 유지) ----
+LONGEST = {}
+def load_words():
+    path = find_file(["words.txt", "끄글_단어_목록*.txt", "끄글_단어*.txt"])
+    if not path:
+        print("[경고] words.txt 없음 (장문 꺼짐)"); return
+    KEEP = 30
+    heaps = {}; n = 0
+    with open(path, encoding="utf-8") as fp:
+        for line in fp:
+            w = line.strip()
+            if not w: continue
+            o = ord(w[0]) - 0xAC00
+            if o < 0 or o > 11171: continue
+            h = heaps.setdefault(w[0], [])
+            key = (len(w), w)
+            if len(h) < KEEP: heapq.heappush(h, key)
+            elif key > h[0]: heapq.heapreplace(h, key)
+            n += 1
+    for syl, h in heaps.items():
+        LONGEST[syl] = [w for _, w in sorted(h, reverse=True)]
+    print(f"[로드] 장문 {len(LONGEST)}글자 (원본 {n}단어, 글자별 최장 {KEEP})")
 
 def attacks_of(syl):
     m = {}
@@ -79,17 +104,20 @@ def attacks_of(syl):
 
 def analyze(syl):
     merged = attacks_of(syl)
-    hanbang = {w for w, d in merged.items() if d == 1}
-    cand = []
+    hb, gk, jk, yd = set(), set(), set(), set()
+    # 공격 데이터: 깊이1=한방, 깊이3+는 끝글자가 준공격/유도면 그쪽, 아니면 공격
+    for w, d in merged.items():
+        if d == 1:
+            hb.add(w)
+        else:
+            c = ENDSYL.get(w[-1])
+            (jk if c == 'J' else yd if c == 'Y' else gk).add(w)
+    # 끝글자 분류 단어(공격 아닌 것 포함): 한방/공격 아니면 준공격/유도로
     for k in (syl, dueum(syl)):
-        if k: cand += FIRST.get(k, [])
-    junak, yudo, seen = [], [], set()
-    for w, cat in cand:
-        if w in seen: continue
-        seen.add(w)
-        if w in hanbang: continue
-        (junak if cat == 'J' else yudo).append(w)
-    return sorted(hanbang), sorted(junak), sorted(yudo)
+        for w, cat in FIRST.get(k, []):
+            if w in hb or w in gk: continue
+            (jk if cat == 'J' else yd).add(w)
+    return sorted(hb), sorted(gk), sorted(jk), sorted(yd)
 
 def join_cap(words, cap):
     out, used = [], 0
@@ -101,16 +129,17 @@ def join_cap(words, cap):
     return ", ".join(out)
 
 def embed_analysis(syl):
-    hb, jk, yd = analyze(syl)
-    if not (hb or jk or yd):
+    hb, gk, jk, yd = analyze(syl)
+    if not (hb or gk or jk or yd):
         return discord.Embed(title=f"{syl} → 해당 단어 없음",
-                             description="한방·준공격·유도 모두 없어 (양보)", color=0x9AA4B2)
+                             description="한방·공격·준공격·유도 모두 없어 (양보)", color=0x9AA4B2)
     e = discord.Embed(title=f"🎯  '{syl}' 분석",
-        description=f"⚡ 한방 **{len(hb)}**    ·    🔥 준공격 **{len(jk)}**    ·    🎣 유도 **{len(yd)}**",
+        description=f"⚡ 한방 **{len(hb)}**  ·  🗡️ 공격 **{len(gk)}**  ·  🔥 준공격 **{len(jk)}**  ·  🎣 유도 **{len(yd)}**",
         color=0xC2F74A)
-    if hb: e.add_field(name=f"⚡ 한방 · {len(hb)}개", value=join_cap(hb, 1000), inline=False)
-    if jk: e.add_field(name=f"🔥 준공격 · {len(jk)}개", value=join_cap(jk, 1000), inline=False)
-    if yd: e.add_field(name=f"🎣 유도 · {len(yd)}개", value=join_cap(yd, 1000), inline=False)
+    if hb: e.add_field(name=f"⚡ 한방 · {len(hb)}개", value=join_cap(hb, 950), inline=False)
+    if gk: e.add_field(name=f"🗡️ 공격 · {len(gk)}개", value=join_cap(gk, 950), inline=False)
+    if jk: e.add_field(name=f"🔥 준공격 · {len(jk)}개", value=join_cap(jk, 950), inline=False)
+    if yd: e.add_field(name=f"🎣 유도 · {len(yd)}개", value=join_cap(yd, 950), inline=False)
     return e
 
 def embed_hanbang(syl):
@@ -120,6 +149,17 @@ def embed_hanbang(syl):
         return discord.Embed(title=f"{syl} → 한방 없음", color=0x9AA4B2)
     return discord.Embed(title=f"⚡  '{syl}' 한방 · {len(hb)}개",
                          description=join_cap(hb, 1800), color=0xFF6B6B)
+
+def embed_jangmun(syl):
+    words = []
+    for k in (syl, dueum(syl)):
+        if k: words += LONGEST.get(k, [])
+    words = sorted(set(words), key=lambda w: (-len(w), w))[:30]
+    if not words:
+        return discord.Embed(title=f"{syl} → 단어 없음", color=0x9AA4B2)
+    lines = [f"**{i+1}.** {w}  `{len(w)}자`" for i, w in enumerate(words)]
+    return discord.Embed(title=f"📏  '{syl}' 로 시작하는 최장 단어 TOP {len(words)}",
+                         description="\n".join(lines), color=0x5AC8FA)
 
 intents = discord.Intents.default(); intents.message_content = True
 client = discord.Client(intents=intents)
@@ -148,10 +188,19 @@ async def on_message(msg):
         s, err = first_syllable(c[len("!한방"):])
         if err: await msg.channel.send(err)
         else:   await msg.channel.send(embed=embed_hanbang(s))
+    elif c.startswith("!장문"):
+        s, err = first_syllable(c[len("!장문"):])
+        if err: await msg.channel.send(err)
+        else:   await msg.channel.send(embed=embed_jangmun(s))
     elif c in ("!도움", "!help", "!명령어"):
-        await msg.channel.send("**끄투 봇**\n`!공격 <글자>` — ⚡한방 / 🔥준공격 / 🎣유도\n`!한방 <글자>` — 한방만\n예: `!공격 기`, `!공격 폼`")
+        await msg.channel.send(
+            "**끄투 봇**\n"
+            "`!공격 <글자>` — ⚡한방 / 🔥준공격 / 🎣유도\n"
+            "`!한방 <글자>` — 한방만\n"
+            "`!장문 <글자>` — 그 글자로 시작하는 가장 긴 단어\n"
+            "예: `!공격 기`, `!장문 기`")
 
-load_attack(); load_endcat()
+load_attack(); load_endcat(); load_words()
 token = os.environ.get("DISCORD_TOKEN")
 if not token:
     print("[에러] 환경변수 DISCORD_TOKEN 없음 (Railway Variables에 넣어줘)")
