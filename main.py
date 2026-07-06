@@ -13,7 +13,6 @@ import discord
 CHANNEL_ID = 0
 # ==========================================
 
-# ---- 한글 유틸 (초성/두음) ----
 CHO = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ']
 
 def dec(ch):
@@ -25,15 +24,14 @@ def dueum(ch):
     if not d:
         return None
     c, j, k = d
-    if c == 5:  # ㄹ
-        if j in (2, 6, 7, 12, 17, 20): return chr(0xAC00 + (11 * 21 + j) * 28 + k)  # ㄹ→ㅇ
-        if j in (0, 1, 8, 11, 13, 18): return chr(0xAC00 + (2 * 21 + j) * 28 + k)   # ㄹ→ㄴ
-    elif c == 2:  # ㄴ
-        if j in (6, 12, 17, 20): return chr(0xAC00 + (11 * 21 + j) * 28 + k)         # ㄴ→ㅇ
+    if c == 5:
+        if j in (2, 6, 7, 12, 17, 20): return chr(0xAC00 + (11 * 21 + j) * 28 + k)
+        if j in (0, 1, 8, 11, 13, 18): return chr(0xAC00 + (2 * 21 + j) * 28 + k)
+    elif c == 2:
+        if j in (6, 12, 17, 20): return chr(0xAC00 + (11 * 21 + j) * 28 + k)
     return None
 
-# ---- 공격 데이터 로드 ----
-ATTACK = {}  # 글자 -> {단어: 최소깊이}
+ATTACK = {}
 
 def find_data_file():
     for pat in ["attack_data.txt", "끄글_공격*.txt", "*공격*.txt"]:
@@ -67,7 +65,6 @@ def load():
     print(f"[로드] {len(ATTACK)} 글자, {total} 단어  (파일: {path})")
 
 def attacks_of(syl):
-    """받은 글자의 공격 단어 (두음 합쳐 중복 제거). {단어: 깊이}"""
     merged = {}
     for k in (syl, dueum(syl)):
         if not k:
@@ -77,7 +74,6 @@ def attacks_of(syl):
                 merged[w] = d
     return merged
 
-# ---- 응답 포맷 ----
 def join_cap(words, cap):
     out, used = [], 0
     for w in words:
@@ -87,28 +83,30 @@ def join_cap(words, cap):
         out.append(w); used += add
     return ", ".join(out)
 
-def reply_gongkyeok(syl):
+def embed_gongkyeok(syl):
     merged = attacks_of(syl)
     if not merged:
-        return f"**{syl}** → 공격 단어 없음 (양보)"
+        return discord.Embed(title=f"{syl} → 공격 단어 없음",
+                             description="이 글자는 공격 단어가 없어 (양보)", color=0x9AA4B2)
     hanbang = sorted(w for w, d in merged.items() if d == 1)
     normal  = sorted(w for w, d in merged.items() if d != 1)
-    head = f"**{syl}** → 공격 {len(merged)}개" + (f"  ·  ⚡한방 {len(hanbang)}개" if hanbang else "")
-    lines = [head]
+    e = discord.Embed(title=f"🎯  '{syl}' 공격 단어",
+                      description=f"총 **{len(merged)}**개      ⚡ 한방 **{len(hanbang)}**개",
+                      color=0xC2F74A)
     if hanbang:
-        lines.append("⚡ **한방**: " + join_cap(hanbang, 800))
+        e.add_field(name=f"⚡ 한방 · {len(hanbang)}개", value=join_cap(hanbang, 1000), inline=False)
     if normal:
-        lines.append("• 공격: " + join_cap(normal, 900))
-    return "\n".join(lines)
+        e.add_field(name=f"공격 · {len(normal)}개", value=join_cap(normal, 1000), inline=False)
+    return e
 
-def reply_hanbang(syl):
+def embed_hanbang(syl):
     merged = attacks_of(syl)
     hanbang = sorted(w for w, d in merged.items() if d == 1)
     if not hanbang:
-        return f"**{syl}** → 한방 단어 없음"
-    return f"**{syl}** ⚡ 한방 {len(hanbang)}개\n" + join_cap(hanbang, 1800)
+        return discord.Embed(title=f"{syl} → 한방 단어 없음", color=0x9AA4B2)
+    return discord.Embed(title=f"⚡  '{syl}' 한방 단어 · {len(hanbang)}개",
+                         description=join_cap(hanbang, 1800), color=0xFF6B6B)
 
-# ---- 디스코드 ----
 intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
@@ -136,10 +134,12 @@ async def on_message(msg):
 
     if content.startswith("!공격"):
         syl, err = first_syllable(content[len("!공격"):])
-        await msg.channel.send(err if err else reply_gongkyeok(syl))
+        if err: await msg.channel.send(err)
+        else:   await msg.channel.send(embed=embed_gongkyeok(syl))
     elif content.startswith("!한방"):
         syl, err = first_syllable(content[len("!한방"):])
-        await msg.channel.send(err if err else reply_hanbang(syl))
+        if err: await msg.channel.send(err)
+        else:   await msg.channel.send(embed=embed_hanbang(syl))
     elif content in ("!도움", "!help", "!명령어"):
         await msg.channel.send(
             "**끄투 공격 봇**\n"
@@ -148,7 +148,6 @@ async def on_message(msg):
             "예: `!공격 깐`, `!한방 가`"
         )
 
-# ---- 실행 ----
 load()
 token = os.environ.get("DISCORD_TOKEN")
 if not token:
