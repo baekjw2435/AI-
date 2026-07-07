@@ -94,6 +94,44 @@ def load_words():
         LONGEST[syl] = [w for _, w in sorted(h, reverse=True)]
     print(f"[로드] 장문 {len(LONGEST)}글자 (원본 {n}단어, 글자별 최장 {KEEP})")
 
+# ---- 중간말잇기 공격 데이터 ----
+MID_ATTACK = {}
+def load_mid():
+    path = find_file(["mid_attack.txt", "끄글_공격_단어_2026070709*.txt"])
+    if not path:
+        print("[경고] mid_attack.txt 없음 (중간말잇기 꺼짐)"); return
+    sec = None
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            s = line.strip()
+            if s.startswith('[') and s.endswith(']'):
+                sec = s[1:-1]; MID_ATTACK.setdefault(sec, {}); continue
+            m = re.match(r'깊이\s*(\d+)\s*[:：]\s*(.*)', s)
+            if not m or sec is None: continue
+            d = int(m.group(1))
+            for w in m.group(2).split(','):
+                w = w.strip()
+                if w and (w not in MID_ATTACK[sec] or d < MID_ATTACK[sec][w]):
+                    MID_ATTACK[sec][w] = d
+    print(f"[로드] 중간 공격 {len(MID_ATTACK)}글자")
+
+# ---- 돌림 (첫글자 -> set(단어)) ----
+DOLLIM = {}
+def load_dollim():
+    path = find_file(["dollim.txt", "끄글_돌림*.txt"])
+    if not path:
+        print("[경고] dollim.txt 없음 (돌림 꺼짐)"); return
+    n = 0
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            for w in re.split(r'[,\t]', line.strip()):
+                w = w.strip()
+                if not w: continue
+                o = ord(w[0]) - 0xAC00
+                if o < 0 or o > 11171: continue
+                DOLLIM.setdefault(w[0], set()).add(w); n += 1
+    print(f"[로드] 돌림 {len(DOLLIM)}글자 ({n}개)")
+
 def attacks_of(syl):
     m = {}
     for k in (syl, dueum(syl)):
@@ -101,6 +139,24 @@ def attacks_of(syl):
         for w, d in ATTACK.get(k, {}).items():
             if w not in m or d < m[w]: m[w] = d
     return m
+
+def attacks_of_mid(syl):
+    m = {}
+    for k in (syl, dueum(syl)):
+        if not k: continue
+        for w, d in MID_ATTACK.get(k, {}).items():
+            if w not in m or d < m[w]: m[w] = d
+    return m
+
+def analyze_mid(syl):
+    merged = attacks_of_mid(syl)
+    hb = {w for w, d in merged.items() if d == 1}
+    gk = {w for w, d in merged.items() if d != 1}
+    dl = set()
+    for k in (syl, dueum(syl)):
+        if k: dl |= DOLLIM.get(k, set())
+    dl -= hb; dl -= gk
+    return sorted(hb), sorted(gk), sorted(dl)
 
 def analyze(syl):
     merged = attacks_of(syl)
@@ -161,6 +217,19 @@ def embed_jangmun(syl):
     return discord.Embed(title=f"📏  '{syl}' 로 시작하는 최장 단어 TOP {len(words)}",
                          description="\n".join(lines), color=0x5AC8FA)
 
+def embed_mid(syl):
+    hb, gk, dl = analyze_mid(syl)
+    if not (hb or gk or dl):
+        return discord.Embed(title=f"{syl} → 해당 단어 없음",
+                             description="중간말잇기 한방·공격·돌림 모두 없어 (양보)", color=0x9AA4B2)
+    e = discord.Embed(title=f"🔗  '{syl}' 중간말잇기",
+        description=f"⚡ 한방 **{len(hb)}**    ·    🗡️ 공격 **{len(gk)}**    ·    🔄 돌림 **{len(dl)}**",
+        color=0xB07CFF)
+    if hb: e.add_field(name=f"⚡ 한방 · {len(hb)}개", value=join_cap(hb, 950), inline=False)
+    if gk: e.add_field(name=f"🗡️ 공격 · {len(gk)}개", value=join_cap(gk, 950), inline=False)
+    if dl: e.add_field(name=f"🔄 돌림 · {len(dl)}개", value=join_cap(dl, 950), inline=False)
+    return e
+
 intents = discord.Intents.default(); intents.message_content = True
 client = discord.Client(intents=intents)
 
@@ -192,15 +261,20 @@ async def on_message(msg):
         s, err = first_syllable(c[len("!장문"):])
         if err: await msg.channel.send(err)
         else:   await msg.channel.send(embed=embed_jangmun(s))
+    elif c.startswith("!중간"):
+        s, err = first_syllable(c[len("!중간"):])
+        if err: await msg.channel.send(err)
+        else:   await msg.channel.send(embed=embed_mid(s))
     elif c in ("!도움", "!help", "!명령어"):
         await msg.channel.send(
             "**끄투 봇**\n"
-            "`!공격 <글자>` — ⚡한방 / 🔥준공격 / 🎣유도\n"
+            "`!공격 <글자>` — 끝말잇기 ⚡한방/🗡️공격/🔥준공격/🎣유도\n"
+            "`!중간 <글자>` — 중간말잇기 ⚡한방/🗡️공격/🔄돌림\n"
             "`!한방 <글자>` — 한방만\n"
-            "`!장문 <글자>` — 그 글자로 시작하는 가장 긴 단어\n"
-            "예: `!공격 기`, `!장문 기`")
+            "`!장문 <글자>` — 가장 긴 단어\n"
+            "예: `!공격 기`, `!중간 백`, `!장문 기`")
 
-load_attack(); load_endcat(); load_words()
+load_attack(); load_endcat(); load_words(); load_mid(); load_dollim()
 token = os.environ.get("DISCORD_TOKEN")
 if not token:
     print("[에러] 환경변수 DISCORD_TOKEN 없음 (Railway Variables에 넣어줘)")
