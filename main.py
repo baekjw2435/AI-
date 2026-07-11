@@ -73,6 +73,7 @@ def load_endcat():
 
 # ---- 장문 (우샘 읽으며 글자별 최장 30개만 메모리 유지) ----
 LONGEST = {}
+STARTCOUNT = {}   # 글자 -> 그 글자로 시작하는 단어 수 (이을 수 있는 수)
 def load_words():
     path = find_file(["words.txt", "끄글_단어_목록*.txt", "끄글_단어*.txt"])
     if not path:
@@ -85,6 +86,7 @@ def load_words():
             if not w: continue
             o = ord(w[0]) - 0xAC00
             if o < 0 or o > 11171: continue
+            STARTCOUNT[w[0]] = STARTCOUNT.get(w[0], 0) + 1
             h = heaps.setdefault(w[0], [])
             key = (len(w), w)
             if len(h) < KEEP: heapq.heappush(h, key)
@@ -184,6 +186,15 @@ def join_cap(words, cap):
         out.append(w); used += add
     return ", ".join(out)
 
+def cont_count(w):
+    last = w[-1]
+    n = STARTCOUNT.get(last, 0)
+    du = dueum(last)
+    if du: n += STARTCOUNT.get(du, 0)
+    return n
+def fmt_words(words):
+    return [f"{w}({cont_count(w)})" for w in words]
+
 def embed_analysis(syl):
     hb, gk, jk, yd = analyze(syl)
     if not (hb or gk or jk or yd):
@@ -192,10 +203,10 @@ def embed_analysis(syl):
     e = discord.Embed(title=f"🎯  '{syl}' 분석",
         description=f"⚡ 한방 **{len(hb)}**  ·  🗡️ 공격 **{len(gk)}**  ·  🔥 준공격 **{len(jk)}**  ·  🎣 유도 **{len(yd)}**",
         color=0xC2F74A)
-    if hb: e.add_field(name=f"⚡ 한방 · {len(hb)}개", value=join_cap(hb, 950), inline=False)
-    if gk: e.add_field(name=f"🗡️ 공격 · {len(gk)}개", value=join_cap(gk, 950), inline=False)
-    if jk: e.add_field(name=f"🔥 준공격 · {len(jk)}개", value=join_cap(jk, 950), inline=False)
-    if yd: e.add_field(name=f"🎣 유도 · {len(yd)}개", value=join_cap(yd, 950), inline=False)
+    if hb: e.add_field(name=f"⚡ 한방 · {len(hb)}개", value=join_cap(fmt_words(hb), 950), inline=False)
+    if gk: e.add_field(name=f"🗡️ 공격 · {len(gk)}개", value=join_cap(fmt_words(gk), 950), inline=False)
+    if jk: e.add_field(name=f"🔥 준공격 · {len(jk)}개", value=join_cap(fmt_words(jk), 950), inline=False)
+    if yd: e.add_field(name=f"🎣 유도 · {len(yd)}개", value=join_cap(fmt_words(yd), 950), inline=False)
     return e
 
 def embed_hanbang(syl):
@@ -204,7 +215,7 @@ def embed_hanbang(syl):
     if not hb:
         return discord.Embed(title=f"{syl} → 한방 없음", color=0x9AA4B2)
     return discord.Embed(title=f"⚡  '{syl}' 한방 · {len(hb)}개",
-                         description=join_cap(hb, 1800), color=0xFF6B6B)
+                         description=join_cap(fmt_words(hb), 1800), color=0xFF6B6B)
 
 def embed_jangmun(syl):
     words = []
@@ -225,9 +236,9 @@ def embed_mid(syl):
     e = discord.Embed(title=f"🔗  '{syl}' 중간말잇기",
         description=f"⚡ 한방 **{len(hb)}**    ·    🗡️ 공격 **{len(gk)}**    ·    🔄 돌림 **{len(dl)}**",
         color=0xB07CFF)
-    if hb: e.add_field(name=f"⚡ 한방 · {len(hb)}개", value=join_cap(hb, 950), inline=False)
-    if gk: e.add_field(name=f"🗡️ 공격 · {len(gk)}개", value=join_cap(gk, 950), inline=False)
-    if dl: e.add_field(name=f"🔄 돌림 · {len(dl)}개", value=join_cap(dl, 950), inline=False)
+    if hb: e.add_field(name=f"⚡ 한방 · {len(hb)}개", value=join_cap(fmt_words(hb), 950), inline=False)
+    if gk: e.add_field(name=f"🗡️ 공격 · {len(gk)}개", value=join_cap(fmt_words(gk), 950), inline=False)
+    if dl: e.add_field(name=f"🔄 돌림 · {len(dl)}개", value=join_cap(fmt_words(dl), 950), inline=False)
     return e
 
 intents = discord.Intents.default(); intents.message_content = True
