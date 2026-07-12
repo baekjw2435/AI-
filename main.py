@@ -291,3 +291,4 @@ if not token:
     print("[에러] 환경변수 DISCORD_TOKEN 없음 (Railway Variables에 넣어줘)")
 else:
     client.run(token)
+
