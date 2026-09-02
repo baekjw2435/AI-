@@ -1,0 +1,10 @@
+{
+ "days": 14,
+ "policy": {
+  "maxWeight": 0.2,
+  "minimumContextTotal": 5,
+  "confidencePrior": 20,
+  "maxScoreAdjustment": 6
+ },
+ "version": "1.4.0-14d-20260901T113414073Z"
+}
