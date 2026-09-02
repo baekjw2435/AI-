@@ -683,13 +683,7 @@ class RouteSearchView(discord.ui.View):
         e = discord.Embed(
             title=f"🔎  '{self.current}{self.shield}' 탐색",
             color=0x5AC8FA)
-        if self.history:
-            words = [w for w, _, _ in self.history]
-            e.add_field(name=f"🧭 현재 경로 · {len(self.history)}수",
-                        value=(format_sequence(words, self.start[1])
-                               + f" → **{self.current}{self.shield}**")[:1024],
-                        inline=False)
-        else:
+        if not self.history:
             e.description = (f"끝말 **{self.current}** · 보호막 **{self.shield}** 에서 시작합니다.\n"
                              "아래 후보를 누르면 보호막이 1 줄어든 다음 상태로 이어집니다.")
 
@@ -709,6 +703,14 @@ class RouteSearchView(discord.ui.View):
             words = [w for w, _ in auto_route]
             e.add_field(name=f"🤖 인공지능 예상 계산 · 예상 {len(auto_route)}수",
                         value=format_sequence(words, self.shield)[:1024], inline=False)
+
+        # 지나온 경로는 맨 아래에 둡니다. 모바일에서 버튼 바로 위라 위로 올리지 않아도 보입니다.
+        if self.history:
+            words = [w for w, _, _ in self.history]
+            e.add_field(name=f"🧭 현재 경로 · {len(self.history)}수",
+                        value=(format_sequence(words, self.start[1])
+                               + f" → **{self.current}{self.shield}**")[:1024],
+                        inline=False)
 
         e.set_footer(text="표준 사전 · 표준두음법칙 적용 · 시작하신 분만 누르실 수 있습니다")
         return e
