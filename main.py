@@ -5,7 +5,8 @@
 #   표준 : 신표국 표준 자료 (standard_words.txt / standard_special.json)
 # 두 사전의 통계는 절대 합치지 않으며, 각 답변은 사용한 사전을 함께 표시합니다.
 #
-# !루트 <음절><보호막> → 실전 연결 4·6·8수 + 인공지능 예상 수순 (표준 자료 전용)
+# !루트 <음절><보호막> → 연결 수순 4·6·8수 + 추천 단어 + 예상 수순 (표준 자료 전용)
+# !탐색 <음절><보호막> → 후보 버튼을 눌러 한 수씩 수순을 만들어 가는 화면 (표준 자료 전용)
 # !모드            → 현재 채널의 사전 모드 확인
 # !모드 표준/복합  → 현재 채널의 사전 모드 변경
 # !공격 <글자>     → ⚡한방 / 🗡️공격 / 🔥준공격 / 🎣유도 / 🔄돌림
@@ -297,8 +298,8 @@ def load_route_learning():
         special.get("routes", {}),
         learning, recent, policy.get("days", 0), policy.get("policy", {}))
     ROUTE_READY = True
-    print(f"[로드] 루트 학습 {learning.source['matchCount']}경기"
-          + (f" · 최근 {policy.get('days')}일 보조층" if recent else ""))
+    print(f"[로드] 루트 자료 준비 완료 (수순 {len(learning.words):,}단어"
+          + (" · 보조층 포함)" if recent else ")"))
 
 
 # =====================================================================
@@ -546,6 +547,15 @@ def embed_mid(syl, mode):
     if dl: e.add_field(name=f"🔄 돌림 · {len(dl)}개", value=join_cap(fmt_words(dl, mode), 950), inline=False)
     return stamp(e, mode)
 
+def legal_candidates(syl, shield, used=None, history=()):
+    """보호막 조건을 만족하는 후보를 추천 순서로 돌려줍니다."""
+    used = set(used or ())
+    words = ROUTE_CORE.words_for(syl, used)
+    rows = [c for c in rq.analyze_candidates(ROUTE_CORE, words, syl, shield, used,
+                                             True, history) if c["legal"]]
+    rows.sort(key=rq.sort_key)
+    return rows
+
 def parse_shield_state(text):
     """`템11` 처럼 음절과 보호막이 붙은 표기를 읽습니다."""
     t = re.sub(r"\s+", "", text)
@@ -573,7 +583,7 @@ def embed_route(syl, shield, only_length=None):
     lengths = (only_length,) if only_length else ROUTE_SEQUENCE_LENGTHS
     e = discord.Embed(
         title=f"🧭  '{syl}{shield}' 루트",
-        description=f"끝말 **{syl}** · 보호막 **{shield}** 에서의 실전 연결과 예상 수순입니다.",
+        description=f"끝말 **{syl}** · 보호막 **{shield}** 에서 이어지는 수순입니다.",
         color=0xB07CFF)
 
     found = 0
@@ -582,25 +592,20 @@ def embed_route(syl, shield, only_length=None):
                                   ROUTE_SOURCE_INDEX, length, limit=5)
         if not rows: continue
         found += len(rows)
-        lines = [f"{format_sequence(r['words'], r['shield'])}  · **{r['count']}회**" for r in rows]
-        e.add_field(name=f"🔗 실전 응답 연결 · {length}수", value="\n".join(lines)[:1024], inline=False)
+        lines = [format_sequence(r["words"], r["shield"]) for r in rows]
+        e.add_field(name=f"🔗 연결 수순 · {length}수", value="\n".join(lines)[:1024], inline=False)
 
-    if not found:
-        # 실전 응답 연결이 없으면 추천 후보를 대신 보여 줍니다.
-        candidates = [c for c in rq.analyze_candidates(
-            ROUTE_CORE, ROUTE_CORE.words_for(syl, set()), syl, shield, set()) if c["legal"]]
-        candidates.sort(key=rq.sort_key)
-        if candidates:
-            lines = []
-            for i, c in enumerate(candidates[:8], 1):
-                lines.append(f"**{i}. {c['word']}** · 추천 점수 `{c['recommendationScore']}` "
-                             f"· 후속 {c['followCount']:,}")
-            e.add_field(name="⭐ 추천 단어",
-                        value=("이 상태의 실전 응답 연결 기록이 없어 추천 단어를 보여 드립니다.\n"
-                               + "\n".join(lines))[:1024], inline=False)
-        else:
-            e.add_field(name="⭐ 추천 단어",
-                        value="이 상태에서 보호막 조건을 만족하는 후보가 없습니다.", inline=False)
+    # 추천 단어는 실전 연결이 있든 없든 항상 함께 보여 줍니다.
+    candidates = legal_candidates(syl, shield)
+    if candidates:
+        lines = [f"**{i}. {c['word']}** · 추천 점수 `{c['recommendationScore']}` "
+                 f"· 후속 {c['followCount']:,}"
+                 for i, c in enumerate(candidates[:8], 1)]
+        head = "" if found else "이 상태에서 이어지는 수순을 찾지 못했습니다.\n"
+        e.add_field(name="⭐ 추천 단어", value=(head + "\n".join(lines))[:1024], inline=False)
+    else:
+        e.add_field(name="⭐ 추천 단어",
+                    value="이 상태에서 보호막 조건을 만족하는 후보가 없습니다.", inline=False)
 
     route = rq.build_auto_route(ROUTE_CORE, syl, shield, depth=ROUTE_DEPTH)
     if route:
@@ -611,8 +616,150 @@ def embed_route(syl, shield, only_length=None):
         e.add_field(name="🤖 인공지능 예상 계산",
                     value="이어지는 합법 후보를 찾지 못했습니다.", inline=False)
 
-    e.set_footer(text="표준 사전 · 표준두음법칙 적용 · 빈도 자료이며 승리 증명은 아닙니다")
+    e.set_footer(text="표준 사전 · 표준두음법칙 적용")
     return e
+
+# ---------------------------------------------------------------------
+# 눌러서 수순을 만들어 가는 탐색 (사이트의 후보 목록과 같은 방식)
+# ---------------------------------------------------------------------
+SEARCH_TIMEOUT = 300      # 초 단위. 이 시간이 지나면 버튼을 잠급니다.
+SEARCH_BUTTONS = 10       # 한 번에 보여 줄 후보 버튼 수 (한 줄 5개 × 2줄)
+
+class PickButton(discord.ui.Button):
+    def __init__(self, view_ref, candidate, index, row):
+        super().__init__(
+            label=f"{index}. {candidate['word']}"[:80],
+            style=discord.ButtonStyle.success if index == 1 else discord.ButtonStyle.secondary,
+            row=row)
+        self.view_ref = view_ref
+        self.candidate = candidate
+
+    async def callback(self, interaction):
+        await self.view_ref.advance(interaction, self.candidate)
+
+
+class ControlButton(discord.ui.Button):
+    def __init__(self, view_ref, label, action, style, disabled=False):
+        super().__init__(label=label, style=style, row=2, disabled=disabled)
+        self.view_ref = view_ref
+        self.action = action
+
+    async def callback(self, interaction):
+        await self.view_ref.control(interaction, self.action)
+
+
+class RouteSearchView(discord.ui.View):
+    """후보를 눌러 한 수씩 이어 가며 수순을 만드는 화면입니다."""
+
+    def __init__(self, user_id, current, shield):
+        super().__init__(timeout=SEARCH_TIMEOUT)
+        self.user_id = user_id
+        self.start = (current, shield)
+        self.current = current
+        self.shield = shield
+        self.history = []     # [(단어, 그때의 보호막, 그때의 음절)]
+        self.used = set()
+        self.candidates = []
+        self.message = None   # 시간이 지나면 버튼을 잠그려고 보관합니다.
+        self.refresh()
+
+    # -- 상태 계산 --------------------------------------------------
+    def refresh(self):
+        self.candidates = legal_candidates(self.current, self.shield,
+                                           self.used, self.history)
+        self.clear_items()
+        for i, cand in enumerate(self.candidates[:SEARCH_BUTTONS], 1):
+            self.add_item(PickButton(self, cand, i, row=0 if i <= 5 else 1))
+        self.add_item(ControlButton(self, "↩ 이전 수", "back",
+                                    discord.ButtonStyle.secondary,
+                                    disabled=not self.history))
+        self.add_item(ControlButton(self, "↻ 처음부터", "reset",
+                                    discord.ButtonStyle.secondary,
+                                    disabled=not self.history))
+        self.add_item(ControlButton(self, "🤖 예상 수순", "auto",
+                                    discord.ButtonStyle.primary))
+
+    def embed(self, auto_route=None):
+        e = discord.Embed(
+            title=f"🔎  '{self.current}{self.shield}' 탐색",
+            color=0x5AC8FA)
+        if self.history:
+            words = [w for w, _, _ in self.history]
+            e.add_field(name=f"🧭 현재 경로 · {len(self.history)}수",
+                        value=(format_sequence(words, self.start[1])
+                               + f" → **{self.current}{self.shield}**")[:1024],
+                        inline=False)
+        else:
+            e.description = (f"끝말 **{self.current}** · 보호막 **{self.shield}** 에서 시작합니다.\n"
+                             "아래 후보를 누르면 보호막이 1 줄어든 다음 상태로 이어집니다.")
+
+        if self.candidates:
+            lines = []
+            for i, c in enumerate(self.candidates[:SEARCH_BUTTONS], 1):
+                mark = " ⚡" if c["oneShot"] else (" 🗡️" if c["attack"] else "")
+                lines.append(f"**{i}. {c['word']}**{mark} · 점수 `{c['recommendationScore']}` "
+                             f"· 끝말 {c['end']} · 후속 {c['followCount']:,}")
+            e.add_field(name="⭐ 추천 후보", value="\n".join(lines)[:1024], inline=False)
+        else:
+            e.add_field(name="⭐ 추천 후보",
+                        value="보호막 조건을 만족하는 후보가 없습니다. 이 상태에서는 이어 갈 수 없습니다.",
+                        inline=False)
+
+        if auto_route:
+            words = [w for w, _ in auto_route]
+            e.add_field(name=f"🤖 인공지능 예상 계산 · 예상 {len(auto_route)}수",
+                        value=format_sequence(words, self.shield)[:1024], inline=False)
+
+        e.set_footer(text="표준 사전 · 표준두음법칙 적용 · 시작하신 분만 누르실 수 있습니다")
+        return e
+
+    # -- 버튼 처리 --------------------------------------------------
+    async def interaction_check(self, interaction):
+        if interaction.user.id != self.user_id:
+            await interaction.response.send_message(
+                "이 탐색을 시작하신 분만 누르실 수 있습니다. "
+                "직접 쓰시려면 `!탐색` 으로 새로 시작해 주세요.", ephemeral=True)
+            return False
+        return True
+
+    async def advance(self, interaction, candidate):
+        self.history.append((candidate["word"], self.shield, self.current))
+        self.used.add(candidate["word"])
+        self.current = candidate["end"]
+        self.shield = max(0, self.shield - 1)
+        self.refresh()
+        await interaction.response.edit_message(embed=self.embed(), view=self)
+
+    async def control(self, interaction, action):
+        if action == "back" and self.history:
+            word, shield, current = self.history.pop()
+            self.used.discard(word)
+            self.current, self.shield = current, shield
+            self.refresh()
+            await interaction.response.edit_message(embed=self.embed(), view=self)
+        elif action == "reset":
+            self.current, self.shield = self.start
+            self.history.clear()
+            self.used.clear()
+            self.refresh()
+            await interaction.response.edit_message(embed=self.embed(), view=self)
+        elif action == "auto":
+            await interaction.response.defer()
+            route = rq.build_auto_route(ROUTE_CORE, self.current, self.shield,
+                                        depth=ROUTE_DEPTH, used=self.used,
+                                        history=self.history)
+            await interaction.edit_original_response(embed=self.embed(route), view=self)
+
+    async def on_timeout(self):
+        for item in self.children:
+            item.disabled = True
+        if self.message:
+            try:
+                await self.message.edit(view=self)
+            except discord.HTTPException:
+                # 메시지가 지워졌으면 잠글 것도 없습니다.
+                pass
+
 
 def embed_mode(mode, changed=False):
     if mode == MODE_STANDARD:
@@ -653,14 +800,15 @@ HELP_TEXT = (
     "**끄투 봇 명령어입니다.**\n"
     "`!모드` — 현재 채널의 사전 모드를 확인합니다\n"
     "`!모드 표준` · `!모드 복합` — 사전 모드를 바꿉니다\n"
-    "`!루트 <음절><보호막>` — 실전 연결 4·6·8수와 예상 수순 (표준 자료)\n"
+    "`!루트 <음절><보호막>` — 연결 수순 4·6·8수 · 추천 단어 · 예상 수순 (표준 자료)\n"
+    "`!탐색 <음절><보호막>` — 후보를 눌러 한 수씩 이어 가며 수순 만들기 (표준 자료)\n"
     "`!공격 <글자>` — 끝말잇기 ⚡한방 / 🗡️공격 / 🔥준공격 / 🎣유도 / 🔄돌림\n"
     "`!한방 <글자>` — 한방만 보여 드립니다\n"
     "`!장문 <글자>` — 그 글자로 시작하는 가장 긴 단어\n"
     "`!종결 <글자>` — 그 글자로 끝나는 단어\n"
     "`!장문종결 <글자>` — 그 글자로 끝나는 가장 긴 단어\n"
     "`!중간 <글자>` — 중간말잇기 (복합 모드 전용)\n"
-    "예시: `!루트 템11`, `!루트 템11 6수`, `!공격 기`, `!모드 표준`\n"
+    "예시: `!루트 템11`, `!탐색 템11`, `!공격 기`, `!모드 표준`\n"
     "두 모드 모두 표준두음법칙을 적용하며, 복합 자료와 표준 자료는 서로 섞지 않습니다."
 )
 
@@ -690,6 +838,27 @@ async def on_message(msg):
             await msg.channel.send(embed=embed_mode(MODE_COMPLEX, changed=True))
         else:
             await msg.channel.send("`!모드 표준` 또는 `!모드 복합` 으로 입력해 주세요.")
+        return
+
+    if c.startswith("!탐색"):
+        arg = c[len("!탐색"):].strip()
+        if not ROUTE_READY:
+            await msg.channel.send(
+                "표준 루트 자료를 불러오지 못해 탐색을 시작할 수 없습니다. "
+                "standard_route_learning.json 파일을 확인해 주세요.")
+            return
+        if not arg:
+            await msg.channel.send(
+                "사용법은 `!탐색 <음절><보호막>` 입니다. 예를 들어 `!탐색 템11` 처럼 입력해 주세요.")
+            return
+        state = parse_shield_state(arg.split()[0])
+        if not state:
+            await msg.channel.send(
+                "음절과 보호막을 붙여서 입력해 주세요. 예를 들어 `!탐색 템11` 처럼 입력해 주세요. "
+                "보호막은 0부터 12까지입니다.")
+            return
+        view = RouteSearchView(msg.author.id, state[0], state[1])
+        view.message = await msg.channel.send(embed=view.embed(), view=view)
         return
 
     if c.startswith("!루트"):
