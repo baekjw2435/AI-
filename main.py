@@ -17,7 +17,7 @@
 # !장문 <글자>     → 그 글자로 시작하는 가장 긴 단어 TOP 30
 # !종결 <글자>     → 그 글자로 끝나는 단어
 # !장문종결 <글자> → 그 글자로 끝나는 가장 긴 단어
-# !중간 <글자>     → 중간말잇기 (복합 전용)
+# !중간 <글자>     → 중간말잇기 (표준·복합 모두 지원)
 #
 # 두음법칙은 두 모드 모두 표준두음법칙만 적용합니다.
 
@@ -27,7 +27,9 @@ import route_engine as rq
 import game as gm
 
 # ===== 서버 / 채널 제한 (0 = 제한 없음) =====
-GUILD_ID = int(os.environ.get("GUILD_ID", "1544553748565729381"))
+# GUILD_ID 에는 반드시 "서버" ID 를 넣어야 합니다. 채널 ID 를 넣으면 어떤 메시지와도
+# 맞지 않아 봇이 아무 반응도 하지 않습니다. 기본값은 제한 없음(0)입니다.
+GUILD_ID = int(os.environ.get("GUILD_ID", "0"))
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "0"))
 # ==========================================
 
@@ -43,13 +45,16 @@ CHANNEL_MODE = {}   # 채널 ID -> 모드
 # ===== 채널별 고정 배정 =====
 # 여기에 적힌 채널은 사전이 고정되고 `!모드` 로 바꿀 수 없습니다.
 # 값은 (대국 종류, 사전) 입니다. 종류는 "훈련실"(사람 대 봇) 또는 "경기장"(사람 대 사람)입니다.
-ARENA = "경기장"
-TRAINING = "훈련실"
+ARENA = "경기장"      # 사람끼리 대국
+TRAINING = "훈련실"   # 사람 대 봇 대국
+STUDY = "학습실"      # 대국 없이 조회·탐색만
 CHANNEL_ROLES = {
     1544722084561817650: (ARENA, MODE_STANDARD),     # 경기장-표준사전
     1544854290819059765: (ARENA, MODE_COMPLEX),      # 경기장-복합사전
     1544722279349485578: (TRAINING, MODE_STANDARD),  # 훈련실-표준사전
     1544854625755209758: (TRAINING, MODE_COMPLEX),   # 훈련실-복합사전
+    1544553748565729381: (STUDY, MODE_STANDARD),     # 표준탐색
+    1523328035686846495: (STUDY, MODE_COMPLEX),      # 복합탐색
 }
 # ===========================
 
@@ -87,8 +92,17 @@ def is_self_loop(w):
 
 def find_file(pats):
     for pat in pats:
-        hit = glob.glob(pat)
+        hit = sorted(glob.glob(pat))
         if hit: return hit[0]
+    return None
+
+def find_complex_word_file():
+    """복합 단어 목록을 찾습니다. 표준 사전 파일은 절대 고르지 않습니다.
+    두 사전을 섞으면 안 되기 때문입니다."""
+    for pat in ("words.txt", "끄글_단어_목록*.txt", "끄글_단어*.txt", "끄글*단어*.txt"):
+        for hit in sorted(glob.glob(pat)):
+            if not hit.startswith("standard_"):
+                return hit
     return None
 
 
@@ -141,9 +155,11 @@ STARTCOUNT = {}   # 글자 -> 그 글자로 시작하는 단어 수 (이을 수 
 ALLWORDS = set()  # 대국 판정용 전체 단어
 FIRSTWORDS = {}   # 첫글자 -> [그 글자로 시작하는 단어] (대국용)
 def load_words():
-    path = find_file(["words.txt", "끄글_단어_목록*.txt", "끄글_단어*.txt"])
+    path = find_complex_word_file()
     if not path:
-        print("[경고] words.txt 파일이 없어 복합 장문 기능을 끕니다."); return
+        print("[경고] words.txt 파일을 찾지 못해 복합 사전 기능(장문·종결·대국)을 끕니다."); return
+    if path != "words.txt":
+        print(f"[안내] 복합 단어 목록으로 {path} 를 사용합니다.")
     KEEP = 30
     heaps = {}; n = 0
     with open(path, encoding="utf-8") as fp:
@@ -281,6 +297,29 @@ def load_standard_special():
     print(f"[로드] 표준 한방 {len(STD_ONESHOT)}개 · 공격 {len(STD_ATTACK)}개")
 
 
+# ---- 표준 중간말잇기 공격 자료 ----
+STD_MID_ATTACK = {}   # 음절 -> {단어: 깊이}
+def load_standard_mid():
+    path = find_file(["standard_mid_attack.txt"])
+    if not path:
+        print("[경고] standard_mid_attack.txt 파일이 없어 표준 중간말잇기를 끕니다."); return
+    sec = None
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            s = line.strip()
+            if s.startswith('[') and s.endswith(']'):
+                sec = s[1:-1]; STD_MID_ATTACK.setdefault(sec, {}); continue
+            m = re.match(r'깊이\s*(\d+)\s*[:：]\s*(.*)', s)
+            if not m or sec is None: continue
+            d = int(m.group(1))
+            for w in m.group(2).split(','):
+                w = w.strip()
+                if w and (w not in STD_MID_ATTACK[sec] or d < STD_MID_ATTACK[sec][w]):
+                    STD_MID_ATTACK[sec][w] = d
+    total = len({w for v in STD_MID_ATTACK.values() for w in v})
+    print(f"[로드] 표준 중간 공격 {len(STD_MID_ATTACK)}글자 ({total}단어)")
+
+
 # ---- 루트 학습 자료 (신엜 루트 탐색기 v1.16 과 같은 계산) ----
 ROUTE_CORE = None
 ROUTE_READY = False
@@ -336,21 +375,24 @@ def attacks_of(syl):
             if w not in m or d < m[w]: m[w] = d
     return m
 
-def attacks_of_mid(syl):
+def attacks_of_mid(syl, mode=MODE_COMPLEX):
+    table = STD_MID_ATTACK if mode == MODE_STANDARD else MID_ATTACK
     m = {}
     for k in syllable_keys(syl):
-        for w, d in MID_ATTACK.get(k, {}).items():
+        for w, d in table.get(k, {}).items():
             if w not in m or d < m[w]: m[w] = d
     return m
 
-def analyze_mid(syl):
-    merged = attacks_of_mid(syl)
+def analyze_mid(syl, mode=MODE_COMPLEX):
+    merged = attacks_of_mid(syl, mode)
     hb = {w for w, d in merged.items() if d == 1}
     gk = {w for w, d in merged.items() if d != 1}
     dl = set()
-    for k in syllable_keys(syl):
-        dl |= DOLLIM.get(k, set())
-    dl -= hb; dl -= gk
+    # 표준 자료에는 중간말잇기 돌림 목록이 없어 복합에서만 계산합니다.
+    if mode != MODE_STANDARD:
+        for k in syllable_keys(syl):
+            dl |= DOLLIM.get(k, set())
+        dl -= hb; dl -= gk
     return sorted(hb), sorted(gk), sorted(dl)
 
 def analyze(syl):
@@ -557,24 +599,30 @@ def embed_jangmun_end(syl, mode):
         description="\n".join(lines), color=0x00C2A8), mode)
 
 def embed_mid(syl, mode):
-    if mode == MODE_STANDARD:
+    if mode == MODE_STANDARD and not STD_MID_ATTACK:
         return stamp(discord.Embed(
-            title="중간말잇기는 표준 모드에서 지원하지 않습니다",
-            description="표준 자료에 중간말잇기 공격 자료가 없습니다. `!모드 복합` 으로 바꾸신 뒤 사용해 주세요.",
+            title="표준 중간말잇기 자료를 불러오지 못했습니다",
+            description="standard_mid_attack.txt 파일을 봇과 같은 폴더에 넣어 주세요.",
             color=COLOR_MUTED), mode)
-    hb, gk, dl = analyze_mid(syl)
+    hb, gk, dl = analyze_mid(syl, mode)
     if not (hb or gk or dl):
         return stamp(discord.Embed(
             title=f"{syl} → 해당 단어가 없습니다",
-            description="중간말잇기 한방·공격·돌림이 모두 없어 양보하시는 편이 좋습니다.",
+            description="중간말잇기 한방·공격이 모두 없어 양보하시는 편이 좋습니다.",
             color=COLOR_MUTED), mode)
+    counts = f"⚡ 한방 **{len(hb)}**    ·    🗡️ 공격 **{len(gk)}**"
+    if mode != MODE_STANDARD:
+        counts += f"    ·    🔄 돌림 **{len(dl)}**"
     e = discord.Embed(
-        title=f"🔗  '{syl}' 중간말잇기 · 복합",
-        description=f"⚡ 한방 **{len(hb)}**    ·    🗡️ 공격 **{len(gk)}**    ·    🔄 돌림 **{len(dl)}**",
+        title=f"🔗  '{syl}' 중간말잇기 · {mode_tag(mode)}",
+        description=counts,
         color=0xB07CFF)
     if hb: e.add_field(name=f"⚡ 한방 · {len(hb)}개", value=join_cap(fmt_words(hb, mode), 950), inline=False)
     if gk: e.add_field(name=f"🗡️ 공격 · {len(gk)}개", value=join_cap(fmt_words(gk, mode), 950), inline=False)
     if dl: e.add_field(name=f"🔄 돌림 · {len(dl)}개", value=join_cap(fmt_words(dl, mode), 950), inline=False)
+    if mode == MODE_STANDARD:
+        e.add_field(name="안내", value="표준 자료에는 중간말잇기 돌림 목록이 없어 표시하지 않습니다.",
+                    inline=False)
     return stamp(e, mode)
 
 def legal_candidates(syl, shield, used=None, history=()):
@@ -798,6 +846,15 @@ class RouteSearchView(discord.ui.View):
 # ---------------------------------------------------------------------
 GAMES = gm.GameRegistry()
 
+def missing_data_notice(mode):
+    """어떤 파일이 없어서 대국을 못 하는지 알려 줍니다."""
+    if mode == MODE_STANDARD:
+        need = "standard_words.txt, standard_special.json, standard_route_learning.json"
+    else:
+        need = "words.txt"
+    return (f"{mode} 자료를 불러오지 못해 대국을 시작할 수 없습니다.\n"
+            f"봇과 같은 폴더에 **{need}** 파일이 있는지 확인해 주세요.")
+
 def game_dictionary(mode):
     """모드에 맞는 대국용 사전을 만듭니다. 두 사전은 서로 섞지 않습니다."""
     if mode == MODE_STANDARD:
@@ -928,18 +985,21 @@ class JoinView(discord.ui.View):
 def embed_mode(mode, changed=False, role=None):
     if mode == MODE_STANDARD:
         detail = ("신표국 표준 자료를 사용합니다.\n"
-                  "한방·공격·돌림·장문·종결을 지원하며, 준공격·유도와 중간말잇기는 지원하지 않습니다.")
+                  "한방·공격·돌림·장문·종결·중간말잇기를 지원하며, 준공격·유도는 지원하지 않습니다.")
     else:
         detail = ("기존 복합 자료를 사용합니다.\n"
                   "한방·공격·준공격·유도·돌림·장문·종결·중간말잇기를 모두 지원합니다.")
     title = f"사전 모드를 {mode_tag(mode)} 으로 바꿨습니다" if changed else f"현재 사전 모드는 {mode_tag(mode)} 입니다"
     e = discord.Embed(title=f"📚  {title}", description=detail, color=0xC2F74A)
     if role:
+        if role == TRAINING:
+            how = "`!시작` 또는 `!대결` 로 봇과 겨루실 수 있습니다."
+        elif role == ARENA:
+            how = "`!시작` 또는 `!경기` 로 상대를 기다리실 수 있습니다."
+        else:
+            how = "`!루트`·`!탐색`·`!공격` 등 조회 명령을 쓰시는 채널입니다."
         e.add_field(name="채널 배정",
-                    value=(f"이 채널은 **{role} · {mode_tag(mode)} 사전** 으로 고정돼 있습니다.\n"
-                           + ("`!시작` 또는 `!대결` 로 봇과 겨루실 수 있습니다."
-                              if role == TRAINING else
-                              "`!시작` 또는 `!경기` 로 상대를 기다리실 수 있습니다.")),
+                    value=f"이 채널은 **{role} · {mode_tag(mode)} 사전** 으로 고정돼 있습니다.\n{how}",
                     inline=False)
     else:
         e.add_field(name="바꾸는 방법", value="`!모드 표준` 또는 `!모드 복합` 을 입력해 주세요.", inline=False)
@@ -983,7 +1043,7 @@ HELP_TEXT = (
     "`!장문 <글자>` — 그 글자로 시작하는 가장 긴 단어\n"
     "`!종결 <글자>` — 그 글자로 끝나는 단어\n"
     "`!장문종결 <글자>` — 그 글자로 끝나는 가장 긴 단어\n"
-    "`!중간 <글자>` — 중간말잇기 (복합 모드 전용)\n"
+    "`!중간 <글자>` — 중간말잇기 ⚡한방 / 🗡️공격 / 🔄돌림\n"
     "예시: `!대결 표준`, `!경기`, `!루트 템11`, `!탐색 템11`, `!공격 기`\n"
     "두 모드 모두 표준두음법칙을 적용하며, 복합 자료와 표준 자료는 서로 섞지 않습니다."
 )
@@ -1007,6 +1067,10 @@ async def on_message(msg):
 
     if c.startswith("!시작"):
         # 고정 배정된 채널에서는 그 채널의 종류대로 바로 시작합니다.
+        if kind == STUDY:
+            await msg.channel.send(
+                "이 채널은 조회·탐색용입니다. 대국은 훈련실이나 경기장 채널에서 시작해 주세요.")
+            return
         if not kind:
             await msg.channel.send(
                 "이 채널은 대국 채널로 지정돼 있지 않습니다. "
@@ -1026,12 +1090,16 @@ async def on_message(msg):
             await msg.channel.send(
                 "이 채널은 사람끼리 겨루는 경기장입니다. `!경기` 로 상대를 기다려 주세요.")
             return
+        if kind == STUDY:
+            await msg.channel.send(
+                f"이 채널은 조회·탐색용입니다. 봇과 겨루시려면 훈련실 채널에서 `!대결` 을 입력해 주세요.")
+            return
         if GAMES.get(msg.channel.id):
             await msg.channel.send("이 채널에서 이미 대국이 진행 중입니다. `!기권` 으로 끝낼 수 있습니다.")
             return
         book = game_dictionary(chosen)
         if not book:
-            await msg.channel.send(f"{chosen} 자료를 불러오지 못해 대국을 시작할 수 없습니다.")
+            await msg.channel.send(missing_data_notice(chosen))
             return
         names = [msg.author.display_name, f"{book.name} 봇"]
         players = [msg.author.id, None]
@@ -1051,12 +1119,16 @@ async def on_message(msg):
             await msg.channel.send(
                 "이 채널은 봇과 겨루는 훈련실입니다. `!대결` 로 시작해 주세요.")
             return
+        if kind == STUDY:
+            await msg.channel.send(
+                "이 채널은 조회·탐색용입니다. 겨루시려면 경기장 채널에서 `!경기` 를 입력해 주세요.")
+            return
         if GAMES.get(msg.channel.id):
             await msg.channel.send("이 채널에서 이미 대국이 진행 중입니다. `!기권` 으로 끝낼 수 있습니다.")
             return
         book = game_dictionary(chosen)
         if not book:
-            await msg.channel.send(f"{chosen} 자료를 불러오지 못해 대국을 시작할 수 없습니다.")
+            await msg.channel.send(missing_data_notice(chosen))
             return
         view = JoinView(msg.author.id, msg.author.display_name, book)
         e = discord.Embed(
@@ -1183,7 +1255,7 @@ async def on_message(msg):
 
 
 load_attack(); load_endcat(); load_words(); load_mid(); load_dollim(); load_dollim_end()
-load_standard_words(); load_standard_special(); load_route_learning()
+load_standard_words(); load_standard_special(); load_standard_mid(); load_route_learning()
 
 token = os.environ.get("DISCORD_TOKEN")
 if not token:
