@@ -113,7 +113,9 @@ class StandardDictionary(Dictionary):
 
 
 class ComplexDictionary(Dictionary):
-    """복합 봇은 공격·준공격·유도 단어를 우선 고르고, 돌림 조건이 맞으면 돌림을 씁니다."""
+    """복합 봇은 공격류(한방·공격·준공격·유도)만으로 둡니다.
+    공격류가 하나도 없는 자리에서만 돌림을, 그마저 없으면 일반 수를 씁니다.
+    고를 때는 상대가 반격할 공격류가 가장 적은 끝말을 넘깁니다."""
 
     def __init__(self, words, start_count, first_words,
                  attack_by_syllable, end_category, category_first, dollim_end):
@@ -137,52 +139,66 @@ class ComplexDictionary(Dictionary):
             out |= self.dollim_end.get(v, set())
         return {w for w in out if w in self.words and w not in used}
 
+    def _threat(self, ending, used):
+        """상대가 그 끝말에서 쓸 수 있는 공격류(공격·준공격·유도) 수입니다.
+        적을수록 상대가 반격하기 어렵습니다."""
+        count = 0
+        for w in self._attacks(ending):
+            if w not in used and self.has(w):
+                count += 1
+        for v in rq.dueum_variants(ending):
+            for w, _cat in self.category_first.get(v, ()):
+                if w not in used and self.has(w):
+                    count += 1
+        return count
+
     def bot_move(self, current, shield, used, history):
         def usable(pool):
-            rows = []
-            for w in pool:
-                if w in used or not self.has(w):
-                    continue
-                if self.follow_count(w[-1], used | {w}) >= shield:
-                    rows.append(w)
-            return sorted(rows)
+            return sorted({w for w in pool
+                           if w not in used and self.has(w)
+                           and self.follow_count(w[-1], used | {w}) >= shield})
+
+        def best(pool, lookahead=True):
+            if lookahead:
+                # 상대가 반격할 공격류가 적고 이을 단어도 좁은 수를 고릅니다.
+                return min(pool, key=lambda w: (self._threat(w[-1], used | {w}),
+                                                self.follow_count(w[-1], used | {w}), w))
+            return min(pool, key=lambda w: (self.follow_count(w[-1], used | {w}), w))
 
         attacks = self._attacks(current)
-        dollim = self._dollim(current, used)
 
-        # 1) 한방이 있으면 바로 끝냅니다.
-        one_shots = usable([w for w, d in attacks.items() if d == 1])
-        if one_shots:
-            return min(one_shots, key=lambda w: (self.follow_count(w[-1], used | {w}), w)), "한방"
+        # 1) 한방으로 바로 끝냅니다.
+        pool = usable([w for w, d in attacks.items() if d == 1])
+        if pool:
+            return best(pool), "한방"
 
-        # 2) 돌림 개수가 짝수면 돌림을 씁니다.
-        loops = usable(dollim)
-        if loops and len(loops) % 2 == 0:
-            return min(loops, key=lambda w: (self.follow_count(w[-1], used | {w}), w)), "돌림"
-
-        # 3) 공격 → 4) 준공격 → 5) 유도 순으로 고릅니다.
-        deep = usable([w for w, d in attacks.items() if d != 1 and w not in dollim])
-        if deep:
-            return min(deep, key=lambda w: (self.follow_count(w[-1], used | {w}), w)), "공격"
+        # 2) 공격 → 3) 준공격 → 4) 유도. 여기까지가 공격류입니다.
+        pool = usable([w for w, d in attacks.items() if d != 1])
+        if pool:
+            return best(pool), "공격"
 
         semi, lure = [], []
         for v in rq.dueum_variants(current):
             for w, cat in self.category_first.get(v, ()):
-                if w in dollim:
-                    continue
                 (semi if cat == "J" else lure).append(w)
-        for pool, label in ((usable(semi), "준공격"), (usable(lure), "유도")):
-            if pool:
-                return min(pool, key=lambda w: (self.follow_count(w[-1], used | {w}), w)), label
+        pool = usable(semi)
+        if pool:
+            return best(pool), "준공격"
+        pool = usable(lure)
+        if pool:
+            return best(pool), "유도"
 
-        # 6) 남은 돌림이라도 씁니다.
-        if loops:
-            return min(loops, key=lambda w: (self.follow_count(w[-1], used | {w}), w)), "돌림"
+        # 5) 공격류가 하나도 없을 때만 돌림을 씁니다.
+        #    틀(틀틀·틀라솔테오틀)이나 획(획획·획득계획)처럼 돌림밖에 없는 자리가 있어서,
+        #    돌림까지 막으면 봇이 둘 수 있는데도 그냥 지게 됩니다.
+        pool = usable(self._dollim(current, used))
+        if pool:
+            return best(pool), "돌림"
 
-        # 7) 그 밖에는 상대에게 가장 좁은 끝말을 넘깁니다.
-        rest = usable(self.candidates(current, used))
-        if rest:
-            return min(rest, key=lambda w: (self.follow_count(w[-1], used | {w}), w)), ""
+        # 6) 그마저 없으면 상대를 가장 좁히는 일반 수로 버팁니다.
+        pool = usable(self.candidates(current, used))
+        if pool:
+            return best(pool, lookahead=False), ""
         return None, ""
 
 
