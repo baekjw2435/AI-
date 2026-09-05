@@ -67,8 +67,12 @@ KST = timezone(timedelta(hours=9))          # 한국시간. 서버는 UTC 로 �
 LOCK_FILE = "lock_state.json"               # 껐다 켠 상태를 저장해 둡니다.
 
 # 잠글 명령입니다. 여기서 빼면 그 명령은 제한을 받지 않습니다.
-LOCK_COMMANDS = ("!루트", "!탐색", "!공격", "!한방",
-                 "!장문종결", "!장문", "!종결", "!중간")
+# 순위전은 신표(표준)만 하므로, 복합 채널의 조회는 잠그지 않습니다.
+#   · 아래 둘은 표준 자료 전용이라 채널과 상관없이 잠깁니다.
+LOCK_COMMANDS_ALWAYS = ("!루트", "!탐색")
+#   · 아래는 채널 사전이 표준일 때만 잠깁니다. 복합 채널에서는 그대로 쓰실 수 있습니다.
+LOCK_COMMANDS_STANDARD = ("!공격", "!한방", "!장문종결", "!장문", "!종결", "!중간")
+LOCK_COMMANDS = LOCK_COMMANDS_ALWAYS + LOCK_COMMANDS_STANDARD
 
 def _env_flag(name, default=False):
     v = os.environ.get(name)
@@ -121,10 +125,8 @@ def lock_window_text():
     return f"{LOCK['start']}시 ~ {'자정' if end in (0, 24) else str(end) + '시'}"
 
 
-def lock_now():
-    """지금이 제한 시간대인지 봅니다. 자정을 넘는 구간도 됩니다."""
-    if not LOCK["on"]:
-        return False
+def in_window():
+    """지금 시각이 제한 시간대 안인지만 봅니다. 켜짐·꺼짐과는 무관합니다."""
     h = datetime.now(KST).hour
     a, b = LOCK["start"], LOCK["end"] % 24
     if a == b:
@@ -132,6 +134,11 @@ def lock_now():
     if a < b:
         return a <= h < b
     return h >= a or h < b          # 예) 22시~2시
+
+
+def lock_now():
+    """지금 실제로 잠기는지 봅니다."""
+    return LOCK["on"] and in_window()
 
 
 def is_admin(msg):
@@ -1156,13 +1163,20 @@ async def on_message(msg):
         arg = c[len("!제한"):].strip().lower()
         if not arg:
             state = "켜짐" if LOCK["on"] else "꺼짐"
-            now = "지금은 제한 시간대입니다." if lock_now() else "지금은 제한 시간대가 아닙니다."
+            if in_window():
+                now = ("지금은 제한 시간대라 잠겨 있습니다." if LOCK["on"]
+                       else "지금은 제한 시간대이지만, 제한이 꺼져 있어 잠기지 않습니다.")
+            else:
+                now = "지금은 제한 시간대가 아닙니다."
             await msg.channel.send(
                 f"**조회 제한 : {state}**\n"
                 f"제한 시간대는 한국시간 **{lock_window_text()}** 입니다.\n"
                 f"{now} (현재 한국시간 {datetime.now(KST).strftime('%H:%M')})\n"
-                f"잠기는 명령은 {' · '.join('`' + x + '`' for x in LOCK_COMMANDS)} 입니다. "
-                f"대국은 잠기지 않습니다.\n"
+                f"채널과 상관없이 잠기는 명령은 "
+                f"{' · '.join('`' + x + '`' for x in LOCK_COMMANDS_ALWAYS)} 입니다.\n"
+                f"표준 사전 채널에서만 잠기는 명령은 "
+                f"{' · '.join('`' + x + '`' for x in LOCK_COMMANDS_STANDARD)} 입니다.\n"
+                f"복합 사전 채널의 조회와 대국은 잠기지 않습니다.\n"
                 f"관리자는 `!제한 켜기` · `!제한 끄기` · `!제한 18-24` 로 바꾸실 수 있습니다.")
             return
         if not is_admin(msg):
@@ -1193,11 +1207,12 @@ async def on_message(msg):
             "`!제한` · `!제한 켜기` · `!제한 끄기` · `!제한 18-24` 중에서 입력해 주세요.")
         return
 
-    if lock_now() and c.startswith(LOCK_COMMANDS):
+    if lock_now() and (c.startswith(LOCK_COMMANDS_ALWAYS)
+                       or (mode == MODE_STANDARD and c.startswith(LOCK_COMMANDS_STANDARD))):
         await msg.channel.send(
-            f"지금은 순위전 시간이라 조회·탐색 명령을 잠가 두었습니다.\n"
-            f"한국시간 **{lock_window_text()}** 에는 쓰실 수 없습니다. "
-            f"대국(`!대결` · `!경기`)은 그대로 하실 수 있습니다.")
+            f"지금은 순위전 시간이라 표준 자료 조회를 잠가 두었습니다.\n"
+            f"한국시간 **{lock_window_text()}** 에는 쓰실 수 없습니다.\n"
+            f"복합 사전 채널의 조회와 대국(`!대결` · `!경기`)은 그대로 하실 수 있습니다.")
         return
     # -------------------------------------------------------------
 
