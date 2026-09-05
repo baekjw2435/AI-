@@ -18,10 +18,12 @@
 # !종결 <글자>     → 그 글자로 끝나는 단어
 # !장문종결 <글자> → 그 글자로 끝나는 가장 긴 단어
 # !중간 <글자>     → 중간말잇기 (표준·복합 모두 지원)
+# !제한            → 순위전 시간대 조회 제한 확인 (켜고 끄기는 관리자만)
 #
 # 두음법칙은 두 모드 모두 표준두음법칙만 적용합니다.
 
 import os, re, glob, json, heapq, random, asyncio
+from datetime import datetime, timedelta, timezone
 import discord
 import route_engine as rq
 import game as gm
@@ -57,6 +59,89 @@ CHANNEL_ROLES = {
     1523328035686846495: (STUDY, MODE_COMPLEX),      # 복합탐색
 }
 # ===========================
+
+# ===== 순위전 시간대 조회 제한 =====
+# 순위전 시간에 조회·탐색 명령을 잠급니다. 대국(!대결·!경기)은 잠기지 않습니다.
+# 켜고 끄는 것은 서버 관리자만 할 수 있습니다.  →  !제한 켜기 / !제한 끄기
+KST = timezone(timedelta(hours=9))          # 한국시간. 서버는 UTC 로 돌기 때문에 필요합니다.
+LOCK_FILE = "lock_state.json"               # 껐다 켠 상태를 저장해 둡니다.
+
+# 잠글 명령입니다. 여기서 빼면 그 명령은 제한을 받지 않습니다.
+LOCK_COMMANDS = ("!루트", "!탐색", "!공격", "!한방",
+                 "!장문종결", "!장문", "!종결", "!중간")
+
+def _env_flag(name, default=False):
+    v = os.environ.get(name)
+    if v is None:
+        return default
+    return v.strip().lower() in ("1", "on", "true", "yes", "켜기", "켬")
+
+def _env_hours(name, default=(18, 24)):
+    m = re.match(r"\s*(\d{1,2})\s*[-~]\s*(\d{1,2})\s*$", os.environ.get(name, ""))
+    if not m:
+        return default
+    a, b = int(m.group(1)), int(m.group(2))
+    if 0 <= a <= 24 and 0 <= b <= 24 and a != b:
+        return (a, b)
+    return default
+
+LOCK = {
+    "on": _env_flag("STUDY_LOCK", False),
+    "start": _env_hours("STUDY_LOCK_HOURS")[0],
+    "end": _env_hours("STUDY_LOCK_HOURS")[1],
+}
+# 관리자 권한이 없어도 켜고 끌 수 있는 분들입니다. 예) ADMIN_IDS=123,456
+ADMIN_IDS = {int(x) for x in re.findall(r"\d+", os.environ.get("ADMIN_IDS", ""))}
+
+
+def lock_load():
+    """지난번에 껐다 켠 상태를 되살립니다. 파일이 없으면 환경변수 값을 씁니다."""
+    try:
+        with open(LOCK_FILE, encoding="utf-8") as fp:
+            saved = json.load(fp)
+        for k in ("on", "start", "end"):
+            if k in saved:
+                LOCK[k] = saved[k]
+        print(f"[로드] 조회 제한 상태 복원 ({'켜짐' if LOCK['on'] else '꺼짐'} · "
+              f"{LOCK['start']}시~{LOCK['end']}시)")
+    except Exception:
+        pass
+
+
+def lock_save():
+    try:
+        with open(LOCK_FILE, "w", encoding="utf-8") as fp:
+            json.dump(LOCK, fp, ensure_ascii=False)
+    except Exception as e:
+        print(f"[경고] 조회 제한 상태를 저장하지 못했습니다: {e}")
+
+
+def lock_window_text():
+    end = LOCK["end"]
+    return f"{LOCK['start']}시 ~ {'자정' if end in (0, 24) else str(end) + '시'}"
+
+
+def lock_now():
+    """지금이 제한 시간대인지 봅니다. 자정을 넘는 구간도 됩니다."""
+    if not LOCK["on"]:
+        return False
+    h = datetime.now(KST).hour
+    a, b = LOCK["start"], LOCK["end"] % 24
+    if a == b:
+        return True
+    if a < b:
+        return a <= h < b
+    return h >= a or h < b          # 예) 22시~2시
+
+
+def is_admin(msg):
+    if msg.author.id in ADMIN_IDS:
+        return True
+    perms = getattr(msg.author, "guild_permissions", None)
+    if perms is not None and perms.administrator:
+        return True
+    return bool(msg.guild and msg.guild.owner_id == msg.author.id)
+# ==================================
 
 CHO = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ']
 def dec(ch):
@@ -1044,6 +1129,7 @@ HELP_TEXT = (
     "`!종결 <글자>` — 그 글자로 끝나는 단어\n"
     "`!장문종결 <글자>` — 그 글자로 끝나는 가장 긴 단어\n"
     "`!중간 <글자>` — 중간말잇기 ⚡한방 / 🗡️공격 / 🔄돌림\n"
+    "`!제한` — 순위전 시간대 조회 제한 상태를 확인합니다 (변경은 관리자만)\n"
     "예시: `!대결 표준`, `!경기`, `!루트 템11`, `!탐색 템11`, `!공격 기`\n"
     "두 모드 모두 표준두음법칙을 적용하며, 복합 자료와 표준 자료는 서로 섞지 않습니다."
 )
@@ -1064,6 +1150,56 @@ async def on_message(msg):
         return
 
     kind, fixed = channel_role(msg.channel.id)
+
+    # ---- 순위전 시간대 조회 제한 --------------------------------
+    if c.startswith("!제한"):
+        arg = c[len("!제한"):].strip().lower()
+        if not arg:
+            state = "켜짐" if LOCK["on"] else "꺼짐"
+            now = "지금은 제한 시간대입니다." if lock_now() else "지금은 제한 시간대가 아닙니다."
+            await msg.channel.send(
+                f"**조회 제한 : {state}**\n"
+                f"제한 시간대는 한국시간 **{lock_window_text()}** 입니다.\n"
+                f"{now} (현재 한국시간 {datetime.now(KST).strftime('%H:%M')})\n"
+                f"잠기는 명령은 {' · '.join('`' + x + '`' for x in LOCK_COMMANDS)} 입니다. "
+                f"대국은 잠기지 않습니다.\n"
+                f"관리자는 `!제한 켜기` · `!제한 끄기` · `!제한 18-24` 로 바꾸실 수 있습니다.")
+            return
+        if not is_admin(msg):
+            await msg.channel.send("이 설정은 서버 관리자만 바꾸실 수 있습니다.")
+            return
+        if arg in ("켜기", "켬", "on", "start"):
+            LOCK["on"] = True; lock_save()
+            await msg.channel.send(
+                f"조회 제한을 **켰습니다.** 한국시간 **{lock_window_text()}** 에는 "
+                f"조회·탐색 명령이 잠깁니다. 순위전이 끝나면 `!제한 끄기` 를 입력해 주세요.")
+            return
+        if arg in ("끄기", "끔", "off", "stop"):
+            LOCK["on"] = False; lock_save()
+            await msg.channel.send("조회 제한을 **껐습니다.** 이제 언제든 조회하실 수 있습니다.")
+            return
+        m = re.match(r"(\d{1,2})\s*[-~]\s*(\d{1,2})$", arg)
+        if m:
+            a, b = int(m.group(1)), int(m.group(2))
+            if not (0 <= a <= 24 and 0 <= b <= 24) or a == b:
+                await msg.channel.send("0 부터 24 사이로, 서로 다른 두 숫자를 넣어 주세요. 예) `!제한 18-24`")
+                return
+            LOCK["start"], LOCK["end"] = a, b; lock_save()
+            await msg.channel.send(
+                f"제한 시간대를 한국시간 **{lock_window_text()}** 으로 바꿨습니다. "
+                f"지금 제한은 {'켜져 있습니다' if LOCK['on'] else '꺼져 있습니다'}.")
+            return
+        await msg.channel.send(
+            "`!제한` · `!제한 켜기` · `!제한 끄기` · `!제한 18-24` 중에서 입력해 주세요.")
+        return
+
+    if lock_now() and c.startswith(LOCK_COMMANDS):
+        await msg.channel.send(
+            f"지금은 순위전 시간이라 조회·탐색 명령을 잠가 두었습니다.\n"
+            f"한국시간 **{lock_window_text()}** 에는 쓰실 수 없습니다. "
+            f"대국(`!대결` · `!경기`)은 그대로 하실 수 있습니다.")
+        return
+    # -------------------------------------------------------------
 
     if c.startswith("!시작"):
         # 고정 배정된 채널에서는 그 채널의 종류대로 바로 시작합니다.
@@ -1256,6 +1392,7 @@ async def on_message(msg):
 
 load_attack(); load_endcat(); load_words(); load_mid(); load_dollim(); load_dollim_end()
 load_standard_words(); load_standard_special(); load_standard_mid(); load_route_learning()
+lock_load()
 
 token = os.environ.get("DISCORD_TOKEN")
 if not token:

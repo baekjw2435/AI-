@@ -10,7 +10,7 @@
 두음법칙은 표준두음법칙만 인정합니다.
 """
 
-import asyncio, random
+import asyncio, os, random
 
 import discord
 import route_engine as rq
@@ -18,6 +18,66 @@ import route_engine as rq
 TURN_SECONDS = 120        # 한 수를 둘 수 있는 시간
 START_SHIELD = 12         # 라운드 첫 수의 보호막
 BOT_THINK_SECONDS = 1.0   # 봇이 두기 전 잠깐 두는 사이
+
+# =====================================================================
+# 복합 연구 규칙 — complex_rules.txt 에 적은 것만 씁니다.
+#   금지: 틀 3,4,6,9,10,11      그 보호막에서 그 글자를 넘기지 않습니다.
+#   노림: 뀀,뜀,띰 5            그 보호막에서 그 글자를 넘기면 좋습니다.
+#   연구수: 틀 3 = 틀사냥        그 글자를 그 보호막에서 받았을 때 둘 수입니다.
+# =====================================================================
+
+RULES_FILE = "complex_rules.txt"
+
+
+def load_complex_rules(path=None):
+    """(금지, 노림, 연구수) 를 돌려줍니다. 파일이 없으면 전부 빕니다."""
+    ban, bait, book = set(), set(), {}
+    if path is None:
+        here = os.path.dirname(os.path.abspath(__file__))
+        for d in (here, os.getcwd()):
+            cand = os.path.join(d, RULES_FILE)
+            if os.path.exists(cand):
+                path = cand
+                break
+    if not path or not os.path.exists(path):
+        return ban, bait, book
+
+    def shields(text):
+        out = []
+        for part in text.replace(" ", "").split(","):
+            if part.isdigit():
+                out.append(int(part))
+        return out
+
+    with open(path, encoding="utf-8") as fp:
+        for raw in fp:
+            line = raw.split("#", 1)[0].strip()
+            if not line or ":" not in line:
+                continue
+            kind, body = line.split(":", 1)
+            kind, body = kind.strip(), body.strip()
+            if kind in ("금지", "노림"):
+                head, _, tail = body.partition(" ")
+                target = ban if kind == "금지" else bait
+                for syl in head.replace(" ", "").split(","):
+                    for h in shields(tail):
+                        if syl:
+                            target.add((syl, h))
+            elif kind == "연구수":
+                left, _, right = body.partition("=")
+                left = left.replace(" ", "")
+                i = len(left)
+                while i and left[i - 1].isdigit():
+                    i -= 1
+                syl, num = left[:i], left[i:]
+                # " ; 단어들" 을 붙이면 그 단어가 이미 쓰인 뒤에만 씁니다.
+                right, _, cond = right.partition(";")
+                need = tuple(w.strip() for w in cond.replace("/", ",").split(",") if w.strip())
+                words = [w.strip() for w in right.replace("/", ",").split(",") if w.strip()]
+                if syl and num and words:
+                    book.setdefault((syl, int(num)), []).extend((w, need) for w in words)
+    return ban, bait, book
+
 
 COLOR_TURN = 0x5AC8FA
 COLOR_WIN = 0xC2F74A
@@ -125,6 +185,17 @@ class ComplexDictionary(Dictionary):
         self.category_first = category_first           # 첫음절 -> [(단어, 'J'/'Y')]
         self.dollim_end = dollim_end                   # 첫음절 -> set(자가순환 단어)
 
+        # 공격류가 하나도 없고 돌림이 짝수인 글자입니다.
+        # 이런 자리는 받은 쪽이 돌림을 먼저 소진하게 되어 넘기는 쪽이 유리합니다.
+        # 복합 사전에서는 척·톡·틀·획 네 글자뿐입니다.
+        self.rule_ban, self.rule_bait, self.rule_book = load_complex_rules()
+
+        self.trap_endings = set()
+        for syl, pool in dollim_end.items():
+            live = {w for w in pool if w in self.words}
+            if live and len(live) % 2 == 0 and not self._threat(syl, set()):
+                self.trap_endings.add(syl)
+
     def _attacks(self, current):
         merged = {}
         for v in rq.dueum_variants(current):
@@ -152,27 +223,77 @@ class ComplexDictionary(Dictionary):
                     count += 1
         return count
 
+    def _trap(self, ending, used):
+        """넘기면 유리한 끝말인지 봅니다.
+        공격류가 없고 남은 돌림이 짝수면, 받은 쪽이 돌림을 먼저 다 쓰게 됩니다."""
+        if ending not in self.trap_endings:
+            return False
+        live = self._dollim(ending, used)
+        return bool(live) and len(live) % 2 == 0
+
+    def _book(self, current, shield, used):
+        """연구수 목록입니다. 두음도 보고, 쓴말 조건도 확인합니다."""
+        out = []
+        for v in rq.dueum_variants(current):
+            for word, need in self.rule_book.get((v, shield), ()):
+                if all(x in used for x in need):
+                    out.append(word)
+        return out
+
     def bot_move(self, current, shield, used, history):
-        def usable(pool):
+        """금지 규칙을 지켜 한 번 고르고, 그러면 둘 수가 없을 때만 금지를 풉니다."""
+        word, note = self._pick(current, shield, used, honor_ban=True)
+        if word is None:
+            word, note = self._pick(current, shield, used, honor_ban=False)
+        return word, note
+
+    def _pick(self, current, shield, used, honor_ban):
+        def usable(pool, ban=None):
+            block = honor_ban if ban is None else ban
             return sorted({w for w in pool
                            if w not in used and self.has(w)
+                           and not (block and (w[-1], shield) in self.rule_ban)
                            and self.follow_count(w[-1], used | {w}) >= shield})
 
         def best(pool, lookahead=True):
+            # 연구로 확인된 노림 자리 → 척·톡·틀·획 같은 덫 자리 순으로 먼저 봅니다.
+            def head(w):
+                return (0 if (w[-1], shield) in self.rule_bait else 1,
+                        0 if self._trap(w[-1], used | {w}) else 1)
             if lookahead:
-                # 상대가 반격할 공격류가 적고 이을 단어도 좁은 수를 고릅니다.
-                return min(pool, key=lambda w: (self._threat(w[-1], used | {w}),
-                                                self.follow_count(w[-1], used | {w}), w))
-            return min(pool, key=lambda w: (self.follow_count(w[-1], used | {w}), w))
+                # 그다음은 상대가 반격할 공격류가 적고 이을 단어도 좁은 수입니다.
+                return min(pool, key=lambda w: head(w) + (self._threat(w[-1], used | {w}),
+                                                          self.follow_count(w[-1], used | {w}), w))
+            return min(pool, key=lambda w: head(w) + (self.follow_count(w[-1], used | {w}), w))
 
         attacks = self._attacks(current)
 
-        # 1) 한방으로 바로 끝냅니다.
+        # 1) 상대가 이을 단어가 하나도 없게 만드는 수 — 진짜 한방입니다.
+        pool = usable(self.candidates(current, used))
+        kill = [w for w in pool if self.follow_count(w[-1], used | {w}) == 0]
+        if kill:
+            return min(kill), "한방"
+
+        # 2) 사람이 연구해 둔 수가 있으면 그대로 둡니다.
+        #    연구수는 금지보다 구체적이므로 금지를 넘어섭니다.
+        order = self._book(current, shield, used)
+        pool = usable(order, ban=False)
+        if pool:
+            return min(pool, key=lambda w: order.index(w)), "연구수"
+
+        # 3) 노림 — 연구로 확인된 유인 자리로 넘깁니다.
+        #    이 수는 보통 평범한 단어라 공격보다 뒤에 두면 영영 안 나옵니다.
+        if self.rule_bait:
+            pool = usable([w for w in self.candidates(current, used)
+                           if (w[-1], shield) in self.rule_bait])
+            if pool:
+                return best(pool), "노림"
+
+        # 4) 공격 → 5) 준공격 → 6) 유도. 여기까지가 공격류입니다.
+        #    공격 자료의 깊이 1 은 즉사가 아닐 수도 있어 일반 공격과 같이 봅니다.
         pool = usable([w for w, d in attacks.items() if d == 1])
         if pool:
-            return best(pool), "한방"
-
-        # 2) 공격 → 3) 준공격 → 4) 유도. 여기까지가 공격류입니다.
+            return best(pool), "공격"
         pool = usable([w for w, d in attacks.items() if d != 1])
         if pool:
             return best(pool), "공격"
@@ -188,14 +309,14 @@ class ComplexDictionary(Dictionary):
         if pool:
             return best(pool), "유도"
 
-        # 5) 공격류가 하나도 없을 때만 돌림을 씁니다.
+        # 7) 공격류가 하나도 없을 때만 돌림을 씁니다.
         #    틀(틀틀·틀라솔테오틀)이나 획(획획·획득계획)처럼 돌림밖에 없는 자리가 있어서,
         #    돌림까지 막으면 봇이 둘 수 있는데도 그냥 지게 됩니다.
         pool = usable(self._dollim(current, used))
         if pool:
             return best(pool), "돌림"
 
-        # 6) 그마저 없으면 상대를 가장 좁히는 일반 수로 버팁니다.
+        # 8) 그마저 없으면 상대를 가장 좁히는 일반 수로 버팁니다.
         pool = usable(self.candidates(current, used))
         if pool:
             return best(pool, lookahead=False), ""
