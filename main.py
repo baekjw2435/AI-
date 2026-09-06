@@ -18,7 +18,7 @@
 # !종결 <글자>     → 그 글자로 끝나는 단어
 # !장문종결 <글자> → 그 글자로 끝나는 가장 긴 단어
 # !중간 <글자>     → 중간말잇기 (표준·복합 모두 지원)
-# !제한            → 순위전 시간대 조회 제한 확인 (켜고 끄기는 관리자만)
+# !제한            → 순위전 시간대 조회 딜레이 확인 (켜고 끄기는 관리자만)
 #
 # 두음법칙은 두 모드 모두 표준두음법칙만 적용합니다.
 
@@ -60,17 +60,19 @@ CHANNEL_ROLES = {
 }
 # ===========================
 
-# ===== 순위전 시간대 조회 제한 =====
-# 순위전 시간에 조회·탐색 명령을 잠급니다. 대국(!대결·!경기)은 잠기지 않습니다.
+# ===== 순위전 시간대 조회 딜레이 =====
+# 순위전 시간에 표준 자료 조회를 10~15초 늦춥니다. 막지는 않습니다.
+# 대국(!대결·!경기)과 복합 채널 조회는 늦어지지 않습니다.
 # 켜고 끄는 것은 서버 관리자만 할 수 있습니다.  →  !제한 켜기 / !제한 끄기
 KST = timezone(timedelta(hours=9))          # 한국시간. 서버는 UTC 로 돌기 때문에 필요합니다.
 LOCK_FILE = "lock_state.json"               # 껐다 켠 상태를 저장해 둡니다.
 
-# 잠글 명령입니다. 여기서 빼면 그 명령은 제한을 받지 않습니다.
-# 순위전은 신표(표준)만 하므로, 복합 채널의 조회는 잠그지 않습니다.
-#   · 아래 둘은 표준 자료 전용이라 채널과 상관없이 잠깁니다.
+# 늦출 명령입니다. 여기서 빼면 그 명령은 제한을 받지 않습니다.
+# 막지는 않고 늦추기만 합니다. 공부는 그대로 하실 수 있고, 대국 중에 쓰기에는 느립니다.
+# 순위전은 신표(표준)만 하므로, 복합 채널의 조회는 늦추지 않습니다.
+#   · 아래 둘은 표준 자료 전용이라 채널과 상관없이 늦어집니다.
 LOCK_COMMANDS_ALWAYS = ("!루트", "!탐색")
-#   · 아래는 채널 사전이 표준일 때만 잠깁니다. 복합 채널에서는 그대로 쓰실 수 있습니다.
+#   · 아래는 채널 사전이 표준일 때만 늦어집니다. 복합 채널에서는 그대로 쓰실 수 있습니다.
 LOCK_COMMANDS_STANDARD = ("!공격", "!한방", "!장문종결", "!장문", "!종결", "!중간")
 LOCK_COMMANDS = LOCK_COMMANDS_ALWAYS + LOCK_COMMANDS_STANDARD
 
@@ -89,11 +91,24 @@ def _env_hours(name, default=(18, 24)):
         return (a, b)
     return default
 
+def _env_delay(name, default=(10, 15)):
+    m = re.match(r"\s*(\d{1,3})\s*[-~]\s*(\d{1,3})\s*$", os.environ.get(name, ""))
+    if not m:
+        return default
+    a, b = int(m.group(1)), int(m.group(2))
+    if 0 <= a <= b <= 120:
+        return (a, b)
+    return default
+
 LOCK = {
     "on": _env_flag("STUDY_LOCK", False),
     "start": _env_hours("STUDY_LOCK_HOURS")[0],
     "end": _env_hours("STUDY_LOCK_HOURS")[1],
+    "dmin": _env_delay("STUDY_LOCK_DELAY")[0],
+    "dmax": _env_delay("STUDY_LOCK_DELAY")[1],
 }
+# 지금 결과를 기다리는 중인 분들입니다. 여러 번 쳐서 딜레이를 피하지 못하게 합니다.
+DELAYING = set()
 # 관리자 권한이 없어도 켜고 끌 수 있는 분들입니다. 예) ADMIN_IDS=123,456
 ADMIN_IDS = {int(x) for x in re.findall(r"\d+", os.environ.get("ADMIN_IDS", ""))}
 
@@ -103,11 +118,11 @@ def lock_load():
     try:
         with open(LOCK_FILE, encoding="utf-8") as fp:
             saved = json.load(fp)
-        for k in ("on", "start", "end"):
+        for k in LOCK:
             if k in saved:
                 LOCK[k] = saved[k]
         print(f"[로드] 조회 제한 상태 복원 ({'켜짐' if LOCK['on'] else '꺼짐'} · "
-              f"{LOCK['start']}시~{LOCK['end']}시)")
+              f"{LOCK['start']}시~{LOCK['end']}시 · 딜레이 {LOCK['dmin']}~{LOCK['dmax']}초)")
     except Exception:
         pass
 
@@ -137,8 +152,19 @@ def in_window():
 
 
 def lock_now():
-    """지금 실제로 잠기는지 봅니다."""
+    """지금 딜레이가 걸리는 시간인지 봅니다."""
     return LOCK["on"] and in_window()
+
+
+def lock_delay():
+    """이번에 늦출 시간(초)입니다. 매번 조금씩 다르게 나옵니다."""
+    a, b = LOCK["dmin"], LOCK["dmax"]
+    return random.randint(min(a, b), max(a, b))
+
+
+def lock_delay_text():
+    a, b = LOCK["dmin"], LOCK["dmax"]
+    return f"{a}초" if a == b else f"{a}~{b}초"
 
 
 def is_admin(msg):
@@ -792,7 +818,7 @@ def embed_route(syl, shield, only_length=None):
 # ---------------------------------------------------------------------
 # 눌러서 수순을 만들어 가는 탐색 (사이트의 후보 목록과 같은 방식)
 # ---------------------------------------------------------------------
-SEARCH_TIMEOUT = 300      # 초 단위. 이 시간이 지나면 버튼을 잠급니다.
+SEARCH_TIMEOUT = 600      # 초 단위. 이 시간이 지나면 버튼을 잠급니다.
 SEARCH_BUTTONS = 10       # 한 번에 보여 줄 후보 버튼 수 (한 줄 5개 × 2줄)
 
 class PickButton(discord.ui.Button):
@@ -894,29 +920,50 @@ class RouteSearchView(discord.ui.View):
             return False
         return True
 
+    async def hold(self, interaction):
+        """순위전 시간이면 버튼 응답도 늦춥니다.
+        디스코드는 3초 안에 대답해야 하므로 먼저 defer 하고 기다립니다.
+        늦췄으면 True 를 돌려주고, 그때는 edit_original_response 로 고쳐야 합니다."""
+        if not lock_now():
+            return False
+        await interaction.response.defer()
+        await asyncio.sleep(lock_delay())
+        return True
+
+    async def show(self, interaction, held, route=None):
+        if held:
+            await interaction.edit_original_response(embed=self.embed(route), view=self)
+        else:
+            await interaction.response.edit_message(embed=self.embed(route), view=self)
+
     async def advance(self, interaction, candidate):
+        held = await self.hold(interaction)
         self.history.append((candidate["word"], self.shield, self.current))
         self.used.add(candidate["word"])
         self.current = candidate["end"]
         self.shield = max(0, self.shield - 1)
         self.refresh()
-        await interaction.response.edit_message(embed=self.embed(), view=self)
+        await self.show(interaction, held)
 
     async def control(self, interaction, action):
         if action == "back" and self.history:
+            held = await self.hold(interaction)
             word, shield, current = self.history.pop()
             self.used.discard(word)
             self.current, self.shield = current, shield
             self.refresh()
-            await interaction.response.edit_message(embed=self.embed(), view=self)
+            await self.show(interaction, held)
         elif action == "reset":
+            held = await self.hold(interaction)
             self.current, self.shield = self.start
             self.history.clear()
             self.used.clear()
             self.refresh()
-            await interaction.response.edit_message(embed=self.embed(), view=self)
+            await self.show(interaction, held)
         elif action == "auto":
-            await interaction.response.defer()
+            # 예상 수순은 계산이 길어 원래도 defer 합니다.
+            if not await self.hold(interaction):
+                await interaction.response.defer()
             route = rq.build_auto_route(ROUTE_CORE, self.current, self.shield,
                                         depth=ROUTE_DEPTH, used=self.used,
                                         history=self.history)
@@ -1136,7 +1183,7 @@ HELP_TEXT = (
     "`!종결 <글자>` — 그 글자로 끝나는 단어\n"
     "`!장문종결 <글자>` — 그 글자로 끝나는 가장 긴 단어\n"
     "`!중간 <글자>` — 중간말잇기 ⚡한방 / 🗡️공격 / 🔄돌림\n"
-    "`!제한` — 순위전 시간대 조회 제한 상태를 확인합니다 (변경은 관리자만)\n"
+    "`!제한` — 순위전 시간대 조회 딜레이 상태를 확인합니다 (변경은 관리자만)\n"
     "예시: `!대결 표준`, `!경기`, `!루트 템11`, `!탐색 템11`, `!공격 기`\n"
     "두 모드 모두 표준두음법칙을 적용하며, 복합 자료와 표준 자료는 서로 섞지 않습니다."
 )
@@ -1164,20 +1211,23 @@ async def on_message(msg):
         if not arg:
             state = "켜짐" if LOCK["on"] else "꺼짐"
             if in_window():
-                now = ("지금은 제한 시간대라 잠겨 있습니다." if LOCK["on"]
-                       else "지금은 제한 시간대이지만, 제한이 꺼져 있어 잠기지 않습니다.")
+                now = (f"지금은 제한 시간대라 {lock_delay_text()} 늦게 나옵니다." if LOCK["on"]
+                       else "지금은 제한 시간대이지만, 제한이 꺼져 있어 바로 나옵니다.")
             else:
                 now = "지금은 제한 시간대가 아닙니다."
             await msg.channel.send(
                 f"**조회 제한 : {state}**\n"
-                f"제한 시간대는 한국시간 **{lock_window_text()}** 입니다.\n"
+                f"제한 시간대는 한국시간 **{lock_window_text()}** 이고, "
+                f"그 동안에는 결과가 **{lock_delay_text()}** 늦게 나옵니다. 막지는 않습니다.\n"
                 f"{now} (현재 한국시간 {datetime.now(KST).strftime('%H:%M')})\n"
-                f"채널과 상관없이 잠기는 명령은 "
-                f"{' · '.join('`' + x + '`' for x in LOCK_COMMANDS_ALWAYS)} 입니다.\n"
-                f"표준 사전 채널에서만 잠기는 명령은 "
+                f"채널과 상관없이 늦어지는 명령은 "
+                f"{' · '.join('`' + x + '`' for x in LOCK_COMMANDS_ALWAYS)} 입니다. "
+                f"`!탐색` 은 버튼을 누를 때마다 늦어집니다.\n"
+                f"표준 사전 채널에서만 늦어지는 명령은 "
                 f"{' · '.join('`' + x + '`' for x in LOCK_COMMANDS_STANDARD)} 입니다.\n"
-                f"복합 사전 채널의 조회와 대국은 잠기지 않습니다.\n"
-                f"관리자는 `!제한 켜기` · `!제한 끄기` · `!제한 18-24` 로 바꾸실 수 있습니다.")
+                f"복합 사전 채널의 조회와 대국은 늦어지지 않습니다.\n"
+                f"관리자는 `!제한 켜기` · `!제한 끄기` · `!제한 18-24` · "
+                f"`!제한 딜레이 10-15` 로 바꾸실 수 있습니다.")
             return
         if not is_admin(msg):
             await msg.channel.send("이 설정은 서버 관리자만 바꾸실 수 있습니다.")
@@ -1186,11 +1236,24 @@ async def on_message(msg):
             LOCK["on"] = True; lock_save()
             await msg.channel.send(
                 f"조회 제한을 **켰습니다.** 한국시간 **{lock_window_text()}** 에는 "
-                f"조회·탐색 명령이 잠깁니다. 순위전이 끝나면 `!제한 끄기` 를 입력해 주세요.")
+                f"표준 자료 조회가 **{lock_delay_text()}** 늦게 나옵니다. "
+                f"순위전이 끝나면 `!제한 끄기` 를 입력해 주세요.")
             return
         if arg in ("끄기", "끔", "off", "stop"):
             LOCK["on"] = False; lock_save()
-            await msg.channel.send("조회 제한을 **껐습니다.** 이제 언제든 조회하실 수 있습니다.")
+            await msg.channel.send("조회 제한을 **껐습니다.** 이제 언제든 바로 나옵니다.")
+            return
+        m = re.match(r"딜레이\s*(\d{1,3})\s*[-~]\s*(\d{1,3})$", arg)
+        if m:
+            a, b = int(m.group(1)), int(m.group(2))
+            if not (0 <= a <= b <= 120):
+                await msg.channel.send(
+                    "0 부터 120 사이로, 작은 수를 앞에 적어 주세요. 예) `!제한 딜레이 10-15`")
+                return
+            LOCK["dmin"], LOCK["dmax"] = a, b; lock_save()
+            await msg.channel.send(
+                f"딜레이를 **{lock_delay_text()}** 으로 바꿨습니다. "
+                f"지금 제한은 {'켜져 있습니다' if LOCK['on'] else '꺼져 있습니다'}.")
             return
         m = re.match(r"(\d{1,2})\s*[-~]\s*(\d{1,2})$", arg)
         if m:
@@ -1204,16 +1267,26 @@ async def on_message(msg):
                 f"지금 제한은 {'켜져 있습니다' if LOCK['on'] else '꺼져 있습니다'}.")
             return
         await msg.channel.send(
-            "`!제한` · `!제한 켜기` · `!제한 끄기` · `!제한 18-24` 중에서 입력해 주세요.")
+            "`!제한` · `!제한 켜기` · `!제한 끄기` · `!제한 18-24` · `!제한 딜레이 10-15` "
+            "중에서 입력해 주세요.")
         return
 
     if lock_now() and (c.startswith(LOCK_COMMANDS_ALWAYS)
                        or (mode == MODE_STANDARD and c.startswith(LOCK_COMMANDS_STANDARD))):
-        await msg.channel.send(
-            f"지금은 순위전 시간이라 표준 자료 조회를 잠가 두었습니다.\n"
-            f"한국시간 **{lock_window_text()}** 에는 쓰실 수 없습니다.\n"
-            f"복합 사전 채널의 조회와 대국(`!대결` · `!경기`)은 그대로 하실 수 있습니다.")
-        return
+        # 막지 않고 늦춥니다. 공부는 그대로 하실 수 있고, 대국 중에 쓰기에는 느립니다.
+        if msg.author.id in DELAYING:
+            await msg.channel.send(
+                "앞서 입력하신 결과를 아직 준비하고 있습니다. 그것부터 받아 보신 뒤에 다시 입력해 주세요.")
+            return
+        wait = lock_delay()
+        DELAYING.add(msg.author.id)
+        try:
+            await msg.channel.send(
+                f"지금은 순위전 시간이라 표준 자료 조회가 **{wait}초** 뒤에 나옵니다. "
+                f"잠시만 기다려 주세요.")
+            await asyncio.sleep(wait)
+        finally:
+            DELAYING.discard(msg.author.id)
     # -------------------------------------------------------------
 
     if c.startswith("!시작"):
