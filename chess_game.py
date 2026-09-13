@@ -114,8 +114,14 @@ def _label_font():
     return _font
 
 
-def render_png(board, last_move=None, flip=False):
-    """판을 그린 PNG 를 돌려줍니다. 그릴 수 없으면 None 입니다."""
+PICK_MARK = (100, 150, 220, 150)      # 고른 말 자리 (파랑)
+DOT = (60, 110, 40, 150)              # 갈 수 있는 빈 칸
+RING = (170, 50, 40, 175)             # 잡을 수 있는 칸
+
+
+def render_png(board, last_move=None, flip=False, picked=None, targets=()):
+    """판을 그린 PNG 를 돌려줍니다. 그릴 수 없으면 None 입니다.
+    picked 는 고른 말의 자리, targets 는 갈 수 있는 칸들입니다."""
     pieces = _load_pieces()
     if pieces is None:
         return None
@@ -140,6 +146,8 @@ def render_png(board, last_move=None, flip=False):
 
             if last_move is not None and square in (last_move.from_square, last_move.to_square):
                 draw.rectangle(box, fill=MOVE_MARK)
+            if square == picked:
+                draw.rectangle(box, fill=PICK_MARK)
             if square == check_sq:
                 draw.rectangle(box, fill=CHECK_MARK)
 
@@ -150,6 +158,17 @@ def render_png(board, last_move=None, flip=False):
                 art = pieces[key]
                 off = (CELL - art.width) // 2
                 img.alpha_composite(art, (x0 + off, y0 + off))
+
+            if square in targets:
+                cx, cy = x0 + CELL // 2, y0 + CELL // 2
+                if piece is None:
+                    r = CELL // 7
+                    draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=DOT)
+                else:
+                    # 잡을 수 있는 칸은 말이 가리지 않도록 테두리로 표시합니다.
+                    r = CELL // 2 - 3
+                    draw.ellipse([cx - r, cy - r, cx + r, cy + r],
+                                 outline=RING, width=max(4, CELL // 12))
 
     font = _label_font()
     for col, file in enumerate(files):
@@ -335,19 +354,28 @@ class ChessGame:
             text = "…  " + text
         return text
 
-    def render(self, flip=None):
+    def render(self, flip=None, picked=None):
         """판 그림을 discord.File 로 돌려줍니다. 못 그리면 None 입니다."""
         if flip is None:
             flip = self.flip
         last = self.board.peek() if self.board.move_stack else None
-        buf = render_png(self.board, last, flip)
+        square = None
+        targets = ()
+        if picked:
+            try:
+                square = chess.parse_square(picked)
+                targets = {m.to_square for m in self.board.legal_moves
+                           if m.from_square == square}
+            except ValueError:
+                square = None
+        buf = render_png(self.board, last, flip, square, targets)
         if buf is None:
             return None
         return discord.File(buf, filename="board.png")
 
-    def payload(self, guild, notice=""):
+    def payload(self, guild, notice="", picked=None):
         """(임베드, 그림파일) 을 함께 돌려줍니다. 그림이 안 되면 글자 판으로 갑니다."""
-        picture = self.render()
+        picture = self.render(picked=picked)
         return self.embed(guild, notice, self.flip, picture is not None), picture
 
     def embed(self, guild, notice="", flip=False, picture=False):
@@ -389,7 +417,7 @@ class ChessGame:
         e.add_field(name="📜 기보", value=self.history_text()[:1024], inline=False)
         footer = f"⬜ {self.names[WHITE]} · ⬛ {self.names[BLACK]}"
         if picture:
-            footer += " · 직전 수는 노란 칸, 체크는 빨간 칸입니다"
+            footer += " · 노란 칸=직전 수 · 파란 칸=고른 말 · 초록 점=갈 곳 · 빨간 칸=체크"
         elif not emojis:
             footer += " · 그림을 못 그려 글자 판으로 보여 드립니다"
         e.set_footer(text=footer)

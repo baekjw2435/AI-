@@ -1037,42 +1037,23 @@ class ChessView(discord.ui.View):
         self.build()
 
     # -- 화면 짜기 --------------------------------------------------
+    #    디스코드는 그림 안을 누르는 걸 지원하지 않아서, 칸마다 버튼을 답니다.
+    #    한 줄에 5개씩 네 줄(20개)까지 버튼으로 놓고, 그보다 많으면 목록으로 바꿉니다.
+    BUTTON_ROWS = 4
+    BUTTON_MAX = 20
+
     def build(self):
         self.clear_items()
         game = self.game
         if game.finished:
             return
 
-        rows = game.movable_squares()
-        picker = discord.ui.Select(
-            placeholder="① 움직일 말을 고르세요",
-            row=0,
-            options=[discord.SelectOption(label=label, value=name, description=desc,
-                                          default=(name == self.picked))
-                     for name, label, desc in rows[:25]])
-        picker.callback = self.on_pick
-        self.add_item(picker)
-
-        targets = game.destinations(self.picked) if self.picked else []
-        if targets:
-            # 갈 곳이 25군데를 넘으면 두 줄로 나눕니다.
-            for i, chunk in enumerate([targets[:25], targets[25:]]):
-                if not chunk:
-                    continue
-                sel = discord.ui.Select(
-                    placeholder=f"② 갈 곳을 고르세요" + (" (이어서)" if i else ""),
-                    row=1 + i,
-                    options=[discord.SelectOption(label=label, value=uci, description=desc)
-                             for uci, label, desc in chunk])
-                sel.callback = self.on_move
-                self.add_item(sel)
+        if self.picked:
+            self.lay_targets(game.destinations(self.picked))
         else:
-            blank = discord.ui.Select(placeholder="② 먼저 말을 고르세요", row=1,
-                                      options=[discord.SelectOption(label="—", value="-")],
-                                      disabled=True)
-            self.add_item(blank)
+            self.lay_pieces(game.movable_squares())
 
-        self.add_item(ChessControl(self, "↩ 선택 취소", "clear",
+        self.add_item(ChessControl(self, "↩ 다시 고르기", "clear",
                                    discord.ButtonStyle.secondary,
                                    disabled=self.picked is None))
         self.add_item(ChessControl(self, "🔄 판 뒤집기", "flip",
@@ -1081,6 +1062,45 @@ class ChessView(discord.ui.View):
                                    discord.ButtonStyle.secondary))
         self.add_item(ChessControl(self, "🏳 기권", "resign",
                                    discord.ButtonStyle.danger))
+
+    def lay_pieces(self, rows):
+        """움직일 수 있는 말마다 버튼 하나씩 답니다."""
+        if len(rows) > self.BUTTON_MAX:
+            self.lay_select(rows, "움직일 말을 고르세요",
+                            lambda r: (r[0], r[1], r[2]), self.on_pick)
+            return
+        for i, (name, label, _desc) in enumerate(rows):
+            self.add_item(SquareButton(self, label, name, "pick",
+                                       discord.ButtonStyle.secondary,
+                                       row=i // 5))
+
+    def lay_targets(self, rows):
+        """고른 말이 갈 수 있는 칸마다 버튼 하나씩 답니다."""
+        if len(rows) > self.BUTTON_MAX:
+            self.lay_select(rows, "갈 곳을 고르세요",
+                            lambda r: (r[0], r[1], r[2]), self.on_move)
+            return
+        promo_mark = {"q": "♕", "r": "♖", "b": "♗", "n": "♘"}
+        for i, (uci, _label, desc) in enumerate(rows):
+            target = uci[2:4]                      # 판의 초록 점과 같은 칸 이름입니다.
+            promo = promo_mark.get(uci[4:5], "")
+            mark = "×" if "잡기" in desc else ("+" if "체크" in desc else "")
+            style = (discord.ButtonStyle.danger if "잡기" in desc
+                     else discord.ButtonStyle.primary)
+            text = " ".join(x for x in (target, promo, mark) if x)
+            self.add_item(SquareButton(self, text, uci, "move", style, row=i // 5))
+
+    def lay_select(self, rows, placeholder, unpack, handler):
+        """버튼으로 다 못 놓을 만큼 많을 때만 목록으로 보여 줍니다."""
+        for i in range(0, len(rows), 25):
+            chunk = rows[i:i + 25]
+            sel = discord.ui.Select(
+                placeholder=placeholder + (" (이어서)" if i else ""),
+                row=i // 25,
+                options=[discord.SelectOption(label=lb, value=val, description=ds)
+                         for val, lb, ds in (unpack(r) for r in chunk)])
+            sel.callback = handler
+            self.add_item(sel)
 
     # -- 공통 -------------------------------------------------------
     async def interaction_check(self, interaction):
@@ -1100,7 +1120,7 @@ class ChessView(discord.ui.View):
     async def refresh(self, interaction, notice=""):
         """판을 다시 그려 이 메시지를 고칩니다."""
         self.build()
-        embed, picture = self.game.payload(interaction.guild, notice)
+        embed, picture = self.game.payload(interaction.guild, notice, self.picked)
         view = None if self.game.finished else self
         kwargs = {"embed": embed, "view": view}
         if picture is not None:
@@ -1108,17 +1128,17 @@ class ChessView(discord.ui.View):
         await interaction.response.edit_message(**kwargs)
 
     # -- 버튼 처리 --------------------------------------------------
-    async def on_pick(self, interaction):
+    async def on_pick(self, interaction, value=None):
         if not await self.my_turn(interaction):
             return
-        self.picked = interaction.data["values"][0]
+        self.picked = value or interaction.data["values"][0]
         await self.refresh(interaction)
 
-    async def on_move(self, interaction):
+    async def on_move(self, interaction, value=None):
         if not await self.my_turn(interaction):
             return
         game = self.game
-        ok, info = game.push(interaction.data["values"][0])
+        ok, info = game.push(value or interaction.data["values"][0])
         if not ok:
             await interaction.response.send_message(info, ephemeral=True)
             return
@@ -1176,9 +1196,25 @@ class ChessView(discord.ui.View):
                 pass
 
 
+class SquareButton(discord.ui.Button):
+    """말 하나 또는 갈 곳 하나를 나타내는 버튼입니다."""
+
+    def __init__(self, view_ref, label, value, action, style, row):
+        super().__init__(label=label[:80], style=style, row=row)
+        self.view_ref = view_ref
+        self.value = value
+        self.action = action
+
+    async def callback(self, interaction):
+        if self.action == "pick":
+            await self.view_ref.on_pick(interaction, self.value)
+        else:
+            await self.view_ref.on_move(interaction, self.value)
+
+
 class ChessControl(discord.ui.Button):
     def __init__(self, view_ref, label, action, style, disabled=False):
-        super().__init__(label=label, style=style, row=3, disabled=disabled)
+        super().__init__(label=label, style=style, row=4, disabled=disabled)
         self.view_ref = view_ref
         self.action = action
 
