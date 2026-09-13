@@ -214,6 +214,7 @@ class ChessGame:
         self.winner = None              # 0=백, 1=흑, None=무승부
         self.last_san = None
         self.draw_offer = None          # 무승부를 제안한 분의 id
+        self.aborted = False            # 관리자가 세운 대국인지
         self.timer = None
         self.timer_token = 0
         self.message = None             # 마지막으로 보낸 판 메시지
@@ -439,7 +440,9 @@ class ChessGame:
     def embed(self, guild, notice="", flip=False, picture=False):
         emojis = None if picture else emoji_map(guild)
         if self.finished:
-            if self.winner is None:
+            if self.aborted:
+                color, title = COLOR_DRAW, "⛔  중단된 대국입니다"
+            elif self.winner is None:
                 color, title = COLOR_DRAW, "🤝  무승부입니다"
             else:
                 color = COLOR_WIN

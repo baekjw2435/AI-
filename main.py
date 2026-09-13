@@ -21,6 +21,7 @@
 # !제한            → 순위전 시간대 조회 딜레이 확인 (켜고 끄기는 관리자만)
 # !체스            → 체스 대국 (사람 대 사람). !체스판 !체스기권 !무승부 !체스이모지
 # !오목            → 오목 대국 (사람 대 사람). !오목판 !오목기권 !무승부
+# !중단            → 멈춰 있는 대국을 세웁니다 (관리자만)
 #
 # 두음법칙은 두 모드 모두 표준두음법칙만 적용합니다.
 
@@ -1816,6 +1817,7 @@ HELP_TEXT = (
     "`!장문종결 <글자>` — 그 글자로 끝나는 가장 긴 단어\n"
     "`!중간 <글자>` — 중간말잇기 ⚡한방 / 🗡️공격 / 🔄돌림\n"
     "`!제한` — 순위전 시간대 조회 딜레이 상태를 확인합니다 (변경은 관리자만)\n"
+    "`!중단` — 멈춰 있는 대국을 세웁니다 (관리자만)\n"
     "\n**체스 (사람 대 사람)**\n"
     "`!체스` — 상대를 모집해 체스를 시작합니다\n"
     "`!체스판` — 지금 판을 다시 보여 드립니다\n"
@@ -1947,6 +1949,43 @@ async def on_message(msg):
     # -------------------------------------------------------------
 
     # ---- 체스 ---------------------------------------------------
+    if c.startswith("!중단"):
+        # 한쪽이 자리를 비워 대국이 멈췄을 때 관리자가 풀어 줍니다.
+        if not is_admin(msg):
+            await msg.channel.send("이 명령은 서버 관리자만 쓰실 수 있습니다.")
+            return
+        who = msg.author.display_name
+        stopped = []
+
+        word_game = GAMES.get(msg.channel.id)
+        if word_game:
+            word_game.cancel_timer()
+            GAMES.drop(msg.channel.id)
+            stopped.append("끝말잇기")
+
+        chess_game_now = CHESS_GAMES.get(msg.channel.id) if CHESS_READY else None
+        if chess_game_now:
+            chess_game_now.aborted = True
+            chess_game_now.finish(None, f"{who} 님이 대국을 중단하셨습니다.")
+            CHESS_GAMES.drop(msg.channel.id)
+            await post_chess_board(chess_game_now, msg.channel)
+            stopped.append("체스")
+
+        omok_game_now = OMOK_GAMES.get(msg.channel.id) if OMOK_READY else None
+        if omok_game_now:
+            omok_game_now.aborted = True
+            omok_game_now.finish(None, f"{who} 님이 대국을 중단하셨습니다.")
+            OMOK_GAMES.drop(msg.channel.id)
+            await post_omok_board(omok_game_now, msg.channel)
+            stopped.append("오목")
+
+        if not stopped:
+            await msg.channel.send("이 채널에서 진행 중인 대국이 없습니다.")
+            return
+        await msg.channel.send(
+            f"⛔ {' · '.join(stopped)} 대국을 중단했습니다. 이제 새로 시작하실 수 있습니다.")
+        return
+
     if c.startswith("!무승부"):
         # 이 채널에서 진행 중인 대국을 보고 알아서 넘깁니다.
         if CHESS_READY and CHESS_GAMES.get(msg.channel.id):

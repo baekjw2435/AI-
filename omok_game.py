@@ -155,6 +155,7 @@ class OmokGame:
         self.winner = None
         self.win_line = []
         self.draw_offer = None
+        self.aborted = False            # 관리자가 세운 대국인지
         self.message = None
         self.timer = None
         self.timer_token = 0
@@ -255,7 +256,9 @@ class OmokGame:
 
     def embed(self, notice="", picture=False):
         if self.finished:
-            if self.winner is None:
+            if self.aborted:
+                color, title = COLOR_DRAW, "⛔  중단된 대국입니다"
+            elif self.winner is None:
                 color, title = COLOR_DRAW, "🤝  무승부입니다"
             else:
                 color = COLOR_WIN
