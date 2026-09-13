@@ -38,8 +38,8 @@ SPOT_LIKE = re.compile(rf"^([A-{LETTERS[-1]}])\s*([1-9]|1[0-{SIZE % 10}])$", re.
 # 판 그리기
 # ---------------------------------------------------------------------
 
-CELL = 40                          # 줄 간격
-MARGIN = 34                        # 좌표를 적는 가장자리
+CELL = 62                          # 줄 간격
+MARGIN = 48                        # 좌표를 적는 가장자리
 BOARD_PX = CELL * (SIZE - 1) + MARGIN * 2
 
 WOOD = (220, 179, 92)
@@ -60,7 +60,7 @@ def _label_font():
     global _font
     if _font is None:
         try:
-            _font = ImageFont.load_default(size=15)
+            _font = ImageFont.load_default(size=max(12, MARGIN * 5 // 9))
         except Exception:
             _font = ImageFont.load_default()
     return _font
@@ -78,16 +78,18 @@ def render_png(cells, last=None):
     img = Image.new("RGB", (BOARD_PX, BOARD_PX), WOOD)
     draw = ImageDraw.Draw(img)
 
+    thin = max(1, CELL // 30)
     end = MARGIN + CELL * (SIZE - 1)
     for i in range(SIZE):
         pos = MARGIN + i * CELL
-        draw.line([MARGIN, pos, end, pos], fill=LINE, width=1)
-        draw.line([pos, MARGIN, pos, end], fill=LINE, width=1)
-    draw.rectangle([MARGIN, MARGIN, end, end], outline=LINE, width=2)
+        draw.line([MARGIN, pos, end, pos], fill=LINE, width=thin)
+        draw.line([pos, MARGIN, pos, end], fill=LINE, width=thin)
+    draw.rectangle([MARGIN, MARGIN, end, end], outline=LINE, width=thin * 2)
 
+    star = max(3, CELL // 10)
     for col, row in STARS:
         x, y = spot_xy(col, row)
-        draw.ellipse([x - 3, y - 3, x + 3, y + 3], fill=LINE)
+        draw.ellipse([x - star, y - star, x + star, y + star], fill=LINE)
 
     font = _label_font()
     for i in range(SIZE):
@@ -107,12 +109,13 @@ def render_png(cells, last=None):
             x, y = spot_xy(col, row)
             fill = STONE_B if stone == "b" else STONE_W
             edge = EDGE_B if stone == "b" else EDGE_W
-            draw.ellipse([x - r, y - r, x + r, y + r], fill=fill, outline=edge, width=1)
+            draw.ellipse([x - r, y - r, x + r, y + r], fill=fill, outline=edge,
+                         width=max(1, CELL // 40))
 
     if last is not None:
         x, y = spot_xy(*last)
         m = CELL // 6
-        draw.ellipse([x - m, y - m, x + m, y + m], outline=MARK, width=3)
+        draw.ellipse([x - m, y - m, x + m, y + m], outline=MARK, width=max(3, CELL // 14))
 
     buf = io.BytesIO()
     img.save(buf, format="PNG", optimize=True)

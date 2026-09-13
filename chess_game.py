@@ -69,8 +69,8 @@ def _ro(word):
 # ---------------------------------------------------------------------
 
 PIECE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "chess_pieces")
-CELL = 72                      # 칸 한 변
-MARGIN = 26                    # 좌표를 적는 가장자리
+CELL = 116                     # 칸 한 변
+MARGIN = 40                    # 좌표를 적는 가장자리
 BOARD_PX = CELL * 8 + MARGIN * 2
 
 LIGHT_SQ = (240, 217, 181)
@@ -98,7 +98,7 @@ def _load_pieces():
             if not os.path.exists(path):
                 return None
             img = Image.open(path).convert("RGBA")
-            pad = int(CELL * 0.06)
+            pad = max(2, int(CELL * 0.05))
             size = CELL - pad * 2
             loaded[side + kind] = img.resize((size, size), Image.LANCZOS)
     _pieces = loaded
@@ -109,7 +109,7 @@ def _label_font():
     global _font
     if _font is None:
         try:
-            _font = ImageFont.load_default(size=15)
+            _font = ImageFont.load_default(size=max(12, MARGIN * 3 // 5))
         except Exception:
             _font = ImageFont.load_default()
     return _font
