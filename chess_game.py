@@ -216,7 +216,8 @@ class ChessGame:
         self.timer = None
         self.timer_token = 0
         self.message = None             # 마지막으로 보낸 판 메시지
-        self.flip = False               # 흑 기준으로 뒤집어 볼지
+        self.flip = False               # 모두가 보는 판은 늘 백 기준입니다.
+                                        # 흑에서 본 판은 버튼으로 본인에게만 보여 드립니다.
 
     # -- 상태 ------------------------------------------------------
     @property

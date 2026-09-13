@@ -1064,7 +1064,7 @@ class ChessView(discord.ui.View):
                                        discord.ButtonStyle.secondary,
                                        disabled=self.picked is None))
 
-        self.add_item(ChessControl(self, "🔄 판 뒤집기", "flip",
+        self.add_item(ChessControl(self, "🔄 내 방향으로 보기", "view",
                                    discord.ButtonStyle.secondary))
         self.add_item(ChessControl(self, "🤝 무승부", "draw",
                                    discord.ButtonStyle.secondary))
@@ -1163,9 +1163,19 @@ class ChessView(discord.ui.View):
 
     async def on_control(self, interaction, action):
         game = self.game
-        if action == "flip":
-            game.flip = not game.flip
-            await self.refresh(interaction)
+        if action == "view":
+            # 모두가 보는 판은 건드리지 않습니다. 누른 분에게만 따로 보여 드립니다.
+            # 그래야 상대가 몇 번을 눌러도 내 화면이 다시 불러와지지 않습니다.
+            side = game.side_of(interaction.user.id)
+            picture = game.render(flip=(side == cg.BLACK))
+            if picture is None:
+                await interaction.response.send_message(
+                    "지금은 판 그림을 그릴 수 없습니다.", ephemeral=True)
+                return
+            who = "흑" if side == cg.BLACK else "백"
+            await interaction.response.send_message(
+                f"{who} 쪽에서 본 판입니다. 이 메시지는 본인에게만 보입니다.",
+                file=picture, ephemeral=True)
             return
         if action == "clear":
             if not await self.my_turn(interaction):
