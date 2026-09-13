@@ -40,11 +40,12 @@ UNICODE_PIECES = {
 
 # 수처럼 생긴 글인지 가려 냅니다. 평범한 채팅에 일일이 대꾸하지 않으려고 씁니다.
 MOVE_LIKE = re.compile(
-    r"^(?:[KQRBN][a-h1-8]?x?[a-h][1-8]"          # Nf3, Nbd2, Qxe5
-    r"|[a-h]x?[a-h]?[1-8](?:=[QRBNqrbn])?"       # e4, exd5, e8=Q
-    r"|[a-h][1-8][a-h][1-8][qrbnQRBN]?"          # e2e4 (UCI)
+    r"^(?:[KQRBN][A-Ha-h1-8]?x?[A-Ha-h][1-8]"    # Nf3, Nbd2, Qxe5
+    r"|[A-Ha-h]x?[A-Ha-h]?[1-8](?:=[QRBN])?"     # e4, exd5, e8=Q
+    r"|[A-Ha-h][1-8][A-Ha-h][1-8][QRBN]?"        # e2e4 (UCI)
     r"|[Oo0]-[Oo0](?:-[Oo0])?)"                  # O-O, O-O-O
-    r"[+#]?$"
+    r"[+#]?$",
+    re.IGNORECASE
 )
 
 FILES = "abcdefgh"
@@ -245,22 +246,77 @@ class ChessGame:
         return self.board.fullmove_number
 
     # -- 수 두기 ---------------------------------------------------
+    @staticmethod
+    def spellings(text):
+        """대소문자를 흔히 틀리시는 꼴을 몇 가지 만들어 봅니다.
+        체스 표기는 B가 비숍, b가 b열이라 함부로 바꾸면 뜻이 달라집니다.
+        그래서 바꾸지 않고, 여러 해석을 따로 시도해 볼 목록만 만듭니다."""
+        t = text.strip()
+        out = []
+
+        def add(x):
+            if x and x not in out:
+                out.append(x)
+
+        def fix_promo(x):
+            return re.sub(r"=(.)", lambda m: "=" + m.group(1).upper(), x)
+
+        add(t)
+        if re.fullmatch(r"[0oO]-[0oO]", t):
+            add("O-O")
+        if re.fullmatch(r"[0oO]-[0oO]-[0oO]", t):
+            add("O-O-O")
+        low = t.lower()
+        add(low)                      # E4 → e4,  E2E4 → e2e4
+        add(fix_promo(low))           # e8=q → e8=Q
+        if low and low[0] in "kqrbn":
+            piece = low[0].upper() + low[1:]
+            add(piece)                # nf3 → Nf3
+            add(fix_promo(piece))
+        return out
+
+    def _read(self, text):
+        """한 가지 적은 꼴을 수로 읽어 봅니다. 못 읽으면 None 입니다."""
+        try:
+            return self.board.parse_san(text)
+        except ValueError:
+            pass
+        try:
+            move = chess.Move.from_uci(text.lower())
+        except ValueError:
+            return None
+        return move if move in self.board.legal_moves else None
+
     def push(self, text):
         """한 수를 둡니다. 통과하면 (True, 기보), 아니면 (False, 사유) 입니다."""
         text = text.strip()
-        move = None
-        try:
-            move = self.board.parse_san(text)
-        except ValueError:
-            try:
-                candidate = chess.Move.from_uci(text.lower())
-                if candidate in self.board.legal_moves:
-                    move = candidate
-            except ValueError:
-                move = None
-        if move is None:
+
+        # 적으신 그대로 읽히면 그것이 정답입니다. 고쳐 읽지 않습니다.
+        exact = self._read(text)
+        if exact is not None:
+            return self._apply(exact)
+
+        # 그대로는 안 읽힐 때만 대소문자를 고쳐서 다시 읽어 봅니다.
+        found = []
+        for spelling in self.spellings(text)[1:]:
+            move = self._read(spelling)
+            if move is not None and move not in found:
+                found.append(move)
+
+        if not found:
             return False, (f"`{text}` 는 지금 둘 수 없는 수입니다. "
                            f"`e4`, `Nf3`, `O-O`, `e2e4` 처럼 입력해 주세요.")
+        if len(found) > 1:
+            # 예를 들어 bxc6 는 b열 폰이 잡는 수, Bxc6 는 비숍이 잡는 수입니다.
+            # 둘 다 둘 수 있는 자리라면 함부로 고르지 않습니다.
+            names = " 와 ".join(f"`{self.board.san(m)}`" for m in found)
+            return False, (f"`{text}` 는 {names} 둘 다로 읽힙니다. "
+                           f"대문자와 소문자를 정확히 적어 주세요. "
+                           f"(대문자 B는 비숍, 소문자 b는 b열입니다)")
+
+        return self._apply(found[0])
+
+    def _apply(self, move):
         san = self.board.san(move)
         self.board.push(move)
         self.last_san = san
