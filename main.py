@@ -56,9 +56,10 @@ CHANNEL_MODE = {}   # 채널 ID -> 모드
 # ===== 채널별 고정 배정 =====
 # 여기에 적힌 채널은 사전이 고정되고 `!모드` 로 바꿀 수 없습니다.
 # 값은 (대국 종류, 사전) 입니다. 종류는 "훈련실"(사람 대 봇) 또는 "경기장"(사람 대 사람)입니다.
-ARENA = "경기장"      # 사람끼리 대국
-TRAINING = "훈련실"   # 사람 대 봇 대국
+ARENA = "경기장"      # 사람끼리 끝말잇기
+TRAINING = "훈련실"   # 사람 대 봇 끝말잇기
 STUDY = "학습실"      # 대국 없이 조회·탐색만
+CHESS = "체스"        # 체스 전용. 사전은 쓰지 않으므로 두 번째 값은 비워 둡니다.
 CHANNEL_ROLES = {
     1544722084561817650: (ARENA, MODE_STANDARD),     # 경기장-표준사전
     1544854290819059765: (ARENA, MODE_COMPLEX),      # 경기장-복합사전
@@ -66,7 +67,11 @@ CHANNEL_ROLES = {
     1544854625755209758: (TRAINING, MODE_COMPLEX),   # 훈련실-복합사전
     1544553748565729381: (STUDY, MODE_STANDARD),     # 표준탐색
     1523328035686846495: (STUDY, MODE_COMPLEX),      # 복합탐색
+    1548658703014830170: (CHESS, None),              # 체스
 }
+
+# 체스는 여기 적힌 채널에서만 둡니다. 비워 두면 어느 채널에서나 둘 수 있습니다.
+CHESS_CHANNELS = {cid for cid, (kind, _) in CHANNEL_ROLES.items() if kind == CHESS}
 # ===========================
 
 # ===== 순위전 시간대 조회 딜레이 =====
@@ -1417,6 +1422,10 @@ async def on_message(msg):
                 "체스 자료를 불러오지 못해 체스 기능을 쓸 수 없습니다. "
                 "requirements.txt 에 `chess` 가 들어 있는지 확인해 주세요.")
             return
+        if CHESS_CHANNELS and msg.channel.id not in CHESS_CHANNELS:
+            where = " ".join(f"<#{cid}>" for cid in sorted(CHESS_CHANNELS))
+            await msg.channel.send(f"체스는 {where} 채널에서 두실 수 있습니다.")
+            return
         playing = CHESS_GAMES.get(msg.channel.id)
 
         if c.startswith("!체스이모지"):
@@ -1494,6 +1503,10 @@ async def on_message(msg):
 
     if c.startswith("!시작"):
         # 고정 배정된 채널에서는 그 채널의 종류대로 바로 시작합니다.
+        if kind == CHESS:
+            msg.content = "!체스"
+            await client.on_message(msg)
+            return
         if kind == STUDY:
             await msg.channel.send(
                 "이 채널은 조회·탐색용입니다. 대국은 훈련실이나 경기장 채널에서 시작해 주세요.")
@@ -1520,6 +1533,9 @@ async def on_message(msg):
         if kind == STUDY:
             await msg.channel.send(
                 f"이 채널은 조회·탐색용입니다. 봇과 겨루시려면 훈련실 채널에서 `!대결` 을 입력해 주세요.")
+            return
+        if kind == CHESS:
+            await msg.channel.send("이 채널은 체스 전용입니다. `!체스` 로 시작해 주세요.")
             return
         if GAMES.get(msg.channel.id):
             await msg.channel.send("이 채널에서 이미 대국이 진행 중입니다. `!기권` 으로 끝낼 수 있습니다.")
@@ -1549,6 +1565,9 @@ async def on_message(msg):
         if kind == STUDY:
             await msg.channel.send(
                 "이 채널은 조회·탐색용입니다. 겨루시려면 경기장 채널에서 `!경기` 를 입력해 주세요.")
+            return
+        if kind == CHESS:
+            await msg.channel.send("이 채널은 체스 전용입니다. `!체스` 로 시작해 주세요.")
             return
         if GAMES.get(msg.channel.id):
             await msg.channel.send("이 채널에서 이미 대국이 진행 중입니다. `!기권` 으로 끝낼 수 있습니다.")
