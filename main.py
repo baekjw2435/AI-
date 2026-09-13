@@ -20,6 +20,7 @@
 # !중간 <글자>     → 중간말잇기 (표준·복합 모두 지원)
 # !제한            → 순위전 시간대 조회 딜레이 확인 (켜고 끄기는 관리자만)
 # !체스            → 체스 대국 (사람 대 사람). !체스판 !체스기권 !무승부 !체스이모지
+# !오목            → 오목 대국 (사람 대 사람). !오목판 !오목기권 !무승부
 #
 # 두음법칙은 두 모드 모두 표준두음법칙만 적용합니다.
 
@@ -36,6 +37,14 @@ except Exception as _e:      # 라이브러리가 없어도 끝말잇기는 그�
     cg = None
     CHESS_READY = False
     print(f"[경고] 체스 기능을 끕니다: {_e}")
+
+try:
+    import omok_game as om
+    OMOK_READY = True
+except Exception as _e:
+    om = None
+    OMOK_READY = False
+    print(f"[경고] 오목 기능을 끕니다: {_e}")
 
 # ===== 서버 / 채널 제한 (0 = 제한 없음) =====
 # GUILD_ID 에는 반드시 "서버" ID 를 넣어야 합니다. 채널 ID 를 넣으면 어떤 메시지와도
@@ -60,6 +69,7 @@ ARENA = "경기장"      # 사람끼리 끝말잇기
 TRAINING = "훈련실"   # 사람 대 봇 끝말잇기
 STUDY = "학습실"      # 대국 없이 조회·탐색만
 CHESS = "체스"        # 체스 전용. 사전은 쓰지 않으므로 두 번째 값은 비워 둡니다.
+OMOK = "오목"         # 오목 전용
 CHANNEL_ROLES = {
     1544722084561817650: (ARENA, MODE_STANDARD),     # 경기장-표준사전
     1544854290819059765: (ARENA, MODE_COMPLEX),      # 경기장-복합사전
@@ -68,10 +78,12 @@ CHANNEL_ROLES = {
     1544553748565729381: (STUDY, MODE_STANDARD),     # 표준탐색
     1523328035686846495: (STUDY, MODE_COMPLEX),      # 복합탐색
     1548658703014830170: (CHESS, None),              # 체스
+    1548663510417014935: (OMOK, None),               # 오목
 }
 
-# 체스는 여기 적힌 채널에서만 둡니다. 비워 두면 어느 채널에서나 둘 수 있습니다.
+# 여기 적힌 채널에서만 둡니다. 비워 두면 어느 채널에서나 둘 수 있습니다.
 CHESS_CHANNELS = {cid for cid, (kind, _) in CHANNEL_ROLES.items() if kind == CHESS}
+OMOK_CHANNELS = {cid for cid, (kind, _) in CHANNEL_ROLES.items() if kind == OMOK}
 # ===========================
 
 # ===== 순위전 시간대 조회 딜레이 =====
@@ -999,6 +1011,7 @@ class RouteSearchView(discord.ui.View):
 # ---------------------------------------------------------------------
 GAMES = gm.GameRegistry()
 CHESS_GAMES = cg.ChessRegistry() if CHESS_READY else None
+OMOK_GAMES = om.OmokRegistry() if OMOK_READY else None
 
 
 # ---------------------------------------------------------------------
@@ -1277,6 +1290,40 @@ async def refresh_private_boards(game):
             game.private.pop(user_id, None)
 
 
+async def chess_draw(msg, playing):
+    side = playing.side_of(msg.author.id)
+    if side is None:
+        await msg.channel.send("이 대국의 대국자만 제안하실 수 있습니다.")
+        return
+    if playing.draw_offer is not None and playing.draw_offer != msg.author.id:
+        playing.finish(None, "두 분이 합의해 무승부로 끝났습니다.")
+        CHESS_GAMES.drop(msg.channel.id)
+        await post_chess_board(playing, msg.channel)
+        return
+    playing.draw_offer = msg.author.id
+    await msg.channel.send(
+        f"{msg.author.display_name} 님이 무승부를 제안하셨습니다. "
+        f"받아들이시려면 상대분도 `!무승부` 를 입력해 주세요. "
+        f"수를 두시면 제안은 없던 일이 됩니다.", delete_after=60)
+
+
+async def omok_draw(msg, playing):
+    side = playing.side_of(msg.author.id)
+    if side is None:
+        await msg.channel.send("이 대국의 대국자만 제안하실 수 있습니다.")
+        return
+    if playing.draw_offer is not None and playing.draw_offer != msg.author.id:
+        playing.finish(None, "두 분이 합의해 무승부로 끝났습니다.")
+        OMOK_GAMES.drop(msg.channel.id)
+        await post_omok_board(playing, msg.channel)
+        return
+    playing.draw_offer = msg.author.id
+    await msg.channel.send(
+        f"{msg.author.display_name} 님이 무승부를 제안하셨습니다. "
+        f"받아들이시려면 상대분도 `!무승부` 를 입력해 주세요. "
+        f"돌을 놓으시면 제안은 없던 일이 됩니다.", delete_after=60)
+
+
 async def post_chess_board(game, channel, notice=""):
     """판 메시지 하나를 계속 고쳐 씁니다.
     새 메시지를 올리면 채팅이 밀려서 개인 판이 위로 올라가 버립니다."""
@@ -1302,6 +1349,196 @@ async def post_chess_board(game, channel, notice=""):
         kwargs["view"] = view
     game.message = await channel.send(**kwargs)
     await refresh_private_boards(game)
+
+
+# ---------------------------------------------------------------------
+# 오목 (사람 대 사람)
+# ---------------------------------------------------------------------
+
+async def schedule_omok_timeout(game, channel):
+    game.timer_token += 1
+    token = game.timer_token
+
+    async def waiter():
+        try:
+            await asyncio.sleep(om.TURN_SECONDS)
+        except asyncio.CancelledError:
+            return
+        if game.finished or game.timer_token != token:
+            return
+        loser = game.turn
+        game.finish(1 - loser,
+                    f"{game.names[loser]} 님이 제한 시간 안에 두지 못했습니다.")
+        OMOK_GAMES.drop(game.channel_id)
+        await post_omok_board(game, channel)
+
+    game.cancel_timer()
+    game.timer = asyncio.create_task(waiter())
+
+
+class OmokView(discord.ui.View):
+    """판 아래에 붙는 버튼입니다. 돌은 채팅으로 놓습니다."""
+
+    def __init__(self, game):
+        super().__init__(timeout=om.TURN_SECONDS)
+        self.game = game
+        self.add_item(OmokControl(self, "🤝 무승부", "draw",
+                                  discord.ButtonStyle.secondary))
+        self.add_item(OmokControl(self, "🏳 기권", "resign",
+                                  discord.ButtonStyle.danger))
+
+    async def interaction_check(self, interaction):
+        if self.game.side_of(interaction.user.id) is None:
+            await interaction.response.send_message(
+                "이 대국의 대국자만 누르실 수 있습니다.", ephemeral=True)
+            return False
+        return True
+
+    async def on_control(self, interaction, action):
+        game = self.game
+        side = game.side_of(interaction.user.id)
+        if action == "resign":
+            game.finish(1 - side, f"{game.names[side]} 님이 기권하셨습니다.")
+            OMOK_GAMES.drop(game.channel_id)
+            embed, picture = game.payload()
+            kwargs = {"embed": embed, "view": None}
+            if picture is not None:
+                kwargs["attachments"] = [picture]
+            await interaction.response.edit_message(**kwargs)
+            self.stop()
+            return
+        if action == "draw":
+            if game.draw_offer is not None and game.draw_offer != interaction.user.id:
+                game.finish(None, "두 분이 합의해 무승부로 끝났습니다.")
+                OMOK_GAMES.drop(game.channel_id)
+                embed, picture = game.payload()
+                kwargs = {"embed": embed, "view": None}
+                if picture is not None:
+                    kwargs["attachments"] = [picture]
+                await interaction.response.edit_message(**kwargs)
+                self.stop()
+                return
+            game.draw_offer = interaction.user.id
+            await interaction.response.send_message(
+                f"{interaction.user.display_name} 님이 무승부를 제안하셨습니다. "
+                f"상대분도 🤝 를 누르시면 무승부가 됩니다.", delete_after=60)
+            return
+
+    async def on_timeout(self):
+        for item in self.children:
+            item.disabled = True
+        if self.game.message:
+            try:
+                await self.game.message.edit(view=self)
+            except discord.HTTPException:
+                pass
+
+
+class OmokControl(discord.ui.Button):
+    def __init__(self, view_ref, label, action, style):
+        super().__init__(label=label, style=style, row=0)
+        self.view_ref = view_ref
+        self.action = action
+
+    async def callback(self, interaction):
+        await self.view_ref.on_control(interaction, self.action)
+
+
+async def post_omok_board(game, channel, notice=""):
+    """판 메시지 하나를 계속 고쳐 씁니다."""
+    view = None if game.finished else OmokView(game)
+    if game.message is not None:
+        embed, picture = game.payload(notice)
+        kwargs = {"embed": embed, "view": view}
+        if picture is not None:
+            kwargs["attachments"] = [picture]
+        try:
+            await game.message.edit(**kwargs)
+            return
+        except discord.HTTPException:
+            game.message = None
+    embed, picture = game.payload(notice)
+    kwargs = {"embed": embed}
+    if picture is not None:
+        kwargs["file"] = picture
+    if view is not None:
+        kwargs["view"] = view
+    game.message = await channel.send(**kwargs)
+
+
+async def begin_omok(channel, players, names):
+    game = om.OmokGame(channel.id, players, names)
+    OMOK_GAMES.put(game)
+    notice = (f"⚫ 흑 **{names[om.BLACK]}** · ⚪ 백 **{names[om.WHITE]}**\n"
+              f"색은 무작위로 정했습니다. 흑부터 두시면 됩니다.")
+    await post_omok_board(game, channel, notice)
+    await schedule_omok_timeout(game, channel)
+
+
+async def handle_omok_move(game, msg):
+    """오목 대국 중 채팅으로 들어온 자리를 처리합니다."""
+    text = msg.content.strip()
+    if not om.SPOT_LIKE.match(text):
+        return                      # 평범한 대화에는 대꾸하지 않습니다.
+    if game.actor != msg.author.id:
+        if game.side_of(msg.author.id) is None:
+            return
+        await msg.channel.send(f"{msg.author.mention} 아직 상대 차례입니다.",
+                               delete_after=8)
+        await quiet_delete(msg)
+        return
+    ok, info = game.place(text)
+    if not ok:
+        await msg.channel.send(f"{msg.author.mention} {info}", delete_after=12)
+        await quiet_delete(msg)
+        return
+    await quiet_delete(msg)
+    game.cancel_timer()
+    notice = f"{msg.author.display_name} 님이 **{info}** 에 놓았습니다."
+    if game.check_over():
+        OMOK_GAMES.drop(game.channel_id)
+        await post_omok_board(game, msg.channel, notice)
+        return
+    await post_omok_board(game, msg.channel, notice)
+    await schedule_omok_timeout(game, msg.channel)
+
+
+class OmokJoinView(discord.ui.View):
+    """오목 상대를 기다리는 참가 버튼입니다."""
+
+    def __init__(self, host_id, host_name):
+        super().__init__(timeout=180)
+        self.host_id = host_id
+        self.host_name = host_name
+        self.message = None
+
+    @discord.ui.button(label="⚫ 참가하기", style=discord.ButtonStyle.success)
+    async def join(self, interaction, button):
+        if interaction.user.id == self.host_id:
+            await interaction.response.send_message(
+                "상대를 기다리는 중입니다. 다른 분이 눌러 주셔야 합니다.", ephemeral=True)
+            return
+        if OMOK_GAMES.get(interaction.channel_id):
+            await interaction.response.send_message(
+                "이 채널에서 이미 오목 대국이 진행 중입니다.", ephemeral=True)
+            return
+        button.disabled = True
+        await interaction.response.edit_message(view=self)
+        names = [self.host_name, interaction.user.display_name]
+        players = [self.host_id, interaction.user.id]
+        if random.random() < 0.5:      # 흑과 백은 무작위로 정합니다.
+            names.reverse(); players.reverse()
+        self.stop()
+        await begin_omok(interaction.channel, players, names)
+
+    async def on_timeout(self):
+        for item in self.children:
+            item.disabled = True
+        if self.message:
+            try:
+                await self.message.edit(view=self)
+            except discord.HTTPException:
+                pass
 
 
 async def begin_chess(channel, players, names):
@@ -1585,6 +1822,11 @@ HELP_TEXT = (
     "`!체스기권` — 진행 중인 체스를 기권합니다\n"
     "`!무승부` — 무승부를 제안합니다 (두 분 다 입력하면 성립)\n"
     "체스는 `e4` `Nf3` `O-O` `e2e4` 처럼 채팅에 바로 적으시면 됩니다\n"
+    "\n**오목 (사람 대 사람)**\n"
+    "`!오목` — 상대를 모집해 오목을 시작합니다\n"
+    "`!오목판` — 지금 판을 다시 보여 드립니다\n"
+    "`!오목기권` — 진행 중인 오목을 기권합니다\n"
+    "오목은 `H8` 처럼 가로 글자와 세로 숫자를 붙여 적으시면 됩니다\n"
     "예시: `!대결 표준`, `!경기`, `!루트 템11`, `!탐색 템11`, `!공격 기`\n"
     "두 모드 모두 표준두음법칙을 적용하며, 복합 자료와 표준 자료는 서로 섞지 않습니다."
 )
@@ -1609,6 +1851,13 @@ async def on_message(msg):
         playing = CHESS_GAMES.get(msg.channel.id)
         if playing:
             await handle_chess_move(playing, msg)
+            return
+
+    # 오목 대국 중이면 자리처럼 생긴 글을 자리로 봅니다.
+    if OMOK_READY and not c.startswith("!"):
+        playing = OMOK_GAMES.get(msg.channel.id)
+        if playing:
+            await handle_omok_move(playing, msg)
             return
 
     kind, fixed = channel_role(msg.channel.id)
@@ -1698,7 +1947,68 @@ async def on_message(msg):
     # -------------------------------------------------------------
 
     # ---- 체스 ---------------------------------------------------
-    if c.startswith("!체스") or c.startswith("!무승부"):
+    if c.startswith("!무승부"):
+        # 이 채널에서 진행 중인 대국을 보고 알아서 넘깁니다.
+        if CHESS_READY and CHESS_GAMES.get(msg.channel.id):
+            await chess_draw(msg, CHESS_GAMES.get(msg.channel.id))
+            return
+        if OMOK_READY and OMOK_GAMES.get(msg.channel.id):
+            await omok_draw(msg, OMOK_GAMES.get(msg.channel.id))
+            return
+        await msg.channel.send("이 채널에서 진행 중인 대국이 없습니다.")
+        return
+
+    # ---- 오목 ---------------------------------------------------
+    if c.startswith("!오목"):
+        if not OMOK_READY:
+            await msg.channel.send("오목 자료를 불러오지 못해 쓸 수 없습니다.")
+            return
+        if OMOK_CHANNELS and msg.channel.id not in OMOK_CHANNELS:
+            where = " ".join(f"<#{cid}>" for cid in sorted(OMOK_CHANNELS))
+            await msg.channel.send(f"오목은 {where} 채널에서 두실 수 있습니다.")
+            return
+        playing = OMOK_GAMES.get(msg.channel.id)
+
+        if c.startswith("!오목판"):
+            if not playing:
+                await msg.channel.send("이 채널에서 진행 중인 오목 대국이 없습니다.")
+                return
+            playing.message = None          # 판을 아래로 다시 내려 드립니다.
+            await post_omok_board(playing, msg.channel)
+            return
+
+        if c.startswith("!오목기권"):
+            if not playing:
+                await msg.channel.send("이 채널에서 진행 중인 오목 대국이 없습니다.")
+                return
+            side = playing.side_of(msg.author.id)
+            if side is None:
+                await msg.channel.send("이 대국의 대국자만 기권하실 수 있습니다.")
+                return
+            playing.finish(1 - side, f"{playing.names[side]} 님이 기권하셨습니다.")
+            OMOK_GAMES.drop(msg.channel.id)
+            await post_omok_board(playing, msg.channel)
+            return
+
+        if playing:
+            await msg.channel.send(
+                "이 채널에서 이미 오목 대국이 진행 중입니다. "
+                "`!오목판` 으로 판을 다시 보시거나 `!오목기권` 으로 끝내실 수 있습니다.")
+            return
+        if GAMES.get(msg.channel.id):
+            await msg.channel.send(
+                "이 채널에서 끝말잇기 대국이 진행 중입니다. 그것부터 끝내 주세요.")
+            return
+        view = OmokJoinView(msg.author.id, msg.author.display_name)
+        view.message = await msg.channel.send(
+            f"⚫ **{msg.author.display_name}** 님이 오목 상대를 찾고 있습니다.\n"
+            f"아래 버튼을 누르시면 시작합니다. 흑과 백은 무작위로 정합니다. "
+            f"(3분 안에 아무도 안 누르시면 취소됩니다)",
+            view=view)
+        return
+    # -------------------------------------------------------------
+
+    if c.startswith("!체스"):
         if not CHESS_READY:
             await msg.channel.send(
                 "체스 자료를 불러오지 못해 체스 기능을 쓸 수 없습니다. "
@@ -1744,26 +2054,6 @@ async def on_message(msg):
             await post_chess_board(playing, msg.channel)
             return
 
-        if c.startswith("!무승부"):
-            if not playing:
-                await msg.channel.send("이 채널에서 진행 중인 체스 대국이 없습니다.")
-                return
-            side = playing.side_of(msg.author.id)
-            if side is None:
-                await msg.channel.send("이 대국의 대국자만 제안하실 수 있습니다.")
-                return
-            if playing.draw_offer is not None and playing.draw_offer != msg.author.id:
-                playing.finish(None, "두 분이 합의해 무승부로 끝났습니다.")
-                CHESS_GAMES.drop(msg.channel.id)
-                await post_chess_board(playing, msg.channel)
-                return
-            playing.draw_offer = msg.author.id
-            await msg.channel.send(
-                f"{msg.author.display_name} 님이 무승부를 제안하셨습니다. "
-                f"받아들이시려면 상대분도 `!무승부` 를 입력해 주세요. "
-                f"수를 두시면 제안은 없던 일이 됩니다.")
-            return
-
         # 그냥 "!체스" — 모집을 시작하거나 참가합니다.
         if playing:
             await msg.channel.send(
@@ -1787,6 +2077,10 @@ async def on_message(msg):
         # 고정 배정된 채널에서는 그 채널의 종류대로 바로 시작합니다.
         if kind == CHESS:
             msg.content = "!체스"
+            await client.on_message(msg)
+            return
+        if kind == OMOK:
+            msg.content = "!오목"
             await client.on_message(msg)
             return
         if kind == STUDY:
@@ -1819,6 +2113,9 @@ async def on_message(msg):
         if kind == CHESS:
             await msg.channel.send("이 채널은 체스 전용입니다. `!체스` 로 시작해 주세요.")
             return
+        if kind == OMOK:
+            await msg.channel.send("이 채널은 오목 전용입니다. `!오목` 으로 시작해 주세요.")
+            return
         if GAMES.get(msg.channel.id):
             await msg.channel.send("이 채널에서 이미 대국이 진행 중입니다. `!기권` 으로 끝낼 수 있습니다.")
             return
@@ -1850,6 +2147,9 @@ async def on_message(msg):
             return
         if kind == CHESS:
             await msg.channel.send("이 채널은 체스 전용입니다. `!체스` 로 시작해 주세요.")
+            return
+        if kind == OMOK:
+            await msg.channel.send("이 채널은 오목 전용입니다. `!오목` 으로 시작해 주세요.")
             return
         if GAMES.get(msg.channel.id):
             await msg.channel.send("이 채널에서 이미 대국이 진행 중입니다. `!기권` 으로 끝낼 수 있습니다.")
