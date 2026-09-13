@@ -19,6 +19,7 @@
 # !장문종결 <글자> → 그 글자로 끝나는 가장 긴 단어
 # !중간 <글자>     → 중간말잇기 (표준·복합 모두 지원)
 # !제한            → 순위전 시간대 조회 딜레이 확인 (켜고 끄기는 관리자만)
+# !체스            → 체스 대국 (사람 대 사람). !체스판 !체스기권 !무승부 !체스이모지
 #
 # 두음법칙은 두 모드 모두 표준두음법칙만 적용합니다.
 
@@ -27,6 +28,14 @@ from datetime import datetime, timedelta, timezone
 import discord
 import route_engine as rq
 import game as gm
+
+try:
+    import chess_game as cg
+    CHESS_READY = True
+except Exception as _e:      # 라이브러리가 없어도 끝말잇기는 그대로 돌아갑니다.
+    cg = None
+    CHESS_READY = False
+    print(f"[경고] 체스 기능을 끕니다: {_e}")
 
 # ===== 서버 / 채널 제한 (0 = 제한 없음) =====
 # GUILD_ID 에는 반드시 "서버" ID 를 넣어야 합니다. 채널 ID 를 넣으면 어떤 메시지와도
@@ -984,6 +993,105 @@ class RouteSearchView(discord.ui.View):
 # 대국 (훈련실: 사람 대 봇 / 경기장: 사람 대 사람)
 # ---------------------------------------------------------------------
 GAMES = gm.GameRegistry()
+CHESS_GAMES = cg.ChessRegistry() if CHESS_READY else None
+
+
+# ---------------------------------------------------------------------
+# 체스 (사람 대 사람)
+# ---------------------------------------------------------------------
+
+async def schedule_chess_timeout(game, channel):
+    """제한 시간 안에 두지 못하면 시간패로 끝냅니다."""
+    game.timer_token += 1
+    token = game.timer_token
+
+    async def waiter():
+        try:
+            await asyncio.sleep(cg.TURN_SECONDS)
+        except asyncio.CancelledError:
+            return
+        if game.finished or game.timer_token != token:
+            return
+        loser = game.turn_index
+        game.finish(1 - loser,
+                    f"{game.names[loser]} 님이 제한 시간 안에 두지 못했습니다.")
+        CHESS_GAMES.drop(game.channel_id)
+        await channel.send(embed=game.embed(channel.guild))
+
+    game.cancel_timer()
+    game.timer = asyncio.create_task(waiter())
+
+
+async def begin_chess(channel, players, names):
+    game = cg.ChessGame(channel.id, players, names)
+    CHESS_GAMES.put(game)
+    notice = (f"⬜ 백 **{names[cg.WHITE]}** · ⬛ 흑 **{names[cg.BLACK]}**\n"
+              f"색은 무작위로 정했습니다. 백부터 두시면 됩니다.")
+    await channel.send(embed=game.embed(channel.guild, notice))
+    await schedule_chess_timeout(game, channel)
+
+
+async def handle_chess_move(game, msg):
+    """체스 대국 중 채팅으로 들어온 수를 처리합니다."""
+    text = msg.content.strip()
+    if not cg.MOVE_LIKE.match(text):
+        return                      # 평범한 대화에는 대꾸하지 않습니다.
+    if game.actor != msg.author.id:
+        if game.side_of(msg.author.id) is None:
+            return                  # 구경하시는 분입니다.
+        await msg.channel.send(f"{msg.author.mention} 아직 상대 차례입니다.")
+        return
+    ok, info = game.push(text)
+    if not ok:
+        await msg.channel.send(f"{msg.author.mention} {info}")
+        return
+    game.cancel_timer()
+    notice = f"{msg.author.display_name} 님이 **{info}** 을(를) 두었습니다."
+    if game.check_over():
+        CHESS_GAMES.drop(game.channel_id)
+        await msg.channel.send(embed=game.embed(msg.guild, notice))
+        return
+    await msg.channel.send(embed=game.embed(msg.guild, notice))
+    await schedule_chess_timeout(game, msg.channel)
+
+
+class ChessJoinView(discord.ui.View):
+    """체스 상대를 기다리는 참가 버튼입니다."""
+
+    def __init__(self, host_id, host_name):
+        super().__init__(timeout=180)
+        self.host_id = host_id
+        self.host_name = host_name
+        self.message = None
+
+    @discord.ui.button(label="♟ 참가하기", style=discord.ButtonStyle.success)
+    async def join(self, interaction, button):
+        if interaction.user.id == self.host_id:
+            await interaction.response.send_message(
+                "상대를 기다리는 중입니다. 다른 분이 눌러 주셔야 합니다.", ephemeral=True)
+            return
+        if CHESS_GAMES.get(interaction.channel_id):
+            await interaction.response.send_message(
+                "이 채널에서 이미 체스 대국이 진행 중입니다.", ephemeral=True)
+            return
+        button.disabled = True
+        await interaction.response.edit_message(view=self)
+        names = [self.host_name, interaction.user.display_name]
+        players = [self.host_id, interaction.user.id]
+        if random.random() < 0.5:      # 백과 흑은 무작위로 정합니다.
+            names.reverse(); players.reverse()
+        self.stop()
+        await begin_chess(interaction.channel, players, names)
+
+    async def on_timeout(self):
+        for item in self.children:
+            item.disabled = True
+        if self.message:
+            try:
+                await self.message.edit(view=self)
+            except discord.HTTPException:
+                pass
+
 
 def missing_data_notice(mode):
     """어떤 파일이 없어서 대국을 못 하는지 알려 줍니다."""
@@ -1184,6 +1292,12 @@ HELP_TEXT = (
     "`!장문종결 <글자>` — 그 글자로 끝나는 가장 긴 단어\n"
     "`!중간 <글자>` — 중간말잇기 ⚡한방 / 🗡️공격 / 🔄돌림\n"
     "`!제한` — 순위전 시간대 조회 딜레이 상태를 확인합니다 (변경은 관리자만)\n"
+    "\n**체스 (사람 대 사람)**\n"
+    "`!체스` — 상대를 모집해 체스를 시작합니다\n"
+    "`!체스판` — 지금 판을 다시 보여 드립니다\n"
+    "`!체스기권` — 진행 중인 체스를 기권합니다\n"
+    "`!무승부` — 무승부를 제안합니다 (두 분 다 입력하면 성립)\n"
+    "체스는 `e4` `Nf3` `O-O` `e2e4` 처럼 채팅에 바로 적으시면 됩니다\n"
     "예시: `!대결 표준`, `!경기`, `!루트 템11`, `!탐색 템11`, `!공격 기`\n"
     "두 모드 모두 표준두음법칙을 적용하며, 복합 자료와 표준 자료는 서로 섞지 않습니다."
 )
@@ -1202,6 +1316,13 @@ async def on_message(msg):
     if running and not c.startswith("!"):
         await handle_game_word(running, msg)
         return
+
+    # 체스 대국 중이면 수처럼 생긴 글을 수로 봅니다.
+    if CHESS_READY and not c.startswith("!"):
+        playing = CHESS_GAMES.get(msg.channel.id)
+        if playing:
+            await handle_chess_move(playing, msg)
+            return
 
     kind, fixed = channel_role(msg.channel.id)
 
@@ -1287,6 +1408,88 @@ async def on_message(msg):
             await asyncio.sleep(wait)
         finally:
             DELAYING.discard(msg.author.id)
+    # -------------------------------------------------------------
+
+    # ---- 체스 ---------------------------------------------------
+    if c.startswith("!체스") or c.startswith("!무승부"):
+        if not CHESS_READY:
+            await msg.channel.send(
+                "체스 자료를 불러오지 못해 체스 기능을 쓸 수 없습니다. "
+                "requirements.txt 에 `chess` 가 들어 있는지 확인해 주세요.")
+            return
+        playing = CHESS_GAMES.get(msg.channel.id)
+
+        if c.startswith("!체스이모지"):
+            have = {e.name for e in msg.guild.emojis} if msg.guild else set()
+            missing = [n for n in cg.EMOJI_NAMES if n not in have]
+            if not missing:
+                await msg.channel.send(
+                    f"체스 이모지 {len(cg.EMOJI_NAMES)}개가 모두 준비되어 있습니다. "
+                    f"그림 판으로 보여 드립니다.")
+            else:
+                await msg.channel.send(
+                    f"체스 이모지가 {len(missing)}개 모자랍니다. 글자 판으로 보여 드립니다.\n"
+                    f"없는 것: {', '.join('`' + n + '`' for n in missing[:26])}")
+            return
+
+        if c.startswith("!체스판"):
+            if not playing:
+                await msg.channel.send("이 채널에서 진행 중인 체스 대국이 없습니다.")
+                return
+            await msg.channel.send(embed=playing.embed(msg.guild))
+            return
+
+        if c.startswith("!체스기권"):
+            if not playing:
+                await msg.channel.send("이 채널에서 진행 중인 체스 대국이 없습니다.")
+                return
+            side = playing.side_of(msg.author.id)
+            if side is None:
+                await msg.channel.send("이 대국의 대국자만 기권하실 수 있습니다.")
+                return
+            playing.finish(1 - side,
+                           f"{playing.names[side]} 님이 기권하셨습니다.")
+            CHESS_GAMES.drop(msg.channel.id)
+            await msg.channel.send(embed=playing.embed(msg.guild))
+            return
+
+        if c.startswith("!무승부"):
+            if not playing:
+                await msg.channel.send("이 채널에서 진행 중인 체스 대국이 없습니다.")
+                return
+            side = playing.side_of(msg.author.id)
+            if side is None:
+                await msg.channel.send("이 대국의 대국자만 제안하실 수 있습니다.")
+                return
+            if playing.draw_offer is not None and playing.draw_offer != msg.author.id:
+                playing.finish(None, "두 분이 합의해 무승부로 끝났습니다.")
+                CHESS_GAMES.drop(msg.channel.id)
+                await msg.channel.send(embed=playing.embed(msg.guild))
+                return
+            playing.draw_offer = msg.author.id
+            await msg.channel.send(
+                f"{msg.author.display_name} 님이 무승부를 제안하셨습니다. "
+                f"받아들이시려면 상대분도 `!무승부` 를 입력해 주세요. "
+                f"수를 두시면 제안은 없던 일이 됩니다.")
+            return
+
+        # 그냥 "!체스" — 모집을 시작하거나 참가합니다.
+        if playing:
+            await msg.channel.send(
+                "이 채널에서 이미 체스 대국이 진행 중입니다. "
+                "`!체스판` 으로 판을 다시 보시거나 `!체스기권` 으로 끝내실 수 있습니다.")
+            return
+        if GAMES.get(msg.channel.id):
+            await msg.channel.send(
+                "이 채널에서 끝말잇기 대국이 진행 중입니다. 그것부터 끝내 주세요.")
+            return
+        view = ChessJoinView(msg.author.id, msg.author.display_name)
+        view.message = await msg.channel.send(
+            f"♟ **{msg.author.display_name}** 님이 체스 상대를 찾고 있습니다.\n"
+            f"아래 버튼을 누르시면 시작합니다. 백과 흑은 무작위로 정합니다. "
+            f"(3분 안에 아무도 안 누르시면 취소됩니다)",
+            view=view)
+        return
     # -------------------------------------------------------------
 
     if c.startswith("!시작"):

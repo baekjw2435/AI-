@@ -4,3 +4,4 @@ __pycache__/
 
 # 봇이 돌면서 저장하는 상태 파일입니다. (!제한 켜기/끄기)
 lock_state.json
+chess_emoji.zip
