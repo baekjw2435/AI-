@@ -21,6 +21,7 @@
 # !제한            → 순위전 시간대 조회 딜레이 확인 (켜고 끄기는 관리자만)
 # !체스            → 체스 대국 (사람 대 사람). !체스판 !체스기권 !무승부 !체스이모지
 # !오목            → 오목 대국 (사람 대 사람). !오목판 !오목기권 !무승부
+# !쿼리도          → 쿼리도 대국 (사람 대 사람). !쿼리도판 !쿼리도기권 !무승부
 # !중단            → 멈춰 있는 대국을 세웁니다 (관리자만)
 #
 # 두음법칙은 두 모드 모두 표준두음법칙만 적용합니다.
@@ -47,6 +48,14 @@ except Exception as _e:
     OMOK_READY = False
     print(f"[경고] 오목 기능을 끕니다: {_e}")
 
+try:
+    import quoridor_game as qd
+    QUORIDOR_READY = True
+except Exception as _e:
+    qd = None
+    QUORIDOR_READY = False
+    print(f"[경고] 쿼리도 기능을 끕니다: {_e}")
+
 # ===== 서버 / 채널 제한 (0 = 제한 없음) =====
 # GUILD_ID 에는 반드시 "서버" ID 를 넣어야 합니다. 채널 ID 를 넣으면 어떤 메시지와도
 # 맞지 않아 봇이 아무 반응도 하지 않습니다. 기본값은 제한 없음(0)입니다.
@@ -71,6 +80,7 @@ TRAINING = "훈련실"   # 사람 대 봇 끝말잇기
 STUDY = "학습실"      # 대국 없이 조회·탐색만
 CHESS = "체스"        # 체스 전용. 사전은 쓰지 않으므로 두 번째 값은 비워 둡니다.
 OMOK = "오목"         # 오목 전용
+QUORIDOR = "쿼리도"   # 쿼리도 전용
 CHANNEL_ROLES = {
     1544722084561817650: (ARENA, MODE_STANDARD),     # 경기장-표준사전
     1544854290819059765: (ARENA, MODE_COMPLEX),      # 경기장-복합사전
@@ -80,11 +90,13 @@ CHANNEL_ROLES = {
     1523328035686846495: (STUDY, MODE_COMPLEX),      # 복합탐색
     1548658703014830170: (CHESS, None),              # 체스
     1548663510417014935: (OMOK, None),               # 오목
+    1548690709199069295: (QUORIDOR, None),           # 쿼리도
 }
 
 # 여기 적힌 채널에서만 둡니다. 비워 두면 어느 채널에서나 둘 수 있습니다.
 CHESS_CHANNELS = {cid for cid, (kind, _) in CHANNEL_ROLES.items() if kind == CHESS}
 OMOK_CHANNELS = {cid for cid, (kind, _) in CHANNEL_ROLES.items() if kind == OMOK}
+QUORIDOR_CHANNELS = {cid for cid, (kind, _) in CHANNEL_ROLES.items() if kind == QUORIDOR}
 # ===========================
 
 # ===== 순위전 시간대 조회 딜레이 =====
@@ -1013,6 +1025,7 @@ class RouteSearchView(discord.ui.View):
 GAMES = gm.GameRegistry()
 CHESS_GAMES = cg.ChessRegistry() if CHESS_READY else None
 OMOK_GAMES = om.OmokRegistry() if OMOK_READY else None
+QUORIDOR_GAMES = qd.QuoridorRegistry() if QUORIDOR_READY else None
 
 
 # ---------------------------------------------------------------------
@@ -1325,6 +1338,22 @@ async def omok_draw(msg, playing):
         f"돌을 놓으시면 제안은 없던 일이 됩니다.", delete_after=60)
 
 
+async def quoridor_draw(msg, playing):
+    side = playing.side_of(msg.author.id)
+    if side is None:
+        await msg.channel.send("이 대국의 대국자만 제안하실 수 있습니다.")
+        return
+    if playing.draw_offer is not None and playing.draw_offer != msg.author.id:
+        playing.finish(None, "두 분이 합의해 무승부로 끝났습니다.")
+        QUORIDOR_GAMES.drop(msg.channel.id)
+        await post_quoridor_board(playing, msg.channel)
+        return
+    playing.draw_offer = msg.author.id
+    await msg.channel.send(
+        f"{msg.author.display_name} 님이 무승부를 제안하셨습니다. "
+        f"받아들이시려면 상대분도 `!무승부` 를 입력해 주세요.", delete_after=60)
+
+
 async def post_chess_board(game, channel, notice=""):
     """판 메시지 하나를 계속 고쳐 씁니다.
     새 메시지를 올리면 채팅이 밀려서 개인 판이 위로 올라가 버립니다."""
@@ -1531,6 +1560,185 @@ class OmokJoinView(discord.ui.View):
             names.reverse(); players.reverse()
         self.stop()
         await begin_omok(interaction.channel, players, names)
+
+    async def on_timeout(self):
+        for item in self.children:
+            item.disabled = True
+        if self.message:
+            try:
+                await self.message.edit(view=self)
+            except discord.HTTPException:
+                pass
+
+
+# ---------------------------------------------------------------------
+# 쿼리도 (사람 대 사람)
+# ---------------------------------------------------------------------
+
+async def schedule_quoridor_timeout(game, channel):
+    game.timer_token += 1
+    token = game.timer_token
+
+    async def waiter():
+        try:
+            await asyncio.sleep(qd.TURN_SECONDS)
+        except asyncio.CancelledError:
+            return
+        if game.finished or game.timer_token != token:
+            return
+        loser = game.turn
+        game.finish(1 - loser,
+                    f"{game.names[loser]} 님이 제한 시간 안에 두지 못했습니다.")
+        QUORIDOR_GAMES.drop(game.channel_id)
+        await post_quoridor_board(game, channel)
+
+    game.cancel_timer()
+    game.timer = asyncio.create_task(waiter())
+
+
+class QuoridorView(discord.ui.View):
+    """판 아래에 붙는 버튼입니다. 수는 채팅으로 둡니다."""
+
+    def __init__(self, game):
+        super().__init__(timeout=qd.TURN_SECONDS)
+        self.game = game
+        self.add_item(QuoridorControl(self, "🤝 무승부", "draw",
+                                      discord.ButtonStyle.secondary))
+        self.add_item(QuoridorControl(self, "🏳 기권", "resign",
+                                      discord.ButtonStyle.danger))
+
+    async def interaction_check(self, interaction):
+        if self.game.side_of(interaction.user.id) is None:
+            await interaction.response.send_message(
+                "이 대국의 대국자만 누르실 수 있습니다.", ephemeral=True)
+            return False
+        return True
+
+    async def on_control(self, interaction, action):
+        game = self.game
+        side = game.side_of(interaction.user.id)
+        if action == "resign":
+            game.finish(1 - side, f"{game.names[side]} 님이 기권하셨습니다.")
+        elif action == "draw":
+            if game.draw_offer is None or game.draw_offer == interaction.user.id:
+                game.draw_offer = interaction.user.id
+                await interaction.response.send_message(
+                    f"{interaction.user.display_name} 님이 무승부를 제안하셨습니다. "
+                    f"상대분도 🤝 를 누르시면 무승부가 됩니다.", delete_after=60)
+                return
+            game.finish(None, "두 분이 합의해 무승부로 끝났습니다.")
+        QUORIDOR_GAMES.drop(game.channel_id)
+        embed, picture = game.payload()
+        kwargs = {"embed": embed, "view": None}
+        if picture is not None:
+            kwargs["attachments"] = [picture]
+        await interaction.response.edit_message(**kwargs)
+        self.stop()
+
+    async def on_timeout(self):
+        for item in self.children:
+            item.disabled = True
+        if self.game.message:
+            try:
+                await self.game.message.edit(view=self)
+            except discord.HTTPException:
+                pass
+
+
+class QuoridorControl(discord.ui.Button):
+    def __init__(self, view_ref, label, action, style):
+        super().__init__(label=label, style=style, row=0)
+        self.view_ref = view_ref
+        self.action = action
+
+    async def callback(self, interaction):
+        await self.view_ref.on_control(interaction, self.action)
+
+
+async def post_quoridor_board(game, channel, notice=""):
+    view = None if game.finished else QuoridorView(game)
+    if game.message is not None:
+        embed, picture = game.payload(notice)
+        kwargs = {"embed": embed, "view": view}
+        if picture is not None:
+            kwargs["attachments"] = [picture]
+        try:
+            await game.message.edit(**kwargs)
+            return
+        except discord.HTTPException:
+            game.message = None
+    embed, picture = game.payload(notice)
+    kwargs = {"embed": embed}
+    if picture is not None:
+        kwargs["file"] = picture
+    if view is not None:
+        kwargs["view"] = view
+    game.message = await channel.send(**kwargs)
+
+
+async def begin_quoridor(channel, players, names):
+    game = qd.QuoridorGame(channel.id, players, names)
+    QUORIDOR_GAMES.put(game)
+    notice = (f"🔵 **{names[qd.LOWER]}** 는 아래에서 시작해 맨 윗줄로, "
+              f"🔴 **{names[qd.UPPER]}** 는 위에서 시작해 맨 아랫줄로 갑니다.\n"
+              f"자리는 무작위로 정했습니다. 벽은 각자 {qd.WALLS}개입니다. 🔵 부터 두세요.")
+    await post_quoridor_board(game, channel, notice)
+    await schedule_quoridor_timeout(game, channel)
+
+
+async def handle_quoridor_move(game, msg):
+    text = msg.content.strip()
+    if not qd.MOVE_LIKE.match(text):
+        return                      # 평범한 대화에는 대꾸하지 않습니다.
+    if game.actor != msg.author.id:
+        if game.side_of(msg.author.id) is None:
+            return
+        await msg.channel.send(f"{msg.author.mention} 아직 상대 차례입니다.",
+                               delete_after=8)
+        await quiet_delete(msg)
+        return
+    ok, info = game.play(text)
+    if not ok:
+        await msg.channel.send(f"{msg.author.mention} {info}", delete_after=15)
+        await quiet_delete(msg)
+        return
+    await quiet_delete(msg)
+    game.cancel_timer()
+    kind = "에 벽을 놓았습니다" if info[-1] in "ㅡ|" else "로 옮겼습니다"
+    notice = f"{msg.author.display_name} 님이 **{info}**{kind}."
+    if game.check_over():
+        QUORIDOR_GAMES.drop(game.channel_id)
+        await post_quoridor_board(game, msg.channel, notice)
+        return
+    await post_quoridor_board(game, msg.channel, notice)
+    await schedule_quoridor_timeout(game, msg.channel)
+
+
+class QuoridorJoinView(discord.ui.View):
+    def __init__(self, host_id, host_name):
+        super().__init__(timeout=180)
+        self.host_id = host_id
+        self.host_name = host_name
+        self.message = None
+
+    @discord.ui.button(label="🔵 참가하기", style=discord.ButtonStyle.success)
+    async def join(self, interaction, button):
+        if interaction.user.id == self.host_id:
+            await interaction.response.send_message(
+                "상대를 기다리는 중입니다. 다른 분이 눌러 주셔야 합니다.", ephemeral=True)
+            return
+        if QUORIDOR_GAMES.get(interaction.channel_id):
+            await interaction.response.send_message(
+                "이 채널에서 이미 쿼리도 대국이 진행 중입니다.", ephemeral=True)
+            return
+        button.disabled = True
+        await interaction.response.edit_message(view=self)
+        names = [self.host_name, interaction.user.display_name]
+        players = [self.host_id, interaction.user.id]
+        if random.random() < 0.5:
+            names.reverse(); players.reverse()
+        self.stop()
+        await begin_quoridor(interaction.channel, players, names)
 
     async def on_timeout(self):
         for item in self.children:
@@ -1829,6 +2037,11 @@ HELP_TEXT = (
     "`!오목판` — 지금 판을 다시 보여 드립니다\n"
     "`!오목기권` — 진행 중인 오목을 기권합니다\n"
     "오목은 `H8` 처럼 가로 글자와 세로 숫자를 붙여 적으시면 됩니다\n"
+    "\n**쿼리도 (사람 대 사람)**\n"
+    "`!쿼리도` — 상대를 모집해 쿼리도를 시작합니다\n"
+    "`!쿼리도판` — 지금 판을 다시 보여 드립니다\n"
+    "`!쿼리도기권` — 진행 중인 쿼리도를 기권합니다\n"
+    "말은 `e2`, 벽은 `e5ㅡ` (가로) · `e5|` (세로) 처럼 적으시면 됩니다\n"
     "예시: `!대결 표준`, `!경기`, `!루트 템11`, `!탐색 템11`, `!공격 기`\n"
     "두 모드 모두 표준두음법칙을 적용하며, 복합 자료와 표준 자료는 서로 섞지 않습니다."
 )
@@ -1860,6 +2073,13 @@ async def on_message(msg):
         playing = OMOK_GAMES.get(msg.channel.id)
         if playing:
             await handle_omok_move(playing, msg)
+            return
+
+    # 쿼리도 대국 중이면 자리나 벽처럼 생긴 글을 수로 봅니다.
+    if QUORIDOR_READY and not c.startswith("!"):
+        playing = QUORIDOR_GAMES.get(msg.channel.id)
+        if playing:
+            await handle_quoridor_move(playing, msg)
             return
 
     kind, fixed = channel_role(msg.channel.id)
@@ -1979,6 +2199,14 @@ async def on_message(msg):
             await post_omok_board(omok_game_now, msg.channel)
             stopped.append("오목")
 
+        quoridor_now = QUORIDOR_GAMES.get(msg.channel.id) if QUORIDOR_READY else None
+        if quoridor_now:
+            quoridor_now.aborted = True
+            quoridor_now.finish(None, f"{who} 님이 대국을 중단하셨습니다.")
+            QUORIDOR_GAMES.drop(msg.channel.id)
+            await post_quoridor_board(quoridor_now, msg.channel)
+            stopped.append("쿼리도")
+
         if not stopped:
             await msg.channel.send("이 채널에서 진행 중인 대국이 없습니다.")
             return
@@ -1994,8 +2222,61 @@ async def on_message(msg):
         if OMOK_READY and OMOK_GAMES.get(msg.channel.id):
             await omok_draw(msg, OMOK_GAMES.get(msg.channel.id))
             return
+        if QUORIDOR_READY and QUORIDOR_GAMES.get(msg.channel.id):
+            await quoridor_draw(msg, QUORIDOR_GAMES.get(msg.channel.id))
+            return
         await msg.channel.send("이 채널에서 진행 중인 대국이 없습니다.")
         return
+
+    # ---- 쿼리도 -------------------------------------------------
+    if c.startswith("!쿼리도"):
+        if not QUORIDOR_READY:
+            await msg.channel.send("쿼리도 자료를 불러오지 못해 쓸 수 없습니다.")
+            return
+        if QUORIDOR_CHANNELS and msg.channel.id not in QUORIDOR_CHANNELS:
+            where = " ".join(f"<#{cid}>" for cid in sorted(QUORIDOR_CHANNELS))
+            await msg.channel.send(f"쿼리도는 {where} 채널에서 두실 수 있습니다.")
+            return
+        playing = QUORIDOR_GAMES.get(msg.channel.id)
+
+        if c.startswith("!쿼리도판"):
+            if not playing:
+                await msg.channel.send("이 채널에서 진행 중인 쿼리도 대국이 없습니다.")
+                return
+            playing.message = None
+            await post_quoridor_board(playing, msg.channel)
+            return
+
+        if c.startswith("!쿼리도기권"):
+            if not playing:
+                await msg.channel.send("이 채널에서 진행 중인 쿼리도 대국이 없습니다.")
+                return
+            side = playing.side_of(msg.author.id)
+            if side is None:
+                await msg.channel.send("이 대국의 대국자만 기권하실 수 있습니다.")
+                return
+            playing.finish(1 - side, f"{playing.names[side]} 님이 기권하셨습니다.")
+            QUORIDOR_GAMES.drop(msg.channel.id)
+            await post_quoridor_board(playing, msg.channel)
+            return
+
+        if playing:
+            await msg.channel.send(
+                "이 채널에서 이미 쿼리도 대국이 진행 중입니다. "
+                "`!쿼리도판` 으로 판을 다시 보시거나 `!쿼리도기권` 으로 끝내실 수 있습니다.")
+            return
+        if GAMES.get(msg.channel.id):
+            await msg.channel.send(
+                "이 채널에서 끝말잇기 대국이 진행 중입니다. 그것부터 끝내 주세요.")
+            return
+        view = QuoridorJoinView(msg.author.id, msg.author.display_name)
+        view.message = await msg.channel.send(
+            f"🔵 **{msg.author.display_name}** 님이 쿼리도 상대를 찾고 있습니다.\n"
+            f"아래 버튼을 누르시면 시작합니다. 자리는 무작위로 정합니다. "
+            f"(3분 안에 아무도 안 누르시면 취소됩니다)",
+            view=view)
+        return
+    # -------------------------------------------------------------
 
     # ---- 오목 ---------------------------------------------------
     if c.startswith("!오목"):
@@ -2122,6 +2403,10 @@ async def on_message(msg):
             msg.content = "!오목"
             await client.on_message(msg)
             return
+        if kind == QUORIDOR:
+            msg.content = "!쿼리도"
+            await client.on_message(msg)
+            return
         if kind == STUDY:
             await msg.channel.send(
                 "이 채널은 조회·탐색용입니다. 대국은 훈련실이나 경기장 채널에서 시작해 주세요.")
@@ -2154,6 +2439,9 @@ async def on_message(msg):
             return
         if kind == OMOK:
             await msg.channel.send("이 채널은 오목 전용입니다. `!오목` 으로 시작해 주세요.")
+            return
+        if kind == QUORIDOR:
+            await msg.channel.send("이 채널은 쿼리도 전용입니다. `!쿼리도` 로 시작해 주세요.")
             return
         if GAMES.get(msg.channel.id):
             await msg.channel.send("이 채널에서 이미 대국이 진행 중입니다. `!기권` 으로 끝낼 수 있습니다.")
@@ -2189,6 +2477,9 @@ async def on_message(msg):
             return
         if kind == OMOK:
             await msg.channel.send("이 채널은 오목 전용입니다. `!오목` 으로 시작해 주세요.")
+            return
+        if kind == QUORIDOR:
+            await msg.channel.send("이 채널은 쿼리도 전용입니다. `!쿼리도` 로 시작해 주세요.")
             return
         if GAMES.get(msg.channel.id):
             await msg.channel.send("이 채널에서 이미 대국이 진행 중입니다. `!기권` 으로 끝낼 수 있습니다.")
