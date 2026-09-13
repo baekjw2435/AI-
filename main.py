@@ -1064,7 +1064,7 @@ class ChessView(discord.ui.View):
                                        discord.ButtonStyle.secondary,
                                        disabled=self.picked is None))
 
-        self.add_item(ChessControl(self, "🔄 내 방향으로 보기", "view",
+        self.add_item(ChessControl(self, "🔄 내 방향 판 켜기", "view",
                                    discord.ButtonStyle.secondary))
         self.add_item(ChessControl(self, "🤝 무승부", "draw",
                                    discord.ButtonStyle.secondary))
@@ -1134,6 +1134,7 @@ class ChessView(discord.ui.View):
         if picture is not None:
             kwargs["attachments"] = [picture]
         await interaction.response.edit_message(**kwargs)
+        await refresh_private_boards(self.game)
 
     # -- 버튼 처리 --------------------------------------------------
     async def on_pick(self, interaction, value=None):
@@ -1165,17 +1166,16 @@ class ChessView(discord.ui.View):
         game = self.game
         if action == "view":
             # 모두가 보는 판은 건드리지 않습니다. 누른 분에게만 따로 보여 드립니다.
-            # 그래야 상대가 몇 번을 눌러도 내 화면이 다시 불러와지지 않습니다.
+            # 한 번 켜 두면 수가 오갈 때마다 이 메시지를 고쳐서 계속 따라갑니다.
             side = game.side_of(interaction.user.id)
             picture = game.render(flip=(side == cg.BLACK))
             if picture is None:
                 await interaction.response.send_message(
                     "지금은 판 그림을 그릴 수 없습니다.", ephemeral=True)
                 return
-            who = "흑" if side == cg.BLACK else "백"
             await interaction.response.send_message(
-                f"{who} 쪽에서 본 판입니다. 이 메시지는 본인에게만 보입니다.",
-                file=picture, ephemeral=True)
+                private_caption(game, side), file=picture, ephemeral=True)
+            game.private[interaction.user.id] = interaction
             return
         if action == "clear":
             if not await self.my_turn(interaction):
@@ -1241,6 +1241,34 @@ class ChessControl(discord.ui.Button):
         await self.view_ref.on_control(interaction, self.action)
 
 
+def private_caption(game, side):
+    who = "흑" if side == cg.BLACK else "백"
+    if game.finished:
+        return f"{who} 쪽에서 본 마지막 판입니다."
+    turn = "내 차례입니다." if game.turn_index == side else "상대 차례입니다."
+    return (f"**{who} 쪽에서 본 판** · {turn}\n"
+            f"이 메시지는 본인에게만 보이고, 수가 오갈 때마다 알아서 바뀝니다. "
+            f"한동안 멈추면 `🔄 내 방향 판 켜기` 를 다시 눌러 주세요.")
+
+
+async def refresh_private_boards(game):
+    """켜 두신 분들의 개인 판을 새 국면으로 고칩니다.
+    디스코드가 주는 창구는 15분이면 닫히므로, 실패하면 조용히 지웁니다."""
+    for user_id, interaction in list(game.private.items()):
+        side = game.side_of(user_id)
+        if side is None:
+            game.private.pop(user_id, None)
+            continue
+        picture = game.render(flip=(side == cg.BLACK))
+        if picture is None:
+            continue
+        try:
+            await interaction.edit_original_response(
+                content=private_caption(game, side), attachments=[picture])
+        except Exception:
+            game.private.pop(user_id, None)
+
+
 async def post_chess_board(game, channel, notice=""):
     """판을 새 메시지로 올리고, 앞선 판의 버튼은 잠급니다."""
     if game.message is not None:
@@ -1256,6 +1284,7 @@ async def post_chess_board(game, channel, notice=""):
     if view is not None:
         kwargs["view"] = view
     game.message = await channel.send(**kwargs)
+    await refresh_private_boards(game)
 
 
 async def begin_chess(channel, players, names):
