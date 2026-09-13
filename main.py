@@ -1005,6 +1005,14 @@ CHESS_GAMES = cg.ChessRegistry() if CHESS_READY else None
 # 체스 (사람 대 사람)
 # ---------------------------------------------------------------------
 
+async def quiet_delete(msg):
+    """수를 적으신 메시지를 지웁니다. 권한이 없으면 그냥 둡니다."""
+    try:
+        await msg.delete()
+    except Exception:
+        pass
+
+
 async def schedule_chess_timeout(game, channel):
     """제한 시간 안에 두지 못하면 시간패로 끝냅니다."""
     game.timer_token += 1
@@ -1270,14 +1278,23 @@ async def refresh_private_boards(game):
 
 
 async def post_chess_board(game, channel, notice=""):
-    """판을 새 메시지로 올리고, 앞선 판의 버튼은 잠급니다."""
-    if game.message is not None:
-        try:
-            await game.message.edit(view=None)
-        except discord.HTTPException:
-            pass
-    embed, picture = game.payload(channel.guild, notice)
+    """판 메시지 하나를 계속 고쳐 씁니다.
+    새 메시지를 올리면 채팅이 밀려서 개인 판이 위로 올라가 버립니다."""
     view = None if game.finished else ChessView(game)
+
+    if game.message is not None:
+        embed, picture = game.payload(channel.guild, notice)
+        kwargs = {"embed": embed, "view": view}
+        if picture is not None:
+            kwargs["attachments"] = [picture]
+        try:
+            await game.message.edit(**kwargs)
+            await refresh_private_boards(game)
+            return
+        except discord.HTTPException:
+            game.message = None     # 지워졌으면 새로 올립니다.
+
+    embed, picture = game.payload(channel.guild, notice)
     kwargs = {"embed": embed}
     if picture is not None:
         kwargs["file"] = picture
@@ -1304,12 +1321,17 @@ async def handle_chess_move(game, msg):
     if game.actor != msg.author.id:
         if game.side_of(msg.author.id) is None:
             return                  # 구경하시는 분입니다.
-        await msg.channel.send(f"{msg.author.mention} 아직 상대 차례입니다.")
+        await msg.channel.send(f"{msg.author.mention} 아직 상대 차례입니다.",
+                               delete_after=8)
+        await quiet_delete(msg)
         return
     ok, info = game.push(text)
     if not ok:
-        await msg.channel.send(f"{msg.author.mention} {info}")
+        # 잘못 적으신 글과 안내는 잠시 뒤 사라지게 해서 채팅이 쌓이지 않게 합니다.
+        await msg.channel.send(f"{msg.author.mention} {info}", delete_after=12)
+        await quiet_delete(msg)
         return
+    await quiet_delete(msg)
     game.cancel_timer()
     notice = f"{msg.author.display_name} 님이 **{info}** 을(를) 두었습니다."
     if game.check_over():
