@@ -411,13 +411,13 @@ class ChessGame:
             e.add_field(
                 name="🎯 이번 수",
                 value=(f"**{side}** 차례입니다 · {self.move_number()}수째\n"
-                       f"`e4` `Nf3` `O-O` `e2e4` 처럼 채팅에 바로 적어 주세요."),
+                       f"채팅에 `e4` `Nf3` `O-O` `e2e4` 처럼 적어 주세요."),
                 inline=False)
 
         e.add_field(name="📜 기보", value=self.history_text()[:1024], inline=False)
         footer = f"⬜ {self.names[WHITE]} · ⬛ {self.names[BLACK]}"
         if picture:
-            footer += " · 노란 칸=직전 수 · 파란 칸=고른 말 · 초록 점=갈 곳 · 빨간 칸=체크"
+            footer += " · 노란 칸=직전 수 · 빨간 칸=체크"
         elif not emojis:
             footer += " · 그림을 못 그려 글자 판으로 보여 드립니다"
         e.set_footer(text=footer)

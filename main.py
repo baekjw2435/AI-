@@ -1027,8 +1027,13 @@ async def schedule_chess_timeout(game, channel):
     game.timer = asyncio.create_task(waiter())
 
 
+# 칸마다 버튼을 달지 정합니다. 꺼 두면 판 뒤집기·무승부·기권만 남고,
+# 수는 채팅에 e4 처럼 적어서 둡니다.
+SQUARE_BUTTONS = False
+
+
 class ChessView(discord.ui.View):
-    """말을 고르고 갈 곳을 골라 두는 화면입니다."""
+    """판 아래에 붙는 버튼들입니다. 수는 채팅으로 적는 것이 기본입니다."""
 
     def __init__(self, game):
         super().__init__(timeout=cg.TURN_SECONDS)
@@ -1048,14 +1053,17 @@ class ChessView(discord.ui.View):
         if game.finished:
             return
 
-        if self.picked:
-            self.lay_targets(game.destinations(self.picked))
-        else:
-            self.lay_pieces(game.movable_squares())
+        # 칸 버튼은 기본으로 끕니다. 수는 채팅에 e4 처럼 적는 쪽이 훨씬 빠릅니다.
+        # 다시 켜시려면 위의 SQUARE_BUTTONS 를 True 로 바꾸시면 됩니다.
+        if SQUARE_BUTTONS:
+            if self.picked:
+                self.lay_targets(game.destinations(self.picked))
+            else:
+                self.lay_pieces(game.movable_squares())
+            self.add_item(ChessControl(self, "↩ 다시 고르기", "clear",
+                                       discord.ButtonStyle.secondary,
+                                       disabled=self.picked is None))
 
-        self.add_item(ChessControl(self, "↩ 다시 고르기", "clear",
-                                   discord.ButtonStyle.secondary,
-                                   disabled=self.picked is None))
         self.add_item(ChessControl(self, "🔄 판 뒤집기", "flip",
                                    discord.ButtonStyle.secondary))
         self.add_item(ChessControl(self, "🤝 무승부", "draw",
@@ -1214,7 +1222,8 @@ class SquareButton(discord.ui.Button):
 
 class ChessControl(discord.ui.Button):
     def __init__(self, view_ref, label, action, style, disabled=False):
-        super().__init__(label=label, style=style, row=4, disabled=disabled)
+        super().__init__(label=label, style=style,
+                         row=4 if SQUARE_BUTTONS else 0, disabled=disabled)
         self.view_ref = view_ref
         self.action = action
 
@@ -1243,8 +1252,7 @@ async def begin_chess(channel, players, names):
     game = cg.ChessGame(channel.id, players, names)
     CHESS_GAMES.put(game)
     notice = (f"⬜ 백 **{names[cg.WHITE]}** · ⬛ 흑 **{names[cg.BLACK]}**\n"
-              f"색은 무작위로 정했습니다. 아래에서 말을 고르시거나 "
-              f"`e4` 처럼 채팅에 바로 적으셔도 됩니다.")
+              f"색은 무작위로 정했습니다. 수는 채팅에 `e4` 처럼 적으시면 됩니다.")
     await post_chess_board(game, channel, notice)
     await schedule_chess_timeout(game, channel)
 
