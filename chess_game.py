@@ -7,10 +7,16 @@
 판은 서버에 올린 이모지로 그립니다. 이모지가 없으면 글자 판으로 대신합니다.
 """
 
-import asyncio, re
+import asyncio, io, os, re
 
 import chess
 import discord
+
+try:
+    from PIL import Image, ImageDraw, ImageFont
+    PIL_OK = True
+except Exception:
+    PIL_OK = False
 
 TURN_SECONDS = 600        # 한 수를 둘 수 있는 시간 (10분)
 
@@ -44,6 +50,126 @@ MOVE_LIKE = re.compile(
 FILES = "abcdefgh"
 
 
+def _ro(word):
+    """'로' 와 '으로' 를 가려 줍니다. 받침이 없거나 ㄹ 받침이면 '로' 입니다."""
+    if not word:
+        return "로"
+    code = ord(word[-1]) - 0xAC00
+    if code < 0 or code > 11171:
+        return "로"
+    final = code % 28
+    return "로" if final in (0, 8) else "으로"
+
+
+# ---------------------------------------------------------------------
+# 그림 판 그리기
+#   말 그림은 chess_pieces/ 에 미리 뽑아 둔 PNG 를 씁니다.
+#   서버에 따로 깔 것이 없도록 붙이기만 합니다.
+# ---------------------------------------------------------------------
+
+PIECE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "chess_pieces")
+CELL = 72                      # 칸 한 변
+MARGIN = 26                    # 좌표를 적는 가장자리
+BOARD_PX = CELL * 8 + MARGIN * 2
+
+LIGHT_SQ = (240, 217, 181)
+DARK_SQ = (181, 136, 99)
+EDGE = (101, 76, 56)
+LABEL = (245, 238, 226)
+MOVE_MARK = (205, 210, 106, 150)     # 직전 수 표시 (노랑)
+CHECK_MARK = (220, 70, 60, 165)      # 체크 표시 (빨강)
+
+_pieces = {}
+_font = None
+
+
+def _load_pieces():
+    """말 그림을 한 번만 읽어 둡니다. 하나라도 없으면 그림 판을 포기합니다."""
+    global _pieces
+    if _pieces:
+        return _pieces
+    if not PIL_OK:
+        return None
+    loaded = {}
+    for side in "wb":
+        for kind in "pnbrqk":
+            path = os.path.join(PIECE_DIR, f"{side}{kind}.png")
+            if not os.path.exists(path):
+                return None
+            img = Image.open(path).convert("RGBA")
+            pad = int(CELL * 0.06)
+            size = CELL - pad * 2
+            loaded[side + kind] = img.resize((size, size), Image.LANCZOS)
+    _pieces = loaded
+    return _pieces
+
+
+def _label_font():
+    global _font
+    if _font is None:
+        try:
+            _font = ImageFont.load_default(size=15)
+        except Exception:
+            _font = ImageFont.load_default()
+    return _font
+
+
+def render_png(board, last_move=None, flip=False):
+    """판을 그린 PNG 를 돌려줍니다. 그릴 수 없으면 None 입니다."""
+    pieces = _load_pieces()
+    if pieces is None:
+        return None
+
+    img = Image.new("RGBA", (BOARD_PX, BOARD_PX), EDGE)
+    draw = ImageDraw.Draw(img, "RGBA")
+
+    ranks = range(8) if flip else range(7, -1, -1)
+    files = range(7, -1, -1) if flip else range(8)
+
+    check_sq = None
+    if board.is_check():
+        check_sq = board.king(board.turn)
+
+    for row, rank in enumerate(ranks):
+        for col, file in enumerate(files):
+            square = chess.square(file, rank)
+            x0 = MARGIN + col * CELL
+            y0 = MARGIN + row * CELL
+            box = [x0, y0, x0 + CELL, y0 + CELL]
+            draw.rectangle(box, fill=LIGHT_SQ if (file + rank) % 2 else DARK_SQ)
+
+            if last_move is not None and square in (last_move.from_square, last_move.to_square):
+                draw.rectangle(box, fill=MOVE_MARK)
+            if square == check_sq:
+                draw.rectangle(box, fill=CHECK_MARK)
+
+            piece = board.piece_at(square)
+            if piece is not None:
+                side = "w" if piece.color == chess.WHITE else "b"
+                key = side + chess.piece_symbol(piece.piece_type)
+                art = pieces[key]
+                off = (CELL - art.width) // 2
+                img.alpha_composite(art, (x0 + off, y0 + off))
+
+    font = _label_font()
+    for col, file in enumerate(files):
+        text = FILES[file]
+        x = MARGIN + col * CELL + CELL // 2
+        draw.text((x, MARGIN // 2), text, fill=LABEL, font=font, anchor="mm")
+        draw.text((x, BOARD_PX - MARGIN // 2), text, fill=LABEL, font=font, anchor="mm")
+    for row, rank in enumerate(ranks):
+        text = str(rank + 1)
+        y = MARGIN + row * CELL + CELL // 2
+        draw.text((MARGIN // 2, y), text, fill=LABEL, font=font, anchor="mm")
+        draw.text((BOARD_PX - MARGIN // 2, y), text, fill=LABEL, font=font, anchor="mm")
+
+    buf = io.BytesIO()
+    img.convert("RGB").save(buf, format="PNG", optimize=True)
+    buf.seek(0)
+    return buf
+
+
+
 def emoji_map(guild):
     """서버에서 체스 이모지를 찾아 {이름: 쓸 수 있는 형태} 로 돌려줍니다.
     하나라도 없으면 None 을 돌려주고, 그때는 글자 판을 씁니다."""
@@ -70,6 +196,8 @@ class ChessGame:
         self.draw_offer = None          # 무승부를 제안한 분의 id
         self.timer = None
         self.timer_token = 0
+        self.message = None             # 마지막으로 보낸 판 메시지
+        self.flip = False               # 흑 기준으로 뒤집어 볼지
 
     # -- 상태 ------------------------------------------------------
     @property
@@ -207,8 +335,23 @@ class ChessGame:
             text = "…  " + text
         return text
 
-    def embed(self, guild, notice="", flip=False):
-        emojis = emoji_map(guild)
+    def render(self, flip=None):
+        """판 그림을 discord.File 로 돌려줍니다. 못 그리면 None 입니다."""
+        if flip is None:
+            flip = self.flip
+        last = self.board.peek() if self.board.move_stack else None
+        buf = render_png(self.board, last, flip)
+        if buf is None:
+            return None
+        return discord.File(buf, filename="board.png")
+
+    def payload(self, guild, notice=""):
+        """(임베드, 그림파일) 을 함께 돌려줍니다. 그림이 안 되면 글자 판으로 갑니다."""
+        picture = self.render()
+        return self.embed(guild, notice, self.flip, picture is not None), picture
+
+    def embed(self, guild, notice="", flip=False, picture=False):
+        emojis = None if picture else emoji_map(guild)
         if self.finished:
             if self.winner is None:
                 color, title = COLOR_DRAW, "🤝  무승부입니다"
@@ -227,8 +370,11 @@ class ChessGame:
         status = self.status_line()
         if status and not self.finished:
             parts.append(status)
-        parts.append(self.board_text(emojis, flip))
-        e.description = "\n".join(parts)[:4096]
+        if picture:
+            e.set_image(url="attachment://board.png")
+        else:
+            parts.append(self.board_text(emojis, flip))
+        e.description = "\n".join(parts)[:4096] or None
 
         if self.finished:
             e.add_field(name="🏁 결과", value=self.result, inline=False)
@@ -242,10 +388,59 @@ class ChessGame:
 
         e.add_field(name="📜 기보", value=self.history_text()[:1024], inline=False)
         footer = f"⬜ {self.names[WHITE]} · ⬛ {self.names[BLACK]}"
-        if not emojis:
-            footer += " · 이모지가 없어 글자 판으로 보여 드립니다"
+        if picture:
+            footer += " · 직전 수는 노란 칸, 체크는 빨간 칸입니다"
+        elif not emojis:
+            footer += " · 그림을 못 그려 글자 판으로 보여 드립니다"
         e.set_footer(text=footer)
         return e
+
+
+    # -- 버튼용 목록 ------------------------------------------------
+    KOREAN = {"p": "폰", "n": "나이트", "b": "비숍", "r": "룩", "q": "퀸", "k": "킹"}
+    SYMBOL = {"p": "♟", "n": "♞", "b": "♝", "r": "♜", "q": "♛", "k": "♚"}
+
+    def movable_squares(self):
+        """지금 움직일 수 있는 말들의 자리입니다. (자리, 보여 줄 이름) 목록입니다."""
+        seen = {}
+        for move in self.board.legal_moves:
+            seen.setdefault(move.from_square, 0)
+            seen[move.from_square] += 1
+        rows = []
+        for square, count in seen.items():
+            piece = self.board.piece_at(square)
+            kind = chess.piece_symbol(piece.piece_type)
+            name = chess.square_name(square)
+            rows.append((name,
+                         f"{self.SYMBOL[kind]} {name}  {self.KOREAN[kind]}",
+                         f"갈 수 있는 곳 {count}군데"))
+        rows.sort(key=lambda r: r[0])
+        return rows
+
+    def destinations(self, from_name):
+        """고른 말이 갈 수 있는 곳입니다. (수 표기, 보여 줄 이름, 설명) 목록입니다."""
+        try:
+            origin = chess.parse_square(from_name)
+        except ValueError:
+            return []
+        rows = []
+        for move in self.board.legal_moves:
+            if move.from_square != origin:
+                continue
+            san = self.board.san(move)
+            target = chess.square_name(move.to_square)
+            note = []
+            if self.board.is_capture(move):
+                note.append("잡기")
+            if self.board.gives_check(move):
+                note.append("체크")
+            if move.promotion:
+                name = self.KOREAN[chess.piece_symbol(move.promotion)]
+                note.append(f"{name}{_ro(name)} 승격")
+            label = f"{target}  {san}"
+            rows.append((move.uci(), label[:100], (" · ".join(note) or "이동")[:100]))
+        rows.sort(key=lambda r: r[1])
+        return rows
 
 
 class ChessRegistry:

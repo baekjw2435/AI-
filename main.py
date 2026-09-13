@@ -1021,18 +1021,195 @@ async def schedule_chess_timeout(game, channel):
         game.finish(1 - loser,
                     f"{game.names[loser]} 님이 제한 시간 안에 두지 못했습니다.")
         CHESS_GAMES.drop(game.channel_id)
-        await channel.send(embed=game.embed(channel.guild))
+        await post_chess_board(game, channel)
 
     game.cancel_timer()
     game.timer = asyncio.create_task(waiter())
+
+
+class ChessView(discord.ui.View):
+    """말을 고르고 갈 곳을 골라 두는 화면입니다."""
+
+    def __init__(self, game):
+        super().__init__(timeout=cg.TURN_SECONDS)
+        self.game = game
+        self.picked = None          # 고른 말의 자리 (예: "e2")
+        self.build()
+
+    # -- 화면 짜기 --------------------------------------------------
+    def build(self):
+        self.clear_items()
+        game = self.game
+        if game.finished:
+            return
+
+        rows = game.movable_squares()
+        picker = discord.ui.Select(
+            placeholder="① 움직일 말을 고르세요",
+            row=0,
+            options=[discord.SelectOption(label=label, value=name, description=desc,
+                                          default=(name == self.picked))
+                     for name, label, desc in rows[:25]])
+        picker.callback = self.on_pick
+        self.add_item(picker)
+
+        targets = game.destinations(self.picked) if self.picked else []
+        if targets:
+            # 갈 곳이 25군데를 넘으면 두 줄로 나눕니다.
+            for i, chunk in enumerate([targets[:25], targets[25:]]):
+                if not chunk:
+                    continue
+                sel = discord.ui.Select(
+                    placeholder=f"② 갈 곳을 고르세요" + (" (이어서)" if i else ""),
+                    row=1 + i,
+                    options=[discord.SelectOption(label=label, value=uci, description=desc)
+                             for uci, label, desc in chunk])
+                sel.callback = self.on_move
+                self.add_item(sel)
+        else:
+            blank = discord.ui.Select(placeholder="② 먼저 말을 고르세요", row=1,
+                                      options=[discord.SelectOption(label="—", value="-")],
+                                      disabled=True)
+            self.add_item(blank)
+
+        self.add_item(ChessControl(self, "↩ 선택 취소", "clear",
+                                   discord.ButtonStyle.secondary,
+                                   disabled=self.picked is None))
+        self.add_item(ChessControl(self, "🔄 판 뒤집기", "flip",
+                                   discord.ButtonStyle.secondary))
+        self.add_item(ChessControl(self, "🤝 무승부", "draw",
+                                   discord.ButtonStyle.secondary))
+        self.add_item(ChessControl(self, "🏳 기권", "resign",
+                                   discord.ButtonStyle.danger))
+
+    # -- 공통 -------------------------------------------------------
+    async def interaction_check(self, interaction):
+        if self.game.side_of(interaction.user.id) is None:
+            await interaction.response.send_message(
+                "이 대국의 대국자만 누르실 수 있습니다.", ephemeral=True)
+            return False
+        return True
+
+    async def my_turn(self, interaction):
+        if self.game.actor != interaction.user.id:
+            await interaction.response.send_message(
+                "아직 상대 차례입니다.", ephemeral=True)
+            return False
+        return True
+
+    async def refresh(self, interaction, notice=""):
+        """판을 다시 그려 이 메시지를 고칩니다."""
+        self.build()
+        embed, picture = self.game.payload(interaction.guild, notice)
+        view = None if self.game.finished else self
+        kwargs = {"embed": embed, "view": view}
+        if picture is not None:
+            kwargs["attachments"] = [picture]
+        await interaction.response.edit_message(**kwargs)
+
+    # -- 버튼 처리 --------------------------------------------------
+    async def on_pick(self, interaction):
+        if not await self.my_turn(interaction):
+            return
+        self.picked = interaction.data["values"][0]
+        await self.refresh(interaction)
+
+    async def on_move(self, interaction):
+        if not await self.my_turn(interaction):
+            return
+        game = self.game
+        ok, info = game.push(interaction.data["values"][0])
+        if not ok:
+            await interaction.response.send_message(info, ephemeral=True)
+            return
+        self.picked = None
+        game.cancel_timer()
+        notice = f"{interaction.user.display_name} 님이 **{info}** 을(를) 두었습니다."
+        if game.check_over():
+            CHESS_GAMES.drop(game.channel_id)
+            await self.refresh(interaction, notice)
+            self.stop()
+            return
+        await self.refresh(interaction, notice)
+        await schedule_chess_timeout(game, interaction.channel)
+
+    async def on_control(self, interaction, action):
+        game = self.game
+        if action == "flip":
+            game.flip = not game.flip
+            await self.refresh(interaction)
+            return
+        if action == "clear":
+            if not await self.my_turn(interaction):
+                return
+            self.picked = None
+            await self.refresh(interaction)
+            return
+        if action == "resign":
+            side = game.side_of(interaction.user.id)
+            game.finish(1 - side, f"{game.names[side]} 님이 기권하셨습니다.")
+            CHESS_GAMES.drop(game.channel_id)
+            await self.refresh(interaction)
+            self.stop()
+            return
+        if action == "draw":
+            side = game.side_of(interaction.user.id)
+            if game.draw_offer is not None and game.draw_offer != interaction.user.id:
+                game.finish(None, "두 분이 합의해 무승부로 끝났습니다.")
+                CHESS_GAMES.drop(game.channel_id)
+                await self.refresh(interaction)
+                self.stop()
+                return
+            game.draw_offer = interaction.user.id
+            await interaction.response.send_message(
+                f"{interaction.user.display_name} 님이 무승부를 제안하셨습니다. "
+                f"상대분도 🤝 를 누르시면 무승부가 됩니다.")
+            return
+
+    async def on_timeout(self):
+        for item in self.children:
+            item.disabled = True
+        if self.game.message:
+            try:
+                await self.game.message.edit(view=self)
+            except discord.HTTPException:
+                pass
+
+
+class ChessControl(discord.ui.Button):
+    def __init__(self, view_ref, label, action, style, disabled=False):
+        super().__init__(label=label, style=style, row=3, disabled=disabled)
+        self.view_ref = view_ref
+        self.action = action
+
+    async def callback(self, interaction):
+        await self.view_ref.on_control(interaction, self.action)
+
+
+async def post_chess_board(game, channel, notice=""):
+    """판을 새 메시지로 올리고, 앞선 판의 버튼은 잠급니다."""
+    if game.message is not None:
+        try:
+            await game.message.edit(view=None)
+        except discord.HTTPException:
+            pass
+    embed, picture = game.payload(channel.guild, notice)
+    view = None if game.finished else ChessView(game)
+    kwargs = {"embed": embed}
+    if picture is not None:
+        kwargs["file"] = picture
+    if view is not None:
+        kwargs["view"] = view
+    game.message = await channel.send(**kwargs)
 
 
 async def begin_chess(channel, players, names):
     game = cg.ChessGame(channel.id, players, names)
     CHESS_GAMES.put(game)
     notice = (f"⬜ 백 **{names[cg.WHITE]}** · ⬛ 흑 **{names[cg.BLACK]}**\n"
-              f"색은 무작위로 정했습니다. 백부터 두시면 됩니다.")
-    await channel.send(embed=game.embed(channel.guild, notice))
+              f"색은 무작위로 정했습니다. 아래에서 말을 고르시거나 "
+              f"`e4` 처럼 채팅에 바로 적으셔도 됩니다.")
+    await post_chess_board(game, channel, notice)
     await schedule_chess_timeout(game, channel)
 
 
@@ -1054,9 +1231,9 @@ async def handle_chess_move(game, msg):
     notice = f"{msg.author.display_name} 님이 **{info}** 을(를) 두었습니다."
     if game.check_over():
         CHESS_GAMES.drop(game.channel_id)
-        await msg.channel.send(embed=game.embed(msg.guild, notice))
+        await post_chess_board(game, msg.channel, notice)
         return
-    await msg.channel.send(embed=game.embed(msg.guild, notice))
+    await post_chess_board(game, msg.channel, notice)
     await schedule_chess_timeout(game, msg.channel)
 
 
@@ -1445,7 +1622,7 @@ async def on_message(msg):
             if not playing:
                 await msg.channel.send("이 채널에서 진행 중인 체스 대국이 없습니다.")
                 return
-            await msg.channel.send(embed=playing.embed(msg.guild))
+            await post_chess_board(playing, msg.channel)
             return
 
         if c.startswith("!체스기권"):
@@ -1459,7 +1636,7 @@ async def on_message(msg):
             playing.finish(1 - side,
                            f"{playing.names[side]} 님이 기권하셨습니다.")
             CHESS_GAMES.drop(msg.channel.id)
-            await msg.channel.send(embed=playing.embed(msg.guild))
+            await post_chess_board(playing, msg.channel)
             return
 
         if c.startswith("!무승부"):
@@ -1473,7 +1650,7 @@ async def on_message(msg):
             if playing.draw_offer is not None and playing.draw_offer != msg.author.id:
                 playing.finish(None, "두 분이 합의해 무승부로 끝났습니다.")
                 CHESS_GAMES.drop(msg.channel.id)
-                await msg.channel.send(embed=playing.embed(msg.guild))
+                await post_chess_board(playing, msg.channel)
                 return
             playing.draw_offer = msg.author.id
             await msg.channel.send(
