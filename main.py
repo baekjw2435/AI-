@@ -22,6 +22,7 @@
 # !체스            → 체스 대국 (사람 대 사람). !체스판 !체스기권 !무승부 !체스이모지
 # !오목            → 오목 대국 (사람 대 사람). !오목판 !오목기권 !무승부
 # !쿼리도          → 쿼리도 대국 (사람 대 사람). !쿼리도판 !쿼리도기권 !무승부
+# !위 !아래 !왼 !오 → 쿼리도에서 말 옮기기. 뒤에 칸 둘을 붙이면 그쪽을 벽으로 막습니다
 # !중단            → 멈춰 있는 대국을 세웁니다 (관리자만)
 #
 # 두음법칙은 두 모드 모두 표준두음법칙만 적용합니다.
@@ -2041,7 +2042,9 @@ HELP_TEXT = (
     "`!쿼리도` — 상대를 모집해 쿼리도를 시작합니다\n"
     "`!쿼리도판` — 지금 판을 다시 보여 드립니다\n"
     "`!쿼리도기권` — 진행 중인 쿼리도를 기권합니다\n"
-    "말은 `e2`, 벽은 `e5ㅡ` (가로) · `e5|` (세로) 처럼 적으시면 됩니다\n"
+    "`!위` `!아래` `!왼` `!오` — 말을 그 방향으로 한 칸 옮깁니다\n"
+    "`!위e1f1` — e1·f1 위쪽을 벽으로 막습니다 (`!아래` `!왼` `!오` 도 같은 방식)\n"
+    "칸 이름으로 `e2` (말), `e5ㅡ` `e5|` (벽) 처럼 적으셔도 됩니다\n"
     "예시: `!대결 표준`, `!경기`, `!루트 템11`, `!탐색 템11`, `!공격 기`\n"
     "두 모드 모두 표준두음법칙을 적용하며, 복합 자료와 표준 자료는 서로 섞지 않습니다."
 )
@@ -2227,6 +2230,40 @@ async def on_message(msg):
             return
         await msg.channel.send("이 채널에서 진행 중인 대국이 없습니다.")
         return
+
+    # ---- 쿼리도 방향 명령 (!위 · !아래 · !왼 · !오) ------------------
+    if QUORIDOR_READY and c.startswith("!"):
+        word = next((w for w in qd.DIR_WORDS if c[1:].startswith(w)), None)
+        if word:
+            playing = QUORIDOR_GAMES.get(msg.channel.id)
+            if not playing:
+                await msg.channel.send(
+                    "이 채널에서 진행 중인 쿼리도 대국이 없습니다.", delete_after=10)
+                await quiet_delete(msg)
+                return
+            if playing.actor != msg.author.id:
+                who = "아직 상대 차례입니다." if playing.side_of(msg.author.id) is not None \
+                      else "이 대국의 대국자만 두실 수 있습니다."
+                await msg.channel.send(f"{msg.author.mention} {who}", delete_after=8)
+                await quiet_delete(msg)
+                return
+            ok, info = playing.play_direction(word, c[1 + len(word):])
+            if not ok:
+                await msg.channel.send(f"{msg.author.mention} {info}", delete_after=15)
+                await quiet_delete(msg)
+                return
+            await quiet_delete(msg)
+            playing.cancel_timer()
+            kind = "에 벽을 놓았습니다" if info[-1] in "ㅡ|" else "로 옮겼습니다"
+            notice = f"{msg.author.display_name} 님이 **{info}**{kind}."
+            if playing.check_over():
+                QUORIDOR_GAMES.drop(msg.channel.id)
+                await post_quoridor_board(playing, msg.channel, notice)
+                return
+            await post_quoridor_board(playing, msg.channel, notice)
+            await schedule_quoridor_timeout(playing, msg.channel)
+            return
+    # -------------------------------------------------------------
 
     # ---- 쿼리도 -------------------------------------------------
     if c.startswith("!쿼리도"):

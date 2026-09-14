@@ -46,6 +46,18 @@ MOVE_LIKE = re.compile(rf"^([A-{LETTERS[-1].upper()}a-{LETTERS[-1]}])\s*([1-{SIZ
 WALL_H = "h"
 WALL_V = "v"
 
+# 한글로 방향을 적을 때 쓰는 말들입니다. 값은 (행 변화, 열 변화) 입니다.
+DIRS = {"위": (1, 0), "윗": (1, 0),
+        "아래": (-1, 0), "밑": (-1, 0),
+        "왼": (0, -1), "왼쪽": (0, -1),
+        "오": (0, 1), "오른": (0, 1), "오른쪽": (0, 1)}
+DIR_WORDS = sorted(DIRS, key=len, reverse=True)     # 긴 말부터 맞춰 봅니다.
+
+# "!위e1f1" 처럼 붙여 적은 칸 두 개를 읽습니다.
+PAIR_LIKE = re.compile(rf"^([A-{LETTERS[-1].upper()}a-{LETTERS[-1]}])\s*([1-{SIZE}])"
+                       rf"\s*[,~-]?\s*"
+                       rf"([A-{LETTERS[-1].upper()}a-{LETTERS[-1]}])\s*([1-{SIZE}])$")
+
 # 사람들이 적기 쉬운 여러 글자를 두 가지로 모읍니다.
 WALL_MARKS = {"h": WALL_H, "-": WALL_H, "ㅡ": WALL_H,
               "v": WALL_V, "|": WALL_V, "ㅣ": WALL_V, "/": WALL_V}
@@ -308,6 +320,69 @@ class QuoridorGame:
         self.history.append((side, name))
         return True, name
 
+    # -- 한글 방향으로 두기 ------------------------------------------
+    def steps_toward(self, direction):
+        """그 방향으로 갈 수 있는 칸들입니다. 뛰어넘기와 옆걸음까지 봅니다."""
+        dr, dc = DIRS[direction]
+        here = self.pawns[self.turn]
+        ahead = (here[0] + dr, here[1] + dc)
+        facing = self.pawns[1 - self.turn] == ahead
+        out = []
+        for dest in self.pawn_moves(self.turn):
+            if dest == ahead:
+                out.append(dest)
+            elif dest == (here[0] + dr * 2, here[1] + dc * 2):
+                out.append(dest)                       # 상대를 뛰어넘습니다.
+            elif facing:
+                # 뒤가 막혀 옆으로 비켜 가는 경우입니다.
+                if dr and dest in ((ahead[0], ahead[1] - 1), (ahead[0], ahead[1] + 1)):
+                    out.append(dest)
+                elif dc and dest in ((ahead[0] - 1, ahead[1]), (ahead[0] + 1, ahead[1])):
+                    out.append(dest)
+        return out
+
+    def wall_by_side(self, direction, first, second):
+        """'칸 두 개의 어느 쪽'을 벽 자리로 바꿉니다. 못 바꾸면 None 입니다."""
+        dr, dc = DIRS[direction]
+        (r1, c1), (r2, c2) = sorted([first, second])
+        if dr:                                          # 위·아래 → 가로벽
+            if r1 != r2 or c2 - c1 != 1:
+                return None
+            return (r1 if dr > 0 else r1 - 1), c1, WALL_H
+        if c1 != c2 or r2 - r1 != 1:                    # 왼·오 → 세로벽
+            return None
+        return r1, (c1 if dc > 0 else c1 - 1), WALL_V
+
+    def play_direction(self, direction, rest):
+        """!위 · !아래 · !왼 · !오 로 들어온 수를 둡니다."""
+        rest = rest.strip()
+        if not rest:
+            spots = self.steps_toward(direction)
+            if not spots:
+                return False, (f"**{direction}** 쪽으로는 갈 수 없습니다. "
+                               f"지금 갈 수 있는 곳은 "
+                               f"{', '.join('`' + spot_name(*s) + '`' for s in self.pawn_moves(self.turn))} 입니다.")
+            if len(spots) > 1:
+                names = " 또는 ".join(f"`{spot_name(*s)}`" for s in spots)
+                return False, (f"**{direction}** 쪽은 두 곳으로 갈 수 있습니다. "
+                               f"{names} 처럼 칸 이름을 적어 주세요.")
+            return self._move_pawn(*spots[0])
+
+        m = PAIR_LIKE.match(rest)
+        if not m:
+            return False, (f"벽은 `!{direction}e1f1` 처럼 맞닿은 칸 두 개를 적어 주세요. "
+                           f"말을 옮기시려면 `!{direction}` 만 적으시면 됩니다.")
+        first = (int(m.group(2)) - 1, LETTERS.index(m.group(1).lower()))
+        second = (int(m.group(4)) - 1, LETTERS.index(m.group(3).lower()))
+        if first == second:
+            return False, "서로 다른 두 칸을 적어 주세요."
+        found = self.wall_by_side(direction, first, second)
+        if found is None:
+            need = "좌우로" if DIRS[direction][0] else "위아래로"
+            return False, (f"**{direction}** 쪽 벽은 {need} 맞닿은 칸 두 개여야 합니다. "
+                           f"`{spot_name(*first)}` 와 `{spot_name(*second)}` 는 그렇지 않습니다.")
+        return self._place_wall(*found)
+
     def check_over(self):
         """방금 둔 수로 끝났는지 봅니다."""
         for side in (LOWER, UPPER):
@@ -381,7 +456,8 @@ class QuoridorGame:
             e.add_field(
                 name="🎯 이번 수",
                 value=(f"{len(self.history) + 1}수째 · 갈 수 있는 곳 {spots}\n"
-                       f"벽을 놓으시려면 `e5ㅡ` (가로) 나 `e5|` (세로) 처럼 적어 주세요."),
+                       f"말은 `!위` `!아래` `!왼` `!오` 로 옮기고,\n"
+                       f"벽은 `!위e1f1` 처럼 막고 싶은 두 칸을 적으시면 됩니다."),
                 inline=False)
 
         e.add_field(
