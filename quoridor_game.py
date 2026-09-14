@@ -56,6 +56,21 @@ DIRS = {"위": (1, 0), "윗": (1, 0),
         "오": (0, 1), "오른": (0, 1), "오른쪽": (0, 1)}
 DIR_WORDS = sorted(DIRS, key=len, reverse=True)     # 긴 말부터 맞춰 봅니다.
 
+
+def read_direction(text):
+    """'!' 를 뗀 글에서 (방향, 나머지) 를 읽습니다. 방향 명령이 아니면 None 입니다.
+
+    방향 말 뒤에 한글이 더 붙어 있으면 다른 명령으로 봅니다.
+    '오목' 은 '오' 방향이 아니라 오목 명령이고, '위키' 같은 것도 마찬가지입니다."""
+    for word in DIR_WORDS:
+        if not text.startswith(word):
+            continue
+        rest = text[len(word):].strip()
+        if rest and not rest[0].isascii():
+            return None
+        return word, rest
+    return None
+
 # "!위e1f1" 처럼 붙여 적은 칸 두 개를 읽습니다.
 PAIR_LIKE = re.compile(rf"^([A-{LETTERS[-1].upper()}a-{LETTERS[-1]}])\s*([1-{SIZE}])"
                        rf"\s*[,~-]?\s*"

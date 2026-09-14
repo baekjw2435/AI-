@@ -2278,8 +2278,10 @@ async def on_message(msg):
 
     # ---- 쿼리도 방향 명령 (!위 · !아래 · !왼 · !오) ------------------
     if QUORIDOR_READY and c.startswith("!"):
-        word = next((w for w in qd.DIR_WORDS if c[1:].startswith(w)), None)
-        if word:
+        # '오목' 처럼 방향 말로 시작하는 다른 명령을 가로채지 않도록 가려 냅니다.
+        found = qd.read_direction(c[1:])
+        if found:
+            word, rest = found
             playing = QUORIDOR_GAMES.get(msg.channel.id)
             if not playing:
                 await msg.channel.send(
@@ -2292,7 +2294,7 @@ async def on_message(msg):
                 await msg.channel.send(f"{msg.author.mention} {who}", delete_after=8)
                 await quiet_delete(msg)
                 return
-            ok, info = playing.play_direction(word, c[1 + len(word):])
+            ok, info = playing.play_direction(word, rest)
             if not ok:
                 await msg.channel.send(f"{msg.author.mention} {info}", delete_after=15)
                 await quiet_delete(msg)
