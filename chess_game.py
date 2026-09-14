@@ -288,6 +288,24 @@ class ChessGame:
             return None
         return move if move in self.board.legal_moves else None
 
+    @staticmethod
+    def _bare(san):
+        """기보에서 어느 말인지 가려 주는 글자를 뺍니다. Rab8 → Rb8"""
+        m = re.match(r"^([KQRBN])[a-h1-8]{0,2}(x?)([a-h][1-8])", san)
+        if not m:
+            return san.rstrip("+#")
+        return m.group(1) + m.group(2) + m.group(3)
+
+    def _same_named(self, text):
+        """같은 말·같은 도착칸이라 어느 것인지 가릴 수 없는 수들을 모읍니다."""
+        want = text.strip().rstrip("+#")
+        out = []
+        for move in self.board.legal_moves:
+            san = self.board.san(move)
+            if self._bare(san) == want:
+                out.append(san)
+        return sorted(out)
+
     def push(self, text):
         """한 수를 둡니다. 통과하면 (True, 기보), 아니면 (False, 사유) 입니다."""
         text = text.strip()
@@ -305,6 +323,18 @@ class ChessGame:
                 found.append(move)
 
         if not found:
+            # 같은 말이 둘 다 갈 수 있는 자리면 어느 쪽인지 짚어 드립니다.
+            for spelling in self.spellings(text):
+                same = self._same_named(spelling)
+                if len(same) > 1:
+                    names = " 또는 ".join(f"`{x}`" for x in same)
+                    where = " · ".join(
+                        f"`{chess.square_name(self.board.parse_san(x).from_square)}"
+                        f"{chess.square_name(self.board.parse_san(x).to_square)}`"
+                        for x in same)
+                    return False, (f"`{text}` 로는 두 곳에서 갈 수 있어 어느 말인지 알 수 없습니다.\n"
+                                   f"{names} 처럼 출발 줄을 넣어 적어 주세요. "
+                                   f"칸 이름으로 {where} 처럼 적으셔도 됩니다.")
             return False, (f"`{text}` 는 지금 둘 수 없는 수입니다. "
                            f"`e4`, `Nf3`, `O-O`, `e2e4` 처럼 입력해 주세요.")
         if len(found) > 1:
