@@ -1603,6 +1603,8 @@ class QuoridorView(discord.ui.View):
     def __init__(self, game):
         super().__init__(timeout=qd.TURN_SECONDS)
         self.game = game
+        self.add_item(QuoridorControl(self, "🔄 내 방향 판 켜기", "view",
+                                      discord.ButtonStyle.secondary))
         self.add_item(QuoridorControl(self, "🤝 무승부", "draw",
                                       discord.ButtonStyle.secondary))
         self.add_item(QuoridorControl(self, "🏳 기권", "resign",
@@ -1618,6 +1620,18 @@ class QuoridorView(discord.ui.View):
     async def on_control(self, interaction, action):
         game = self.game
         side = game.side_of(interaction.user.id)
+        if action == "view":
+            # 모두가 보는 판은 건드리지 않습니다. 한 번 켜 두면 수가 오갈 때마다
+            # 이 메시지를 고쳐서 계속 따라갑니다.
+            picture = game.render(flip=(side == qd.UPPER))
+            if picture is None:
+                await interaction.response.send_message(
+                    "지금은 판 그림을 그릴 수 없습니다.", ephemeral=True)
+                return
+            await interaction.response.send_message(
+                quoridor_caption(game, side), file=picture, ephemeral=True)
+            game.private[interaction.user.id] = interaction
+            return
         if action == "resign":
             game.finish(1 - side, f"{game.names[side]} 님이 기권하셨습니다.")
         elif action == "draw":
@@ -1634,6 +1648,7 @@ class QuoridorView(discord.ui.View):
         if picture is not None:
             kwargs["attachments"] = [picture]
         await interaction.response.edit_message(**kwargs)
+        await refresh_private_quoridor(game)
         self.stop()
 
     async def on_timeout(self):
@@ -1656,6 +1671,34 @@ class QuoridorControl(discord.ui.Button):
         await self.view_ref.on_control(interaction, self.action)
 
 
+def quoridor_caption(game, side):
+    who = "🔵 아래쪽" if side == qd.LOWER else "🔴 위쪽"
+    if game.finished:
+        return f"{who} 기준으로 본 마지막 판입니다."
+    turn = "내 차례입니다." if game.turn == side else "상대 차례입니다."
+    return (f"**{who} 기준으로 본 판** · {turn}\n"
+            f"이 메시지는 본인에게만 보이고, 수가 오갈 때마다 알아서 바뀝니다. "
+            f"한동안 멈추면 `🔄 내 방향 판 켜기` 를 다시 눌러 주세요.")
+
+
+async def refresh_private_quoridor(game):
+    """켜 두신 분들의 개인 판을 새 국면으로 고칩니다.
+    디스코드가 주는 창구는 15분이면 닫히므로, 실패하면 조용히 지웁니다."""
+    for user_id, interaction in list(game.private.items()):
+        side = game.side_of(user_id)
+        if side is None:
+            game.private.pop(user_id, None)
+            continue
+        picture = game.render(flip=(side == qd.UPPER))
+        if picture is None:
+            continue
+        try:
+            await interaction.edit_original_response(
+                content=quoridor_caption(game, side), attachments=[picture])
+        except Exception:
+            game.private.pop(user_id, None)
+
+
 async def post_quoridor_board(game, channel, notice=""):
     view = None if game.finished else QuoridorView(game)
     if game.message is not None:
@@ -1665,6 +1708,7 @@ async def post_quoridor_board(game, channel, notice=""):
             kwargs["attachments"] = [picture]
         try:
             await game.message.edit(**kwargs)
+            await refresh_private_quoridor(game)
             return
         except discord.HTTPException:
             game.message = None
@@ -1675,6 +1719,7 @@ async def post_quoridor_board(game, channel, notice=""):
     if view is not None:
         kwargs["view"] = view
     game.message = await channel.send(**kwargs)
+    await refresh_private_quoridor(game)
 
 
 async def begin_quoridor(channel, players, names):

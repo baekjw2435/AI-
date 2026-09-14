@@ -104,12 +104,17 @@ def cell_box(col, row):
     return [x, y, x + CELL, y + CELL]
 
 
-def render_png(game):
-    """판을 그린 PNG 를 돌려줍니다. 그릴 수 없으면 None 입니다."""
+def render_png(game, flip=False):
+    """판을 그린 PNG 를 돌려줍니다. 그릴 수 없으면 None 입니다.
+    flip 을 켜면 판을 180도 돌려 위쪽 말 기준으로 보여 줍니다."""
     if not PIL_OK:
         return None
     img = Image.new("RGB", (BOARD_PX, BOARD_PX), BG)
     draw = ImageDraw.Draw(img)
+
+    def seen(row, col):
+        """판 위 자리를 그림에 놓일 자리로 바꿉니다."""
+        return (SIZE - 1 - row, SIZE - 1 - col) if flip else (row, col)
 
     inner = MARGIN - GAP // 2
     draw.rectangle([inner, inner, BOARD_PX - inner, BOARD_PX - inner], fill=GROOVE)
@@ -121,38 +126,43 @@ def render_png(game):
                 fill = GOAL_LOWER          # 아래쪽 말이 닿아야 하는 줄
             elif row == 0:
                 fill = GOAL_UPPER          # 위쪽 말이 닿아야 하는 줄
-            draw.rounded_rectangle(cell_box(col, row), radius=8, fill=fill)
+            r, c = seen(row, col)
+            draw.rounded_rectangle(cell_box(c, r), radius=8, fill=fill)
 
     for (row, col), kind in game.walls.items():
+        # 벽 자리도 함께 돌립니다. 돌리면 두 칸의 시작점이 반대쪽으로 옮겨 갑니다.
+        r, c = (SIZE - 2 - row, SIZE - 2 - col) if flip else (row, col)
         if kind == WALL_H:
-            x0 = MARGIN + col * PITCH
-            x1 = MARGIN + (col + 1) * PITCH + CELL
-            y = MARGIN + (SIZE - 2 - row) * PITCH + CELL
+            x0 = MARGIN + c * PITCH
+            x1 = MARGIN + (c + 1) * PITCH + CELL
+            y = MARGIN + (SIZE - 2 - r) * PITCH + CELL
             box = [x0, y + 1, x1, y + GAP - 1]
         else:
-            y0 = MARGIN + (SIZE - 2 - row) * PITCH
-            y1 = MARGIN + (SIZE - 1 - row) * PITCH + CELL
-            x = MARGIN + col * PITCH + CELL
+            y0 = MARGIN + (SIZE - 2 - r) * PITCH
+            y1 = MARGIN + (SIZE - 1 - r) * PITCH + CELL
+            x = MARGIN + c * PITCH + CELL
             box = [x + 1, y0, x + GAP - 1, y1]
         draw.rounded_rectangle(box, radius=GAP // 3, fill=WALL_C)
 
     for side, (row, col) in enumerate(game.pawns):
-        x0, y0, x1, y1 = cell_box(col, row)
+        r, c = seen(row, col)
+        x0, y0, x1, y1 = cell_box(c, r)
         pad = CELL // 6
         color = PAWN_L if side == LOWER else PAWN_U
         draw.ellipse([x0 + pad, y0 + pad, x1 - pad, y1 - pad],
                      fill=color, outline=PAWN_EDGE, width=4)
 
     font = _label_font()
-    for col in range(SIZE):
-        x = MARGIN + col * PITCH + CELL // 2
-        draw.text((x, MARGIN // 2), LETTERS[col].upper(), fill=LABEL, font=font, anchor="mm")
-        draw.text((x, BOARD_PX - MARGIN // 2), LETTERS[col].upper(),
-                  fill=LABEL, font=font, anchor="mm")
-    for row in range(SIZE):
-        y = MARGIN + (SIZE - 1 - row) * PITCH + CELL // 2
-        draw.text((MARGIN // 2, y), str(row + 1), fill=LABEL, font=font, anchor="mm")
-        draw.text((BOARD_PX - MARGIN // 2, y), str(row + 1), fill=LABEL, font=font, anchor="mm")
+    for i in range(SIZE):
+        letter = LETTERS[SIZE - 1 - i if flip else i].upper()
+        x = MARGIN + i * PITCH + CELL // 2
+        draw.text((x, MARGIN // 2), letter, fill=LABEL, font=font, anchor="mm")
+        draw.text((x, BOARD_PX - MARGIN // 2), letter, fill=LABEL, font=font, anchor="mm")
+
+        number = str(SIZE - i if flip else i + 1)
+        y = MARGIN + (SIZE - 1 - i) * PITCH + CELL // 2
+        draw.text((MARGIN // 2, y), number, fill=LABEL, font=font, anchor="mm")
+        draw.text((BOARD_PX - MARGIN // 2, y), number, fill=LABEL, font=font, anchor="mm")
 
     buf = io.BytesIO()
     img.save(buf, format="PNG", optimize=True)
@@ -183,6 +193,7 @@ class QuoridorGame:
         self.aborted = False
         self.draw_offer = None
         self.message = None
+        self.private = {}               # 사람 id -> 본인만 보이는 판을 고칠 창구
         self.timer = None
         self.timer_token = 0
 
@@ -404,8 +415,8 @@ class QuoridorGame:
         self.timer = None
 
     # -- 화면 ------------------------------------------------------
-    def render(self):
-        buf = render_png(self)
+    def render(self, flip=False):
+        buf = render_png(self, flip)
         if buf is None:
             return None
         return discord.File(buf, filename="quoridor.png")
