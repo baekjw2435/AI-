@@ -11,6 +11,9 @@
 벽은 두 칸 길이입니다. 상대의 길을 아예 막아 버리는 자리에는 놓을 수 없습니다.
 말이 서로 맞닿으면 뛰어넘을 수 있고, 뒤가 막혀 있으면 옆으로 비켜 갑니다.
 
+방향은 두는 분이 보는 기준입니다. 두 사람이 마주 보고 앉은 셈이라,
+두 분 다 `!위` 가 자기 골 쪽이고 `!왼` 이 자기 왼쪽입니다.
+
 자리 적는 법
   e2      말을 e2 로 옮깁니다
   e5ㅡ    e5 와 f5 의 위쪽에 가로벽을 놓습니다  (e5h 로 적어도 됩니다)
@@ -332,9 +335,18 @@ class QuoridorGame:
         return True, name
 
     # -- 한글 방향으로 두기 ------------------------------------------
+    def facing(self, direction):
+        """방향을 '지금 둘 사람이 보는 대로' 바꿉니다.
+        두 사람이 마주 보고 앉은 셈이라, 위쪽 말을 잡으신 분에게는
+        위·아래와 왼·오가 모두 반대입니다. 그래서 두 분 다 `!위` 가 내 골 쪽입니다."""
+        dr, dc = DIRS[direction]
+        if self.turn == UPPER:
+            return -dr, -dc
+        return dr, dc
+
     def steps_toward(self, direction):
         """그 방향으로 갈 수 있는 칸들입니다. 뛰어넘기와 옆걸음까지 봅니다."""
-        dr, dc = DIRS[direction]
+        dr, dc = self.facing(direction)
         here = self.pawns[self.turn]
         ahead = (here[0] + dr, here[1] + dc)
         facing = self.pawns[1 - self.turn] == ahead
@@ -354,7 +366,7 @@ class QuoridorGame:
 
     def wall_by_side(self, direction, first, second):
         """'칸 두 개의 어느 쪽'을 벽 자리로 바꿉니다. 못 바꾸면 None 입니다."""
-        dr, dc = DIRS[direction]
+        dr, dc = self.facing(direction)
         (r1, c1), (r2, c2) = sorted([first, second])
         if dr:                                          # 위·아래 → 가로벽
             if r1 != r2 or c2 - c1 != 1:
@@ -389,7 +401,7 @@ class QuoridorGame:
             return False, "서로 다른 두 칸을 적어 주세요."
         found = self.wall_by_side(direction, first, second)
         if found is None:
-            need = "좌우로" if DIRS[direction][0] else "위아래로"
+            need = "좌우로" if self.facing(direction)[0] else "위아래로"
             return False, (f"**{direction}** 쪽 벽은 {need} 맞닿은 칸 두 개여야 합니다. "
                            f"`{spot_name(*first)}` 와 `{spot_name(*second)}` 는 그렇지 않습니다.")
         return self._place_wall(*found)
@@ -468,7 +480,9 @@ class QuoridorGame:
                 name="🎯 이번 수",
                 value=(f"{len(self.history) + 1}수째 · 갈 수 있는 곳 {spots}\n"
                        f"말은 `!위` `!아래` `!왼` `!오` 로 옮기고,\n"
-                       f"벽은 `!위e1f1` 처럼 막고 싶은 두 칸을 적으시면 됩니다."),
+                       f"벽은 `!위e1f1` 처럼 막고 싶은 두 칸을 적으시면 됩니다.\n"
+                       f"방향은 **두는 분이 보는 기준**입니다. "
+                       f"두 분 다 `!위` 가 내 골 쪽입니다."),
                 inline=False)
 
         e.add_field(
