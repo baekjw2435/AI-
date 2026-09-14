@@ -327,13 +327,15 @@ class ChessGame:
             for spelling in self.spellings(text):
                 same = self._same_named(spelling)
                 if len(same) > 1:
-                    names = " 또는 ".join(f"`{x}`" for x in same)
+                    # 체크 표시(+·#)는 적지 않아도 되니 빼고 보여 드립니다.
+                    names = " 또는 ".join(f"`{x.rstrip('+#')}`" for x in same)
                     where = " · ".join(
                         f"`{chess.square_name(self.board.parse_san(x).from_square)}"
                         f"{chess.square_name(self.board.parse_san(x).to_square)}`"
                         for x in same)
-                    return False, (f"`{text}` 로는 두 곳에서 갈 수 있어 어느 말인지 알 수 없습니다.\n"
-                                   f"{names} 처럼 출발 줄을 넣어 적어 주세요. "
+                    return False, (f"`{text}` 로는 {len(same)}곳에서 갈 수 있어 "
+                                   f"어느 말인지 알 수 없습니다.\n"
+                                   f"{names} 처럼 출발 자리를 넣어 적어 주세요. "
                                    f"칸 이름으로 {where} 처럼 적으셔도 됩니다.")
             return False, (f"`{text}` 는 지금 둘 수 없는 수입니다. "
                            f"`e4`, `Nf3`, `O-O`, `e2e4` 처럼 입력해 주세요.")
