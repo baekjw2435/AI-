@@ -105,7 +105,16 @@ QUORIDOR_CHANNELS = {cid for cid, (kind, _) in CHANNEL_ROLES.items() if kind == 
 # 대국(!대결·!경기)과 복합 채널 조회는 늦어지지 않습니다.
 # 켜고 끄는 것은 서버 관리자만 할 수 있습니다.  →  !제한 켜기 / !제한 끄기
 KST = timezone(timedelta(hours=9))          # 한국시간. 서버는 UTC 로 돌기 때문에 필요합니다.
-LOCK_FILE = "lock_state.json"               # 껐다 켠 상태를 저장해 둡니다.
+
+# 껐다 켠 상태를 저장해 둘 곳입니다.
+# 레일웨이는 새로 배포할 때마다 파일을 다 지우기 때문에, 그냥 두면 !제한 켜기 가 풀립니다.
+# 그래서 저장 공간(볼륨)이 붙어 있으면 거기에 저장해 배포해도 남게 합니다.
+STATE_DIR = (os.environ.get("STATE_DIR")
+             or os.environ.get("RAILWAY_VOLUME_MOUNT_PATH")
+             or ".")
+LOCK_FILE = os.path.join(STATE_DIR, "lock_state.json")
+# 저장한 것이 배포 뒤에도 남는지 여부입니다. 남지 않으면 환경변수로 정해 두셔야 합니다.
+LOCK_FILE_KEEPS = STATE_DIR != "."
 
 # 늦출 명령입니다. 여기서 빼면 그 명령은 제한을 받지 않습니다.
 # 막지는 않고 늦추기만 합니다. 공부는 그대로 하실 수 있고, 대국 중에 쓰기에는 느립니다.
@@ -155,20 +164,29 @@ ADMIN_IDS = {int(x) for x in re.findall(r"\d+", os.environ.get("ADMIN_IDS", ""))
 
 def lock_load():
     """지난번에 껐다 켠 상태를 되살립니다. 파일이 없으면 환경변수 값을 씁니다."""
+    where = "환경변수"
     try:
         with open(LOCK_FILE, encoding="utf-8") as fp:
             saved = json.load(fp)
         for k in LOCK:
             if k in saved:
                 LOCK[k] = saved[k]
-        print(f"[로드] 조회 제한 상태 복원 ({'켜짐' if LOCK['on'] else '꺼짐'} · "
-              f"{LOCK['start']}시~{LOCK['end']}시 · 딜레이 {LOCK['dmin']}~{LOCK['dmax']}초)")
+        where = "저장 파일"
     except Exception:
         pass
+    # 켜졌든 꺼졌든 늘 찍어 둡니다. 조용히 풀려 있어도 기록에서 바로 보이게 하려는 것입니다.
+    print(f"[조회 제한] {'켜짐' if LOCK['on'] else '꺼짐'} · "
+          f"{LOCK['start']}시~{LOCK['end']}시 · 딜레이 {LOCK['dmin']}~{LOCK['dmax']}초 "
+          f"({where}에서 읽음)")
+    if not LOCK_FILE_KEEPS:
+        print("[조회 제한] 이 서버는 새로 배포하면 저장 파일이 지워집니다. "
+              "계속 켜 두시려면 STUDY_LOCK=on 을 환경변수에 넣어 주세요.")
 
 
 def lock_save():
     try:
+        if STATE_DIR != ".":
+            os.makedirs(STATE_DIR, exist_ok=True)
         with open(LOCK_FILE, "w", encoding="utf-8") as fp:
             json.dump(LOCK, fp, ensure_ascii=False)
     except Exception as e:
@@ -2154,7 +2172,10 @@ async def on_message(msg):
                 f"{' · '.join('`' + x + '`' for x in LOCK_COMMANDS_STANDARD)} 입니다.\n"
                 f"복합 사전 채널의 조회와 대국은 늦어지지 않습니다.\n"
                 f"관리자는 `!제한 켜기` · `!제한 끄기` · `!제한 18-24` · "
-                f"`!제한 딜레이 10-15` 로 바꾸실 수 있습니다.")
+                f"`!제한 딜레이 10-15` 로 바꾸실 수 있습니다."
+                + ("" if LOCK_FILE_KEEPS else
+                   "\n⚠️ 이 서버는 봇을 새로 올리면 이 설정이 풀립니다. "
+                   "순위전 내내 켜 두시려면 환경변수에 `STUDY_LOCK=on` 을 넣어 주세요."))
             return
         if not is_admin(msg):
             await msg.channel.send("이 설정은 서버 관리자만 바꾸실 수 있습니다.")
@@ -2164,7 +2185,10 @@ async def on_message(msg):
             await msg.channel.send(
                 f"조회 제한을 **켰습니다.** 한국시간 **{lock_window_text()}** 에는 "
                 f"표준 자료 조회가 **{lock_delay_text()}** 늦게 나옵니다. "
-                f"순위전이 끝나면 `!제한 끄기` 를 입력해 주세요.")
+                f"순위전이 끝나면 `!제한 끄기` 를 입력해 주세요."
+                + ("" if LOCK_FILE_KEEPS else
+                   "\n⚠️ 봇을 새로 올리면 이 설정이 풀립니다. 계속 켜 두시려면 "
+                   "환경변수에 `STUDY_LOCK=on` 을 넣어 주세요."))
             return
         if arg in ("끄기", "끔", "off", "stop"):
             LOCK["on"] = False; lock_save()
