@@ -24,6 +24,7 @@
 # !쿼리도          → 쿼리도 대국 (사람 대 사람). !쿼리도판 !쿼리도기권 !무승부
 # !위 !아래 !왼 !오 → 쿼리도에서 말 옮기기. 뒤에 칸 둘을 붙이면 그쪽을 벽으로 막습니다
 # !중단            → 멈춰 있는 대국을 세웁니다 (관리자만)
+# !화학            → 화학 채널의 계산 명령 도움말
 #
 # 두음법칙은 두 모드 모두 표준두음법칙만 적용합니다.
 
@@ -32,6 +33,12 @@ from datetime import datetime, timedelta, timezone
 import discord
 import route_engine as rq
 import game as gm
+
+try:
+    import chemistry_bot as chemistry
+except Exception as _e:
+    chemistry = None
+    print(f"[경고] 화학 기능을 끕니다: {_e}")
 
 try:
     import chess_game as cg
@@ -62,6 +69,7 @@ except Exception as _e:
 # 맞지 않아 봇이 아무 반응도 하지 않습니다. 기본값은 제한 없음(0)입니다.
 GUILD_ID = int(os.environ.get("GUILD_ID", "0"))
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "0"))
+CHEMISTRY_CHANNEL_ID = int(os.environ.get("CHEMISTRY_CHANNEL_ID", "1552593568357548032"))
 # ==========================================
 
 # ===== 사전 모드 =====
@@ -2044,6 +2052,7 @@ async def on_ready():
     print(f"[로그인] {client.user}")
     print(f"[제한] 서버={'전체' if GUILD_ID == 0 else GUILD_ID} · 채널={'전체' if CHANNEL_ID == 0 else CHANNEL_ID}")
     print(f"[모드] 기본 사전={mode_tag(DEFAULT_MODE)} · 표준 사용 가능={'예' if STD_READY else '아니요'}")
+    print(f"[화학] 채널={CHEMISTRY_CHANNEL_ID} · 사용 가능={'예' if chemistry is not None else '아니요'}")
 
 def first_syllable(arg, command):
     arg = arg.strip()
@@ -2056,6 +2065,7 @@ def first_syllable(arg, command):
 
 HELP_TEXT = (
     "**끄투 봇 명령어입니다.**\n"
+    f"`!화학` — <#{CHEMISTRY_CHANNEL_ID}>에서 화학 계산기 사용\n"
     "`!시작` — 이 채널 배정대로 대국 시작 (훈련실·경기장 채널)\n"
     "`!대결` — 봇과 끝말잇기 대국 (훈련실)\n"
     "`!경기` — 다른 분과 끝말잇기 대국 (경기장)\n"
@@ -2098,6 +2108,14 @@ HELP_TEXT = (
 async def on_message(msg):
     if msg.author.bot: return
     if GUILD_ID and (msg.guild is None or msg.guild.id != GUILD_ID): return
+    # Chemistry has its own dedicated channel; the legacy CHANNEL_ID restriction
+    # still applies to all of the existing game/dictionary features below.
+    if msg.channel.id == CHEMISTRY_CHANNEL_ID:
+        if chemistry is not None:
+            await chemistry.handle_message(msg, CHEMISTRY_CHANNEL_ID)
+        elif msg.content.strip().startswith(("!화학", "!원자", "!질량", "!계수", "!균형", "!양적", "!반응", "!침전")):
+            await msg.channel.send("화학 기능을 불러오지 못했습니다. 운영자가 배포 파일과 로그를 확인해야 합니다.")
+        return
     if CHANNEL_ID and msg.channel.id != CHANNEL_ID: return
 
     c = msg.content.strip()
