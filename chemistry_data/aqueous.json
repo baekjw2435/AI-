@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "aqueous-1.0.0",
+  "version": "aqueous-2.0.0",
   "reference_temperature_C": "25",
   "sources": {
     "classification": {
@@ -81,6 +81,26 @@
     "K2HPO4": {
       "K^+": 2,
       "HPO4^2-": 1
+    },
+    "NaHCO3": {
+      "Na^+": 1,
+      "HCO3^-": 1
+    },
+    "KHCO3": {
+      "K^+": 1,
+      "HCO3^-": 1
+    },
+    "NaH2PO4": {
+      "Na^+": 1,
+      "H2PO4^-": 1
+    },
+    "KH2PO4": {
+      "K^+": 1,
+      "H2PO4^-": 1
+    },
+    "Ca(OH)2": {
+      "Ca^2+": 1,
+      "OH^-": 2
     }
   },
   "solids": [

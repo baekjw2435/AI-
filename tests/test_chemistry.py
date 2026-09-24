@@ -185,7 +185,7 @@ class ReactionTests(unittest.TestCase):
             with self.subTest(expression=expression):
                 result = reactions.predict_reaction(expression, self.conditions())
                 self.assertEqual(result.status, "REACTION_RULE_APPLIED")
-                self.assertIn("H2O(l)", result.lines[0])
+                self.assertIn("H^+(aq) + OH^-(aq) → H2O(l)", "\n".join(result.lines))
 
     def test_candidate_uses_ions_not_fixed_pair(self):
         for expression in ("CaCl2 + Na2CO3", "K2CO3 + CaCl2", "Ca^2+ + CO3^2-"):
@@ -236,7 +236,7 @@ class ReactionTests(unittest.TestCase):
         self.assertEqual(reactions.predict_reaction("HCl(g) + NaOH(s)", self.conditions()).status, "OUT_OF_DOMAIN")
 
     def test_unknown_reaction_does_not_claim_no_reaction(self):
-        for text in ("C6H12O6 + O2", "NaCl + KCl", "HCl + Na2CO3"):
+        for text in ("C6H12O6 + H2O", "NaCl + KCl", "Xe + H2O"):
             with self.subTest(text=text):
                 self.assertEqual(reactions.predict_reaction(text, self.conditions()).status, "UNSUPPORTED_REACTION")
 

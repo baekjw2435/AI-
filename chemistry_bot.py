@@ -16,7 +16,7 @@ from chemistry_engine import (
     parse_formula, parse_sum, sum_composition,
 )
 from chemistry_reactions import (
-    DISSOCIATION, REACTION_DATA, SOLIDS, ReactionResult,
+    DISSOCIATION, REACTION_DATA, RULE_DATA, SOLIDS, ReactionResult,
     parse_conditions, predict_reaction, saturation, split_options,
 )
 
@@ -28,7 +28,7 @@ _IN_FLIGHT: set[tuple[int, int]] = set()
 COMMANDS = {
     "!화학": "auto", "!원자": "atoms", "!질량": "mass",
     "!계수": "balance", "!균형": "balance", "!양적": "amounts",
-    "!반응": "reaction", "!침전": "precipitation",
+    "!반응": "reaction", "!생성물": "reaction", "!침전": "precipitation",
     "!화학자료": "sources", "!도움": "help", "!help": "help",
     "!명령어": "help", "!화학도움": "help",
 }
@@ -40,12 +40,15 @@ HELP = (
     "`!질량 MgSO4·7H2O` — 화학식 단위의 몰질량\n"
     "`!계수 Mg(OH)2 -> Mg^2+ + OH^-` — 주어진 반응식의 계수\n"
     "`!양적 Mg(OH)2 -> Mg^2+ + OH^- | Mg(OH)2=1mol` — 지정한 식의 이론적 양\n"
-    "`!반응 CaCl2 + Na2CO3 | 용매=물 | 온도=25` — 등록된 규칙의 생성물 후보\n"
+    "`!반응 C6H12O6 + 6O2 + 6H2O` — 완전 산화를 가정한 생성물·총괄식\n"
+    "`!반응 CaCl2 + Na2CO3 + KCl` — 여러 물질에서 생성물 후보 탐색\n"
+    "`!생성물 HCl + NaHCO3` — 산염기 반응의 생성물 후보\n"
     "`!침전 CaCO3 | 용매=물 | 온도=25 | Ca^2+=0.001M | CO3^2-=0.001M` — 자유 이온 농도로 포화 여부 계산\n"
     "`!화학자료` — 출처와 지원 범위\n\n"
     "`!화학 H2O`처럼 쓰면 식을 읽고, 화살표가 있으면 계수를, +만 있으면 반응 후보를 확인합니다.\n"
-    "반응 모델은 **25 °C의 희석 수용액**에서 등록된 중화·침전 규칙을 다룹니다. 원자 수 합산은 생성물 예측과 별개입니다.\n"
-    "전하는 `Ca^2+`, 결정수는 `·`로 표시해 주세요. 분자 구조가 필요한 반응과 다른 온도·용매의 반응은 아직 지원하지 않습니다."
+    "생성물 탐색은 **최대 16개 물질**을 받으며, 조건을 생략해도 후보와 적용 가정을 보여줍니다. 수용액 판정은 `| 용매=물 | 온도=25`를 지정하세요.\n"
+    "`| 유형=수용액` 또는 `| 유형=완전산화`로 탐색 범위를 고를 수 있습니다. 여러 후보는 경쟁·단계별 반응일 수 있으며 최종 혼합물로 확정하지 않습니다.\n"
+    "전하는 `Ca^2+`, 결정수는 `·`로 표시해 주세요. 실제 생성량·반응 경로·구조에 따른 모든 반응을 예측하는 도구는 아닙니다."
 )
 
 
@@ -124,6 +127,8 @@ def _reaction_reply(result: ReactionResult) -> Reply:
         "UNSUPPORTED_CONDITIONS": "현재 계산에서 다루지 않는 조건입니다",
         "REACTION_RULE_APPLIED": "조건별 반응식",
         "COMPETING_CANDIDATES": "여러 반응 후보가 있습니다",
+        "CONDITIONAL_PRODUCTS": "가정에 따른 생성물 후보",
+        "PARTIAL_CANDIDATES": "일부 물질의 생성물 후보 · 전체 반응 미확정",
         "SUPERSATURATED": "모델상 과포화",
         "UNDERSATURATED": "모델상 불포화",
         "AT_SATURATION": "모델상 포화 경계",
@@ -132,7 +137,10 @@ def _reaction_reply(result: ReactionResult) -> Reply:
     if result.source_ids:
         sources = REACTION_DATA["sources"]
         lines.append("\n근거: " + " · ".join(f"[{sources[s]['title']}]({sources[s]['url']})" for s in result.source_ids))
-    return Reply(names.get(result.status, "반응 계산"), "\n".join(lines), result.status)
+    title = names.get(result.status, "반응 계산")
+    if result.status == "NEEDS_CONDITIONS" and any(line.startswith("**후보 ") for line in lines):
+        title = "생성물 후보 · 조건 확인 필요"
+    return Reply(title, "\n".join(lines), result.status)
 
 
 def evaluate(content: str) -> Reply | None:
@@ -166,6 +174,9 @@ def evaluate(content: str) -> Reply | None:
                 f"원소 기호 {len(ELEMENTS)}개 · 중첩 괄호·결정수·이온·전자·원자 수 합산",
                 "유리수 연산으로 반응식 계수 및 전하 보존 확인",
                 f"수용액 해리 기록 {len(DISSOCIATION)}개 · 포화 판정용 고체 {len(SOLIDS)}개",
+                f"산염기 규칙 {len(RULE_DATA['aqueous_rules'])}개 · C/H/O 조성의 조건부 완전 산화 총괄식",
+                "2~16개 물질을 함께 검색하고 각 후보의 생성물·균형식·가정·미판정 입력을 표시합니다.",
+                "수용액 후보: 강산·강염기 중화, 탄산·탄산수소·인산 이온의 단계별 산염기 반응, 등록 고체 침전",
                 "지원 고체: " + ", ".join(SOLIDS),
                 f"[원자량: CIAAW 2024]({ELEMENT_DATA['source']['url']})",
                 *[f"[{s['title']}]({s['url']})" for s in REACTION_DATA["sources"].values()],

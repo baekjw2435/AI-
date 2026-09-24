@@ -1,0 +1,78 @@
+{
+  "version": "products-2.0.0",
+  "sources": {
+    "polyprotic": {
+      "title": "OpenStax Chemistry 2e, 14.5",
+      "url": "https://openstax.org/books/chemistry-2e/pages/14-5-polyprotic-acids"
+    },
+    "proton_transfer": {
+      "title": "OpenStax Chemistry 2e, 14.1",
+      "url": "https://openstax.org/books/chemistry-2e/pages/14-1-bronsted-lowry-acids-and-bases"
+    }
+  },
+  "aqueous_rules": [
+    {
+      "id": "neutralization",
+      "name": "강산·강염기 중화",
+      "equation": "H^+(aq) + OH^-(aq) -> H2O(l)",
+      "note": "등록된 강산·강염기가 물에 해리된 경우의 순이온식입니다. 남는 산·염기와 pH는 투입량 없이는 정할 수 없습니다.",
+      "sources": ["classification"]
+    },
+    {
+      "id": "carbonate_first_proton",
+      "name": "탄산 이온의 1단계 양성자 결합",
+      "equation": "CO3^2-(aq) + H^+(aq) -> HCO3^-(aq)",
+      "note": "HCO3^-는 단계별 후보입니다. 산의 양과 pH에 따라 CO2 생성까지 이어질 수 있습니다.",
+      "sources": ["polyprotic"]
+    },
+    {
+      "id": "carbonate_acid_endpoint",
+      "name": "탄산 이온의 산성화 총괄식",
+      "equation": "CO3^2-(aq) + H^+(aq) -> CO2 + H2O(l)",
+      "note": "충분히 산성화되어 CO2와 물로 전환되는 경우의 총괄식입니다. CO2의 용존·기체 분배와 실제 기체 발생량은 계산하지 않았습니다.",
+      "sources": ["classification", "polyprotic"]
+    },
+    {
+      "id": "bicarbonate_acid",
+      "name": "탄산수소 이온의 산성화",
+      "equation": "HCO3^-(aq) + H^+(aq) -> CO2 + H2O(l)",
+      "note": "산성화될 때의 생성물 후보입니다. CO2의 용존·기체 분배와 실제 기체 발생량은 계산하지 않았습니다.",
+      "sources": ["classification", "polyprotic"]
+    },
+    {
+      "id": "bicarbonate_base",
+      "name": "탄산수소 이온과 염기",
+      "equation": "HCO3^-(aq) + OH^-(aq) -> CO3^2-(aq) + H2O(l)",
+      "note": "염기에 의한 양성자 이동 후보입니다. 최종 탄산 종의 비율은 pH와 총농도가 필요합니다.",
+      "sources": ["proton_transfer", "polyprotic"]
+    },
+    {
+      "id": "phosphate_first_proton",
+      "name": "인산 이온의 양성자 결합",
+      "equation": "PO4^3-(aq) + H^+(aq) -> HPO4^2-(aq)",
+      "note": "첫 단계 후보이며 산성화 정도에 따라 H2PO4^-와 H3PO4까지 이어집니다. 최종 분포는 계산하지 않았습니다.",
+      "sources": ["polyprotic"]
+    },
+    {
+      "id": "phosphate_second_proton",
+      "name": "인산수소 이온의 양성자 결합",
+      "equation": "HPO4^2-(aq) + H^+(aq) -> H2PO4^-(aq)",
+      "note": "단계별 후보이며 최종 인산 종의 분포는 pH와 총농도에 따라 달라집니다.",
+      "sources": ["polyprotic"]
+    },
+    {
+      "id": "phosphate_base",
+      "name": "인산이수소 이온과 염기",
+      "equation": "H2PO4^-(aq) + OH^-(aq) -> HPO4^2-(aq) + H2O(l)",
+      "note": "단계별 후보입니다. 추가 양성자 이동과 최종 분포는 별도 평형 계산이 필요합니다.",
+      "sources": ["polyprotic"]
+    }
+  ],
+  "oxidation": {
+    "id": "complete_oxidation_cho",
+    "name": "C·H·O 조성의 완전 산화 총괄식",
+    "products": ["CO2", "H2O"],
+    "note": "C·H 또는 C·H·O로 이루어진 중성 물질이 완전히 산화된다는 가정의 총괄식입니다. 분자 구조·실제 존재·진행 여부·속도·반응 경로를 분자식만으로 확인한 결과는 아닙니다. 생성물의 상도 지정하지 않았습니다.",
+    "sources": ["classification"]
+  }
+}
