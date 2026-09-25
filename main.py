@@ -17,7 +17,7 @@
 # !장문 <글자>     → 그 글자로 시작하는 가장 긴 단어 TOP 30
 # !종결 <글자>     → 그 글자로 끝나는 단어
 # !장문종결 <글자> → 그 글자로 끝나는 가장 긴 단어
-# !중간 <글자>     → 중간말잇기 (표준·복합 모두 지원)
+# !중간 <글자> [페이지] → 중간말잇기 (표준은 루트음절 연결수도 표시)
 # !제한            → 순위전 시간대 조회 딜레이 확인 (켜고 끄기는 관리자만)
 # !체스            → 체스 대국 (사람 대 사람). !체스판 !체스기권 !무승부 !체스이모지
 # !오목            → 오목 대국 (사람 대 사람). !오목판 !오목기권 !무승부
@@ -417,6 +417,14 @@ STD_ATTACK = set()    # 공격 (한방 제외)
 STD_DOLLIM_END = {}   # 첫글자 -> set(자가순환 단어)
 STD_FIRSTWORDS = {}   # 첫글자 -> [단어] (대국용)
 STD_READY = False
+# 사용자 지정 루트음절. 중복된 짝·뱀은 한 번만 포함합니다.
+# 일반 끝말잇기의 루트 학습 자료와는 독립적인 중간말잇기 필터입니다.
+STD_MID_ROOT_SYLLABLES = frozenset(
+    "덕 슴 벽 적 돔 짝 킨 템 냐 럭 칫 죄 죽 업 융 엿 둑 듬 득 섯 "
+    "율 짚 땀 핍 뱀 볕 냥 런 솥 족 숲 럼 름 늠 률 값".split())
+STD_MID_ROOT_TARGETS = frozenset(
+    key for root in STD_MID_ROOT_SYLLABLES for key in syllable_keys(root))
+STD_MID_ROOT_LINKS = {}  # 첫글자 -> set(끝에서 두 번째 글자가 루트음절인 표준 단어)
 
 def load_standard_words():
     global STD_READY
@@ -425,6 +433,7 @@ def load_standard_words():
         print("[경고] standard_words.txt 파일이 없어 표준 모드를 끕니다."); return
     KEEP = 30
     heaps = {}; n = 0
+    STD_MID_ROOT_LINKS.clear()
     with open(path, encoding="utf-8") as fp:
         for line in fp:
             w = line.strip()
@@ -434,6 +443,8 @@ def load_standard_words():
                 STD_ENDWORDS.setdefault(w[-1], []).append(w)
             o = ord(w[0]) - 0xAC00
             if o < 0 or o > 11171: continue
+            if len(w) >= 2 and w[-2] in STD_MID_ROOT_TARGETS:
+                STD_MID_ROOT_LINKS.setdefault(w[0], set()).add(w)
             STD_STARTCOUNT[w[0]] = STD_STARTCOUNT.get(w[0], 0) + 1
             if is_self_loop(w):
                 STD_DOLLIM_END.setdefault(w[0], set()).add(w)
@@ -446,6 +457,7 @@ def load_standard_words():
         STD_LONGEST[syl] = [w for _, w in sorted(h, reverse=True)]
     STD_READY = True
     print(f"[로드] 표준 단어 {n}개 ({len(STD_LONGEST)}글자, 글자별 최장 {KEEP})")
+    print(f"[로드] 표준 중간 루트음절 연결수 {sum(map(len, STD_MID_ROOT_LINKS.values()))}개")
 
 def load_standard_special():
     path = find_file(["standard_special.json"])
@@ -560,6 +572,36 @@ def analyze_mid(syl, mode=MODE_COMPLEX):
             dl |= DOLLIM.get(k, set())
         dl -= hb; dl -= gk
     return sorted(hb), sorted(gk), sorted(dl)
+
+def mid_root_links(syl, mode=MODE_STANDARD):
+    """1턴 남은 중간말잇기에서 넘길 루트음절을 기준으로 찾습니다.
+
+    시작 음절에는 기존 표준 두음법칙을 정방향으로 한 번만 적용합니다.
+    공격·한방과 중복되어도 해당 목록에서 빼지 않습니다.
+    """
+    if mode != MODE_STANDARD:
+        return []
+    words = set()
+    for key in syllable_keys(syl):
+        words.update(STD_MID_ROOT_LINKS.get(key, ()))
+    return sorted(words)
+
+
+def mid_root_pages(words):
+    """연결수를 생략하지 않고 Discord 필드 길이 안에서 나눕니다."""
+    pages, lines, size = [], [], 0
+    for word in words:
+        target = word[-2]
+        line = f"{word[:-2]}**{target}**{word[-1]} → {'/'.join(syllable_keys(target))}"
+        if lines and size + len(line) + 1 > 950:
+            pages.append("\n".join(lines))
+            lines, size = [], 0
+        lines.append(line)
+        size += len(line) + 1
+    if lines:
+        pages.append("\n".join(lines))
+    return pages
+
 
 def analyze(syl):
     """복합 사전 끝말잇기 분석: 한방·공격·준공격·유도·돌림"""
@@ -764,21 +806,39 @@ def embed_jangmun_end(syl, mode):
         title=f"📏🏁  '-{syl}' 로 끝나는 최장 단어 TOP {len(words)} · {mode_tag(mode)}",
         description="\n".join(lines), color=0x00C2A8), mode)
 
-def embed_mid(syl, mode):
-    if mode == MODE_STANDARD and not STD_MID_ATTACK:
+def embed_mid(syl, mode, root_page=1):
+    if mode == MODE_STANDARD and not STD_MID_ATTACK and not STD_READY:
         return stamp(discord.Embed(
             title="표준 중간말잇기 자료를 불러오지 못했습니다",
-            description="standard_mid_attack.txt 파일을 봇과 같은 폴더에 넣어 주세요.",
+            description="standard_mid_attack.txt 와 standard_words.txt 파일을 봇과 같은 폴더에 넣어 주세요.",
             color=COLOR_MUTED), mode)
     hb, gk, dl = analyze_mid(syl, mode)
-    if not (hb or gk or dl):
+    roots = mid_root_links(syl, mode)
+    root_pages = mid_root_pages(roots)
+    page_count = max(1, len(root_pages))
+    if root_page < 1 or root_page > page_count:
+        return stamp(discord.Embed(
+            title="연결수 페이지를 확인해 주세요",
+            description=(f"루트음절 연결수는 {page_count}페이지까지 있습니다. `!중간 {syl}`로 첫 페이지를 볼 수 있습니다."
+                         if mode == MODE_STANDARD else "루트음절 연결수 페이지는 표준사전에서 사용합니다."),
+            color=COLOR_MUTED), mode)
+    if not (hb or gk or dl or roots):
+        description = "중간말잇기 한방·공격이 모두 없어 양보하시는 편이 좋습니다."
+        if mode == MODE_STANDARD:
+            description = "중간말잇기 한방·공격·루트음절 연결수가 없습니다."
+            if not STD_MID_ATTACK:
+                description += " 한방·공격 자료는 불러오지 못했습니다."
+            if not STD_READY:
+                description += " 연결수용 표준 단어 자료는 불러오지 못했습니다."
         return stamp(discord.Embed(
             title=f"{syl} → 해당 단어가 없습니다",
-            description="중간말잇기 한방·공격이 모두 없어 양보하시는 편이 좋습니다.",
+            description=description,
             color=COLOR_MUTED), mode)
     counts = f"⚡ 한방 **{len(hb)}**    ·    🗡️ 공격 **{len(gk)}**"
     if mode != MODE_STANDARD:
         counts += f"    ·    🔄 돌림 **{len(dl)}**"
+    else:
+        counts += f"    ·    🧭 루트음절 연결수 **{len(roots)}**"
     e = discord.Embed(
         title=f"🔗  '{syl}' 중간말잇기 · {mode_tag(mode)}",
         description=counts,
@@ -787,8 +847,19 @@ def embed_mid(syl, mode):
     if gk: e.add_field(name=f"🗡️ 공격 · {len(gk)}개", value=join_cap(fmt_words(gk, mode), 950), inline=False)
     if dl: e.add_field(name=f"🔄 돌림 · {len(dl)}개", value=join_cap(fmt_words(dl, mode), 950), inline=False)
     if mode == MODE_STANDARD:
-        e.add_field(name="안내", value="표준 자료에는 중간말잇기 돌림 목록이 없어 표시하지 않습니다.",
-                    inline=False)
+        if roots:
+            e.add_field(name=f"🧭 루트음절 연결수 · {len(roots)}개 ({root_page}/{page_count})",
+                        value=root_pages[root_page - 1], inline=False)
+        note = ("연결수는 **중간말잇기 1턴 남음 기준**입니다. 굵은 글자가 끝에서 두 번째 음절이고, 화살표 뒤가 다음 연결 음절입니다.\n"
+                "표준 자료에는 중간말잇기 돌림 목록이 없어 표시하지 않습니다.")
+        if page_count > 1:
+            next_page = root_page + 1 if root_page < page_count else 1
+            note += f"\n연결수 다음 페이지: `!중간 {syl} {next_page}` (1~{page_count})"
+        if not STD_MID_ATTACK:
+            note += "\n한방·공격 자료를 불러오지 못해 연결수만 표시합니다."
+        if not STD_READY:
+            note += "\n표준 단어 자료를 불러오지 못해 연결수는 표시하지 못했습니다."
+        e.add_field(name="안내", value=note, inline=False)
     return stamp(e, mode)
 
 def legal_candidates(syl, shield, used=None, history=()):
@@ -2019,7 +2090,7 @@ class JoinView(discord.ui.View):
 def embed_mode(mode, changed=False, role=None):
     if mode == MODE_STANDARD:
         detail = ("신표국 표준 자료를 사용합니다.\n"
-                  "한방·공격·돌림·장문·종결·중간말잇기를 지원하며, 준공격·유도는 지원하지 않습니다.")
+                  "한방·공격·돌림·장문·종결·중간말잇기·중간 루트음절 연결수를 지원하며, 준공격·유도는 지원하지 않습니다.")
     else:
         detail = ("기존 복합 자료를 사용합니다.\n"
                   "한방·공격·준공격·유도·돌림·장문·종결·중간말잇기를 모두 지원합니다.")
@@ -2079,7 +2150,8 @@ HELP_TEXT = (
     "`!장문 <글자>` — 그 글자로 시작하는 가장 긴 단어\n"
     "`!종결 <글자>` — 그 글자로 끝나는 단어\n"
     "`!장문종결 <글자>` — 그 글자로 끝나는 가장 긴 단어\n"
-    "`!중간 <글자>` — 중간말잇기 ⚡한방 / 🗡️공격 / 🔄돌림\n"
+    "`!중간 <글자>` — 중간말잇기 ⚡한방 / 🗡️공격 / 표준 🧭루트음절 연결수 / 복합 🔄돌림\n"
+    "`!중간 <글자> <페이지>` — 표준 루트음절 연결수의 다음 페이지 (중간말잇기 1턴 남음 기준)\n"
     "`!제한` — 순위전 시간대 조회 딜레이 상태를 확인합니다 (변경은 관리자만)\n"
     "`!중단` — 멈춰 있는 대국을 세웁니다 (관리자만)\n"
     "\n**체스 (사람 대 사람)**\n"
@@ -2700,9 +2772,16 @@ async def on_message(msg):
         if err: await msg.channel.send(err)
         else:   await msg.channel.send(embed=embed_jangmun(s, mode))
     elif c.startswith("!중간"):
-        s, err = first_syllable(c[len("!중간"):], "!중간")
+        parts = c[len("!중간"):].strip().split()
+        s, err = first_syllable(parts[0] if parts else "", "!중간")
+        root_page = 1
+        if not err and len(parts) > 1:
+            if len(parts) != 2 or not re.fullmatch(r"[1-9][0-9]{0,3}", parts[1]):
+                err = "페이지는 양의 정수로 입력해 주세요. 예: `!중간 적 2`"
+            else:
+                root_page = int(parts[1])
         if err: await msg.channel.send(err)
-        else:   await msg.channel.send(embed=embed_mid(s, mode))
+        else:   await msg.channel.send(embed=embed_mid(s, mode, root_page))
     elif c.startswith("!종결"):
         s, err = first_syllable(c[len("!종결"):], "!종결")
         if err:
