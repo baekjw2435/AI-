@@ -90,13 +90,20 @@ STUDY = "학습실"      # 대국 없이 조회·탐색만
 CHESS = "체스"        # 체스 전용. 사전은 쓰지 않으므로 두 번째 값은 비워 둡니다.
 OMOK = "오목"         # 오목 전용
 QUORIDOR = "쿼리도"   # 쿼리도 전용
+LOOKUP_CHANNELS = {
+    MODE_STANDARD: 1544553748565729381,
+    MODE_COMPLEX: 1523328035686846495,
+}
+STANDARD_LOOKUP_COMMANDS = ("!루트", "!탐색")
+DICTIONARY_LOOKUP_COMMANDS = ("!공격", "!한방", "!장문종결", "!장문", "!종결", "!중간")
+LOOKUP_COMMANDS = STANDARD_LOOKUP_COMMANDS + DICTIONARY_LOOKUP_COMMANDS
 CHANNEL_ROLES = {
     1544722084561817650: (ARENA, MODE_STANDARD),     # 경기장-표준사전
     1544854290819059765: (ARENA, MODE_COMPLEX),      # 경기장-복합사전
     1544722279349485578: (TRAINING, MODE_STANDARD),  # 훈련실-표준사전
     1544854625755209758: (TRAINING, MODE_COMPLEX),   # 훈련실-복합사전
-    1544553748565729381: (STUDY, MODE_STANDARD),     # 표준탐색
-    1523328035686846495: (STUDY, MODE_COMPLEX),      # 복합탐색
+    LOOKUP_CHANNELS[MODE_STANDARD]: (STUDY, MODE_STANDARD),  # 표준탐색
+    LOOKUP_CHANNELS[MODE_COMPLEX]: (STUDY, MODE_COMPLEX),    # 복합탐색
     1548658703014830170: (CHESS, None),              # 체스
     1548663510417014935: (OMOK, None),               # 오목
     1548690709199069295: (QUORIDOR, None),           # 쿼리도
@@ -116,12 +123,12 @@ KST = timezone(timedelta(hours=9))          # 한국시간. 서버는 UTC 로 �
 LOCK_FILE = "lock_state.json"               # 껐다 켠 상태를 저장해 둡니다.
 
 # 늦출 명령입니다. 여기서 빼면 그 명령은 제한을 받지 않습니다.
-# 막지는 않고 늦추기만 합니다. 공부는 그대로 하실 수 있고, 대국 중에 쓰기에는 느립니다.
+# 전용 탐색 채널에서 허용된 조회를 늦추기만 합니다.
 # 순위전은 신표(표준)만 하므로, 복합 채널의 조회는 늦추지 않습니다.
-#   · 아래 둘은 표준 자료 전용이라 채널과 상관없이 늦어집니다.
-LOCK_COMMANDS_ALWAYS = ("!루트", "!탐색")
+#   · 아래 둘은 표준 탐색 채널에서만 사용할 수 있고, 제한 시간에는 늦어집니다.
+LOCK_COMMANDS_ALWAYS = STANDARD_LOOKUP_COMMANDS
 #   · 아래는 채널 사전이 표준일 때만 늦어집니다. 복합 채널에서는 그대로 쓰실 수 있습니다.
-LOCK_COMMANDS_STANDARD = ("!공격", "!한방", "!장문종결", "!장문", "!종결", "!중간")
+LOCK_COMMANDS_STANDARD = DICTIONARY_LOOKUP_COMMANDS
 LOCK_COMMANDS = LOCK_COMMANDS_ALWAYS + LOCK_COMMANDS_STANDARD
 
 def _env_flag(name, default=False):
@@ -654,6 +661,19 @@ def mode_of(channel_id):
         return fixed
     return CHANNEL_MODE.get(channel_id, DEFAULT_MODE)
 
+def lookup_channel_notice(command, channel_id):
+    """사전 조회는 지정된 탐색 채널에서만 허용합니다."""
+    standard = LOOKUP_CHANNELS[MODE_STANDARD]
+    complex_ = LOOKUP_CHANNELS[MODE_COMPLEX]
+    if command.startswith(STANDARD_LOOKUP_COMMANDS):
+        if channel_id != standard:
+            return f"`!루트`·`!탐색`은 표준사전 전용입니다. <#{standard}>에서 사용해 주세요."
+    elif command.startswith(DICTIONARY_LOOKUP_COMMANDS):
+        if channel_id not in LOOKUP_CHANNELS.values():
+            return ("사전 조회·탐색은 전용 채널에서만 사용할 수 있습니다.\n"
+                    f"표준사전: <#{standard}> · 복합사전: <#{complex_}>")
+    return None
+
 def startcount_of(mode):
     return STD_STARTCOUNT if mode == MODE_STANDARD else STARTCOUNT
 
@@ -1032,6 +1052,10 @@ class RouteSearchView(discord.ui.View):
 
     # -- 버튼 처리 --------------------------------------------------
     async def interaction_check(self, interaction):
+        notice = lookup_channel_notice("!탐색", interaction.channel_id)
+        if notice:
+            await interaction.response.send_message(notice, ephemeral=True)
+            return False
         if interaction.user.id != self.user_id:
             await interaction.response.send_message(
                 "이 탐색을 시작하신 분만 누르실 수 있습니다. "
@@ -2094,6 +2118,7 @@ def embed_mode(mode, changed=False, role=None):
     else:
         detail = ("기존 복합 자료를 사용합니다.\n"
                   "한방·공격·준공격·유도·돌림·장문·종결·중간말잇기를 모두 지원합니다.")
+    detail += f"\n사전 조회·탐색은 <#{LOOKUP_CHANNELS[mode]}>에서만 사용할 수 있습니다."
     title = f"사전 모드를 {mode_tag(mode)} 으로 바꿨습니다" if changed else f"현재 사전 모드는 {mode_tag(mode)} 입니다"
     e = discord.Embed(title=f"📚  {title}", description=detail, color=0xC2F74A)
     if role:
@@ -2101,8 +2126,10 @@ def embed_mode(mode, changed=False, role=None):
             how = "`!시작` 또는 `!대결` 로 봇과 겨루실 수 있습니다."
         elif role == ARENA:
             how = "`!시작` 또는 `!경기` 로 상대를 기다리실 수 있습니다."
-        else:
+        elif mode == MODE_STANDARD:
             how = "`!루트`·`!탐색`·`!공격` 등 조회 명령을 쓰시는 채널입니다."
+        else:
+            how = "`!공격`·`!중간` 등 복합사전 조회 명령을 쓰시는 채널입니다."
         e.add_field(name="채널 배정",
                     value=f"이 채널은 **{role} · {mode_tag(mode)} 사전** 으로 고정돼 있습니다.\n{how}",
                     inline=False)
@@ -2136,6 +2163,8 @@ def first_syllable(arg, command):
 
 HELP_TEXT = (
     "**끄투 봇 명령어입니다.**\n"
+    f"조회·탐색 전용 — 표준 <#{LOOKUP_CHANNELS[MODE_STANDARD]}> · 복합 <#{LOOKUP_CHANNELS[MODE_COMPLEX]}>\n"
+    "훈련실·경기장에서는 사전 조회 없이 대국 기능을 사용합니다.\n"
     f"`!화학` — <#{CHEMISTRY_CHANNEL_ID}>에서 화학 계산기 사용\n"
     "`!시작` — 이 채널 배정대로 대국 시작 (훈련실·경기장 채널)\n"
     "`!대결` — 봇과 끝말잇기 대국 (훈련실)\n"
@@ -2180,18 +2209,25 @@ HELP_TEXT = (
 async def on_message(msg):
     if msg.author.bot: return
     if GUILD_ID and (msg.guild is None or msg.guild.id != GUILD_ID): return
-    # Chemistry has its own dedicated channel; the legacy CHANNEL_ID restriction
-    # still applies to all of the existing game/dictionary features below.
+    # Chemistry and explicitly configured dictionary lookup channels have their
+    # own routing. The legacy CHANNEL_ID filter still applies to other commands.
     if msg.channel.id == CHEMISTRY_CHANNEL_ID:
         if chemistry is not None:
             await chemistry.handle_message(msg, CHEMISTRY_CHANNEL_ID)
         elif msg.content.strip().startswith(("!화학", "!원자", "!질량", "!계수", "!균형", "!양적", "!반응", "!침전")):
             await msg.channel.send("화학 기능을 불러오지 못했습니다. 운영자가 배포 파일과 로그를 확인해야 합니다.")
         return
-    if CHANNEL_ID and msg.channel.id != CHANNEL_ID: return
+    if CHANNEL_ID and msg.channel.id != CHANNEL_ID:
+        if not (msg.content.strip().startswith(LOOKUP_COMMANDS)
+                and msg.channel.id in LOOKUP_CHANNELS.values()):
+            return
 
     c = msg.content.strip()
     mode = mode_of(msg.channel.id)
+    notice = lookup_channel_notice(c, msg.channel.id)
+    if notice:
+        await msg.channel.send(notice)
+        return
 
     # 대국 중이면 명령이 아닌 메시지는 단어 입력으로 봅니다.
     running = GAMES.get(msg.channel.id)
@@ -2237,7 +2273,7 @@ async def on_message(msg):
                 f"제한 시간대는 한국시간 **{lock_window_text()}** 이고, "
                 f"그 동안에는 결과가 **{lock_delay_text()}** 늦게 나옵니다. 막지는 않습니다.\n"
                 f"{now} (현재 한국시간 {datetime.now(KST).strftime('%H:%M')})\n"
-                f"채널과 상관없이 늦어지는 명령은 "
+                f"표준 탐색 채널에서 늦어지는 표준 전용 명령은 "
                 f"{' · '.join('`' + x + '`' for x in LOCK_COMMANDS_ALWAYS)} 입니다. "
                 f"`!탐색` 은 버튼을 누를 때마다 늦어집니다.\n"
                 f"표준 사전 채널에서만 늦어지는 명령은 "
@@ -2290,7 +2326,7 @@ async def on_message(msg):
 
     if lock_now() and (c.startswith(LOCK_COMMANDS_ALWAYS)
                        or (mode == MODE_STANDARD and c.startswith(LOCK_COMMANDS_STANDARD))):
-        # 막지 않고 늦춥니다. 공부는 그대로 하실 수 있고, 대국 중에 쓰기에는 느립니다.
+        # 채널 제한을 통과한 표준 조회만 늦춥니다.
         if msg.author.id in DELAYING:
             await msg.channel.send(
                 "앞서 입력하신 결과를 아직 준비하고 있습니다. 그것부터 받아 보신 뒤에 다시 입력해 주세요.")
