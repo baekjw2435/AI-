@@ -420,7 +420,7 @@ STD_READY = False
 # 사용자 지정 루트음절. 중복된 짝·뱀은 한 번만 포함합니다.
 # 일반 끝말잇기의 루트 학습 자료와는 독립적인 중간말잇기 필터입니다.
 STD_MID_ROOT_SYLLABLES = frozenset(
-    "덕 슴 벽 적 돔 짝 킨 템 냐 럭 칫 죄 죽 업 융 엿 둑 듬 득 섯 "
+    "덕 슴 벽 돔 짝 킨 템 냐 럭 칫 죄 죽 업 융 엿 둑 듬 득 섯 "
     "율 짚 땀 핍 뱀 볕 냥 런 솥 족 숲 럼 름 늠 률 값".split())
 STD_MID_ROOT_TARGETS = frozenset(
     key for root in STD_MID_ROOT_SYLLABLES for key in syllable_keys(root))
@@ -2777,7 +2777,7 @@ async def on_message(msg):
         root_page = 1
         if not err and len(parts) > 1:
             if len(parts) != 2 or not re.fullmatch(r"[1-9][0-9]{0,3}", parts[1]):
-                err = "페이지는 양의 정수로 입력해 주세요. 예: `!중간 적 2`"
+                err = "페이지는 양의 정수로 입력해 주세요. 예: `!중간 벽 2`"
             else:
                 root_page = int(parts[1])
         if err: await msg.channel.send(err)

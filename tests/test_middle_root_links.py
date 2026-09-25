@@ -34,7 +34,7 @@ class MiddleRootLinksTests(unittest.TestCase):
                 self.assertIn(f"{word[:-2]}**{word[-2]}**{word[-1]} → {word[-2]}", "\n".join(pages))
 
     def test_exact_requested_root_list(self):
-        expected = set("덕 슴 벽 적 돔 짝 킨 템 냐 럭 칫 죄 죽 업 융 엿 둑 듬 득 섯 율 짚 땀 핍 뱀 볕 냥 런 솥 족 숲 럼 름 늠 률 값".split())
+        expected = set("덕 슴 벽 돔 짝 킨 템 냐 럭 칫 죄 죽 업 융 엿 둑 듬 득 섯 율 짚 땀 핍 뱀 볕 냥 런 솥 족 숲 럼 름 늠 률 값".split())
         self.assertEqual(self.app["STD_MID_ROOT_SYLLABLES"], expected)
         self.assertEqual(self.app["STD_MID_ROOT_TARGETS"], expected)
 
@@ -104,7 +104,7 @@ class MiddleRootLinksTests(unittest.TestCase):
     def test_command_routing_accepts_pages_and_rejects_bad_pages(self):
         import asyncio
         async def check():
-            for content, expected in (("!중간 결", "결**벽**성"), ("!중간 적 2", "(2/")):
+            for content, expected in (("!중간 결", "결**벽**성"), ("!중간 벽 2", "(2/")):
                 msg = SimpleNamespace(content=content, author=SimpleNamespace(bot=False, id=10),
                                       guild=SimpleNamespace(id=1),
                                       channel=SimpleNamespace(id=1544553748565729381, send=AsyncMock()))
@@ -115,7 +115,7 @@ class MiddleRootLinksTests(unittest.TestCase):
                 text = "\n".join(field.name + field.value for field in embed.fields)
                 self.assertIn(expected, text)
             for argument in ("0", "-1", "가", "2 더", "99999999999999999999"):
-                msg.content = "!중간 적 " + argument
+                msg.content = "!중간 벽 " + argument
                 msg.channel.send.reset_mock()
                 with patch.dict(self.live, {"GUILD_ID": 0, "CHANNEL_ID": 0, "lock_now": lambda: False}):
                     await self.app["on_message"](msg)
