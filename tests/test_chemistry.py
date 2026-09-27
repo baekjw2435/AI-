@@ -342,6 +342,7 @@ class DiscordRoutingTests(unittest.IsolatedAsyncioTestCase):
         node = next(n for n in tree.body if isinstance(n, ast.AsyncFunctionDef) and n.name == "on_message")
         node.decorator_list = []
         namespace = {"GUILD_ID": guild_id, "CHANNEL_ID": legacy_channel,
+                     "ENGLISH_CHANNELS": (1553662302371319891, 1553662388752883792),
                      "CHEMISTRY_CHANNEL_ID": self.CHANNEL, "chemistry": chemistry,
                      "LOOKUP_COMMANDS": ("!루트", "!탐색", "!공격", "!한방", "!장문종결", "!장문", "!종결", "!중간"),
                      "LOOKUP_CHANNELS": {"표준": 1544553748565729381, "복합": 1523328035686846495}}

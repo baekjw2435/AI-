@@ -35,6 +35,12 @@ import route_engine as rq
 import game as gm
 
 try:
+    import english_bot as english
+except Exception as _e:
+    english = None
+    print(f"[경고] 영어 검색 기능을 끕니다: {_e}")
+
+try:
     import chemistry_bot as chemistry
 except Exception as _e:
     chemistry = None
@@ -70,6 +76,7 @@ except Exception as _e:
 GUILD_ID = int(os.environ.get("GUILD_ID", "0"))
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "0"))
 CHEMISTRY_CHANNEL_ID = int(os.environ.get("CHEMISTRY_CHANNEL_ID", "1552593568357548032"))
+ENGLISH_CHANNELS = (1553662302371319891, 1553662388752883792)
 # ==========================================
 
 # ===== 사전 모드 =====
@@ -2209,6 +2216,15 @@ HELP_TEXT = (
 async def on_message(msg):
     if msg.author.bot: return
     if GUILD_ID and (msg.guild is None or msg.guild.id != GUILD_ID): return
+    # English lookups are scoped before Korean command names and CHANNEL_ID.
+    if msg.channel.id in ENGLISH_CHANNELS:
+        if msg.guild is None:
+            return
+        if english is not None:
+            await english.handle_message(msg)
+        elif msg.content.strip().startswith("!"):
+            await msg.channel.send("영어 검색 기능을 불러오지 못했습니다. 운영자가 배포 로그를 확인해야 합니다.")
+        return
     # Chemistry and explicitly configured dictionary lookup channels have their
     # own routing. The legacy CHANNEL_ID filter still applies to other commands.
     if msg.channel.id == CHEMISTRY_CHANNEL_ID:
@@ -2831,6 +2847,11 @@ async def on_message(msg):
 
 load_attack(); load_endcat(); load_words(); load_mid(); load_dollim(); load_dollim_end()
 load_standard_words(); load_standard_special(); load_standard_mid(); load_route_learning()
+if english is not None:
+    try:
+        english.load_dictionary()
+    except (OSError, ValueError) as _e:
+        print(f"[경고] 영어 사전 로드 실패: {_e}")
 lock_load()
 
 token = os.environ.get("DISCORD_TOKEN")

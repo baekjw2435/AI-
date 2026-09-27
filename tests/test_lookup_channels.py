@@ -28,6 +28,7 @@ class LookupChannelTests(unittest.IsolatedAsyncioTestCase):
         path = Path(__file__).resolve().parents[1] / "main.py"
         tree = ast.parse(path.read_text(encoding="utf-8"))
         constants = {
+            "ENGLISH_CHANNELS",
             "MODE_STANDARD", "MODE_COMPLEX", "ARENA", "TRAINING", "STUDY", "CHESS", "OMOK", "QUORIDOR",
             "LOOKUP_CHANNELS", "STANDARD_LOOKUP_COMMANDS", "DICTIONARY_LOOKUP_COMMANDS", "LOOKUP_COMMANDS",
             "CHANNEL_ROLES", "LOCK_COMMANDS_ALWAYS", "LOCK_COMMANDS_STANDARD", "LOCK_COMMANDS",
@@ -44,6 +45,7 @@ class LookupChannelTests(unittest.IsolatedAsyncioTestCase):
                 method = next(n for n in node.body if isinstance(n, ast.AsyncFunctionDef) and n.name == "interaction_check")
                 nodes.append(method)
         self.ns = {
+            "english": SimpleNamespace(handle_message=AsyncMock()),
             "GUILD_ID": 0, "CHANNEL_ID": 0, "CHEMISTRY_CHANNEL_ID": 1552593568357548032,
             "DEFAULT_MODE": "복합", "CHANNEL_MODE": {}, "re": re, "random": random, "discord": discord,
             "CHESS_READY": False, "OMOK_READY": False, "QUORIDOR_READY": False,
@@ -193,6 +195,34 @@ class LookupChannelTests(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(allowed, expected)
             if not expected:
                 self.assertTrue(interaction.response.send_message.await_args.kwargs["ephemeral"])
+
+    async def test_english_routing_precedes_korean_lookup_and_legacy_channel_filter(self):
+        self.ns["CHANNEL_ID"] = next(iter(self.TRAINING))
+        for channel in self.ns["ENGLISH_CHANNELS"]:
+            for command in ("!공격 ab", "!장문 abc", "!종결 ght", "!돌림 n", "!장문종결 ght"):
+                self.ns["english"].handle_message.reset_mock()
+                msg = self.message(command, channel)
+                await self.handle(msg)
+                self.ns["english"].handle_message.assert_awaited_once_with(msg)
+                msg.channel.send.assert_not_awaited()
+                for name in self.RENDERERS:
+                    self.ns[name].assert_not_called()
+        self.ns["lock_now"].assert_not_called()
+
+    async def test_english_still_respects_guild_and_dm_guards(self):
+        self.ns["GUILD_ID"] = 1
+        for msg in (self.message("!장문 ab", self.ns["ENGLISH_CHANNELS"][1], guild=2),
+                    self.message("!장문 ab", self.ns["ENGLISH_CHANNELS"][1], guild=None),
+                    self.message("!장문 ab", self.ns["ENGLISH_CHANNELS"][1], bot=True)):
+            await self.handle(msg)
+        self.ns["english"].handle_message.assert_not_awaited()
+
+    async def test_english_import_failure_does_not_fall_through_to_korean(self):
+        self.ns["english"] = None
+        msg = self.message("!공격 ab", self.ns["ENGLISH_CHANNELS"][1])
+        await self.handle(msg)
+        self.assertIn("영어 검색 기능", msg.channel.send.await_args.args[0])
+        self.ns["embed_analysis"].assert_not_called()
 
 
 if __name__ == "__main__":
