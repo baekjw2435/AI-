@@ -55,7 +55,7 @@ class SearchResult:
         for label, pages in self.groups:
             if page < len(pages):
                 embed.add_field(name=label, value=pages[page], inline=False)
-        embed.set_footer(text=(f"{self.mode} · 달달소 영한사전 · {page + 1}/{self.page_count}페이지"
+        embed.set_footer(text=(f"{self.mode} · {page + 1}/{self.page_count}페이지"
                                " · 사용한 단어는 직접 제외해 주세요."))
         return embed
 
