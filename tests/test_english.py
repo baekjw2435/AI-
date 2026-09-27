@@ -28,18 +28,20 @@ class ConnectionTests(unittest.TestCase):
         index = EnglishDictionary(["apple", "elephant", "eel", "lemon"])
         self.assertEqual(index.replies("apple", CLASSIC), ("eel", "elephant"))
 
-    def test_attacks_zero_one_five_six_and_independent_loop(self):
+    def test_lures_zero_one_five_six_and_independent_loop(self):
         index = EnglishDictionary(["abzz", "abcd", "abef", "abgh", "abjab", "cdx",
                                    "efa", "efb", "efc", "efd", "efe",
                                    "gha", "ghb", "ghc", "ghd", "ghe", "ghf"])
         result = index.attacks("ab")
         self.assertEqual(result.kills, ("abzz",))
-        self.assertIn("abcd", result.attacks)
-        self.assertIn("abef", result.attacks)
+        self.assertIn("abcd", result.lures)
+        self.assertIn("abef", result.lures)
+        self.assertNotIn("abef", result.attacks)
+        self.assertNotIn("abgh", result.lures)
         self.assertNotIn("abgh", result.attacks)
         self.assertEqual(index.reply_count("abef"), 5)
         self.assertEqual(index.reply_count("abgh"), 6)
-        self.assertIn("abjab", result.attacks)
+        self.assertIn("abjab", result.lures)
         self.assertEqual(result.loops, ("abjab",))
 
     def test_queries_are_exact_prefixes_and_loops_return_that_prefix(self):
@@ -47,6 +49,30 @@ class ConnectionTests(unittest.TestCase):
         self.assertEqual(index.starting("ABC"), ("abcab", "abcabc"))
         self.assertEqual(index.loops("abc"), ("abcabc",))
         self.assertEqual(index.loops("ab"), ("abcab", "abjab"))
+
+    def test_strategy_restores_good_attacks_without_classifying_all_large_lists(self):
+        words = ["abqxyz", "abqmno", "abqstu", "stuzzz", "defqzz"]
+        words += [f"xyz{letter}def" for letter in "abcdef"]
+        words += [f"mno{letter}qzz" for letter in "abcdef"]
+        index = EnglishDictionary(words)
+        result = index.attacks("ab")
+        self.assertEqual(index.reply_count("abqxyz"), 6)
+        self.assertEqual(index.reply_count("abqmno"), 6)
+        self.assertEqual(index.strategy_tier("abqxyz"), "GOOD")
+        self.assertEqual(index.strategy_tier("abqmno"), "BAD")
+        self.assertEqual(result.attacks, ("abqxyz",))
+        self.assertEqual(result.lures, ("abqstu",))
+        self.assertFalse(set(result.attacks) & set(result.lures))
+
+    def test_original_loop_parity_counts_distinct_words_with_the_same_destination(self):
+        odd = EnglishDictionary(["abc", "abcqdef", "defqzz"])
+        even = EnglishDictionary(["abc", "abczabc", "abcqdef", "defqzz"])
+        self.assertEqual(odd.strategy_tier("abc"), "BAD")
+        self.assertEqual(even.strategy_tier("abc"), "GOOD")
+        # Even though the HTML calls this GOOD, the 1~5 rule takes priority.
+        self.assertIn("abc", even.attacks("ab").lures)
+        self.assertNotIn("abc", even.attacks("ab").attacks)
+        self.assertEqual(EnglishDictionary(["xyz"]).strategy_tier("xyz"), "DRAW")
 
     def test_normalization_keeps_whole_words(self):
         self.assertEqual(normalize_word("ATTACHÉ"), "attache")
@@ -115,12 +141,30 @@ class DatasetTests(unittest.TestCase):
     def test_attack_groups_paginate_without_missing_or_duplicate_entries(self):
         actual = self.index.attacks("ab")
         result = bot.build_result(self.index, KKUTU, "!공격", "ab", 1)
-        for name, words in (("한방", actual.kills), ("공격", actual.attacks), ("돌림", actual.loops)):
+        for name, words in (("한방", actual.kills), ("공격", actual.attacks),
+                            ("유도", actual.lures), ("돌림", actual.loops)):
             shown = []
             for label, pages in result.groups:
                 if name in label:
                     shown.extend(re.findall(r"`([a-z]+)`", "\n".join(pages)))
             self.assertEqual(shown, list(words))
+
+    def test_original_good_candidates_and_new_lure_labels_are_both_visible(self):
+        result = bot.build_result(self.index, KKUTU, "!공격", "ab", 1)
+        fields = {name: pages for name, pages in result.groups}
+        self.assertTrue(any(name.startswith("🗡️ 공격") for name in fields))
+        self.assertTrue(any(name.startswith("🎣 유도") for name in fields))
+        groups = self.index.attacks("ab")
+        self.assertTrue(groups.attacks)
+        self.assertIn("absurd", groups.lures)
+        self.assertNotIn("absurd", groups.attacks)
+        for word in groups.attacks:
+            self.assertEqual(self.index.strategy_tier(word), "GOOD")
+            self.assertGreater(self.index.reply_count(word), 5)
+        for word in groups.lures:
+            self.assertTrue(1 <= self.index.reply_count(word) <= 5)
+        hanbang = bot.build_result(self.index, KKUTU, "!한방", "ab", 1)
+        self.assertTrue(all(name.startswith("⚡ 한방") for name, _ in hanbang.groups))
 
     def test_queries_and_options_are_validated(self):
         self.assertEqual(bot.parse_request("!장문 AbC 50", KKUTU), ("!장문", "abc", 50))

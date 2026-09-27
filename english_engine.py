@@ -1,5 +1,5 @@
 """English dictionary lookup; no match history or remote dictionary requests."""
-from collections import defaultdict
+from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 import re
@@ -34,6 +34,7 @@ def long_first(word):
 class AttackGroups:
     kills: tuple
     attacks: tuple
+    lures: tuple
     loops: tuple
 
 
@@ -47,6 +48,66 @@ class EnglishDictionary:
                 tails[word[-length:]].append(word)
         self.heads = {k: tuple(v) for k, v in heads.items()}
         self.tails = {k: tuple(v) for k, v in tails.items()}
+        self._position_status = self._analyze_positions()
+
+    def _analyze_positions(self):
+        """Port the original HTML's retrograde analysis and loop parity rule.
+
+        Positions are the whole two-letter ending, or the final three letters
+        (which also permit the final two). Count edges by word, not just by
+        distinct destination: the HTML uses that multiplicity for loop parity.
+        This is a dictionary heuristic; it does not track played words.
+        """
+        nodes = {word[-3:]: word[-3:] for word in self.words}
+        endings = {word: nodes[word[-3:]] for word in self.words}
+        destinations, remaining = {}, {}
+        reverse = defaultdict(list)
+        status, queue = {}, []
+        for tail in nodes:
+            # Canonical endings plus weighted edges avoid storing the same
+            # transition once for each of the many words with that ending.
+            edges = Counter(endings[word] for word in self.replies(tail))
+            destinations[tail] = edges
+            remaining[tail] = sum(edges.values())
+            if not edges:
+                status[tail] = "LOSS"
+                queue.append(tail)
+            for target, count in edges.items():
+                reverse[target].append((tail, count))
+
+        while queue:
+            target = queue.pop()
+            for tail, count in reverse.get(target, ()):
+                if tail in status:
+                    continue
+                if status[target] == "LOSS":
+                    status[tail] = "WIN"
+                    queue.append(tail)
+                else:
+                    remaining[tail] -= count
+                    if remaining[tail] == 0:
+                        status[tail] = "LOSS"
+                        queue.append(tail)
+
+        changed = True
+        while changed:
+            changed = False
+            for tail in nodes:
+                if tail in status:
+                    continue
+                edges = destinations[tail]
+                if any(status.get(target) == "LOSS" for target in edges):
+                    status[tail] = "WIN"
+                    changed = True
+                elif edges and all(status.get(target) == "WIN" for target in edges):
+                    status[tail] = "LOSS"
+                    changed = True
+                elif edges.get(tail, 0):
+                    exits = [target for target in edges if target != tail]
+                    if exits and all(status.get(target) == "WIN" for target in exits):
+                        status[tail] = "WIN" if edges[tail] % 2 else "LOSS"
+                        changed = True
+        return status
 
     @classmethod
     def from_file(cls, path=DEFAULT_PATH):
@@ -103,16 +164,26 @@ class EnglishDictionary:
         return tuple(sorted((w for w in self.starting(prefix) if w.endswith(prefix.lower())),
                             key=short_first))
 
+    def strategy_tier(self, word):
+        """Original HTML tiers; GOOD refers to the next player's LOSS state."""
+        word = word.lower()
+        if self.reply_count(word) == 0:
+            return "KILL"
+        return {"LOSS": "GOOD", "WIN": "BAD"}.get(self._position_status.get(word[-3:]), "DRAW")
+
     def attacks(self, prefix):
-        kills, attacks = [], []
+        kills, attacks, lures = [], [], []
         for word in self.starting(prefix):
             count = self.reply_count(word)
             if count == 0:
                 kills.append(word)
             elif count <= 5:
+                lures.append(word)
+            elif self.strategy_tier(word) == "GOOD":
                 attacks.append(word)
         return AttackGroups(
-            tuple(sorted(kills, key=short_first)),
-            tuple(sorted(attacks, key=lambda w: (self.reply_count(w), len(w), w))),
-            self.loops(prefix),
+            kills=tuple(sorted(kills, key=short_first)),
+            attacks=tuple(sorted(attacks, key=short_first)),
+            lures=tuple(sorted(lures, key=lambda w: (self.reply_count(w), len(w), w))),
+            loops=self.loops(prefix),
         )

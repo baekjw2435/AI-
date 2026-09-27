@@ -76,9 +76,13 @@ def help_embed(mode):
             "**종결**: 검색한 글자로 끝나는 단어를 짧은 순서로 표시합니다.\n"
             "이전·다음 버튼으로 넘길 수 있습니다. 종결·돌림·공격·한방 뒤 숫자는 페이지입니다.")
     if mode == KKUTU:
-        text += ("\n\n**공격 분류**: ⚡ 한방 = 이을 수 있는 단어 0개 · 🗡️ 공격 = 1~5개 · 🔄 돌림.\n"
+        text += ("\n\n**분류**\n"
+                 "⚡ 한방: 이을 수 있는 단어 0개\n"
+                 "🗡️ 공격: 유리한 연결로 판정된 단어 중 유도를 제외한 단어\n"
+                 "🎣 유도: 이을 수 있는 단어 1~5개\n"
+                 "🔄 돌림: 검색한 글자로 다시 끝나는 단어\n"
                  "이을 수 있는 단어는 끝 2·3글자로 시작하는 단어를 합쳐 찾으며, 사용 이력을 반영하지 않은 사전 기준입니다.\n"
-                 "2글자 단어도 포함합니다. 한 단어가 공격과 돌림에 함께 표시될 수 있습니다.")
+                 "2글자 단어도 포함합니다. 공격이나 유도에 해당하면서 돌림인 단어는 함께 표시합니다.")
     embed = discord.Embed(title=f"🔤 {mode} 검색 도움말", description=text, color=0x5AC8FA)
     embed.set_footer(text="대소문자 구분 없음 · 영어 단어 2글자 이상")
     return embed
@@ -117,7 +121,9 @@ def build_result(dictionary, mode, command, query, number):
         found = dictionary.attacks(query)
         groups = [("⚡ 한방", found.kills)]
         if command == "!공격":
-            groups += [("🗡️ 공격 · 이을 수 있는 단어 1~5개", found.attacks), ("🔄 돌림", found.loops)]
+            groups += [("🗡️ 공격", found.attacks),
+                       ("🎣 유도 · 이을 수 있는 단어 1~5개", found.lures),
+                       ("🔄 돌림", found.loops)]
         loop_set = set(found.loops)
 
         def line(word):
