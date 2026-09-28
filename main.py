@@ -35,6 +35,12 @@ import route_engine as rq
 import game as gm
 
 try:
+    import hunmin_bot as hunmin
+except Exception as _e:
+    hunmin = None
+    print(f"[경고] 훈민정음 검색 기능을 끕니다: {_e}")
+
+try:
     import english_bot as english
 except Exception as _e:
     english = None
@@ -77,6 +83,7 @@ GUILD_ID = int(os.environ.get("GUILD_ID", "0"))
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "0"))
 CHEMISTRY_CHANNEL_ID = int(os.environ.get("CHEMISTRY_CHANNEL_ID", "1552593568357548032"))
 ENGLISH_CHANNELS = (1553662302371319891, 1553662388752883792)
+HUNMIN_CHANNELS = (1553954061294772335, 1553954129712254976)
 # ==========================================
 
 # ===== 사전 모드 =====
@@ -2216,6 +2223,15 @@ HELP_TEXT = (
 async def on_message(msg):
     if msg.author.bot: return
     if GUILD_ID and (msg.guild is None or msg.guild.id != GUILD_ID): return
+    # Hunmin has fixed dictionaries and bypasses the legacy single-channel filter.
+    if msg.channel.id in HUNMIN_CHANNELS:
+        if msg.guild is None:
+            return
+        if hunmin is not None:
+            await hunmin.handle_message(msg)
+        elif msg.content.strip().startswith("!"):
+            await msg.channel.send("훈민정음 검색 기능을 불러오지 못했습니다. 운영자가 배포 로그를 확인해야 합니다.")
+        return
     # English lookups are scoped before Korean command names and CHANNEL_ID.
     if msg.channel.id in ENGLISH_CHANNELS:
         if msg.guild is None:
@@ -2847,6 +2863,8 @@ async def on_message(msg):
 
 load_attack(); load_endcat(); load_words(); load_mid(); load_dollim(); load_dollim_end()
 load_standard_words(); load_standard_special(); load_standard_mid(); load_route_learning()
+if hunmin is not None:
+    hunmin.load_dictionaries()
 if english is not None:
     try:
         english.load_dictionary()

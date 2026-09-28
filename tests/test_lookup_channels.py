@@ -28,7 +28,7 @@ class LookupChannelTests(unittest.IsolatedAsyncioTestCase):
         path = Path(__file__).resolve().parents[1] / "main.py"
         tree = ast.parse(path.read_text(encoding="utf-8"))
         constants = {
-            "ENGLISH_CHANNELS",
+            "ENGLISH_CHANNELS", "HUNMIN_CHANNELS",
             "MODE_STANDARD", "MODE_COMPLEX", "ARENA", "TRAINING", "STUDY", "CHESS", "OMOK", "QUORIDOR",
             "LOOKUP_CHANNELS", "STANDARD_LOOKUP_COMMANDS", "DICTIONARY_LOOKUP_COMMANDS", "LOOKUP_COMMANDS",
             "CHANNEL_ROLES", "LOCK_COMMANDS_ALWAYS", "LOCK_COMMANDS_STANDARD", "LOCK_COMMANDS",
@@ -45,6 +45,7 @@ class LookupChannelTests(unittest.IsolatedAsyncioTestCase):
                 method = next(n for n in node.body if isinstance(n, ast.AsyncFunctionDef) and n.name == "interaction_check")
                 nodes.append(method)
         self.ns = {
+            "hunmin": SimpleNamespace(handle_message=AsyncMock()),
             "english": SimpleNamespace(handle_message=AsyncMock()),
             "GUILD_ID": 0, "CHANNEL_ID": 0, "CHEMISTRY_CHANNEL_ID": 1552593568357548032,
             "DEFAULT_MODE": "복합", "CHANNEL_MODE": {}, "re": re, "random": random, "discord": discord,
@@ -223,6 +224,43 @@ class LookupChannelTests(unittest.IsolatedAsyncioTestCase):
         await self.handle(msg)
         self.assertIn("영어 검색 기능", msg.channel.send.await_args.args[0])
         self.ns["embed_analysis"].assert_not_called()
+
+    async def test_hunmin_has_dedicated_routing_before_legacy_filter(self):
+        self.ns["CHANNEL_ID"] = next(iter(self.TRAINING))
+        self.assertEqual(self.ns["HUNMIN_CHANNELS"], (1553954061294772335, 1553954129712254976))
+        for channel in self.ns["HUNMIN_CHANNELS"]:
+            for content in ("!ㅎㅅ", "!ㅇㅇ", "!ㅈㅈ 2", "!모드 복합", "!경기"):
+                self.ns["hunmin"].handle_message.reset_mock()
+                msg = self.message(content, channel)
+                await self.handle(msg)
+                self.ns["hunmin"].handle_message.assert_awaited_once_with(msg)
+                msg.channel.send.assert_not_awaited()
+        self.ns["english"].handle_message.assert_not_awaited()
+        self.ns["begin_game"].assert_not_awaited()
+        self.ns["JoinView"].assert_not_called()
+        self.ns["lock_now"].assert_not_called()
+
+    async def test_hunmin_respects_guild_dm_and_bot_guards(self):
+        self.ns["GUILD_ID"] = 1
+        for msg in (self.message("!ㅎㅅ", self.ns["HUNMIN_CHANNELS"][0], guild=2),
+                    self.message("!ㅇㅇ", self.ns["HUNMIN_CHANNELS"][1], guild=None),
+                    self.message("!ㅈㅈ", self.ns["HUNMIN_CHANNELS"][0], bot=True)):
+            await self.handle(msg)
+            msg.channel.send.assert_not_awaited()
+        self.ns["hunmin"].handle_message.assert_not_awaited()
+
+    async def test_hunmin_import_failure_does_not_fall_through(self):
+        self.ns["hunmin"] = None
+        msg = self.message("!ㅎㅅ", self.ns["HUNMIN_CHANNELS"][0])
+        await self.handle(msg)
+        self.assertIn("훈민정음 검색 기능", msg.channel.send.await_args.args[0])
+        self.ns["english"].handle_message.assert_not_awaited()
+
+    async def test_hunmin_does_not_capture_other_channels(self):
+        self.ns["CHANNEL_ID"] = next(iter(self.TRAINING))
+        for channel in (*self.TRAINING, *self.ARENAS, self.STANDARD, self.COMPLEX, 1234):
+            await self.handle(self.message("!ㅎㅅ", channel))
+        self.ns["hunmin"].handle_message.assert_not_awaited()
 
 
 if __name__ == "__main__":
