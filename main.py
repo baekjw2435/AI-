@@ -519,7 +519,7 @@ def load_standard_mid():
     print(f"[로드] 표준 중간 공격 {len(STD_MID_ATTACK)}글자 ({total}단어)")
 
 
-# ---- 루트 학습 자료 (신엜 루트 탐색기 v1.16 과 같은 계산) ----
+# ---- 루트 학습 자료 (신엜 루트 탐색기 v1.25 과 같은 계산) ----
 ROUTE_CORE = None
 ROUTE_READY = False
 ROUTE_DEPTH = 24
@@ -532,10 +532,14 @@ def load_route_learning():
     main_path = find_file(["standard_route_learning.json"])
     policy_path = find_file(["standard_recent_policy.json"])
     special_path = find_file(["standard_special.json"])
-    if not (main_path and policy_path and special_path and STD_READY):
+    flow_path = find_file(["standard_flow_policy.json"])
+    ROUTE_READY = False
+    ROUTE_CORE = None
+    if not (main_path and policy_path and special_path and flow_path and STD_READY):
         print("[경고] 루트 학습 자료가 없어 !루트 기능을 끕니다."); return
 
     learning = rq.load_learning(main_path)
+    flow = rq.load_flow(flow_path)
     recent_path = find_file(["standard_route_learning_recent.json"])
     recent = rq.load_learning(recent_path) if recent_path else None
     with open(policy_path, encoding="utf-8") as fp:
@@ -557,9 +561,9 @@ def load_route_learning():
         first_words, STD_STARTCOUNT,
         set(special.get("attacks", [])), set(special.get("oneShots", [])),
         special.get("routes", {}),
-        learning, recent, policy.get("days", 0), policy.get("policy", {}))
+        learning, recent, policy.get("days", 0), policy.get("policy", {}), flow=flow)
     ROUTE_READY = True
-    print(f"[로드] 루트 자료 준비 완료 (수순 {len(learning.words):,}단어"
+    print(f"[로드] 루트 v{rq.ENGINE_VERSION} 자료 준비 완료 (수순 {len(learning.words):,}단어"
           + (" · 보조층 포함)" if recent else ")"))
 
 
@@ -926,7 +930,7 @@ def embed_route(syl, shield, only_length=None):
     if not ROUTE_READY:
         return discord.Embed(
             title="루트 자료를 불러오지 못했습니다",
-            description="standard_route_learning.json 과 standard_recent_policy.json 파일을 봇과 같은 폴더에 넣어 주세요.",
+            description="표준 탐색 자료가 준비되지 않았습니다. 관리자에게 봇 시작 시 자료 로드 기록 확인을 요청해 주세요.",
             color=COLOR_MUTED)
 
     lengths = (only_length,) if only_length else ROUTE_SEQUENCE_LENGTHS
@@ -965,7 +969,7 @@ def embed_route(syl, shield, only_length=None):
         e.add_field(name="🤖 인공지능 예상 계산",
                     value="이어지는 합법 후보를 찾지 못했습니다.", inline=False)
 
-    e.set_footer(text="표준 사전 · 표준두음법칙 적용")
+    e.set_footer(text=f"표준 탐색 v{rq.ENGINE_VERSION} · 표준 사전 · 표준두음법칙 적용")
     return e
 
 # ---------------------------------------------------------------------
@@ -1061,7 +1065,7 @@ class RouteSearchView(discord.ui.View):
                                + f" → **{self.current}{self.shield}**")[:1024],
                         inline=False)
 
-        e.set_footer(text="표준 사전 · 표준두음법칙 적용 · 시작하신 분만 누르실 수 있습니다")
+        e.set_footer(text=f"표준 탐색 v{rq.ENGINE_VERSION} · 표준 사전 · 표준두음법칙 적용 · 시작하신 분만 누르실 수 있습니다")
         return e
 
     # -- 버튼 처리 --------------------------------------------------
@@ -2782,7 +2786,7 @@ async def on_message(msg):
         if not ROUTE_READY:
             await msg.channel.send(
                 "표준 루트 자료를 불러오지 못해 탐색을 시작할 수 없습니다. "
-                "standard_route_learning.json 파일을 확인해 주세요.")
+                "관리자에게 봇 시작 시 자료 로드 기록 확인을 요청해 주세요.")
             return
         if not arg:
             await msg.channel.send(

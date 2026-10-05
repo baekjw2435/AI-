@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
-"""신엜 루트 탐색기 v1.16 추천 엔진을 그대로 옮긴 모듈입니다.
+"""신엜 루트 탐색기 v1.25의 표준 추천 엔진입니다.
 
-사이트의 lib/route-learning.ts 와 lib/engine.ts 계산을 파이썬으로 옮겼습니다.
+사이트의 lib/route-learning.ts, lib/flow-policy.ts, lib/engine.ts 계산을 옮겼습니다.
 숫자가 사이트와 어긋나면 안 되므로 가중치·최소표본·반올림 방식까지 같게 맞췄습니다.
 
 표준(신표국) 자료만 사용합니다. 복합 자료와는 절대 섞지 않습니다.
 """
 
 import json, math
+
+ENGINE_VERSION = "1.25"
 
 # 자바스크립트 Math.round 는 .5 를 항상 올림합니다. 파이썬 round 는 짝수로 반올림하므로
 # 점수가 사이트와 달라집니다. 사이트와 같은 값을 내려면 이 함수를 써야 합니다.
@@ -61,6 +63,8 @@ def dueum_variants(syl):
 # 학습 자료 색인
 # ---------------------------------------------------------------------
 SEQUENCE_LENGTHS = (2, 3, 4, 6, 8)
+MASTER_NAMES = frozenset(("2606이엇던것", "단몌", "둑지꽝", "보초", "kalskiju",
+                          "죽을죄", "즈나니에츠키", "강건", "삼룡", "갓갓다리", "공볂"))
 
 class RouteLearning:
     """route-learning 런타임 파일 하나를 색인합니다."""
@@ -70,18 +74,32 @@ class RouteLearning:
         self.model = data["model"]
         self.source = data["source"]
         self.word_to_id = {w: i for i, w in enumerate(self.words)}
+        self.master_player_ids = {
+            i for i, player in enumerate(data.get("players", ()))
+            if player["name"] in MASTER_NAMES
+        }
 
         # 현재 음절 -> (total, choices{wordId: count})
         self.current = {}
+        self.current_players = {}
         for row in data["currentRoutes"]:
             syl, total, _players, choices = row
             self.current[syl] = (total, {c[0]: c[1] for c in choices})
+            self.current_players[syl] = {
+                c[0]: {i for i, count in enumerate(c[2]) if count > 0 and i in self.master_player_ids}
+                for c in choices
+            }
 
         # 현재 음절+보호막 -> (total, choices)
         self.states = {}
+        self.state_players = {}
         for row in data["stateRoutes"]:
             syl, shield, total, _players, choices = row
             self.states[(syl, shield)] = (total, {c[0]: c[1] for c in choices})
+            self.state_players[(syl, shield)] = {
+                c[0]: {i for i, count in enumerate(c[2]) if count > 0 and i in self.master_player_ids}
+                for c in choices
+            }
 
         # 직전 1·2·3수 문맥
         self.histories = {1: {}, 2: {}, 3: {}}
@@ -128,6 +146,101 @@ class RouteLearning:
     def _choice(contexts, word_id):
         if word_id is None: return 0
         return sum(c[1].get(word_id, 0) for c in contexts)
+
+    def player_coverage(self, current, shield, word_id, source):
+        players = set()
+        for variant in dueum_variants(current):
+            if source == "shield":
+                row = self.state_players.get((variant, shield), {})
+            elif source == "overall":
+                row = self.current_players.get(variant, {})
+            else:
+                continue
+            players.update(row.get(word_id, ()))
+        return len(players)
+
+
+# ---------------------------------------------------------------------
+# 일반 규칙의 연속 문맥 (사이트 lib/flow-policy.ts)
+# ---------------------------------------------------------------------
+def continuous_flow_history(history, current, shield):
+    """(단어, 보호막, 진입 음절) 기록에서 현재 상태까지 실제 연결되는 접미 수순."""
+    start = len(history)
+    next_syllable, next_shield = current, shield
+    for i in range(len(history) - 1, -1, -1):
+        move = history[i]
+        word = move[0]
+        move_shield = move[1] if len(move) > 1 else None
+        if not word or next_syllable not in dueum_variants(word[-1]):
+            break
+        if (move_shield is not None and next_shield is not None
+                and max(0, move_shield - 1) != next_shield):
+            break
+        start = i
+        next_syllable, next_shield = word[0], move_shield
+    return history[start:]
+
+
+class FlowPolicy:
+    """일반 수순만 추천에 쓰며 효과 경기 기록은 별도로 보존합니다."""
+
+    def __init__(self, data):
+        self.words = data["words"]
+        self.players = data["players"]
+        self.policy = data["policy"]
+        self.source = data.get("source", {})
+        self.effect_episodes = data.get("effectEpisodes", [])
+        self.word_to_id = {word: i for i, word in enumerate(self.words)}
+        self.contexts = {(row[0], row[1], tuple(row[2])): row for row in data["contexts"]}
+
+
+def flow_context(data, current, shield, history):
+    """가장 긴 연속 수순부터 정확한 음절·보호막 문맥을 찾습니다."""
+    if data is None:
+        return None
+    history = continuous_flow_history(history, current, shield)
+    variants = dueum_variants(current)
+    for length in range(min(data.policy["maxHistory"], len(history)), -1, -1):
+        suffix = history[len(history) - length:]
+        ids = tuple(data.word_to_id.get(move[0]) for move in suffix)
+        if any(word_id is None for word_id in ids):
+            continue
+        row = data.contexts.get((current, shield, ids))
+        if row is None:
+            continue
+        total, matches = row[3:5]
+        choices = {}
+        for word_id, count, players, choice_matches, lines in row[5]:
+            word = data.words[word_id]
+            if not word or word[0] not in variants:
+                continue
+            choices[word] = {
+                "historyLength": length, "count": count, "total": total,
+                "matchCount": matches, "choiceMatches": choice_matches,
+                "share": count / total if total else 0,
+                "players": [{"name": data.players[pid], "count": n} for pid, n in players],
+                "lines": sorted(({
+                    "words": [data.words[i] for i in words],
+                    "actors": [data.players[i] if 0 <= i < len(data.players) else "상대" for i in actors],
+                    "count": n, "matchId": origin[0], "round": origin[1], "turn": origin[2],
+                } for words, actors, n, origin in lines), key=lambda line: -line["count"]),
+            }
+        return {"historyLength": length, "total": total, "matchCount": matches, "choices": choices}
+    return None
+
+
+def flow_ranking_context(rows):
+    """사용 가능한 관측과 경기 수로 흐름 비중을 줄입니다. 승률이 아닙니다."""
+    available = {row["word"]: row["flow"] for row in rows
+                 if row["legal"] and row.get("flow") and row["flow"]["historyLength"] > 0}
+    count = sum(choice["count"] for choice in available.values())
+    if not count:
+        return None
+    peak = max(choice["count"] for choice in available.values())
+    # 같은 경기가 여러 선택지에 겹칠 수 있으므로 경기 수를 합산하지 않습니다.
+    matches = max(choice["choiceMatches"] for choice in available.values())
+    return {"availableCount": count, "peakCount": peak,
+            "weight": min(0.9, count / (count + 20), matches / (matches + 10))}
 
 
 EMPTY_EVIDENCE = {
@@ -313,7 +426,7 @@ class StandardCore:
     """표준 사전 + 학습 자료 묶음입니다."""
 
     def __init__(self, first_words, start_count, attacks, one_shots, routes,
-                 learning, recent, recent_days, recent_policy):
+                 learning, recent, recent_days, recent_policy, flow=None):
         self.first_words = first_words      # 첫 음절 -> [단어]
         self.start_count = start_count      # 음절 -> 시작 단어 수
         self.attacks = attacks
@@ -323,6 +436,7 @@ class StandardCore:
         self.recent = recent
         self.recent_days = recent_days
         self.recent_policy = recent_policy
+        self.flow = flow
 
     def words_for(self, current, used):
         variants = dueum_variants(current)
@@ -349,12 +463,15 @@ class StandardCore:
 
 def analyze_candidates(core, words, current, shield, used, shield_enabled=True, history=()):
     """사이트 analyzeCandidates 와 같습니다."""
-    history_words = [h[0] for h in history]
-    master_state = state_evidence(core.learning, current, shield)
+    active_shield = shield if shield_enabled else 0
+    ordinary_history = continuous_flow_history(history, current, active_shield)
+    history_words = [h[0] for h in ordinary_history]
+    flow = flow_context(core.flow, current, active_shield, ordinary_history)
+    master_state = state_evidence(core.learning, current, active_shield)
     rule = NORMALIZED_SHIELD_ROUTE_RULES.get((current, shield))
     out = []
     for word in words:
-        end = word[-1]
+        end = word[-1] if word else ""
         used_after = used | {word}
         follow = core.follow_count(end, used_after)
         main_rank = core.route_rank(current, word)
@@ -373,9 +490,9 @@ def analyze_candidates(core, words, current, shield, used, shield_enabled=True, 
         else:
             structural = 0.0
 
-        learning = learning_evidence(core.learning, current, shield,
+        learning = learning_evidence(core.learning, current, active_shield,
                                      history_words, word, end, structural)
-        recent = learning_evidence(core.recent, current, shield,
+        recent = learning_evidence(core.recent, current, active_shield,
                                    history_words, word, end, structural)
         trend = blend_recent(learning, recent if core.recent else None,
                              core.recent_days, core.recent_policy)
@@ -392,7 +509,7 @@ def analyze_candidates(core, words, current, shield, used, shield_enabled=True, 
 
         out.append({
             "word": word, "end": end, "followCount": follow,
-            "legal": (not shield_enabled) or follow >= shield,
+            "legal": bool(end) and word not in used and follow >= active_shield,
             "shieldRoutePick": rank >= 0,
             "shieldRouteRank": rank if rank >= 0 else math.inf,
             "shieldRouteAvoided": bool(note), "shieldRouteNote": note,
@@ -401,11 +518,26 @@ def analyze_candidates(core, words, current, shield, used, shield_enabled=True, 
             "masterPriorityTier": priority_tier,
             "masterPriorityCount": priority_count,
             "masterPrioritySource": priority_source,
+            "masterPlayerCoverage": (core.learning.player_coverage(
+                current, active_shield, word_id, priority_source) if core.learning else 0),
             "masterOverallCount": overall_count,
             "masterShieldCount": shield_count,
             "learning": learning, "recentTrend": trend,
+            "flow": flow["choices"].get(word) if flow else None,
+            "flowRanking": None,
             "recommendationScore": trend["combinedScore"],
         })
+    context = flow_ranking_context(out)
+    if context:
+        for candidate in out:
+            if not candidate["legal"]:
+                continue
+            baseline = candidate["recommendationScore"]
+            observed = 100 * (candidate["flow"]["count"] if candidate["flow"] else 0) / context["peakCount"]
+            weight = context["weight"]
+            candidate["flowRanking"] = {"baselineScore": baseline, "weight": weight,
+                                        "availableCount": context["availableCount"]}
+            candidate["recommendationScore"] = js_round((baseline * (1 - weight) + observed * weight) * 10) / 10
     return out
 
 
@@ -415,6 +547,7 @@ def sort_key(c):
     """사이트 sortRecommended 와 같은 순서를 만드는 정렬 키입니다."""
     researched = c["shieldRoutePick"]
     return (
+        0 if c["legal"] else 1,
         0 if researched else 1,
         c["shieldRouteRank"] if researched else 0,
         1 if c["shieldRouteAvoided"] else 0,
@@ -424,6 +557,7 @@ def sort_key(c):
         -c["learning"]["exactCount"],
         -c["masterPriorityTier"],
         -c["masterPriorityCount"],
+        -c.get("masterPlayerCoverage", 0),
         -c["masterOverallCount"],
         0 if c["shieldRoutePick"] else 1,
         c["shieldRouteRank"],
@@ -482,3 +616,8 @@ def state_sequences(data, current, shield, player_id, length, limit=5, merge_act
 def load_learning(path):
     with open(path, encoding="utf-8") as fp:
         return RouteLearning(json.load(fp))
+
+
+def load_flow(path):
+    with open(path, encoding="utf-8") as fp:
+        return FlowPolicy(json.load(fp))
