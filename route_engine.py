@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""신엜 루트 탐색기 v1.25의 표준 추천 엔진입니다.
+"""신엜 루트 탐색기 v1.26의 표준 추천 엔진입니다.
 
 사이트의 lib/route-learning.ts, lib/flow-policy.ts, lib/engine.ts 계산을 옮겼습니다.
 숫자가 사이트와 어긋나면 안 되므로 가중치·최소표본·반올림 방식까지 같게 맞췄습니다.
@@ -9,7 +9,8 @@
 
 import json, math
 
-ENGINE_VERSION = "1.25"
+ENGINE_VERSION = "1.26"
+PLAYER_SELECTION_VERSION = "v1.26-ranked-only-five"
 
 # 자바스크립트 Math.round 는 .5 를 항상 올림합니다. 파이썬 round 는 짝수로 반올림하므로
 # 점수가 사이트와 달라집니다. 사이트와 같은 값을 내려면 이 함수를 써야 합니다.
@@ -73,6 +74,7 @@ class RouteLearning:
         self.words = data["words"]
         self.model = data["model"]
         self.source = data["source"]
+        self.player_selection = data.get("playerSelection", {})
         self.word_to_id = {w: i for i, w in enumerate(self.words)}
         self.master_player_ids = {
             i for i, player in enumerate(data.get("players", ()))

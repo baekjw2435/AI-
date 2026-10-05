@@ -519,7 +519,7 @@ def load_standard_mid():
     print(f"[로드] 표준 중간 공격 {len(STD_MID_ATTACK)}글자 ({total}단어)")
 
 
-# ---- 루트 학습 자료 (신엜 루트 탐색기 v1.25 과 같은 계산) ----
+# ---- 루트 학습 자료 (신엜 루트 탐색기 v1.26 과 같은 계산) ----
 ROUTE_CORE = None
 ROUTE_READY = False
 ROUTE_DEPTH = 24
@@ -542,6 +542,12 @@ def load_route_learning():
     flow = rq.load_flow(flow_path)
     recent_path = find_file(["standard_route_learning_recent.json"])
     recent = rq.load_learning(recent_path) if recent_path else None
+    selections = [learning.player_selection, flow.policy.get("playerSelection", {})]
+    if recent:
+        selections.append(recent.player_selection)
+    if any(p.get("version") != rq.PLAYER_SELECTION_VERSION for p in selections):
+        print("[경고] 표준 탐색의 장기·최근·흐름 자료가 v1.26 선수별 순위전 정책과 일치하지 않습니다.")
+        return
     with open(policy_path, encoding="utf-8") as fp:
         policy = json.load(fp)
     with open(special_path, encoding="utf-8") as fp:
@@ -969,7 +975,7 @@ def embed_route(syl, shield, only_length=None):
         e.add_field(name="🤖 인공지능 예상 계산",
                     value="이어지는 합법 후보를 찾지 못했습니다.", inline=False)
 
-    e.set_footer(text=f"표준 탐색 v{rq.ENGINE_VERSION} · 표준 사전 · 표준두음법칙 적용")
+    e.set_footer(text=f"표준 탐색 v{rq.ENGINE_VERSION} · 5명 순위전 전용 · 표준 사전 · 표준두음법칙 적용")
     return e
 
 # ---------------------------------------------------------------------
@@ -1065,7 +1071,7 @@ class RouteSearchView(discord.ui.View):
                                + f" → **{self.current}{self.shield}**")[:1024],
                         inline=False)
 
-        e.set_footer(text=f"표준 탐색 v{rq.ENGINE_VERSION} · 표준 사전 · 표준두음법칙 적용 · 시작하신 분만 누르실 수 있습니다")
+        e.set_footer(text=f"표준 탐색 v{rq.ENGINE_VERSION} · 5명 순위전 전용 · 표준두음법칙 적용 · 시작하신 분만 누르실 수 있습니다")
         return e
 
     # -- 버튼 처리 --------------------------------------------------
