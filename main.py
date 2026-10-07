@@ -975,7 +975,7 @@ def embed_route(syl, shield, only_length=None):
         e.add_field(name="🤖 인공지능 예상 계산",
                     value="이어지는 합법 후보를 찾지 못했습니다.", inline=False)
 
-    e.set_footer(text=f"표준 탐색 v{rq.ENGINE_VERSION} · 5명 순위전 전용 · 표준 사전 · 표준두음법칙 적용")
+    e.set_footer(text=f"표준 탐색 v{rq.ENGINE_VERSION} · 표준 사전 · 표준두음법칙 적용")
     return e
 
 # ---------------------------------------------------------------------
@@ -1071,7 +1071,7 @@ class RouteSearchView(discord.ui.View):
                                + f" → **{self.current}{self.shield}**")[:1024],
                         inline=False)
 
-        e.set_footer(text=f"표준 탐색 v{rq.ENGINE_VERSION} · 5명 순위전 전용 · 표준두음법칙 적용 · 시작하신 분만 누르실 수 있습니다")
+        e.set_footer(text=f"표준 탐색 v{rq.ENGINE_VERSION} · 표준두음법칙 적용 · 시작하신 분만 누르실 수 있습니다")
         return e
 
     # -- 버튼 처리 --------------------------------------------------

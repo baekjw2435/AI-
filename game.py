@@ -433,7 +433,10 @@ class Game:
 
         e.add_field(name=f"🧭 진행 · {len(self.history)}수", value=self.route_text()[:1024],
                     inline=False)
-        e.set_footer(text=f"{self.dictionary.name} 사전 · 표준두음법칙 적용 · "
+        training_version = (f"표준 훈련 v{rq.ENGINE_VERSION} · "
+                            if isinstance(self.dictionary, StandardDictionary)
+                            and None in self.players else "")
+        e.set_footer(text=f"{training_version}{self.dictionary.name} 사전 · 표준두음법칙 적용 · "
                           f"🔵 {self.names[0]} · 🔴 {self.names[1]}")
         return e
 
