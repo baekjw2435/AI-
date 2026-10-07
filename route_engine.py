@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""신엜 루트 탐색기 v1.26의 표준 추천 엔진입니다.
+"""신엜 루트 탐색기 v1.27의 표준 추천 엔진입니다.
 
 사이트의 lib/route-learning.ts, lib/flow-policy.ts, lib/engine.ts 계산을 옮겼습니다.
 숫자가 사이트와 어긋나면 안 되므로 가중치·최소표본·반올림 방식까지 같게 맞췄습니다.
@@ -9,8 +9,9 @@
 
 import json, math
 
-ENGINE_VERSION = "1.26"
+ENGINE_VERSION = "1.27"
 PLAYER_SELECTION_VERSION = "v1.26-ranked-only-five"
+FLOW_HISTORY_POLICY_VERSION = "v1.27-history12-supported"
 
 # 자바스크립트 Math.round 는 .5 를 항상 올림합니다. 파이썬 round 는 짝수로 반올림하므로
 # 점수가 사이트와 달라집니다. 사이트와 같은 값을 내려면 이 함수를 써야 합니다.
@@ -196,12 +197,15 @@ class FlowPolicy:
         self.contexts = {(row[0], row[1], tuple(row[2])): row for row in data["contexts"]}
 
 
-def flow_context(data, current, shield, history):
-    """가장 긴 연속 수순부터 정확한 음절·보호막 문맥을 찾습니다."""
+def flow_context(data, current, shield, history, playable=None):
+    """가장 긴 연속 수순부터 찾되 9~12수는 남은 선택의 표본도 확인합니다."""
     if data is None:
         return None
     history = continuous_flow_history(history, current, shield)
     variants = dueum_variants(current)
+    supported_history = data.policy.get("supportedHistory", 8)
+    minimum_moves = data.policy.get("longHistoryMinimumMoves", 5)
+    minimum_matches = data.policy.get("longHistoryMinimumMatches", 5)
     for length in range(min(data.policy["maxHistory"], len(history)), -1, -1):
         suffix = history[len(history) - length:]
         ids = tuple(data.word_to_id.get(move[0]) for move in suffix)
@@ -211,6 +215,9 @@ def flow_context(data, current, shield, history):
         if row is None:
             continue
         total, matches = row[3:5]
+        extended = length > supported_history
+        if extended and (total < minimum_moves or matches < minimum_matches):
+            continue
         choices = {}
         for word_id, count, players, choice_matches, lines in row[5]:
             word = data.words[word_id]
@@ -227,6 +234,13 @@ def flow_context(data, current, shield, history):
                     "count": n, "matchId": origin[0], "round": origin[1], "turn": origin[2],
                 } for words, actors, n, origin in lines), key=lambda line: -line["count"]),
             }
+        if extended:
+            available = [choice for word, choice in choices.items()
+                         if playable is None or playable(word)]
+            available_count = sum(choice["count"] for choice in available)
+            supported_matches = max((choice["choiceMatches"] for choice in available), default=0)
+            if available_count < minimum_moves or supported_matches < minimum_matches:
+                continue
         return {"historyLength": length, "total": total, "matchCount": matches, "choices": choices}
     return None
 
@@ -468,7 +482,10 @@ def analyze_candidates(core, words, current, shield, used, shield_enabled=True, 
     active_shield = shield if shield_enabled else 0
     ordinary_history = continuous_flow_history(history, current, active_shield)
     history_words = [h[0] for h in ordinary_history]
-    flow = flow_context(core.flow, current, active_shield, ordinary_history)
+    available_words = set(words)
+    flow = flow_context(core.flow, current, active_shield, ordinary_history,
+                        playable=lambda word: word in available_words and word not in used and
+                        core.follow_count(word[-1], used | {word}) >= active_shield)
     master_state = state_evidence(core.learning, current, active_shield)
     rule = NORMALIZED_SHIELD_ROUTE_RULES.get((current, shield))
     out = []

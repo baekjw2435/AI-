@@ -1,7 +1,9 @@
 export function buildFlowPolicy(source, replay, digest) {
   const words=[], ids=new Map(), intern=word=>{if(!ids.has(word)){ids.set(word,words.length);words.push(word);}return ids.get(word);};
   const maps=new Map();
-  const lengths=[0,1,2,3,4,5,6,7,8];
+  // Build the established contexts first so their word IDs, tie ordering, and
+  // examples remain unchanged when longer histories introduce older words.
+  const collect = lengths => {
   for(const segment of replay.segments){
     const moves=segment.moves;
     for(let i=0;i<moves.length;i++){
@@ -26,7 +28,11 @@ export function buildFlowPolicy(source, replay, digest) {
       }
     }
   }
-  const contexts=[...maps.values()].filter(c=>c.history.length===0 || (c.total>=2 && c.matches.size>=2))
+  };
+  collect([0,1,2,3,4,5,6,7,8]);
+  collect([9,10,11,12]);
+  const contexts=[...maps.values()].filter(c=>c.history.length===0 ||
+    (c.history.length<=8 ? c.total>=2 && c.matches.size>=2 : c.total>=5 && c.matches.size>=5))
     .map(c=>[c.current,c.shield,c.history,c.total,c.matches.size,[...c.choices].sort((a,b)=>b[1].count-a[1].count||a[0]-b[0]).map(([id,x])=>[
       id,x.count,[...x.players].sort((a,b)=>a[0]-b[0]),x.matches.size,
       [...x.lines.values()].sort((a,b)=>b.count-a.count||b.words.length-a.words.length).slice(0,2).map(l=>[l.words,l.actors,l.count,l.example]),
@@ -38,7 +44,8 @@ export function buildFlowPolicy(source, replay, digest) {
       rawSelectedMoveCount:replay.diagnostics.rawSelectedMoves,reportedRawSelectedMoveCount:source.stats.rawSelectedPlayerWords,
       firstMatchAt:source.matchLedger.map(x=>x.createdAt).filter(Boolean).sort()[0],
       lastMatchAt:source.matchLedger.map(x=>x.createdAt).filter(Boolean).sort().at(-1)},
-    policy:{maxHistory:8,minimumContextMatches:2,minimumContextMoves:2,playerSelection:replay.playerSelection,
+    policy:{maxHistory:12,supportedHistory:8,longHistoryMinimumMatches:5,longHistoryMinimumMoves:5,
+      historyPolicyVersion:'v1.27-history12-supported',minimumContextMatches:2,minimumContextMoves:2,playerSelection:replay.playerSelection,
       ranking:'longest-supported-sequence-with-playable-evidence-blend',
       effects:'observed-post-cast-only-no-duration-or-shield-inference'},
     diagnostics:replay.diagnostics,players:source.selectedPlayers.map(p=>p.displayName),words,contexts,effectEpisodes};

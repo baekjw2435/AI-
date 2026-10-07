@@ -1,4 +1,4 @@
-"""Standard explorer v1.26: rules, ranked-only selection, and real-data regressions."""
+"""Standard explorer v1.27: rules, ranked-only selection, and real-data regressions."""
 
 from collections import Counter
 import json
@@ -162,6 +162,16 @@ class RealDataRankingTest(unittest.TestCase):
         self.assertEqual(rows[0]["flow"]["total"], 225)
         self.assertEqual(rows[0]["flow"]["matchCount"], 211)
 
+    def test_supported_real_twelve_move_context_is_used(self):
+        words = ["법신덕", "덕업", "업업", "업시름", "늠률", "율무죽", "죽지뼈",
+                 "뼈살촉", "촉촉", "촉탁살인죄", "죄율", "율자죽"]
+        rows = self.ranked("죽", [(word, 0, word[0]) for word in words])
+        self.assertEqual((rows[0]["word"], rows[0]["recommendationScore"]), ("죽을죄", 80.1))
+        self.assertEqual(rows[0]["flow"]["historyLength"], 12)
+        self.assertEqual(rows[0]["flow"]["count"], 5)
+        self.assertEqual(rows[0]["flow"]["matchCount"], 5)
+        self.assertEqual(rows[0]["flowRanking"]["availableCount"], 5)
+
     def test_manual_state_edit_breaks_both_flow_and_route_learning_history(self):
         history = [("족지족", 0, "족"), ("족족", 0, "족")]
         rows = self.ranked("족", history, shield=4)
@@ -218,6 +228,21 @@ class DatasetSelectionTest(unittest.TestCase):
             for profile in data["profiles"]:
                 expected_scope = "ranked-only" if profile["name"] in self.RANKED_ONLY else "existing-verified"
                 self.assertEqual(profile["evidenceScope"], expected_scope)
+
+    def test_flow_contains_supported_twelve_move_contexts(self):
+        policy = self.flow["policy"]
+        self.assertEqual(policy["historyPolicyVersion"], "v1.27-history12-supported")
+        self.assertEqual(policy["maxHistory"], 12)
+        self.assertEqual(policy["supportedHistory"], 8)
+        self.assertEqual(policy["longHistoryMinimumMatches"], 5)
+        self.assertEqual(policy["longHistoryMinimumMoves"], 5)
+        lengths = {len(row[2]) for row in self.flow["contexts"]}
+        self.assertTrue({9, 10, 11, 12}.issubset(lengths))
+        self.assertLessEqual(max(lengths), 12)
+        for row in self.flow["contexts"]:
+            if len(row[2]) > 8:
+                self.assertGreaterEqual(row[3], 5)
+                self.assertGreaterEqual(row[4], 5)
 
     def test_filtered_counts_reconcile_profiles_choices_and_both_state_indexes(self):
         for data, expected, days, ranked in (

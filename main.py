@@ -519,7 +519,7 @@ def load_standard_mid():
     print(f"[로드] 표준 중간 공격 {len(STD_MID_ATTACK)}글자 ({total}단어)")
 
 
-# ---- 루트 학습 자료 (신엜 루트 탐색기 v1.26 과 같은 계산) ----
+# ---- 루트 학습 자료 (신엜 루트 탐색기 v1.27 과 같은 계산) ----
 ROUTE_CORE = None
 ROUTE_READY = False
 ROUTE_DEPTH = 24
@@ -547,6 +547,14 @@ def load_route_learning():
         selections.append(recent.player_selection)
     if any(p.get("version") != rq.PLAYER_SELECTION_VERSION for p in selections):
         print("[경고] 표준 탐색의 장기·최근·흐름 자료가 v1.26 선수별 순위전 정책과 일치하지 않습니다.")
+        return
+    required_flow_policy = {
+        "historyPolicyVersion": rq.FLOW_HISTORY_POLICY_VERSION,
+        "maxHistory": 12, "supportedHistory": 8,
+        "longHistoryMinimumMoves": 5, "longHistoryMinimumMatches": 5,
+    }
+    if any(flow.policy.get(key) != value for key, value in required_flow_policy.items()):
+        print("[경고] 표준 탐색의 흐름 자료가 v1.27의 12수 문맥 정책과 일치하지 않습니다.")
         return
     with open(policy_path, encoding="utf-8") as fp:
         policy = json.load(fp)

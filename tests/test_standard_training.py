@@ -73,13 +73,15 @@ class StandardTrainingTests(unittest.IsolatedAsyncioTestCase):
         self.app["GAMES"].put(game)
         return game
 
-    def test_training_and_explorer_share_loaded_v126_core(self):
+    def test_training_and_explorer_share_loaded_v127_core(self):
         core = self.app["ROUTE_CORE"]
         self.assertIs(self.dictionary.core, core)
-        self.assertEqual(rq.ENGINE_VERSION, "1.26")
+        self.assertEqual(rq.ENGINE_VERSION, "1.27")
         self.assertEqual(core.learning.player_selection["version"], rq.PLAYER_SELECTION_VERSION)
         self.assertEqual(core.recent.player_selection["version"], rq.PLAYER_SELECTION_VERSION)
         self.assertEqual(core.flow.policy["playerSelection"]["version"], rq.PLAYER_SELECTION_VERSION)
+        self.assertEqual(core.flow.policy["historyPolicyVersion"], rq.FLOW_HISTORY_POLICY_VERSION)
+        self.assertEqual(core.flow.policy["maxHistory"], 12)
         history = [("족지족", 0, "족"), ("족족", 0, "족")]
         used = {word for word, _shield, _current in history}
         rows = self.app["legal_candidates"]("족", 0, used, history)
@@ -90,7 +92,7 @@ class StandardTrainingTests(unittest.IsolatedAsyncioTestCase):
         self.assertGreater(rows[0]["recommendationScore"], rare["recommendationScore"])
         self.assertEqual(rows[0]["flowRanking"]["availableCount"], 2)
 
-    async def test_main_bot_turn_passes_game_history_and_applies_v126_recommendation(self):
+    async def test_main_bot_turn_passes_game_history_and_applies_v127_recommendation(self):
         game = self.game()
         game.apply("족지족")
         game.apply("족족")
@@ -114,6 +116,20 @@ class StandardTrainingTests(unittest.IsolatedAsyncioTestCase):
         self.channel.send.assert_awaited_once()
         self.assertIn("족제비업", self.channel.send.await_args.kwargs["embed"].description)
         self.app["schedule_turn_timeout"].assert_awaited_once_with(game, self.channel)
+
+    async def test_training_uses_all_twelve_supported_moves_and_keeps_real_word(self):
+        game = self.game("법")
+        words = ["법신덕", "덕업", "업업", "업시름", "늠률", "율무죽", "죽지뼈",
+                 "뼈살촉", "촉촉", "촉탁살인죄", "죄율", "율자죽"]
+        for word in words:
+            game.apply(word)
+        original = rq.flow_context
+        with patch.object(rq, "flow_context", wraps=original) as context:
+            await self.app["run_bot_turn"](game, self.channel)
+        self.assertEqual([move[0] for move in context.call_args.args[3]], words)
+        self.assertIsNotNone(context.call_args.kwargs["playable"])
+        self.assertEqual(game.history[-1][0], "죽을죄")
+        self.assertIn("죽을죄", self.channel.send.await_args.kwargs["embed"].description)
 
     def test_training_excludes_used_recommendation_and_preserves_protection(self):
         history = [("족지족", 0, "족"), ("족족", 0, "족")]
@@ -176,10 +192,36 @@ class StandardTrainingTests(unittest.IsolatedAsyncioTestCase):
         with patch.dict(self.app, {"ROUTE_READY": False}):
             self.assertIsNone(self.app["game_dictionary"](self.app["MODE_STANDARD"]))
 
+    def test_loader_rejects_stale_flow_before_claiming_v127_readiness(self):
+        core = self.app["ROUTE_CORE"]
+        invalid = [
+            {**core.flow.policy, "maxHistory": 8},
+            {key: value for key, value in core.flow.policy.items() if key != "historyPolicyVersion"},
+            {**core.flow.policy, "historyPolicyVersion": "older-policy"},
+            {**core.flow.policy, "supportedHistory": 12},
+            {**core.flow.policy, "longHistoryMinimumMoves": 2},
+            {**core.flow.policy, "longHistoryMinimumMatches": 2},
+        ]
+        for policy in invalid:
+            with self.subTest(policy=policy):
+                output = io.StringIO()
+                with patch.dict(self.app, {"ROUTE_CORE": core, "ROUTE_READY": True,
+                                          "find_file": lambda patterns: str(ROOT / patterns[0])}), \
+                        patch.object(rq, "load_learning", side_effect=lambda path:
+                                     core.recent if "recent" in path else core.learning), \
+                        patch.object(rq, "load_flow", return_value=SimpleNamespace(policy=policy)), \
+                        contextlib.redirect_stdout(output):
+                    self.app["load_route_learning"]()
+                    self.assertFalse(self.app["ROUTE_READY"])
+                    self.assertIsNone(self.app["ROUTE_CORE"])
+                    self.assertIsNone(self.app["game_dictionary"](self.app["MODE_STANDARD"]))
+                self.assertIn("12수 문맥 정책", output.getvalue())
+                self.assertNotIn("자료 준비 완료", output.getvalue())
+
     def test_version_label_only_marks_standard_bot_training(self):
         training = self.game()
         footer = training.board().footer.text
-        self.assertIn("표준 훈련 v1.26", footer)
+        self.assertIn("표준 훈련 v1.27", footer)
         self.assertIn("훈련봇", footer)
         self.assertIn("참가자", footer)
         self.assertNotIn("순위전 전용", footer)
