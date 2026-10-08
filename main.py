@@ -131,10 +131,12 @@ QUORIDOR_CHANNELS = {cid for cid, (kind, _) in CHANNEL_ROLES.items() if kind == 
 
 # ===== 순위전 시간대 조회 딜레이 =====
 # 순위전 시간에 표준 자료 조회를 10~15초 늦춥니다. 막지는 않습니다.
+# 한국시간 평일 18시~자정, 토·일요일 14시~자정에 자동 적용합니다.
 # 대국(!대결·!경기)과 복합 채널 조회는 늦어지지 않습니다.
 # 켜고 끄는 것은 서버 관리자만 할 수 있습니다.  →  !제한 켜기 / !제한 끄기
 KST = timezone(timedelta(hours=9))          # 한국시간. 서버는 UTC 로 돌기 때문에 필요합니다.
 LOCK_FILE = "lock_state.json"               # 껐다 켠 상태를 저장해 둡니다.
+LOCK_SCHEDULE_VERSION = "kst-weekday-weekend-v1"
 
 # 늦출 명령입니다. 여기서 빼면 그 명령은 제한을 받지 않습니다.
 # 전용 탐색 채널에서 허용된 조회를 늦추기만 합니다.
@@ -170,9 +172,11 @@ def _env_delay(name, default=(10, 15)):
     return default
 
 LOCK = {
-    "on": _env_flag("STUDY_LOCK", False),
-    "start": _env_hours("STUDY_LOCK_HOURS")[0],
-    "end": _env_hours("STUDY_LOCK_HOURS")[1],
+    "schedule_version": LOCK_SCHEDULE_VERSION,
+    "on": True,
+    "start": 18,
+    "end": 24,
+    "weekend_start": 14,
     "dmin": _env_delay("STUDY_LOCK_DELAY")[0],
     "dmax": _env_delay("STUDY_LOCK_DELAY")[1],
 }
@@ -183,17 +187,33 @@ ADMIN_IDS = {int(x) for x in re.findall(r"\d+", os.environ.get("ADMIN_IDS", ""))
 
 
 def lock_load():
-    """지난번에 껐다 켠 상태를 되살립니다. 파일이 없으면 환경변수 값을 씁니다."""
+    """기존 설정을 새 일정으로 한 번 이관하고, 이후 관리자 설정을 복원합니다."""
     try:
         with open(LOCK_FILE, encoding="utf-8") as fp:
             saved = json.load(fp)
-        for k in LOCK:
-            if k in saved:
-                LOCK[k] = saved[k]
-        print(f"[로드] 조회 제한 상태 복원 ({'켜짐' if LOCK['on'] else '꺼짐'} · "
-              f"{LOCK['start']}시~{LOCK['end']}시 · 딜레이 {LOCK['dmin']}~{LOCK['dmax']}초)")
-    except Exception:
-        pass
+    except (OSError, ValueError):
+        saved = {}
+    if not isinstance(saved, dict):
+        saved = {}
+    dmin, dmax = saved.get("dmin"), saved.get("dmax")
+    if type(dmin) is int and type(dmax) is int and 0 <= dmin <= dmax <= 120:
+        LOCK["dmin"], LOCK["dmax"] = dmin, dmax
+    if saved.get("schedule_version") == LOCK_SCHEDULE_VERSION:
+        if type(saved.get("on")) is bool:
+            LOCK["on"] = saved["on"]
+        start, end = saved.get("start"), saved.get("end")
+        weekend = saved.get("weekend_start")
+        if (all(type(x) is int and 0 <= x <= 24 for x in (start, end, weekend))
+                and start != end and weekend != end):
+            LOCK["start"], LOCK["end"], LOCK["weekend_start"] = start, end, weekend
+    else:
+        # The requested automatic schedule replaces legacy disabled/hour settings
+        # once. The versioned state preserves later administrator changes.
+        LOCK.update(schedule_version=LOCK_SCHEDULE_VERSION, on=True,
+                    start=18, end=24, weekend_start=14)
+    lock_save()
+    print(f"[로드] 조회 제한 상태 복원 ({'켜짐' if LOCK['on'] else '꺼짐'} · "
+          f"{lock_window_text()} · 딜레이 {lock_delay_text()})")
 
 
 def lock_save():
@@ -206,13 +226,17 @@ def lock_save():
 
 def lock_window_text():
     end = LOCK["end"]
-    return f"{LOCK['start']}시 ~ {'자정' if end in (0, 24) else str(end) + '시'}"
+    end_text = "자정" if end in (0, 24) else str(end) + "시"
+    return (f"평일 {LOCK['start']}시 ~ {end_text} · "
+            f"주말 {LOCK['weekend_start']}시 ~ {end_text}")
 
 
-def in_window():
+def in_window(now=None):
     """지금 시각이 제한 시간대 안인지만 봅니다. 켜짐·꺼짐과는 무관합니다."""
-    h = datetime.now(KST).hour
-    a, b = LOCK["start"], LOCK["end"] % 24
+    now = datetime.now(KST) if now is None else now.astimezone(KST)
+    h = now.hour
+    a = LOCK["weekend_start"] if now.weekday() >= 5 else LOCK["start"]
+    b = LOCK["end"] % 24
     if a == b:
         return True
     if a < b:
@@ -2330,7 +2354,8 @@ async def on_message(msg):
                 f"{' · '.join('`' + x + '`' for x in LOCK_COMMANDS_STANDARD)} 입니다.\n"
                 f"복합 사전 채널의 조회와 대국은 늦어지지 않습니다.\n"
                 f"관리자는 `!제한 켜기` · `!제한 끄기` · `!제한 18-24` · "
-                f"`!제한 딜레이 10-15` 로 바꾸실 수 있습니다.")
+                f"`!제한 딜레이 10-15` 로 바꾸실 수 있습니다. "
+                f"시간 변경 명령은 평일·주말에 함께 적용됩니다.")
             return
         if not is_admin(msg):
             await msg.channel.send("이 설정은 서버 관리자만 바꾸실 수 있습니다.")
@@ -2340,7 +2365,7 @@ async def on_message(msg):
             await msg.channel.send(
                 f"조회 제한을 **켰습니다.** 한국시간 **{lock_window_text()}** 에는 "
                 f"표준 자료 조회가 **{lock_delay_text()}** 늦게 나옵니다. "
-                f"순위전이 끝나면 `!제한 끄기` 를 입력해 주세요.")
+                f"정해진 시간대에 자동으로 적용됩니다.")
             return
         if arg in ("끄기", "끔", "off", "stop"):
             LOCK["on"] = False; lock_save()
@@ -2364,7 +2389,7 @@ async def on_message(msg):
             if not (0 <= a <= 24 and 0 <= b <= 24) or a == b:
                 await msg.channel.send("0 부터 24 사이로, 서로 다른 두 숫자를 넣어 주세요. 예) `!제한 18-24`")
                 return
-            LOCK["start"], LOCK["end"] = a, b; lock_save()
+            LOCK["start"], LOCK["end"], LOCK["weekend_start"] = a, b, a; lock_save()
             await msg.channel.send(
                 f"제한 시간대를 한국시간 **{lock_window_text()}** 으로 바꿨습니다. "
                 f"지금 제한은 {'켜져 있습니다' if LOCK['on'] else '꺼져 있습니다'}.")
