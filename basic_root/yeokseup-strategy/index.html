@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>역습 필승 수순</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column like a scorebook — current turn on top, played line as a chain, full table below. */
+:root {
+  --paper: #f2f4f1;
+  --sheet: #ffffff;
+  --ink: #1d2733;
+  --muted: #5d6a74;
+  --line: #d5dbd6;
+  --accent: #1f5f7a;
+  --accent-soft: #e2edf1;
+  --proof: #1f5f7a;
+  --mirror: #9a5b12;
+  --static: #2f6b3f;
+  --proof-bg: #e2edf1;
+  --mirror-bg: #f6ead9;
+  --static-bg: #e3efe5;
+  --danger: #a3312b;
+  --display: "Gowun Batang", "Nanum Myeongjo", "Apple SD Gothic Neo", serif;
+  --body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12171c; --sheet: #1a2128; --ink: #e4e9ec; --muted: #9aa7b0; --line: #2d3740;
+    --accent: #7cc0dc; --accent-soft: #1d3340; --proof: #7cc0dc; --mirror: #e0a95e; --static: #8ccf9c;
+    --proof-bg: #1d3340; --mirror-bg: #3a2b17; --static-bg: #1f3325; --danger: #f08a83; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12171c; --sheet: #1a2128; --ink: #e4e9ec; --muted: #9aa7b0; --line: #2d3740;
+  --accent: #7cc0dc; --accent-soft: #1d3340; --proof: #7cc0dc; --mirror: #e0a95e; --static: #8ccf9c;
+  --proof-bg: #1d3340; --mirror-bg: #3a2b17; --static-bg: #1f3325; --danger: #f08a83; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.6; }
+.wrap { max-width: 720px; margin: 0 auto; padding-block: 28px 56px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 28px; }
+h1, h2 { font-family: var(--display); font-weight: 700; text-wrap: balance; margin: 0; }
+h1 { font-size: 2rem; line-height: 1.25; }
+h2 { font-size: 1.3rem; }
+p { margin: 0; max-width: 65ch; }
+.lede { display: grid; gap: 10px; }
+.lede .facts { color: var(--muted); font-size: 0.9rem; }
+.eyebrow { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+.panel { background: var(--sheet); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 16px; min-width: 0; }
+.chain { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 0.92rem; }
+.chain .w { padding: 2px 8px; border-radius: 6px; background: var(--paper); border: 1px solid var(--line); }
+.chain .w.me { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.chain .arrow { color: var(--muted); font-size: 0.8rem; }
+.turn { display: grid; gap: 6px; }
+.syl { font-family: var(--display); font-size: 2.6rem; line-height: 1; }
+.answer { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
+.answer .word { font-family: var(--display); font-size: 1.9rem; font-weight: 700; color: var(--accent); }
+.badge { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; padding: 2px 8px; border-radius: 999px; }
+.badge.proof { color: var(--proof); background: var(--proof-bg); }
+.badge.mirror { color: var(--mirror); background: var(--mirror-bg); }
+.badge.static { color: var(--static); background: var(--static-bg); }
+.alts { color: var(--muted); font-size: 0.88rem; }
+.choices { display: flex; flex-wrap: wrap; gap: 8px; }
+.choices button { font: inherit; font-size: 1rem; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
+.choices button:hover { border-color: var(--accent); }
+.choices button:focus-visible, .tools button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; }
+.tools button { font: inherit; font-size: 0.9rem; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.tools button:disabled { opacity: 0.45; cursor: default; }
+.win { font-family: var(--display); font-size: 1.4rem; color: var(--static); }
+.status { color: var(--muted); font-size: 0.9rem; }
+.error { color: var(--danger); }
+.legend { display: grid; gap: 8px; font-size: 0.9rem; }
+.legend div { display: flex; gap: 10px; align-items: baseline; }
+.legend .badge { flex: none; }
+details { border-top: 1px solid var(--line); padding-top: 10px; }
+details:first-of-type { border-top: 0; padding-top: 0; }
+summary { cursor: pointer; font-weight: 600; }
+.tree { overflow-x: auto; }
+.tree pre { margin: 8px 0 0; font-family: var(--body); font-size: 0.86rem; line-height: 1.7; white-space: pre; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: no-preference) { .answer .word { transition: color 0.2s; } }
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="lede">
+    <span class="eyebrow">기초사전 루트 817단어 · 표준두음법칙 · 재사용 금지</span>
+    <h1>역을 받으면 역습</h1>
+    <p>상대가 역으로 끝나는 단어를 내면 역습으로 받으세요. 그 뒤 상대가 어떤 단어를 내도 아래에서 고르면 이기는 응수가 나옵니다.</p>
+    <p class="facts">근거: 국면 <span class="num">1,406,006</span>개짜리 승리 증명을 수정하지 않은 verify_v2.py로 검증했습니다. 역을 받는 순간 817단어가 모두 남아 있을 때의 결과입니다.</p>
+  </header>
+
+  <section class="panel" aria-labelledby="play-title">
+    <h2 id="play-title">수순 따라가기</h2>
+    <div class="chain" id="chain" aria-label="지금까지의 수순"></div>
+    <div id="body" class="turn"><p class="status">승리수 표를 불러오는 중이에요…</p></div>
+    <div class="tools">
+      <button id="undo" type="button">한 수 무르기</button>
+      <button id="reset" type="button">처음부터</button>
+      <button id="random" type="button">상대 수 무작위로 두기</button>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="legend-title">
+    <h2 id="legend-title">응수 표시</h2>
+    <div class="legend">
+      <div><span class="badge proof">증명</span><span>검증된 증명에 적힌 승리수입니다.</span></div>
+      <div><span class="badge mirror">되받기</span><span>상대가 짝이 있는 단어를 내면 그 짝으로 바로 받습니다. 예: 역풍에는 풍력, 식곤증에는 증식.</span></div>
+      <div><span class="badge static">정적</span><span>남은 길이 계산만으로 정해지는 자리입니다. 상대를 낼 단어가 없어지는 음절로 보냅니다.</span></div>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="tree-title">
+    <h2 id="tree-title">수순표 (상대 네 번째 응수까지)</h2>
+    <p class="status">역습 다음 상대의 첫 응수별로 펼쳐 보세요. 그보다 깊은 수순은 위에서 따라가면 나옵니다. 증명에 담긴 수순 갈래는 <span class="num">441,804</span>개, 가장 긴 것은 역습 뒤 <span class="num">72</span>수입니다.</p>
+    <div id="tree"><p class="status">불러오는 중이에요…</p></div>
+  </section>
+</div>
+
+<script src="engine.js" charset="utf-8"></script>
+<script>
+(function () {
+  var history = ["역습"], moves = [];
+  var chain = document.getElementById("chain"), body = document.getElementById("body");
+  var undoBtn = document.getElementById("undo"), resetBtn = document.getElementById("reset"), randomBtn = document.getElementById("random");
+  var ready = false;
+  var badgeClass = { "증명": "proof", "되받기": "mirror", "정적": "static" };
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function renderChain() {
+    chain.textContent = "";
+    chain.appendChild(el("span", "w", "상대: ~역"));
+    history.forEach(function (w, i) {
+      chain.appendChild(el("span", "arrow", "→"));
+      var who = i % 2 === 0 ? "me" : "";
+      chain.appendChild(el("span", "w " + who, w));
+    });
+  }
+
+  function render() {
+    renderChain();
+    undoBtn.disabled = history.length <= 1;
+    body.textContent = "";
+    if (!ready) return;
+    var last = history[history.length - 1];
+    var mine = el("div", "answer");
+    var opp = YeokEngine.legalWords(history);
+    var lastMove = moves.length ? moves[moves.length - 1] : { word: "역습", how: "증명", alts: [] };
+    if (lastMove) {
+      mine.appendChild(el("span", "eyebrow", "내 응수"));
+      mine.appendChild(el("span", "word", lastMove.word));
+      mine.appendChild(el("span", "badge " + badgeClass[lastMove.how], lastMove.how));
+      if (lastMove.alts && lastMove.alts.length) mine.appendChild(el("span", "alts", "같은 효과: " + lastMove.alts.join(", ")));
+      body.appendChild(mine);
+    }
+    if (!opp.length) {
+      body.appendChild(el("p", "win", "상대가 낼 단어가 없어요. 이겼습니다."));
+      randomBtn.disabled = true;
+      return;
+    }
+    randomBtn.disabled = false;
+    var t = el("div", "turn");
+    t.appendChild(el("span", "eyebrow", "상대 차례"));
+    t.appendChild(el("span", "syl", YeokEngine.syllableOf(history)));
+    t.appendChild(el("p", "status", "상대가 낸 단어를 고르세요 (" + opp.length + "개)"));
+    body.appendChild(t);
+    var box = el("div", "choices");
+    opp.forEach(function (w) {
+      var b = el("button", "", w); b.type = "button";
+      b.addEventListener("click", function () { play(w); });
+      box.appendChild(b);
+    });
+    body.appendChild(box);
+  }
+
+  function play(oppWord) {
+    var h = history.concat([oppWord]);
+    var mv = YeokEngine.ourMove(h);
+    if (!mv) { body.appendChild(el("p", "error", "이 자리의 승리수를 찾지 못했어요. 수순을 알려 주시면 확인할게요: " + h.join(" → "))); return; }
+    history = h.concat([mv.word]);
+    moves.push(mv);
+    render();
+  }
+
+  undoBtn.addEventListener("click", function () {
+    if (history.length <= 1) return;
+    history = history.slice(0, -2); moves.pop();
+    render();
+  });
+  resetBtn.addEventListener("click", function () { history = ["역습"]; moves = []; render(); });
+  randomBtn.addEventListener("click", function () {
+    var opp = YeokEngine.legalWords(history);
+    if (opp.length) play(opp[Math.floor(Math.random() * opp.length)]);
+  });
+
+  function walk(h, depth, indent, lines) {
+    YeokEngine.legalWords(h).forEach(function (w) {
+      var hh = h.concat([w]), mv = YeokEngine.ourMove(hh);
+      if (!mv) { lines.push(indent + "상대 " + w + " → 확인 필요"); return; }
+      var tag = mv.how === "증명" ? "" : " [" + mv.how + "]";
+      var next = hh.concat([mv.word]), done = YeokEngine.legalWords(next).length === 0;
+      lines.push(indent + "상대 " + w + " → 나 " + mv.word + tag + (done ? "  (상대 낼 단어 없음)" : ""));
+      if (!done && depth > 1) walk(next, depth - 1, indent + "    ", lines);
+    });
+  }
+
+  function buildTree() {
+    var host = document.getElementById("tree"); host.textContent = "";
+    YeokEngine.legalWords(["역습"]).forEach(function (first) {
+      var mv = YeokEngine.ourMove(["역습", first]), lines = [];
+      walk(["역습", first, mv.word], 3, "", lines);
+      var d = el("details");
+      d.appendChild(el("summary", "", "상대 " + first + " → 나 " + mv.word + "  (" + lines.length + "줄)"));
+      var div = el("div", "tree"), pre = el("pre");
+      pre.textContent = lines.join("\n");
+      div.appendChild(pre); d.appendChild(div); host.appendChild(d);
+    });
+  }
+
+  render();
+  Promise.all([fetch("model.json").then(function (r) { if (!r.ok) throw new Error(); return r.json(); }),
+               fetch("strategy.bin").then(function (r) { if (!r.ok) throw new Error(); return r.arrayBuffer(); })])
+    .then(function (res) {
+      YeokEngine.init(res[0], res[1]);
+      ready = true;
+      render();
+      buildTree();
+    })
+    .catch(function (err) { console.error("load failed", err && err.stack || err); body.textContent = ""; body.appendChild(el("p", "error", "승리수 표를 불러오지 못했어요. 새로고침해 주세요.")); });
+})();
+</script>
+
+</body>
+</html>
