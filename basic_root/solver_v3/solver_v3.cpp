@@ -848,6 +848,7 @@ int main(int argc, char** argv) {
         while ((n = fread(buf, 1, sizeof buf, in)) > 0) fwrite(buf, 1, n, o);
         fclose(in); if (fclose(o)) throw runtime_error("proof finalize failure");
       }
+      if (emit_expired()) throw runtime_error("emission time limit while finalizing the proof file");
       remove(tmp.c_str());
       if (rename(out.c_str(), opt.proof.c_str())) throw runtime_error("proof rename failure");
       proof_nodes = em.count; resolves = em.resolves; resolve_mid = em.resolve_mid; crosschecks = em.crosschecks;

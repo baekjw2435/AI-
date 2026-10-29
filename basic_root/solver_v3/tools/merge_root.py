@@ -10,7 +10,7 @@ by (v, counts) and renumbered; the output must still be checked by verify_v2.py.
 This is a convenience for root splitting across processes/sessions; it does not
 trust anything (the verifier re-derives every edge, including the new root's).
 """
-import gzip, hashlib, json, sys
+import os, gzip, hashlib, json, sys
 sys.dont_write_bytecode = True
 sys.path.insert(0, os.environ.get('ROUTE_VERIFIER_DIR', '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/verifier/route-verifier-v2'))
 from verify_v2 import IndependentModelV2  # noqa: E402
