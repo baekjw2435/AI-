@@ -80,8 +80,10 @@ def main():
         refused('other root position', inp2=posdir / f'{b}.txt')
         lines = inp.read_text().splitlines()
         nv, ng, cur = map(int, lines[0].split())
+        have = {tuple(map(int, ln.split()[:2])) for ln in lines[1:]}
+        s0, t0 = next((s, t) for s in range(nv) for t in range(nv) if (s, t) not in have)
         g2 = td / 'graph2.txt'
-        g2.write_text('\n'.join([f'{nv} {ng + 1} {cur}'] + lines[1:] + [f'{nv - 1} {nv - 1} 0']) + '\n')
+        g2.write_text('\n'.join([f'{nv} {ng + 1} {cur}'] + lines[1:] + [f'{s0} {t0} 0']) + '\n')
         refused('other game graph (one more group)', inp2=g2)
         refused('other --init', '--init', 0)
         refused('other --wpn', '--wpn', 1)
