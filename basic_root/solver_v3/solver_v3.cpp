@@ -839,13 +839,23 @@ int main(int argc, char** argv) {
         gzclose(h);
         FILE* o = fopen(out.c_str(), "ab"); FILE* in = fopen(tmp.c_str(), "rb");
         char buf[1 << 16]; size_t n;
-        while ((n = fread(buf, 1, sizeof buf, in)) > 0) fwrite(buf, 1, n, o);
+        while ((n = fread(buf, 1, sizeof buf, in)) > 0) {
+          if (fwrite(buf, 1, n, o) != n || emit_expired()) {
+            fclose(in); fclose(o);
+            throw runtime_error(emit_expired() ? "emission time limit while finalizing the proof file" : "proof finalize failure");
+          }
+        }
         fclose(in); if (fclose(o)) throw runtime_error("proof finalize failure");
       } else {
         FILE* o = fopen(out.c_str(), "wb"); FILE* in = fopen(tmp.c_str(), "rb");
         fwrite(head.data(), 1, head.size(), o);
         char buf[1 << 16]; size_t n;
-        while ((n = fread(buf, 1, sizeof buf, in)) > 0) fwrite(buf, 1, n, o);
+        while ((n = fread(buf, 1, sizeof buf, in)) > 0) {
+          if (fwrite(buf, 1, n, o) != n || emit_expired()) {
+            fclose(in); fclose(o);
+            throw runtime_error(emit_expired() ? "emission time limit while finalizing the proof file" : "proof finalize failure");
+          }
+        }
         fclose(in); if (fclose(o)) throw runtime_error("proof finalize failure");
       }
       if (emit_expired()) throw runtime_error("emission time limit while finalizing the proof file");
