@@ -119,6 +119,8 @@ PINNED_817_SHA256 = "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c
 def verify_v2(dictionary_path, position_path, proof_path, input_path=None,
               expected_word_count=817, expected_dictionary_sha256=None,
               allow_initial_used=True, allow_extra_position_keys=True):
+    """Backward-compatible API: lenient defaults so existing callers and toy-dictionary tests keep working.
+    Research results must come from verify_v2_research() or the CLI, which are strict by default."""
     started = time.monotonic()
     dictionary_bytes = Path(dictionary_path).read_bytes()
     position_bytes = Path(position_path).read_bytes()
@@ -126,6 +128,7 @@ def verify_v2(dictionary_path, position_path, proof_path, input_path=None,
         position = json.loads(position_bytes, object_pairs_hook=_unique_keys)
     except (ValueError, UnicodeError, RecursionError) as exc:
         raise VerificationError(f"invalid position JSON: {exc}") from exc
+    require(isinstance(position, dict), "position must be an object")
     model = IndependentModelV2(dictionary_bytes, expected_word_count)
     require(allow_initial_used or not position.get("initial_used_words"),
             "initial_used_words is not a game history; pass --allow-initial-used")
@@ -238,6 +241,13 @@ def verify_v2(dictionary_path, position_path, proof_path, input_path=None,
             "proof_sha256": digest.hexdigest(), "input_sha256": input_digest,
             "elapsed_seconds": round(time.monotonic() - started, 3),
             "legacy_lookup_trusted": False}
+
+
+def verify_v2_research(dictionary_path, position_path, proof_path, input_path=None):
+    """Strict entry point with the same defaults as the CLI: the pinned 817-word dictionary,
+    history-only positions (no initial_used_words) and no unchecked position keys."""
+    return verify_v2(dictionary_path, position_path, proof_path, input_path, 817,
+                     PINNED_817_SHA256, False, False)
 
 
 def main():

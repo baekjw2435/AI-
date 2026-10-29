@@ -431,6 +431,12 @@ static atomic<u64> g_mid{0}, g_gen{0}, g_selfchecks{0};
 static chrono::steady_clock::time_point t_start;
 static string stop_reason = "none";
 static mutex reason_mu;
+// proof-emission deadline (--emit-seconds); checked per emitted node and inside re-solves
+static atomic<bool> emit_deadline_on{false};
+static chrono::steady_clock::time_point emit_deadline;
+static inline bool emit_expired() {
+  return emit_deadline_on.load(memory_order_relaxed) && chrono::steady_clock::now() >= emit_deadline;
+}
 
 static inline void init_numbers(int nm, int corev, u32& pn, u32& dn) {
   switch (opt.init) {
@@ -496,6 +502,7 @@ struct Searcher {
       }
       if (el >= opt.seconds) { lock_guard<mutex> l(reason_mu); if (!stop_flag) stop_reason = "time_limit"; stop_flag = true; }
       if (g_mid.load(memory_order_relaxed) >= opt.max_mid) { lock_guard<mutex> l(reason_mu); if (!stop_flag) stop_reason = "node_limit"; stop_flag = true; }
+      if (emit_expired()) { lock_guard<mutex> l(reason_mu); if (!stop_flag) stop_reason = "emit_time_limit"; stop_flag = true; }
     }
     u64 work = 1, prevwork = 0;
     { u32 p, q, wk; int b; if (tt.probe(S.h0, S.h1, p, q, wk, b)) prevwork = wk; }
@@ -629,9 +636,9 @@ struct Emitter {
     R.cur = es[d].cur; R.core = es[d].core; R.loop = es[d].loop; R.succ = es[d].succ; R.cnt = es[d].cnt; R.h0 = es[d].h0; R.h1 = es[d].h1;
     for (;;) {
       u32 rp, rd; u64 rw;
+      if (emit_expired()) throw runtime_error("emission time limit while re-solving an evicted node");
       u64 before = S->mid_calls;
-      bool saved = stop_flag.exchange(false);
-      (void)saved;
+      stop_flag = false;
       S->mid(0, INF, INF, rp, rd, rw);
       resolve_mid += S->mid_calls - before;
       if (rp == 0 || rd == 0) {
@@ -639,12 +646,12 @@ struct Emitter {
         tt.store(es[d].h0, es[d].h1, rp, rd, (u32)min<u64>(rw, 0xFFFFFFF0ull), -1);
         return rp == 0;
       }
-      if (chrono::duration<double>(chrono::steady_clock::now() - t0).count() > opt.emit_seconds)
-        throw runtime_error("emission time limit while re-solving an evicted node");
+      if (emit_expired()) throw runtime_error("emission time limit while re-solving an evicted node");
     }
   }
   // es[d] holds a canonical state with known static flag `stat`. Returns id; sets win.
   u32 emit(int d, int stat, bool& win) {
+    if (emit_expired()) throw runtime_error("emission time limit");
     State& E = es[d];
     u32 id;
     if (find(E.h0, E.h1, id)) {
@@ -801,16 +808,20 @@ int main(int argc, char** argv) {
     u64 proof_nodes = 0, resolves = 0, resolve_mid = 0, crosschecks = 0;
     double emit_s = 0;
     string vstatus = "none";
+    string proof_error;
     if (result != "unknown" && !opt.proof.empty()) {
       auto t0 = chrono::steady_clock::now();
+      emit_deadline = t0 + chrono::duration_cast<chrono::steady_clock::duration>(chrono::duration<double>(min(opt.emit_seconds, 1e9)));
+      emit_deadline_on = true;
+      const string tmp = opt.proof + ".body.tmp", out = opt.proof + ".tmp";
+      Emitter em;
+      try {
       stop_flag = false;
       opt.seconds = 1e18; opt.max_mid = ~0ull;
-      Emitter em;
       em.S = &ss[0];
       em.t0 = t0;
       em.es.resize(maxdepth + 2);
       for (auto& s : em.es) s.init();
-      string tmp = opt.proof + ".body.tmp";
       bool gzip = opt.proof.size() > 3 && opt.proof.substr(opt.proof.size() - 3) == ".gz";
       if (gzip) { em.gz = gzopen(tmp.c_str(), "wb6"); if (!em.gz) throw runtime_error("cannot create proof body"); }
       else { em.fp = fopen(tmp.c_str(), "wb"); if (!em.fp) throw runtime_error("cannot create proof body"); }
@@ -819,9 +830,8 @@ int main(int argc, char** argv) {
       bool win;
       u32 rid = em.emit(0, rstat, win);
       if (win != (result == "win")) throw runtime_error("emission result differs from search result");
-      if (gzip) gzclose(em.gz); else fclose(em.fp);
+      if (gzip) { gzclose(em.gz); em.gz = nullptr; } else { fclose(em.fp); em.fp = nullptr; }
       string head = "{\"format\":\"route-proof-v2\",\"groups\":" + to_string(G) + ",\"vertices\":" + to_string(N) + ",\"root\":" + to_string(rid) + "}\n";
-      string out = opt.proof + ".tmp";
       if (gzip) {
         // concatenated gzip members are a valid gzip stream
         gzFile h = gzopen(out.c_str(), "wb6");
@@ -842,19 +852,28 @@ int main(int argc, char** argv) {
       if (rename(out.c_str(), opt.proof.c_str())) throw runtime_error("proof rename failure");
       proof_nodes = em.count; resolves = em.resolves; resolve_mid = em.resolve_mid; crosschecks = em.crosschecks;
       emit_s = chrono::duration<double>(chrono::steady_clock::now() - t0).count();
+      } catch (const exception& e) {
+        if (em.gz) { gzclose(em.gz); em.gz = nullptr; }
+        if (em.fp) { fclose(em.fp); em.fp = nullptr; }
+        remove(tmp.c_str()); remove(out.c_str());
+        proof_error = e.what();
+        proof_nodes = 0;
+        emit_s = chrono::duration<double>(chrono::steady_clock::now() - t0).count();
+      }
+      emit_deadline_on = false;
     }
     u64 used = tt.used();
     printf("{\"result\":\"%s\",\"reason\":\"%s\",\"mid_calls\":%llu,\"child_gens\":%llu,\"tt_entries\":%llu,\"tt_capacity\":%llu,\"tt_mb\":%zu,"
            "\"tt_stores\":%llu,\"tt_replacements\":%llu,\"seconds\":%s,\"pn\":%u,\"dn\":%u,\"best_group\":%d,\"threads\":%d,"
            "\"eps\":%g,\"init\":%d,\"wpn\":%d,\"proof_nodes\":%llu,\"emit_resolves\":%llu,\"emit_resolve_mid\":%llu,"
-           "\"emit_crosschecks\":%llu,\"emit_seconds\":%s,\"selfchecks\":%llu}\n",
+           "\"emit_crosschecks\":%llu,\"emit_seconds\":%s,\"selfchecks\":%llu,\"proof_error\":\"%s\"}\n",
            result.c_str(), stop_reason.c_str(), (unsigned long long)mid_total, (unsigned long long)gen_total,
            (unsigned long long)used, (unsigned long long)(tt.nb * 4), (size_t)(tt.bytes >> 20),
            (unsigned long long)tt.stores.load(), (unsigned long long)tt.replacements.load(), jnum(elapsed).c_str(), rpn, rdn, bestg,
            (int)ss.size(), opt.eps, opt.init, opt.wpn, (unsigned long long)proof_nodes, (unsigned long long)resolves,
            (unsigned long long)resolve_mid, (unsigned long long)crosschecks, jnum(emit_s).c_str(),
-           (unsigned long long)g_selfchecks.load());
-    return 0;
+           (unsigned long long)g_selfchecks.load(), proof_error.c_str());
+    return proof_error.empty() ? 0 : 3;
   } catch (const exception& e) {
     fprintf(stderr, "solver error: %s\n", e.what());
     return 2;

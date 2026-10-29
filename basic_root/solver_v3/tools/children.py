@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """children.py POSITION.json OUTDIR PREFIX : one child position per legal reduced group
 (one representative unused word per group); writes OUTDIR/PREFIX_<k>.json and .txt and prints a TSV."""
-import json, sys
+import os, json, sys
 sys.dont_write_bytecode = True
-sys.path.insert(0, '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/verifier/route-verifier-v2')
+sys.path.insert(0, os.environ.get('ROUTE_VERIFIER_DIR', '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/verifier/route-verifier-v2'))
 from verify_v2 import IndependentModelV2
-D = '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/basic_root.txt'
+D = os.environ.get('ROUTE_DICTIONARY', '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/basic_root.txt')
 m = IndependentModelV2(open(D, 'rb').read())
 pos = json.load(open(sys.argv[1], encoding='utf-8')); out = sys.argv[2]; pre = sys.argv[3]
 cur, counts, used = m.position(pos)
+if pos.get("initial_used_words"):
+    sys.exit("children.py: initial_used_words is not supported; positions must be history-only")
 core, st = m.normalize(cur, counts)
 if st != -1:
     print("static", st); sys.exit()

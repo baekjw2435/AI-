@@ -1,5 +1,5 @@
---- ../verifier/route-verifier-v2/verify_v2.py	2026-10-28 04:18:44.415940711 +0000
-+++ patched/verify_v2.py	2026-10-28 08:02:27.585062915 +0000
+--- verify_v2.py	2026-10-28 04:18:44.415940711 +0000
++++ verify_v2.patched.py	2026-10-29 02:23:34.405816343 +0000
 @@ -9,6 +9,7 @@
  import argparse
  import gzip
@@ -29,7 +29,7 @@
  class IndependentModelV2(IndependentModel):
      def static_labels(self, counts):
          # Multiplicities do not change existential/universal successor tests.
-@@ -88,17 +103,44 @@
+@@ -88,17 +103,47 @@
          return target, normalized, static
  
  
@@ -50,6 +50,8 @@
 -              expected_word_count=817):
 +              expected_word_count=817, expected_dictionary_sha256=None,
 +              allow_initial_used=True, allow_extra_position_keys=True):
++    """Backward-compatible API: lenient defaults so existing callers and toy-dictionary tests keep working.
++    Research results must come from verify_v2_research() or the CLI, which are strict by default."""
      started = time.monotonic()
      dictionary_bytes = Path(dictionary_path).read_bytes()
      position_bytes = Path(position_path).read_bytes()
@@ -58,6 +60,7 @@
 -    except (ValueError, UnicodeError) as exc:
 +    except (ValueError, UnicodeError, RecursionError) as exc:
          raise VerificationError(f"invalid position JSON: {exc}") from exc
++    require(isinstance(position, dict), "position must be an object")
      model = IndependentModelV2(dictionary_bytes, expected_word_count)
 +    require(allow_initial_used or not position.get("initial_used_words"),
 +            "initial_used_words is not a game history; pass --allow-initial-used")
@@ -76,7 +79,7 @@
      expected_root, _ = model.normalize(root_vertex, initial_counts)
      input_digest = (model.check_numeric_input(input_path, root_vertex, initial_counts)
                      if input_path is not None else None)
-@@ -107,10 +149,12 @@
+@@ -107,10 +152,12 @@
      states = []
      checked_moves = static_leaves = 0
      proof_path = Path(proof_path)
@@ -93,7 +96,7 @@
          header = _parse_line(stream.readline(), 1)
          require(header.get("format") == "route-proof-v2", "unknown proof format")
          require(integer(header.get("groups")) and header["groups"] == len(model.edges),
-@@ -175,14 +219,12 @@
+@@ -175,14 +222,12 @@
              states.append(counts)
              vertices.append(current)
              outcomes.append(result == "W")
@@ -110,7 +113,21 @@
      return {"verified": True, "format": "route-proof-v2",
              "result_for_player_to_move": "W" if outcomes[-1] else "L",
              "current_syllable": model.syllables[root_vertex],
-@@ -205,10 +247,15 @@
+@@ -198,6 +243,13 @@
+             "legacy_lookup_trusted": False}
+ 
+ 
++def verify_v2_research(dictionary_path, position_path, proof_path, input_path=None):
++    """Strict entry point with the same defaults as the CLI: the pinned 817-word dictionary,
++    history-only positions (no initial_used_words) and no unchecked position keys."""
++    return verify_v2(dictionary_path, position_path, proof_path, input_path, 817,
++                     PINNED_817_SHA256, False, False)
++
++
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument("--dictionary", required=True)
+@@ -205,10 +257,15 @@
      parser.add_argument("--proof", required=True)
      parser.add_argument("--input")
      parser.add_argument("--expected-word-count", type=int, default=817)
