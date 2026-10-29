@@ -1,0 +1,130 @@
+--- ../verifier/route-verifier-v2/verify_v2.py	2026-10-28 04:18:44.415940711 +0000
++++ patched/verify_v2.py	2026-10-28 08:02:27.585062915 +0000
+@@ -9,6 +9,7 @@
+ import argparse
+ import gzip
+ import hashlib
++import io
+ import json
+ from pathlib import Path
+ import sys
+@@ -18,6 +19,20 @@
+                     _unique_keys, integer, require)
+ 
+ 
++class _HashingReader(io.RawIOBase):
++    def __init__(self, handle, digest):
++        self._handle, self._digest = handle, digest
++
++    def readable(self):
++        return True
++
++    def readinto(self, buffer):
++        n = self._handle.readinto(buffer)
++        if n:
++            self._digest.update(memoryview(buffer)[:n])
++        return n
++
++
+ class IndependentModelV2(IndependentModel):
+     def static_labels(self, counts):
+         # Multiplicities do not change existential/universal successor tests.
+@@ -88,17 +103,44 @@
+         return target, normalized, static
+ 
+ 
++INFO_KEYS = {
++    "dictionary_sha256": lambda m, p, cur, used, d: p["dictionary_sha256"] == d,
++    "current_syllable": lambda m, p, cur, used, d: p["current_syllable"] == m.syllables[cur],
++    "next_player": lambda m, p, cur, used, d: p["next_player"] == ("A" if len(p["history"]) % 2 == 0 else "B"),
++    "remaining_words": lambda m, p, cur, used, d: integer(p["remaining_words"])
++    and p["remaining_words"] == len(m.words) - len(used),
++    "legal_words": lambda m, p, cur, used, d: isinstance(p["legal_words"], list)
++    and all(isinstance(w, str) for w in p["legal_words"])
++    and sorted(p["legal_words"]) == sorted(w for w in m.words if w not in used and m.word_endpoints[w][0] == cur),
++}
++PINNED_817_SHA256 = "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273"
++
++
+ def verify_v2(dictionary_path, position_path, proof_path, input_path=None,
+-              expected_word_count=817):
++              expected_word_count=817, expected_dictionary_sha256=None,
++              allow_initial_used=True, allow_extra_position_keys=True):
+     started = time.monotonic()
+     dictionary_bytes = Path(dictionary_path).read_bytes()
+     position_bytes = Path(position_path).read_bytes()
+     try:
+         position = json.loads(position_bytes, object_pairs_hook=_unique_keys)
+-    except (ValueError, UnicodeError) as exc:
++    except (ValueError, UnicodeError, RecursionError) as exc:
+         raise VerificationError(f"invalid position JSON: {exc}") from exc
+     model = IndependentModelV2(dictionary_bytes, expected_word_count)
++    require(allow_initial_used or not position.get("initial_used_words"),
++            "initial_used_words is not a game history; pass --allow-initial-used")
++    unknown = set(position) - {"initial_syllable", "history", "initial_used_words"} - set(INFO_KEYS)
++    require(allow_extra_position_keys or not unknown,
++            f"unchecked position keys {sorted(unknown)}; pass --allow-extra-position-keys")
++    dictionary_digest = hashlib.sha256(dictionary_bytes).hexdigest()
++    if expected_dictionary_sha256:
++        require(dictionary_digest == expected_dictionary_sha256,
++                "dictionary differs from the pinned research dictionary")
+     root_vertex, initial_counts, used = model.position(position)
++    for key, check in INFO_KEYS.items():  # informational keys must be true when present
++        if key in position:
++            require(check(model, position, root_vertex, used, dictionary_digest),
++                    f"position {key} is false")
+     expected_root, _ = model.normalize(root_vertex, initial_counts)
+     input_digest = (model.check_numeric_input(input_path, root_vertex, initial_counts)
+                     if input_path is not None else None)
+@@ -107,10 +149,12 @@
+     states = []
+     checked_moves = static_leaves = 0
+     proof_path = Path(proof_path)
+-    with proof_path.open("rb") as source:
+-        magic = source.read(2)
+-    opener = gzip.open if magic == b"\x1f\x8b" else open
+-    with opener(proof_path, "rt", encoding="utf-8") as stream:
++    digest = hashlib.sha256()
++    raw_file = proof_path.open("rb")
++    # Hash exactly the bytes that are parsed (one open; no re-read after verification).
++    hashed = io.BufferedReader(_HashingReader(raw_file, digest), 1 << 20)
++    binary = gzip.GzipFile(fileobj=hashed) if hashed.peek(2)[:2] == b"\x1f\x8b" else hashed
++    with raw_file, io.TextIOWrapper(binary, encoding="utf-8") as stream:
+         header = _parse_line(stream.readline(), 1)
+         require(header.get("format") == "route-proof-v2", "unknown proof format")
+         require(integer(header.get("groups")) and header["groups"] == len(model.edges),
+@@ -175,14 +219,12 @@
+             states.append(counts)
+             vertices.append(current)
+             outcomes.append(result == "W")
++        while hashed.read(1 << 20):
++            pass
+     require(states, "empty certificate")
+     require(header["root"] == len(states) - 1, "root must be last node")
+     require(vertices[-1] == root_vertex and states[-1] == expected_root,
+             "root does not match exact requested history")
+-    digest = hashlib.sha256()
+-    with proof_path.open("rb") as source:
+-        for chunk in iter(lambda: source.read(1024 * 1024), b""):
+-            digest.update(chunk)
+     return {"verified": True, "format": "route-proof-v2",
+             "result_for_player_to_move": "W" if outcomes[-1] else "L",
+             "current_syllable": model.syllables[root_vertex],
+@@ -205,10 +247,15 @@
+     parser.add_argument("--proof", required=True)
+     parser.add_argument("--input")
+     parser.add_argument("--expected-word-count", type=int, default=817)
++    parser.add_argument("--dictionary-sha256", default=PINNED_817_SHA256,
++                        help="required dictionary hash ('' disables the pin)")
++    parser.add_argument("--allow-initial-used", action="store_true")
++    parser.add_argument("--allow-extra-position-keys", action="store_true")
+     args = parser.parse_args()
+     try:
+-        result = verify_v2(args.dictionary, args.position, args.proof, args.input, args.expected_word_count)
+-    except (VerificationError, OSError, EOFError, UnicodeError) as exc:
++        result = verify_v2(args.dictionary, args.position, args.proof, args.input, args.expected_word_count,
++                           args.dictionary_sha256, args.allow_initial_used, args.allow_extra_position_keys)
++    except (VerificationError, OSError, EOFError, UnicodeError, RecursionError, MemoryError) as exc:
+         print(json.dumps({"verified": False, "error": str(exc)}, ensure_ascii=False))
+         return 1
+     print(json.dumps(result, ensure_ascii=False, indent=2))
