@@ -26,6 +26,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <ctime>
 #include <fstream>
 #include <iostream>
 #include <mutex>
@@ -397,14 +398,6 @@ struct TT {
   }
 };
 
-// ---------------------------------------------------------------- busy table (multi-thread virtual loss)
-struct Busy {
-  vector<atomic<u16>> t;
-  u64 mask = 0;
-  void init(int bits) { t = vector<atomic<u16>>(1ull << bits); mask = (1ull << bits) - 1; for (auto& x : t) x.store(0); }
-  inline atomic<u16>& at(u64 k0) { return t[k0 & mask]; }
-};
-
 // ---------------------------------------------------------------- options/global
 struct Opt {
   double seconds = 30, emit_seconds = 1e9;
@@ -420,13 +413,118 @@ struct Opt {
   u64 tt_buckets = 0;
   int init_div = 16;
   double progress = 0;  // seconds between stderr progress lines (0 = off)
+  string tt_load, tt_save;
+  double checkpoint = 0;  // seconds between TT checkpoints to tt_save (0 = only at the end)
 } opt;
+static TT tt;
+
+// ---------------------------------------------------------------- TT persistence (--tt-save / --tt-load)
+// The file is bound to the game graph (group numbering, endpoints, Zobrist keys), the canonical root
+// and the options that give unproven pn/dn their meaning; a mismatch refuses the load. Records are the
+// raw entries (k0, k1, pn|dn<<32, work|best<<32). Virtual-loss marks live in the busy table and are not
+// saved. Loaded values are search hints like any TT content: the certificate is still emitted by
+// replay and checked by verify_v2.py.
+static const char TT_MAGIC[8] = {'Y', 'S', 'T', 'T', '1', 0, 0, 0};
+static const char TT_END[8] = {'Y', 'S', 'T', 'T', 'E', 'N', 'D', 0};
+struct TTHeader {
+  char magic[8];
+  u64 graph0, graph1, root0, root1;
+  int32_t init, init_div, wpn, reserved;
+  u64 count, created;
+};
+static void graph_fingerprint(u64& f0, u64& f1) {
+  u64 s = 0x7474667031ull;
+  f0 = 0; f1 = 0;
+  auto add = [&](u64 x) { s ^= x; f0 ^= splitmix(s); f1 = (f1 ^ splitmix(s)) * 0x100000001b3ull; };
+  add(1); add((u64)N); add((u64)G);
+  for (int g = 0; g < G; g++) add(((u64)src_[g] << 32) | (u64)dst_[g]);
+  if (G) { add(Z0[256 + 1]); add(Z1[256 + 1]); }
+  add(V0[0]); add(V1[0]);
+}
+static inline void ck_add(u64& h, u64 w) { h = (h ^ w) * 0x100000001b3ull; h ^= h >> 31; }
+static void fill_header(TTHeader& h, const State& root) {
+  memset(&h, 0, sizeof h);
+  memcpy(h.magic, TT_MAGIC, 8);
+  graph_fingerprint(h.graph0, h.graph1);
+  h.root0 = root.h0; h.root1 = root.h1;
+  h.init = opt.init; h.init_div = opt.init_div; h.wpn = opt.wpn;
+}
+// Writes PATH.tmp, then renames it over PATH. Call only while no searcher thread runs. Returns entries saved.
+static u64 tt_save(const string& path, const State& root) {
+  const string tmp = path + ".tmp";
+  FILE* f = fopen(tmp.c_str(), "wb");
+  if (!f) throw runtime_error("cannot create TT file");
+  TTHeader h; fill_header(h, root);
+  h.created = (u64)time(nullptr);
+  bool ok = fwrite(&h, sizeof h, 1, f) == 1;
+  u64 ck = 0x5eedc0de, n = 0;
+  vector<u64> buf; buf.reserve(4 * 8192);
+  for (u64 i = 0; ok && i < tt.nb * 4; i++) {
+    Entry& e = tt.tab[i];
+    u64 D = e.d.load(memory_order_relaxed);
+    if (!(D >> 63)) continue;
+    u64 B = e.b.load(memory_order_relaxed), A = e.a.load(memory_order_relaxed), C = e.c.load(memory_order_relaxed);
+    u64 rec[4] = {A ^ C ^ D, B, C, D & ~(1ull << 63)};
+    for (u64 w : rec) { buf.push_back(w); ck_add(ck, w); }
+    n++;
+    if (buf.size() == buf.capacity()) { ok = fwrite(buf.data(), 8, buf.size(), f) == buf.size(); buf.clear(); }
+  }
+  if (ok && !buf.empty()) ok = fwrite(buf.data(), 8, buf.size(), f) == buf.size();
+  u64 tail[2] = {n, ck};
+  if (ok) ok = fwrite(tail, 8, 2, f) == 2 && fwrite(TT_END, 8, 1, f) == 1;
+  // the header's count is patched in last, so a file cut short anywhere fails the load checks
+  if (ok) { h.count = n; ok = fseek(f, 0, SEEK_SET) == 0 && fwrite(&h, sizeof h, 1, f) == 1; }
+  if (fclose(f) != 0) ok = false;
+  if (!ok) { remove(tmp.c_str()); throw runtime_error("TT file write failure"); }
+  if (rename(tmp.c_str(), path.c_str())) { remove(tmp.c_str()); throw runtime_error("TT file rename failure"); }
+  return n;
+}
+static u64 tt_load(const string& path, const State& root) {
+  FILE* f = fopen(path.c_str(), "rb");
+  if (!f) throw runtime_error("cannot open TT file " + path);
+  TTHeader h, want; fill_header(want, root);
+  auto fail = [&](const string& why) { fclose(f); throw runtime_error("TT file refused: " + why); };
+  if (fread(&h, sizeof h, 1, f) != 1 || memcmp(h.magic, TT_MAGIC, 8)) fail("not a solver_v3 TT file");
+  if (h.graph0 != want.graph0 || h.graph1 != want.graph1) fail("different game graph (groups, endpoints or hash keys)");
+  if (h.root0 != want.root0 || h.root1 != want.root1) fail("different root position");
+  if (h.init != want.init || h.init_div != want.init_div || h.wpn != want.wpn) fail("different --init/--init-div/--wpn");
+  u64 ck = 0x5eedc0de;
+  vector<u64> buf(4 * 8192);
+  for (u64 done = 0; done < h.count;) {
+    size_t k = (size_t)min<u64>(h.count - done, 8192);
+    if (fread(buf.data(), 32, k, f) != k) fail("truncated");
+    for (size_t r = 0; r < k; r++) {
+      const u64* rec = &buf[4 * r];
+      for (int j = 0; j < 4; j++) ck_add(ck, rec[j]);
+      int best = (int)((rec[3] >> 32) & 0xFFFF);
+      tt.store(rec[0], rec[1], (u32)rec[2], (u32)(rec[2] >> 32), (u32)rec[3], best == 0xFFFF ? -1 : best);
+    }
+    done += k;
+  }
+  u64 tail[2]; char end[8];
+  if (fread(tail, 8, 2, f) != 2 || fread(end, 8, 1, f) != 1 || memcmp(end, TT_END, 8)) fail("truncated");
+  if (tail[0] != h.count || tail[1] != ck) fail("checksum mismatch");
+  if (fgetc(f) != EOF) fail("trailing data");
+  fclose(f);
+  tt.stores = 0; tt.replacements = 0;
+  return h.count;
+}
+
+// ---------------------------------------------------------------- busy table (multi-thread virtual loss)
+struct Busy {
+  vector<atomic<u16>> t;
+  u64 mask = 0;
+  void init(int bits) { t = vector<atomic<u16>>(1ull << bits); mask = (1ull << bits) - 1; for (auto& x : t) x.store(0); }
+  inline atomic<u16>& at(u64 k0) { return t[k0 & mask]; }
+};
+
 static atomic<u32> root_pn{1}, root_dn{1};
 static double next_progress = 0;
 
-static TT tt;
 static Busy busy;
 static atomic<bool> stop_flag{false};
+static atomic<bool> ckpt_flag{false};  // stop requested only to write a TT checkpoint
+static double next_ckpt = 1e300;
 static atomic<u64> g_mid{0}, g_gen{0}, g_selfchecks{0};
 static chrono::steady_clock::time_point t_start;
 static string stop_reason = "none";
@@ -501,6 +599,7 @@ struct Searcher {
                 (unsigned long long)tt.replacements.load());
       }
       if (el >= opt.seconds) { lock_guard<mutex> l(reason_mu); if (!stop_flag) stop_reason = "time_limit"; stop_flag = true; }
+      if (el >= next_ckpt) { lock_guard<mutex> l(reason_mu); if (!stop_flag) { ckpt_flag = true; stop_flag = true; } }
       if (g_mid.load(memory_order_relaxed) >= opt.max_mid) { lock_guard<mutex> l(reason_mu); if (!stop_flag) stop_reason = "node_limit"; stop_flag = true; }
       if (emit_expired()) { lock_guard<mutex> l(reason_mu); if (!stop_flag) stop_reason = "emit_time_limit"; stop_flag = true; }
     }
@@ -735,7 +834,7 @@ static string jnum(double x) { char b[64]; snprintf(b, sizeof b, "%.6f", x); ret
 
 int main(int argc, char** argv) {
   try {
-    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S]");
+    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--checkpoint-seconds S]");
     for (int i = 2; i < argc; i++) {
       string x = argv[i];
       if (i + 1 >= argc) throw runtime_error("missing option value");
@@ -754,9 +853,13 @@ int main(int argc, char** argv) {
       else if (x == "--tt-buckets") opt.tt_buckets = stoull(v);
       else if (x == "--progress") opt.progress = stod(v);
       else if (x == "--init-div") opt.init_div = max(1, stoi(v));
+      else if (x == "--tt-load") opt.tt_load = v;
+      else if (x == "--tt-save") opt.tt_save = v;
+      else if (x == "--checkpoint-seconds") opt.checkpoint = stod(v);
       else throw runtime_error("unknown option: " + x);
     }
-    if (!isfinite(opt.seconds) || opt.seconds < 0 || opt.threads < 1 || opt.threads > 64 || opt.tt_mb < 1 || opt.eps < 0)
+    if (!isfinite(opt.seconds) || opt.seconds < 0 || opt.threads < 1 || opt.threads > 64 || opt.tt_mb < 1 || opt.eps < 0 ||
+        !isfinite(opt.checkpoint) || opt.checkpoint < 0 || (opt.checkpoint > 0 && opt.tt_save.empty()))
       throw runtime_error("invalid option value");
     read_input(argv[1]);
     tt.alloc(opt.tt_mb, opt.tt_buckets);
@@ -769,6 +872,20 @@ int main(int argc, char** argv) {
     if (rstat == -1) build_state(ROOTV, rk, root);
     else { root.init(); root.cur = ROOTV; root.cnt = rk; full_hash(ROOTV, rk.data(), root.h0, root.h1); }
     int maxdepth = totalwords + 2;
+    u64 tt_loaded = 0, tt_saves = 0, tt_saved = 0;
+    double tt_load_s = 0, tt_save_s = 0;
+    string tt_save_error;
+    if (!opt.tt_load.empty()) {
+      auto t0 = chrono::steady_clock::now();
+      tt_loaded = tt_load(opt.tt_load, root);
+      tt_load_s = chrono::duration<double>(chrono::steady_clock::now() - t0).count();
+    }
+    auto save_now = [&]() {
+      auto t0 = chrono::steady_clock::now();
+      try { tt_saved = tt_save(opt.tt_save, root); tt_saves++; } catch (const exception& e) { tt_save_error = e.what(); }
+      tt_save_s += chrono::duration<double>(chrono::steady_clock::now() - t0).count();
+    };
+    if (opt.checkpoint > 0) next_ckpt = opt.checkpoint;
     t_start = chrono::steady_clock::now();
     vector<Searcher> ss(opt.threads);
     for (int i = 0; i < opt.threads; i++) ss[i].init(maxdepth, i);
@@ -790,15 +907,26 @@ int main(int argc, char** argv) {
         }
         if (i == 0) { lock_guard<mutex> l(reason_mu); if (!root_solved) { rpn = p; rdn = q; } }
       };
-      if (opt.threads == 1) run(0);
-      else {
-        vector<thread> th;
-        for (int i = 0; i < opt.threads; i++) th.emplace_back(run, i);
-        for (auto& t : th) t.join();
+      for (;;) {
+        if (opt.threads == 1) run(0);
+        else {
+          vector<thread> th;
+          for (int i = 0; i < opt.threads; i++) th.emplace_back(run, i);
+          for (auto& t : th) t.join();
+        }
+        if (!ckpt_flag || root_solved) break;
+        // every searcher has unwound and stored its values: the table is consistent; save it and go on
+        save_now();
+        ckpt_flag = false;
+        next_ckpt = chrono::duration<double>(chrono::steady_clock::now() - t_start).count() + opt.checkpoint;
+        stop_flag = false;
       }
+      ckpt_flag = false;
     }
     double elapsed = chrono::duration<double>(chrono::steady_clock::now() - t_start).count();
     string result = rpn == 0 ? "win" : rdn == 0 ? "loss" : "unknown";
+    // a solved root needs no resume; only an unfinished search is saved at the end
+    if (!opt.tt_save.empty() && result == "unknown") save_now();
     if (result != "unknown") stop_reason = "none";
     u64 mid_total = 0, gen_total = 0;
     for (auto& s : ss) { mid_total += s.mid_calls; gen_total += s.gens; }
@@ -877,14 +1005,17 @@ int main(int argc, char** argv) {
     printf("{\"result\":\"%s\",\"reason\":\"%s\",\"mid_calls\":%llu,\"child_gens\":%llu,\"tt_entries\":%llu,\"tt_capacity\":%llu,\"tt_mb\":%zu,"
            "\"tt_stores\":%llu,\"tt_replacements\":%llu,\"seconds\":%s,\"pn\":%u,\"dn\":%u,\"best_group\":%d,\"threads\":%d,"
            "\"eps\":%g,\"init\":%d,\"wpn\":%d,\"proof_nodes\":%llu,\"emit_resolves\":%llu,\"emit_resolve_mid\":%llu,"
-           "\"emit_crosschecks\":%llu,\"emit_seconds\":%s,\"selfchecks\":%llu,\"proof_error\":\"%s\"}\n",
+           "\"emit_crosschecks\":%llu,\"emit_seconds\":%s,\"selfchecks\":%llu,\"proof_error\":\"%s\","
+           "\"tt_loaded\":%llu,\"tt_load_seconds\":%s,\"tt_saves\":%llu,\"tt_saved\":%llu,\"tt_save_seconds\":%s,"
+           "\"tt_save_error\":\"%s\"}\n",
            result.c_str(), stop_reason.c_str(), (unsigned long long)mid_total, (unsigned long long)gen_total,
            (unsigned long long)used, (unsigned long long)(tt.nb * 4), (size_t)(tt.bytes >> 20),
            (unsigned long long)tt.stores.load(), (unsigned long long)tt.replacements.load(), jnum(elapsed).c_str(), rpn, rdn, bestg,
            (int)ss.size(), opt.eps, opt.init, opt.wpn, (unsigned long long)proof_nodes, (unsigned long long)resolves,
            (unsigned long long)resolve_mid, (unsigned long long)crosschecks, jnum(emit_s).c_str(),
-           (unsigned long long)g_selfchecks.load(), proof_error.c_str());
-    return proof_error.empty() ? 0 : 3;
+           (unsigned long long)g_selfchecks.load(), proof_error.c_str(), (unsigned long long)tt_loaded, jnum(tt_load_s).c_str(),
+           (unsigned long long)tt_saves, (unsigned long long)tt_saved, jnum(tt_save_s).c_str(), tt_save_error.c_str());
+    return !proof_error.empty() ? 3 : !tt_save_error.empty() ? 4 : 0;
   } catch (const exception& e) {
     fprintf(stderr, "solver error: %s\n", e.what());
     return 2;
