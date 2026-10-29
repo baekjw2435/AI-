@@ -40,7 +40,7 @@ def main():
     nxt = 0
     found = {}
     tmp = out + '.body.tmp'
-    bf = open(tmp, 'w', encoding='utf-8')
+    bf = gzip.open(tmp, 'wt', encoding='utf-8', compresslevel=1)  # compressed: an uncompressed body can reach ~1.5 KB per node
     for cp in children:
         local = {}
         with opener(cp) as f:
@@ -76,7 +76,7 @@ def main():
             sys.exit(f"cannot show L: no certificate for groups {missing}")
         rootline = {"id": nxt, "v": cur, "c": root.hex(), "r": "L", "m": [[g, found[g][0]] for g in legal]}
     w.write(json.dumps({"format": "route-proof-v2", "groups": len(m.edges), "vertices": len(m.syllables), "root": nxt}) + '\n')
-    with open(tmp, encoding='utf-8') as f:
+    with gzip.open(tmp, 'rt', encoding='utf-8') as f:
         for line in f:
             w.write(line)
     w.write(json.dumps(rootline, separators=(',', ':')) + '\n')
