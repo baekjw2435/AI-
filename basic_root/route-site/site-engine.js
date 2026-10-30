@@ -14,7 +14,7 @@
 //   한 수   상대를 정적으로 지는 자리로 보내는 수가 있음(표에서 뺀 증명 국면)
 //   되받기  왕복 쌍(또는 자기 연결 단어)의 한쪽을 내면 짝으로 받아, 둘 차례인 쪽이 지는 직전 국면으로 돌림
 var RouteSite = (function () {
-  var M, V, G, ownerOf, vertexOf, books, cache, loadFile, pending;
+  var M, V, G, ownerOf, vertexOf, books, cache, loadFile, pending, lostRoots;
 
   function init(model, manifest, loader) {
     if (!model || model.format !== "route-site-1") throw new Error("model.json 형식이 맞지 않아요.");
@@ -24,9 +24,19 @@ var RouteSite = (function () {
     ownerOf = Object.create(null); vertexOf = Object.create(null);
     M.words.forEach(function (list, g) { list.forEach(function (w) { ownerOf[w] = g; }); });
     M.syllables.forEach(function (s, v) { vertexOf[s] = v; });
-    books = Object.create(null);
+    books = Object.create(null); lostRoots = Object.create(null);
     manifest.books.forEach(function (b) { books[b.id] = b; });
-    cache = new Map(); pending = new Map(); loadFile = loader;
+    cache = new Map(); pending = new Map(); loadFile = loader; memo.clear();
+    // 둘 차례인 쪽이 지는 증명의 루트(예: 격 → 격식). 표에는 이기는 국면만 있으므로 따로 기억합니다.
+    manifest.books.forEach(function (b) {
+      var keys = new Set();
+      b.proofs.forEach(function (q) {
+        if (q.result_for_player_to_move !== "L") return;
+        var p = position(q.start, q.history), n = normalize(p.cur, p.counts);
+        if (n.st === -1) keys.add(p.cur + ":" + key48(p.cur, n.core));
+      });
+      lostRoots[b.id] = keys;
+    });
   }
 
   // verify.py의 dueum과 같은 규칙: ㄹ+ㅑㅕㅖㅛㅠㅣ → ㅇ, ㄹ+그 밖의 모음 → ㄴ, ㄴ+ㅕㅛㅠㅣ → ㅇ
@@ -223,18 +233,32 @@ var RouteSite = (function () {
     var one = oneMoveWin(cur, counts);
     if (one >= 0) return Promise.resolve({ win: true, group: one, how: "한 수" });
     return lookup(bookId, cur, n.core).then(function (g) {
-      return g >= 0 && counts[g] ? { win: true, group: g, how: "증명" } : { win: null, group: -1, how: "" };
+      if (g >= 0 && counts[g]) return { win: true, group: g, how: "증명" };
+      if (lostRoots[bookId] && lostRoots[bookId].has(cur + ":" + key48(cur, n.core))) return { win: false, group: -1, how: "증명" };
+      return { win: null, group: -1, how: "" };
     });
   }
 
-  function pathKey(start, history) { return start + "|" + history.join(","); }
+  // 그 국면에서 둘 차례인 쪽이 지는 것이 한 수 앞까지로 증명되는가: 지워지지 않은 모든 수에 상대의 이기는 수가 있음
+  function provenLoss(bookId, cur, counts, n) {
+    if (n.st === 0) return Promise.resolve(true);
+    if (n.st === 1) return Promise.resolve(false);
+    var live = M.outgoing[cur].filter(function (g) { return counts[g] > 0 && n.paired[g] > 0; });
+    if (!live.length) return Promise.resolve(false);
+    return Promise.all(live.map(function (g) {
+      var c = counts.slice(); c[g]--;
+      var v = M.edges[g][1];
+      return winner(bookId, v, c, normalize(v, c)).then(function (w) { return w.win === true; });
+    })).then(function (all) { return all.every(Boolean); });
+  }
+
   var memo = new Map();
 
   // 한 국면 분석. entry: { start, prefix, book }. history: 받는 쪽의 첫 수부터 낸 단어들.
   // 반환 { syllable, toMove: "receiver"|"presenter", status: "W"|"L"|"?", how, best, moves: [...], end }
   // moves[i] = { group, words, status: "win"|"lose"|"?", how, reply: { group, word, how } | null }
   function analyze(entry, history) {
-    var full = entry.prefix.concat(history), key = entry.book + "|" + pathKey(entry.start, full);
+    var full = entry.prefix.concat(history), key = entry.book + "|" + entry.start + "|" + entry.prefix.join(",") + "|" + history.join(",");
     if (memo.has(key)) return memo.get(key);
     var job = (history.length ? analyze(entry, history.slice(0, -1)) : Promise.resolve(null)).then(function (prev) {
       return analyzeAt(entry, full, history, prev);
@@ -258,7 +282,7 @@ var RouteSite = (function () {
     }))).then(function (all) {
       var root = all[0], kids = all.slice(1);
       res.moves = kids.map(function (k) {
-        var words = freeWords(k.g, p.used), mv = { group: k.g, words: words, status: "?", how: "", reply: null };
+        var words = freeWords(k.g, p.used), mv = { group: k.g, words: words, status: "?", how: "", reply: null, _k: k };
         if (k.w.win === false) { mv.status = "win"; mv.how = k.w.how; }
         else if (k.w.win === true) {
           mv.status = "lose"; mv.how = k.w.how;
@@ -272,7 +296,7 @@ var RouteSite = (function () {
         res.status = "W"; res.how = root.how; res.best = byGroup[root.group] || null;
         if (res.best && res.best.status === "?") { res.best.status = "win"; res.best.how = root.how; }
       } else if (root.win === false) {
-        res.status = "L"; res.how = "정적";
+        res.status = "L"; res.how = root.how;
       }
       // 되받기: 직전 국면에서 상대가 졌는데 상대가 왕복 쌍(또는 자기 연결 단어)의 한쪽을 냈으면, 짝이 이기는 수
       if (res.status === "?" && prev && prev.status === "L" && last >= 0) {
@@ -302,8 +326,22 @@ var RouteSite = (function () {
           if (pw.length) { mv.status = "lose"; mv.how = "되받기"; mv.reply = { group: partner, word: pw[0], how: "되받기" }; }
         });
       }
-      res.moves.sort(function (a, b) { return a.words[0] < b.words[0] ? -1 : a.words[0] > b.words[0] ? 1 : 0; });
-      return res;
+      // 이기는 쪽의 나머지 수: 상대의 모든 응수에 이기는 수가 있으면(한 수 앞까지 증명) 이 수도 이김
+      var open = res.status === "L" ? [] : res.moves.filter(function (mv) { return mv.status === "?"; });
+      return Promise.all(open.map(function (mv) {
+        var k = mv._k;
+        return provenLoss(entry.book, k.v, k.c, normalize(k.v, k.c)).then(function (lost) {
+          if (lost) { mv.status = "win"; mv.how = "증명"; }
+        });
+      })).then(function () {
+        if (res.status === "?") {
+          var win = res.moves.filter(function (mv) { return mv.status === "win"; })[0];
+          if (win) { res.status = "W"; res.how = win.how; res.best = win; }
+        }
+        res.moves.forEach(function (mv) { delete mv._k; });
+        res.moves.sort(function (a, b) { return a.words[0] < b.words[0] ? -1 : a.words[0] > b.words[0] ? 1 : 0; });
+        return res;
+      });
     });
   }
 

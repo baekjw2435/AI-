@@ -60,7 +60,7 @@ const summary = (a) => ({
     const base = E.dueum(s), e = fresh.get(base) || null;
     let inModel = true;
     try { E.position(base, []); } catch (_) { inModel = false; }
-    const est = NOT_IN_TABLE.has(s) ? null : CIRCLED.has(s) ? "불리" : "유리";
+    const est = NOT_IN_TABLE.has(s) || !inModel ? null : CIRCLED.has(s) ? "불리" : "유리";  // 깽은 비교에서 뺌(모델 밖)
     return { s, base, entry: e ? e.id : null, inModel, estimate: est,
              agrees: e && est && e.root.status !== "?" ? (est === "유리") === e.receiverWins : null };
   });

@@ -19,7 +19,7 @@ def main():
     if os.path.exists(out):
         shutil.rmtree(out)
     os.makedirs(out + '/astra')
-    for f in ('site-engine.js', 'astra-adapter.js'):
+    for f in ('site-engine.js', 'astra-adapter.js', 'astra-worker.js'):
         shutil.copy(f'{SITE}/{f}', f'{out}/{f}')
     for f in ('model.json', 'catalog.json'):
         shutil.copy(f'{tables}/{f}', f'{out}/{f}')
@@ -35,7 +35,7 @@ def main():
     shutil.copy(f'{astra}/game-data.json', f'{out}/astra/game-data.json')
     shutil.copy(f'{astra}/engine.wasm', f'{out}/astra/engine.wasm')
     open(f'{out}/astra/proof-817.txt', 'wb').write(base64.b64encode(open(f'{astra}/proof-817.bin', 'rb').read()))
-    small = ['site-engine.js', 'astra-adapter.js', 'model.json', 'manifest.json', 'catalog.json',
+    small = ['site-engine.js', 'astra-adapter.js', 'astra-worker.js', 'model.json', 'manifest.json', 'catalog.json',
              'astra/game-data.json', 'astra/proof-817.txt', 'astra/engine.wasm']
     rest = sorted(os.path.relpath(os.path.join(d, f), out) for d, _, fs in os.walk(f'{out}/t') for f in fs)
     batches, cur = [], list(small)

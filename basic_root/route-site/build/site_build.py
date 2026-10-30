@@ -33,6 +33,11 @@ REC = np.dtype([('a', '<u4'), ('b', '<u4'), ('s', '<u8'), ('g', '<u2'), ('p', '<
 FILE_ENTRIES = 220_000
 SERIES_BOOK = {'역': '역', '격': '격', '칭존': '칭존'}
 SKIP = {'easy.jon'}  # the same position as the 칭존 book's 존 root
+# verified proofs not in route-book's list: the presenter's other replies after 역 → 역풍, all won by the 역풍 side
+EXTRA = [('yeok.yeokpung.' + w, '역', ['역풍', w], base, 0, '역') for w, base in (
+    ('풍랑', 'improve/solver/proofs/yeokpung_child1_W'), ('풍운', 'improve/solver/proofs/yeokpung_child4_W'),
+    ('풍진', 'improve/solver/proofs/yeokpung_child6_W'), ('풍향', 'improve/solver/proofs/yeokpung_child7_W'),
+    ('풍자적', 'yeokpung_run/proofs/C_pungjajeok_W'), ('풍습', 'yeokpung_run/proofs/B_pungseup_W'))]
 
 
 def sha256(path):
@@ -46,7 +51,7 @@ def sha256(path):
 def proof_list():
     """(pid, book, start, history, via, proof path, verified sha256, result, nodes, source)"""
     out = []
-    for pid, start, hist, base, via, series in build_book.PROOFS:
+    for pid, start, hist, base, via, series in list(build_book.PROOFS) + EXTRA:
         if pid in SKIP:
             continue
         v = json.load(open(f'{S}/{base}.verify.json', encoding='utf-8'))

@@ -73,19 +73,24 @@ header.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: 
 .cell.lose { background: var(--lose-bg); color: var(--lose); }
 .cell.astra { background: var(--astra-bg); color: var(--astra); }
 .cell.open { color: var(--open); cursor: default; }
-.cell.alias { opacity: .7; }
 .cell .mark { position: absolute; top: 2px; right: 3px; font: 600 10px/1 var(--f-mono); color: var(--lose); }
 .cell .ring { position: absolute; inset: 14%; border: 1.5px solid var(--lose); border-radius: 50%; opacity: .45; pointer-events: none; }
-.cell:hover:not(.open) { outline: 2px solid var(--accent); outline-offset: -2px; z-index: 1; }
+.cell .ring.none { border: 1.5px dashed var(--open); opacity: .7; }
+.cell .of { position: absolute; bottom: 2px; left: 4px; font: 500 10px/1 var(--f-body); color: var(--ink-soft); }
+.cell.dead { cursor: default; background: repeating-linear-gradient(135deg, var(--lose-bg) 0 6px, var(--sheet) 6px 9px); }
+.cell:hover:not(.open):not(.dead) { outline: 2px solid var(--accent); outline-offset: -2px; z-index: 1; }
 .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; color: var(--ink-soft); margin-top: 12px; }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .sw { width: 14px; height: 14px; border: 1px solid var(--rule); display: inline-block; }
 .sw.win { background: var(--win-bg); } .sw.lose { background: var(--lose-bg); } .sw.astra { background: var(--astra-bg); } .sw.open { background: var(--sheet); }
 .sw.ring { border-radius: 50%; border: 1.5px solid var(--lose); background: none; }
+.sw.none { border-radius: 50%; border: 1.5px dashed var(--open); background: none; }
+.sw.dead { background: repeating-linear-gradient(135deg, var(--lose-bg) 0 4px, var(--sheet) 4px 6px); }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { border: 1px solid var(--rule); background: var(--sheet); padding: 6px 12px; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; font-size: 14px; }
 .chip:hover { border-color: var(--accent); }
 #view { display: grid; gap: 34px; }
+.section > *, #view > * { min-width: 0; }
 .section { display: grid; gap: 10px; }
 .note { font-size: 13px; color: var(--ink-soft); max-width: 70ch; }
 
@@ -107,7 +112,8 @@ header.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: 
 .word.pres .boxes { color: var(--ink); }
 .word.start .boxes { color: var(--ink-soft); }
 .word.here { box-shadow: inset 0 -3px 0 var(--accent); }
-.word:hover { background: var(--rule-soft); }
+button.word:hover { background: var(--rule-soft); }
+.word.given .boxes { color: var(--ink-soft); }
 .now { display: grid; gap: 6px; padding: 14px 16px; border: 1px solid var(--rule); background: var(--sheet); }
 .now .big { font-family: var(--f-display); font-size: 20px; font-weight: 800; }
 .verdict { display: inline-flex; gap: 8px; align-items: center; flex-wrap: wrap; }
@@ -157,13 +163,14 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
 </div>
 
 <script src="site-engine.js" charset="utf-8"></script>
-<script src="astra-adapter.js" charset="utf-8"></script>
 <script>
 "use strict";
 (function () {
   var model, manifest, catalog, entries = [], byId = {}, astraReady = null;
   var view = document.getElementById("view");
-  var state = { entry: null, history: [], busy: false, token: 0 };
+  var state = { entry: null, history: [], busy: false, token: 0 }, keyboard = false;
+  document.addEventListener("keydown", function (ev) { if (ev.key === "Enter" || ev.key === " " || ev.key === "Tab") keyboard = true; }, true);
+  document.addEventListener("pointerdown", function () { keyboard = false; }, true);
 
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function fmt(n) { return Number(n).toLocaleString("ko-KR"); }
@@ -184,14 +191,14 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
 
   // ── 지도 ──────────────────────────────────────────────
   function cellClass(g) {
-    if (!g.inModel) return "lose";
+    if (!g.inModel) return "dead";
     if (!g.entry) return "open";
     var e = byId[g.entry];
     if (e.kind === "astra") return "astra";
     return e.receiverWins ? "win" : "lose";
   }
   function renderMap() {
-    state.entry = null;
+    state.entry = null; state.token++;
     var ent = entries.filter(function (e) { return e.kind !== "via"; });
     var wins = ent.filter(function (e) { return e.kind !== "astra" && e.receiverWins; }).length;
     var loses = ent.filter(function (e) { return e.kind !== "astra" && !e.receiverWins; }).length;
@@ -202,9 +209,10 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
       var title = !g.inModel ? g.s + ": 817단어 중 이 음절로 시작하는 단어가 없어 받으면 바로 짐"
         : !e ? g.s + ": 아직 확정하지 않음"
         : g.s + (g.s !== g.base ? "(=" + g.base + ")" : "") + ": " + (e.kind === "astra" ? "아스트라 연구 · " : "") + (e.receiverWins ? "받는 쪽 승" : "받는 쪽 패");
-      return '<button class="cell ' + cls + (g.s !== g.base ? " alias" : "") + '" data-entry="' + (e ? esc(e.id) : "") + '" title="' + esc(title) + '"' +
-        (e ? "" : ' aria-disabled="true"') + ">" + (g.estimate === "불리" ? '<span class="ring" aria-hidden="true"></span>' : "") +
-        esc(label) + (g.agrees === false ? '<span class="mark" title="추정표와 다름">≠</span>' : "") + "</button>";
+      if (g.estimate === null && g.inModel) title += " · 추정표에 표시 없음(칸이 없거나 가려짐)";
+      return '<button class="cell ' + cls + '" data-entry="' + (e ? esc(e.id) : "") + '" title="' + esc(title) + '"' +
+        (e ? "" : ' aria-disabled="true"') + ">" + (g.estimate === "불리" ? '<span class="ring" aria-hidden="true"></span>' : g.estimate === null && g.inModel ? '<span class="ring none" aria-hidden="true"></span>' : "") +
+        esc(label) + (g.s !== g.base ? '<span class="of">=' + esc(g.base) + "</span>" : "") + (g.agrees === false ? '<span class="mark" title="추정표와 다름">≠</span>' : "") + "</button>";
     }).join("");
     var vias = entries.filter(function (e) { return e.kind === "via"; }).map(function (e) {
       return '<button class="chip" data-entry="' + esc(e.id) + '"><span>' + esc(ro(e.via)) + " 넘겨받은 <b>" + esc(e.syllable) + '</b></span><span class="pill ' + (e.receiverWins ? "win" : "lose") + '">' + (e.receiverWins ? "받는 쪽 승" : "받는 쪽 패") + "</span></button>";
@@ -220,7 +228,7 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
         '<p class="note">817단어 밖의 단어로 그 음절을 넘겨받아, 817단어가 하나도 쓰이지 않은 국면입니다. 칸 색은 그 음절로 시작해야 하는 사람(받는 쪽)의 결과입니다. 원은 다른 분의 추정표에서 ‘받으면 불리’로 표시된 칸이고, ≠는 추정표와 결과가 다른 칸입니다' +
         (mism.length ? " (" + mism.join("·") + ")" : "") + ".</p>" +
         '<div class="sheet"><div class="grid" id="grid">' + cells + "</div>" +
-        '<div class="legend"><span><i class="sw win"></i>받으면 승</span><span><i class="sw lose"></i>받으면 패</span><span><i class="sw astra"></i>아스트라 연구(적)</span><span><i class="sw open"></i>계산 중</span><span><i class="sw ring"></i>추정표의 ‘받으면 불리’</span><span>흐린 칸: 두음법칙으로 같은 음절(락=낙, 력=역 …)</span></div></div>' +
+        '<div class="legend"><span><i class="sw win"></i>받으면 승</span><span><i class="sw lose"></i>받으면 패</span><span><i class="sw astra"></i>아스트라 연구(적)</span><span><i class="sw open"></i>계산 중</span><span><i class="sw ring"></i>추정표의 ‘받으면 불리’</span><span><i class="sw none"></i>추정표에 표시 없음</span><span><i class="sw dead"></i>817단어 중 이 음절로 시작하는 단어가 없음(받으면 바로 짐)</span><span>=낙: 두음법칙으로 같은 음절</span></div></div>' +
       "</div>" +
       '<div class="section"><h2>넘겨받은 단어가 정해진 국면</h2>' +
         '<p class="note">그 음절을 넘긴 단어가 817단어 안의 단어면 그 단어가 이미 쓰인 다른 국면입니다. 같은 칭이라도 무엇으로 받았는지에 따라 결과가 바뀝니다.</p>' +
@@ -229,7 +237,8 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
         "<li><b>받는 쪽</b>은 그 음절로 시작해야 하는 사람, <b>낸 쪽</b>은 그 음절을 넘긴 사람입니다. 수순에서는 받는 쪽이 먼저 둡니다.</li>" +
         "<li>지는 쪽의 수는 모두 끝까지 확인했습니다. 이기는 쪽은 각 자리에서 이기는 수 하나만 증명했으므로, 다른 수는 ‘미확인’으로 보일 수 있습니다.</li>" +
         "<li>판정 근거: <b>증명</b>(검증된 증명의 승리수), <b>정적</b>(남은 단어 연결만으로 결정), <b>한 수</b>(상대를 정적으로 지는 자리로 보냄), <b>되받기</b>(왕복 쌍의 짝으로 받아 직전 국면으로 돌림).</li>" +
-        "<li>적은 아스트라의 ‘적색 루트 연습실’ 증명 색인과 계산 엔진으로 판정합니다. 이 사이트의 다른 음절과 검증기가 다릅니다.</li>" +
+        "<li>적은 아스트라의 ‘적색 루트 연습실’ 증명 색인과 계산 엔진으로 판정합니다(근거: 아스트라 증명, 아스트라 계산). 이 사이트의 다른 음절과 검증기가 다릅니다.</li>" +
+        "<li>브라우저의 뒤로 가기는 한 수 전으로 돌아갑니다. 주소를 보내면 같은 수순이 열립니다.</li>" +
       "</ul></div>";
     view.querySelectorAll("[data-entry]").forEach(function (b) {
       b.addEventListener("click", function () { if (b.dataset.entry) open(byId[b.dataset.entry], []); });
@@ -243,15 +252,18 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
     model.outgoing[a.cur].forEach(function (g) { model.words[g].forEach(function (w) { if (!a.used[w]) list.push(w); }); });
     return list.sort();
   }
+  // 주소: #e<진입 이름의 UTF-16 16진수>-<각 수의 번호(그 국면의 합법 단어를 가나다순으로 늘어놓은 순서)>
+  function eid(e) { return Array.from(e.id).map(function (c) { return ("000" + c.charCodeAt(0).toString(16)).slice(-4); }).join(""); }
   function hashFor(e, h) {
     var idx = [], i;
     for (i = 0; i < h.length; i++) idx.push(legalSorted(e, h.slice(0, i)).indexOf(h[i]));
-    return "#e" + entries.indexOf(e) + (idx.length ? "-" + idx.join("-") : "");
+    return "#e" + eid(e) + (idx.length ? "-" + idx.join("-") : "");
   }
   function fromHash(hash) {
-    var m = /^#e(\d+)((?:-\d+)*)$/.exec(hash || "");
-    if (!m || !entries[+m[1]]) return null;
-    var e = entries[+m[1]], h = [], parts = m[2] ? m[2].slice(1).split("-") : [];
+    var m = /^#e([0-9a-f]+)((?:-\d+)*)$/.exec(hash || "");
+    var e = m && entries.filter(function (x) { return eid(x) === m[1]; })[0];
+    if (!e) return null;
+    var h = [], parts = m[2] ? m[2].slice(1).split("-") : [];
     for (var i = 0; i < parts.length; i++) { var l = legalSorted(e, h), w = l[+parts[i]]; if (!w) break; h.push(w); }
     return { entry: e, history: h };
   }
@@ -259,21 +271,30 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
   function sideLong(e, toMove) {
     return toMove === "receiver" ? "받는 쪽(" + e.syllable + josa(e.syllable, "을", "를").slice(e.syllable.length) + " 받은 사람)" : "낸 쪽(" + e.syllable + josa(e.syllable, "을", "를").slice(e.syllable.length) + " 넘긴 사람)";
   }
+  // 적은 아스트라 계산 엔진이 한 국면에 몇 초씩 걸릴 수 있어 Worker에서 계산합니다.
+  var astraWorker = null, astraJobs = {}, astraSeq = 0, astraMemo = new Map();
   function analyze(e, h) {
-    if (e.kind === "astra") return ensureAstra().then(function () { return AstraRoute.analyze(e, h, 50000); });
-    return RouteSite.analyze(e, h);
-  }
-  function ensureAstra() {
-    if (!astraReady) astraReady = Promise.all([get("astra/game-data.json", "json"), get("astra/proof-817.txt", "b64"), get("astra/engine.wasm")]).then(function (r) {
-      return AstraRoute.init(r[0], r[1], new Uint8Array(r[2]), model);
-    }).catch(function (err) { astraReady = null; throw err; });
-    return astraReady;
+    if (e.kind !== "astra") return RouteSite.analyze(e, h);
+    var key = h.join(",");
+    if (astraMemo.has(key)) return astraMemo.get(key);
+    if (!astraWorker) {
+      astraWorker = new Worker("astra-worker.js");
+      astraWorker.onmessage = function (ev) {
+        var job = astraJobs[ev.data.id]; delete astraJobs[ev.data.id];
+        if (job) { if (ev.data.error) job.reject(new Error(ev.data.error)); else job.resolve(ev.data.res); }
+      };
+    }
+    var id = ++astraSeq, p = new Promise(function (resolve, reject) { astraJobs[id] = { resolve: resolve, reject: reject }; });
+    astraWorker.postMessage({ id: id, entry: { start: e.start, prefix: e.prefix }, history: h, budget: 50000 });
+    astraMemo.set(key, p);
+    p.catch(function () { astraMemo.delete(key); });
+    return p;
   }
   function open(e, h) { state.entry = e; state.history = h.slice(); go(); }
+  // 한 수마다 방문 기록을 남겨, 브라우저의 뒤로 가기가 직전 국면으로 돌아가게 합니다.
   function go() {
-    var e = state.entry, h = state.history, hs = hashFor(e, h);
-    if (location.hash !== hs) history.replaceState(null, "", hs);
-    renderExplorer();
+    var hs = hashFor(state.entry, state.history);
+    if (location.hash !== hs) location.hash = hs; else renderExplorer();
   }
   function wordBoxes(w) { return '<span class="boxes">' + Array.from(w).map(function (ch) { return "<i>" + esc(ch) + "</i>"; }).join("") + "</span>"; }
   function statusLine(a, e) {
@@ -289,7 +310,7 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
     var why = "";
     if (mv.status === "lose" && mv.reply) why = "상대가 <b>" + esc(mv.reply.word) + "</b>" + (mv.reply.how === "되받기" ? "(짝)으로 되받음" : ro(mv.reply.word).slice(mv.reply.word.length) + " 받음") + " · " + esc(mv.how);
     else if (mv.status === "lose") why = "근거: " + esc(mv.how);
-    else if (mv.status === "win") why = (a.best && a.best.group === mv.group ? "증명의 수" : "이 수도 이김") + " · " + esc(mv.how);
+    else if (mv.status === "win") why = (a.best && a.best.group === mv.group ? (mv.how === "증명" || mv.how === "아스트라 증명" ? "증명의 수" : "이기는 수") : "이 수도 이김") + " · 근거: " + esc(mv.how);
     else if (state.history.length === 0 && state.entry.notes && state.entry.notes[mv.words[0]]) why = esc(state.entry.notes[mv.words[0]]);
     else why = a.status === "W" ? "이기는 수는 따로 있고, 이 수는 확인하지 않았습니다" : "확인하지 못한 수";
     var alts = mv.words.length > 1 ? '<span class="alt">같은 결과: ' + esc(mv.words.slice(1).join(", ")) + "</span>" : "";
@@ -297,8 +318,8 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
   }
   function renderExplorer() {
     var e = state.entry, h = state.history, token = ++state.token;
-    var pre = e.prefix.map(function (w) { return '<span class="word start" title="넘겨준 단어"><span class="boxes">' + Array.from(w).map(function (c) { return "<i>" + esc(c) + "</i>"; }).join("") + '</span><span class="who">넘겨준 단어</span></span>'; }).join("");
-    var line = '<button class="word start' + (h.length ? "" : " here") + '" data-back="0"><span class="boxes"><i>' + esc(e.syllable) + '</i></span><span class="who">시작</span></button>' + pre +
+    var pre = e.prefix.map(function (w) { return '<span class="word given" title="이 음절을 넘겨준 단어">' + wordBoxes(w) + '<span class="who">넘겨준 단어</span></span>'; }).join("");
+    var line = pre + '<button class="word start' + (h.length ? "" : " here") + '" data-back="0"><span class="boxes"><i>' + esc(e.syllable) + '</i></span><span class="who">시작</span></button>' +
       h.map(function (w, i) { return '<button class="word ' + (i % 2 ? "pres" : "recv") + (i === h.length - 1 ? " here" : "") + '" data-back="' + (i + 1) + '">' + wordBoxes(w) + '<span class="who">' + (i + 1) + ". " + side(e, i) + "</span></button>"; }).join("");
     var rootVerdict = e.kind === "astra" ? (e.root.status === "W" ? "받는 쪽 승" : e.root.status === "L" ? "받는 쪽 패" : "판정 없음") : (e.receiverWins ? "받는 쪽 승" : "받는 쪽 패");
     var head = e.kind === "via" ? ro(e.via) + " 넘겨받은 " + e.syllable : e.syllable + (e.kind === "astra" ? " (아스트라 연구)" : "");
@@ -311,26 +332,31 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
         '<div class="title-row"><h2>' + esc(head) + '</h2><span class="pill ' + (rootVerdict === "받는 쪽 승" ? "win" : rootVerdict === "받는 쪽 패" ? "lose" : "open") + '">' + rootVerdict + "</span></div>" +
         proofs +
         '<div class="line" id="line" aria-label="지금까지의 수순">' + line + "</div>" +
-        '<div class="now" id="now"><span class="loading">계산하는 중…</span></div>' +
+        '<div class="now" id="now" tabindex="-1" aria-live="polite"><span class="loading">계산하는 중…</span></div>' +
         '<div class="moves" id="moves"></div>' +
       "</div>";
-    document.getElementById("toMap").onclick = function () { history.replaceState(null, "", "#map"); renderMap(); };
+    document.getElementById("toMap").onclick = function () { location.hash = "#map"; };
     document.getElementById("undo").onclick = function () { state.history.pop(); go(); };
     document.getElementById("restart").onclick = function () { state.history = []; go(); };
     view.querySelectorAll("[data-back]").forEach(function (b) { b.onclick = function () { state.history = state.history.slice(0, +b.dataset.back); go(); }; });
     analyze(e, h).then(function (a) {
-      if (token !== state.token) return;
+      if (token !== state.token || !document.getElementById("now")) return;
       var now = document.getElementById("now"), mv = document.getElementById("moves"), play = document.getElementById("play");
+      var shown = performance.now();
+      // 두 번 누르기나 계산 중에 누른 것이 다음 국면의 수로 들어가지 않게 합니다.
+      var guard = function (fn) { return function (ev) { if (ev.detail > 1 || performance.now() - shown < 350) return; fn(); }; };
       var mover = sideLong(e, a.toMove);
       now.innerHTML = '<span class="eyebrow">' + (h.length + 1) + "번째 수 · " + esc(mover) + ' 차례</span><span class="big">‘' + esc(a.syllable) + "’" + ro(a.syllable).slice(a.syllable.length) + " 시작하는 단어</span>" +
         '<span class="verdict">' + statusLine(a, e) + "</span>";
       var order = { win: 0, lose: 1, "?": 2 };
       var list = a.moves.slice().sort(function (x, y) { return order[x.status] - order[y.status] || (x.words[0] < y.words[0] ? -1 : 1); });
-      mv.innerHTML = a.end ? '<p class="note">더 낼 단어가 없습니다. 바로 앞에 단어를 낸 쪽이 이겼습니다.</p>' : list.map(function (m) { return moveRow(m, a); }).join("");
-      mv.querySelectorAll("[data-word]").forEach(function (b) { b.onclick = function () { state.history.push(b.dataset.word); go(); }; });
-      if (a.status === "W" && a.best) { play.disabled = false; play.textContent = "이기는 수 두기: " + a.best.words[0]; play.onclick = function () { state.history.push(a.best.words[0]); go(); }; }
+      var winnerSide = a.toMove === "receiver" ? "낸 쪽" : "받는 쪽";
+      mv.innerHTML = a.end ? '<p class="note">더 낼 단어가 없습니다. <b>' + winnerSide + "</b>이 이겼습니다.</p>" : list.map(function (m) { return moveRow(m, a); }).join("");
+      mv.querySelectorAll("[data-word]").forEach(function (b) { b.onclick = guard(function () { state.history.push(b.dataset.word); go(); }); });
+      if (a.status === "W" && a.best) { play.disabled = false; play.textContent = "이기는 수 두기: " + a.best.words[0]; play.onclick = guard(function () { state.history.push(a.best.words[0]); go(); }); }
+      if (keyboard) { var first = mv.querySelector(".mv"); (first || now).focus({ preventScroll: false }); }
     }).catch(function (err) {
-      if (token !== state.token) return;
+      if (token !== state.token || !document.getElementById("now")) return;
       document.getElementById("now").innerHTML = '<span class="err">' + esc(err.message || String(err)) + "</span>";
     });
   }
