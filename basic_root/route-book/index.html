@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>역·격 필승 수순</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* One narrow column like a scorebook: pick a start and a first move, then follow the line. */
+:root {
+  --paper: #f2f4f1; --sheet: #ffffff; --ink: #1d2733; --muted: #5d6a74; --line: #d5dbd6;
+  --accent: #1f5f7a; --proof: #1f5f7a; --mirror: #9a5b12; --static: #2f6b3f; --lose: #a3312b;
+  --proof-bg: #e2edf1; --mirror-bg: #f6ead9; --static-bg: #e3efe5; --lose-bg: #f6e3e1; --none-bg: #eceeed;
+  --display: "Gowun Batang", "Nanum Myeongjo", "Apple SD Gothic Neo", serif;
+  --body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12171c; --sheet: #1a2128; --ink: #e4e9ec; --muted: #9aa7b0; --line: #2d3740;
+    --accent: #7cc0dc; --proof: #7cc0dc; --mirror: #e0a95e; --static: #8ccf9c; --lose: #f08a83;
+    --proof-bg: #1d3340; --mirror-bg: #3a2b17; --static-bg: #1f3325; --lose-bg: #3a1f1d; --none-bg: #242c33; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12171c; --sheet: #1a2128; --ink: #e4e9ec; --muted: #9aa7b0; --line: #2d3740;
+  --accent: #7cc0dc; --proof: #7cc0dc; --mirror: #e0a95e; --static: #8ccf9c; --lose: #f08a83;
+  --proof-bg: #1d3340; --mirror-bg: #3a2b17; --static-bg: #1f3325; --lose-bg: #3a1f1d; --none-bg: #242c33; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.6; word-break: keep-all; overflow-wrap: anywhere; }
+.wrap { max-width: 720px; margin: 0 auto; padding-block: 28px 56px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 28px; }
+h1, h2 { font-family: var(--display); font-weight: 700; text-wrap: balance; margin: 0; }
+h1 { font-size: 2rem; line-height: 1.25; }
+h2 { font-size: 1.3rem; }
+p { margin: 0; max-width: 65ch; }
+.lede { display: grid; gap: 10px; }
+.lede .facts { color: var(--muted); font-size: 0.9rem; }
+.eyebrow { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+.panel { background: var(--sheet); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 16px; min-width: 0; }
+.tabs { display: flex; gap: 8px; }
+.tabs button { font: inherit; font-family: var(--display); font-size: 1.4rem; padding: 4px 18px; border-radius: 8px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
+.tabs button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+.firsts { display: grid; gap: 6px; }
+.first { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.first:hover { border-color: var(--accent); }
+.first[disabled] { cursor: default; opacity: 0.75; }
+.first .fw { font-weight: 600; overflow-wrap: anywhere; }
+.first .sub { color: var(--muted); font-size: 0.85rem; }
+.chain { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 0.92rem; }
+.chain .w { padding: 2px 8px; border-radius: 6px; background: var(--paper); border: 1px solid var(--line); }
+.chain .w.me { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.chain .arrow { color: var(--muted); font-size: 0.8rem; }
+.turn { display: grid; gap: 6px; }
+.syl { font-family: var(--display); font-size: 2.6rem; line-height: 1; }
+.answer { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
+.answer .word { font-family: var(--display); font-size: 1.9rem; font-weight: 700; color: var(--accent); }
+.badge { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.badge.proof, .badge.win { color: var(--proof); background: var(--proof-bg); }
+.badge.mirror { color: var(--mirror); background: var(--mirror-bg); }
+.badge.static { color: var(--static); background: var(--static-bg); }
+.badge.loss { color: var(--lose); background: var(--lose-bg); }
+.badge.none { color: var(--muted); background: var(--none-bg); }
+.alts { color: var(--muted); font-size: 0.88rem; }
+.choices { display: flex; flex-wrap: wrap; gap: 8px; }
+.choices button { font: inherit; font-size: 1rem; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
+.choices button:hover { border-color: var(--accent); }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; }
+.tools button { font: inherit; font-size: 0.9rem; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.tools button:disabled { opacity: 0.45; cursor: default; }
+.win-msg { font-family: var(--display); font-size: 1.4rem; color: var(--static); }
+.status { color: var(--muted); font-size: 0.9rem; }
+.error { color: var(--lose); }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="lede">
+    <span class="eyebrow">기초사전 루트 817단어 · 표준두음법칙 · 재사용 금지</span>
+    <h1>역과 격은 받는 쪽이 이깁니다</h1>
+    <p>시작 음절과 받는 쪽의 첫 수를 고르세요. 이기는 첫 수면 엔진이 받는 쪽을, 지는 첫 수면 엔진이 낸 쪽을 맡아 끝까지 이기는 수를 둡니다. 상대 수는 직접 고르면 됩니다.</p>
+    <p class="facts">근거: 수정하지 않은 verify_v2.py로 검증한 증명 13개에서 뽑은 승리수 <span class="num" id="entries">-</span>개. 시작 음절을 받는 순간 817단어가 모두 남아 있을 때의 결과입니다.</p>
+  </header>
+
+  <section class="panel" aria-labelledby="pick-title">
+    <h2 id="pick-title">첫 수 고르기</h2>
+    <div class="tabs" id="tabs" role="group" aria-label="시작 음절"></div>
+    <div class="firsts" id="firsts"><p class="status">불러오는 중이에요…</p></div>
+  </section>
+
+  <section class="panel" aria-labelledby="play-title">
+    <h2 id="play-title">수순 따라가기</h2>
+    <div class="chain" id="chain" aria-label="지금까지의 수순"></div>
+    <div id="body" class="turn"><p class="status">위에서 첫 수를 고르세요.</p></div>
+    <div class="tools">
+      <button id="undo" type="button">한 수 무르기</button>
+      <button id="random" type="button">상대 수 무작위로 두기</button>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="legend-title">
+    <h2 id="legend-title">응수 표시</h2>
+    <div class="firsts">
+      <div><span class="badge proof">증명</span> 검증된 증명에 적힌 승리수입니다.</div>
+      <div><span class="badge mirror">되받기</span> 상대가 왕복 쌍의 한쪽을 내면 그 짝으로 받아 직전 국면으로 돌려놓습니다.</div>
+      <div><span class="badge static">정적</span> 남은 길만으로 승패가 정해진 자리입니다. 상대를 낼 단어가 없어지는 쪽으로 보냅니다.</div>
+    </div>
+  </section>
+</div>
+
+<script src="engine.js" charset="utf-8"></script>
+<script>
+(function () {
+  var E = RouteBook, catalog = null, loading = {};
+  var game = null;  // { start, history, side: "receiver"|"presenter", fixed, moves: [] }
+  var tabs = document.getElementById("tabs"), firsts = document.getElementById("firsts");
+  var chain = document.getElementById("chain"), body = document.getElementById("body");
+  var undoBtn = document.getElementById("undo"), randomBtn = document.getElementById("random");
+  var badgeClass = { "증명": "proof", "되받기": "mirror", "정적": "static" };
+  var resultName = { win: "이기는 수", loss: "지는 수", pending: "보류" };
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function loadBucket(id) {
+    if (!loading[id]) loading[id] = fetch(E.bucketFile(id)).then(function (r) { if (!r.ok) throw new Error("승리수 표 조각을 불러오지 못했어요."); return r.arrayBuffer(); });
+    return loading[id];
+  }
+
+  // 무를 수 없는 앞부분: 첫 수와, 낸 쪽을 맡을 때 엔진의 첫 반박
+  function fixedLen() { return game.fixed + (game.side === "presenter" ? 1 : 0); }
+
+  function ourTurn() { return (game.history.length % 2 === 0) === (game.side === "receiver"); }
+
+  function showStart(start) {
+    Array.prototype.forEach.call(tabs.children, function (b) { b.setAttribute("aria-pressed", String(b.textContent === start)); });
+    firsts.textContent = "";
+    E.firstMoves(start).forEach(function (f) {
+      var b = el("button", "first"); b.type = "button";
+      var left = el("span");
+      left.appendChild(el("span", "fw", f.words.join(" · ")));
+      var sub = f.refutation ? "상대 반박: " + f.refutation.word : f.proof ? "엔진이 받는 쪽으로 둡니다" : (f.source || f.note || "");
+      left.appendChild(el("div", "sub", sub));
+      b.appendChild(left);
+      b.appendChild(el("span", "badge " + (f.proof ? f.result : "none"), resultName[f.result]));
+      if (!f.proof) b.disabled = true;
+      else b.addEventListener("click", function () { begin(start, f); });
+      firsts.appendChild(b);
+    });
+  }
+
+  function begin(start, f) {
+    var w = f.words[0];
+    game = { start: start, history: [w], side: f.result === "win" ? "receiver" : "presenter", fixed: 1, moves: [] };
+    advance();
+  }
+
+  function renderChain() {
+    chain.textContent = "";
+    if (!game) return;
+    chain.appendChild(el("span", "w", "~" + game.start));
+    game.history.forEach(function (w, i) {
+      var mine = (i % 2 === 0) === (game.side === "receiver");
+      chain.appendChild(el("span", "arrow", "→"));
+      chain.appendChild(el("span", "w " + (mine ? "me" : ""), w));
+    });
+  }
+
+  function render() {
+    renderChain();
+    body.textContent = "";
+    undoBtn.disabled = !game || game.history.length <= fixedLen();
+    randomBtn.disabled = !game;
+    if (!game) return;
+    var last = game.moves[game.moves.length - 1];
+    if (last && last.at === game.history.length) {
+      var mine = el("div", "answer");
+      mine.appendChild(el("span", "eyebrow", "엔진 응수"));
+      mine.appendChild(el("span", "word", last.word));
+      mine.appendChild(el("span", "badge " + badgeClass[last.how], last.how));
+      if (last.alts.length) mine.appendChild(el("span", "alts", "같은 효과: " + last.alts.join(", ")));
+      body.appendChild(mine);
+    }
+    var opp = E.legalWords(game.start, game.history);
+    if (!opp.length) { body.appendChild(el("p", "win-msg", "상대가 낼 단어가 없어요. 엔진 쪽이 이겼습니다.")); randomBtn.disabled = true; return; }
+    var t = el("div", "turn");
+    t.appendChild(el("span", "eyebrow", "상대 차례"));
+    t.appendChild(el("span", "syl", E.syllableOf(game.start, game.history)));
+    t.appendChild(el("p", "status", "상대가 낸 단어를 고르세요 (" + opp.length + "개)"));
+    body.appendChild(t);
+    var box = el("div", "choices");
+    opp.forEach(function (w) { var b = el("button", "", w); b.type = "button"; b.addEventListener("click", function () { game.history.push(w); advance(); }); box.appendChild(b); });
+    body.appendChild(box);
+  }
+
+  // 엔진 차례면 승리수를 둔 뒤 화면을 그린다
+  function advance() {
+    if (!ourTurn()) { render(); return; }
+    body.textContent = ""; body.appendChild(el("p", "status", "승리수를 찾는 중이에요…"));
+    var h = game.history.slice();
+    E.ourMoveAsync(game.start, h, null, loadBucket).then(function (mv) {
+      if (!mv) { render(); body.appendChild(el("p", "error", "이 자리의 승리수가 표에 없어요. 수순: " + h.join(" → "))); return; }
+      game.history.push(mv.word); mv.at = game.history.length; game.moves.push(mv); render();
+    }).catch(function (err) { body.appendChild(el("p", "error", err.message || "불러오지 못했어요.")); });
+  }
+
+  undoBtn.addEventListener("click", function () {
+    if (!game || game.history.length <= fixedLen()) return;
+    // 상대 수 하나와 그에 대한 엔진 응수를 함께 무른다
+    var cut = game.history.length - 1;
+    while (cut > game.fixed && (cut % 2 === 0) === (game.side === "receiver")) cut--;
+    game.history = game.history.slice(0, cut);
+    game.moves = game.moves.filter(function (m) { return m.at <= cut; });
+    advance();
+  });
+  randomBtn.addEventListener("click", function () {
+    if (!game) return;
+    var opp = E.legalWords(game.start, game.history);
+    if (opp.length) { game.history.push(opp[Math.floor(Math.random() * opp.length)]); advance(); }
+  });
+
+  Promise.all([fetch("model.json").then(function (r) { if (!r.ok) throw new Error(); return r.json(); }),
+               fetch("catalog.json").then(function (r) { if (!r.ok) throw new Error(); return r.json(); })])
+    .then(function (res) {
+      catalog = res[1]; E.init(res[0], catalog);
+      document.getElementById("entries").textContent = res[0].entries.toLocaleString("ko-KR");
+      Object.keys(catalog.starts).forEach(function (s) {
+        var b = el("button", "", s); b.type = "button"; b.addEventListener("click", function () { showStart(s); }); tabs.appendChild(b);
+      });
+      showStart(Object.keys(catalog.starts)[0]);
+      render();
+    })
+    .catch(function () { firsts.textContent = ""; firsts.appendChild(el("p", "error", "자료를 불러오지 못했어요. 새로고침해 주세요.")); });
+})();
+</script>
+</body>
+</html>
