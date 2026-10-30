@@ -179,7 +179,7 @@ def main():
                 files.append((lo, c - 1)); lo, acc = c, 0
             acc += sizes[c]
         files.append((lo, len(sizes) - 1))
-        bid = 'k%02d' % bi
+        bid = 'k' + ''.join('%04x' % ord(ch) for ch in book)  # stable across rebuilds, so unchanged books keep their files
         os.makedirs(f'{out}/t/{bid}', exist_ok=True)
         entry = {'id': bid, 'name': book, 'proofs': b['proofs'], 'entries': int(len(rec)), 'files': []}
         for fi, (clo, chi) in enumerate(files):
