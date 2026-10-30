@@ -1,0 +1,358 @@
+<title>루트 수순 지도</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* 원고지: 칸 하나에 음절 하나. 지도는 원고지 한 장, 수순은 원고지 한 줄로 적어 내려간다. */
+:root {
+  --paper: #fbfcf9;
+  --sheet: #ffffff;
+  --rule: #9cc3ad;
+  --rule-soft: #d7e8de;
+  --ink: #1b2620;
+  --ink-soft: #55665c;
+  --accent: #2f7a55;
+  --win: #1f6f4a;
+  --win-bg: #dcefe4;
+  --lose: #b23a2b;
+  --lose-bg: #f7e1dc;
+  --open: #6b7570;
+  --open-bg: #ecefed;
+  --astra: #6a4fa3;
+  --astra-bg: #ebe5f6;
+  --focus: #1d5fd1;
+  --shadow: 0 1px 0 rgba(27, 38, 32, .06);
+  --f-display: "Nanum Myeongjo", "AppleMyungjo", "Noto Serif KR", serif;
+  --f-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --cell: 44px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #101814; --sheet: #142019; --rule: #3b6550; --rule-soft: #22362b; --ink: #e4ede7; --ink-soft: #9db3a6;
+    --accent: #6cc79a; --win: #7fd6a6; --win-bg: #173726; --lose: #f19a8a; --lose-bg: #3d1f1a; --open: #a3aea8; --open-bg: #1f2a25;
+    --astra: #c2adf0; --astra-bg: #2a2340; --focus: #8ab4ff; --shadow: 0 1px 0 rgba(0, 0, 0, .3); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #101814; --sheet: #142019; --rule: #3b6550; --rule-soft: #22362b; --ink: #e4ede7; --ink-soft: #9db3a6;
+  --accent: #6cc79a; --win: #7fd6a6; --win-bg: #173726; --lose: #f19a8a; --lose-bg: #3d1f1a; --open: #a3aea8; --open-bg: #1f2a25;
+  --astra: #c2adf0; --astra-bg: #2a2340; --focus: #8ab4ff; --shadow: 0 1px 0 rgba(0, 0, 0, .3); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--paper); color: var(--ink); }
+body { font: 15px/1.6 var(--f-body); }
+.wrap { max-width: 1040px; margin: 0 auto; padding-block: 20px 56px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 22px; }
+a { color: var(--accent); }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 800; text-wrap: balance; margin: 0; line-height: 1.25; }
+h1 { font-size: clamp(26px, 5vw, 36px); letter-spacing: -.01em; }
+h2 { font-size: 21px; }
+h3 { font-size: 16px; }
+.lede { color: var(--ink-soft); max-width: 62ch; margin: 6px 0 0; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; color: var(--ink-soft); }
+.mono { font-family: var(--f-mono); font-size: 12px; }
+
+/* 머리말 */
+header.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; border-bottom: 2px solid var(--rule); padding-bottom: 14px; }
+.tally { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 13px; font-weight: 500; white-space: nowrap; }
+.pill.win { background: var(--win-bg); color: var(--win); }
+.pill.lose { background: var(--lose-bg); color: var(--lose); }
+.pill.open { background: var(--open-bg); color: var(--open); }
+.pill.astra { background: var(--astra-bg); color: var(--astra); }
+.pill b { font-family: var(--f-mono); font-weight: 500; }
+
+/* 원고지 지도 */
+.sheet { background: var(--sheet); border: 1px solid var(--rule); box-shadow: var(--shadow); padding: 14px; }
+.grid { display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+.cell { position: relative; aspect-ratio: 1; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); display: grid; place-items: center; font-family: var(--f-display); font-weight: 700; font-size: clamp(16px, 2.4vw, 22px); background: none; border-top: 0; border-left: 0; padding: 0; cursor: pointer; min-width: 0; }
+.cell.win { background: var(--win-bg); color: var(--win); }
+.cell.lose { background: var(--lose-bg); color: var(--lose); }
+.cell.astra { background: var(--astra-bg); color: var(--astra); }
+.cell.open { color: var(--open); cursor: default; }
+.cell.alias { opacity: .7; }
+.cell .mark { position: absolute; top: 2px; right: 3px; font: 600 10px/1 var(--f-mono); color: var(--lose); }
+.cell .ring { position: absolute; inset: 14%; border: 1.5px solid var(--lose); border-radius: 50%; opacity: .45; pointer-events: none; }
+.cell:hover:not(.open) { outline: 2px solid var(--accent); outline-offset: -2px; z-index: 1; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; color: var(--ink-soft); margin-top: 12px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 14px; height: 14px; border: 1px solid var(--rule); display: inline-block; }
+.sw.win { background: var(--win-bg); } .sw.lose { background: var(--lose-bg); } .sw.astra { background: var(--astra-bg); } .sw.open { background: var(--sheet); }
+.sw.ring { border-radius: 50%; border: 1.5px solid var(--lose); background: none; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1px solid var(--rule); background: var(--sheet); padding: 6px 12px; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; font-size: 14px; }
+.chip:hover { border-color: var(--accent); }
+#view { display: grid; gap: 34px; }
+.section { display: grid; gap: 10px; }
+.note { font-size: 13px; color: var(--ink-soft); max-width: 70ch; }
+
+/* 탐색기 */
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn { border: 1px solid var(--rule); background: var(--sheet); padding: 7px 14px; cursor: pointer; font-size: 14px; }
+.btn:hover:not(:disabled) { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--sheet); border-color: var(--accent); font-weight: 600; }
+.btn:disabled { opacity: .45; cursor: default; }
+.title-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+.meta { font-size: 13px; color: var(--ink-soft); }
+.line { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); background: var(--sheet); }
+.word { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: none; border-top: 0; border-left: 0; padding: 0; cursor: pointer; display: grid; text-align: left; }
+.word .boxes { display: flex; }
+.word .boxes i { font-style: normal; width: 30px; height: 34px; display: grid; place-items: center; font-family: var(--f-display); font-weight: 700; font-size: 18px; border-right: 1px solid var(--rule-soft); }
+.word .boxes i:last-child { border-right: 0; }
+.word .who { font-size: 11px; padding: 1px 6px 2px; color: var(--ink-soft); border-top: 1px solid var(--rule-soft); white-space: nowrap; }
+.word.recv .boxes { color: var(--accent); }
+.word.pres .boxes { color: var(--ink); }
+.word.start .boxes { color: var(--ink-soft); }
+.word.here { box-shadow: inset 0 -3px 0 var(--accent); }
+.word:hover { background: var(--rule-soft); }
+.now { display: grid; gap: 6px; padding: 14px 16px; border: 1px solid var(--rule); background: var(--sheet); }
+.now .big { font-family: var(--f-display); font-size: 20px; font-weight: 800; }
+.verdict { display: inline-flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.moves { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 8px; }
+.mv { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; align-items: center; text-align: left; border: 1px solid var(--rule); border-left-width: 4px; background: var(--sheet); padding: 9px 12px; cursor: pointer; min-width: 0; }
+.mv:hover { border-color: var(--accent); }
+.mv.win { border-left-color: var(--win); }
+.mv.lose { border-left-color: var(--lose); }
+.mv.open { border-left-color: var(--rule); }
+.mv .w { font-family: var(--f-display); font-weight: 800; font-size: 18px; overflow-wrap: anywhere; }
+.mv .alt { font-size: 12px; color: var(--ink-soft); grid-column: 1 / -1; }
+.mv .why { font-size: 13px; color: var(--ink-soft); grid-column: 1 / -1; }
+.mv .why b { color: var(--ink); font-weight: 600; }
+.tag { font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 999px; white-space: nowrap; }
+.tag.win { background: var(--win-bg); color: var(--win); }
+.tag.lose { background: var(--lose-bg); color: var(--lose); }
+.tag.open { background: var(--open-bg); color: var(--open); }
+.loading { color: var(--ink-soft); font-size: 14px; }
+.err { color: var(--lose); font-size: 14px; }
+details.proofs { font-size: 13px; color: var(--ink-soft); }
+details.proofs summary { cursor: pointer; }
+.tbl { overflow-x: auto; }
+.tbl table { border-collapse: collapse; font-size: 13px; min-width: 520px; }
+.tbl th, .tbl td { border-bottom: 1px solid var(--rule-soft); padding: 4px 10px 4px 0; text-align: left; vertical-align: top; }
+.tbl td.n { font-family: var(--f-mono); font-variant-numeric: tabular-nums; text-align: right; }
+footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--rule); padding-top: 12px; display: grid; gap: 4px; }
+@media (max-width: 640px) {
+  .grid { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+  .word .boxes i { width: 26px; height: 30px; font-size: 16px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mv, .cell, .chip, .btn { transition: border-color .12s, background-color .12s; }
+}
+</style>
+
+<div class="wrap" id="app">
+  <header class="top">
+    <div>
+      <div class="eyebrow">기초사전 루트 817단어 · 표준두음법칙 · 한 경기 안 재사용 금지</div>
+      <h1>루트 수순 지도</h1>
+      <p class="lede" id="lede">검증을 마친 증명으로 수순을 한 수씩 따라갑니다. 음절을 누르면 그 음절을 받은 국면부터 시작합니다.</p>
+    </div>
+    <div class="tally" id="tally"></div>
+  </header>
+  <main id="view"><p class="loading">자료를 불러오는 중…</p></main>
+  <footer id="foot"></footer>
+</div>
+
+<script src="site-engine.js" charset="utf-8"></script>
+<script src="astra-adapter.js" charset="utf-8"></script>
+<script>
+"use strict";
+(function () {
+  var model, manifest, catalog, entries = [], byId = {}, astraReady = null;
+  var view = document.getElementById("view");
+  var state = { entry: null, history: [], busy: false, token: 0 };
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function fmt(n) { return Number(n).toLocaleString("ko-KR"); }
+  function josa(w, a, b) { var c = w.charCodeAt(w.length - 1) - 0xac00; return w + (c >= 0 && c < 11172 && c % 28 ? a : b); }
+  function ro(w) { var c = w.charCodeAt(w.length - 1) - 0xac00, j = c >= 0 && c < 11172 ? c % 28 : 0; return w + (j === 0 || j === 8 ? "로" : "으로"); }
+  // 표 파일은 base64 텍스트로 올라가 있습니다(아티팩트가 이진 파일을 받지 않음). 받아서 바이트로 되돌립니다.
+  function unbase64(text) {
+    var s = atob(text.replace(/\s+/g, "")), u = new Uint8Array(s.length);
+    for (var i = 0; i < s.length; i++) u[i] = s.charCodeAt(i);
+    return u.buffer;
+  }
+  function get(p, type) {
+    return fetch(p).then(function (r) {
+      if (!r.ok) throw new Error(p + "를 불러오지 못했어요 (" + r.status + ").");
+      return type === "json" ? r.json() : type === "b64" ? r.text().then(unbase64) : r.arrayBuffer();
+    });
+  }
+
+  // ── 지도 ──────────────────────────────────────────────
+  function cellClass(g) {
+    if (!g.inModel) return "lose";
+    if (!g.entry) return "open";
+    var e = byId[g.entry];
+    if (e.kind === "astra") return "astra";
+    return e.receiverWins ? "win" : "lose";
+  }
+  function renderMap() {
+    state.entry = null;
+    var ent = entries.filter(function (e) { return e.kind !== "via"; });
+    var wins = ent.filter(function (e) { return e.kind !== "astra" && e.receiverWins; }).length;
+    var loses = ent.filter(function (e) { return e.kind !== "astra" && !e.receiverWins; }).length;
+    var openCount = new Set(catalog.grid.filter(function (g) { return g.inModel && !g.entry; }).map(function (g) { return g.base; })).size;
+    var mism = catalog.grid.filter(function (g) { return g.agrees === false && g.s === g.base; }).map(function (g) { return g.s; });
+    var cells = catalog.grid.map(function (g) {
+      var cls = cellClass(g), e = g.entry ? byId[g.entry] : null, label = g.s;
+      var title = !g.inModel ? g.s + ": 817단어 중 이 음절로 시작하는 단어가 없어 받으면 바로 짐"
+        : !e ? g.s + ": 아직 확정하지 않음"
+        : g.s + (g.s !== g.base ? "(=" + g.base + ")" : "") + ": " + (e.kind === "astra" ? "아스트라 연구 · " : "") + (e.receiverWins ? "받는 쪽 승" : "받는 쪽 패");
+      return '<button class="cell ' + cls + (g.s !== g.base ? " alias" : "") + '" data-entry="' + (e ? esc(e.id) : "") + '" title="' + esc(title) + '"' +
+        (e ? "" : ' aria-disabled="true"') + ">" + (g.estimate === "불리" ? '<span class="ring" aria-hidden="true"></span>' : "") +
+        esc(label) + (g.agrees === false ? '<span class="mark" title="추정표와 다름">≠</span>' : "") + "</button>";
+    }).join("");
+    var vias = entries.filter(function (e) { return e.kind === "via"; }).map(function (e) {
+      return '<button class="chip" data-entry="' + esc(e.id) + '"><span>' + esc(ro(e.via)) + " 넘겨받은 <b>" + esc(e.syllable) + '</b></span><span class="pill ' + (e.receiverWins ? "win" : "lose") + '">' + (e.receiverWins ? "받는 쪽 승" : "받는 쪽 패") + "</span></button>";
+    }).join("");
+    document.getElementById("tally").innerHTML =
+      '<span class="pill win">받으면 승 <b>' + wins + "</b></span>" +
+      '<span class="pill lose">받으면 패 <b>' + loses + "</b></span>" +
+      '<span class="pill astra">아스트라 연구 <b>1</b></span>' +
+      '<span class="pill open">계산 중 <b>' + openCount + "</b></span>";
+    view.innerHTML =
+      '<div class="section">' +
+        "<h2>시작 음절</h2>" +
+        '<p class="note">817단어 밖의 단어로 그 음절을 넘겨받아, 817단어가 하나도 쓰이지 않은 국면입니다. 칸 색은 그 음절로 시작해야 하는 사람(받는 쪽)의 결과입니다. 원은 다른 분의 추정표에서 ‘받으면 불리’로 표시된 칸이고, ≠는 추정표와 결과가 다른 칸입니다' +
+        (mism.length ? " (" + mism.join("·") + ")" : "") + ".</p>" +
+        '<div class="sheet"><div class="grid" id="grid">' + cells + "</div>" +
+        '<div class="legend"><span><i class="sw win"></i>받으면 승</span><span><i class="sw lose"></i>받으면 패</span><span><i class="sw astra"></i>아스트라 연구(적)</span><span><i class="sw open"></i>계산 중</span><span><i class="sw ring"></i>추정표의 ‘받으면 불리’</span><span>흐린 칸: 두음법칙으로 같은 음절(락=낙, 력=역 …)</span></div></div>' +
+      "</div>" +
+      '<div class="section"><h2>넘겨받은 단어가 정해진 국면</h2>' +
+        '<p class="note">그 음절을 넘긴 단어가 817단어 안의 단어면 그 단어가 이미 쓰인 다른 국면입니다. 같은 칭이라도 무엇으로 받았는지에 따라 결과가 바뀝니다.</p>' +
+        '<div class="chips">' + vias + "</div></div>" +
+      '<div class="section"><h2>읽는 법</h2><ul class="note">' +
+        "<li><b>받는 쪽</b>은 그 음절로 시작해야 하는 사람, <b>낸 쪽</b>은 그 음절을 넘긴 사람입니다. 수순에서는 받는 쪽이 먼저 둡니다.</li>" +
+        "<li>지는 쪽의 수는 모두 끝까지 확인했습니다. 이기는 쪽은 각 자리에서 이기는 수 하나만 증명했으므로, 다른 수는 ‘미확인’으로 보일 수 있습니다.</li>" +
+        "<li>판정 근거: <b>증명</b>(검증된 증명의 승리수), <b>정적</b>(남은 단어 연결만으로 결정), <b>한 수</b>(상대를 정적으로 지는 자리로 보냄), <b>되받기</b>(왕복 쌍의 짝으로 받아 직전 국면으로 돌림).</li>" +
+        "<li>적은 아스트라의 ‘적색 루트 연습실’ 증명 색인과 계산 엔진으로 판정합니다. 이 사이트의 다른 음절과 검증기가 다릅니다.</li>" +
+      "</ul></div>";
+    view.querySelectorAll("[data-entry]").forEach(function (b) {
+      b.addEventListener("click", function () { if (b.dataset.entry) open(byId[b.dataset.entry], []); });
+    });
+    if (location.hash && location.hash !== "#map") history.replaceState(null, "", "#map");
+  }
+
+  // ── 탐색기 ────────────────────────────────────────────
+  function legalSorted(e, h) {
+    var a = RouteSite.position(e.start, e.prefix.concat(h)), list = [];
+    model.outgoing[a.cur].forEach(function (g) { model.words[g].forEach(function (w) { if (!a.used[w]) list.push(w); }); });
+    return list.sort();
+  }
+  function hashFor(e, h) {
+    var idx = [], i;
+    for (i = 0; i < h.length; i++) idx.push(legalSorted(e, h.slice(0, i)).indexOf(h[i]));
+    return "#e" + entries.indexOf(e) + (idx.length ? "-" + idx.join("-") : "");
+  }
+  function fromHash(hash) {
+    var m = /^#e(\d+)((?:-\d+)*)$/.exec(hash || "");
+    if (!m || !entries[+m[1]]) return null;
+    var e = entries[+m[1]], h = [], parts = m[2] ? m[2].slice(1).split("-") : [];
+    for (var i = 0; i < parts.length; i++) { var l = legalSorted(e, h), w = l[+parts[i]]; if (!w) break; h.push(w); }
+    return { entry: e, history: h };
+  }
+  function side(e, i) { return i % 2 ? "낸 쪽" : "받는 쪽"; }
+  function sideLong(e, toMove) {
+    return toMove === "receiver" ? "받는 쪽(" + e.syllable + josa(e.syllable, "을", "를").slice(e.syllable.length) + " 받은 사람)" : "낸 쪽(" + e.syllable + josa(e.syllable, "을", "를").slice(e.syllable.length) + " 넘긴 사람)";
+  }
+  function analyze(e, h) {
+    if (e.kind === "astra") return ensureAstra().then(function () { return AstraRoute.analyze(e, h, 50000); });
+    return RouteSite.analyze(e, h);
+  }
+  function ensureAstra() {
+    if (!astraReady) astraReady = Promise.all([get("astra/game-data.json", "json"), get("astra/proof-817.txt", "b64"), get("astra/engine.wasm")]).then(function (r) {
+      return AstraRoute.init(r[0], r[1], new Uint8Array(r[2]), model);
+    }).catch(function (err) { astraReady = null; throw err; });
+    return astraReady;
+  }
+  function open(e, h) { state.entry = e; state.history = h.slice(); go(); }
+  function go() {
+    var e = state.entry, h = state.history, hs = hashFor(e, h);
+    if (location.hash !== hs) history.replaceState(null, "", hs);
+    renderExplorer();
+  }
+  function wordBoxes(w) { return '<span class="boxes">' + Array.from(w).map(function (ch) { return "<i>" + esc(ch) + "</i>"; }).join("") + "</span>"; }
+  function statusLine(a, e) {
+    var mover = a.toMove === "receiver" ? "받는 쪽" : "낸 쪽";
+    if (a.end) return '<span class="pill lose">' + mover + "이 낼 단어가 없어 집니다</span>";
+    if (a.status === "W") return '<span class="pill win">' + mover + "이 이기는 국면</span><span class=\"meta\">근거: " + esc(a.how) + "</span>";
+    if (a.status === "L") return '<span class="pill lose">' + mover + "이 지는 국면</span><span class=\"meta\">근거: " + esc(a.how) + "</span>";
+    return '<span class="pill open">판정 없음</span><span class="meta">증명 밖으로 나온 수순입니다. 이기는 쪽이 증명에 없는 수를 두면 여기로 옵니다.</span>';
+  }
+  function moveRow(mv, a) {
+    var cls = mv.status === "win" ? "win" : mv.status === "lose" ? "lose" : "open";
+    var tag = mv.status === "win" ? "이기는 수" : mv.status === "lose" ? "지는 수" : "미확인";
+    var why = "";
+    if (mv.status === "lose" && mv.reply) why = "상대가 <b>" + esc(mv.reply.word) + "</b>" + (mv.reply.how === "되받기" ? "(짝)으로 되받음" : ro(mv.reply.word).slice(mv.reply.word.length) + " 받음") + " · " + esc(mv.how);
+    else if (mv.status === "lose") why = "근거: " + esc(mv.how);
+    else if (mv.status === "win") why = (a.best && a.best.group === mv.group ? "증명의 수" : "이 수도 이김") + " · " + esc(mv.how);
+    else if (state.history.length === 0 && state.entry.notes && state.entry.notes[mv.words[0]]) why = esc(state.entry.notes[mv.words[0]]);
+    else why = a.status === "W" ? "이기는 수는 따로 있고, 이 수는 확인하지 않았습니다" : "확인하지 못한 수";
+    var alts = mv.words.length > 1 ? '<span class="alt">같은 결과: ' + esc(mv.words.slice(1).join(", ")) + "</span>" : "";
+    return '<button class="mv ' + cls + '" data-word="' + esc(mv.words[0]) + '"><span class="w">' + esc(mv.words[0]) + '</span><span class="tag ' + cls + '">' + tag + "</span>" + alts + '<span class="why">' + why + "</span></button>";
+  }
+  function renderExplorer() {
+    var e = state.entry, h = state.history, token = ++state.token;
+    var pre = e.prefix.map(function (w) { return '<span class="word start" title="넘겨준 단어"><span class="boxes">' + Array.from(w).map(function (c) { return "<i>" + esc(c) + "</i>"; }).join("") + '</span><span class="who">넘겨준 단어</span></span>'; }).join("");
+    var line = '<button class="word start' + (h.length ? "" : " here") + '" data-back="0"><span class="boxes"><i>' + esc(e.syllable) + '</i></span><span class="who">시작</span></button>' + pre +
+      h.map(function (w, i) { return '<button class="word ' + (i % 2 ? "pres" : "recv") + (i === h.length - 1 ? " here" : "") + '" data-back="' + (i + 1) + '">' + wordBoxes(w) + '<span class="who">' + (i + 1) + ". " + side(e, i) + "</span></button>"; }).join("");
+    var rootVerdict = e.kind === "astra" ? (e.root.status === "W" ? "받는 쪽 승" : e.root.status === "L" ? "받는 쪽 패" : "판정 없음") : (e.receiverWins ? "받는 쪽 승" : "받는 쪽 패");
+    var head = e.kind === "via" ? ro(e.via) + " 넘겨받은 " + e.syllable : e.syllable + (e.kind === "astra" ? " (아스트라 연구)" : "");
+    var proofs = e.proofs.length ? '<details class="proofs"><summary>이 묶음의 증명 ' + e.proofs.length + "개 (모두 verify_v2 통과)</summary><div class=\"tbl\"><table><thead><tr><th>시작</th><th>앞 수순</th><th>둘 차례인 쪽</th><th>국면</th><th>proof_sha256</th></tr></thead><tbody>" +
+      e.proofs.map(function (p) { return "<tr><td>" + esc(p.start) + "</td><td>" + esc(p.history.join(" → ") || "—") + "</td><td>" + (p.result === "W" ? "이김" : "짐") + '</td><td class="n">' + fmt(p.nodes) + '</td><td class="mono">' + esc(p.sha256.slice(0, 16)) + "…</td></tr>"; }).join("") + "</tbody></table></div></details>"
+      : '<p class="meta">근거: 아스트라 ‘적색 루트 연습실’ v3의 증명 색인(정준 국면 ' + fmt(e.proof.nodes) + "개)과 계산 엔진. 이 저장소의 verify_v2로 검증한 것은 아닙니다.</p>";
+    view.innerHTML =
+      '<div class="section">' +
+        '<div class="bar"><button class="btn" id="toMap">← 지도</button><button class="btn" id="undo"' + (h.length ? "" : " disabled") + '>한 수 무르기</button><button class="btn" id="restart"' + (h.length ? "" : " disabled") + '>처음으로</button><button class="btn primary" id="play" disabled>이기는 수 두기</button></div>' +
+        '<div class="title-row"><h2>' + esc(head) + '</h2><span class="pill ' + (rootVerdict === "받는 쪽 승" ? "win" : rootVerdict === "받는 쪽 패" ? "lose" : "open") + '">' + rootVerdict + "</span></div>" +
+        proofs +
+        '<div class="line" id="line" aria-label="지금까지의 수순">' + line + "</div>" +
+        '<div class="now" id="now"><span class="loading">계산하는 중…</span></div>' +
+        '<div class="moves" id="moves"></div>' +
+      "</div>";
+    document.getElementById("toMap").onclick = function () { history.replaceState(null, "", "#map"); renderMap(); };
+    document.getElementById("undo").onclick = function () { state.history.pop(); go(); };
+    document.getElementById("restart").onclick = function () { state.history = []; go(); };
+    view.querySelectorAll("[data-back]").forEach(function (b) { b.onclick = function () { state.history = state.history.slice(0, +b.dataset.back); go(); }; });
+    analyze(e, h).then(function (a) {
+      if (token !== state.token) return;
+      var now = document.getElementById("now"), mv = document.getElementById("moves"), play = document.getElementById("play");
+      var mover = sideLong(e, a.toMove);
+      now.innerHTML = '<span class="eyebrow">' + (h.length + 1) + "번째 수 · " + esc(mover) + ' 차례</span><span class="big">‘' + esc(a.syllable) + "’" + ro(a.syllable).slice(a.syllable.length) + " 시작하는 단어</span>" +
+        '<span class="verdict">' + statusLine(a, e) + "</span>";
+      var order = { win: 0, lose: 1, "?": 2 };
+      var list = a.moves.slice().sort(function (x, y) { return order[x.status] - order[y.status] || (x.words[0] < y.words[0] ? -1 : 1); });
+      mv.innerHTML = a.end ? '<p class="note">더 낼 단어가 없습니다. 바로 앞에 단어를 낸 쪽이 이겼습니다.</p>' : list.map(function (m) { return moveRow(m, a); }).join("");
+      mv.querySelectorAll("[data-word]").forEach(function (b) { b.onclick = function () { state.history.push(b.dataset.word); go(); }; });
+      if (a.status === "W" && a.best) { play.disabled = false; play.textContent = "이기는 수 두기: " + a.best.words[0]; play.onclick = function () { state.history.push(a.best.words[0]); go(); }; }
+    }).catch(function (err) {
+      if (token !== state.token) return;
+      document.getElementById("now").innerHTML = '<span class="err">' + esc(err.message || String(err)) + "</span>";
+    });
+  }
+
+  function route() {
+    var r = fromHash(location.hash);
+    if (r) { state.entry = r.entry; state.history = r.history; renderExplorer(); }
+    else renderMap();
+  }
+
+  Promise.all([get("model.json", "json"), get("manifest.json", "json"), get("catalog.json", "json")]).then(function (r) {
+    model = r[0]; manifest = r[1]; catalog = r[2];
+    RouteSite.init(model, manifest, function (p) { return get(p, manifest.encoding === "base64" ? "b64" : "bin"); });
+    var order = function (e) { return (e.kind === "via" ? 1 : 0); };
+    entries = catalog.entries.slice().sort(function (a, b) { return order(a) - order(b) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0); });
+    entries.forEach(function (e) { byId[e.id] = e; });
+    var proofCount = manifest.books.reduce(function (n, b) { return n + b.proofs.length; }, 0);
+    document.getElementById("foot").innerHTML =
+      "<span>증명 " + fmt(proofCount) + "개 · 승리수 표 " + fmt(manifest.total_entries) + "항목 · 모든 증명은 수정하지 않은 verify_v2.py(sha256 " + catalog.verifier["verify_v2.py"].slice(0, 12) + "…)로 검증했습니다.</span>" +
+      "<span>단어 목록 sha256 " + esc(model.dictionary_sha256.slice(0, 16)) + "… · 적 판정은 아스트라 ‘적색 루트 연습실’ v3 자료를 씁니다.</span>";
+    window.addEventListener("hashchange", route);
+    route();
+  }).catch(function (err) { view.innerHTML = '<p class="err">' + esc(err.message || String(err)) + "</p>"; });
+})();
+</script>
