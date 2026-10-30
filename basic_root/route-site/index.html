@@ -182,10 +182,21 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
     for (var i = 0; i < s.length; i++) u[i] = s.charCodeAt(i);
     return u.buffer;
   }
+  // 표 파일은 데이터만 담은 WebAssembly 모듈(.wasm)의 사용자 정의 구역으로 올라가 있습니다(아티팩트가 일반 이진 파일을
+  // 받지 않음). 그 구역의 바이트를 꺼냅니다.
+  function unwasm(buf) {
+    var u = new Uint8Array(buf), p = 9;
+    if (u.length < 10 || u[0] !== 0 || u[1] !== 0x61 || u[2] !== 0x73 || u[3] !== 0x6d || u[8] !== 0) throw new Error("표 파일 형식이 맞지 않아요.");
+    function leb() { var r = 0, s = 1, b; do { b = u[p++]; r += (b & 0x7f) * s; s *= 128; } while (b & 0x80); return r; }
+    var size = leb(), end = p + size, nameLen = leb();
+    p += nameLen;
+    if (end !== u.length) throw new Error("표 파일 크기가 맞지 않아요.");
+    return buf.slice(p, end);
+  }
   function get(p, type) {
     return fetch(p).then(function (r) {
       if (!r.ok) throw new Error(p + "를 불러오지 못했어요 (" + r.status + ").");
-      return type === "json" ? r.json() : type === "b64" ? r.text().then(unbase64) : r.arrayBuffer();
+      return type === "json" ? r.json() : type === "b64" ? r.text().then(unbase64) : type === "wasm" ? r.arrayBuffer().then(unwasm) : r.arrayBuffer();
     });
   }
 
@@ -369,7 +380,7 @@ footer { font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--ru
 
   Promise.all([get("model.json", "json"), get("manifest.json", "json"), get("catalog.json", "json")]).then(function (r) {
     model = r[0]; manifest = r[1]; catalog = r[2];
-    RouteSite.init(model, manifest, function (p) { return get(p, manifest.encoding === "base64" ? "b64" : "bin"); });
+    RouteSite.init(model, manifest, function (p) { return get(p, manifest.encoding === "wasm-custom" ? "wasm" : manifest.encoding === "base64" ? "b64" : "bin"); });
     var order = function (e) { return (e.kind === "via" ? 1 : 0); };
     entries = catalog.entries.slice().sort(function (a, b) { return order(a) - order(b) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0); });
     entries.forEach(function (e) { byId[e.id] = e; });
