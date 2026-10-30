@@ -43,6 +43,11 @@ p { margin: 0; max-width: 65ch; }
 .tabs { display: flex; gap: 8px; }
 .tabs button { font: inherit; font-family: var(--display); font-size: 1.4rem; padding: 4px 18px; border-radius: 8px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
 .tabs button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+.vias { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.vias .eyebrow { flex-basis: 100%; }
+.vias button { font: inherit; font-size: 0.9rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
+.vias button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.chain .w.via { border-style: dashed; color: var(--muted); }
 .firsts { display: grid; gap: 6px; }
 .first { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); }
 .first.off { opacity: 0.75; }
@@ -85,12 +90,13 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     <span class="eyebrow">기초사전 루트 817단어 · 표준두음법칙 · 재사용 금지</span>
     <h1 id="headline">필승 수순</h1>
     <p>받는 쪽의 첫 수를 고르세요. 이기는 첫 수를 고르면 엔진이 받는 쪽을, 지는 첫 수를 고르면 엔진이 낸 쪽을 맡아 끝까지 이기는 수를 둡니다. 상대(여러분)의 수는 직접 고르세요.</p>
-    <p class="facts">근거: 수정하지 않은 verify_v2.py로 검증한 증명 <span class="num" id="proofs">-</span>개에서 뽑은 승리수 <span class="num" id="entries">-</span>개. 시작 음절을 받는 순간 817단어가 하나도 쓰이지 않았을 때의 결과입니다. 수순 중간에는 같은 단어라도 결과가 다를 수 있습니다.</p>
+    <p class="facts">근거: 수정하지 않은 verify_v2.py로 검증한 증명 <span class="num" id="proofs">-</span>개에서 뽑은 승리수 <span class="num" id="entries">-</span>개. 넘긴 단어를 따로 고르지 않으면 817단어가 하나도 쓰이지 않은 국면이고, 넘긴 단어(예: 명칭)를 고르면 그 단어만 쓰인 국면입니다. 수순 중간에는 같은 단어라도 결과가 다를 수 있습니다.</p>
   </header>
 
   <section class="panel" aria-labelledby="pick-title">
     <h2 id="pick-title">첫 수 고르기</h2>
     <div class="tabs" id="tabs" role="group" aria-label="시작 음절"></div>
+    <div class="vias" id="vias" role="group" aria-label="그 음절을 넘긴 단어" hidden></div>
     <div class="firsts" id="firsts"><p class="status">불러오는 중이에요…</p></div>
   </section>
 
@@ -117,15 +123,17 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 <script src="engine.js" charset="utf-8"></script>
 <script>
 (function () {
-  var E = RouteBook, catalog = null, loading = {};
-  var game = null;  // { start, history, side: "receiver"|"presenter", fixed, moves: [] }
-  var tabs = document.getElementById("tabs"), firsts = document.getElementById("firsts");
+  var E = RouteBook, catalog = null, positions = [], loading = {};
+  // game: { start, prefix (넘긴 단어), history (prefix 포함), side: "receiver"|"presenter", fixed, moves: [] }
+  var game = null;
+  var tabs = document.getElementById("tabs"), vias = document.getElementById("vias"), firsts = document.getElementById("firsts");
   var chain = document.getElementById("chain"), body = document.getElementById("body");
   var undoBtn = document.getElementById("undo"), randomBtn = document.getElementById("random");
   var badgeClass = { "증명": "proof", "되받기": "mirror", "정적": "static" };
   var resultName = { win: "이기는 수", loss: "지는 수", pending: "보류" };
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function jong(w) { var c = w.charCodeAt(w.length - 1) - 0xac00; return c >= 0 && c < 11172 ? c % 28 : 0; }
 
   function loadBucket(id) {
     if (!loading[id]) loading[id] = fetch(E.bucketFile(id)).then(function (r) { if (!r.ok) throw new Error("승리수 표 조각을 불러오지 못했어요."); return r.arrayBuffer(); })
@@ -133,21 +141,38 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     return loading[id];
   }
 
-  // 무를 수 없는 앞부분: 첫 수와, 낸 쪽을 맡을 때 엔진의 첫 반박
+  // history[i]를 둔 쪽이 받는 쪽인가 (넘긴 단어는 낸 쪽의 수)
+  function byReceiver(i) { return i >= game.prefix.length && (i - game.prefix.length) % 2 === 0; }
+  // 무를 수 없는 앞부분: 넘긴 단어, 첫 수, 낸 쪽을 맡을 때 엔진의 첫 반박
   function fixedLen() { return game.fixed + (game.side === "presenter" ? 1 : 0); }
+  function ourTurn() { return byReceiver(game.history.length) === (game.side === "receiver"); }
 
-  function ourTurn() { return (game.history.length % 2 === 0) === (game.side === "receiver"); }
+  function showSyllable(syl) {
+    Array.prototype.forEach.call(tabs.children, function (b) { b.setAttribute("aria-pressed", String(b.textContent === syl)); });
+    var list = positions.filter(function (q) { return q.syllable === syl; });
+    vias.textContent = "";
+    vias.hidden = list.length < 2;
+    if (list.length > 1) {
+      vias.appendChild(el("span", "eyebrow", syl + (jong(syl) ? "을" : "를") + " 넘긴 단어"));
+      list.forEach(function (q) {
+        var b = el("button", "", q.via || "817단어 밖의 단어"); b.type = "button"; b.dataset.id = q.id;
+        b.addEventListener("click", function () { showPosition(q); });
+        vias.appendChild(b);
+      });
+    }
+    showPosition(list[0]);
+  }
 
-  function showStart(start) {
-    Array.prototype.forEach.call(tabs.children, function (b) { b.setAttribute("aria-pressed", String(b.textContent === start)); });
+  function showPosition(q) {
+    Array.prototype.forEach.call(vias.querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", String(b.dataset.id === q.id)); });
     game = null; render();
     firsts.textContent = "";
-    E.firstMoves(start).forEach(function (f) {
+    q.first_moves.forEach(function (f) {
       var row = el("div", "first" + (f.proof ? "" : " off")), left = el("div"), words = el("div", "fw");
       f.words.forEach(function (w) {
         if (!f.proof) { words.appendChild(el("span", "", w)); return; }
         var b = el("button", "", w); b.type = "button";
-        b.addEventListener("click", function () { begin(start, f, w); });
+        b.addEventListener("click", function () { begin(q, f, w); });
         words.appendChild(b);
       });
       left.appendChild(words);
@@ -159,8 +184,9 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     });
   }
 
-  function begin(start, f, w) {
-    game = { start: start, history: [w], side: f.result === "win" ? "receiver" : "presenter", fixed: 1, moves: [] };
+  function begin(q, f, w) {
+    game = { start: q.start, prefix: q.prefix.slice(), history: q.prefix.concat([w]), side: f.result === "win" ? "receiver" : "presenter",
+             fixed: q.prefix.length + 1, moves: [] };
     advance();
     document.getElementById("play-title").scrollIntoView({ behavior: "smooth", block: "start" });
   }
@@ -168,11 +194,12 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   function renderChain() {
     chain.textContent = "";
     if (!game) return;
-    chain.appendChild(el("span", "w", "~" + game.start));
+    if (!game.prefix.length) chain.appendChild(el("span", "w", "~" + game.start));
     game.history.forEach(function (w, i) {
-      var mine = (i % 2 === 0) === (game.side === "receiver");
-      chain.appendChild(el("span", "arrow", "→"));
-      chain.appendChild(el("span", "w " + (mine ? "me" : ""), w));
+      if (i) chain.appendChild(el("span", "arrow", "→"));
+      else if (!game.prefix.length) chain.appendChild(el("span", "arrow", "→"));
+      var cls = i < game.prefix.length ? "via" : byReceiver(i) === (game.side === "receiver") ? "me" : "";
+      chain.appendChild(el("span", "w " + cls, w));
     });
   }
 
@@ -218,7 +245,7 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     if (!game || game.history.length <= fixedLen()) return;
     // 상대 수 하나와 그에 대한 엔진 응수를 함께 무른다
     var cut = game.history.length - 1;
-    while (cut > game.fixed && (cut % 2 === 0) === (game.side === "receiver")) cut--;
+    while (cut > game.fixed && byReceiver(cut) === (game.side === "receiver")) cut--;
     game.history = game.history.slice(0, cut);
     game.moves = game.moves.filter(function (m) { return m.at <= cut; });
     advance();
@@ -233,20 +260,23 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
                fetch("catalog.json").then(function (r) { if (!r.ok) throw new Error(); return r.json(); })])
     .then(function (res) {
       catalog = res[1]; E.init(res[0], catalog);
+      positions = catalog.positions || Object.keys(catalog.starts).map(function (s) {
+        return { id: s, syllable: s, start: s, prefix: [], via: null, receiver_wins: catalog.starts[s].receiver_wins, first_moves: catalog.starts[s].first_moves };
+      });
       document.getElementById("entries").textContent = res[0].entries.toLocaleString("ko-KR");
       document.getElementById("proofs").textContent = catalog.proofs.length;
-      var starts = Object.keys(catalog.starts), last = starts[starts.length - 1];
-      var c = last.charCodeAt(0) - 0xac00, topic = c >= 0 && c < 11172 && c % 28 ? "은" : "는";
-      var allReceiver = starts.every(function (s) { return catalog.starts[s].receiver_wins; });
-      var allPresenter = starts.every(function (s) { return !catalog.starts[s].receiver_wins; });
-      document.getElementById("headline").textContent = allReceiver ? starts.join("과 ") + topic + " 받는 쪽이 이깁니다"
-        : allPresenter ? starts.join("과 ") + topic + " 받으면 집니다" : starts.join("·") + " 필승 수순";
-      document.title = starts.join("·") + " 필승 수순";
-      if (starts.length < 2) tabs.hidden = true;
-      Object.keys(catalog.starts).forEach(function (s) {
-        var b = el("button", "", s); b.type = "button"; b.addEventListener("click", function () { showStart(s); }); tabs.appendChild(b);
+      var syls = [], fresh = positions.filter(function (q) { return !q.via; });
+      positions.forEach(function (q) { if (syls.indexOf(q.syllable) < 0) syls.push(q.syllable); });
+      var last = syls[syls.length - 1], topic = jong(last) ? "은" : "는";
+      var allReceiver = fresh.every(function (q) { return q.receiver_wins; }), allPresenter = fresh.every(function (q) { return !q.receiver_wins; });
+      document.getElementById("headline").textContent = allReceiver ? syls.join("과 ") + topic + " 받는 쪽이 이깁니다"
+        : allPresenter ? syls.join("과 ") + topic + " 받으면 집니다" : syls.join("·") + " 필승 수순";
+      document.title = syls.join("·") + " 필승 수순";
+      if (syls.length < 2) tabs.hidden = true;
+      syls.forEach(function (s) {
+        var b = el("button", "", s); b.type = "button"; b.addEventListener("click", function () { showSyllable(s); }); tabs.appendChild(b);
       });
-      showStart(Object.keys(catalog.starts)[0]);
+      showSyllable(syls[0]);
       render();
     })
     .catch(function () {

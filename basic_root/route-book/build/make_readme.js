@@ -14,8 +14,12 @@ const our = (start, h) => { for (;;) { try { return E.ourMove(start, h); } catch
   if (e.needBucket === undefined) throw e; const b = fs.readFileSync(path.join(dir, E.bucketFile(e.needBucket))); E.addBucket(e.needBucket, b); } } };
 const st = catalog.stats;
 const n = (x) => x.toLocaleString("en-US");
-const starts = Object.keys(catalog.starts);
 const jong = (w) => { const c = w.charCodeAt(w.length - 1) - 0xac00; return c >= 0 && c < 11172 ? c % 28 : 0; };
+const positions = catalog.positions || Object.entries(catalog.starts).map(([x, v]) => ({ syllable: x, start: x, prefix: [], via: null, ...v }));
+const starts = [...new Set(positions.map((q) => q.syllable))];
+const hasVia = positions.some((q) => q.via);
+const ro = (w) => w + (jong(w) === 0 || jong(w) === 8 ? "로" : "으로");
+const posLabel = (q) => q.syllable + (q.via ? ` (${ro(q.via)} 넘겨받음)` : hasVia ? " (817단어 밖의 단어로 넘겨받음)" : "");
 const name = starts.join("·");
 const proofs = catalog.proofs;
 const L = [];
@@ -40,15 +44,16 @@ L.push(`# ${name} 필승 수순 묶음 (route-book-1)`, "",
   "| `test_book.js` | Node로 돌리는 무작위 대국 시험 |",
   "| `build/` | 표를 만든 도구. 증명에서 표 추출(`proof2tab.c`), 합치기(`build_book.py`), 분류·수순·설명서 생성 |", "",
   "## 무엇이 들어 있나", "",
-  "| 시작 | 받는 쪽 첫 수 | 결과 | 엔진이 맡는 쪽 |", "|---|---|---|---|");
+  "| 국면 | 받는 쪽 첫 수 | 결과 | 엔진이 맡는 쪽 |", "|---|---|---|---|");
 const missing = [];
-for (const s of starts) {
-  const fm = catalog.starts[s].first_moves;
+for (const q of positions) {
+  const fm = q.first_moves;
   const wins = fm.filter((f) => f.result === "win" && f.proof), losses = fm.filter((f) => f.result === "loss" && f.proof);
-  if (wins.length) L.push(`| ${s} | ${wins.map((f) => f.words.join("·")).join(", ")} | 받는 쪽 승리 | 받는 쪽 |`);
-  if (losses.length) L.push(`| ${s} | ${losses.map((f) => f.words.join("·")).join(", ")} | 받는 쪽 패배 (낸 쪽의 반박: ${losses.map((f) => f.refutation.word).join(", ")}) | 낸 쪽 |`);
-  for (const f of fm.filter((x) => !x.proof)) missing.push({ s, f });
+  if (wins.length) L.push(`| ${posLabel(q)} | ${wins.map((f) => f.words.join("·")).join(", ")} | 받는 쪽 승리 | 받는 쪽 |`);
+  if (losses.length) L.push(`| ${posLabel(q)} | ${losses.map((f) => f.words.join("·")).join(", ")} | 받는 쪽 패배 (낸 쪽의 반박: ${losses.map((f) => f.refutation.word).join(", ")}) | 낸 쪽 |`);
+  for (const f of fm.filter((x) => !x.proof)) missing.push({ s: posLabel(q), f });
 }
+if (hasVia) L.push("", "넘겨받은 단어가 있는 국면은 엔진에 `start`를 그 단어의 첫 음절로, `history` 맨 앞에 그 단어를 넣어 부릅니다. 예: 명칭으로 넘겨받은 칭은 `ourMoveAsync(\"명\", [\"명칭\", …])`. `catalog.json`의 `positions`에 국면마다 `start`와 `prefix`(넘긴 단어)가 있습니다.");
 L.push("");
 if (missing.length) {
   L.push("**들어 있지 않은 것**");
@@ -63,7 +68,7 @@ L.push("## 쓰는 법", "", "```js",
   "// 시작 음절과, 그 음절부터 실제로 둔 단어들을 넘기면 지금 둘 차례인 쪽의 필승 수를 돌려줍니다.");
 let ex = proofs.find((p) => p.history.length === 1 && p.result_for_player_to_move === "W");
 const lostRoot = proofs.find((p) => p.history.length === 0 && p.result_for_player_to_move === "L");
-if (!ex && lostRoot) ex = { start: lostRoot.start, history: [catalog.starts[lostRoot.start].first_moves[0].words[0]] };
+if (!ex && lostRoot) { const q = positions.find((x) => x.start === lostRoot.start && x.prefix.length === lostRoot.history.length); ex = { start: lostRoot.start, history: lostRoot.history.concat([q.first_moves[0].words[0]]) }; }
 if (ex) {
   const mv = our(ex.start, ex.history);
   L.push(`const mv = await RouteBook.ourMoveAsync(${JSON.stringify(ex.start)}, ${JSON.stringify(ex.history)}, null, load);`,
@@ -115,6 +120,7 @@ L.push("```", "",
   "**`lines/<id>.json`:** `{ start, history, to_move, answer?, replies: [ { words, answer: {word, how, alts}, end?, note?, replies? } ], proof }`. `words`는 결과가 같은 상대 단어 묶음입니다. `to_move`는 `\"receiver\"` 또는 `\"presenter\"` 뒤에, 엔진 쪽이면 `(우리)`, 상대 쪽이면 `(상대)`를 붙인 값입니다. `end: true`는 그 수 뒤 상대가 낼 단어가 없다는 뜻입니다.", "",
   `## 근거 (증명 ${proofs.length}개)`, "",
   "| id | 시작 → 수순 | 둘 차례 | 결과 | 증명 노드 | proof_sha256 앞 16자 |", "|---|---|---|---|---:|---|");
+// a handover word is written before the syllable: 명칭 → 칭 → …
 for (const p of proofs) {
   const who = p.player_to_move === "receiver" ? "받는 쪽" : "낸 쪽";
   let res = p.result_for_player_to_move === "W" ? "승" : "패";
@@ -122,7 +128,8 @@ for (const p of proofs) {
     const t = JSON.parse(fs.readFileSync(path.join(dir, "lines", p.id + ".json"), "utf8"));
     res += ` (${t.answer.word})`;
   }
-  L.push(`| ${p.id} | ${[p.start].concat(p.history).join(" → ")} | ${who} | ${res} | ${n(p.nodes)} | ${p.proof_sha256.slice(0, 16)} |`);
+  const route = p.via ? [p.history[0], E.syllableOf(p.start, [p.history[0]])].concat(p.history.slice(1)) : [p.start].concat(p.history);
+  L.push(`| ${p.id} | ${route.join(" → ")} | ${who} | ${res} | ${n(p.nodes)} | ${p.proof_sha256.slice(0, 16)} |`);
 }
 L.push("", "표를 만들 때 각 증명 파일의 sha256이 검증기가 보고한 값과 같은지 먼저 확인했습니다. 증명 파일은 커서 이 묶음에 넣지 않았습니다. `catalog.json`의 `verify_seconds`는 각 증명을 검증할 때 걸린 시간입니다.", "");
 const extra = path.join(dir, "VERIFY_LOG_KO.md");
