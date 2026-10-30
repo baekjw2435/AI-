@@ -268,5 +268,121 @@
   "sha": "8ddd83b7baf4b216a5a2dbb1e233adc604c569a92ebb3e4e3d2b51e5135cc41a",
   "exit": 0,
   "error": null
+ },
+ "탄": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 2309099,
+  "seconds": 1437.05,
+  "sha": "e816e40500d9e9e811a282e51fce3669b87e8676b269c7071ddc6ccd181c2799",
+  "exit": 0,
+  "error": null
+ },
+ "증": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 1923059,
+  "seconds": 1153.666,
+  "sha": "3860ac071ddd5ee90e22a1bb40c6e2022752aa62efbe7c25e7aefea8ad7d9ca1",
+  "exit": 0,
+  "error": null
+ },
+ "승": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 1899942,
+  "seconds": 1104.793,
+  "sha": "ab6cb065c77bb506ac0b8cfb7121023cf76acbd37e2e16705cfc184db9aacadd",
+  "exit": 0,
+  "error": null
+ },
+ "약": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 2420325,
+  "seconds": 1453.262,
+  "sha": "f162c97d65fc6ecd5961d1f62473d35b134859abee253c64df3a8cfe15efa5eb",
+  "exit": 0,
+  "error": null
+ },
+ "언": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 2703591,
+  "seconds": 1471.241,
+  "sha": "db9ed64aecf09dc1c6e86861247065640fa4928449151309ab0ed84b507ca401",
+  "exit": 0,
+  "error": null
+ },
+ "충": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 3278825,
+  "seconds": 1751.576,
+  "sha": "b6c27114d90d8c230ea8df3da478ec3dbc50c4c7bb829efc635ca3c89de9e9eb",
+  "exit": 0,
+  "error": null
+ },
+ "폭": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 931897,
+  "seconds": 479.0,
+  "sha": "8d35d4209f7690394516a63ebfec45c5bcec6226b9a98d2ff5096be7a026e5ca",
+  "exit": 0,
+  "error": null
+ },
+ "활": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 6680132,
+  "seconds": 3095.638,
+  "sha": "e55c5d80103948e0edd9727849883e1386ee2f237a3f500e23a9f5a90e4fcb56",
+  "exit": 0,
+  "key": [
+   "활극",
+   "활약",
+   "활동력",
+   "활동적",
+   "활활"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 6680132, \"children_used\": 5, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "습": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 5248098,
+  "seconds": 2498.644,
+  "sha": "021c6bf258d327ea8a25f8ff6514872bb5fad6220e7ccd018da872590117bfa0",
+  "exit": 0,
+  "key": [
+   "습식"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 5248098, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
+ },
+ "맹": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 3545630,
+  "seconds": 1662.336,
+  "sha": "bb200420cb60797819b91b4a2ed28f0bbbcbee88e801e549c5b2bab1f25ec2da",
+  "exit": 0,
+  "key": [
+   "맹활약"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 3545630, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
  }
 }
