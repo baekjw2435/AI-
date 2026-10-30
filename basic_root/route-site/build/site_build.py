@@ -64,7 +64,7 @@ def proof_list():
         out.append((f'fresh.{s}', s, s, [], 0, f'{S}/tapmaek/logs/{s}_merged.jsonl.gz', v['proof_sha256'],
                     v['result_for_player_to_move'], v['checked_certificate_states'], 'verify.json'))
     for d, names in (('easy2', lambda s: ['logs/root_%s.jsonl.gz' % s]),
-                     ('rest', lambda s: ['logs/%s.jsonl.gz' % s, 'logs/%s.B.jsonl.gz' % s, 'logs/%s.C.jsonl.gz' % s])):
+                     ('rest', lambda s: ['logs/%s.jsonl.gz' % s, 'logs/%s.B.jsonl.gz' % s, 'logs/%s.C.jsonl.gz' % s, 'logs/root_%s.jsonl.gz' % s])):
         conf = f'{S}/{d}/confirmed.json'
         if not os.path.exists(conf):
             continue
