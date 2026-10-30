@@ -1,0 +1,182 @@
+{
+ "교": {
+  "result": "W",
+  "text": "교훈",
+  "nodes": 8080,
+  "sha16": "52e080dcbefe7110"
+ },
+ "급": {
+  "result": "W",
+  "text": "급훈",
+  "nodes": 8247,
+  "sha16": "95986659deb7c366"
+ },
+ "병": {
+  "result": "W",
+  "text": "병존",
+  "nodes": 7789,
+  "sha16": "fa933a195ba03716"
+ },
+ "섭": {
+  "result": "W",
+  "text": "섭렵",
+  "nodes": 98127,
+  "sha16": "64eb917537a2ee15"
+ },
+ "숙": {
+  "result": "W",
+  "text": "숙박업",
+  "nodes": 90414,
+  "sha16": "8f3836b03fd0611b"
+ },
+ "순": {
+  "result": "W",
+  "text": "순백색",
+  "nodes": 110295,
+  "sha16": "05aa79904ba1d2df"
+ },
+ "운": {
+  "result": "W",
+  "text": "운송업·운수업",
+  "nodes": 95106,
+  "sha16": "d9f9dc9a2cb40de7"
+ },
+ "움": {
+  "result": "W",
+  "text": "움큼",
+  "nodes": 116445,
+  "sha16": "07aca428d9575bf2"
+ },
+ "율": {
+  "result": "W",
+  "text": "율격",
+  "nodes": 98147,
+  "sha16": "70948bacf0602492"
+ },
+ "죽": {
+  "result": "W",
+  "text": "죽죽",
+  "nodes": 38311,
+  "sha16": "81b49794de893993"
+ },
+ "직": {
+  "result": "W",
+  "text": "직업",
+  "nodes": 114641,
+  "sha16": "93dc6cda687686a3"
+ },
+ "축": {
+  "result": "W",
+  "text": "축산업",
+  "nodes": 90491,
+  "sha16": "ecf81c849696f428"
+ },
+ "칠": {
+  "result": "W",
+  "text": "칠십",
+  "nodes": 15841,
+  "sha16": "2f02d23e233d0eba"
+ },
+ "탁": {
+  "result": "W",
+  "text": "탁탁",
+  "nodes": 2058,
+  "sha16": "55c23152c54e5902"
+ },
+ "퇴": {
+  "result": "W",
+  "text": "퇴색",
+  "nodes": 42525,
+  "sha16": "fb528ad568552c9c"
+ },
+ "항": {
+  "result": "W",
+  "text": "항균",
+  "nodes": 143410,
+  "sha16": "1ddc060112a31027"
+ },
+ "행": {
+  "result": "W",
+  "text": "행색",
+  "nodes": 74477,
+  "sha16": "9c76835096ddbb40"
+ },
+ "향": {
+  "result": "W",
+  "text": "향토색",
+  "nodes": 3950,
+  "sha16": "0489437f2efc5915"
+ },
+ "역": {
+  "result": "W",
+  "text": "역습 (아스트라 기록상 역할·역기능도 이김)",
+  "nodes": 1406006,
+  "sha16": "5638fbb94a562542"
+ },
+ "격": {
+  "result": "W",
+  "text": "격식, 격증",
+  "nodes": 5673929,
+  "sha16": "259b972335b9a9ae"
+ },
+ "탑": {
+  "result": "W",
+  "text": "탑승객",
+  "nodes": 644996,
+  "sha16": "34b2cb34fb111322"
+ },
+ "업": {
+  "result": "L",
+  "text": "업적 → 적갈색",
+  "nodes": 93390,
+  "sha16": "051ab8cbcac5a457"
+ },
+ "엽": {
+  "result": "L",
+  "text": "엽기적 → 적갈색",
+  "nodes": 104008,
+  "sha16": "f25acaf75bef2026"
+ },
+ "젓": {
+  "result": "L",
+  "text": "젓가락 → 낙농업",
+  "nodes": 98307,
+  "sha16": "5c118f2198669edc"
+ },
+ "존": {
+  "result": "L",
+  "text": "존칭 → 칭칭",
+  "nodes": 8181,
+  "sha16": "5d04dcbb903be13e"
+ },
+ "큼": {
+  "result": "L",
+  "text": "큼직큼직 → 직업",
+  "nodes": 112168,
+  "sha16": "75e80b643236f131"
+ },
+ "훈": {
+  "result": "L",
+  "text": "훈련병 → 병존",
+  "nodes": 7906,
+  "sha16": "ff88d679d4df5461"
+ },
+ "균": {
+  "result": "L",
+  "text": "균형적 → 적갈색",
+  "nodes": 158264,
+  "sha16": "3ba4628dcb0ef0c5"
+ },
+ "칭": {
+  "result": "L",
+  "text": "칭찬 → 찬성표, 칭칭 → 칭찬",
+  "nodes": 296765,
+  "sha16": "be4b4e4e270f7782"
+ },
+ "맥": {
+  "result": "L",
+  "text": "맥락 → 낙엽, 맥박 → 박색, 맥주병 → 병존",
+  "nodes": 596751,
+  "sha16": "d8a43b5297577bd3"
+ }
+}

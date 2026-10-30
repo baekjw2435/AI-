@@ -1,0 +1,283 @@
+{
+ "칙": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 217075,
+  "seconds": 110.28,
+  "sha": "2137249bf237913c02adf6fea015eff1b888e5a50eba754e77cb622cb818c38b",
+  "key": [
+   "칙칙폭폭"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 217075, \"children_used\": 1, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "쾌": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 191305,
+  "seconds": 94.225,
+  "sha": "c81b73b2cd55522fb83ea94ba855cab39af7e990c0a29c345b91428d78758e2a",
+  "key": [
+   "쾌락"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 191305, \"children_used\": 1, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "흔": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 186887,
+  "seconds": 98.336,
+  "sha": "d18d4083feec35f29bf4d780753329ee75399d77e858e8089c8200a2e4f2048b",
+  "key": [
+   "흔적"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 186887, \"children_used\": 1, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "삭": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 212973,
+  "seconds": 105.091,
+  "sha": "22f1659420b72b8557b55af99433229cebf90b08f8b4336ec4cb3f903d4d8f8a",
+  "key": [
+   "삭풍"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 212973, \"children_used\": 1, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "흥": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 74208,
+  "seconds": 37.764,
+  "sha": "1b355c124043536fd39af814253dc0be51b3088edabe4ce032e759354997ed00",
+  "key": [
+   "흥흥"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 74208, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
+ },
+ "멸": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 171707,
+  "seconds": 84.016,
+  "sha": "694ebf88197e1b6562493590ac24f2a83c7ca81af7307d20acc27fdc00135a04",
+  "key": [
+   "멸균"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 171707, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
+ },
+ "휘": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 177815,
+  "seconds": 92.109,
+  "sha": "9808a1742c0ad470af98fb4777a20fd2cee062ed837119817b72bc12bad00f50",
+  "key": [
+   "휘휘"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 177815, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
+ },
+ "혁": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 299539,
+  "seconds": 160.673,
+  "sha": "53720f1d1de9983ae0acbe75844a2aaea71ac14930283d987bbc22adc53afae7",
+  "key": [
+   "혁명",
+   "혁명적"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 299539, \"children_used\": 2, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "색": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 201442,
+  "seconds": 106.876,
+  "sha": "f4a902e6e398e3defb874c87d9b9484dbdec9d88fc59b0a447e55c179e3bae60",
+  "key": [
+   "색맹",
+   "색색",
+   "색칠"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 201442, \"children_used\": 3, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "십": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 143343,
+  "seconds": 78.509,
+  "sha": "13ec750465f15ff6098eacd22c1afa248d2fa6eb1fc8801ee1cd93ec0fbf672d",
+  "key": [
+   "십계명",
+   "십진법",
+   "십인십색"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 143343, \"children_used\": 3, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "권": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 110934,
+  "seconds": 61.206,
+  "sha": "3b5c4693aaa03f97a8ed372b4a31bfedbdf52712f5852f3c4110505684d85e7f",
+  "key": [
+   "권능"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 110934, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
+ },
+ "낭": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 27980,
+  "seconds": 17.617,
+  "sha": "a5779a6d9e4c8752d956a7e1f55e1bbb6ea414c798b2af323597cf535a80589b",
+  "key": [
+   "낭비벽"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 27980, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
+ },
+ "웅": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 190640,
+  "seconds": 103.024,
+  "sha": "cd4cd04a5df2cdcbbabe2abbe8ffa4f50e5e58118ca481858c036dc471d37899",
+  "key": [
+   "웅변"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 190640, \"children_used\": 1, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "솥": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 1062257,
+  "seconds": 535.087,
+  "sha": "8f56f488e86e0de91dea3d102fa5024c6a971576762da2960ae08b436309ccf3",
+  "key": [
+   "솥뚜껑"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 1062257, \"children_used\": 1, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "눅": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 203545,
+  "seconds": 107.466,
+  "sha": "bf4809a890071997bd3acc32246ed246274ba5aad94f253c88f219737a98baba",
+  "key": [
+   "눅진눅진"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 203545, \"children_used\": 1, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "객": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 745724,
+  "seconds": 405.925,
+  "sha": "d5b258ba9fea1ba77184b773d19d85d10e0e5b49c597b3671c01953ad0f66259",
+  "key": [
+   "객관식",
+   "객관적"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 745724, \"children_used\": 2, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "즉": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 679628,
+  "seconds": 314.318,
+  "sha": "0715c7cf3f21dddaac779f70e70cf91955c25e9e70aab5316b918c95f4d41f54",
+  "key": [
+   "즉흥곡"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 679628, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
+ },
+ "곡": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 738198,
+  "seconds": 328.399,
+  "sha": "f7e1b8408ee0171a22903b9441aa7c2735f36fb3849c151336322590e7aee905",
+  "key": [
+   "곡식",
+   "곡절"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 738198, \"children_used\": 2, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "죄": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 1132474,
+  "seconds": 613.206,
+  "sha": "897e6eaee1a85673b6a4f4340b0536c4c28957551bb0e2bf9e32993a4df96fa5",
+  "key": [
+   "죄명",
+   "죄의식"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 1132474, \"children_used\": 2, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "찬": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 411026,
+  "seconds": 227.962,
+  "sha": "6fd1401ed78d38f374eede12ddcd023bca6454769569af932907c418cb6a674a",
+  "key": [
+   "찬성표"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 411026, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
+ },
+ "탕": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 2084295,
+  "seconds": 1173.884,
+  "sha": "4205f882c2bd6b577171180470d5c7cb138178010610ad0ca231e0c739ad16d9",
+  "key": [
+   "탕약"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 2084295, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
+ }
+}
