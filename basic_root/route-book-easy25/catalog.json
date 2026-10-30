@@ -1,0 +1,3460 @@
+{
+ "format": "route-book-1",
+ "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+ "verifier": {
+  "verify_v2.py": "9019cd1da696c7cc2db7faf6a37a6fe69614f83697a855884bcbdcca6360e69f",
+  "verify.py": "b08c2491b95d6ccc477b385e648581f970d48961df06ceb6f2a9bd81ad1b5ec3"
+ },
+ "proofs": [
+  {
+   "id": "easy.gyo",
+   "start": "교",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 8080,
+   "proof_sha256": "52e080dcbefe71107da186627fa67e4590fb4feb69ca1b61e0abe548a3533fd7",
+   "verify_seconds": 2.996,
+   "table_entries": 3277
+  },
+  {
+   "id": "easy.geup",
+   "start": "급",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 8247,
+   "proof_sha256": "95986659deb7c366c88bd65dc51025932a990b22665d3b8e75d529af3f204f07",
+   "verify_seconds": 3.059,
+   "table_entries": 3339
+  },
+  {
+   "id": "easy.byeong",
+   "start": "병",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 7789,
+   "proof_sha256": "fa933a195ba03716e761b9302392fd33f9ba2cda5c63087a30c616b795af3596",
+   "verify_seconds": 2.905,
+   "table_entries": 3179
+  },
+  {
+   "id": "easy.seop",
+   "start": "섭",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 98127,
+   "proof_sha256": "64eb917537a2ee1540904b34c30b3a738302c941e008ea7d65d54d8de0cc2895",
+   "verify_seconds": 43.855,
+   "table_entries": 35810
+  },
+  {
+   "id": "easy.suk",
+   "start": "숙",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 90414,
+   "proof_sha256": "8f3836b03fd0611b0d2b5186d8c74b81b83ba9c12976fef5bd4127aeb85bf6d4",
+   "verify_seconds": 38.147,
+   "table_entries": 33007
+  },
+  {
+   "id": "easy.sun",
+   "start": "순",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 110295,
+   "proof_sha256": "05aa79904ba1d2df96de6d87c7d62fccfac7548eaf9d741f391eb38c03ba2489",
+   "verify_seconds": 51.329,
+   "table_entries": 47382
+  },
+  {
+   "id": "easy.un",
+   "start": "운",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 95106,
+   "proof_sha256": "d9f9dc9a2cb40de7cec68d69ccd376b939fce6684ae1e588162e0e3e7f55298b",
+   "verify_seconds": 42.194,
+   "table_entries": 34113
+  },
+  {
+   "id": "easy.um",
+   "start": "움",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 116445,
+   "proof_sha256": "07aca428d9575bf2a0df7ade4e6f9e524cd09783c66d480fa2832e3015ab755e",
+   "verify_seconds": 51.096,
+   "table_entries": 42005
+  },
+  {
+   "id": "easy.yul",
+   "start": "율",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 98147,
+   "proof_sha256": "70948bacf06024923426062fd45d8162fdf86c6b41710cad1de7182883802c37",
+   "verify_seconds": 45.569,
+   "table_entries": 38620
+  },
+  {
+   "id": "easy.juk",
+   "start": "죽",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 38311,
+   "proof_sha256": "81b49794de8939930371a950597dbc723448ce9ab273a14f01e4d53f7492b1d2",
+   "verify_seconds": 16.593,
+   "table_entries": 16367
+  },
+  {
+   "id": "easy.jik",
+   "start": "직",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 114641,
+   "proof_sha256": "93dc6cda687686a365fae8a51eac202999b7e658025d2ccb0bd4a5b3a11183f9",
+   "verify_seconds": 50.292,
+   "table_entries": 41062
+  },
+  {
+   "id": "easy.chuk",
+   "start": "축",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 90491,
+   "proof_sha256": "ecf81c849696f428a6edbdbd75e33f19bc51ec76c251890c0c567807905212d0",
+   "verify_seconds": 38.899,
+   "table_entries": 33094
+  },
+  {
+   "id": "easy.chil",
+   "start": "칠",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 15841,
+   "proof_sha256": "2f02d23e233d0eba09ab8b080cc9e3712c1fcc15a587fd4f4102863591ab2a7d",
+   "verify_seconds": 6.346,
+   "table_entries": 6424
+  },
+  {
+   "id": "easy.tak",
+   "start": "탁",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 2058,
+   "proof_sha256": "55c23152c54e59026c128d1ed26dee16dd0059401480e081766e4c7cd2ea972a",
+   "verify_seconds": 0.831,
+   "table_entries": 784
+  },
+  {
+   "id": "easy.toe",
+   "start": "퇴",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 42525,
+   "proof_sha256": "fb528ad568552c9cb800c0a4d014da1b1ffc05363ee20f986e3691f9b187c98c",
+   "verify_seconds": 20.527,
+   "table_entries": 17199
+  },
+  {
+   "id": "easy.hang",
+   "start": "항",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 143410,
+   "proof_sha256": "1ddc060112a310271fdec2127f0aa58101a7d262913da837454e77ffebf107af",
+   "verify_seconds": 63.536,
+   "table_entries": 54115
+  },
+  {
+   "id": "easy.haeng",
+   "start": "행",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 74477,
+   "proof_sha256": "9c76835096ddbb4084926a7d3c23d8e527e274ccb5d02e9e928007c39126c2ee",
+   "verify_seconds": 37.358,
+   "table_entries": 29202
+  },
+  {
+   "id": "easy.hyang",
+   "start": "향",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 3950,
+   "proof_sha256": "0489437f2efc5915993b5a54e6a2200dc8a5251ad044fea92024b25fbe559897",
+   "verify_seconds": 1.766,
+   "table_entries": 1526
+  },
+  {
+   "id": "easy.eop",
+   "start": "업",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 93390,
+   "proof_sha256": "051ab8cbcac5a4574d1a314aea1fba6bb9fc125a6a7150695b2f5cc8baa6bc02",
+   "verify_seconds": 39.296,
+   "table_entries": 33566
+  },
+  {
+   "id": "easy.yeop",
+   "start": "엽",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 104008,
+   "proof_sha256": "f25acaf75bef2026454328972138753843be4287058c11d2f53c0b0120add1ae",
+   "verify_seconds": 47.512,
+   "table_entries": 37180
+  },
+  {
+   "id": "easy.jeot",
+   "start": "젓",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 98307,
+   "proof_sha256": "5c118f2198669edc3480053bf47a6d9e579e302b55d0e4c8b21bda871608348c",
+   "verify_seconds": 44.162,
+   "table_entries": 35026
+  },
+  {
+   "id": "easy.jon",
+   "start": "존",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 8181,
+   "proof_sha256": "5d04dcbb903be13e22cedea68ffd90bfe6b1a26ccbf064e1e3602db27d62c6f8",
+   "verify_seconds": 3.329,
+   "table_entries": 3337
+  },
+  {
+   "id": "easy.keum",
+   "start": "큼",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 112168,
+   "proof_sha256": "75e80b643236f1317122cb2475c46b34f053efa7373e234d0cf9983130b50054",
+   "verify_seconds": 50.434,
+   "table_entries": 40181
+  },
+  {
+   "id": "easy.hun",
+   "start": "훈",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 7906,
+   "proof_sha256": "ff88d679d4df5461bf2a7050afa925460ce56e5d8877ffcfe8a3492d53a9812d",
+   "verify_seconds": 3.098,
+   "table_entries": 3252
+  },
+  {
+   "id": "easy.gyun",
+   "start": "균",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 158264,
+   "proof_sha256": "3ba4628dcb0ef0c58b2fd938d2733eb88934787484f80af672f26ddcd7515533",
+   "verify_seconds": 69.823,
+   "table_entries": 59936
+  }
+ ],
+ "stats": {
+  "records": 652983,
+  "unique_states": 511849,
+  "duplicate_records_removed": 141134,
+  "states_in_several_proofs": 71775,
+  "states_with_different_moves": 616
+ },
+ "starts": {
+  "교": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "교권",
+      "교환권"
+     ],
+     "group": 29,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교섭"
+     ],
+     "group": 32,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교수법",
+      "교육법"
+     ],
+     "group": 31,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교수진"
+     ],
+     "group": 39,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교습",
+      "교육실습"
+     ],
+     "group": 33,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교언"
+     ],
+     "group": 34,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교역",
+      "교화력"
+     ],
+     "group": 35,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교육대학",
+      "교육철학",
+      "교육학"
+     ],
+     "group": 44,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교육목표",
+      "교표"
+     ],
+     "group": 43,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교육적",
+      "교조적",
+      "교훈적"
+     ],
+     "group": 36,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교직"
+     ],
+     "group": 38,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교집합",
+      "교합"
+     ],
+     "group": 45,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교칙"
+     ],
+     "group": 40,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교탁"
+     ],
+     "group": 41,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교통법규"
+     ],
+     "group": 30,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교통체증"
+     ],
+     "group": 37,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교통편",
+      "교편"
+     ],
+     "group": 42,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교향곡"
+     ],
+     "group": 28,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교환"
+     ],
+     "group": 46,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교활"
+     ],
+     "group": 47,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교훈"
+     ],
+     "group": 48,
+     "result": "win",
+     "proof": "easy.gyo"
+    }
+   ]
+  },
+  "급": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "급기야"
+     ],
+     "group": 89,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급락"
+     ],
+     "group": 84,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급변"
+     ],
+     "group": 85,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급상승"
+     ],
+     "group": 87,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급습"
+     ],
+     "group": 86,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급식"
+     ],
+     "group": 88,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급증"
+     ],
+     "group": 91,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급진"
+     ],
+     "group": 92,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급진적"
+     ],
+     "group": 90,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급행"
+     ],
+     "group": 93,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급훈"
+     ],
+     "group": 94,
+     "result": "win",
+     "proof": "easy.geup"
+    }
+   ]
+  },
+  "병": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "병구완"
+     ],
+     "group": 230,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병균",
+      "병원균"
+     ],
+     "group": 224,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병뚜껑"
+     ],
+     "group": 225,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병력",
+      "병역"
+     ],
+     "group": 229,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병리학"
+     ],
+     "group": 235,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병명"
+     ],
+     "group": 226,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병법"
+     ],
+     "group": 227,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병색",
+      "병아리색"
+     ],
+     "group": 228,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병적"
+     ],
+     "group": 231,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병존"
+     ],
+     "group": 232,
+     "result": "win",
+     "proof": "easy.byeong"
+    },
+    {
+     "words": [
+      "병졸"
+     ],
+     "group": 233,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병풍"
+     ],
+     "group": 234,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병합"
+     ],
+     "group": 236,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병행"
+     ],
+     "group": 237,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병환"
+     ],
+     "group": 238,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  "섭": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "섭렵"
+     ],
+     "group": 257,
+     "result": "win",
+     "proof": "easy.seop"
+    }
+   ]
+  },
+  "숙": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "숙맥"
+     ],
+     "group": 260,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙명"
+     ],
+     "group": 261,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙명적",
+      "숙적"
+     ],
+     "group": 266,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙박"
+     ],
+     "group": 262,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙박업"
+     ],
+     "group": 265,
+     "result": "win",
+     "proof": "easy.suk"
+    },
+    {
+     "words": [
+      "숙변"
+     ],
+     "group": 263,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙식"
+     ],
+     "group": 264,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙직"
+     ],
+     "group": 267,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  "순": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "순간적",
+      "순리적",
+      "순종적",
+      "순차적"
+     ],
+     "group": 273,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순교"
+     ],
+     "group": 268,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순기능"
+     ],
+     "group": 270,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순발력"
+     ],
+     "group": 272,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순백색"
+     ],
+     "group": 271,
+     "result": "win",
+     "proof": "easy.sun"
+    },
+    {
+     "words": [
+      "순위권"
+     ],
+     "group": 269,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순직"
+     ],
+     "group": 274,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순진"
+     ],
+     "group": 275,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순풍"
+     ],
+     "group": 276,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순항"
+     ],
+     "group": 277,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순행"
+     ],
+     "group": 278,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순환"
+     ],
+     "group": 279,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  "운": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "운동권",
+      "운영권"
+     ],
+     "group": 377,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운명"
+     ],
+     "group": 378,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운명적"
+     ],
+     "group": 383,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운송업",
+      "운수업"
+     ],
+     "group": 380,
+     "result": "win",
+     "proof": "easy.un"
+    },
+    {
+     "words": [
+      "운운"
+     ],
+     "group": 381,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운율"
+     ],
+     "group": 382,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운전면허증"
+     ],
+     "group": 384,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운전병"
+     ],
+     "group": 379,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운항"
+     ],
+     "group": 385,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운행"
+     ],
+     "group": 386,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  "움": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "움직움직"
+     ],
+     "group": 387,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "움큼"
+     ],
+     "group": 388,
+     "result": "win",
+     "proof": "easy.um"
+    }
+   ]
+  },
+  "율": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "율격"
+     ],
+     "group": 390,
+     "result": "win",
+     "proof": "easy.yul"
+    },
+    {
+     "words": [
+      "율동적"
+     ],
+     "group": 392,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "율법"
+     ],
+     "group": 391,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  "죽": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "죽순"
+     ],
+     "group": 428,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "죽죽"
+     ],
+     "group": 429,
+     "result": "win",
+     "proof": "easy.juk"
+    }
+   ]
+  },
+  "직": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "직간접적",
+      "직감적",
+      "직관적",
+      "직선적",
+      "직설적",
+      "직업적",
+      "직접적"
+     ],
+     "group": 459,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직격탄"
+     ],
+     "group": 461,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직관력",
+      "직역"
+     ],
+     "group": 458,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직권"
+     ],
+     "group": 449,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직급"
+     ],
+     "group": 450,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직능"
+     ],
+     "group": 451,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직명"
+     ],
+     "group": 452,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직설법",
+      "직접화법"
+     ],
+     "group": 453,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직언"
+     ],
+     "group": 456,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직업"
+     ],
+     "group": 457,
+     "result": "win",
+     "proof": "easy.jik"
+    },
+    {
+     "words": [
+      "직업병"
+     ],
+     "group": 454,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직업의식"
+     ],
+     "group": 455,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직진"
+     ],
+     "group": 460,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직할"
+     ],
+     "group": 462,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직행"
+     ],
+     "group": 463,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  "축": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "축농증"
+     ],
+     "group": 510,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "축산업"
+     ],
+     "group": 508,
+     "result": "win",
+     "proof": "easy.chuk"
+    },
+    {
+     "words": [
+      "축적"
+     ],
+     "group": 509,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "축지법"
+     ],
+     "group": 507,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "축축"
+     ],
+     "group": 511,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "축하객"
+     ],
+     "group": 506,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  "칠": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "칠순"
+     ],
+     "group": 530,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "칠십"
+     ],
+     "group": 531,
+     "result": "win",
+     "proof": "easy.chil"
+    },
+    {
+     "words": [
+      "칠흑"
+     ],
+     "group": 532,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  "탁": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "탁발승"
+     ],
+     "group": 538,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "탁탁"
+     ],
+     "group": 539,
+     "result": "win",
+     "proof": "easy.tak"
+    }
+   ]
+  },
+  "퇴": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "퇴락"
+     ],
+     "group": 555,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴색"
+     ],
+     "group": 556,
+     "result": "win",
+     "proof": "easy.toe"
+    },
+    {
+     "words": [
+      "퇴역"
+     ],
+     "group": 557,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴적",
+      "퇴폐적"
+     ],
+     "group": 558,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴직"
+     ],
+     "group": 559,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴진"
+     ],
+     "group": 560,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴학"
+     ],
+     "group": 561,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴행"
+     ],
+     "group": 562,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  "항": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "항공권"
+     ],
+     "group": 638,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "항공사진"
+     ],
+     "group": 642,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "항공우편",
+      "항공편"
+     ],
+     "group": 643,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "항구적"
+     ],
+     "group": 641,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "항균"
+     ],
+     "group": 639,
+     "result": "win",
+     "proof": "easy.hang"
+    },
+    {
+     "words": [
+      "항변"
+     ],
+     "group": 640,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  "행": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "행군"
+     ],
+     "group": 648,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행락"
+     ],
+     "group": 650,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행락객"
+     ],
+     "group": 646,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행랑"
+     ],
+     "group": 651,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행방불명"
+     ],
+     "group": 652,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행색"
+     ],
+     "group": 653,
+     "result": "win",
+     "proof": "easy.haeng"
+    },
+    {
+     "words": [
+      "행운"
+     ],
+     "group": 655,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행적",
+      "행정적"
+     ],
+     "group": 656,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행정구역"
+     ],
+     "group": 654,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행정권"
+     ],
+     "group": 649,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행진"
+     ],
+     "group": 657,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행진곡"
+     ],
+     "group": 647,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  "향": {
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "향락"
+     ],
+     "group": 658,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "향락적"
+     ],
+     "group": 661,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "향수병"
+     ],
+     "group": 659,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "향토색"
+     ],
+     "group": 660,
+     "result": "win",
+     "proof": "easy.hyang"
+    }
+   ]
+  },
+  "업": {
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "업적"
+     ],
+     "group": 344,
+     "result": "loss",
+     "proof": "easy.eop",
+     "refutation": {
+      "word": "적갈색",
+      "how": "증명",
+      "alts": [
+       "적색",
+       "적회색"
+      ]
+     }
+    }
+   ]
+  },
+  "엽": {
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "엽기적"
+     ],
+     "group": 358,
+     "result": "loss",
+     "proof": "easy.yeop",
+     "refutation": {
+      "word": "적갈색",
+      "how": "증명",
+      "alts": [
+       "적색",
+       "적회색"
+      ]
+     }
+    }
+   ]
+  },
+  "젓": {
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "젓가락"
+     ],
+     "group": 419,
+     "result": "loss",
+     "proof": "easy.jeot",
+     "refutation": {
+      "word": "낙농업",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  "존": {
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "존칭"
+     ],
+     "group": 420,
+     "result": "loss",
+     "proof": "easy.jon",
+     "refutation": {
+      "word": "칭칭",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  "큼": {
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "큼직큼직"
+     ],
+     "group": 537,
+     "result": "loss",
+     "proof": "easy.keum",
+     "refutation": {
+      "word": "직업",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  "훈": {
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "훈련병"
+     ],
+     "group": 707,
+     "result": "loss",
+     "proof": "easy.hun",
+     "refutation": {
+      "word": "병존",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  "균": {
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "균형적"
+     ],
+     "group": 76,
+     "result": "loss",
+     "proof": "easy.gyun",
+     "refutation": {
+      "word": "적갈색",
+      "how": "증명",
+      "alts": [
+       "적색",
+       "적회색"
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "positions": [
+  {
+   "id": "교",
+   "syllable": "교",
+   "start": "교",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "교권",
+      "교환권"
+     ],
+     "group": 29,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교섭"
+     ],
+     "group": 32,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교수법",
+      "교육법"
+     ],
+     "group": 31,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교수진"
+     ],
+     "group": 39,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교습",
+      "교육실습"
+     ],
+     "group": 33,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교언"
+     ],
+     "group": 34,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교역",
+      "교화력"
+     ],
+     "group": 35,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교육대학",
+      "교육철학",
+      "교육학"
+     ],
+     "group": 44,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교육목표",
+      "교표"
+     ],
+     "group": 43,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교육적",
+      "교조적",
+      "교훈적"
+     ],
+     "group": 36,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교직"
+     ],
+     "group": 38,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교집합",
+      "교합"
+     ],
+     "group": 45,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교칙"
+     ],
+     "group": 40,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교탁"
+     ],
+     "group": 41,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교통법규"
+     ],
+     "group": 30,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교통체증"
+     ],
+     "group": 37,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교통편",
+      "교편"
+     ],
+     "group": 42,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교향곡"
+     ],
+     "group": 28,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교환"
+     ],
+     "group": 46,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교활"
+     ],
+     "group": 47,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "교훈"
+     ],
+     "group": 48,
+     "result": "win",
+     "proof": "easy.gyo"
+    }
+   ]
+  },
+  {
+   "id": "급",
+   "syllable": "급",
+   "start": "급",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "급기야"
+     ],
+     "group": 89,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급락"
+     ],
+     "group": 84,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급변"
+     ],
+     "group": 85,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급상승"
+     ],
+     "group": 87,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급습"
+     ],
+     "group": 86,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급식"
+     ],
+     "group": 88,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급증"
+     ],
+     "group": 91,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급진"
+     ],
+     "group": 92,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급진적"
+     ],
+     "group": 90,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급행"
+     ],
+     "group": 93,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "급훈"
+     ],
+     "group": 94,
+     "result": "win",
+     "proof": "easy.geup"
+    }
+   ]
+  },
+  {
+   "id": "병",
+   "syllable": "병",
+   "start": "병",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "병구완"
+     ],
+     "group": 230,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병균",
+      "병원균"
+     ],
+     "group": 224,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병뚜껑"
+     ],
+     "group": 225,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병력",
+      "병역"
+     ],
+     "group": 229,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병리학"
+     ],
+     "group": 235,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병명"
+     ],
+     "group": 226,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병법"
+     ],
+     "group": 227,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병색",
+      "병아리색"
+     ],
+     "group": 228,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병적"
+     ],
+     "group": 231,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병존"
+     ],
+     "group": 232,
+     "result": "win",
+     "proof": "easy.byeong"
+    },
+    {
+     "words": [
+      "병졸"
+     ],
+     "group": 233,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병풍"
+     ],
+     "group": 234,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병합"
+     ],
+     "group": 236,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병행"
+     ],
+     "group": 237,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "병환"
+     ],
+     "group": 238,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  {
+   "id": "섭",
+   "syllable": "섭",
+   "start": "섭",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "섭렵"
+     ],
+     "group": 257,
+     "result": "win",
+     "proof": "easy.seop"
+    }
+   ]
+  },
+  {
+   "id": "숙",
+   "syllable": "숙",
+   "start": "숙",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "숙맥"
+     ],
+     "group": 260,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙명"
+     ],
+     "group": 261,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙명적",
+      "숙적"
+     ],
+     "group": 266,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙박"
+     ],
+     "group": 262,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙박업"
+     ],
+     "group": 265,
+     "result": "win",
+     "proof": "easy.suk"
+    },
+    {
+     "words": [
+      "숙변"
+     ],
+     "group": 263,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙식"
+     ],
+     "group": 264,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "숙직"
+     ],
+     "group": 267,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  {
+   "id": "순",
+   "syllable": "순",
+   "start": "순",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "순간적",
+      "순리적",
+      "순종적",
+      "순차적"
+     ],
+     "group": 273,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순교"
+     ],
+     "group": 268,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순기능"
+     ],
+     "group": 270,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순발력"
+     ],
+     "group": 272,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순백색"
+     ],
+     "group": 271,
+     "result": "win",
+     "proof": "easy.sun"
+    },
+    {
+     "words": [
+      "순위권"
+     ],
+     "group": 269,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순직"
+     ],
+     "group": 274,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순진"
+     ],
+     "group": 275,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순풍"
+     ],
+     "group": 276,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순항"
+     ],
+     "group": 277,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순행"
+     ],
+     "group": 278,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "순환"
+     ],
+     "group": 279,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  {
+   "id": "운",
+   "syllable": "운",
+   "start": "운",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "운동권",
+      "운영권"
+     ],
+     "group": 377,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운명"
+     ],
+     "group": 378,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운명적"
+     ],
+     "group": 383,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운송업",
+      "운수업"
+     ],
+     "group": 380,
+     "result": "win",
+     "proof": "easy.un"
+    },
+    {
+     "words": [
+      "운운"
+     ],
+     "group": 381,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운율"
+     ],
+     "group": 382,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운전면허증"
+     ],
+     "group": 384,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운전병"
+     ],
+     "group": 379,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운항"
+     ],
+     "group": 385,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "운행"
+     ],
+     "group": 386,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  {
+   "id": "움",
+   "syllable": "움",
+   "start": "움",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "움직움직"
+     ],
+     "group": 387,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "움큼"
+     ],
+     "group": 388,
+     "result": "win",
+     "proof": "easy.um"
+    }
+   ]
+  },
+  {
+   "id": "율",
+   "syllable": "율",
+   "start": "율",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "율격"
+     ],
+     "group": 390,
+     "result": "win",
+     "proof": "easy.yul"
+    },
+    {
+     "words": [
+      "율동적"
+     ],
+     "group": 392,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "율법"
+     ],
+     "group": 391,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  {
+   "id": "죽",
+   "syllable": "죽",
+   "start": "죽",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "죽순"
+     ],
+     "group": 428,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "죽죽"
+     ],
+     "group": 429,
+     "result": "win",
+     "proof": "easy.juk"
+    }
+   ]
+  },
+  {
+   "id": "직",
+   "syllable": "직",
+   "start": "직",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "직간접적",
+      "직감적",
+      "직관적",
+      "직선적",
+      "직설적",
+      "직업적",
+      "직접적"
+     ],
+     "group": 459,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직격탄"
+     ],
+     "group": 461,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직관력",
+      "직역"
+     ],
+     "group": 458,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직권"
+     ],
+     "group": 449,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직급"
+     ],
+     "group": 450,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직능"
+     ],
+     "group": 451,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직명"
+     ],
+     "group": 452,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직설법",
+      "직접화법"
+     ],
+     "group": 453,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직언"
+     ],
+     "group": 456,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직업"
+     ],
+     "group": 457,
+     "result": "win",
+     "proof": "easy.jik"
+    },
+    {
+     "words": [
+      "직업병"
+     ],
+     "group": 454,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직업의식"
+     ],
+     "group": 455,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직진"
+     ],
+     "group": 460,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직할"
+     ],
+     "group": 462,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "직행"
+     ],
+     "group": 463,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  {
+   "id": "축",
+   "syllable": "축",
+   "start": "축",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "축농증"
+     ],
+     "group": 510,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "축산업"
+     ],
+     "group": 508,
+     "result": "win",
+     "proof": "easy.chuk"
+    },
+    {
+     "words": [
+      "축적"
+     ],
+     "group": 509,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "축지법"
+     ],
+     "group": 507,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "축축"
+     ],
+     "group": 511,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "축하객"
+     ],
+     "group": 506,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  {
+   "id": "칠",
+   "syllable": "칠",
+   "start": "칠",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "칠순"
+     ],
+     "group": 530,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "칠십"
+     ],
+     "group": 531,
+     "result": "win",
+     "proof": "easy.chil"
+    },
+    {
+     "words": [
+      "칠흑"
+     ],
+     "group": 532,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  {
+   "id": "탁",
+   "syllable": "탁",
+   "start": "탁",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "탁발승"
+     ],
+     "group": 538,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "탁탁"
+     ],
+     "group": 539,
+     "result": "win",
+     "proof": "easy.tak"
+    }
+   ]
+  },
+  {
+   "id": "퇴",
+   "syllable": "퇴",
+   "start": "퇴",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "퇴락"
+     ],
+     "group": 555,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴색"
+     ],
+     "group": 556,
+     "result": "win",
+     "proof": "easy.toe"
+    },
+    {
+     "words": [
+      "퇴역"
+     ],
+     "group": 557,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴적",
+      "퇴폐적"
+     ],
+     "group": 558,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴직"
+     ],
+     "group": 559,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴진"
+     ],
+     "group": 560,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴학"
+     ],
+     "group": 561,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "퇴행"
+     ],
+     "group": 562,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  {
+   "id": "항",
+   "syllable": "항",
+   "start": "항",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "항공권"
+     ],
+     "group": 638,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "항공사진"
+     ],
+     "group": 642,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "항공우편",
+      "항공편"
+     ],
+     "group": 643,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "항구적"
+     ],
+     "group": 641,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "항균"
+     ],
+     "group": 639,
+     "result": "win",
+     "proof": "easy.hang"
+    },
+    {
+     "words": [
+      "항변"
+     ],
+     "group": 640,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  {
+   "id": "행",
+   "syllable": "행",
+   "start": "행",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "행군"
+     ],
+     "group": 648,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행락"
+     ],
+     "group": 650,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행락객"
+     ],
+     "group": 646,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행랑"
+     ],
+     "group": 651,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행방불명"
+     ],
+     "group": 652,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행색"
+     ],
+     "group": 653,
+     "result": "win",
+     "proof": "easy.haeng"
+    },
+    {
+     "words": [
+      "행운"
+     ],
+     "group": 655,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행적",
+      "행정적"
+     ],
+     "group": 656,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행정구역"
+     ],
+     "group": 654,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행정권"
+     ],
+     "group": 649,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행진"
+     ],
+     "group": 657,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "행진곡"
+     ],
+     "group": 647,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    }
+   ]
+  },
+  {
+   "id": "향",
+   "syllable": "향",
+   "start": "향",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "향락"
+     ],
+     "group": 658,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "향락적"
+     ],
+     "group": 661,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "향수병"
+     ],
+     "group": 659,
+     "result": "pending",
+     "proof": null,
+     "note": "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)"
+    },
+    {
+     "words": [
+      "향토색"
+     ],
+     "group": 660,
+     "result": "win",
+     "proof": "easy.hyang"
+    }
+   ]
+  },
+  {
+   "id": "업",
+   "syllable": "업",
+   "start": "업",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "업적"
+     ],
+     "group": 344,
+     "result": "loss",
+     "proof": "easy.eop",
+     "refutation": {
+      "word": "적갈색",
+      "how": "증명",
+      "alts": [
+       "적색",
+       "적회색"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "엽",
+   "syllable": "엽",
+   "start": "엽",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "엽기적"
+     ],
+     "group": 358,
+     "result": "loss",
+     "proof": "easy.yeop",
+     "refutation": {
+      "word": "적갈색",
+      "how": "증명",
+      "alts": [
+       "적색",
+       "적회색"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "젓",
+   "syllable": "젓",
+   "start": "젓",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "젓가락"
+     ],
+     "group": 419,
+     "result": "loss",
+     "proof": "easy.jeot",
+     "refutation": {
+      "word": "낙농업",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "존",
+   "syllable": "존",
+   "start": "존",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "존칭"
+     ],
+     "group": 420,
+     "result": "loss",
+     "proof": "easy.jon",
+     "refutation": {
+      "word": "칭칭",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "큼",
+   "syllable": "큼",
+   "start": "큼",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "큼직큼직"
+     ],
+     "group": 537,
+     "result": "loss",
+     "proof": "easy.keum",
+     "refutation": {
+      "word": "직업",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "훈",
+   "syllable": "훈",
+   "start": "훈",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "훈련병"
+     ],
+     "group": 707,
+     "result": "loss",
+     "proof": "easy.hun",
+     "refutation": {
+      "word": "병존",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "균",
+   "syllable": "균",
+   "start": "균",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "균형적"
+     ],
+     "group": 76,
+     "result": "loss",
+     "proof": "easy.gyun",
+     "refutation": {
+      "word": "적갈색",
+      "how": "증명",
+      "alts": [
+       "적색",
+       "적회색"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

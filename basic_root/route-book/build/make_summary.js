@@ -9,7 +9,8 @@ const same = (a) => (a.alts.length ? `(${a.alts.join("·")}도 같음)` : "");
 const out = [];
 const positions = catalog.positions || Object.entries(catalog.starts).map(([s, v]) => ({ syllable: s, start: s, prefix: [], via: null, ...v }));
 const starts = [...new Set(positions.map((q) => q.syllable))];
-out.push(`# ${starts.join("·")} 필승 수순 요약 (기초사전 루트 817단어)`, "",
+out.push(`# ${starts.length > 4 ? starts.length + "개 음절" : starts.join("·")} 필승 수순 요약 (기초사전 루트 817단어)`, "",
+  ...(starts.length > 4 ? [`음절: ${starts.join(", ")}`, ""] : []),
   "규칙: 표준두음법칙을 적용하고, 한 경기에서 쓴 단어는 다시 쓸 수 없으며, 낼 단어가 없으면 집니다.", "",
   `- **받는 쪽**: 상대가 ${starts.map((x) => "~" + x).join(", ")}처럼 그 음절로 끝나는 단어를 내서, 그 음절로 시작해야 하는 사람입니다.`,
   "- **낸 쪽**: 그 음절을 넘긴 사람입니다.",
@@ -31,6 +32,35 @@ function walk(replies, depth, indent) {
     out.push(`${indent}- 상대 ${opp} → **${r.answer.word}**${tag(r.answer)}${r.end ? " (끝)" : ""}`);
     if (r.replies && depth > 1) walk(r.replies, depth - 1, indent + "  ");
   }
+}
+if (positions.length >= 3) {
+  // the syllable a key move hands over, and whether this bundle shows that syllable as a loss for its receiver
+  const model = JSON.parse(fs.readFileSync(path.join(dir, "model.json"), "utf8"));
+  const groupOf = {}; model.words.forEach((ws, g) => ws.forEach((w) => { groupOf[w] = g; }));
+  const endOf = (w) => model.syllables[model.edges[groupOf[w]][1]];
+  const freshLoss = new Set(positions.filter((q) => !q.via && !q.receiver_wins).map((q) => q.syllable));
+  const handTo = (w) => { const e = endOf(w); return freshLoss.has(e) ? `${e}(받으면 지는 음절)` : e; };
+  out.push("## 한눈에 보기", "", "| 국면 | 받는 쪽 | 이유 (핵심 수) | 상대에게 넘어가는 음절 | 증명 크기 |", "|---|---|---|---|---:|");
+  for (const pos of positions) {
+    const lab = pos.syllable + (pos.via ? `(${ro(pos.via)} 넘겨받음)` : "");
+    const wins = pos.first_moves.filter((f) => f.result === "win" && f.proof), losses = pos.first_moves.filter((f) => f.result === "loss" && f.proof);
+    let why, hand;
+    if (pos.receiver_wins) {
+      why = `받는 쪽이 **${wins.map((f) => f.words.join("·")).join(", ")}**${jong(wins[0].words[0]) === 0 || jong(wins[0].words[0]) === 8 ? "로" : "으로"} 이김`;
+      hand = endOf(wins[0].words[0]) === pos.syllable ? `${pos.syllable} (같은 음절로 돌아와 차례를 넘김)` : handTo(wins[0].words[0]);
+    } else if (losses.length === 1 && pos.first_moves.length === 1) {
+      const f = losses[0];
+      const r = f.refutation.word;
+      why = `낼 수 있는 첫 수가 ${f.words.join("·")} 하나뿐이고, 낸 쪽이 **${r}**${jong(r) === 0 || jong(r) === 8 ? "로" : "으로"} 이김`;
+      hand = `${endOf(f.words[0])} → ${endOf(r) === endOf(f.words[0]) ? endOf(r) + " (같은 음절로 돌려보냄)" : handTo(r)}`;
+    } else {
+      why = `첫 수 ${losses.length}개가 모두 짐: ` + losses.map((f) => `${f.words.join("·")} → ${f.refutation.word}`).join(", ");
+      hand = "";
+    }
+    const root = catalog.proofs.find((p) => p.start === pos.start && (p.via || 0) === pos.prefix.length && p.history.length === pos.prefix.length);
+    out.push(`| ${lab} | ${pos.receiver_wins ? "승" : "패"} | ${why} | ${hand} | ${root ? root.nodes.toLocaleString("en-US") : ""} |`);
+  }
+  out.push("", "‘상대에게 넘어가는 음절’에서 받는 쪽이 지는 국면은 ‘받는 쪽이 넘긴 음절 → 낸 쪽이 넘긴 음절’입니다. 이 표시는 이해를 돕기 위한 것입니다. 그 음절이 이 표에서 ‘받으면 지는 음절’이어도, 실제 국면에는 앞에서 쓴 단어가 빠져 있어서 처음 국면과 같지는 않습니다. 승패의 근거는 각 증명입니다.", "");
 }
 for (const pos of positions) {
   const label = pos.syllable + (pos.via ? `(${ro(pos.via)} 넘겨받음)` : (catalog.positions && positions.some((q) => q.syllable === pos.syllable && q.via) ? "(817단어 밖의 단어로 넘겨받음)" : ""));

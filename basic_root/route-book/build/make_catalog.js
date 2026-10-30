@@ -79,6 +79,7 @@ for (const { start, prefix } of positions) {
       const rec = words.map((w) => astra[w]).find(Boolean);
       const pend = words.map((w) => (isFresh ? meta.pending[start] || {} : {})[w]).find(Boolean);
       if (rec) Object.assign(entry, { result: rec === "W" ? "win" : "loss", proof: null, source: "아스트라 기존 기록 (이 묶음에 증명 표 없음)" });
+      else if (rootProof && !rootLost) Object.assign(entry, { result: "pending", proof: null, note: "판정하지 않음(이기는 첫 수 하나로 충분해서 따로 풀지 않음)" });
       else Object.assign(entry, { result: "pending", proof: null, note: pend || "미확정" });
     }
     first.push(entry);

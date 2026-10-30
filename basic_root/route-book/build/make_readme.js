@@ -20,7 +20,7 @@ const starts = [...new Set(positions.map((q) => q.syllable))];
 const hasVia = positions.some((q) => q.via);
 const ro = (w) => w + (jong(w) === 0 || jong(w) === 8 ? "로" : "으로");
 const posLabel = (q) => q.syllable + (q.via ? ` (${ro(q.via)} 넘겨받음)` : hasVia ? " (817단어 밖의 단어로 넘겨받음)" : "");
-const name = starts.join("·");
+const name = starts.length > 4 ? `${starts.length}개 음절` : starts.join("·");
 const proofs = catalog.proofs;
 const L = [];
 L.push(`# ${name} 필승 수순 묶음 (route-book-1)`, "",
@@ -57,7 +57,14 @@ if (hasVia) L.push("", "넘겨받은 단어가 있는 국면은 엔진에 `start
 L.push("");
 if (missing.length) {
   L.push("**들어 있지 않은 것**");
-  for (const { s, f } of missing) L.push(`- ${s} → ${f.words.join("·")}: ${f.result === "pending" ? "보류. " + f.note + "." : (f.result === "win" ? "이기는 수" : "지는 수") + ", " + f.source}`);
+  const groups = new Map();
+  for (const { s, f } of missing) {
+    const why = f.result === "pending" ? f.note : (f.result === "win" ? "이기는 수" : "지는 수") + ", " + f.source;
+    const k = s + "\u0000" + why;
+    if (!groups.has(k)) groups.set(k, { s, why, words: [] });
+    groups.get(k).words.push(f.words.join("·"));
+  }
+  for (const g of groups.values()) L.push(`- ${g.s} → ${g.words.join(", ")}: ${g.why}`);
   L.push("");
 }
 L.push("## 쓰는 법", "", "```js",
