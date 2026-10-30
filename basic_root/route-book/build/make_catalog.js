@@ -50,15 +50,17 @@ fs.mkdirSync(path.join(dir, "lines"), { recursive: true });
 for (const start of [...new Set(meta.proofs.map((p) => p.start))]) {
   const proofs = meta.proofs.filter((p) => p.start === start);
   const rootProof = proofs.find((p) => p.history.length === 0);
+  const rootLost = !!rootProof && rootProof.result_for_player_to_move === "L";
   const rootMove = our(start, []);
   const first = [];
   for (const words of replies(start, [])) {
     const g = E.groupOf(words[0]);
     const entry = { words, group: g };
     const own = proofs.find((p) => p.history.length === 1 && E.groupOf(p.history[0]) === g);
-    if (own && own.result_for_player_to_move === "W") {
+    if (rootLost || (own && own.result_for_player_to_move === "W")) {
       const mv = our(start, [words[0]]);
-      Object.assign(entry, { result: "loss", proof: own.id, refutation: { word: mv.word, how: mv.how, alts: mv.alts } });
+      if (!mv) throw new Error(`no refutation for ${start} ${words[0]}`);
+      Object.assign(entry, { result: "loss", proof: own ? own.id : rootProof.id, refutation: { word: mv.word, how: mv.how, alts: mv.alts } });
     } else if (own) {
       Object.assign(entry, { result: "win", proof: own.id });
     } else if (rootMove && rootMove.group === g) {
@@ -76,7 +78,9 @@ for (const start of [...new Set(meta.proofs.map((p) => p.start))]) {
   // readable trees: every first move the bundle can play out
   for (const p of proofs) {
     let tree;
-    if (p.history.length === 0) {
+    if (p.history.length === 0 && p.result_for_player_to_move === "L") {
+      tree = { start, history: [], to_move: "receiver (상대)", replies: oppNode(start, [], TREE_DEPTH) };
+    } else if (p.history.length === 0) {
       tree = { start, history: [], to_move: "receiver (우리)", answer: { word: rootMove.word, how: rootMove.how, alts: rootMove.alts },
                replies: oppNode(start, [rootMove.word], TREE_DEPTH) };
     } else if (p.result_for_player_to_move === "W") {

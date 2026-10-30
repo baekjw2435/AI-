@@ -34,6 +34,7 @@ PROOFS = [
     ('gyeok.gyeoktoe', '격', ['격퇴'], 'gyeok_run/proofs/R_8_W'),
     ('gyeok.gyeokchan', '격', ['격찬'], 'gyeok_run/proofs/R_7_gyeokchan_W'),
     ('gyeok.gyeogeon', '격', ['격언'], 'gyeok_run/proofs/R_4_gyeogeon_W'),
+    ('ching', '칭', [], 'ching/proofs/ching_root_L'),
 ]
 # first moves decided only in Astra's earlier records (no certificate in this bundle)
 ASTRA = {'역': {'역할': 'W', '역기능': 'W', '역세권': 'L', '역할극': 'L', '역병': 'L', '역순': 'L', '역전승': 'L',

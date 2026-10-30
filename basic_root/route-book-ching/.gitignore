@@ -1,0 +1,3 @@
+# 칭 묶음의 생성 결과입니다. 엔진·데모·도구는 ../route-book/ 과 같고, 표(tables/)는 따로 전달합니다.
+# 다시 만들기: ../route-book/build/make_bundle.sh OUTDIR 칭
+tables/

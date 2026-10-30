@@ -238,7 +238,9 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
       var starts = Object.keys(catalog.starts), last = starts[starts.length - 1];
       var c = last.charCodeAt(0) - 0xac00, topic = c >= 0 && c < 11172 && c % 28 ? "은" : "는";
       var allReceiver = starts.every(function (s) { return catalog.starts[s].receiver_wins; });
-      document.getElementById("headline").textContent = allReceiver ? starts.join("과 ") + topic + " 받는 쪽이 이깁니다" : starts.join("·") + " 필승 수순";
+      var allPresenter = starts.every(function (s) { return !catalog.starts[s].receiver_wins; });
+      document.getElementById("headline").textContent = allReceiver ? starts.join("과 ") + topic + " 받는 쪽이 이깁니다"
+        : allPresenter ? starts.join("과 ") + topic + " 받으면 집니다" : starts.join("·") + " 필승 수순";
       document.title = starts.join("·") + " 필승 수순";
       if (starts.length < 2) tabs.hidden = true;
       Object.keys(catalog.starts).forEach(function (s) {

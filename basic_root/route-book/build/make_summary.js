@@ -41,7 +41,9 @@ for (const [start, info] of Object.entries(catalog.starts)) {
   for (const p of catalog.proofs.filter((q) => q.start === start)) {
     const t = JSON.parse(fs.readFileSync(path.join(dir, "lines", p.id + ".json"), "utf8"));
     const firstWords = (w) => { const g = catalog.starts[start].first_moves.find((f) => f.words.includes(w)); const o = g ? g.words.filter((x) => x !== w) : []; return o.length ? `${w}(${o.join("·")}도 같음)` : w; };
-    if (p.history.length === 0) {
+    if (p.history.length === 0 && !t.answer) {
+      out.push(`### ${start}: 받는 쪽의 모든 첫 수에 대한 낸 쪽의 반박`, "", `받는 쪽이 어떤 첫 수를 내도 낸 쪽이 이깁니다. 받는 쪽의 수에 따라 낸 쪽은 이렇게 둡니다.`, "");
+    } else if (p.history.length === 0) {
       out.push(`### ${start} → ${t.answer.word} (받는 쪽이 이기는 수)`, "", `받는 쪽이 ${reul(t.answer.word)} 낸 뒤, 낸 쪽의 응수에 따라 받는 쪽은 이렇게 둡니다.`, "");
     } else if (t.answer) {
       out.push(`### ${start} → ${p.history[0]} (지는 수): 낸 쪽이 ${ro(t.answer.word)} 반박`, "",

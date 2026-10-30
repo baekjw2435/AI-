@@ -61,7 +61,9 @@ L.push("## 쓰는 법", "", "```js",
   "RouteBook.init(model, catalog);", "",
   "const load = (id) => fetch(RouteBook.bucketFile(id)).then((r) => r.arrayBuffer());",
   "// 시작 음절과, 그 음절부터 실제로 둔 단어들을 넘기면 지금 둘 차례인 쪽의 필승 수를 돌려줍니다.");
-const ex = proofs.find((p) => p.history.length === 1 && p.result_for_player_to_move === "W");
+let ex = proofs.find((p) => p.history.length === 1 && p.result_for_player_to_move === "W");
+const lostRoot = proofs.find((p) => p.history.length === 0 && p.result_for_player_to_move === "L");
+if (!ex && lostRoot) ex = { start: lostRoot.start, history: [catalog.starts[lostRoot.start].first_moves[0].words[0]] };
 if (ex) {
   const mv = our(ex.start, ex.history);
   L.push(`const mv = await RouteBook.ourMoveAsync(${JSON.stringify(ex.start)}, ${JSON.stringify(ex.history)}, null, load);`,
