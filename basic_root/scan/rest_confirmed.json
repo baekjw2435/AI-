@@ -1,0 +1,272 @@
+{
+ "군": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 199080,
+  "seconds": 103.296,
+  "sha": "706ad6e9183c135494667c428b0fc52dc34476514b89567ada5ba3dcce2310d1",
+  "exit": 0,
+  "error": null
+ },
+ "규": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 214966,
+  "seconds": 116.089,
+  "sha": "4d3b70be14f664ba391e9d218b556a10320bc5a733b436a94e23979d560a8e6f",
+  "exit": 0,
+  "error": null
+ },
+ "극": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 385805,
+  "seconds": 224.928,
+  "sha": "752d20eaa45124b227787819c45018c6619b3662b22b4823130be7fc5edded00",
+  "exit": 0,
+  "error": null
+ },
+ "낙": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 182087,
+  "seconds": 95.873,
+  "sha": "68d710ccd0c0212c6506a1fabb6678b594b20b3464e29735a97352380293d555",
+  "exit": 0,
+  "error": null
+ },
+ "능": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 689813,
+  "seconds": 386.833,
+  "sha": "6629299c03842df7a5d81949d376ff68d4adbb7d8ed90519a7e36e7ae0a005cd",
+  "exit": 0,
+  "error": null
+ },
+ "돌": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 494448,
+  "seconds": 314.815,
+  "sha": "ef1e8ab3e22b6eb7d410aeae6503333bc10ef20c402fd9535835aeb38cf7812c",
+  "exit": 0,
+  "error": null
+ },
+ "명": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 191730,
+  "seconds": 120.444,
+  "sha": "9ff66005b3f1cafbadf76b8391c20017c2c4dcbc02478bd837436b771ecc590f",
+  "exit": 0,
+  "error": null
+ },
+ "박": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 372504,
+  "seconds": 218.369,
+  "sha": "756f07f9a57bddb0cfd2cd2513e5ce1e9e25d1d240c00382f3008834c9225ddd",
+  "exit": 0,
+  "error": null
+ },
+ "법": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 244434,
+  "seconds": 125.69,
+  "sha": "c0c35b9a49fb826f3278d03cd22626e8b4696e8ec119048af10cf8902f0bff8f",
+  "exit": 0,
+  "error": null
+ },
+ "변": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 218960,
+  "seconds": 129.134,
+  "sha": "552e36530341895be080b6cd86e34c9c396b84819b13748d093f8007d1fc5afb",
+  "exit": 0,
+  "error": null
+ },
+ "삼": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 201885,
+  "seconds": 119.655,
+  "sha": "8a9fa27464efbf5e36bc7ca529b3d4452c14d2a57bbd04c01b19da4266b2e226",
+  "exit": 0,
+  "error": null
+ },
+ "식": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 1396534,
+  "seconds": 770.591,
+  "sha": "6e321c07e9e8a68e8d4503725fa98190165729258886a2097b3c98449d931d14",
+  "exit": 0,
+  "error": null
+ },
+ "압": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 1051899,
+  "seconds": 572.907,
+  "sha": "8c2c64ee1ee3ae3dab3e2c9748e6bdcc252320a3ad34306c01c93313cd23f096",
+  "exit": 0,
+  "error": null
+ },
+ "야": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 295776,
+  "seconds": 159.951,
+  "sha": "54ce32a7944f61352aeb0f93226683349de0888c2a4da2b9d0b45e2371cccec1",
+  "exit": 0,
+  "error": null
+ },
+ "완": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 189402,
+  "seconds": 96.881,
+  "sha": "c0334d19cc9c72b3ae16c631c7c8b7e73fd40f49446f302324445336bffb5fb1",
+  "exit": 0,
+  "error": null
+ },
+ "왕": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 682919,
+  "seconds": 358.133,
+  "sha": "be2a363bc7633b0d761668c9ae569783fb266b09583e4fba345420ac9ab12e76",
+  "exit": 0,
+  "error": null
+ },
+ "절": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 286420,
+  "seconds": 147.439,
+  "sha": "a36f29a1fc0eef3d685ad171d34d8d7a65de955cfd59efc79090ef8bda9e9cc7",
+  "exit": 0,
+  "error": null
+ },
+ "준": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 84440,
+  "seconds": 45.637,
+  "sha": "d8dfe1f3d7d0ae23edb20bf9758e90c78e70f39a7ee4d8f94cfa4b82fc765a0f",
+  "exit": 0,
+  "error": null
+ },
+ "진": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 210945,
+  "seconds": 115.922,
+  "sha": "0c089c05ed5429ec6a0fe245404ad8797c506514347e0b801780c1f27861ad48",
+  "exit": 0,
+  "error": null
+ },
+ "편": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 662493,
+  "seconds": 352.113,
+  "sha": "d1bd7b3585b8dacbd0adb9247541276e96443c7ed16220fce5d43ecf3f090d2c",
+  "exit": 0,
+  "error": null
+ },
+ "풍": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 752729,
+  "seconds": 399.255,
+  "sha": "0a4ad256fcc399ace4d04d41eb7781061f88cda8b860302b952e6cbb6a82adf8",
+  "exit": 0,
+  "error": null
+ },
+ "학": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 102350,
+  "seconds": 48.388,
+  "sha": "38608515ef8666f31d1ea61d83fbf96ae20db5f5384b401c3c1dd1b74b230620",
+  "exit": 0,
+  "error": null
+ },
+ "합": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 665855,
+  "seconds": 348.534,
+  "sha": "462c017eda4529f0868ccd33838a7a7ee4a9bf9c206de5e005a119cc1758bce0",
+  "exit": 0,
+  "error": null
+ },
+ "혈": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 198192,
+  "seconds": 105.441,
+  "sha": "6aa7879f74440f02b1eeab4fd13d3acf88aa3a58edddbac1ab22a2472d9416ce",
+  "exit": 0,
+  "error": null
+ },
+ "홍": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 186790,
+  "seconds": 102.169,
+  "sha": "eeaab8662da2b9b667b8818819edc2495e70925075e217b441abc0e3c0fb583b",
+  "exit": 0,
+  "error": null
+ },
+ "환": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 208428,
+  "seconds": 125.903,
+  "sha": "663cc712dbbac5308739c55d9e9785e67c97cf932d58d170a66b65461aeb9e3f",
+  "exit": 0,
+  "error": null
+ },
+ "흑": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 274097,
+  "seconds": 146.527,
+  "sha": "8ddd83b7baf4b216a5a2dbb1e233adc604c569a92ebb3e4e3d2b51e5135cc41a",
+  "exit": 0,
+  "error": null
+ }
+}

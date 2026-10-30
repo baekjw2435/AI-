@@ -279,5 +279,48 @@
   ],
   "merge": "{\"root_result\": \"W\", \"nodes\": 2084295, \"children_used\": 1, \"child_results\": [\"L\"]}",
   "error": null
+ },
+ "온": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 3206620,
+  "seconds": 1671.67,
+  "sha": "ef8b0e27a034abd7799d836888ce712824bc3ea15283bb94d396fb7132969b90",
+  "key": [
+   "온돌",
+   "온조왕",
+   "온탕"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 3206620, \"children_used\": 3, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "벽": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 3111918,
+  "seconds": 1568.138,
+  "sha": "6ee97c776aefb1ad3903cfea36f1960eb19f5820babb6628915b8619cd557ad4",
+  "key": [
+   "벽돌"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 3111918, \"children_used\": 1, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "갑": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 2558504,
+  "seconds": 1710.942,
+  "sha": "bb5d5e3323e63b7f3dd902721caccb744657288f4184c4a5f73c4aea68234fda",
+  "key": [
+   "갑론을박",
+   "갑절",
+   "갑갑증"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 2558504, \"children_used\": 3, \"child_results\": [\"W\"]}",
+  "error": null
  }
 }
