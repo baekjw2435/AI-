@@ -1,0 +1,44 @@
+ok    R_7_0_2_2_2: fresh win in 40.1s, proof 197314 verified
+ok    R_7_0_2_2_2: stage 1 saved 3742863 entries in 0.789392s
+ok    R_7_0_2_2_2: stage 2 loaded 3742863 in 0.113169s, result unknown
+ok    R_7_0_2_2_2: stage 3 loaded 5290656
+ok    R_7_0_2_2_2: staged win (search 6.0+6.0+17.5s vs fresh 32.2s), proof 199149 verified
+ok    R_7_0_2_2_0_2: fresh win in 22.0s, proof 96692 verified
+ok    R_7_0_2_2_0_2: stage 1 saved 2070351 entries in 0.611624s
+ok    R_7_0_2_2_0_2: stage 2 loaded 2070351 in 0.068586s, result unknown
+ok    R_7_0_2_2_0_2: stage 3 loaded 3164164
+ok    R_7_0_2_2_0_2: staged win (search 3.3+3.3+8.0s vs fresh 17.0s), proof 99382 verified
+ok    R_7_0_2_2_3: fresh win in 19.6s, proof 77854 verified
+ok    R_7_0_2_2_3: stage 1 saved 1977771 entries in 0.293206s
+ok    R_7_0_2_2_3: stage 2 loaded 1977771 in 0.076706s, result unknown
+ok    R_7_0_2_2_3: stage 3 loaded 3107415
+ok    R_7_0_2_2_3: staged win (search 2.9+2.9+6.5s vs fresh 16.6s), proof 76441 verified
+ok    R_7_1_3_3: fresh win in 84.0s, proof 112570 verified
+ok    R_7_1_3_3: stage 1 saved 6989699 entries in 1.571833s
+ok    R_7_1_3_3: stage 2 loaded 6989699 in 0.197334s, result unknown
+ok    R_7_1_3_3: stage 3 loaded 8088390
+ok    R_7_1_3_3: staged win (search 12.6+12.6+31.8s vs fresh 80.4s), proof 115436 verified
+ok    R_7_0_2_2_2c_1: fresh loss in 33.5s, proof 193395 verified
+ok    R_7_0_2_2_2c_1: stage 1 saved 2844422 entries in 2.509714s
+ok    R_7_0_2_2_2c_1: stage 2 loaded 2844422 in 0.091574s, result unknown
+ok    R_7_0_2_2_2c_1: stage 3 loaded 4319742
+ok    R_7_0_2_2_2c_1: staged loss (search 5.0+5.0+13.5s vs fresh 25.5s), proof 198383 verified
+ok    R_7_1_3_3c_6: fresh loss in 82.5s, proof 213907 verified
+ok    R_7_1_3_3c_6: stage 1 saved 6866610 entries in 1.552287s
+ok    R_7_1_3_3c_6: stage 2 loaded 6866610 in 0.173544s, result unknown
+ok    R_7_1_3_3c_6: stage 3 loaded 8053678
+ok    R_7_1_3_3c_6: staged loss (search 12.4+12.4+30.0s vs fresh 73.2s), proof 106514 verified
+ok    refuse other root position: rc=2 "solver error: TT file refused: different root position"
+ok    refuse other game graph (one more group): rc=2 "solver error: TT file refused: different game graph (groups, endpoints or hash keys)"
+ok    refuse other --init: rc=2 "solver error: TT file refused: different --init/--init-div/--wpn"
+ok    refuse other --wpn: rc=2 "solver error: TT file refused: different --init/--init-div/--wpn"
+ok    refuse truncated file: rc=2 "solver error: TT file refused: truncated"
+ok    refuse one flipped bit: rc=2 "solver error: TT file refused: checksum mismatch"
+ok    refuse trailing data: rc=2 "solver error: TT file refused: trailing data"
+ok    refuse header only: rc=2 "solver error: TT file refused: truncated"
+ok    refuse missing file: rc=2 "solver error: cannot open TT file /tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938"
+ok    intact file loads again (411546 entries)
+ok    checkpoints: 4 saves in 7.0s (unknown)
+ok    killed run left its last complete checkpoint
+ok    resumed after kill: win, loaded 1124868, proof 189553 verified
+{"fails": 0}
