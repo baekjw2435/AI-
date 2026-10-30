@@ -7,56 +7,6 @@
  },
  "proofs": [
   {
-   "id": "yeok",
-   "start": "역",
-   "history": [],
-   "player_to_move": "receiver",
-   "result_for_player_to_move": "W",
-   "nodes": 1406006,
-   "proof_sha256": "5638fbb94a56254229556f08057778da1ab7ce9e3f4af579f8286147242e7d48",
-   "verify_seconds": 561.263,
-   "table_entries": 549226
-  },
-  {
-   "id": "yeok.yeoksahak",
-   "start": "역",
-   "history": [
-    "역사학"
-   ],
-   "player_to_move": "presenter",
-   "result_for_player_to_move": "W",
-   "nodes": 88772,
-   "proof_sha256": "cdce7af9ed099d528a0fc3f2b9a4164c49999e72a852ab1f9600157ce7941afe",
-   "verify_seconds": 30.591,
-   "table_entries": 32034
-  },
-  {
-   "id": "yeok.yeokbanghyang",
-   "start": "역",
-   "history": [
-    "역방향"
-   ],
-   "player_to_move": "presenter",
-   "result_for_player_to_move": "W",
-   "nodes": 568654,
-   "proof_sha256": "444e7243473dfe54742627ebec1c101a39f13d969f4e393e8368508ca85631ce",
-   "verify_seconds": 230.746,
-   "table_entries": 215981
-  },
-  {
-   "id": "yeok.yeokpung",
-   "start": "역",
-   "history": [
-    "역풍"
-   ],
-   "player_to_move": "presenter",
-   "result_for_player_to_move": "W",
-   "nodes": 1913131,
-   "proof_sha256": "324a1f851964704a644548d2487ff66836fa1bbfb3694e69513f6ffe5761f333",
-   "verify_seconds": 750.188,
-   "table_entries": 727497
-  },
-  {
    "id": "gyeok",
    "start": "격",
    "history": [],
@@ -172,144 +122,14 @@
    "table_entries": 2196852
   }
  ],
+ "stats": {
+  "records": 13090867,
+  "unique_states": 12899429,
+  "duplicate_records_removed": 191438,
+  "states_in_several_proofs": 176183,
+  "states_with_different_moves": 3193
+ },
  "starts": {
-  "역": {
-   "receiver_wins": true,
-   "first_moves": [
-    {
-     "words": [
-      "역기능"
-     ],
-     "group": 347,
-     "result": "win",
-     "proof": null,
-     "source": "아스트라 기존 기록 (이 묶음에 증명 표 없음)"
-    },
-    {
-     "words": [
-      "역동적",
-      "역사적",
-      "역설적",
-      "역적"
-     ],
-     "group": 352,
-     "result": "loss",
-     "proof": null,
-     "source": "아스트라 기존 기록 (이 묶음에 증명 표 없음)"
-    },
-    {
-     "words": [
-      "역방향"
-     ],
-     "group": 357,
-     "result": "loss",
-     "proof": "yeok.yeokbanghyang",
-     "refutation": {
-      "word": "향토색",
-      "how": "증명",
-      "alts": []
-     }
-    },
-    {
-     "words": [
-      "역병"
-     ],
-     "group": 348,
-     "result": "loss",
-     "proof": null,
-     "source": "아스트라 기존 기록 (이 묶음에 증명 표 없음)"
-    },
-    {
-     "words": [
-      "역사학",
-      "역학"
-     ],
-     "group": 354,
-     "result": "loss",
-     "proof": "yeok.yeoksahak",
-     "refutation": {
-      "word": "학업",
-      "how": "증명",
-      "alts": []
-     }
-    },
-    {
-     "words": [
-      "역세권"
-     ],
-     "group": 345,
-     "result": "loss",
-     "proof": null,
-     "source": "아스트라 기존 기록 (이 묶음에 증명 표 없음)"
-    },
-    {
-     "words": [
-      "역순"
-     ],
-     "group": 349,
-     "result": "loss",
-     "proof": null,
-     "source": "아스트라 기존 기록 (이 묶음에 증명 표 없음)"
-    },
-    {
-     "words": [
-      "역습"
-     ],
-     "group": 350,
-     "result": "win",
-     "proof": "yeok"
-    },
-    {
-     "words": [
-      "역전승"
-     ],
-     "group": 351,
-     "result": "loss",
-     "proof": null,
-     "source": "아스트라 기존 기록 (이 묶음에 증명 표 없음)"
-    },
-    {
-     "words": [
-      "역풍"
-     ],
-     "group": 353,
-     "result": "loss",
-     "proof": "yeok.yeokpung",
-     "refutation": {
-      "word": "풍류객",
-      "how": "증명",
-      "alts": []
-     }
-    },
-    {
-     "words": [
-      "역할"
-     ],
-     "group": 355,
-     "result": "win",
-     "proof": null,
-     "source": "아스트라 기존 기록 (이 묶음에 증명 표 없음)"
-    },
-    {
-     "words": [
-      "역할극"
-     ],
-     "group": 346,
-     "result": "loss",
-     "proof": null,
-     "source": "아스트라 기존 기록 (이 묶음에 증명 표 없음)"
-    },
-    {
-     "words": [
-      "역행"
-     ],
-     "group": 356,
-     "result": "loss",
-     "proof": null,
-     "source": "아스트라 기존 기록 (이 묶음에 증명 표 없음)"
-    }
-   ]
-  },
   "격": {
    "receiver_wins": true,
    "first_moves": [
@@ -320,7 +140,7 @@
      "group": 9,
      "result": "pending",
      "proof": null,
-     "note": "보류: 돌격과 왕복 쌍이라 따로 계산해야 함"
+     "note": "격돌과 돌격이 서로 맞물리는 짝(왕복 쌍)이라 따로 계산해야 해서 아직 판정하지 않음"
     },
     {
      "words": [

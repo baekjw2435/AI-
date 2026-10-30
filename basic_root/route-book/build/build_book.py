@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Build the route-book bundle (one winning-move table for every verified proof).
 
-usage: build_book.py PROOF2TAB OUTDIR
+usage: build_book.py PROOF2TAB OUTDIR [START ...]
+
+With START syllables (e.g. 격), only the proofs of those start syllables go into the bundle.
 
 Every proof is checked against the sha256 that the unmodified verify_v2.py reported for it,
 then proof2tab extracts its W-node moves. All records go into one table keyed by the engine's
@@ -36,7 +38,7 @@ PROOFS = [
 # first moves decided only in Astra's earlier records (no certificate in this bundle)
 ASTRA = {'역': {'역할': 'W', '역기능': 'W', '역세권': 'L', '역할극': 'L', '역병': 'L', '역순': 'L', '역전승': 'L',
                '역사적': 'L', '역설적': 'L', '역적': 'L', '역동적': 'L', '역행': 'L'}}
-PENDING = {'격': {'격돌': '보류: 돌격과 왕복 쌍이라 따로 계산해야 함'}}
+PENDING = {'격': {'격돌': '격돌과 돌격이 서로 맞물리는 짝(왕복 쌍)이라 따로 계산해야 해서 아직 판정하지 않음'}}
 REC = np.dtype([('a', '<u4'), ('b', '<u4'), ('s', '<u8'), ('g', '<u2'), ('p', '<u2')])
 
 
@@ -49,14 +51,16 @@ def sha256(path):
 
 
 def main():
-    tool, out = sys.argv[1], sys.argv[2]
+    tool, out, only = sys.argv[1], sys.argv[2], set(sys.argv[3:])
+    proof_list = [p for p in PROOFS if not only or p[1] in only]
+    assert proof_list, 'no proof for the requested start syllables'
     os.makedirs(out + '/tables', exist_ok=True)
     m = IndependentModelV2(open(DICT, 'rb').read())
     by_group = [[] for _ in m.edges]
     for w in m.words:
         by_group[m.group[m.word_endpoints[w]]].append(w)
     parts, proofs = [], []
-    for k, (pid, start, hist, base) in enumerate(PROOFS):
+    for k, (pid, start, hist, base) in enumerate(proof_list):
         v = json.load(open(f'{S}/{base}.verify.json', encoding='utf-8'))
         assert v['verified'] is True and v['dictionary_sha256'] == sha256(DICT), pid
         assert v['history'] == hist and not v.get('initial_used_words'), pid
@@ -86,9 +90,15 @@ def main():
     clash = same & (rec['s'][1:] != rec['s'][:-1])
     if clash.any():
         sys.exit(f'{int(clash.sum())} key collisions between different states; widen the key')
-    alt = same & (rec['g'][1:] != rec['g'][:-1])
     keep = np.ones(len(rec), dtype=bool); keep[1:] = ~same
-    print(f'records {len(rec)}, shared states {int(same.sum())} (different winning move in {int(alt.sum())}), unique {int(keep.sum())}')
+    # states recorded by several proofs, and those where the proofs chose different winning groups
+    sid = np.cumsum(keep) - 1
+    multi = np.bincount(sid) > 1
+    pairs = np.unique(np.stack([sid, rec['g'].astype(np.int64)]), axis=1)
+    differ = np.bincount(pairs[0], minlength=len(multi)) > 1
+    stats = {'records': int(len(rec)), 'unique_states': int(keep.sum()), 'duplicate_records_removed': int(same.sum()),
+             'states_in_several_proofs': int(multi.sum()), 'states_with_different_moves': int(differ.sum())}
+    print(stats)
     rec = rec[keep]
     bucket = (rec['a'] >> 24).astype(np.int64)
     sizes = np.bincount(bucket, minlength=256)
@@ -100,9 +110,13 @@ def main():
             f.write(b'YSK1' + np.uint32(len(r)).tobytes() + keys.tobytes() + r['g'].astype('<u2').tobytes())
     model = {'format': 'route-book-1', 'dictionary_sha256': sha256(DICT), 'syllables': m.syllables, 'edges': m.edges,
              'words': by_group, 'full': list(m.full_counts), 'pairs': m.pairs, 'loops': m.loops, 'outgoing': m.outgoing,
-             'rev': [m.group.get((t, s), -1) for (s, t) in m.edges], 'buckets': 256, 'entries': int(len(rec))}
+             'rev': [m.group.get((t, s), -1) for (s, t) in m.edges], 'buckets': 256, 'entries': int(len(rec)),
+             'roots': [{'start': p['start'], 'history': p['history'], 'result_for_player_to_move': p['result_for_player_to_move']}
+                       for p in proofs]}
     json.dump(model, open(f'{out}/model.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-    json.dump({'proofs': proofs, 'astra_records': ASTRA, 'pending': PENDING,
+    start_set = {p[1] for p in proof_list}
+    json.dump({'proofs': proofs, 'stats': stats, 'astra_records': {k: v for k, v in ASTRA.items() if k in start_set},
+               'pending': {k: v for k, v in PENDING.items() if k in start_set},
                'bucket_entries': [int(x) for x in sizes]},
               open(f'{out}/_proofs.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print('entries', len(rec), 'largest bucket', int(sizes.max()), 'smallest', int(sizes.min()))

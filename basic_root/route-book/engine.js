@@ -7,38 +7,58 @@
 // 미확정 핵심 추출)를 한 뒤, [현재 음절 번호 하위 바이트, 상위 바이트, 묶음별 남은 개수...]에 대한
 // FNV-1a 32비트를 앞에서(기저 2166136261)와 뒤에서(기저 0x9747b28c) 각각 계산한 두 값.
 var RouteBook = (function () {
-  var M, vertexCount, groupCount, ownerOf, vertexOf, buckets, catalog;
+  var M, vertexCount, groupCount, ownerOf, vertexOf, buckets, catalog, lostRoots;
 
   function init(model, cat) {
-    if (model.format !== "route-book-1") throw new Error("model.json 형식이 맞지 않아요.");
+    if (!model || model.format !== "route-book-1") throw new Error("model.json 형식이 맞지 않아요.");
     M = model;
     vertexCount = M.syllables.length;
     groupCount = M.edges.length;
-    ownerOf = {};
-    vertexOf = {};
+    ownerOf = Object.create(null);
+    vertexOf = Object.create(null);
     M.words.forEach(function (list, g) { list.forEach(function (w) { ownerOf[w] = g; }); });
     M.syllables.forEach(function (s, v) { vertexOf[s] = v; });
     buckets = new Array(M.buckets);
     catalog = cat || null;
+    // 증명의 루트 중 둘 차례인 쪽이 지는 국면(예: 격 → 격식). 되받기가 안전한지 판단할 때 씁니다.
+    lostRoots = (M.roots || []).filter(function (r) { return r.result_for_player_to_move === "L"; });
+  }
+
+  // verify.py의 dueum과 같은 규칙: ㄹ+ㅑㅕㅖㅛㅠㅣ → ㅇ, ㄹ+그 밖의 모음 → ㄴ, ㄴ+ㅕㅛㅠㅣ → ㅇ
+  function dueum(s) {
+    var off = typeof s === "string" && s.length === 1 ? s.charCodeAt(0) - 0xac00 : -1;
+    if (off < 0 || off >= 11172) return s;
+    var ini = Math.floor(off / 588), rest = off % 588, vowel = Math.floor(rest / 28);
+    if (ini === 5) ini = [2, 6, 7, 12, 17, 20].indexOf(vowel) >= 0 ? 11 : 2;
+    else if (ini === 2 && [6, 12, 17, 20].indexOf(vowel) >= 0) ini = 11;
+    return String.fromCharCode(0xac00 + ini * 588 + rest);
   }
 
   function bucketFile(id) { return "tables/b" + (id < 16 ? "0" : "") + id.toString(16) + ".bin"; }
 
   function addBucket(id, buffer) {
+    if (!(id >= 0 && id < M.buckets && id === Math.floor(id))) throw new Error("승리수 표 조각 번호가 맞지 않아요: " + id);
+    if (ArrayBuffer.isView(buffer)) buffer = buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength);
+    if (!(buffer instanceof ArrayBuffer) || buffer.byteLength < 8) throw new Error("승리수 표 형식이 맞지 않아요.");
     var head = new DataView(buffer, 0, 8);
     if (String.fromCharCode(head.getUint8(0), head.getUint8(1), head.getUint8(2), head.getUint8(3)) !== "YSK1") throw new Error("승리수 표 형식이 맞지 않아요.");
     var n = head.getUint32(4, true);
     if (buffer.byteLength !== 8 + 10 * n) throw new Error("승리수 표 조각 " + id + "의 크기가 맞지 않아요.");
-    buckets[id] = { n: n, keys: new Uint32Array(buffer.slice(8, 8 + 8 * n)), groups: new Uint16Array(buffer.slice(8 + 8 * n, 8 + 10 * n)) };
+    var T = { n: n, keys: new Uint32Array(buffer.slice(8, 8 + 8 * n)), groups: new Uint16Array(buffer.slice(8 + 8 * n, 8 + 10 * n)) };
+    if (n && ((T.keys[0] >>> 24) !== id || (T.keys[2 * (n - 1)] >>> 24) !== id)) throw new Error("승리수 표 조각 " + id + "이 아닌 파일이에요.");
+    buckets[id] = T;
   }
 
   function hasBucket(id) { return !!buckets[id]; }
 
   // start: 시작 음절(예: "격"). history: 그 음절부터 실제로 낸 단어들. initialUsed: 그 전에 이미 쓴 단어들(선택).
   function position(start, history, initialUsed) {
-    var cur = vertexOf[start], counts = M.full.slice(), used = {}, i, w, g;
+    if (!M) throw new Error("먼저 RouteBook.init(model, catalog)를 불러 주세요.");
+    var cur = vertexOf[dueum(start)], counts = M.full.slice(), used = Object.create(null), i, w, g;
     if (cur === undefined) throw new Error("사전에 없는 음절이에요: " + start);
+    if (!Array.isArray(history)) throw new Error("history는 단어 배열이어야 해요.");
     initialUsed = initialUsed || [];
+    if (!Array.isArray(initialUsed)) throw new Error("initialUsed는 단어 배열이어야 해요.");
     for (i = 0; i < initialUsed.length; i++) {
       w = initialUsed[i]; g = ownerOf[w];
       if (g === undefined || used[w]) throw new Error("쓸 수 없는 단어예요: " + w);
@@ -178,24 +198,49 @@ var RouteBook = (function () {
     if (!buckets[b]) { var e = new Error("승리수 표 조각 " + bucketFile(b) + "이 필요해요."); e.needBucket = b; throw e; }
     g = find(buckets[b], k[0], k[1]);
     if (g >= 0 && M.edges[g][0] === p.cur && (w = freeWord(g, p.used))) return move(g, w, "증명", p.used);
-    // 상대가 왕복 쌍의 한쪽을 냈으면 짝으로 되받아 직전 국면으로 돌아간다(필승 수순을 따라온 경우에만 이기는 수)
+    // 상대가 왕복 쌍의 한쪽을 냈으면 짝으로 되받아 그 수 직전 국면으로 돌아간다.
+    // 그 직전 국면이 상대에게 증명된 패배일 때만 이기는 수이므로, 그것을 확인한 경우에만 둔다.
     if (history.length) {
       var r = M.rev[ownerOf[history[history.length - 1]]];
-      if (r >= 0 && M.edges[r][0] === p.cur && (w = freeWord(r, p.used))) return move(r, w, "되받기", p.used);
+      if (r >= 0 && M.edges[r][0] === p.cur && (w = freeWord(r, p.used)) && lostFor(start, history.slice(0, -1), initialUsed)) return move(r, w, "되받기", p.used);
     }
     return null;
   }
 
-  // loadBucket(id) -> Promise<ArrayBuffer>. 예: function (id) { return fetch(RouteBook.bucketFile(id)).then(r => r.arrayBuffer()); }
-  function ourMoveAsync(start, history, initialUsed, loadBucket) {
-    try { return Promise.resolve(ourMove(start, history, initialUsed)); }
-    catch (e) {
-      if (e.needBucket === undefined) return Promise.reject(e);
-      return Promise.resolve(loadBucket(e.needBucket)).then(function (buf) {
-        addBucket(e.needBucket, buf);
-        return ourMove(start, history, initialUsed);
-      });
+  // h 국면에서 둘 차례인 쪽이 진다는 것이 증명돼 있는가
+  function lostFor(start, h, initialUsed) {
+    var p = position(start, h, initialUsed);
+    if (normalize(p.cur, p.counts).st === 0) return true;
+    // 둘 차례인 쪽이 지는 증명 루트(같은 묶음의 단어로 같은 국면에 온 경우 포함)
+    if (!(initialUsed && initialUsed.length)) {
+      for (var i = 0; i < lostRoots.length; i++) {
+        var R = lostRoots[i];
+        if (dueum(R.start) === dueum(start) && R.history.length === h.length &&
+            R.history.every(function (w, k) { return ownerOf[w] === ownerOf[h[k]]; })) return true;
+      }
     }
+    // 바로 앞 수가 그 국면에서 증명된 승리수였다(그 수를 둔 쪽이 이긴다 = 지금 둘 차례인 쪽이 진다)
+    if (h.length) {
+      var prev = ourMove(start, h.slice(0, -1), initialUsed);
+      if (prev && prev.group === ownerOf[h[h.length - 1]]) return true;
+    }
+    return false;
+  }
+
+  // loadBucket(id) -> Promise<ArrayBuffer>. 예: function (id) { return fetch(RouteBook.bucketFile(id)).then(r => r.arrayBuffer()); }
+  // 필요한 조각을 모두 불러올 때까지 되풀이합니다(되받기 확인에 조각이 더 필요할 수 있음). 오류는 항상 거부된 Promise로 돌려줍니다.
+  function ourMoveAsync(start, history, initialUsed, loadBucket) {
+    function attempt() {
+      try { return Promise.resolve(ourMove(start, history, initialUsed)); }
+      catch (e) {
+        if (e.needBucket === undefined) return Promise.reject(e);
+        return Promise.resolve().then(function () { return loadBucket(e.needBucket); }).then(function (buf) {
+          addBucket(e.needBucket, buf);
+          return attempt();
+        });
+      }
+    }
+    return Promise.resolve().then(attempt);
   }
 
   function legalWords(start, history, initialUsed) {
@@ -211,7 +256,8 @@ var RouteBook = (function () {
   return {
     init: init, addBucket: addBucket, hasBucket: hasBucket, bucketFile: bucketFile, ourMove: ourMove, ourMoveAsync: ourMoveAsync,
     legalWords: legalWords, syllableOf: syllableOf, groupOf: groupOf, firstMoves: firstMoves,
-    position: position, normalize: normalize, keyOf: keyOf
+    position: position, normalize: normalize, keyOf: keyOf, dueum: dueum
   };
 })();
-if (typeof module !== "undefined") module.exports = RouteBook;
+if (typeof module !== "undefined" && module.exports) module.exports = RouteBook;
+else if (typeof globalThis !== "undefined") globalThis.RouteBook = RouteBook;

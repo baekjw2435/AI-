@@ -45,7 +45,7 @@ function oppNode(start, h, depth) {
 const catalog = { format: "route-book-1", dictionary_sha256: model.dictionary_sha256, verifier: {
   "verify_v2.py": "9019cd1da696c7cc2db7faf6a37a6fe69614f83697a855884bcbdcca6360e69f",
   "verify.py": "b08c2491b95d6ccc477b385e648581f970d48961df06ceb6f2a9bd81ad1b5ec3" },
-  proofs: meta.proofs, starts: {} };
+  proofs: meta.proofs, stats: meta.stats, starts: {} };
 fs.mkdirSync(path.join(dir, "lines"), { recursive: true });
 for (const start of [...new Set(meta.proofs.map((p) => p.start))]) {
   const proofs = meta.proofs.filter((p) => p.start === start);
