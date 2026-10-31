@@ -384,5 +384,53 @@
   ],
   "merge": "{\"root_result\": \"W\", \"nodes\": 3545630, \"children_used\": 1, \"child_results\": [\"L\"]}",
   "error": null
+ },
+ "할": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 12725616,
+  "seconds": 5734.452,
+  "sha": "dc59568565ddde8e09357335b34048f3cedffa9a056e13b24463ac530d2e016e",
+  "exit": 0,
+  "key": [
+   "할증"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 12725616, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
+ },
+ "표": {
+  "result": "L",
+  "expected": "L",
+  "ok": true,
+  "nodes": 11775170,
+  "seconds": 5783.671,
+  "sha": "9dcdf0921e9cd84922aa50df2f3e79e77ee33c2c09b80e9bdf45590c3edb1f74",
+  "exit": 0,
+  "key": [
+   "표명",
+   "표주박",
+   "표기법",
+   "표현력",
+   "표면적",
+   "표절",
+   "표준"
+  ],
+  "merge": "{\"root_result\": \"L\", \"nodes\": 11775170, \"children_used\": 7, \"child_results\": [\"W\"]}",
+  "error": null
+ },
+ "득": {
+  "result": "W",
+  "expected": "W",
+  "ok": true,
+  "nodes": 11804913,
+  "seconds": 5953.502,
+  "sha": "e7ed743e5037e698f65e8f2d4e23f37f399594a21161e9db6bffecddb9fbc1e4",
+  "exit": 0,
+  "key": [
+   "득표"
+  ],
+  "merge": "{\"root_result\": \"W\", \"nodes\": 11804913, \"children_used\": 1, \"child_results\": [\"L\"]}",
+  "error": null
  }
 }
