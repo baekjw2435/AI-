@@ -141,12 +141,12 @@ var RouteSite = (function () {
   function key48(cur, core) { return fnv(cur, core, false, 2166136261) * 65536 + (fnv(cur, core, true, 0x9747b28c) >>> 16); }
   function coreSize(core) { var s = 0; for (var i = 0; i < core.length; i++) s += core[i]; return s; }
 
-  // RSB1: 'RSB1', u32 n, u8 k, 3바이트 0, u32 열쇠 바이트 수, u32 0, 열쇠 비트열(첫 48비트 그대로, 이후 간격을 Rice 부호),
+  // RSB1: 'RSB1', u32 n, u8 k, u8 열쇠 비트 수(0이면 48), 2바이트 0, u32 열쇠 바이트 수, u32 0, 열쇠 비트열(첫 48비트 그대로, 이후 간격을 Rice 부호),
   // 수 비트열(10비트씩). 비트는 바이트 안에서 높은 자리부터.
   function decode(buffer) {
     var u8 = new Uint8Array(buffer), dv = new DataView(buffer);
     if (u8.length < 20 || u8[0] !== 82 || u8[1] !== 83 || u8[2] !== 66 || u8[3] !== 49) throw new Error("승리수 표 형식이 맞지 않아요.");
-    var n = dv.getUint32(4, true), k = u8[8], kbytes = dv.getUint32(12, true);
+    var n = dv.getUint32(4, true), k = u8[8], width = u8[9] || 48, kbytes = dv.getUint32(12, true);
     if (u8.length !== 20 + kbytes + Math.ceil(10 * n / 8)) throw new Error("승리수 표 크기가 맞지 않아요.");
     var keys = new Float64Array(n), groups = new Uint16Array(n), pos = 160, end = (20 + kbytes) * 8;
     function bits(cnt) {
@@ -168,7 +168,7 @@ var RouteSite = (function () {
       pos = end;
       for (i = 0; i < n; i++) groups[i] = bits(10);
     }
-    return { n: n, keys: keys, groups: groups };
+    return { n: n, keys: keys, groups: groups, shift: Math.pow(2, 48 - width) };
   }
 
   function fileFor(book, size) {
@@ -195,9 +195,9 @@ var RouteSite = (function () {
   function lookup(bookId, cur, core) {
     var book = books[bookId], f = book && fileFor(book, coreSize(core));
     if (!f) return Promise.resolve(-1);
-    var key = key48(cur, core);
+    var key48v = key48(cur, core);
     return getFile(f).then(function (T) {
-      var lo = 0, hi = T.n;
+      var key = Math.floor(key48v / T.shift), lo = 0, hi = T.n;  // 파일마다 열쇠의 앞 width비트만 씀
       while (lo < hi) { var mid = (lo + hi) >>> 1; if (T.keys[mid] < key) lo = mid + 1; else hi = mid; }
       var g = lo < T.n && T.keys[lo] === key ? T.groups[lo] : -1;
       return g >= 0 && M.edges[g][0] === cur && core[g] > 0 ? g : -1;

@@ -9,8 +9,9 @@ site2tab extracts each W node's winning group (the engine finds static and one-m
 records are split into files by canonical core size, so moving down one line needs about one file at a time.
 
 File format RSB1 (little-endian header, then MSB-first bit streams):
-  'RSB1', u32 n, u8 k, u8 0, u16 0, u32 key_bytes, u32 0
-  keys: the first 48-bit key raw, then n-1 gaps between sorted keys, Golomb-Rice coded with parameter k
+  'RSB1', u32 n, u8 k, u8 width, u16 0, u32 key_bytes, u32 0
+  keys: the top `width` bits of each 48-bit key (the shortest of 36/40/44/48 that keeps the file's keys distinct);
+  the first key raw in 48 bits, then n-1 gaps between sorted keys, Golomb-Rice coded with parameter k
   moves: n groups, 10 bits each, in key order
   key = (a << 16) | (b >> 16) where a, b are the engine's forward and backward FNV-1a values of the canonical state.
 A lookup only searches the one file for its core size, so a 48-bit key is checked against at most a few hundred
@@ -101,15 +102,15 @@ def fixed_bits(values, width):
     return out
 
 
-def encode(keys, groups):
-    """keys: sorted unique uint64 (< 2**48); groups: uint16 (< 1024)"""
+def encode(keys, groups, width=48):
+    """keys: sorted unique uint64 (< 2**width); groups: uint16 (< 1024)"""
     n = len(keys)
     gaps = np.diff(keys)
     k = int(max(0, np.floor(np.log2(max(1.0, float(keys[-1] - keys[0]) / max(1, n - 1)))))) if n > 1 else 0
     first = fixed_bits(np.array([keys[0] >> np.uint64(24), keys[0] & np.uint64(0xFFFFFF)], dtype=np.uint64).astype(np.int64), 24)
     kb = np.packbits(np.concatenate([first, bits_unary_rice(gaps, k)]))
     mb = np.packbits(fixed_bits(groups.astype(np.int64), 10))
-    head = b'RSB1' + np.uint32(n).tobytes() + bytes([k, 0, 0, 0]) + np.uint32(len(kb)).tobytes() + np.uint32(0).tobytes()
+    head = b'RSB1' + np.uint32(n).tobytes() + bytes([k, width, 0, 0]) + np.uint32(len(kb)).tobytes() + np.uint32(0).tobytes()
     return head + kb.tobytes() + mb.tobytes(), k
 
 
@@ -186,17 +187,20 @@ def main():
             sel = (core >= clo) & (core <= chi)
             ks, gs = key[sel], rec['g'][sel]
             o = np.argsort(ks, kind='stable'); ks, gs = ks[o], gs[o]
-            dup = ks[1:] == ks[:-1]
-            if dup.any():
+            if (ks[1:] == ks[:-1]).any():
                 sys.exit(f'{book}: 48-bit key collision inside file {fi}; widen the key')
-            blob, k = encode(ks, gs)
+            for width in (36, 40, 44, 48):  # the shortest prefix that keeps this file's keys distinct
+                kw = ks >> np.uint64(48 - width)
+                if not (kw[1:] == kw[:-1]).any():
+                    break
+            blob, k = encode(kw, gs, width)
             dk, dg = decode(blob) if len(ks) <= 5000 else (None, None)
             if dk is not None:
-                assert dk == [int(x) for x in ks] and list(dg) == [int(x) for x in gs], f'{book}/{fi}: decode mismatch'
+                assert dk == [int(x) for x in kw] and list(dg) == [int(x) for x in gs], f'{book}/{fi}: decode mismatch'
             p = f't/{bid}/{fi:02d}.bin'
             open(f'{out}/{p}', 'wb').write(blob)
             entry['files'].append({'path': p, 'core_lo': int(clo), 'core_hi': int(chi), 'n': int(len(ks)), 'bytes': len(blob),
-                                   'k': k, 'sha256': hashlib.sha256(blob).hexdigest()})
+                                   'k': k, 'width': width, 'sha256': hashlib.sha256(blob).hexdigest()})
             total_bytes += len(blob); total_entries += len(ks)
         manifest['books'].append(entry)
         print(book, bid, 'entries', len(rec), 'files', len(files), 'bytes', sum(f['bytes'] for f in entry['files']), flush=True)
