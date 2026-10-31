@@ -10,7 +10,7 @@ from functools import lru_cache
 from pathlib import Path
 
 sys.dont_write_bytecode = True
-VDIR = '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/verifier/route-verifier-v2'
+VDIR = '/home/user/AI-/.work/verifier/route-verifier-v2'
 sys.path.insert(0, VDIR)
 from verify import dueum  # noqa: E402
 from verify_v2 import IndependentModelV2, verify_v2  # noqa: E402

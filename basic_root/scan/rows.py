@@ -1,6 +1,6 @@
 # rows.py CONFIRMED.json LOGDIR POSDIR : for each verified syllable, the receiver's first moves and the proof's answer to each
 import gzip, json, sys, os
-S = '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad'
+S = '/home/user/AI-/.work'
 sys.path.insert(0, S + '/verifier/route-verifier-v2')
 from verify_v2 import IndependentModelV2
 m = IndependentModelV2(open(S + '/basic_root.txt', 'rb').read())

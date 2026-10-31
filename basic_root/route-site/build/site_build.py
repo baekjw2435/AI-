@@ -20,7 +20,7 @@ import hashlib, json, os, subprocess, sys
 import numpy as np
 
 sys.dont_write_bytecode = True
-S = '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad'
+S = '/home/user/AI-/.work'
 VDIR = os.environ.get('ROUTE_VERIFIER_DIR', S + '/verifier/route-verifier-v2')
 DICT = os.environ.get('ROUTE_DICTIONARY', S + '/basic_root.txt')
 HERE = os.path.dirname(os.path.abspath(__file__))

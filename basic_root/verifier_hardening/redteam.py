@@ -8,7 +8,7 @@ Output: rt/results.json and a table on stdout.
 import copy, gzip, hashlib, json, os, shutil, subprocess, sys, time
 from pathlib import Path
 
-S = Path("/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad")
+S = Path("/home/user/AI-/.work")
 V2 = S / "verifier/route-verifier-v2"
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(V2))

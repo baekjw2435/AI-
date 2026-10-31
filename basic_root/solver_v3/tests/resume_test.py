@@ -15,8 +15,8 @@ import json, os, signal, subprocess, sys, tempfile, time
 from pathlib import Path
 
 sys.dont_write_bytecode = True
-VDIR = os.environ.get('ROUTE_VERIFIER_DIR', '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/verifier/route-verifier-v2')
-DICT = os.environ.get('ROUTE_DICTIONARY', '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/basic_root.txt')
+VDIR = os.environ.get('ROUTE_VERIFIER_DIR', '/home/user/AI-/.work/verifier/route-verifier-v2')
+DICT = os.environ.get('ROUTE_DICTIONARY', '/home/user/AI-/.work/basic_root.txt')
 sys.path.insert(0, VDIR)
 from verify_v2 import verify_v2  # noqa: E402
 

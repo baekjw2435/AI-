@@ -4,7 +4,7 @@ solver_v3 results, every v3 certificate checked by verify_v2. usage: real_test.p
 import json, random, subprocess, sys, tempfile
 from pathlib import Path
 sys.dont_write_bytecode = True
-VDIR = '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/verifier/route-verifier-v2'
+VDIR = '/home/user/AI-/.work/verifier/route-verifier-v2'
 sys.path.insert(0, VDIR)
 from verify_v2 import IndependentModelV2, verify_v2
 DICT = VDIR + '/words.txt'

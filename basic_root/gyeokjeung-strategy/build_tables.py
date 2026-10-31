@@ -1,8 +1,8 @@
 import pickle, gzip, json, struct, sys, os
-sys.path.insert(0, "/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/verifier/route-verifier-v2")
+sys.path.insert(0, "/home/user/AI-/.work/verifier/route-verifier-v2")
 from verify_v2 import IndependentModelV2
-m = IndependentModelV2(open("/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/basic_root.txt", "rb").read())
-P = "/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/gyeok_run/proofs/R_gyeok_W_via_gyeokjeung.jsonl.gz"
+m = IndependentModelV2(open("/home/user/AI-/.work/basic_root.txt", "rb").read())
+P = "/home/user/AI-/.work/gyeok_run/proofs/R_gyeok_W_via_gyeokjeung.jsonl.gz"
 OUT = "site_gj"; os.makedirs(OUT, exist_ok=True)
 hdr, V, R, M, index = pickle.load(open("gyeok.pkl", "rb"))
 root = hdr["root"]; first_g, start = M[root][0]

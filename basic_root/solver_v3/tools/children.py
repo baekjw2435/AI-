@@ -3,9 +3,9 @@
 (one representative unused word per group); writes OUTDIR/PREFIX_<k>.json and .txt and prints a TSV."""
 import os, json, sys
 sys.dont_write_bytecode = True
-sys.path.insert(0, os.environ.get('ROUTE_VERIFIER_DIR', '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/verifier/route-verifier-v2'))
+sys.path.insert(0, os.environ.get('ROUTE_VERIFIER_DIR', '/home/user/AI-/.work/verifier/route-verifier-v2'))
 from verify_v2 import IndependentModelV2
-D = os.environ.get('ROUTE_DICTIONARY', '/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad/basic_root.txt')
+D = os.environ.get('ROUTE_DICTIONARY', '/home/user/AI-/.work/basic_root.txt')
 m = IndependentModelV2(open(D, 'rb').read())
 pos = json.load(open(sys.argv[1], encoding='utf-8')); out = sys.argv[2]; pre = sys.argv[3]
 cur, counts, used = m.position(pos)

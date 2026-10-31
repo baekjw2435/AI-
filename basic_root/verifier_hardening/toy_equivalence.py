@@ -5,7 +5,7 @@ random single-point mutations of every certificate; raw word-level minimax as tr
 import json, random, subprocess, sys, tempfile
 from functools import lru_cache
 from pathlib import Path
-S = Path("/tmp/claude-0/-home-user-AI-/80ff9426-9f7b-5815-97c0-938f621a9f93/scratchpad")
+S = Path("/home/user/AI-/.work")
 V2 = S / "verifier/route-verifier-v2"
 sys.path.insert(0, str(V2)); sys.path.insert(0, str(Path(__file__).resolve().parent))
 import verify as v1mod, verify_v2 as v2mod, verify_fast as vf
