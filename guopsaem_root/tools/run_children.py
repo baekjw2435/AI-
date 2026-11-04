@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Solve the first moves of one syllable, printing progress lines meant for people.
 
-usage: run_children.py DICT WORD_COUNT DIR SECONDS TT_MB JOBS [--tt-save]
+usage: run_children.py DICT WORD_COUNT DIR SECONDS TT_MB JOBS [--tt-save] [--only=c_5,c_9]
 
 With --tt-save each undecided child keeps its search state in DIR/c_<k>.tt (checkpoint
 every 10 minutes) and a later run resumes from it; the file is deleted once decided.
@@ -61,6 +61,7 @@ def _verify(dic, nwords, pos, proof, inp):
 def main():
     dic, nwords, d, seconds, ttmb, jobs = sys.argv[1:7]
     save = '--tt-save' in sys.argv[7:]
+    only = next((x.split('=', 1)[1].split(',') for x in sys.argv[7:] if x.startswith('--only=')), None)
     d, seconds, jobs = Path(d), float(seconds), int(jobs)
     root = json.loads((d / 'root.json').read_text(encoding='utf-8'))
     name = root['initial_syllable']
@@ -76,6 +77,8 @@ def main():
         return k in res and res[k]['result'] in ('win', 'loss')
 
     todo = [k for k in kids if not decided(k) and not (k in res and res[k].get('seconds', 0) >= seconds - 1)]
+    if only:
+        todo = [k for k in todo if k in only]
     say(f'[시작] {name}: 첫 수 {len(kids)}개 중 {len(todo)}개를 {int(seconds)}초씩, {jobs}개 동시에 풉니다.')
     for k in kids:
         if decided(k):
