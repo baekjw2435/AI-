@@ -32,6 +32,7 @@ import argparse
 from collections import Counter
 import gzip
 import hashlib
+import io
 import json
 from pathlib import Path
 import sys
@@ -264,6 +265,66 @@ class ModelV3:
         return hashlib.sha256(data).hexdigest()
 
 
+class _HashingRaw(io.RawIOBase):
+    """Raw reader that hashes every byte it hands out."""
+
+    def __init__(self, path):
+        self._f = open(path, "rb", buffering=0)
+        self.sha = hashlib.sha256()
+
+    def readable(self):
+        return True
+
+    def readinto(self, b):
+        n = self._f.readinto(b)
+        if n:
+            self.sha.update(memoryview(b)[:n])
+        return n
+
+    def close(self):
+        try:
+            self._f.close()
+        finally:
+            super().close()
+
+
+class HashedProof:
+    """Open a certificate ONCE (gzip or plain). `stream` yields bytes (or text if text=True).
+    digest() drains the rest of the file and returns the SHA-256 of every byte read, so the
+    recorded hash is the hash of exactly the file content that was checked (re-opening the
+    path afterwards could hash a different file; found by the Astra review, 2026-11-05)."""
+
+    def __init__(self, path, text=False):
+        self._raw = _HashingRaw(path)
+        self._buf = io.BufferedReader(self._raw, 1 << 20)
+        gz = self._buf.peek(2)[:2] == b"\x1f\x8b"
+        inner = gzip.GzipFile(fileobj=self._buf, mode="rb") if gz else self._buf
+        self._inner = inner
+        self.stream = io.TextIOWrapper(inner, encoding="utf-8") if text else inner
+        self._digest = None
+
+    def digest(self):
+        if self._digest is None:
+            while self._buf.read(1 << 20):
+                pass
+            self._digest = self._raw.sha.hexdigest()
+        return self._digest
+
+    def close(self):
+        try:
+            if self.stream is not self._buf:
+                self.stream.close()          # closes the gzip layer; the buffer stays open
+        finally:
+            self._buf.close()                # closes the raw file
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        self.close()
+        return False
+
+
 def _digest(counts):
     # Earlier states are kept as SHA-256 digests (2,613 count bytes per state would not fit in
     # memory for multi-million-state certificates); equality of digests stands for equality.
@@ -305,10 +366,8 @@ def verify_v3(dictionary_path, position_path, proof_path, input_path, expected_w
     states = []
     checked_moves = static_leaves = 0
     proof_path = Path(proof_path)
-    with proof_path.open("rb") as source:
-        magic = source.read(2)
-    opener = gzip.open if magic == b"\x1f\x8b" else open
-    with opener(proof_path, "rt", encoding="utf-8") as stream:
+    with HashedProof(proof_path, text=True) as proof:
+        stream = proof.stream
         header = _parse_line(stream.readline(), 1)
         require(header.get("format") == "route-proof-v3", "unknown proof format")
         require(integer(header.get("groups")) and header["groups"] == len(model.edges),
@@ -371,14 +430,11 @@ def verify_v3(dictionary_path, position_path, proof_path, input_path, expected_w
             states.append(_digest(counts))
             vertices.append(current)
             outcomes.append(result == "W")
+        proof_digest = proof.digest()
     require(states, "empty certificate")
     require(header["root"] == len(states) - 1, "root must be last node")
     require(vertices[-1] == root_vertex and states[-1] == _digest(expected_root),
             "root does not match exact requested history")
-    digest = hashlib.sha256()
-    with proof_path.open("rb") as source:
-        for chunk in iter(lambda: source.read(1024 * 1024), b""):
-            digest.update(chunk)
     return {"verified": True, "format": "route-proof-v3", "rule": RULE_NAME,
             "result_for_player_to_move": "W" if outcomes[-1] else "L",
             "initial_syllable": position["initial_syllable"],
@@ -392,7 +448,7 @@ def verify_v3(dictionary_path, position_path, proof_path, input_path, expected_w
             "checked_static_leaves": static_leaves, "reduced_root_word_count": sum(expected_root),
             "dictionary_sha256": hashlib.sha256(dictionary_bytes).hexdigest(),
             "position_sha256": hashlib.sha256(position_bytes).hexdigest(),
-            "proof_sha256": digest.hexdigest(), "input_sha256": input_digest,
+            "proof_sha256": proof_digest, "input_sha256": input_digest,
             "elapsed_seconds": round(time.monotonic() - started, 3)}
 
 

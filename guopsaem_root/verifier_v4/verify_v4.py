@@ -30,7 +30,7 @@ import time
 import zlib
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "verifier_v3"))
-from verify_v3 import ModelV3, VerificationError, RULE_NAME, conv  # noqa: E402,F401
+from verify_v3 import ModelV3, VerificationError, RULE_NAME, conv, HashedProof  # noqa: E402,F401
 
 FORMAT = "route-proof-v4"
 HEADER_KEYS = {"format", "groups", "vertices", "root", "input_sha256"}
@@ -76,12 +76,6 @@ def _strip_newline(line):
     return line[:-1] if line.endswith(b"\n") else line
 
 
-def _open_proof(path):
-    with open(path, "rb") as source:
-        magic = source.read(2)
-    return gzip.open(path, "rb") if magic == b"\x1f\x8b" else open(path, "rb")
-
-
 class Certificate:
     """All node lines in compact arrays (no states)."""
 
@@ -90,7 +84,8 @@ class Certificate:
         self.static_claims = set()           # ids with "k": "static"
         self.offsets = array("Q", [0])       # moves of node i: flat[2*offsets[i] : 2*offsets[i+1]]
         self.flat = array("I")               # group, child, group, child, ...
-        with _open_proof(path) as stream:
+        with HashedProof(path) as proof:
+            stream = proof.stream
             header = _parse_json_line(_strip_newline(stream.readline()), 1)
             require(set(header) <= HEADER_KEYS, f"unknown header key(s): {sorted(set(header) - HEADER_KEYS)}")
             require(header.get("format") == FORMAT, "unknown proof format")
@@ -138,6 +133,7 @@ class Certificate:
                 results.append(result)
                 flat.extend(numbers)
                 offsets.append(len(flat) // 2)
+            self.proof_sha256 = proof.digest()   # SHA-256 of exactly the bytes parsed above
         require(results, "empty certificate")
         require(header["root"] == len(results) - 1, "root must be last node")
 
@@ -259,10 +255,6 @@ def verify_v4(dictionary_path, position_path, proof_path, input_path, expected_w
             checked_moves += 1
         if not result_w:
             require(seen == legal, f"node {identifier}: losing node omits legal move")
-    digest = hashlib.sha256()
-    with open(proof_path, "rb") as source:
-        for chunk in iter(lambda: source.read(1024 * 1024), b""):
-            digest.update(chunk)
     return {"verified": True, "format": FORMAT, "rule": RULE_NAME,
             "result_for_player_to_move": "W" if results[root] else "L",
             "initial_syllable": position["initial_syllable"],
@@ -278,7 +270,7 @@ def verify_v4(dictionary_path, position_path, proof_path, input_path, expected_w
             "state_storage": "sha256" if digest_only else "deflate-exact",
             "dictionary_sha256": hashlib.sha256(dictionary_bytes).hexdigest(),
             "position_sha256": hashlib.sha256(position_bytes).hexdigest(),
-            "proof_sha256": digest.hexdigest(), "input_sha256": input_digest,
+            "proof_sha256": cert.proof_sha256, "input_sha256": input_digest,
             "elapsed_seconds": round(time.monotonic() - started, 3)}
 
 

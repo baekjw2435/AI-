@@ -350,7 +350,6 @@ struct Model {
   // scratch
   vector<u8> reach, seen, single_loop, shared_loop;
   vector<int> labels, queue_, nsucc, succ_off, succ, pred_off, pred, rem, mark, work;
-  int stamp = 0;
 
   vector<u32> key(u32 s) const {
     vector<u32> k;
@@ -474,9 +473,12 @@ struct Model {
     fill(single_loop.begin(), single_loop.end(), 0);
     fill(shared_loop.begin(), shared_loop.end(), 0);
     succ.clear();
+    // Per-call tags (s + 1), reset on every call: no counter accumulates across proof states
+    // (a cumulative int counter overflowed after about 4.66 million calls; found by the Astra review).
+    fill(mark.begin(), mark.end(), 0);
     for (int s = 0; s < N; s++) {
       succ_off[s] = (int)succ.size();
-      ++stamp;
+      const int stamp = s + 1;
       for (int g : avail[s]) {
         if (!c[g]) continue;
         int t = gtgt[g];
@@ -996,8 +998,8 @@ int main(int argc, char** argv) {
     vector<u32> stack{root};
     u64 reached_count = 1, checked_moves = 0, static_leaves = 0;
     vector<u8> S(G), canon(G), tmp(G), child(G), cmp;
-    vector<int> legal_mark(G, 0);
-    int lstamp = 0;
+    vector<int64_t> legal_mark(G, 0);
+    int64_t lstamp = 0;  // one per checked node; 64-bit so it cannot overflow
     FILE* dump = dump_path.empty() ? nullptr : fopen(dump_path.c_str(), "wb");
     if (!dump_path.empty() && !dump) throw VErr("cannot write " + dump_path);
     while (!stack.empty()) {
