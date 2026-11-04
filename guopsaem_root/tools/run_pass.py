@@ -8,8 +8,11 @@ is skipped. Run detached (setsid nohup) for long passes.
 
 usage: run_pass.py DICT WORD_COUNT SYLLABLES WORKDIR SECONDS TT_MB JOBS [VERIFY_MAX_NODES]
 """
+import fcntl
 import json
 import os
+import shutil
+import time
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor
@@ -20,6 +23,8 @@ sys.path.insert(0, str(ROOT / 'verifier_v3'))
 from verify_v3 import ModelV3  # noqa: E402
 
 SOLVER = os.environ.get('SOLVER_V4', '/home/user/AI-/.work/measure/solver_v4')
+LOCK = Path(os.environ.get('VERIFY_LOCK', '/home/user/AI-/.work/verify.lock'))
+MIN_FREE_GB = float(os.environ.get('MIN_FREE_GB', '4'))
 
 
 def main():
@@ -27,7 +32,7 @@ def main():
     verify_max = int(sys.argv[8]) if len(sys.argv) > 8 else 3_000_000
     seconds, jobs = float(seconds), int(jobs)
     work = Path(work)
-    for d in ('pos', 'in', 'proof', 'log', 'res'):
+    for d in ('pos', 'in', 'proof', 'log', 'res', 'claim'):
         (work / d).mkdir(parents=True, exist_ok=True)
     m = ModelV3(open(dic, 'rb').read(), int(nwords))
     groups = {}
@@ -45,6 +50,19 @@ def main():
 
     def run(members):
         rep = members[0]
+        claim = work / 'claim' / f'{rep}.{int(seconds)}'
+        try:  # another live runner instance may already have taken it
+            claim.mkdir()
+        except FileExistsError:
+            try:
+                os.kill(int((claim / 'pid').read_text()), 0)
+                return rep, 'claimed', False
+            except (OSError, ValueError):
+                pass  # its runner is gone (e.g. container restart): take it over
+        (claim / 'pid').write_text(str(os.getpid()))
+        while shutil.disk_usage(work).free < MIN_FREE_GB * 2**30:
+            print(rep, 'waiting: low disk', flush=True)
+            time.sleep(60)
         pos = {"initial_syllable": rep, "history": []}
         posf, inf = work / 'pos' / f'{rep}.json', work / 'in' / f'{rep}.txt'
         posf.write_text(json.dumps(pos, ensure_ascii=False), encoding='utf-8')
@@ -69,9 +87,11 @@ def main():
                     c2, k2, _ = m.position(json.loads(p2.read_text(encoding='utf-8')))
                     i2 = work / 'in' / f'{s}.txt'
                     i2.write_bytes(m.numeric_input(c2, k2))
-                    v = subprocess.run([sys.executable, str(ROOT / 'verifier_v3' / 'verify_v3.py'), '--dictionary', dic,
-                                        '--expected-word-count', str(nwords), '--position', str(p2),
-                                        '--proof', str(proof), '--input', str(i2)], capture_output=True, text=True)
+                    with open(LOCK, 'w') as lk:  # one verification at a time across all runners
+                        fcntl.flock(lk, fcntl.LOCK_EX)
+                        v = subprocess.run([sys.executable, str(ROOT / 'verifier_v3' / 'verify_v3.py'), '--dictionary', dic,
+                                            '--expected-word-count', str(nwords), '--position', str(p2),
+                                            '--proof', str(proof), '--input', str(i2)], capture_output=True, text=True)
                     try:
                         vr = json.loads(v.stdout)
                     except ValueError:
@@ -92,7 +112,9 @@ def main():
     print(json.dumps({'vertices': len(groups), 'pending': len(pending)}), flush=True)
     with ThreadPoolExecutor(jobs) as ex:
         for rep, result, ok in ex.map(run, pending):
-            print(rep, result, 'verified' if ok else '', flush=True)
+            if result != 'claimed':
+                print(time.strftime('%H:%M:%S'), rep, {'win': '받으면 승', 'loss': '받으면 패'}.get(result, '결론 없음'),
+                      '(검증 통과)' if ok else '', flush=True)
     (work / f'DONE_{int(seconds)}s').write_text('done\n')
 
 

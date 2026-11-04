@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Solve the first moves of one syllable, printing progress lines meant for people.
 
-usage: run_children.py DICT WORD_COUNT DIR SECONDS TT_MB JOBS
+usage: run_children.py DICT WORD_COUNT DIR SECONDS TT_MB JOBS [--tt-save]
+
+With --tt-save each undecided child keeps its search state in DIR/c_<k>.tt (checkpoint
+every 10 minutes) and a later run resumes from it; the file is deleted once decided.
+A child is started only while at least MIN_FREE_GB of disk is free.
 
 DIR holds root.json and the children c_<k>.json / c_<k>.txt made by children.py.
 Each child is the position after the receiver's first move (the other side to move).
@@ -10,8 +14,10 @@ Each child is the position after the receiver's first move (the other side to mo
  * if every child is a win for the other side, all are verified and merged (root = L).
 Resumable: decided children, and undecided ones already run at least SECONDS, are skipped.
 """
+import fcntl
 import json
 import os
+import shutil
 import subprocess
 import sys
 import time
@@ -21,6 +27,12 @@ ROOT = Path(__file__).resolve().parents[1]
 SOLVER = os.environ.get('SOLVER_V4', '/home/user/AI-/.work/measure/solver_v4')
 VERIFY = ROOT / 'verifier_v3' / 'verify_v3.py'
 MERGE = ROOT / 'tools' / 'merge_root.py'
+LOCK = Path(os.environ.get('VERIFY_LOCK', '/home/user/AI-/.work/verify.lock'))
+MIN_FREE_GB = float(os.environ.get('MIN_FREE_GB', '4'))
+
+
+def free_gb(path):
+    return shutil.disk_usage(path).free / 2**30
 
 
 def say(msg):
@@ -28,6 +40,13 @@ def say(msg):
 
 
 def verify(dic, nwords, pos, proof, inp):
+    # one verification at a time across all runners (big certificates need a lot of memory)
+    with open(LOCK, 'w') as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        return _verify(dic, nwords, pos, proof, inp)
+
+
+def _verify(dic, nwords, pos, proof, inp):
     v = subprocess.run([sys.executable, str(VERIFY), '--dictionary', dic, '--expected-word-count', str(nwords),
                         '--position', str(pos), '--proof', str(proof)] + (['--input', str(inp)] if inp else []),
                        capture_output=True, text=True)
@@ -41,6 +60,7 @@ def verify(dic, nwords, pos, proof, inp):
 
 def main():
     dic, nwords, d, seconds, ttmb, jobs = sys.argv[1:7]
+    save = '--tt-save' in sys.argv[7:]
     d, seconds, jobs = Path(d), float(seconds), int(jobs)
     root = json.loads((d / 'root.json').read_text(encoding='utf-8'))
     name = root['initial_syllable']
@@ -66,10 +86,22 @@ def main():
         while todo and len(running) < jobs:
             k = todo.pop(0)
             out = open(d / f'{k}.out', 'w')
-            running[k] = (subprocess.Popen([SOLVER, str(d / f'{k}.txt'), '--seconds', str(seconds), '--tt-mb', str(ttmb),
-                                            '--threads', '1', '--proof', str(d / f'{k}.pf.gz')],
-                                           stdout=out, stderr=subprocess.STDOUT), out)
-            say(f'  풀기 시작: {word[k]}')
+            cmd = [SOLVER, str(d / f'{k}.txt'), '--seconds', str(seconds), '--tt-mb', str(ttmb),
+                   '--threads', '1', '--proof', str(d / f'{k}.pf.gz')]
+            tt = d / f'{k}.tt'
+            note = ''
+            if save and free_gb(d) - int(ttmb) / 1024 >= MIN_FREE_GB:
+                if tt.exists():
+                    cmd += ['--tt-load', str(tt)]
+                    note = ' (저장해 둔 계산 상태에서 이어서)'
+                cmd += ['--tt-save', str(tt), '--checkpoint-seconds', '600']
+            elif save:
+                note = f' (디스크 여유 {free_gb(d):.1f}GB라 계산 상태 저장 안 함)'
+            while free_gb(d) < MIN_FREE_GB:
+                say(f'  디스크 여유 {free_gb(d):.1f}GB: 공간이 날 때까지 기다림')
+                time.sleep(60)
+            running[k] = (subprocess.Popen(cmd, stdout=out, stderr=subprocess.STDOUT), out)
+            say(f'  풀기 시작: {word[k]}{note}')
         time.sleep(2)
         for k in list(running):
             p, out = running[k]
@@ -84,6 +116,8 @@ def main():
             r['word'] = word[k]
             res[k] = r
             (d / f'res_{k}.json').write_text(json.dumps(r, ensure_ascii=False), encoding='utf-8')
+            if r['result'] in ('win', 'loss') and (d / f'{k}.tt').exists():
+                (d / f'{k}.tt').unlink()
             if r['result'] == 'loss':
                 say(f'  ★ {word[k]} → 상대가 짐. 받는 쪽이 이기는 첫 수입니다 (증명 {r.get("proof_nodes", 0):,}국면, {r["seconds"]:.0f}초)')
                 found = k
