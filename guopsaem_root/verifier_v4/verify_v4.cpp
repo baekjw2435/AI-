@@ -706,46 +706,68 @@ static bool fast_line(const string& s, u64& id, bool& win, vector<u64>& nums) {
 
 static bool int_ok(const JV* v) { return v && v->t == JV::INT; }
 
+// Recorded states. Exact mode: each state is a raw-deflate stream (level 6) with the root
+// state as preset dictionary (states resemble the root; about half the size of plain zlib);
+// comparisons decompress and compare all G bytes. Digest mode: a SHA-256 per recorded state.
+// Compressed bytes live in 64 MB chunks (no reallocation spikes).
 struct Store {
+  static const u64 CHUNK = 1ull << 26;
   bool digest_only;
   vector<u32> vertex;
   vector<u64> start;
-  vector<u32> len;
-  vector<u8> blob;
-  unordered_map<u32, string> pending;
-  vector<u8> zbuf;
-  Store(size_t n, bool d) : digest_only(d), vertex(n), start(n), len(n) {}
+  vector<uint16_t> len;
+  vector<vector<u8>> chunks;
+  unordered_map<u32, string> pending;  // digest mode: packed states waiting for expansion
+  vector<u8> dict, zbuf;
+  z_stream ds{}, is{};
+  Store(size_t n, bool d, const vector<u8>& dictionary) : digest_only(d), vertex(n), start(n), len(n), dict(dictionary) {
+    if (deflateInit2(&ds, 6, Z_DEFLATED, -15, 9, Z_DEFAULT_STRATEGY) != Z_OK || inflateInit2(&is, -15) != Z_OK)
+      throw VErr("zlib init failure");
+  }
+  ~Store() { deflateEnd(&ds); inflateEnd(&is); }
   string pack(const u8* c, size_t G) {
-    uLongf cap = compressBound(G);
-    zbuf.resize(cap);
-    if (compress2(zbuf.data(), &cap, c, G, 1) != Z_OK) throw VErr("zlib compress failure");
-    return string((const char*)zbuf.data(), cap);
+    if (deflateReset(&ds) != Z_OK || deflateSetDictionary(&ds, dict.data(), (uInt)dict.size()) != Z_OK) throw VErr("zlib failure");
+    zbuf.resize(deflateBound(&ds, G) + 64);
+    ds.next_in = (Bytef*)c; ds.avail_in = (uInt)G;
+    ds.next_out = zbuf.data(); ds.avail_out = (uInt)zbuf.size();
+    if (deflate(&ds, Z_FINISH) != Z_STREAM_END) throw VErr("zlib compress failure");
+    return string((const char*)zbuf.data(), zbuf.size() - ds.avail_out);
   }
   void unpack(const u8* z, size_t zl, vector<u8>& out, size_t G) {
     out.resize(G);
-    uLongf n = G;
-    if (uncompress(out.data(), &n, z, zl) != Z_OK || n != G) throw VErr("zlib uncompress failure");
+    if (inflateReset(&is) != Z_OK || inflateSetDictionary(&is, dict.data(), (uInt)dict.size()) != Z_OK) throw VErr("zlib failure");
+    is.next_in = (Bytef*)z; is.avail_in = (uInt)zl;
+    is.next_out = out.data(); is.avail_out = (uInt)G;
+    int r = inflate(&is, Z_FINISH);
+    if (r != Z_STREAM_END || is.avail_out != 0 || is.avail_in != 0) throw VErr("zlib uncompress failure");
+  }
+  const u8* at(u64 pos) { return chunks[pos / CHUNK].data() + pos % CHUNK; }
+  u64 put(const void* p, size_t n) {
+    if (chunks.empty() || chunks.back().size() + n > CHUNK) { chunks.emplace_back(); chunks.back().reserve(CHUNK); }
+    u64 pos = (chunks.size() - 1) * CHUNK + chunks.back().size();
+    chunks.back().insert(chunks.back().end(), (const u8*)p, (const u8*)p + n);
+    return pos;
   }
   void record(u32 id, u32 v, const u8* c, size_t G) {
     vertex[id] = v;
-    start[id] = blob.size();
     if (digest_only) {
       Sha256 h; h.update(c, G); u8 d[32]; h.digest(d);
-      blob.insert(blob.end(), d, d + 32);
+      start[id] = put(d, 32);
       pending[id] = pack(c, G);
     } else {
       string z = pack(c, G);
-      len[id] = (u32)z.size();
-      blob.insert(blob.end(), z.begin(), z.end());
+      if (z.size() > 65535) throw VErr("state too large");
+      len[id] = (uint16_t)z.size();
+      start[id] = put(z.data(), z.size());
     }
   }
   bool same(u32 id, u32 v, const u8* c, size_t G, vector<u8>& tmp) {
     if (vertex[id] != v) return false;
     if (digest_only) {
       Sha256 h; h.update(c, G); u8 d[32]; h.digest(d);
-      return memcmp(blob.data() + start[id], d, 32) == 0;
+      return memcmp(at(start[id]), d, 32) == 0;
     }
-    unpack(blob.data() + start[id], len[id], tmp, G);
+    unpack(at(start[id]), len[id], tmp, G);
     return memcmp(tmp.data(), c, G) == 0;  // exact bytes
   }
   u32 take(u32 id, vector<u8>& out, size_t G) {
@@ -753,7 +775,7 @@ struct Store {
       auto it = pending.find(id);
       unpack((const u8*)it->second.data(), it->second.size(), out, G);
       pending.erase(it);
-    } else unpack(blob.data() + start[id], len[id], out, G);
+    } else unpack(at(start[id]), len[id], out, G);
     return vertex[id];
   }
 };
@@ -782,7 +804,7 @@ static string jlist(const vector<string>& v) {
 
 int main(int argc, char** argv) {
   auto t0 = chrono::steady_clock::now();
-  string dict_path, pos_path, proof_path, input_path;
+  string dict_path, pos_path, proof_path, input_path, dump_path;
   bool have_input = false, digest_only = false, have_count = false;
   i64 expected = 0;
   for (int i = 1; i < argc; i++) {
@@ -798,6 +820,7 @@ int main(int argc, char** argv) {
       have_count = true;
     }
     else if (a == "--digest-only") digest_only = true;
+    else if (a == "--dump-states") dump_path = val();  // test aid: "id vertex static sha256(state)" per expanded node
     else { fprintf(stderr, "unknown argument %s\n", a.c_str()); return 2; }
   }
   if (dict_path.empty() || pos_path.empty() || proof_path.empty() || !have_count) {
@@ -966,7 +989,7 @@ int main(int argc, char** argv) {
     string proof_hex = rd.finish_hex();
     // ---- replay from the root (iterative DFS)
     const u32 total = (u32)C.result.size(), root = total - 1;
-    Store st(total, digest_only);
+    Store st(total, digest_only, root_state);
     vector<u8> reached(total, 0);
     reached[root] = 1;
     st.record(root, root_vertex, root_state.data(), G);
@@ -975,12 +998,15 @@ int main(int argc, char** argv) {
     vector<u8> S(G), canon(G), tmp(G), child(G), cmp;
     vector<int> legal_mark(G, 0);
     int lstamp = 0;
+    FILE* dump = dump_path.empty() ? nullptr : fopen(dump_path.c_str(), "wb");
+    if (!dump_path.empty() && !dump) throw VErr("cannot write " + dump_path);
     while (!stack.empty()) {
       u32 id = stack.back();
       stack.pop_back();
       int v = (int)st.take(id, S, G);
       int stat = M.normalize(v, S.data(), canon.data());
       require(memcmp(canon.data(), S.data(), G) == 0, "node " + to_string(id) + ": not canonically reduced");
+      if (dump) { Sha256 h; h.update(S.data(), G); fprintf(dump, "%u %d %d %s\n", id, v, stat, h.hex().c_str()); }
       bool w = C.result[id];
       u64 lo = C.off[id], hi = C.off[id + 1];
       if (stat != -1) {
@@ -1019,6 +1045,7 @@ int main(int argc, char** argv) {
       }
       if (!w) require(nseen == nlegal, "node " + to_string(id) + ": losing node omits legal move");
     }
+    if (dump) fclose(dump);
     int shared_groups = 0;
     for (u8 x : M.shared) shared_groups += x;
     u64 root_words = 0;
@@ -1041,7 +1068,7 @@ int main(int argc, char** argv) {
     o += "  \"checked_static_leaves\": " + to_string(static_leaves) + ",\n";
     o += "  \"reduced_root_word_count\": " + to_string(root_words) + ",\n";
     o += "  \"certificate_nodes\": " + to_string(total) + ",\n  \"unreached_nodes\": " + to_string(total - reached_count) + ",\n";
-    o += string("  \"state_storage\": \"") + (digest_only ? "sha256" : "zlib-exact") + "\",\n";
+    o += string("  \"state_storage\": \"") + (digest_only ? "sha256" : "deflate-exact") + "\",\n";
     o += "  \"dictionary_sha256\": \"" + sha_hex(dict_bytes) + "\",\n";
     o += "  \"position_sha256\": \"" + sha_hex(pos_bytes) + "\",\n";
     o += "  \"proof_sha256\": \"" + proof_hex + "\",\n";

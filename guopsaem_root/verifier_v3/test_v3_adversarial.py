@@ -618,17 +618,28 @@ def run_exhaustive(limit_random, seed):
 # ---------------------------------------------------------------- mutants
 class PairShared(ModelV3):
     """Unsound: also cancels shared groups u->v against v->u as if single-source."""
+    def __init__(self, *a):
+        ModelV3.__init__(self, *a)
+        by_target = {}
+        for j, (sj, tj) in enumerate(self.edges):
+            by_target.setdefault(tj, []).append(j)
+        self.shared_pairs = []
+        for i, (si, ti) in enumerate(self.edges):
+            for x in si:
+                for j in by_target.get(x, []):
+                    sj = self.edges[j][0]
+                    if i < j and ti in sj and ti != x and (len(si) > 1 or len(sj) > 1):
+                        self.shared_pairs.append((i, j))
+        self.shared_loops = [i for i, (si, ti) in enumerate(self.edges) if len(si) > 1 and ti in si]
+
     def reduce(self, current, counts):
         c = bytearray(counts)
-        for i, (si, ti) in enumerate(self.edges):
-            for j, (sj, tj) in enumerate(self.edges):
-                if i < j and ti in sj and tj in si and ti != tj and (len(si) > 1 or len(sj) > 1):
-                    m = min(c[i], c[j])
-                    c[i] -= m
-                    c[j] -= m
-        for i, (si, ti) in enumerate(self.edges):
-            if len(si) > 1 and ti in si:
-                c[i] %= 2
+        for i, j in self.shared_pairs:
+            m = min(c[i], c[j])
+            c[i] -= m
+            c[j] -= m
+        for i in self.shared_loops:
+            c[i] %= 2
         return ModelV3.reduce(self, current, bytes(c))
 
 

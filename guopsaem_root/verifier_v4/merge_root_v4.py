@@ -11,7 +11,10 @@ it there, model.child(ROOT canonical state, group), is byte-identical to the nor
 position its own certificate starts from.  This is checked for every child used (otherwise
 the merge stops); then every node of the child certificate replays to exactly the same state
 as in its own verification, so the child certificates are concatenated with their ids
-shifted (no cross-certificate deduplication: that would need every state, so it is left out).
+shifted.  With --dedup the child certificates are replayed with ModelV3 (as the verifier does)
+and nodes with the same (result, vertex, exact state bytes) are merged, then nodes no longer
+reachable from the new root are dropped; this is exact (full state, not a digest) but needs
+the replay time and memory of a Python verification.
 Children whose state is static under ROOT need no certificate: a leaf is written for them.
 
 If some child is L (for its player to move) ROOT is W and only that child is used; otherwise
@@ -20,9 +23,9 @@ the result must still be checked with verify_v4.py / verify_v4 (C++) against ROO
 """
 import argparse
 import gzip
-import hashlib
 import json
 import sys
+import zlib
 from pathlib import Path
 
 sys.dont_write_bytecode = True
@@ -46,6 +49,7 @@ def main():
     ap.add_argument("out")
     ap.add_argument("children", nargs="+", help="CHILD_POSITION.json:CHILD_PROOF")
     ap.add_argument("--input", help="ROOT's numeric solver input; its SHA-256 is written to the header")
+    ap.add_argument("--dedup", action="store_true", help="merge nodes with identical replayed states (exact; slow)")
     a = ap.parse_args()
     m = ModelV3(Path(a.dictionary).read_bytes(), a.word_count)
     root_pos = json.loads(Path(a.root_position).read_text(encoding="utf-8"))
@@ -110,7 +114,8 @@ def main():
             sys.exit(f"cannot show L: no certificate for groups {missing}")
         use = legal
         result = "L"
-    body_lines = []
+    if a.dedup:
+        return write_dedup(m, a, header, certs, under_root, use, result, out)
     next_id = 0
     root_moves = []
     tmp_path = a.out + ".body.tmp"
@@ -146,6 +151,78 @@ def main():
     Path(tmp_path).unlink()
     print(json.dumps({"root_result": result, "nodes": next_id + 1, "children_used": len(use),
                       "children_static": sum(1 for g in use if certs[g][0] is None)}))
+
+
+def replay_keys(m, nodes, vertex, counts):
+    """Exact state key (result, vertex, zlib(counts)) of every node reached from the last node."""
+    root = len(nodes) - 1
+    packed = {root: (vertex, zlib.compress(counts, 1))}
+    keys = {}
+    stack = [root]
+    while stack:
+        i = stack.pop()
+        v, z = packed[i]
+        keys[i] = (nodes[i]["r"], v, z)
+        c = zlib.decompress(z)
+        for g, ch in nodes[i]["m"]:
+            if ch not in packed:
+                tv, tc, _ = m.child(v, c, g)
+                packed[ch] = (tv, zlib.compress(tc, 1))
+                stack.append(ch)
+    return keys
+
+
+def write_dedup(m, a, header, certs, under_root, use, result, out):
+    merged, seen, root_moves = [], {}, []
+    for g in use:
+        proof_path, claimed, _ = certs[g]
+        tv, tc, _ = under_root[g]
+        if proof_path is None:
+            key = (claimed, tv, zlib.compress(tc, 1))
+            if key not in seen:
+                seen[key] = len(merged)
+                merged.append({"r": claimed, "m": []})
+            root_moves.append([g, seen[key]])
+            continue
+        it = lines_of(proof_path)
+        next(it)
+        nodes = [json.loads(raw) for raw in it]
+        if any(n["id"] != i for i, n in enumerate(nodes)):
+            sys.exit(f"{proof_path}: ids are not contiguous")
+        keys = replay_keys(m, nodes, tv, tc)
+        local = {}
+        for i, n in enumerate(nodes):
+            key = keys.get(i)
+            if key is not None and key in seen:
+                local[i] = seen[key]
+                continue
+            local[i] = len(merged)
+            merged.append({"r": n["r"], "m": [[mg, local[mc]] for mg, mc in n["m"]]})
+            if key is not None:
+                seen[key] = local[i]
+        root_moves.append([g, local[len(nodes) - 1]])
+    merged.append({"r": result, "m": root_moves})
+    # keep only nodes reachable from the new root, renumbered in the same (children-first) order
+    reach = bytearray(len(merged))
+    reach[-1] = 1
+    for i in range(len(merged) - 1, -1, -1):
+        if reach[i]:
+            for _, ch in merged[i]["m"]:
+                reach[ch] = 1
+    new = {}
+    for i in range(len(merged)):
+        if reach[i]:
+            new[i] = len(new)
+    header["root"] = len(new) - 1
+    out.write((json.dumps(header, separators=(",", ":")) + "\n").encode())
+    for i, n in enumerate(merged):
+        if reach[i]:
+            line = {"id": new[i], "r": n["r"], "m": [[mg, new[mc]] for mg, mc in n["m"]]}
+            out.write((json.dumps(line, separators=(",", ":")) + "\n").encode())
+    out.close()
+    print(json.dumps({"root_result": result, "nodes": len(new), "children_used": len(use),
+                      "children_static": sum(1 for g in use if certs[g][0] is None), "dedup": True,
+                      "nodes_before_dedup": sum(1 for _ in merged)}))
 
 
 if __name__ == "__main__":

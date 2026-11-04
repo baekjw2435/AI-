@@ -10,7 +10,8 @@ A v4 node line is {"id":i,"r":"W"|"L","m":[[group,child_id],...]} (optional
 the file: the root state is the normalized requested position, and the state of
 every other node is model.child(parent state, group) along the edges, found by an
 iterative depth-first search from the root.  The first arrival at a node records
-its derived state (zlib-compressed, or a SHA-256 digest with --digest-only); every
+its derived state (deflate-compressed with the root state as preset dictionary, or a
+SHA-256 digest with --digest-only); every
 later arrival must derive a byte-identical state.  At expansion each reached node
 gets exactly the v3 node checks (its state must be a fixed point of normalize; the
 static label decides static nodes; W has one move to an L child; L lists every
@@ -145,25 +146,39 @@ class Certificate:
 
 
 class StateStore:
-    """State recorded at the first arrival at each node, compared exactly on later arrivals."""
+    """State recorded at the first arrival at each node, compared exactly on later arrivals.
 
-    def __init__(self, size, digest_only):
+    Exact mode keeps each state as a raw-deflate stream (level 6) with the root state as
+    preset dictionary and compares by decompressing and comparing all bytes; --digest-only
+    keeps a SHA-256 per recorded state."""
+
+    def __init__(self, size, digest_only, dictionary):
         self.digest_only = digest_only
+        self.dictionary = dictionary
         self.vertex = array("I", bytes(4 * size))
         self.start = array("Q", bytes(8 * size))
-        self.length = array("I", bytes(4 * size))
+        self.length = array("H", bytes(2 * size))
         self.blob = bytearray()
-        self.pending = {}      # digest mode: compressed state of nodes waiting for expansion
+        self.pending = {}      # digest mode: packed state of nodes waiting for expansion
+
+    def _pack(self, counts):
+        packer = zlib.compressobj(6, zlib.DEFLATED, -15, zdict=self.dictionary)
+        return packer.compress(counts) + packer.flush()
+
+    def _unpack(self, packed):
+        unpacker = zlib.decompressobj(-15, zdict=self.dictionary)
+        result = unpacker.decompress(packed) + unpacker.flush()
+        require(unpacker.eof and not unpacker.unused_data, "state storage failure")
+        return result
 
     def record(self, node, vertex, counts):
         self.vertex[node] = vertex
+        self.start[node] = len(self.blob)
         if self.digest_only:
-            self.start[node] = len(self.blob)
             self.blob += hashlib.sha256(counts).digest()
-            self.pending[node] = zlib.compress(counts, 1)
+            self.pending[node] = self._pack(counts)
         else:
-            packed = zlib.compress(counts, 1)
-            self.start[node] = len(self.blob)
+            packed = self._pack(counts)
             self.length[node] = len(packed)
             self.blob += packed
 
@@ -173,13 +188,13 @@ class StateStore:
         start = self.start[node]
         if self.digest_only:
             return self.blob[start:start + 32] == hashlib.sha256(counts).digest()
-        return zlib.decompress(self.blob[start:start + self.length[node]]) == counts   # exact bytes
+        return self._unpack(bytes(self.blob[start:start + self.length[node]])) == counts   # exact bytes
 
     def take(self, node):
         if self.digest_only:
-            return self.vertex[node], zlib.decompress(self.pending.pop(node))
+            return self.vertex[node], self._unpack(self.pending.pop(node))
         start = self.start[node]
-        return self.vertex[node], zlib.decompress(self.blob[start:start + self.length[node]])
+        return self.vertex[node], self._unpack(bytes(self.blob[start:start + self.length[node]]))
 
 
 def verify_v4(dictionary_path, position_path, proof_path, input_path, expected_word_count, digest_only=False):
@@ -198,7 +213,7 @@ def verify_v4(dictionary_path, position_path, proof_path, input_path, expected_w
     cert = Certificate(proof_path, len(model.edges), len(model.keys), input_digest)
     total = len(cert)
     results, offsets, flat = cert.results, cert.offsets, cert.flat
-    store = StateStore(total, digest_only)
+    store = StateStore(total, digest_only, expected_root)
     reached = bytearray(total)
     root = total - 1
     reached[root] = 1
@@ -260,7 +275,7 @@ def verify_v4(dictionary_path, position_path, proof_path, input_path, expected_w
             "checked_certificate_states": reached_count, "checked_certificate_moves": checked_moves,
             "checked_static_leaves": static_leaves, "reduced_root_word_count": sum(expected_root),
             "certificate_nodes": total, "unreached_nodes": total - reached_count,
-            "state_storage": "sha256" if digest_only else "zlib-exact",
+            "state_storage": "sha256" if digest_only else "deflate-exact",
             "dictionary_sha256": hashlib.sha256(dictionary_bytes).hexdigest(),
             "position_sha256": hashlib.sha256(position_bytes).hexdigest(),
             "proof_sha256": digest.hexdigest(), "input_sha256": input_digest,

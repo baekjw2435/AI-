@@ -81,11 +81,30 @@ JSON parser with the same rules.
    no claim about any position. They are only syntax-checked and are counted in
    `unreached_nodes`. The solver never writes them.
 
-State storage: the default keeps each recorded state zlib-compressed and compares by
-decompressing it and comparing all bytes exactly (`state_storage: "zlib-exact"`).
+State storage: by default, each recorded state is kept as a raw-deflate stream (level 6)
+with the root state as preset dictionary. Most states resemble the root, so this is about
+110 bytes per state, half of plain zlib. A comparison decompresses the stored state and
+compares all bytes exactly (`state_storage: "deflate-exact"`).
 `--digest-only` keeps a SHA-256 digest of each recorded state instead
 (`state_storage: "sha256"`). This is the same digest equality that verify_v3 already
 relies on, and it is opt-in.
+
+### Python and C++ parity
+
+The C++ verifier reimplements Python's behaviour for the things the result depends on:
+
+- dictionary decoding (`utf-8-sig`, strict) and `str.split()` whitespace;
+- the JSON grammar: integer vs float, `NaN`/`Infinity`, `\u` escapes with surrogate
+  pairs, duplicate keys and nesting;
+- `int()` parsing of the numeric input (sign, underscores);
+- gzip member handling.
+
+There is one intentional difference. Python's `json.loads(bytes)` also accepts UTF-16 and
+UTF-32 position files; the C++ verifier rejects them. That only makes it stricter.
+
+`verify_v4 --dump-states FILE` is a test aid. It writes `id vertex static sha256(state)` for
+every expanded node. `tests/states_diff_v4.py` compares this output with a ModelV3 replay.
+Verification itself does not change.
 
 ## Why nothing is weaker than v3
 
