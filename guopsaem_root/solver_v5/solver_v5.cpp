@@ -533,6 +533,7 @@ struct Opt {
   int threads = 1;
   bool selfcheck = false;
   string proof;
+  int proof_format = 3;  // 3: route-proof-v3 (vertex + counts per node), 4: route-proof-v4 (moves only)
   int vloss = 1;
   u64 tt_buckets = 0;
   int init_div = 16;
@@ -839,9 +840,13 @@ struct Emitter {
     static const char* hx = "0123456789abcdef";
     string line;
     line.reserve(64 + 2 * G + 16 * moves.size());
-    line += "{\"id\":"; line += to_string(count); line += ",\"v\":"; line += to_string(v); line += ",\"c\":\"";
-    for (int g = 0; g < G; g++) { line += hx[k[g] >> 4]; line += hx[k[g] & 15]; }
-    line += "\",\"r\":\""; line += win ? 'W' : 'L'; line += "\",\"m\":[";
+    line += "{\"id\":"; line += to_string(count);
+    if (opt.proof_format == 3) {
+      line += ",\"v\":"; line += to_string(v); line += ",\"c\":\"";
+      for (int g = 0; g < G; g++) { line += hx[k[g] >> 4]; line += hx[k[g] & 15]; }
+      line += '"';
+    }
+    line += ",\"r\":\""; line += win ? 'W' : 'L'; line += "\",\"m\":[";
     for (size_t i = 0; i < moves.size(); i++) {
       if (i) line += ',';
       line += '['; line += to_string(moves[i].first); line += ','; line += to_string(moves[i].second); line += ']';
@@ -958,7 +963,7 @@ static string jnum(double x) { char b[64]; snprintf(b, sizeof b, "%.6f", x); ret
 
 int main(int argc, char** argv) {
   try {
-    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--checkpoint-seconds S]");
+    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--proof-format v3|v4] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--checkpoint-seconds S]");
     for (int i = 2; i < argc; i++) {
       string x = argv[i];
       if (i + 1 >= argc) throw runtime_error("missing option value");
@@ -966,6 +971,7 @@ int main(int argc, char** argv) {
       if (x == "--seconds") opt.seconds = stod(v);
       else if (x == "--nodes") opt.max_mid = stoull(v);
       else if (x == "--proof") opt.proof = v;
+      else if (x == "--proof-format") { if (v == "v3" || v == "3") opt.proof_format = 3; else if (v == "v4" || v == "4") opt.proof_format = 4; else throw runtime_error("--proof-format must be v3 or v4"); }
       else if (x == "--tt-mb") opt.tt_mb = stoull(v);
       else if (x == "--threads") opt.threads = stoi(v);
       else if (x == "--eps") opt.eps = stod(v);
@@ -1083,7 +1089,7 @@ int main(int argc, char** argv) {
       u32 rid = em.emit(0, rstat, win);
       if (win != (result == "win")) throw runtime_error("emission result differs from search result");
       if (gzip) { gzclose(em.gz); em.gz = nullptr; } else { fclose(em.fp); em.fp = nullptr; }
-      string head = "{\"format\":\"route-proof-v3\",\"groups\":" + to_string(G) + ",\"vertices\":" + to_string(N) + ",\"root\":" + to_string(rid) + "}\n";
+      string head = string("{\"format\":\"route-proof-v") + (opt.proof_format == 4 ? "4" : "3") + "\",\"groups\":" + to_string(G) + ",\"vertices\":" + to_string(N) + ",\"root\":" + to_string(rid) + "}\n";
       if (gzip) {
         // concatenated gzip members are a valid gzip stream
         gzFile h = gzopen(out.c_str(), "wb6");

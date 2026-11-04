@@ -3,59 +3,35 @@
 
 usage: run_children.py DICT WORD_COUNT DIR SECONDS TT_MB JOBS [--tt-save] [--only=c_5,c_9]
 
-With --tt-save each undecided child keeps its search state in DIR/c_<k>.tt (checkpoint
-every 10 minutes) and a later run resumes from it; the file is deleted once decided.
-A child is started only while at least MIN_FREE_GB of disk is free.
-
 DIR holds root.json and the children c_<k>.json / c_<k>.txt made by children.py.
 Each child is the position after the receiver's first move (the other side to move).
  * a child the other side LOSES is a winning first move: the other runs are stopped,
-   the child proof is verified, merged into a root proof and the root is verified;
+   the child certificate is verified, merged into a root certificate and the root is verified;
  * if every child is a win for the other side, all are verified and merged (root = L).
+Defaults: solver_v5, route-proof-v4 certificates, C++ verify_v4 with every acceptance
+condition (see solve_common). With --tt-save each child checkpoints its search state in
+DIR/c_<k>.tt (every CHECKPOINT_SECONDS, default 60 s per GB of table) and a later run, or the
+same run after a container restart, resumes from it; the file is deleted once decided.
 Resumable: decided children, and undecided ones already run at least SECONDS, are skipped.
 """
-import fcntl
 import json
-import os
-import shutil
 import subprocess
 import sys
 import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOLVER = os.environ.get('SOLVER_V4', '/home/user/AI-/.work/measure/solver_v4')
-VERIFY = ROOT / 'verifier_v3' / 'verify_v3.py'
-MERGE = ROOT / 'tools' / 'merge_root.py'
-LOCK = Path(os.environ.get('VERIFY_LOCK', '/home/user/AI-/.work/verify.lock'))
-MIN_FREE_GB = float(os.environ.get('MIN_FREE_GB', '4'))
+sys.path.insert(0, str(ROOT / 'verifier_v3'))
+sys.path.insert(0, str(ROOT / 'tools'))
+from verify_v3 import ModelV3  # noqa: E402
+import solve_common as sc  # noqa: E402
 
-
-def free_gb(path):
-    return shutil.disk_usage(path).free / 2**30
+MERGE_V3 = ROOT / 'tools' / 'merge_root.py'
+MERGE_V4 = ROOT / 'verifier_v4' / 'merge_root_v4.py'
 
 
 def say(msg):
     print(time.strftime('%H:%M:%S'), msg, flush=True)
-
-
-def verify(dic, nwords, pos, proof, inp):
-    # one verification at a time across all runners (big certificates need a lot of memory)
-    with open(LOCK, 'w') as lk:
-        fcntl.flock(lk, fcntl.LOCK_EX)
-        return _verify(dic, nwords, pos, proof, inp)
-
-
-def _verify(dic, nwords, pos, proof, inp):
-    v = subprocess.run([sys.executable, str(VERIFY), '--dictionary', dic, '--expected-word-count', str(nwords),
-                        '--position', str(pos), '--proof', str(proof)] + (['--input', str(inp)] if inp else []),
-                       capture_output=True, text=True)
-    try:
-        r = json.loads(v.stdout)
-    except ValueError:
-        r = {'verified': False, 'error': (v.stderr or v.stdout)[-400:]}
-    r['exit_code'] = v.returncode
-    return r
 
 
 def main():
@@ -79,7 +55,8 @@ def main():
     todo = [k for k in kids if not decided(k) and not (k in res and res[k].get('seconds', 0) >= seconds - 1)]
     if only:
         todo = [k for k in todo if k in only]
-    say(f'[시작] {name}: 첫 수 {len(kids)}개 중 {len(todo)}개를 {int(seconds)}초씩, {jobs}개 동시에 풉니다.')
+    say(f'[시작] {name}: 첫 수 {len(kids)}개 중 {len(todo)}개를 {int(seconds)}초씩, {jobs}개 동시에 풉니다 '
+        f'({Path(sc.SOLVER).name}, 증명 {sc.PROOF_FORMAT}).')
     for k in kids:
         if decided(k):
             say(f'  (이미 끝남) {word[k]} → 상대 {"승" if res[k]["result"] == "win" else "패"}')
@@ -88,39 +65,24 @@ def main():
     while (todo or running) and not found:
         while todo and len(running) < jobs:
             k = todo.pop(0)
+            sc.wait_for_disk(d, word[k])
+            tt = d / f'{k}.tt' if save else None
+            cmd, note = sc.solver_cmd(d / f'{k}.txt', d / f'{k}.pf.gz', seconds, ttmb, tt)
             out = open(d / f'{k}.out', 'w')
-            cmd = [SOLVER, str(d / f'{k}.txt'), '--seconds', str(seconds), '--tt-mb', str(ttmb),
-                   '--threads', '1', '--proof', str(d / f'{k}.pf.gz')]
-            tt = d / f'{k}.tt'
-            note = ''
-            if save and free_gb(d) - int(ttmb) / 1024 >= MIN_FREE_GB:
-                if tt.exists():
-                    cmd += ['--tt-load', str(tt)]
-                    note = ' (저장해 둔 계산 상태에서 이어서)'
-                cmd += ['--tt-save', str(tt), '--checkpoint-seconds', '600']
-            elif save:
-                note = f' (디스크 여유 {free_gb(d):.1f}GB라 계산 상태 저장 안 함)'
-            while free_gb(d) < MIN_FREE_GB:
-                say(f'  디스크 여유 {free_gb(d):.1f}GB: 공간이 날 때까지 기다림')
-                time.sleep(60)
-            running[k] = (subprocess.Popen(cmd, stdout=out, stderr=subprocess.STDOUT), out)
-            say(f'  풀기 시작: {word[k]}{note}')
+            running[k] = (subprocess.Popen(cmd, stdout=out, stderr=subprocess.STDOUT), out, tt)
+            say(f'  풀기 시작: {word[k]}' + (f' ({note})' if note else ''))
         time.sleep(2)
         for k in list(running):
-            p, out = running[k]
+            p, out, tt = running[k]
             if p.poll() is None:
                 continue
             out.close()
             del running[k]
-            try:
-                r = json.loads((d / f'{k}.out').read_text().strip().splitlines()[-1])
-            except (ValueError, IndexError):
-                r = {'result': 'error', 'returncode': p.returncode}
+            r = sc.parse_solver_output((d / f'{k}.out').read_text(), p.returncode)
             r['word'] = word[k]
             res[k] = r
             (d / f'res_{k}.json').write_text(json.dumps(r, ensure_ascii=False), encoding='utf-8')
-            if r['result'] in ('win', 'loss') and (d / f'{k}.tt').exists():
-                (d / f'{k}.tt').unlink()
+            sc.finish_tt(tt, r, keep_unknown=True)
             if r['result'] == 'loss':
                 say(f'  ★ {word[k]} → 상대가 짐. 받는 쪽이 이기는 첫 수입니다 (증명 {r.get("proof_nodes", 0):,}국면, {r["seconds"]:.0f}초)')
                 found = k
@@ -130,21 +92,21 @@ def main():
                 say(f'  {word[k]} → {int(seconds)}초 안에 결론 없음 ({r.get("reason", r["result"])})')
                 if (d / f'{k}.pf.gz').exists():
                     (d / f'{k}.pf.gz').unlink()
-    for k, (p, out) in running.items():
+    for k, (p, out, tt) in running.items():
         p.terminate(); p.wait(); out.close()
-        say(f'  멈춤: {word[k]} (이기는 수를 찾아서 더 풀 필요 없음)')
+        say(f'  멈춤: {word[k]} (이기는 수를 찾아서 더 풀 필요 없음; 저장된 계산 상태는 남김)')
 
     def check(ks):
         ok = True
         for k in ks:
             say(f'  검증 중: {word[k]} (증명 {res[k].get("proof_nodes", 0):,}국면)')
-            v = verify(dic, nwords, d / f'{k}.json', d / f'{k}.pf.gz', d / f'{k}.txt')
             want = 'L' if res[k]['result'] == 'loss' else 'W'
-            good = v['exit_code'] == 0 and v.get('verified') is True and v.get('result_for_player_to_move') == want
-            res[k]['verify'] = {x: v.get(x) for x in ('verified', 'result_for_player_to_move', 'proof_sha256',
-                                                       'checked_certificate_states', 'elapsed_seconds', 'error', 'exit_code')}
+            good, v = sc.verify(dic, nwords, d / f'{k}.json', d / f'{k}.pf.gz', d / f'{k}.txt', want,
+                                res[k].get('proof_nodes', 0))
+            res[k]['verify'] = v
             (d / f'res_{k}.json').write_text(json.dumps(res[k], ensure_ascii=False), encoding='utf-8')
-            say(f'  검증 {"통과" if good else "실패"}: {word[k]} ({v.get("elapsed_seconds", "?")}초) {v.get("error", "")}')
+            bad = [c for c, okc in v.get('acceptance', {}).items() if not okc]
+            say(f'  검증 {"통과" if good else "실패"}: {word[k]} ({v.get("elapsed_seconds", "?")}초) {v.get("error", "")} {bad if bad else ""}')
             ok = ok and good
         return ok
 
@@ -161,19 +123,28 @@ def main():
     if not check(ks):
         say(f'[끝] {name}: 검증 실패. 결과를 쓰지 않습니다.')
         return
+    m = ModelV3(open(dic, 'rb').read(), int(nwords))
+    cur, counts, _ = m.position(root)
+    root_in = d / 'root.txt'
+    root_in.write_bytes(m.numeric_input(cur, counts))
     rootproof = d / 'root.pf.gz'
-    m = subprocess.run([sys.executable, str(MERGE), dic, str(nwords), str(d / 'root.json'), str(rootproof)]
-                       + [str(d / f'{k}.pf.gz') for k in ks], capture_output=True, text=True)
-    say(f'  합치기: {m.stdout.strip() or m.stderr.strip()[-300:]}')
-    v = verify(dic, nwords, d / 'root.json', rootproof, None)
+    if sc.PROOF_FORMAT == 'v4':
+        cmd = [sys.executable, str(MERGE_V4), dic, str(nwords), str(d / 'root.json'), str(rootproof)] \
+            + [f'{d / (k + ".json")}:{d / (k + ".pf.gz")}' for k in ks] + ['--input', str(root_in)]
+    else:
+        cmd = [sys.executable, str(MERGE_V3), dic, str(nwords), str(d / 'root.json'), str(rootproof)] \
+            + [str(d / f'{k}.pf.gz') for k in ks]
+    mr = subprocess.run(cmd, capture_output=True, text=True)
+    say(f'  합치기: {mr.stdout.strip()[-300:] or mr.stderr.strip()[-300:]}')
     want = 'W' if found else 'L'
-    good = v['exit_code'] == 0 and v.get('verified') is True and v.get('result_for_player_to_move') == want
+    nodes = sum(res[k].get('proof_nodes', 0) for k in ks)
+    good, v = sc.verify(dic, nwords, d / 'root.json', rootproof, root_in, want, nodes)
     (d / 'root_verify.json').write_text(json.dumps(v, ensure_ascii=False, indent=1), encoding='utf-8')
     if good:
         how = f'이기는 첫 수 {word[found]}' if found else f'첫 수 {len(kids)}개 모두 반박됨'
-        say(f'[끝] {name} = {verdict} ({how}). 루트 증명 {v["checked_certificate_states"]:,}국면 검증 통과, sha256 {v["proof_sha256"][:16]}')
+        say(f'[끝] {name} = {verdict} ({how}). 루트 증명 {v.get("checked_certificate_states", 0):,}국면 검증 통과, sha256 {v["proof_sha256"][:16]}')
     else:
-        say(f'[끝] {name}: 루트 검증 실패 {v.get("error", "")}')
+        say(f'[끝] {name}: 루트 검증 실패 {v.get("error", "")} {v.get("acceptance")}')
 
 
 if __name__ == '__main__':
