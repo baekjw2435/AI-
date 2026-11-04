@@ -1,0 +1,3203 @@
+{
+ "cases": 118,
+ "issues": [
+  {
+   "name": "gz_zero_padding",
+   "expect": "any",
+   "note": "16 zero bytes after the gzip member (FORMAT.md: trailing bytes invalid)",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "invalid gzip data: incorrect header check"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid gzip data: incorrect header check"
+    ]
+   },
+   "problems": [
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_zero_padding"
+  },
+  {
+   "name": "gz_one_zero_byte",
+   "expect": "any",
+   "note": "1 zero byte after the gzip member",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "Compressed file ended before the end-of-stream marker was reached"
+    ],
+    "cpp_digest": [
+     "reject",
+     "Compressed file ended before the end-of-stream marker was reached"
+    ]
+   },
+   "problems": [
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_one_zero_byte"
+  },
+  {
+   "name": "gz_bad_header_crc",
+   "expect": "any",
+   "note": "wrong FHCRC (zlib checks it, Python does not)",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "invalid gzip data: header crc mismatch"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid gzip data: header crc mismatch"
+    ]
+   },
+   "problems": [
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_bad_header_crc"
+  },
+  {
+   "name": "input_underscores",
+   "expect": "accept:W",
+   "note": "0_1 tokens",
+   "outcomes": {
+    "py": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ],
+    "py_digest": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ],
+    "cpp": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ],
+    "cpp_digest": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ]
+   },
+   "problems": [
+    "py rejected a valid certificate: numeric solver input differs from dictionary/history",
+    "py_digest rejected a valid certificate: numeric solver input differs from dictionary/history",
+    "cpp rejected a valid certificate: numeric solver input differs from dictionary/history",
+    "cpp_digest rejected a valid certificate: numeric solver input differs from dictionary/history"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_underscores"
+  },
+  {
+   "name": "input_19_digit_leading_zeros",
+   "expect": "accept:W",
+   "note": "first token zero-padded to 19+ digits",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ],
+    "cpp_digest": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ]
+   },
+   "problems": [
+    "cpp rejected a valid certificate: numeric solver input differs from dictionary/history",
+    "cpp_digest rejected a valid certificate: numeric solver input differs from dictionary/history",
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_19_digit_leading_zeros"
+  },
+  {
+   "name": "pos_utf16",
+   "expect": "any",
+   "note": "UTF-16 with BOM (documented C++ difference)",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "invalid position JSON: UTF-16/UTF-32 position files are not supported"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid position JSON: UTF-16/UTF-32 position files are not supported"
+    ]
+   },
+   "problems": [
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_utf16"
+  },
+  {
+   "name": "pos_extra_key_depth_950",
+   "expect": "any",
+   "note": "extra key nested 950 deep",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "invalid position JSON: nesting too deep"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid position JSON: nesting too deep"
+    ]
+   },
+   "problems": [
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_extra_key_depth_950"
+  },
+  {
+   "name": "pos_extra_key_depth_20000",
+   "expect": "reject-clean",
+   "note": "extra key nested 20000 deep",
+   "outcomes": {
+    "py": [
+     "crash",
+     "exit 1:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\nRecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string\n"
+    ],
+    "py_digest": [
+     "crash",
+     "exit 1:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\nRecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string\n"
+    ],
+    "cpp": [
+     "reject",
+     "invalid position JSON: nesting too deep"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid position JSON: nesting too deep"
+    ]
+   },
+   "problems": [
+    "py crash: exit 1:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~",
+    "py_digest crash: exit 1:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~",
+    "verifiers disagree: {\"py\": \"crash\", \"py_digest\": \"crash\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_extra_key_depth_20000"
+  }
+ ],
+ "results": [
+  {
+   "name": "base_writer",
+   "expect": "accept:W",
+   "note": "independent writer certificate (valid)",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/base_writer"
+  },
+  {
+   "name": "shared_group_wrong_vertex_extra",
+   "expect": "reject",
+   "note": "node 3 at vertex 1: shared group 11 (sources (2, 6, 9)) added as an extra move",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 3: illegal move group"
+    ],
+    "py_digest": [
+     "reject",
+     "node 3: illegal move group"
+    ],
+    "cpp": [
+     "reject",
+     "node 3: illegal move group"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 3: illegal move group"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/shared_group_wrong_vertex_extra"
+  },
+  {
+   "name": "zero_count_group",
+   "expect": "reject",
+   "note": "node 2: group 22 has count 0 here",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 2: W needs one witness"
+    ],
+    "py_digest": [
+     "reject",
+     "node 2: W needs one witness"
+    ],
+    "cpp": [
+     "reject",
+     "node 2: W needs one witness"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 2: W needs one witness"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/zero_count_group"
+  },
+  {
+   "name": "dag_reentry_other_state",
+   "expect": "reject",
+   "note": "node 3 move 0 redirected to node 0 (same vertex, same result, different counts)",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 0: W needs one witness"
+    ],
+    "py_digest": [
+     "reject",
+     "node 0: W needs one witness"
+    ],
+    "cpp": [
+     "reject",
+     "node 0: W needs one witness"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 0: W needs one witness"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/dag_reentry_other_state"
+  },
+  {
+   "name": "dag_reentry_root_edge_first",
+   "expect": "reject",
+   "note": "root witness redirected to another node of the same vertex",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 11: losing node omits legal move"
+    ],
+    "py_digest": [
+     "reject",
+     "node 11: losing node omits legal move"
+    ],
+    "cpp": [
+     "reject",
+     "node 11: losing node omits legal move"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 11: losing node omits legal move"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/dag_reentry_root_edge_first"
+  },
+  {
+   "name": "tree_no_sharing",
+   "expect": "accept:W",
+   "note": "same proof without DAG sharing (73 nodes)",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/tree_no_sharing"
+  },
+  {
+   "name": "L_two_groups_one_child",
+   "expect": "accept:W",
+   "note": "nodes [17] list two groups whose children are the same node",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/L_two_groups_one_child"
+  },
+  {
+   "name": "W_child_flipped_to_W",
+   "expect": "reject",
+   "note": "child 25 of W node 26 claims W",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: child verdict contradicts minimax"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: child verdict contradicts minimax"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: child verdict contradicts minimax"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: child verdict contradicts minimax"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/W_child_flipped_to_W"
+  },
+  {
+   "name": "static_claim_on_static",
+   "expect": "accept:W",
+   "note": "k:static on a real static leaf",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/static_claim_on_static"
+  },
+  {
+   "name": "static_label_flipped",
+   "expect": "reject",
+   "note": "static leaf with the wrong label",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 1: child verdict contradicts minimax"
+    ],
+    "py_digest": [
+     "reject",
+     "node 1: child verdict contradicts minimax"
+    ],
+    "cpp": [
+     "reject",
+     "node 1: child verdict contradicts minimax"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 1: child verdict contradicts minimax"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/static_label_flipped"
+  },
+  {
+   "name": "root_static_claim_no_moves",
+   "expect": "reject",
+   "note": "root claims static",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: false static claim"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: false static claim"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: false static claim"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: false static claim"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/root_static_claim_no_moves"
+  },
+  {
+   "name": "unreached_garbage",
+   "expect": "accept:W",
+   "note": "3 unreached nodes with nonsense claims; reported as unreached",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/unreached_garbage"
+  },
+  {
+   "name": "root_duplicated_last",
+   "expect": "accept:W",
+   "note": "copy of the root appended, header root updated",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/root_duplicated_last"
+  },
+  {
+   "name": "root_duplicate_flipped_last",
+   "expect": "reject",
+   "note": "root copy with flipped result appended as root",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 27: child verdict contradicts minimax"
+    ],
+    "py_digest": [
+     "reject",
+     "node 27: child verdict contradicts minimax"
+    ],
+    "cpp": [
+     "reject",
+     "node 27: child verdict contradicts minimax"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 27: child verdict contradicts minimax"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/root_duplicate_flipped_last"
+  },
+  {
+   "name": "hdr_groups_true",
+   "expect": "reject",
+   "note": "header: \"groups\":true",
+   "outcomes": {
+    "py": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "py_digest": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "cpp": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "cpp_digest": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_groups_true"
+  },
+  {
+   "name": "hdr_groups_float",
+   "expect": "reject",
+   "note": "header: \"groups\":27.0",
+   "outcomes": {
+    "py": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "py_digest": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "cpp": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "cpp_digest": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_groups_float"
+  },
+  {
+   "name": "hdr_groups_exp",
+   "expect": "reject",
+   "note": "header: \"groups\":27e0",
+   "outcomes": {
+    "py": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "py_digest": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "cpp": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "cpp_digest": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_groups_exp"
+  },
+  {
+   "name": "hdr_groups_string",
+   "expect": "reject",
+   "note": "header: \"groups\":\"27\"",
+   "outcomes": {
+    "py": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "py_digest": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "cpp": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ],
+    "cpp_digest": [
+     "reject",
+     "proof group count differs from independently reconstructed model"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_groups_string"
+  },
+  {
+   "name": "hdr_root_dup_key",
+   "expect": "reject",
+   "note": "header: \"root\":26,\"root\":26",
+   "outcomes": {
+    "py": [
+     "reject",
+     "duplicate JSON key: root"
+    ],
+    "py_digest": [
+     "reject",
+     "duplicate JSON key: root"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 1: duplicate JSON key: root"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 1: duplicate JSON key: root"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_root_dup_key"
+  },
+  {
+   "name": "hdr_root_float",
+   "expect": "reject",
+   "note": "header: \"root\":26.0",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid proof root id"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid proof root id"
+    ],
+    "cpp": [
+     "reject",
+     "invalid proof root id"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid proof root id"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_root_float"
+  },
+  {
+   "name": "hdr_root_huge",
+   "expect": "reject",
+   "note": "header: \"root\":18446744073709551642",
+   "outcomes": {
+    "py": [
+     "reject",
+     "root must be last node"
+    ],
+    "py_digest": [
+     "reject",
+     "root must be last node"
+    ],
+    "cpp": [
+     "reject",
+     "invalid proof root id"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid proof root id"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_root_huge"
+  },
+  {
+   "name": "hdr_root_neg",
+   "expect": "reject",
+   "note": "header: \"root\":-1",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid proof root id"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid proof root id"
+    ],
+    "cpp": [
+     "reject",
+     "invalid proof root id"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid proof root id"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_root_neg"
+  },
+  {
+   "name": "hdr_root_nan",
+   "expect": "reject",
+   "note": "header: \"root\":NaN",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid proof root id"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid proof root id"
+    ],
+    "cpp": [
+     "reject",
+     "invalid proof root id"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid proof root id"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_root_nan"
+  },
+  {
+   "name": "hdr_format_escaped",
+   "expect": "accept:W",
+   "note": "header: \"format\":\"route-proof-\\u0076\\u0034\"",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_format_escaped"
+  },
+  {
+   "name": "hdr_key_escaped",
+   "expect": "accept:W",
+   "note": "header: \"\\u0066ormat\"",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_key_escaped"
+  },
+  {
+   "name": "hdr_dup_key_escaped",
+   "expect": "reject",
+   "note": "header: \"groups\":27,\"\\u0067roups\":27",
+   "outcomes": {
+    "py": [
+     "reject",
+     "duplicate JSON key: groups"
+    ],
+    "py_digest": [
+     "reject",
+     "duplicate JSON key: groups"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 1: duplicate JSON key: groups"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 1: duplicate JSON key: groups"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_dup_key_escaped"
+  },
+  {
+   "name": "hdr_input_null",
+   "expect": "reject",
+   "note": "header: \"root\":26,\"input_sha256\":null",
+   "outcomes": {
+    "py": [
+     "reject",
+     "input_sha256 requires --input"
+    ],
+    "py_digest": [
+     "reject",
+     "input_sha256 requires --input"
+    ],
+    "cpp": [
+     "reject",
+     "input_sha256 requires --input"
+    ],
+    "cpp_digest": [
+     "reject",
+     "input_sha256 requires --input"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_input_null"
+  },
+  {
+   "name": "hdr_format_v3",
+   "expect": "reject",
+   "note": "header: \"format\":\"route-proof-v3\"",
+   "outcomes": {
+    "py": [
+     "reject",
+     "unknown proof format"
+    ],
+    "py_digest": [
+     "reject",
+     "unknown proof format"
+    ],
+    "cpp": [
+     "reject",
+     "unknown proof format"
+    ],
+    "cpp_digest": [
+     "reject",
+     "unknown proof format"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/hdr_format_v3"
+  },
+  {
+   "name": "id_neg_zero",
+   "expect": "accept:W",
+   "note": "node 0 line: {\"id\":-0,\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/id_neg_zero"
+  },
+  {
+   "name": "id_float",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":0.0,\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "py_digest": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "cpp": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "cpp_digest": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/id_float"
+  },
+  {
+   "name": "id_exp",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":0e0,\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "py_digest": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "cpp": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "cpp_digest": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/id_exp"
+  },
+  {
+   "name": "id_bool_false",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":false,\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "py_digest": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "cpp": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "cpp_digest": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/id_bool_false"
+  },
+  {
+   "name": "id_string",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":\"0\",\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "py_digest": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "cpp": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ],
+    "cpp_digest": [
+     "reject",
+     "line 2: ids must be contiguous from zero"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/id_string"
+  },
+  {
+   "name": "id_leading_zero",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":00,\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid JSON on line 2: Expecting ',' delimiter: line 1 column 8 (char 7)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid JSON on line 2: Expecting ',' delimiter: line 1 column 8 (char 7)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 2: expecting ',' or '}'"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 2: expecting ',' or '}'"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/id_leading_zero"
+  },
+  {
+   "name": "id_dup_key",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":0,\"id\":0,\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "duplicate JSON key: id"
+    ],
+    "py_digest": [
+     "reject",
+     "duplicate JSON key: id"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 2: duplicate JSON key: id"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 2: duplicate JSON key: id"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/id_dup_key"
+  },
+  {
+   "name": "id_key_escaped",
+   "expect": "accept:W",
+   "note": "node 0 line: {\"\\u0069d\":0,\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/id_key_escaped"
+  },
+  {
+   "name": "r_escaped",
+   "expect": "accept:W",
+   "note": "node 0 line: {\"id\":0,\"r\":\"\\u0057\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/r_escaped"
+  },
+  {
+   "name": "spaces_everywhere",
+   "expect": "accept:W",
+   "note": "node 0 line: { \"id\" : 0 , \"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/spaces_everywhere"
+  },
+  {
+   "name": "nul_byte",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":0,\u0000\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid JSON on line 2: Expecting property name enclosed in double quotes: line 1 column 9 (char 8)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid JSON on line 2: Expecting property name enclosed in double quotes: line 1 column 9 (char 8)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 2: expecting property name"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 2: expecting property name"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/nul_byte"
+  },
+  {
+   "name": "lone_surrogate_key",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":0,\"\\ud800\":1,\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 0: unknown key(s)"
+    ],
+    "py_digest": [
+     "reject",
+     "node 0: unknown key(s)"
+    ],
+    "cpp": [
+     "reject",
+     "node 0: unknown key(s)"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 0: unknown key(s)"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/lone_surrogate_key"
+  },
+  {
+   "name": "unknown_key_v",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":0,\"v\":0,\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 0: unknown key(s)"
+    ],
+    "py_digest": [
+     "reject",
+     "node 0: unknown key(s)"
+    ],
+    "cpp": [
+     "reject",
+     "node 0: unknown key(s)"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 0: unknown key(s)"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/unknown_key_v"
+  },
+  {
+   "name": "k_null",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":0,\"k\":null,\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 0: unknown kind"
+    ],
+    "py_digest": [
+     "reject",
+     "node 0: unknown kind"
+    ],
+    "cpp": [
+     "reject",
+     "node 0: unknown kind"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 0: unknown kind"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/k_null"
+  },
+  {
+   "name": "k_upper",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":0,\"k\":\"Static\",\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 0: unknown kind"
+    ],
+    "py_digest": [
+     "reject",
+     "node 0: unknown kind"
+    ],
+    "cpp": [
+     "reject",
+     "node 0: unknown kind"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 0: unknown kind"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/k_upper"
+  },
+  {
+   "name": "r_lower",
+   "expect": "reject",
+   "note": "node 0 line: {\"id\":0,\"r\":\"w\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 0: unknown result"
+    ],
+    "py_digest": [
+     "reject",
+     "node 0: unknown result"
+    ],
+    "cpp": [
+     "reject",
+     "node 0: unknown result"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 0: unknown result"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/r_lower"
+  },
+  {
+   "name": "trailing_data",
+   "expect": "reject",
+   "note": "node 0 line: [] {\"id\":0,\"r\":\"W\",\"m\":[]}",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid JSON on line 2: Extra data: line 1 column 4 (char 3)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid JSON on line 2: Extra data: line 1 column 4 (char 3)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 2: extra data"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 2: extra data"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/trailing_data"
+  },
+  {
+   "name": "move_group_float",
+   "expect": "reject",
+   "note": "root move [8,25] -> [8.0,25]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: malformed move"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_group_float"
+  },
+  {
+   "name": "move_group_neg_zero",
+   "expect": "any",
+   "note": "root move [8,25] -> [8,25]",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_group_neg_zero"
+  },
+  {
+   "name": "move_group_wrap64",
+   "expect": "reject",
+   "note": "root move [8,25] -> [18446744073709551624,25]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: group out of range"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: group out of range"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: group out of range"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: group out of range"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_group_wrap64"
+  },
+  {
+   "name": "move_group_wrap32",
+   "expect": "reject",
+   "note": "root move [8,25] -> [4294967304,25]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: group out of range"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: group out of range"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: group out of range"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: group out of range"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_group_wrap32"
+  },
+  {
+   "name": "move_child_wrap32",
+   "expect": "reject",
+   "note": "root move [8,25] -> [8,4294967321]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: child must precede parent"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_child_wrap32"
+  },
+  {
+   "name": "move_child_wrap64",
+   "expect": "reject",
+   "note": "root move [8,25] -> [8,18446744073709551641]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: child must precede parent"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_child_wrap64"
+  },
+  {
+   "name": "move_child_neg",
+   "expect": "reject",
+   "note": "root move [8,25] -> [8,-4294967271]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: child must precede parent"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_child_neg"
+  },
+  {
+   "name": "move_three",
+   "expect": "reject",
+   "note": "root move [8,25] -> [8,25,0]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: malformed move"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_three"
+  },
+  {
+   "name": "move_true",
+   "expect": "reject",
+   "note": "root move [8,25] -> [8,25,true]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: malformed move"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_true"
+  },
+  {
+   "name": "move_nan",
+   "expect": "reject",
+   "note": "root move [8,25] -> [NaN,25]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: malformed move"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_nan"
+  },
+  {
+   "name": "move_inf",
+   "expect": "reject",
+   "note": "root move [8,25] -> [8,Infinity]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: malformed move"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_inf"
+  },
+  {
+   "name": "move_nested",
+   "expect": "reject",
+   "note": "root move [8,25] -> [[8],25]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: malformed move"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: malformed move"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_nested"
+  },
+  {
+   "name": "move_spaces",
+   "expect": "accept:W",
+   "note": "root move [8,25] -> [ 8 , 25 ]",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_spaces"
+  },
+  {
+   "name": "move_19digit_zero",
+   "expect": "reject",
+   "note": "root move [8,25] -> [8,0000000000000000000]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid JSON on line 28: Expecting ',' delimiter: line 1 column 27 (char 26)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid JSON on line 28: Expecting ',' delimiter: line 1 column 27 (char 26)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 28: expecting ',' or ']'"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 28: expecting ',' or ']'"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_19digit_zero"
+  },
+  {
+   "name": "move_18digit",
+   "expect": "reject",
+   "note": "root move [8,25] -> [8,100000000000000025]",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "py_digest": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "cpp": [
+     "reject",
+     "node 26: child must precede parent"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 26: child must precede parent"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_18digit"
+  },
+  {
+   "name": "move_4301_digits",
+   "expect": "reject",
+   "note": "root move [8,25] -> [8,111111111111111111111111111111111111111111111111111111111",
+   "outcomes": {
+    "py": [
+     "reject",
+     "Exceeds the limit (4300 digits) for integer string conversion: value has 4301 digits; use sys.set_int_max_str_digits() to increase the limit"
+    ],
+    "py_digest": [
+     "reject",
+     "Exceeds the limit (4300 digits) for integer string conversion: value has 4301 digits; use sys.set_int_max_str_digits() to increase the limit"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 28: integer string too long"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 28: integer string too long"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/move_4301_digits"
+  },
+  {
+   "name": "crlf_lines",
+   "expect": "accept:W",
+   "note": "CRLF line ends",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/crlf_lines"
+  },
+  {
+   "name": "no_final_newline",
+   "expect": "accept:W",
+   "note": "no final LF",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/no_final_newline"
+  },
+  {
+   "name": "double_cr",
+   "expect": "accept:W",
+   "note": "CR CR LF (CRs are JSON whitespace)",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/double_cr"
+  },
+  {
+   "name": "blank_line_end",
+   "expect": "reject",
+   "note": "empty last line",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid JSON on line 29: Expecting value: line 1 column 1 (char 0)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid JSON on line 29: Expecting value: line 1 column 1 (char 0)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 29: expecting value"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 29: expecting value"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/blank_line_end"
+  },
+  {
+   "name": "blank_line_mid",
+   "expect": "reject",
+   "note": "empty line",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid JSON on line 3: Expecting value: line 1 column 1 (char 0)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid JSON on line 3: Expecting value: line 1 column 1 (char 0)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 3: expecting value"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 3: expecting value"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/blank_line_mid"
+  },
+  {
+   "name": "ws_only_line_end",
+   "expect": "reject",
+   "note": "whitespace-only last line",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid JSON on line 29: Expecting value: line 1 column 2 (char 1)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid JSON on line 29: Expecting value: line 1 column 2 (char 1)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 29: expecting value"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 29: expecting value"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end"
+  },
+  {
+   "name": "bom_proof",
+   "expect": "reject",
+   "note": "UTF-8 BOM before the header",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid JSON on line 1: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid JSON on line 1: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 1: expecting value"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 1: expecting value"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/bom_proof"
+  },
+  {
+   "name": "cr_only_separators",
+   "expect": "reject",
+   "note": "CR used as line separator",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid JSON on line 1: Extra data: line 1 column 65 (char 64)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid JSON on line 1: Extra data: line 1 column 65 (char 64)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 1: extra data"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 1: extra data"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/cr_only_separators"
+  },
+  {
+   "name": "vertical_tab_ws",
+   "expect": "reject",
+   "note": "VT is not JSON whitespace",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid JSON on line 1: Expecting property name enclosed in double quotes: line 1 column 28 (char 27)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid JSON on line 1: Expecting property name enclosed in double quotes: line 1 column 28 (char 27)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 1: expecting property name"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 1: expecting property name"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/vertical_tab_ws"
+  },
+  {
+   "name": "u2028_inside_string_line",
+   "expect": "reject",
+   "note": "U+2028 in a key (unknown key)",
+   "outcomes": {
+    "py": [
+     "reject",
+     "unknown header key(s): ['format\\u2028']"
+    ],
+    "py_digest": [
+     "reject",
+     "unknown header key(s): ['format\\u2028']"
+    ],
+    "cpp": [
+     "reject",
+     "unknown header key(s): format "
+    ],
+    "cpp_digest": [
+     "reject",
+     "unknown header key(s): format "
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/u2028_inside_string_line"
+  },
+  {
+   "name": "header_only",
+   "expect": "reject",
+   "note": "no nodes",
+   "outcomes": {
+    "py": [
+     "reject",
+     "empty certificate"
+    ],
+    "py_digest": [
+     "reject",
+     "empty certificate"
+    ],
+    "cpp": [
+     "reject",
+     "empty certificate"
+    ],
+    "cpp_digest": [
+     "reject",
+     "empty certificate"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/header_only"
+  },
+  {
+   "name": "empty_file",
+   "expect": "reject",
+   "note": "empty file",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid JSON on line 1: Expecting value: line 1 column 1 (char 0)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid JSON on line 1: Expecting value: line 1 column 1 (char 0)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid JSON on line 1: empty file"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid JSON on line 1: empty file"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/empty_file"
+  },
+  {
+   "name": "gz_plain",
+   "expect": "accept:W",
+   "note": "gzip",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_plain"
+  },
+  {
+   "name": "gz_two_members_midline",
+   "expect": "accept:W",
+   "note": "two gzip members split inside a line",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_two_members_midline"
+  },
+  {
+   "name": "gz_empty_member_end",
+   "expect": "accept:W",
+   "note": "extra empty gzip member",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_empty_member_end"
+  },
+  {
+   "name": "gz_zero_padding",
+   "expect": "any",
+   "note": "16 zero bytes after the gzip member (FORMAT.md: trailing bytes invalid)",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "invalid gzip data: incorrect header check"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid gzip data: incorrect header check"
+    ]
+   },
+   "problems": [
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_zero_padding"
+  },
+  {
+   "name": "gz_one_zero_byte",
+   "expect": "any",
+   "note": "1 zero byte after the gzip member",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "Compressed file ended before the end-of-stream marker was reached"
+    ],
+    "cpp_digest": [
+     "reject",
+     "Compressed file ended before the end-of-stream marker was reached"
+    ]
+   },
+   "problems": [
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_one_zero_byte"
+  },
+  {
+   "name": "gz_trailing_magic_only",
+   "expect": "reject",
+   "note": "trailing partial gzip header",
+   "outcomes": {
+    "py": [
+     "reject",
+     "Compressed file ended before the end-of-stream marker was reached"
+    ],
+    "py_digest": [
+     "reject",
+     "Compressed file ended before the end-of-stream marker was reached"
+    ],
+    "cpp": [
+     "reject",
+     "Compressed file ended before the end-of-stream marker was reached"
+    ],
+    "cpp_digest": [
+     "reject",
+     "Compressed file ended before the end-of-stream marker was reached"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_trailing_magic_only"
+  },
+  {
+   "name": "gz_trailing_garbage",
+   "expect": "reject",
+   "note": "trailing garbage",
+   "outcomes": {
+    "py": [
+     "reject",
+     "Not a gzipped file (b'ju')"
+    ],
+    "py_digest": [
+     "reject",
+     "Not a gzipped file (b'ju')"
+    ],
+    "cpp": [
+     "reject",
+     "invalid gzip data: incorrect header check"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid gzip data: incorrect header check"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_trailing_garbage"
+  },
+  {
+   "name": "gz_bad_crc",
+   "expect": "reject",
+   "note": "CRC32 flipped",
+   "outcomes": {
+    "py": [
+     "reject",
+     "CRC check failed 0x5007344a != 0x5007344b"
+    ],
+    "py_digest": [
+     "reject",
+     "CRC check failed 0x5007344a != 0x5007344b"
+    ],
+    "cpp": [
+     "reject",
+     "invalid gzip data: incorrect data check"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid gzip data: incorrect data check"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_bad_crc"
+  },
+  {
+   "name": "gz_bad_isize",
+   "expect": "reject",
+   "note": "ISIZE flipped",
+   "outcomes": {
+    "py": [
+     "reject",
+     "Incorrect length of data produced"
+    ],
+    "py_digest": [
+     "reject",
+     "Incorrect length of data produced"
+    ],
+    "cpp": [
+     "reject",
+     "invalid gzip data: incorrect length check"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid gzip data: incorrect length check"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_bad_isize"
+  },
+  {
+   "name": "gz_all_header_flags",
+   "expect": "accept:W",
+   "note": "FEXTRA FNAME FCOMMENT FHCRC",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags"
+  },
+  {
+   "name": "gz_bad_header_crc",
+   "expect": "any",
+   "note": "wrong FHCRC (zlib checks it, Python does not)",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "invalid gzip data: header crc mismatch"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid gzip data: header crc mismatch"
+    ]
+   },
+   "problems": [
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_bad_header_crc"
+  },
+  {
+   "name": "gz_raw_deflate_magic",
+   "expect": "reject",
+   "note": "magic then raw deflate",
+   "outcomes": {
+    "py": [
+     "reject",
+     "Unknown compression method"
+    ],
+    "py_digest": [
+     "reject",
+     "Unknown compression method"
+    ],
+    "cpp": [
+     "reject",
+     "invalid gzip data: unknown compression method"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid gzip data: unknown compression method"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic"
+  },
+  {
+   "name": "input_sha_ok",
+   "expect": "accept:W",
+   "note": "input_sha256 + --input",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_sha_ok"
+  },
+  {
+   "name": "input_sha_without_input",
+   "expect": "reject",
+   "note": "input_sha256 but no --input",
+   "outcomes": {
+    "py": [
+     "reject",
+     "input_sha256 requires --input"
+    ],
+    "py_digest": [
+     "reject",
+     "input_sha256 requires --input"
+    ],
+    "cpp": [
+     "reject",
+     "input_sha256 requires --input"
+    ],
+    "cpp_digest": [
+     "reject",
+     "input_sha256 requires --input"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_sha_without_input"
+  },
+  {
+   "name": "input_sha_upper",
+   "expect": "reject",
+   "note": "uppercase hex",
+   "outcomes": {
+    "py": [
+     "reject",
+     "proof input hash mismatch"
+    ],
+    "py_digest": [
+     "reject",
+     "proof input hash mismatch"
+    ],
+    "cpp": [
+     "reject",
+     "proof input hash mismatch"
+    ],
+    "cpp_digest": [
+     "reject",
+     "proof input hash mismatch"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_sha_upper"
+  },
+  {
+   "name": "input_plus_signs",
+   "expect": "accept:W",
+   "note": "+N tokens",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_plus_signs"
+  },
+  {
+   "name": "input_underscores",
+   "expect": "accept:W",
+   "note": "0_1 tokens",
+   "outcomes": {
+    "py": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ],
+    "py_digest": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ],
+    "cpp": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ],
+    "cpp_digest": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ]
+   },
+   "problems": [
+    "py rejected a valid certificate: numeric solver input differs from dictionary/history",
+    "py_digest rejected a valid certificate: numeric solver input differs from dictionary/history",
+    "cpp rejected a valid certificate: numeric solver input differs from dictionary/history",
+    "cpp_digest rejected a valid certificate: numeric solver input differs from dictionary/history"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_underscores"
+  },
+  {
+   "name": "input_odd_ascii_ws",
+   "expect": "accept:W",
+   "note": "0x1c/VT/FF/CR separators",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_odd_ascii_ws"
+  },
+  {
+   "name": "input_19_digit_leading_zeros",
+   "expect": "accept:W",
+   "note": "first token zero-padded to 19+ digits",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ],
+    "cpp_digest": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ]
+   },
+   "problems": [
+    "cpp rejected a valid certificate: numeric solver input differs from dictionary/history",
+    "cpp_digest rejected a valid certificate: numeric solver input differs from dictionary/history",
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_19_digit_leading_zeros"
+  },
+  {
+   "name": "input_extra_token",
+   "expect": "reject",
+   "note": "an extra token (must mismatch)",
+   "outcomes": {
+    "py": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ],
+    "py_digest": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ],
+    "cpp": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ],
+    "cpp_digest": [
+     "reject",
+     "numeric solver input differs from dictionary/history"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_extra_token"
+  },
+  {
+   "name": "pos_bom",
+   "expect": "accept:W",
+   "note": "UTF-8 BOM",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_bom"
+  },
+  {
+   "name": "pos_utf16",
+   "expect": "any",
+   "note": "UTF-16 with BOM (documented C++ difference)",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "invalid position JSON: UTF-16/UTF-32 position files are not supported"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid position JSON: UTF-16/UTF-32 position files are not supported"
+    ]
+   },
+   "problems": [
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_utf16"
+  },
+  {
+   "name": "pos_dup_key",
+   "expect": "reject",
+   "note": "duplicate key",
+   "outcomes": {
+    "py": [
+     "reject",
+     "duplicate JSON key: history"
+    ],
+    "py_digest": [
+     "reject",
+     "duplicate JSON key: history"
+    ],
+    "cpp": [
+     "reject",
+     "invalid position JSON: duplicate JSON key: history"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid position JSON: duplicate JSON key: history"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_dup_key"
+  },
+  {
+   "name": "pos_escaped_syllable",
+   "expect": "accept:W",
+   "note": "\\u escapes",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_escaped_syllable"
+  },
+  {
+   "name": "pos_extra_key_depth_950",
+   "expect": "any",
+   "note": "extra key nested 950 deep",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "reject",
+     "invalid position JSON: nesting too deep"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid position JSON: nesting too deep"
+    ]
+   },
+   "problems": [
+    "verifiers disagree: {\"py\": \"accept\", \"py_digest\": \"accept\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_extra_key_depth_950"
+  },
+  {
+   "name": "pos_extra_key_depth_20000",
+   "expect": "reject-clean",
+   "note": "extra key nested 20000 deep",
+   "outcomes": {
+    "py": [
+     "crash",
+     "exit 1:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\nRecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string\n"
+    ],
+    "py_digest": [
+     "crash",
+     "exit 1:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\nRecursionError: maximum recursion depth exceeded while decoding a JSON array from a unicode string\n"
+    ],
+    "cpp": [
+     "reject",
+     "invalid position JSON: nesting too deep"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid position JSON: nesting too deep"
+    ]
+   },
+   "problems": [
+    "py crash: exit 1:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~",
+    "py_digest crash: exit 1:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~",
+    "verifiers disagree: {\"py\": \"crash\", \"py_digest\": \"crash\", \"cpp\": \"reject\", \"cpp_digest\": \"reject\"}"
+   ],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_extra_key_depth_20000"
+  },
+  {
+   "name": "pos_history_null",
+   "expect": "reject",
+   "note": "history null",
+   "outcomes": {
+    "py": [
+     "reject",
+     "history must be an explicit list"
+    ],
+    "py_digest": [
+     "reject",
+     "history must be an explicit list"
+    ],
+    "cpp": [
+     "reject",
+     "history must be an explicit list"
+    ],
+    "cpp_digest": [
+     "reject",
+     "history must be an explicit list"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_history_null"
+  },
+  {
+   "name": "pos_no_history",
+   "expect": "reject",
+   "note": "history missing",
+   "outcomes": {
+    "py": [
+     "reject",
+     "history must be an explicit list"
+    ],
+    "py_digest": [
+     "reject",
+     "history must be an explicit list"
+    ],
+    "cpp": [
+     "reject",
+     "history must be an explicit list"
+    ],
+    "cpp_digest": [
+     "reject",
+     "history must be an explicit list"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_no_history"
+  },
+  {
+   "name": "pos_used_null",
+   "expect": "reject",
+   "note": "initial_used_words null",
+   "outcomes": {
+    "py": [
+     "reject",
+     "initial_used_words must be a list"
+    ],
+    "py_digest": [
+     "reject",
+     "initial_used_words must be a list"
+    ],
+    "cpp": [
+     "reject",
+     "initial_used_words must be a list"
+    ],
+    "cpp_digest": [
+     "reject",
+     "initial_used_words must be a list"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_used_null"
+  },
+  {
+   "name": "pos_used_dup",
+   "expect": "reject",
+   "note": "a word used twice",
+   "outcomes": {
+    "py": [
+     "reject",
+     "reused initially used word: 눙땹햮엿"
+    ],
+    "py_digest": [
+     "reject",
+     "reused initially used word: 눙땹햮엿"
+    ],
+    "cpp": [
+     "reject",
+     "reused initially used word: 눙땹햮엿"
+    ],
+    "cpp_digest": [
+     "reject",
+     "reused initially used word: 눙땹햮엿"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_used_dup"
+  },
+  {
+   "name": "pos_syllable_two",
+   "expect": "reject",
+   "note": "two-syllable initial",
+   "outcomes": {
+    "py": [
+     "reject",
+     "initial_syllable must be one syllable"
+    ],
+    "py_digest": [
+     "reject",
+     "initial_syllable must be one syllable"
+    ],
+    "cpp": [
+     "reject",
+     "initial_syllable must be one syllable"
+    ],
+    "cpp_digest": [
+     "reject",
+     "initial_syllable must be one syllable"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_syllable_two"
+  },
+  {
+   "name": "pos_syllable_latin",
+   "expect": "reject",
+   "note": "non-Hangul initial",
+   "outcomes": {
+    "py": [
+     "reject",
+     "only precomposed Korean syllables are supported"
+    ],
+    "py_digest": [
+     "reject",
+     "only precomposed Korean syllables are supported"
+    ],
+    "cpp": [
+     "reject",
+     "only precomposed Korean syllables are supported"
+    ],
+    "cpp_digest": [
+     "reject",
+     "only precomposed Korean syllables are supported"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_syllable_latin"
+  },
+  {
+   "name": "pos_syllable_surrogate",
+   "expect": "reject",
+   "note": "lone surrogate initial",
+   "outcomes": {
+    "py": [
+     "reject",
+     "only precomposed Korean syllables are supported"
+    ],
+    "py_digest": [
+     "reject",
+     "only precomposed Korean syllables are supported"
+    ],
+    "cpp": [
+     "reject",
+     "only precomposed Korean syllables are supported"
+    ],
+    "cpp_digest": [
+     "reject",
+     "only precomposed Korean syllables are supported"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_syllable_surrogate"
+  },
+  {
+   "name": "pos_syllable_nfd",
+   "expect": "reject",
+   "note": "decomposed jamo",
+   "outcomes": {
+    "py": [
+     "reject",
+     "initial_syllable must be one syllable"
+    ],
+    "py_digest": [
+     "reject",
+     "initial_syllable must be one syllable"
+    ],
+    "cpp": [
+     "reject",
+     "initial_syllable must be one syllable"
+    ],
+    "cpp_digest": [
+     "reject",
+     "initial_syllable must be one syllable"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_syllable_nfd"
+  },
+  {
+   "name": "pos_big_int_extra",
+   "expect": "any",
+   "note": "5000-digit integer in an extra key",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid position JSON: Exceeds the limit (4300 digits) for integer string conversion: value has 5000 digits; use sys.set_int_max_str_digits() to increase the limit"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid position JSON: Exceeds the limit (4300 digits) for integer string conversion: value has 5000 digits; use sys.set_int_max_str_digits() to increase the limit"
+    ],
+    "cpp": [
+     "reject",
+     "invalid position JSON: integer string too long"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid position JSON: integer string too long"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_big_int_extra"
+  },
+  {
+   "name": "pos_trailing_garbage",
+   "expect": "reject",
+   "note": "trailing data",
+   "outcomes": {
+    "py": [
+     "reject",
+     "invalid position JSON: Extra data: line 1 column 80 (char 79)"
+    ],
+    "py_digest": [
+     "reject",
+     "invalid position JSON: Extra data: line 1 column 80 (char 79)"
+    ],
+    "cpp": [
+     "reject",
+     "invalid position JSON: extra data"
+    ],
+    "cpp_digest": [
+     "reject",
+     "invalid position JSON: extra data"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_trailing_garbage"
+  },
+  {
+   "name": "pos_nan_extra",
+   "expect": "accept:W",
+   "note": "NaN in an extra key",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_nan_extra"
+  },
+  {
+   "name": "pos_array",
+   "expect": "reject",
+   "note": "not an object",
+   "outcomes": {
+    "py": [
+     "reject",
+     "position must be an object"
+    ],
+    "py_digest": [
+     "reject",
+     "position must be an object"
+    ],
+    "cpp": [
+     "reject",
+     "position must be an object"
+    ],
+    "cpp_digest": [
+     "reject",
+     "position must be an object"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_array"
+  },
+  {
+   "name": "pos_other_same_canonical",
+   "expect": "reject",
+   "note": "another position; same canonical root: False",
+   "outcomes": {
+    "py": [
+     "reject",
+     "node 3: losing node omits legal move"
+    ],
+    "py_digest": [
+     "reject",
+     "node 3: losing node omits legal move"
+    ],
+    "cpp": [
+     "reject",
+     "node 3: losing node omits legal move"
+    ],
+    "cpp_digest": [
+     "reject",
+     "node 3: losing node omits legal move"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/pos_other_same_canonical"
+  },
+  {
+   "name": "dict_sep_u3000",
+   "expect": "accept:W",
+   "note": "dictionary separated by '\\u3000'",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/dict_sep_u3000"
+  },
+  {
+   "name": "dict_sep_x1c",
+   "expect": "accept:W",
+   "note": "dictionary separated by '\\x1c'",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/dict_sep_x1c"
+  },
+  {
+   "name": "dict_sep_x85",
+   "expect": "accept:W",
+   "note": "dictionary separated by '\\x85'",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/dict_sep_x85"
+  },
+  {
+   "name": "dict_sep_u200b",
+   "expect": "reject",
+   "note": "dictionary separated by '\\u200b'",
+   "outcomes": {
+    "py": [
+     "reject",
+     "dictionary contains a non-Hangul token"
+    ],
+    "py_digest": [
+     "reject",
+     "dictionary contains a non-Hangul token"
+    ],
+    "cpp": [
+     "reject",
+     "dictionary contains a non-Hangul token"
+    ],
+    "cpp_digest": [
+     "reject",
+     "dictionary contains a non-Hangul token"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/dict_sep_u200b"
+  },
+  {
+   "name": "dict_sep_u180e",
+   "expect": "reject",
+   "note": "dictionary separated by '\\u180e'",
+   "outcomes": {
+    "py": [
+     "reject",
+     "dictionary contains a non-Hangul token"
+    ],
+    "py_digest": [
+     "reject",
+     "dictionary contains a non-Hangul token"
+    ],
+    "cpp": [
+     "reject",
+     "dictionary contains a non-Hangul token"
+    ],
+    "cpp_digest": [
+     "reject",
+     "dictionary contains a non-Hangul token"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/dict_sep_u180e"
+  },
+  {
+   "name": "dict_bom",
+   "expect": "accept:W",
+   "note": "dictionary separated by 'BOM'",
+   "outcomes": {
+    "py": [
+     "accept",
+     "W"
+    ],
+    "py_digest": [
+     "accept",
+     "W"
+    ],
+    "cpp": [
+     "accept",
+     "W"
+    ],
+    "cpp_digest": [
+     "accept",
+     "W"
+    ]
+   },
+   "problems": [],
+   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/dict_bom"
+  }
+ ]
+}
