@@ -37,12 +37,14 @@ of the JSON output and the certificate file are identical to solver_v4's (checke
   for 60 s on three of 면's first moves: no mismatch.
 - `solver_v4/tests/random_test.py` with v5: 300 random small dictionaries, certificates
   accepted by verify_v3 and equal to brute force.
-- 817-word regression (running): syllables solved in the 817 study are solved again by v4 and
-  v5 on the 817 list (the v3 model is the same game there). So far every one gives identical
-  JSON, byte-identical certificates accepted by verify_v3, the SOLVED_KO.md result and even the
-  same certificate size as in the 817 study.
+- 817-word regression: the 28 syllables of the 817 study whose certificates had at most 120,000
+  states were solved again by v4 and v5 on the 817 list (the v3 model is the same game there):
+  28/28 identical JSON and byte-identical certificates, accepted by verify_v3, with the result of
+  SOLVED_KO.md. (Certificate sizes equal the 817 study's for the small ones and differ by a few
+  percent for larger ones, because table sizes and solver versions differ.)
 
 ## Speed
 
-About 1.3x faster than v4 on 2,000,000-node runs (c_9 8.3 s vs 11.4 s, 락 7.7 s vs 10.5 s,
-면 7.7 s vs 10.1 s, on a machine shared with other jobs).
+About 1.3x faster than v4 on the 구없샘 list (2,000,000-node runs: c_9 8.3 s vs 11.4 s, 락 7.7 s vs
+10.5 s, 면 7.7 s vs 10.1 s) and 1.13x on the smaller 817 list (28 syllables: 683 s vs 772 s), on a
+machine shared with other jobs.
