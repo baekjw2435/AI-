@@ -264,6 +264,12 @@ class ModelV3:
         return hashlib.sha256(data).hexdigest()
 
 
+def _digest(counts):
+    # Earlier states are kept as SHA-256 digests (2,613 count bytes per state would not fit in
+    # memory for multi-million-state certificates); equality of digests stands for equality.
+    return hashlib.sha256(counts).digest()
+
+
 def _unique_keys(pairs):
     result = {}
     for key, value in pairs:
@@ -355,19 +361,19 @@ def verify_v3(dictionary_path, position_path, proof_path, input_path, expected_w
                     seen.add(group)
                     require(0 <= child_id < identifier, f"node {identifier}: child must precede parent")
                     child_vertex, child_counts, _ = model.child(current, counts, group)
-                    require(vertices[child_id] == child_vertex and states[child_id] == child_counts,
+                    require(vertices[child_id] == child_vertex and states[child_id] == _digest(child_counts),
                             f"node {identifier}: incorrect child state")
                     require(outcomes[child_id] == (0 if result == "W" else 1),
                             f"node {identifier}: child verdict contradicts minimax")
                     checked_moves += 1
                 if result == "L":
                     require(seen == legal, f"node {identifier}: losing node omits legal move")
-            states.append(counts)
+            states.append(_digest(counts))
             vertices.append(current)
             outcomes.append(result == "W")
     require(states, "empty certificate")
     require(header["root"] == len(states) - 1, "root must be last node")
-    require(vertices[-1] == root_vertex and states[-1] == expected_root,
+    require(vertices[-1] == root_vertex and states[-1] == _digest(expected_root),
             "root does not match exact requested history")
     digest = hashlib.sha256()
     with proof_path.open("rb") as source:
