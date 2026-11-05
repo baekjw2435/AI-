@@ -23,7 +23,6 @@ import json
 import subprocess
 import sys
 import time
-from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -120,10 +119,37 @@ def plan(dic, nwords, sylfile, work, max_first, skip):
     print(json.dumps(summary, ensure_ascii=False))
 
 
+def root_states(P, ep_value):
+    """For every root: 'W', 'L' or None from the endpoint values known so far (parity per request)."""
+    out = {}
+    for R in P['roots']:
+        if R['static'] != -1:
+            continue
+        vals = []
+        for rid in R['requests']:
+            q = P['requests'][rid]
+            v_end = bool(q['endpoint_static']) if q['endpoint'] is None else ep_value.get(q['endpoint'])
+            vals.append(None if v_end is None else (v_end if (q['plies'] - 1) % 2 == 0 else (not v_end)))
+        out[R['members'][0]] = 'W' if any(v is False for v in vals) else ('L' if all(v is True for v in vals) else None)
+    return out
+
+
 def solve(dic, nwords, work, seconds, ttmb, jobs):
+    """Solve the unique endpoints. An endpoint is skipped (left for later) once every root that
+    uses it is already decided by other endpoints (e.g. a root already won by another first move)."""
+    import threading
     P = json.loads((work / 'plan.json').read_text(encoding='utf-8'))
     # endpoints shared by many roots first, then by plan order
     order = sorted(P['endpoints'], key=lambda e: (-len(e['roots']), e['id']))
+    ep_value = {}
+    for e in P['endpoints']:
+        f = work / 'jobs' / f'e{e["id"]}' / 'res.json'
+        if f.exists():
+            r = json.loads(f.read_text(encoding='utf-8'))
+            if r.get('verified'):
+                ep_value[e['id']] = r['solver']['result'] == 'win'
+    users = {e['id']: sorted({P['requests'][i]['root'] for i, q in enumerate(P['requests']) if q['endpoint'] == e['id']})
+             for e in P['endpoints']}
 
     def todo(e):
         f = work / 'jobs' / f'e{e["id"]}' / 'res.json'
@@ -132,6 +158,21 @@ def solve(dic, nwords, work, seconds, ttmb, jobs):
         r = json.loads(f.read_text(encoding='utf-8'))
         return not r.get('verified') and r['solver'].get('result') not in ('win', 'loss') \
             and r['solver'].get('seconds', 0) < seconds - 1
+
+    queue = [e for e in order if todo(e)]
+    lock = threading.Lock()
+    skipped = []
+
+    def next_job():
+        with lock:
+            while queue:
+                e = queue.pop(0)
+                st = root_states(P, ep_value)
+                if all(st.get(r) is not None for r in users[e['id']]):
+                    skipped.append(e['id'])
+                    continue
+                return e
+            return None
 
     def run(e):
         d = work / 'jobs' / f'e{e["id"]}'
@@ -147,16 +188,31 @@ def solve(dic, nwords, work, seconds, ttmb, jobs):
         elif (d / 'cert.jsonl.gz').exists() and sol.get('result') not in ('win', 'loss'):
             (d / 'cert.jsonl.gz').unlink()
         (d / 'res.json').write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding='utf-8')
-        return e, sol.get('result'), res['verified']
+        if res['verified']:
+            with lock:
+                ep_value[e['id']] = sol['result'] == 'win'
+        result = sol.get('result')
+        tag = {'win': '둘 차례가 이김', 'loss': '둘 차례가 짐', 'error': '오류'}.get(result, '결론 없음')
+        say(f'  e{e["id"]} ({e["vertex"]}, 루트 {len(e["roots"])}개: {" ".join(e["roots"][:6])}) → {tag}'
+            + (' (검증 통과)' if res['verified'] else (' (검증 실패!)' if result in ('win', 'loss') else '')))
 
-    pending = [e for e in order if todo(e)]
-    say(f'[시작] 고유 작업 {len(P["endpoints"])}개 중 {len(pending)}개를 {int(seconds)}초씩, {jobs}개 동시에 '
-        f'({Path(sc.SOLVER).name}, 증명 {sc.PROOF_FORMAT})')
-    with ThreadPoolExecutor(jobs) as ex:
-        for e, result, ok in ex.map(run, pending):
-            tag = {'win': '둘 차례가 이김', 'loss': '둘 차례가 짐'}.get(result, '결론 없음')
-            say(f'  e{e["id"]} ({e["vertex"]}, 루트 {len(e["roots"])}개: {" ".join(e["roots"][:6])}) → {tag}'
-                + (' (검증 통과)' if ok else (' (검증 실패!)' if result in ('win', 'loss') else '')))
+    def worker():
+        while True:
+            e = next_job()
+            if e is None:
+                return
+            run(e)
+
+    say(f'[시작] 고유 작업 {len(P["endpoints"])}개 중 {len(queue)}개를 {int(seconds)}초씩, {jobs}개 동시에 '
+        f'({Path(sc.SOLVER).name}, 증명 {sc.PROOF_FORMAT}' + (', 공유 캐시' if sc.PROVEN_DIR else '') + ')')
+    th = [threading.Thread(target=worker) for _ in range(jobs)]
+    for t in th:
+        t.start()
+    for t in th:
+        t.join()
+    st = root_states(P, ep_value)
+    say(f'[끝] 확정 루트: 승 {sum(v == "W" for v in st.values())}, 패 {sum(v == "L" for v in st.values())}, '
+        f'미정 {sum(v is None for v in st.values())}; 이미 확정된 루트만 쓰는 작업 {len(skipped)}개는 건너뜀')
     (work / f'SOLVED_{int(seconds)}s').write_text('done\n')
 
 
