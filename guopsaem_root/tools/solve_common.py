@@ -60,7 +60,7 @@ def free_gb(path):
     return shutil.disk_usage(path).free / 2**30
 
 
-def solver_cmd(inp, proof, seconds, ttmb, tt=None):
+def solver_cmd(inp, proof, seconds, ttmb, tt=None, tt_save_max=None):
     """Solver command line. With tt (a path), the search state is checkpointed there every
     CHECKPOINT seconds and loaded again if the file exists, so a job interrupted by a restart
     continues instead of starting over. Returns (cmd, note)."""
@@ -77,8 +77,9 @@ def solver_cmd(inp, proof, seconds, ttmb, tt=None):
                 note = 'resumed from saved state'
             every = max(60.0, 60.0 * int(ttmb) / 1024) if CHECKPOINT == 'auto' else float(CHECKPOINT)
             cmd += ['--tt-save', str(tt), '--checkpoint-seconds', str(every)]
-            if TT_SAVE_MAX:
-                cmd += ['--tt-save-max', str(TT_SAVE_MAX)]
+            keep_max = TT_SAVE_MAX if tt_save_max is None else tt_save_max
+            if keep_max:
+                cmd += ['--tt-save-max', str(keep_max)]
         else:
             note = f'no state saving (free disk {free_gb(tt.parent):.1f} GB)'
     if PROVEN_DIR:
@@ -130,9 +131,9 @@ def parse_solver_output(text, returncode):
         return {'result': 'error', 'returncode': returncode, 'tail': text[-400:]}
 
 
-def solve(inp, proof, seconds, ttmb, tt=None, log=None, keep_unknown=None):
+def solve(inp, proof, seconds, ttmb, tt=None, log=None, keep_unknown=None, tt_save_max=None):
     """Run the solver once (blocking); see solver_cmd. Returns the solver's JSON."""
-    cmd, note = solver_cmd(inp, proof, seconds, ttmb, tt)
+    cmd, note = solver_cmd(inp, proof, seconds, ttmb, tt, tt_save_max)
     out = subprocess.run(cmd, capture_output=True, text=True)
     if log is not None:
         Path(log).write_text(' '.join(cmd) + '\n' + out.stdout + out.stderr)
