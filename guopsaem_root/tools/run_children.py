@@ -69,11 +69,11 @@ def main():
             tt = d / f'{k}.tt' if save else None
             cmd, note = sc.solver_cmd(d / f'{k}.txt', d / f'{k}.pf.gz', seconds, ttmb, tt)
             out = open(d / f'{k}.out', 'w')
-            running[k] = (subprocess.Popen(cmd, stdout=out, stderr=subprocess.STDOUT), out, tt)
+            running[k] = (subprocess.Popen(cmd, stdout=out, stderr=subprocess.STDOUT), out, tt, cmd)
             say(f'  풀기 시작: {word[k]}' + (f' ({note})' if note else ''))
         time.sleep(2)
         for k in list(running):
-            p, out, tt = running[k]
+            p, out, tt, cmd = running[k]
             if p.poll() is None:
                 continue
             out.close()
@@ -83,6 +83,9 @@ def main():
             res[k] = r
             (d / f'res_{k}.json').write_text(json.dumps(r, ensure_ascii=False), encoding='utf-8')
             sc.finish_tt(tt, r, keep_unknown=True)
+            pm = sc.merge_proven(cmd, ttmb)
+            if pm is not None:
+                r['proven_merge'] = pm
             if r['result'] == 'loss':
                 say(f'  ★ {word[k]} → 상대가 짐. 받는 쪽이 이기는 첫 수입니다 (증명 {r.get("proof_nodes", 0):,}국면, {r["seconds"]:.0f}초)')
                 found = k
@@ -92,7 +95,7 @@ def main():
                 say(f'  {word[k]} → {int(seconds)}초 안에 결론 없음 ({r.get("reason", r["result"])})')
                 if (d / f'{k}.pf.gz').exists():
                     (d / f'{k}.pf.gz').unlink()
-    for k, (p, out, tt) in running.items():
+    for k, (p, out, tt, cmd) in running.items():
         p.terminate(); p.wait(); out.close()
         say(f'  멈춤: {word[k]} (이기는 수를 찾아서 더 풀 필요 없음; 저장된 계산 상태는 남김)')
 

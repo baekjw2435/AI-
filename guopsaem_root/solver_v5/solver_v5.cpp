@@ -1,3 +1,15 @@
+// solver_v5 (with the proven-state cache): solver_v5 plus a proven-state cache shared across jobs of the same dictionary.
+//   --proven-save FILE   at the end, write every proven TT entry (pn == 0 or dn == 0) to FILE; the header
+//                        binds the file to the game graph (graph_fingerprint) but NOT to the root.
+//   --proven-load FILE   (repeatable) before the search, insert the entries of FILE into the TT as proven
+//                        hints with work = PROVEN_BASE + original work, so the replacement policy keeps them.
+//   --proven-min-work W  save only entries whose (original) work is >= W (default 1 = all).
+//   --proven-load-min-work W  load only entries whose recorded work is >= W (default 1 = all).
+//   --proven-save-loaded 0|1  also save entries that came from --proven-load (default 0: only new proofs).
+// Proven values are properties of the canonical state (vertex + canonical counts); the Zobrist keys depend
+// only on the game graph. Loaded entries are hints: certificates are still produced by replay with the
+// reference canonicalization and checked by the verifier. Without these options the behaviour is solver_v5's.
+//
 // solver_v5: solver_v4 with the same search and fewer CPU cycles per node: the search state is
 // changed in place and restored from an undo log instead of being copied at every depth, rows of
 // State::succ are masked lazily, and the breadth-first searches read the rows directly.
@@ -540,6 +552,10 @@ struct Opt {
   double progress = 0;  // seconds between stderr progress lines (0 = off)
   string tt_load, tt_save;
   double checkpoint = 0;  // seconds between TT checkpoints to tt_save (0 = only at the end)
+  vector<string> proven_load;
+  string proven_save;
+  u32 proven_min_work = 1, proven_load_min_work = 1;
+  bool proven_save_loaded = false;
 } opt;
 static TT tt;
 
@@ -632,6 +648,96 @@ static u64 tt_load(const string& path, const State& root) {
   if (fgetc(f) != EOF) fail("trailing data");
   fclose(f);
   tt.stores = 0; tt.replacements = 0;
+  return h.count;
+}
+
+// ---------------------------------------------------------------- proven-state cache (--proven-save / --proven-load)
+// File: PCHeader, then count records of 24 bytes {k0, k1, work (u32), best (u16), result (u8: 1 = W for the
+// player to move, 0 = L), 0 (u8)}, then {count, checksum} and an end marker. Bound to the game graph only.
+static const char PC_MAGIC[8] = {'Y', 'S', 'P', 'C', '1', 0, 0, 0};
+static const char PC_END[8] = {'Y', 'S', 'P', 'C', 'E', 'N', 'D', 0};
+static constexpr u32 PROVEN_BASE = 0x40000000u;  // loaded entries: work = PROVEN_BASE + min(work, PROVEN_BASE - 1)
+struct PCHeader {
+  char magic[8];
+  u64 graph0, graph1;
+  u32 min_work, reserved;
+  u64 count, created;
+};
+struct PCRec { u64 k0, k1; u32 work; u16 best; u8 win, pad; };
+static_assert(sizeof(PCRec) == 24, "PCRec layout");
+static u64 proven_save(const string& path, u64& skipped_small, u64& skipped_loaded) {
+  const string tmp = path + ".tmp";
+  FILE* f = fopen(tmp.c_str(), "wb");
+  if (!f) throw runtime_error("cannot create proven file");
+  PCHeader h; memset(&h, 0, sizeof h);
+  memcpy(h.magic, PC_MAGIC, 8);
+  graph_fingerprint(h.graph0, h.graph1);
+  h.min_work = opt.proven_min_work;
+  h.created = (u64)time(nullptr);
+  bool ok = fwrite(&h, sizeof h, 1, f) == 1;
+  u64 ck = 0x5eedcac4e, n = 0;
+  skipped_small = skipped_loaded = 0;
+  vector<PCRec> buf; buf.reserve(8192);
+  auto flush = [&]() { if (ok && !buf.empty()) ok = fwrite(buf.data(), sizeof(PCRec), buf.size(), f) == buf.size(); buf.clear(); };
+  for (u64 i = 0; ok && i < tt.nb * 4; i++) {
+    Entry& e = tt.tab[i];
+    u64 D = e.d.load(memory_order_relaxed);
+    if (!(D >> 63)) continue;
+    u64 B = e.b.load(memory_order_relaxed), A = e.a.load(memory_order_relaxed), C = e.c.load(memory_order_relaxed);
+    u32 pn = (u32)C, dn = (u32)(C >> 32);
+    if (pn != 0 && dn != 0) continue;
+    u32 work = (u32)D;
+    if (work >= PROVEN_BASE) {
+      if (!opt.proven_save_loaded) { skipped_loaded++; continue; }
+      work -= PROVEN_BASE;
+    }
+    if (work < opt.proven_min_work) { skipped_small++; continue; }
+    PCRec r; memset(&r, 0, sizeof r);
+    r.k0 = A ^ C ^ D; r.k1 = B; r.work = work; r.best = (u16)((D >> 32) & 0xFFFF); r.win = pn == 0 ? 1 : 0;
+    ck_add(ck, r.k0); ck_add(ck, r.k1); ck_add(ck, (u64)r.work | ((u64)r.best << 32) | ((u64)r.win << 48));
+    buf.push_back(r); n++;
+    if (buf.size() == buf.capacity()) flush();
+  }
+  flush();
+  u64 tail[2] = {n, ck};
+  if (ok) ok = fwrite(tail, 8, 2, f) == 2 && fwrite(PC_END, 8, 1, f) == 1;
+  if (ok) { h.count = n; ok = fseek(f, 0, SEEK_SET) == 0 && fwrite(&h, sizeof h, 1, f) == 1; }
+  if (fclose(f) != 0) ok = false;
+  if (!ok) { remove(tmp.c_str()); throw runtime_error("proven file write failure"); }
+  if (rename(tmp.c_str(), path.c_str())) { remove(tmp.c_str()); throw runtime_error("proven file rename failure"); }
+  return n;
+}
+static u64 proven_load(const string& path, u64& inserted) {
+  FILE* f = fopen(path.c_str(), "rb");
+  if (!f) throw runtime_error("cannot open proven file " + path);
+  PCHeader h, want; memset(&want, 0, sizeof want);
+  graph_fingerprint(want.graph0, want.graph1);
+  auto fail = [&](const string& why) { fclose(f); throw runtime_error("proven file refused (" + path + "): " + why); };
+  if (fread(&h, sizeof h, 1, f) != 1 || memcmp(h.magic, PC_MAGIC, 8)) fail("not a proven-cache file");
+  if (h.graph0 != want.graph0 || h.graph1 != want.graph1) fail("different game graph (groups, endpoints or hash keys)");
+  u64 ck = 0x5eedcac4e;
+  vector<PCRec> buf(8192);
+  for (u64 done = 0; done < h.count;) {
+    size_t k = (size_t)min<u64>(h.count - done, 8192);
+    if (fread(buf.data(), sizeof(PCRec), k, f) != k) fail("truncated");
+    for (size_t r = 0; r < k; r++) {
+      const PCRec& x = buf[r];
+      if (x.win > 1 || x.pad) fail("bad record");
+      ck_add(ck, x.k0); ck_add(ck, x.k1); ck_add(ck, (u64)x.work | ((u64)x.best << 32) | ((u64)x.win << 48));
+      if (x.work < opt.proven_load_min_work) continue;
+      inserted++;
+      u32 w = PROVEN_BASE + min<u32>(x.work, PROVEN_BASE - 1);
+      int best = x.best == 0xFFFF ? -1 : (int)x.best;
+      if (x.win) tt.store(x.k0, x.k1, 0, INF, w, best);
+      else tt.store(x.k0, x.k1, INF, 0, w, best);
+    }
+    done += k;
+  }
+  u64 tail[2]; char end[8];
+  if (fread(tail, 8, 2, f) != 2 || fread(end, 8, 1, f) != 1 || memcmp(end, PC_END, 8)) fail("truncated");
+  if (tail[0] != h.count || tail[1] != ck) fail("checksum mismatch");
+  if (fgetc(f) != EOF) fail("trailing data");
+  fclose(f);
   return h.count;
 }
 
@@ -963,7 +1069,7 @@ static string jnum(double x) { char b[64]; snprintf(b, sizeof b, "%.6f", x); ret
 
 int main(int argc, char** argv) {
   try {
-    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--proof-format v3|v4] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--checkpoint-seconds S]");
+    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--proof-format v3|v4] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--checkpoint-seconds S] [--proven-load FILE]... [--proven-save FILE] [--proven-min-work W] [--proven-save-loaded 0|1]");
     for (int i = 2; i < argc; i++) {
       string x = argv[i];
       if (i + 1 >= argc) throw runtime_error("missing option value");
@@ -986,6 +1092,11 @@ int main(int argc, char** argv) {
       else if (x == "--tt-load") opt.tt_load = v;
       else if (x == "--tt-save") opt.tt_save = v;
       else if (x == "--checkpoint-seconds") opt.checkpoint = stod(v);
+      else if (x == "--proven-load") opt.proven_load.push_back(v);
+      else if (x == "--proven-save") opt.proven_save = v;
+      else if (x == "--proven-min-work") opt.proven_min_work = (u32)max(1ull, min(stoull(v), (unsigned long long)PROVEN_BASE - 1));
+      else if (x == "--proven-load-min-work") opt.proven_load_min_work = (u32)max(1ull, min(stoull(v), (unsigned long long)PROVEN_BASE - 1));
+      else if (x == "--proven-save-loaded") opt.proven_save_loaded = stoi(v) != 0;
       else throw runtime_error("unknown option: " + x);
     }
     if (!isfinite(opt.seconds) || opt.seconds < 0 || opt.threads < 1 || opt.threads > 64 || opt.tt_mb < 1 || opt.eps < 0 ||
@@ -1009,6 +1120,16 @@ int main(int argc, char** argv) {
       auto t0 = chrono::steady_clock::now();
       tt_loaded = tt_load(opt.tt_load, root);
       tt_load_s = chrono::duration<double>(chrono::steady_clock::now() - t0).count();
+    }
+    u64 pc_loaded = 0, pc_inserted = 0, pc_saved = 0, pc_skip_small = 0, pc_skip_loaded = 0, pc_used_after_load = 0;
+    double pc_load_s = 0, pc_save_s = 0;
+    string pc_save_error;
+    if (!opt.proven_load.empty()) {
+      auto t0 = chrono::steady_clock::now();
+      for (auto& pth : opt.proven_load) pc_loaded += proven_load(pth, pc_inserted);
+      pc_used_after_load = tt.used();
+      tt.stores = 0; tt.replacements = 0;
+      pc_load_s = chrono::duration<double>(chrono::steady_clock::now() - t0).count();
     }
     auto save_now = [&]() {
       auto t0 = chrono::steady_clock::now();
@@ -1131,7 +1252,17 @@ int main(int argc, char** argv) {
       }
       emit_deadline_on = false;
     }
+    if (!opt.proven_save.empty()) {
+      auto t0 = chrono::steady_clock::now();
+      try { pc_saved = proven_save(opt.proven_save, pc_skip_small, pc_skip_loaded); } catch (const exception& e) { pc_save_error = e.what(); }
+      pc_save_s = chrono::duration<double>(chrono::steady_clock::now() - t0).count();
+    }
     u64 used = tt.used();
+    if (!opt.proven_load.empty() || !opt.proven_save.empty())
+      fprintf(stderr, "{\"proven_loaded\":%llu,\"proven_inserted\":%llu,\"proven_tt_used_after_load\":%llu,\"proven_load_seconds\":%s,\"proven_saved\":%llu,"
+              "\"proven_skipped_small\":%llu,\"proven_skipped_loaded\":%llu,\"proven_save_seconds\":%s,\"proven_save_error\":\"%s\"}\n",
+              (unsigned long long)pc_loaded, (unsigned long long)pc_inserted, (unsigned long long)pc_used_after_load, jnum(pc_load_s).c_str(), (unsigned long long)pc_saved,
+              (unsigned long long)pc_skip_small, (unsigned long long)pc_skip_loaded, jnum(pc_save_s).c_str(), pc_save_error.c_str());
     printf("{\"result\":\"%s\",\"reason\":\"%s\",\"mid_calls\":%llu,\"child_gens\":%llu,\"tt_entries\":%llu,\"tt_capacity\":%llu,\"tt_mb\":%zu,"
            "\"tt_stores\":%llu,\"tt_replacements\":%llu,\"seconds\":%s,\"pn\":%u,\"dn\":%u,\"best_group\":%d,\"threads\":%d,"
            "\"eps\":%g,\"init\":%d,\"wpn\":%d,\"proof_nodes\":%llu,\"emit_resolves\":%llu,\"emit_resolve_mid\":%llu,"
@@ -1145,7 +1276,7 @@ int main(int argc, char** argv) {
            (unsigned long long)resolve_mid, (unsigned long long)crosschecks, jnum(emit_s).c_str(),
            (unsigned long long)g_selfchecks.load(), proof_error.c_str(), (unsigned long long)tt_loaded, jnum(tt_load_s).c_str(),
            (unsigned long long)tt_saves, (unsigned long long)tt_saved, jnum(tt_save_s).c_str(), tt_save_error.c_str());
-    return !proof_error.empty() ? 3 : !tt_save_error.empty() ? 4 : 0;
+    return !proof_error.empty() ? 3 : !tt_save_error.empty() ? 4 : !pc_save_error.empty() ? 5 : 0;
   } catch (const exception& e) {
     fprintf(stderr, "solver error: %s\n", e.what());
     return 2;

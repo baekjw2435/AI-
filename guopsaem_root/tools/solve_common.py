@@ -11,6 +11,11 @@ Environment (defaults in brackets):
   MIN_FREE_GB         do not start a job (or do not save state) below this free disk [4]
   VERIFY_LOCK         lock file so that only one big verification runs at a time
   BIG_PROOF_NODES     certificates at least this big take the lock [200000]
+  PROVEN_DIR          if set: shared proven-state cache. Every job loads PROVEN_DIR/merged.pc and saves
+                      its own proven entries, which are then merged into merged.pc (under a lock), keeping
+                      at most PROVEN_MAX records with the largest work [half of the job's table entries].
+                      Only search hints: certificates are still rebuilt and verified.
+  PCMERGE             merge tool [/home/user/AI-/.work/measure/pcmerge]
 
 A certificate is accepted only if ALL hold: verifier exit code 0, "verified": true, the
 expected result, "state_storage": "deflate-exact" (v4), and the dictionary, position, input
@@ -35,6 +40,8 @@ KEEP_UNKNOWN_TT = os.environ.get('KEEP_UNKNOWN_TT', '0') == '1'
 MIN_FREE_GB = float(os.environ.get('MIN_FREE_GB', '4'))
 LOCK = Path(os.environ.get('VERIFY_LOCK', '/home/user/AI-/.work/verify.lock'))
 BIG = int(os.environ.get('BIG_PROOF_NODES', '200000'))
+PROVEN_DIR = os.environ.get('PROVEN_DIR')
+PCMERGE = os.environ.get('PCMERGE', '/home/user/AI-/.work/measure/pcmerge')
 
 
 def sha256_file(path):
@@ -68,7 +75,35 @@ def solver_cmd(inp, proof, seconds, ttmb, tt=None):
             cmd += ['--tt-save', str(tt), '--checkpoint-seconds', str(every)]
         else:
             note = f'no state saving (free disk {free_gb(tt.parent):.1f} GB)'
+    if PROVEN_DIR:
+        pdir = Path(PROVEN_DIR); (pdir / 'jobs').mkdir(parents=True, exist_ok=True)
+        if (pdir / 'merged.pc').exists():
+            cmd += ['--proven-load', str(pdir / 'merged.pc')]
+        cmd += ['--proven-save', str(pdir / 'jobs' / (Path(proof).name.split('.')[0] + '_' + str(os.getpid()) + '_'
+                                                       + str(abs(hash(str(proof))) % 10**8) + '.pc'))]
     return cmd, note
+
+
+def merge_proven(cmd, ttmb):
+    """After a job: fold its proven entries into PROVEN_DIR/merged.pc (one merge at a time)."""
+    if not PROVEN_DIR or '--proven-save' not in cmd:
+        return None
+    pdir = Path(PROVEN_DIR)
+    job = Path(cmd[cmd.index('--proven-save') + 1])
+    if not job.exists():
+        return {'merge': 'no job file'}
+    cap = int(os.environ.get('PROVEN_MAX', str((int(ttmb) << 20) // 32 // 2)))
+    with open(pdir / 'merge.lock', 'w') as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        ins = ([str(pdir / 'merged.pc')] if (pdir / 'merged.pc').exists() else []) + [str(job)]
+        r = subprocess.run([PCMERGE, str(pdir / 'merged.pc'), str(cap)] + ins, capture_output=True, text=True)
+    if r.returncode == 0:
+        job.unlink()
+        try:
+            return json.loads(r.stdout)
+        except ValueError:
+            return {'merge': r.stdout[-200:]}
+    return {'merge_error': r.stderr[-300:]}
 
 
 def finish_tt(tt, sol, keep_unknown):
@@ -98,6 +133,15 @@ def solve(inp, proof, seconds, ttmb, tt=None, log=None, keep_unknown=None):
     sol = parse_solver_output(out.stdout, out.returncode)
     if note:
         sol['run_note'] = note
+    for line in out.stderr.splitlines():
+        if line.startswith('{"proven'):
+            try:
+                sol['proven'] = json.loads(line)
+            except ValueError:
+                pass
+    pm = merge_proven(cmd, ttmb)
+    if pm is not None:
+        sol['proven_merge'] = pm
     finish_tt(tt, sol, KEEP_UNKNOWN_TT if keep_unknown is None else keep_unknown)
     return sol
 
