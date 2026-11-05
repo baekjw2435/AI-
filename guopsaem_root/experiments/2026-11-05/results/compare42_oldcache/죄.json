@@ -1,0 +1,58 @@
+{
+ "syllable": "죄",
+ "members": [
+  "죄"
+ ],
+ "vertex": "죄",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 53562368,
+  "child_gens": 131644517,
+  "tt_entries": 16698263,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 53562368,
+  "tt_replacements": 26601905,
+  "seconds": 120.000574,
+  "pn": 6794,
+  "dn": 2689,
+  "best_group": 427,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16698263,
+  "tt_save_seconds": 1.529316,
+  "tt_save_error": "",
+  "proven": {
+   "proven_loaded": 8388608,
+   "proven_inserted": 8388608,
+   "proven_tt_used_after_load": 8326123,
+   "proven_load_seconds": 1.528634,
+   "proven_saved": 3346606,
+   "proven_skipped_small": 0,
+   "proven_skipped_loaded": 7995485,
+   "proven_save_seconds": 0.267389,
+   "proven_save_error": ""
+  },
+  "proven_merge": {
+   "read": 11735214,
+   "distinct": 11734688,
+   "written": 8388608
+  }
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

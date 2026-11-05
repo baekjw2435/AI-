@@ -1,0 +1,40 @@
+{
+ "endpoint": 12,
+ "vertex": "적",
+ "roots": [
+  "낙"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 18127872,
+  "child_gens": 44569864,
+  "tt_entries": 10059784,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 18127872,
+  "tt_replacements": 853259,
+  "seconds": 40.00091,
+  "pn": 812,
+  "dn": 5577,
+  "best_group": 399,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 1,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.257284,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

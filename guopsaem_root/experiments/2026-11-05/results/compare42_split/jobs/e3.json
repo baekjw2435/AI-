@@ -1,0 +1,40 @@
+{
+ "endpoint": 3,
+ "vertex": "식",
+ "roots": [
+  "객"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 26030080,
+  "child_gens": 65376307,
+  "tt_entries": 12915303,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 26030080,
+  "tt_replacements": 2775522,
+  "seconds": 60.001695,
+  "pn": 1613,
+  "dn": 5461,
+  "best_group": 296,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 1,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.246301,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

@@ -1,0 +1,42 @@
+{
+ "syllable": "웅",
+ "members": [
+  "웅"
+ ],
+ "vertex": "웅",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 40344576,
+  "child_gens": 100656735,
+  "tt_entries": 15528931,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 40344576,
+  "tt_replacements": 8904947,
+  "seconds": 80.001409,
+  "pn": 22844,
+  "dn": 913,
+  "best_group": 389,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 3,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.787368,
+  "tt_save_error": ""
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

@@ -1,0 +1,42 @@
+{
+ "syllable": "갑",
+ "members": [
+  "갑"
+ ],
+ "vertex": "갑",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 54023168,
+  "child_gens": 136767562,
+  "tt_entries": 16407197,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 54023168,
+  "tt_replacements": 16502456,
+  "seconds": 120.001066,
+  "pn": 5812,
+  "dn": 4066,
+  "best_group": 1,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16407197,
+  "tt_save_seconds": 4.169886,
+  "tt_save_error": ""
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

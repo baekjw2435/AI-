@@ -1,0 +1,58 @@
+{
+ "syllable": "맥",
+ "members": [
+  "맥"
+ ],
+ "vertex": "맥",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 54325248,
+  "child_gens": 134856951,
+  "tt_entries": 16691931,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 54325248,
+  "tt_replacements": 26045068,
+  "seconds": 120.000511,
+  "pn": 8715,
+  "dn": 1423,
+  "best_group": 151,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16691931,
+  "tt_save_seconds": 1.588096,
+  "tt_save_error": "",
+  "proven": {
+   "proven_loaded": 8388608,
+   "proven_inserted": 8388608,
+   "proven_tt_used_after_load": 8272936,
+   "proven_load_seconds": 1.645512,
+   "proven_saved": 3315823,
+   "proven_skipped_small": 0,
+   "proven_skipped_loaded": 7819912,
+   "proven_save_seconds": 0.297653,
+   "proven_save_error": ""
+  },
+  "proven_merge": {
+   "read": 11704431,
+   "distinct": 11703211,
+   "written": 8388608
+  }
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

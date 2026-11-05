@@ -1,0 +1,40 @@
+{
+ "endpoint": 72,
+ "vertex": "명",
+ "roots": [
+  "혁"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 27600896,
+  "child_gens": 69872867,
+  "tt_entries": 13418010,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 27600896,
+  "tt_replacements": 3439069,
+  "seconds": 60.001774,
+  "pn": 888,
+  "dn": 16526,
+  "best_group": 174,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 1,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.265596,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

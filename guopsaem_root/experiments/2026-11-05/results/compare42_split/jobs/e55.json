@@ -1,0 +1,40 @@
+{
+ "endpoint": 55,
+ "vertex": "순",
+ "roots": [
+  "칠"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 17736704,
+  "child_gens": 44841862,
+  "tt_entries": 9520970,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 17736704,
+  "tt_replacements": 689959,
+  "seconds": 40.000344,
+  "pn": 1424,
+  "dn": 6282,
+  "best_group": 277,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 1,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.273962,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

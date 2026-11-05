@@ -1,0 +1,58 @@
+{
+ "syllable": "갑",
+ "members": [
+  "갑"
+ ],
+ "vertex": "갑",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 51900416,
+  "child_gens": 131678482,
+  "tt_entries": 16326095,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 51900416,
+  "tt_replacements": 15352953,
+  "seconds": 120.006224,
+  "pn": 6576,
+  "dn": 3857,
+  "best_group": 0,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16326095,
+  "tt_save_seconds": 2.050337,
+  "tt_save_error": "",
+  "proven": {
+   "proven_loaded": 0,
+   "proven_inserted": 0,
+   "proven_tt_used_after_load": 0,
+   "proven_load_seconds": 0.0,
+   "proven_saved": 5059713,
+   "proven_skipped_small": 0,
+   "proven_skipped_loaded": 0,
+   "proven_save_seconds": 0.288805,
+   "proven_save_error": ""
+  },
+  "proven_merge": {
+   "read": 11887440,
+   "distinct": 11859014,
+   "written": 8388608
+  }
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

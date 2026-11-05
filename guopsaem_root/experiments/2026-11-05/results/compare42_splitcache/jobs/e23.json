@@ -1,0 +1,56 @@
+{
+ "endpoint": 23,
+ "vertex": "돌",
+ "roots": [
+  "벽"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 53076992,
+  "child_gens": 134242807,
+  "tt_entries": 16665536,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 53076992,
+  "tt_replacements": 26021276,
+  "seconds": 120.001883,
+  "pn": 3390,
+  "dn": 7556,
+  "best_group": 139,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.499586,
+  "tt_save_error": "",
+  "proven": {
+   "proven_loaded": 8388608,
+   "proven_inserted": 8388608,
+   "proven_tt_used_after_load": 8295970,
+   "proven_load_seconds": 1.878744,
+   "proven_saved": 2555625,
+   "proven_skipped_small": 0,
+   "proven_skipped_loaded": 7897922,
+   "proven_save_seconds": 0.227854,
+   "proven_save_error": ""
+  },
+  "proven_merge": {
+   "read": 10944233,
+   "distinct": 10944099,
+   "written": 8388608
+  }
+ },
+ "verified": false
+}

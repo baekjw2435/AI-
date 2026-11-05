@@ -1,0 +1,40 @@
+{
+ "endpoint": 67,
+ "vertex": "약",
+ "roots": [
+  "탕"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 28650496,
+  "child_gens": 74392718,
+  "tt_entries": 13323582,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 28650496,
+  "tt_replacements": 3420138,
+  "seconds": 60.000887,
+  "pn": 4438,
+  "dn": 4162,
+  "best_group": 330,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 1,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.259675,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

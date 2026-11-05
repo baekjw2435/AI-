@@ -1,0 +1,5 @@
+old 1451
+oldcache 1779
+new 3625
+split 1890
+splitcache 2799

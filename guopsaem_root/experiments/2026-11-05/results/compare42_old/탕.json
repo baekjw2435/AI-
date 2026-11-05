@@ -1,0 +1,42 @@
+{
+ "syllable": "탕",
+ "members": [
+  "탕"
+ ],
+ "vertex": "탕",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 61035520,
+  "child_gens": 154279768,
+  "tt_entries": 16575208,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 61035520,
+  "tt_replacements": 20532107,
+  "seconds": 120.001139,
+  "pn": 4466,
+  "dn": 5837,
+  "best_group": 550,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16575208,
+  "tt_save_seconds": 1.25276,
+  "tt_save_error": ""
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

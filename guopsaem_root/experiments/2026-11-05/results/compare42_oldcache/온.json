@@ -1,0 +1,58 @@
+{
+ "syllable": "온",
+ "members": [
+  "온"
+ ],
+ "vertex": "온",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 53990400,
+  "child_gens": 137555282,
+  "tt_entries": 16674279,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 53990400,
+  "tt_replacements": 26153011,
+  "seconds": 120.000192,
+  "pn": 3643,
+  "dn": 7195,
+  "best_group": 362,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16674279,
+  "tt_save_seconds": 1.497394,
+  "tt_save_error": "",
+  "proven": {
+   "proven_loaded": 8388608,
+   "proven_inserted": 8388608,
+   "proven_tt_used_after_load": 8324019,
+   "proven_load_seconds": 1.689674,
+   "proven_saved": 2338225,
+   "proven_skipped_small": 0,
+   "proven_skipped_loaded": 7979724,
+   "proven_save_seconds": 0.24914,
+   "proven_save_error": ""
+  },
+  "proven_merge": {
+   "read": 10726833,
+   "distinct": 10726370,
+   "written": 8388608
+  }
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

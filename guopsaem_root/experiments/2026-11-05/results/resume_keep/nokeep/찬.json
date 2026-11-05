@@ -1,0 +1,42 @@
+{
+ "syllable": "찬",
+ "members": [
+  "찬"
+ ],
+ "vertex": "찬",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 36637696,
+  "child_gens": 94985459,
+  "tt_entries": 14728198,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 36637696,
+  "tt_replacements": 6039478,
+  "seconds": 80.000034,
+  "pn": 1256,
+  "dn": 7228,
+  "best_group": 499,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 3,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.802422,
+  "tt_save_error": ""
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

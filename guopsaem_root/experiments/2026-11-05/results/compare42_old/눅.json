@@ -1,0 +1,42 @@
+{
+ "syllable": "눅",
+ "members": [
+  "눅"
+ ],
+ "vertex": "눅",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 58202112,
+  "child_gens": 145854644,
+  "tt_entries": 16524153,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 58202112,
+  "tt_replacements": 18792356,
+  "seconds": 120.001656,
+  "pn": 24002,
+  "dn": 651,
+  "best_group": 118,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16524153,
+  "tt_save_seconds": 1.339179,
+  "tt_save_error": ""
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

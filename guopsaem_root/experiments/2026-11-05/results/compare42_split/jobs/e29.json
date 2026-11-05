@@ -1,0 +1,40 @@
+{
+ "endpoint": 29,
+ "vertex": "충",
+ "roots": [
+  "솥"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 57182208,
+  "child_gens": 143704922,
+  "tt_entries": 16474140,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 57182208,
+  "tt_replacements": 17883068,
+  "seconds": 120.001265,
+  "pn": 4683,
+  "dn": 4552,
+  "best_group": 520,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.515738,
+  "tt_save_error": ""
+ },
+ "verified": false
+}
