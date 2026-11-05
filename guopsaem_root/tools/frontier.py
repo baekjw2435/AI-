@@ -20,6 +20,7 @@ included) and verified with every acceptance condition for each raw syllable of 
 Nothing here is trusted: only the final verification of each root certificate counts.
 """
 import json
+import os
 import subprocess
 import sys
 import time
@@ -151,13 +152,26 @@ def solve(dic, nwords, work, seconds, ttmb, jobs):
     users = {e['id']: sorted({P['requests'][i]['root'] for i, q in enumerate(P['requests']) if q['endpoint'] == e['id']})
              for e in P['endpoints']}
 
+    # PER_ROOT_BUDGET=1: SECONDS is a budget per ROOT, split evenly over that root's first-move
+    # requests (an endpoint shared by several roots gets the largest of their shares), so that a
+    # comparison with solving the root directly uses the same total time per syllable.
+    per_root = os.environ.get('PER_ROOT_BUDGET') == '1'
+    nreq = {}
+    for q in P['requests']:
+        nreq[q['root']] = nreq.get(q['root'], 0) + 1
+
+    def budget(e):
+        if not per_root:
+            return seconds
+        return max(seconds / nreq[q['root']] for q in P['requests'] if q['endpoint'] == e['id'])
+
     def todo(e):
         f = work / 'jobs' / f'e{e["id"]}' / 'res.json'
         if not f.exists():
             return True
         r = json.loads(f.read_text(encoding='utf-8'))
         return not r.get('verified') and r['solver'].get('result') not in ('win', 'loss') \
-            and r['solver'].get('seconds', 0) < seconds - 1
+            and r['solver'].get('seconds', 0) < budget(e) - 1
 
     queue = [e for e in order if todo(e)]
     lock = threading.Lock()
@@ -177,7 +191,7 @@ def solve(dic, nwords, work, seconds, ttmb, jobs):
     def run(e):
         d = work / 'jobs' / f'e{e["id"]}'
         sc.wait_for_disk(work, f'e{e["id"]}')
-        sol = sc.solve(d / 'in.txt', d / 'cert.jsonl.gz', seconds, ttmb, tt=d / 'state.tt', log=d / 'solver.out')
+        sol = sc.solve(d / 'in.txt', d / 'cert.jsonl.gz', budget(e), ttmb, tt=d / 'state.tt', log=d / 'solver.out')
         res = {'endpoint': e['id'], 'vertex': e['vertex'], 'roots': e['roots'], 'solver': sol, 'verified': False}
         if sol.get('result') in ('win', 'loss') and not sol.get('proof_error'):
             want = 'W' if sol['result'] == 'win' else 'L'

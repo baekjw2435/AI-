@@ -7,7 +7,10 @@ Environment (defaults in brackets):
   PROOF_FORMAT        v4 or v3 [v4]
   VERIFY_V4           C++ verifier binary for v4 certificates [/home/user/AI-/.work/measure/verify_v4]
   CHECKPOINT_SECONDS  search-state checkpoint interval while a job runs [auto: 60 s per GB of table, at least 60 s]
-  KEEP_UNKNOWN_TT     1 = keep the saved search state of a job that ended undecided [0]
+  KEEP_UNKNOWN_TT     1 = keep the saved search state of a job that ended undecided, so a later
+                      (longer) run of the same job continues from it [1]
+  TT_SAVE_MAX         saved states keep only the N table entries with the most work [1000000 = 32 MB];
+                      0 = keep everything (up to the whole table, e.g. 1 GB per job)
   MIN_FREE_GB         do not start a job (or do not save state) below this free disk [4]
   VERIFY_LOCK         lock file so that only one big verification runs at a time
   BIG_PROOF_NODES     certificates at least this big take the lock [200000]
@@ -36,7 +39,8 @@ SOLVER = os.environ.get('SOLVER', os.environ.get('SOLVER_V4', '/home/user/AI-/.w
 PROOF_FORMAT = os.environ.get('PROOF_FORMAT', 'v4')
 VERIFY_V4 = os.environ.get('VERIFY_V4', '/home/user/AI-/.work/measure/verify_v4')
 CHECKPOINT = os.environ.get('CHECKPOINT_SECONDS', 'auto')
-KEEP_UNKNOWN_TT = os.environ.get('KEEP_UNKNOWN_TT', '0') == '1'
+KEEP_UNKNOWN_TT = os.environ.get('KEEP_UNKNOWN_TT', '1') == '1'
+TT_SAVE_MAX = int(os.environ.get('TT_SAVE_MAX', '1000000'))
 MIN_FREE_GB = float(os.environ.get('MIN_FREE_GB', '4'))
 LOCK = Path(os.environ.get('VERIFY_LOCK', '/home/user/AI-/.work/verify.lock'))
 BIG = int(os.environ.get('BIG_PROOF_NODES', '200000'))
@@ -73,6 +77,8 @@ def solver_cmd(inp, proof, seconds, ttmb, tt=None):
                 note = 'resumed from saved state'
             every = max(60.0, 60.0 * int(ttmb) / 1024) if CHECKPOINT == 'auto' else float(CHECKPOINT)
             cmd += ['--tt-save', str(tt), '--checkpoint-seconds', str(every)]
+            if TT_SAVE_MAX:
+                cmd += ['--tt-save-max', str(TT_SAVE_MAX)]
         else:
             note = f'no state saving (free disk {free_gb(tt.parent):.1f} GB)'
     if PROVEN_DIR:
@@ -113,7 +119,7 @@ def finish_tt(tt, sol, keep_unknown):
     tt = Path(tt)
     if Path(str(tt) + '.tmp').exists():
         Path(str(tt) + '.tmp').unlink()
-    if tt.exists() and (sol.get('result') in ('win', 'loss') or not keep_unknown):
+    if tt.exists() and (sol.get('result') in ('win', 'loss') or not keep_unknown or free_gb(tt.parent) < MIN_FREE_GB):
         tt.unlink()
 
 

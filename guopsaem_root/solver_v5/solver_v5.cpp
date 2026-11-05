@@ -551,6 +551,7 @@ struct Opt {
   int init_div = 16;
   double progress = 0;  // seconds between stderr progress lines (0 = off)
   string tt_load, tt_save;
+  u64 tt_save_max = 0;  // 0: save every entry; N: save only the N entries with the most work (smaller kept state)
   double checkpoint = 0;  // seconds between TT checkpoints to tt_save (0 = only at the end)
   vector<string> proven_load;
   string proven_save;
@@ -599,11 +600,35 @@ static u64 tt_save(const string& path, const State& root) {
   h.created = (u64)time(nullptr);
   bool ok = fwrite(&h, sizeof h, 1, f) == 1;
   u64 ck = 0x5eedc0de, n = 0;
+  // --tt-save-max N: keep the N entries with the most work (the costliest results to recompute).
+  // Threshold from a histogram of floor(log2(work)); entries in the threshold bucket are taken in
+  // table order until N is reached. Loaded values are only hints, so a smaller state is still exact.
+  int cut_bucket = -1; u64 cut_room = ~0ull;
+  if (opt.tt_save_max) {
+    u64 hist[33] = {0};
+    for (u64 i = 0; i < tt.nb * 4; i++) {
+      u64 D = tt.tab[i].d.load(memory_order_relaxed);
+      if (!(D >> 63)) continue;
+      u32 w = (u32)D;
+      hist[w ? 32 - __builtin_clz(w) : 0]++;
+    }
+    u64 acc = 0;
+    for (int b = 32; b >= 0; b--) {
+      if (acc + hist[b] >= opt.tt_save_max) { cut_bucket = b; cut_room = opt.tt_save_max - acc; break; }
+      acc += hist[b];
+    }
+  }
   vector<u64> buf; buf.reserve(4 * 8192);
   for (u64 i = 0; ok && i < tt.nb * 4; i++) {
     Entry& e = tt.tab[i];
     u64 D = e.d.load(memory_order_relaxed);
     if (!(D >> 63)) continue;
+    if (cut_bucket >= 0) {
+      u32 w = (u32)D;
+      int b = w ? 32 - __builtin_clz(w) : 0;
+      if (b < cut_bucket) continue;
+      if (b == cut_bucket) { if (!cut_room) continue; cut_room--; }
+    }
     u64 B = e.b.load(memory_order_relaxed), A = e.a.load(memory_order_relaxed), C = e.c.load(memory_order_relaxed);
     u64 rec[4] = {A ^ C ^ D, B, C, D & ~(1ull << 63)};
     for (u64 w : rec) { buf.push_back(w); ck_add(ck, w); }
@@ -1069,7 +1094,7 @@ static string jnum(double x) { char b[64]; snprintf(b, sizeof b, "%.6f", x); ret
 
 int main(int argc, char** argv) {
   try {
-    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--proof-format v3|v4] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--checkpoint-seconds S] [--proven-load FILE]... [--proven-save FILE] [--proven-min-work W] [--proven-save-loaded 0|1]");
+    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--proof-format v3|v4] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--tt-save-max N] [--checkpoint-seconds S] [--proven-load FILE]... [--proven-save FILE] [--proven-min-work W] [--proven-save-loaded 0|1]");
     for (int i = 2; i < argc; i++) {
       string x = argv[i];
       if (i + 1 >= argc) throw runtime_error("missing option value");
@@ -1087,6 +1112,7 @@ int main(int argc, char** argv) {
       else if (x == "--emit-seconds") opt.emit_seconds = stod(v);
       else if (x == "--vloss") opt.vloss = stoi(v);
       else if (x == "--tt-buckets") opt.tt_buckets = stoull(v);
+      else if (x == "--tt-save-max") opt.tt_save_max = stoull(v);
       else if (x == "--progress") opt.progress = stod(v);
       else if (x == "--init-div") opt.init_div = max(1, stoi(v));
       else if (x == "--tt-load") opt.tt_load = v;
