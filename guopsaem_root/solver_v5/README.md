@@ -48,3 +48,12 @@ of the JSON output and the certificate file are identical to solver_v4's (checke
 About 1.3x faster than v4 on the 구없샘 list (2,000,000-node runs: c_9 8.3 s vs 11.4 s, 락 7.7 s vs
 10.5 s, 면 7.7 s vs 10.1 s) and 1.13x on the smaller 817 list (28 syllables: 683 s vs 772 s), on a
 machine shared with other jobs.
+
+## Build
+
+Build with a portable target, not `-march=native`: the container can move to a host with a different
+CPU, and a `-march=native` binary then dies with SIGILL (happened on 2026-11-05):
+
+    g++ -O3 -march=x86-64-v3 -std=c++17 -o solver_v5 solver_v5.cpp -lz -pthread
+
+Same search and the same speed as the native build (탁: 226,823 nodes; c_9: 2,000,000 nodes in 8.2 s).
