@@ -14,8 +14,11 @@ group to a group with the same sources, target and count) are the same game. The
  * how many mid() calls / distinct states / isomorphism classes there are among the small states,
  * how many small states the current canonical form leaves undecided but an extended reduction of the same
    kind (canonical form applied to the structure restricted to R) decides at once (measurement only),
- * an upper bound on the search a perfect isomorphism table would have saved: the work of the outermost
-   mid() calls whose isomorphism class had already been proven (by another state) before the call began.
+ * an estimate of the search a perfect, never-forgetting isomorphism table would have skipped in this run:
+   the work of the outermost mid() calls whose isomorphism class had already been proven before the call
+   began, split into re-searches of the same exact state (after the exact table forgot it) and repeats
+   under another name. It counts calls of this run only: it does not model the different search such a
+   table would cause (earlier cut-offs from children looked up at generation, shared pn/dn values).
 Measurement only: nothing here is used to decide a position.
 """
 import json
@@ -220,26 +223,39 @@ def main():
     rep['ext_iso_classes'] = len({v['ext_iso'] for v in keys.values()})
     rep['states_decided_by_extended_reduction'] = sum(1 for v in keys.values() if v['ext_static'] != -1)
     rep['states_by_live_groups'] = dict(sorted(Counter(v['ng'] for v in keys.values()).items()))
-    # upper bound of the search saved by a perfect isomorphism table (and, separately, by the extended reduction)
+    # Estimate of the search a perfect, never-forgetting isomorphism table would have skipped in THIS run:
+    # calls whose class had already been proven (by an earlier call) before they began. A reusable call whose
+    # own exact state had been proven before is a re-search after the exact table forgot it ("same state");
+    # the others are repeats under another name ("other name"). Work is summed over outermost calls only.
+    own_first = {}
+    for r in sorted(recs, key=lambda r: r['exit']):
+        if r['res'] and r['key'] not in own_first:
+            own_first[r['key']] = r['exit']
     for name, fld in (('iso', 'iso'), ('ext_iso', 'ext_iso')):
         first = {}
         for r in sorted(recs, key=lambda r: r['exit']):
             if r['res'] and keys[r['key']][fld] not in first:
-                first[keys[r['key']][fld]] = (r['exit'], r['key'])
-        saved, calls, same, end = 0, 0, 0, -1
+                first[keys[r['key']][fld]] = r['exit']
+        calls = same = 0
+        saved = saved_other = 0
+        end = end_other = -1
         for r in sorted(recs, key=lambda r: r['entry']):
             f = first.get(keys[r['key']][fld])
-            reusable = (f is not None and f[0] < r['entry']) or (fld == 'ext_iso' and keys[r['key']]['ext_static'] != -1)
+            reusable = (f is not None and f < r['entry']) or (fld == 'ext_iso' and keys[r['key']]['ext_static'] != -1)
             if not reusable:
                 continue
             calls += 1
-            if f is not None and f[1] == r['key']:
-                same += 1
+            is_same = own_first.get(r['key'], 1 << 62) < r['entry']
+            same += is_same
             if r['entry'] > end:  # outermost
                 saved += r['work']; end = r['exit']
+            if not is_same and r['entry'] > end_other:
+                saved_other += r['work']; end_other = r['exit']
         rep[f'{name}_reusable_calls'] = calls
         rep[f'{name}_reusable_same_state'] = same
-        rep[f'{name}_saved_mid_calls_upper_bound'] = saved
+        rep[f'{name}_reusable_other_name'] = calls - same
+        rep[f'{name}_saved_mid_calls_estimate'] = saved
+        rep[f'{name}_saved_mid_calls_other_name'] = saved_other
     rep['iso_search_nodes'] = iso_form.__defaults__[0][0]
     print(json.dumps(rep, ensure_ascii=False))
 

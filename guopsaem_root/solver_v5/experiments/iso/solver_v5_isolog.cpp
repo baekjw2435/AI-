@@ -3,7 +3,9 @@
 //   --iso-max-groups K    (default 24)
 // Record (little-endian, 42 bytes + 3 per group): entry_seq u64, exit_seq u64, h0 u64, h1 u64, work u32, cur u16,
 // result u8 (0 open, 1 W, 2 L for the player to move), ng u8, depth u16, then ng x {group u16, count u8}.
-// mid() calls of every size are counted by number of live groups (iso_hist), with child statistics.
+// mid() calls of every size are counted by number of live groups (iso_hist), with child statistics;
+// generated children are also counted by core size, and those with <= 64 live groups separately.
+// Run it node-limited (--nodes N --seconds LARGE): it is slower per node, so a time limit stops it earlier.
 // The search itself is unchanged (same decisions; checked against solver_v5 with --nodes).
 // solver_v5 (with the proven-state cache): solver_v5 plus a proven-state cache shared across jobs of the same dictionary.
 //   --proven-save FILE   at the end, write every proven TT entry (pn == 0 or dn == 0) to FILE; the header
@@ -70,6 +72,7 @@
 #include <string>
 #include <thread>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
 #include <sys/mman.h>
 #include <zlib.h>
@@ -585,6 +588,10 @@ static inline int iso_bucket(int ng) { return ng <= 64 ? ng : min(ISO_B - 1, 64 
 static u64 iso_hist[ISO_B], iso_vhist[ISO_B], iso_ch_total[ISO_B], iso_ch_static[ISO_B], iso_ch_ttproven[ISO_B], iso_early[ISO_B];
 static u64 iso_dhist[ISO_B];  // mid calls by depth / 8
 static u64 iso_chv[256];       // generated non-static children by number of core vertices (255 = 255 or more)
+// generated non-static children with <= 64 live groups (live groups <= 64 implies core vertices <= 65):
+// events, distinct states (by h0), and how many were already proven in the table when generated
+static u64 iso_sch = 0, iso_sch_ttp = 0;
+static unordered_set<u64> iso_sch_keys;
 static int iso_min_ng = 1 << 30, iso_max_depth = 0;
 static int live_groups(const State& S, int cap, vector<pair<u16, u8>>* out) {
   if (++iso_tick == 0) { fill(iso_stamp.begin(), iso_stamp.end(), 0); iso_tick = 1; }
@@ -957,7 +964,22 @@ struct Searcher {
       gen_child(S, g, ci, sc);
       gens++;
       if (opt.selfcheck) selfcheck_child(S, ci);
-      if (iso_on) { iso_ch_total[iso_b]++; if (ci.stat == -1) iso_chv[min(255, ci.core.count())]++; }
+      if (iso_on) {
+        iso_ch_total[iso_b]++;
+        if (ci.stat == -1) {
+          iso_chv[min(255, ci.core.count())]++;
+          if (ci.core.count() <= 65) {  // count the child's live groups: descend, count, restore
+            apply_child(S, ci, undo[d]);
+            int cng = live_groups(S, 64, nullptr);
+            revert_child(S, undo[d]);
+            if (cng <= 64) {
+              iso_sch++; iso_sch_keys.insert(ci.h0);
+              u32 p, q, wk; int b;
+              if (tt.probe(ci.h0, ci.h1, p, q, wk, b) && (p == 0 || q == 0)) iso_sch_ttp++;
+            }
+          }
+        }
+      }
       if (ci.stat == 0) {  // static L child: immediate win
         tt.store(S.h0, S.h1, 0, INF, 1, g);
         rpn = 0; rdn = INF; rwork = 1;
@@ -1318,6 +1340,8 @@ int main(int argc, char** argv) {
       string cv = "\"children_by_core_vertices\":[";
       for (int i = 0; i < 256; i++) { if (i) cv += ","; cv += to_string(iso_chv[i]); }
       cv += "]";
+      cv += ",\"small_children\":" + to_string(iso_sch) + ",\"small_children_distinct\":" + to_string(iso_sch_keys.size())
+          + ",\"small_children_tt_proven\":" + to_string(iso_sch_ttp);
       fprintf(stderr, "{\"min_groups\":%d,\"max_depth\":%d,%s,%s,%s,%s,%s,%s,%s,%s}\n", iso_min_ng, iso_max_depth, arr("mid_by_depth8", iso_dhist).c_str(), arr("mid_by_groups", iso_hist).c_str(), arr("mid_by_core_vertices_div2", iso_vhist).c_str(), arr("children", iso_ch_total).c_str(),
               arr("children_static", iso_ch_static).c_str(), arr("children_tt_proven", iso_ch_ttproven).c_str(),
               arr("mid_static_win", iso_early).c_str(), cv.c_str());

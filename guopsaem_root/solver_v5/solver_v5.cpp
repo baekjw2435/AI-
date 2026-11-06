@@ -6,11 +6,14 @@
 //   --proven-min-work W  save only entries whose (original) work is >= W (default 1 = all).
 //   --proven-load-min-work W  load only entries whose recorded work is >= W (default 1 = all).
 //   --proven-save-loaded 0|1  also save entries that came from --proven-load (default 0: only new proofs).
-//   --proven-load-max N  load at most the N records with the most work (default 0 = all), so the shared
-//                        cache cannot take more than N table slots.
+//   --proven-load-max N  load at most the N records with the most work from EACH --proven-load file
+//                        (default 0 = all), so one shared cache cannot take more than N table slots.
 //   --tt-save-loaded 0|1 also write entries that came from --proven-load into --tt-save files (default 0:
 //                        they live in the cache file; before 2026-11-06 they were written and, ranked by
 //                        PROVEN_BASE + work, filled the --tt-save-max budget ahead of the job's own entries).
+//   A job's own work is capped at PROVEN_BASE - 1 when stored, so work >= PROVEN_BASE always means a cache
+//   record. (Before 2026-11-06 a node searched for more than 2^30 nodes in total, e.g. a resumed root, could
+//   cross that line and be taken for one.)
 // Proven values are properties of the canonical state (vertex + canonical counts); the Zobrist keys depend
 // only on the game graph. Loaded entries are hints: certificates are still produced by replay with the
 // reference canonicalization and checked by the verifier. Without these options the behaviour is solver_v5's.
@@ -978,7 +981,8 @@ struct Searcher {
       work += cw;
     }
     if (multi) mybusy->fetch_sub(1, memory_order_relaxed);
-    tt.store(S.h0, S.h1, pn, dn, (u32)min<u64>(work + prevwork, 0xFFFFFFF0ull), bestg);
+    // own work stays below PROVEN_BASE, so it is never mistaken for a shared-cache record (2026-11-06)
+    tt.store(S.h0, S.h1, pn, dn, (u32)min<u64>(work + prevwork, (u64)PROVEN_BASE - 1), bestg);
     rpn = pn; rdn = dn; rwork = work;
   }
 };
@@ -1039,7 +1043,7 @@ struct Emitter {
       resolve_mid += S->mid_calls - before;
       if (rp == 0 || rd == 0) {
         // the TT may have evicted the root right away; store again
-        tt.store(es[d].h0, es[d].h1, rp, rd, (u32)min<u64>(rw, 0xFFFFFFF0ull), -1);
+        tt.store(es[d].h0, es[d].h1, rp, rd, (u32)min<u64>(rw, (u64)PROVEN_BASE - 1), -1);
         return rp == 0;
       }
       if (emit_expired()) throw runtime_error("emission time limit while re-solving an evicted node");

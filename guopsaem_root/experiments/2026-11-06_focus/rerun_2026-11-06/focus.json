@@ -1,0 +1,18 @@
+[
+ {
+  "name": "e43_낙락",
+  "pos": "/home/user/AI-/.work/g/frontier192/jobs/e43/pos.json",
+  "input": "/home/user/AI-/.work/g/frontier192/jobs/e43/in.txt",
+  "tt": "/home/user/AI-/.work/g/focus2/e43.tt",
+  "tt_mb": 1024,
+  "tt_save_max": 4000000
+ },
+ {
+  "name": "e1_죽",
+  "pos": "/home/user/AI-/.work/g/frontier192/jobs/e1/pos.json",
+  "input": "/home/user/AI-/.work/g/frontier192/jobs/e1/in.txt",
+  "tt": "/home/user/AI-/.work/g/focus2/e1.tt",
+  "tt_mb": 1024,
+  "tt_save_max": 4000000
+ }
+]
