@@ -6,6 +6,11 @@
 //   --proven-min-work W  save only entries whose (original) work is >= W (default 1 = all).
 //   --proven-load-min-work W  load only entries whose recorded work is >= W (default 1 = all).
 //   --proven-save-loaded 0|1  also save entries that came from --proven-load (default 0: only new proofs).
+//   --proven-load-max N  load at most the N records with the most work (default 0 = all), so the shared
+//                        cache cannot take more than N table slots.
+//   --tt-save-loaded 0|1 also write entries that came from --proven-load into --tt-save files (default 0:
+//                        they live in the cache file; before 2026-11-06 they were written and, ranked by
+//                        PROVEN_BASE + work, filled the --tt-save-max budget ahead of the job's own entries).
 // Proven values are properties of the canonical state (vertex + canonical counts); the Zobrist keys depend
 // only on the game graph. Loaded entries are hints: certificates are still produced by replay with the
 // reference canonicalization and checked by the verifier. Without these options the behaviour is solver_v5's.
@@ -557,6 +562,8 @@ struct Opt {
   string proven_save;
   u32 proven_min_work = 1, proven_load_min_work = 1;
   bool proven_save_loaded = false;
+  u64 proven_load_max = 0;     // 0: load every record; N: load only the N records with the most work
+  bool tt_save_loaded = false;  // also write records that came from --proven-load into --tt-save files
 } opt;
 static TT tt;
 
@@ -592,6 +599,7 @@ static void fill_header(TTHeader& h, const State& root) {
   h.init = opt.init; h.init_div = opt.init_div; h.wpn = opt.wpn;
 }
 // Writes PATH.tmp, then renames it over PATH. Call only while no searcher thread runs. Returns entries saved.
+static constexpr u32 PROVEN_BASE = 0x40000000u;  // loaded entries: work = PROVEN_BASE + min(work, PROVEN_BASE - 1)
 static u64 tt_save(const string& path, const State& root) {
   const string tmp = path + ".tmp";
   FILE* f = fopen(tmp.c_str(), "wb");
@@ -610,6 +618,7 @@ static u64 tt_save(const string& path, const State& root) {
       u64 D = tt.tab[i].d.load(memory_order_relaxed);
       if (!(D >> 63)) continue;
       u32 w = (u32)D;
+      if (!opt.tt_save_loaded && w >= PROVEN_BASE) continue;  // not saved (see below), so not counted
       hist[w ? 32 - __builtin_clz(w) : 0]++;
     }
     u64 acc = 0;
@@ -623,6 +632,7 @@ static u64 tt_save(const string& path, const State& root) {
     Entry& e = tt.tab[i];
     u64 D = e.d.load(memory_order_relaxed);
     if (!(D >> 63)) continue;
+    if (!opt.tt_save_loaded && (u32)D >= PROVEN_BASE) continue;  // shared-cache record: lives in the cache file
     if (cut_bucket >= 0) {
       u32 w = (u32)D;
       int b = w ? 32 - __builtin_clz(w) : 0;
@@ -681,7 +691,6 @@ static u64 tt_load(const string& path, const State& root) {
 // player to move, 0 = L), 0 (u8)}, then {count, checksum} and an end marker. Bound to the game graph only.
 static const char PC_MAGIC[8] = {'Y', 'S', 'P', 'C', '1', 0, 0, 0};
 static const char PC_END[8] = {'Y', 'S', 'P', 'C', 'E', 'N', 'D', 0};
-static constexpr u32 PROVEN_BASE = 0x40000000u;  // loaded entries: work = PROVEN_BASE + min(work, PROVEN_BASE - 1)
 struct PCHeader {
   char magic[8];
   u64 graph0, graph1;
@@ -733,6 +742,29 @@ static u64 proven_save(const string& path, u64& skipped_small, u64& skipped_load
   return n;
 }
 static u64 proven_load(const string& path, u64& inserted) {
+  // With --proven-load-max N, a first pass over the file finds the work threshold so that at most N records
+  // (those with the most work) are inserted; the shared cache then takes at most N table slots.
+  int cut_bucket = -1; u64 cut_room = ~0ull;
+  if (opt.proven_load_max) {
+    FILE* g = fopen(path.c_str(), "rb");
+    if (!g) throw runtime_error("cannot open proven file " + path);
+    PCHeader hh;
+    if (fread(&hh, sizeof hh, 1, g) != 1) { fclose(g); throw runtime_error("proven file refused (" + path + "): truncated"); }
+    u64 hist[33] = {0};
+    vector<PCRec> b2(8192);
+    for (u64 done = 0; done < hh.count;) {
+      size_t k = (size_t)min<u64>(hh.count - done, 8192);
+      if (fread(b2.data(), sizeof(PCRec), k, g) != k) { fclose(g); throw runtime_error("proven file refused (" + path + "): truncated"); }
+      for (size_t r = 0; r < k; r++) if (b2[r].work >= opt.proven_load_min_work) { u32 w = b2[r].work; hist[w ? 32 - __builtin_clz(w) : 0]++; }
+      done += k;
+    }
+    fclose(g);
+    u64 acc = 0;
+    for (int b = 32; b >= 0; b--) {
+      if (acc + hist[b] >= opt.proven_load_max) { cut_bucket = b; cut_room = opt.proven_load_max - acc; break; }
+      acc += hist[b];
+    }
+  }
   FILE* f = fopen(path.c_str(), "rb");
   if (!f) throw runtime_error("cannot open proven file " + path);
   PCHeader h, want; memset(&want, 0, sizeof want);
@@ -750,6 +782,11 @@ static u64 proven_load(const string& path, u64& inserted) {
       if (x.win > 1 || x.pad) fail("bad record");
       ck_add(ck, x.k0); ck_add(ck, x.k1); ck_add(ck, (u64)x.work | ((u64)x.best << 32) | ((u64)x.win << 48));
       if (x.work < opt.proven_load_min_work) continue;
+      if (cut_bucket >= 0) {
+        int b = x.work ? 32 - __builtin_clz(x.work) : 0;
+        if (b < cut_bucket) continue;
+        if (b == cut_bucket) { if (!cut_room) continue; cut_room--; }
+      }
       inserted++;
       u32 w = PROVEN_BASE + min<u32>(x.work, PROVEN_BASE - 1);
       int best = x.best == 0xFFFF ? -1 : (int)x.best;
@@ -1094,7 +1131,7 @@ static string jnum(double x) { char b[64]; snprintf(b, sizeof b, "%.6f", x); ret
 
 int main(int argc, char** argv) {
   try {
-    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--proof-format v3|v4] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--tt-save-max N] [--checkpoint-seconds S] [--proven-load FILE]... [--proven-save FILE] [--proven-min-work W] [--proven-save-loaded 0|1]");
+    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--proof-format v3|v4] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--tt-save-max N] [--checkpoint-seconds S] [--proven-load FILE]... [--proven-load-max N] [--proven-save FILE] [--tt-save-loaded 0|1] [--proven-min-work W] [--proven-save-loaded 0|1]");
     for (int i = 2; i < argc; i++) {
       string x = argv[i];
       if (i + 1 >= argc) throw runtime_error("missing option value");
@@ -1123,6 +1160,8 @@ int main(int argc, char** argv) {
       else if (x == "--proven-min-work") opt.proven_min_work = (u32)max(1ull, min(stoull(v), (unsigned long long)PROVEN_BASE - 1));
       else if (x == "--proven-load-min-work") opt.proven_load_min_work = (u32)max(1ull, min(stoull(v), (unsigned long long)PROVEN_BASE - 1));
       else if (x == "--proven-save-loaded") opt.proven_save_loaded = stoi(v) != 0;
+      else if (x == "--proven-load-max") opt.proven_load_max = stoull(v);
+      else if (x == "--tt-save-loaded") opt.tt_save_loaded = stoi(v) != 0;
       else throw runtime_error("unknown option: " + x);
     }
     if (!isfinite(opt.seconds) || opt.seconds < 0 || opt.threads < 1 || opt.threads > 64 || opt.tt_mb < 1 || opt.eps < 0 ||

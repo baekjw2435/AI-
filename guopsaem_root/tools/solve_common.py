@@ -19,6 +19,8 @@ Environment (defaults in brackets):
                       at most PROVEN_MAX records with the largest work [half of the job's table entries].
                       Only search hints: certificates are still rebuilt and verified.
   PCMERGE             merge tool [/home/user/AI-/.work/measure/pcmerge]
+  PROVEN_LOAD_FRACTION  a job loads at most this fraction of its table slots from the shared cache,
+                      the records with the most work first [0.25]
 
 A certificate is accepted only if ALL hold: verifier exit code 0, "verified": true, the
 expected result, "state_storage": "deflate-exact" (v4), and the dictionary, position, input
@@ -46,6 +48,7 @@ LOCK = Path(os.environ.get('VERIFY_LOCK', '/home/user/AI-/.work/verify.lock'))
 BIG = int(os.environ.get('BIG_PROOF_NODES', '200000'))
 PROVEN_DIR = os.environ.get('PROVEN_DIR')
 PCMERGE = os.environ.get('PCMERGE', '/home/user/AI-/.work/measure/pcmerge')
+PROVEN_LOAD_FRACTION = float(os.environ.get('PROVEN_LOAD_FRACTION', '0.25'))
 
 
 def sha256_file(path):
@@ -85,7 +88,8 @@ def solver_cmd(inp, proof, seconds, ttmb, tt=None, tt_save_max=None):
     if PROVEN_DIR:
         pdir = Path(PROVEN_DIR); (pdir / 'jobs').mkdir(parents=True, exist_ok=True)
         if (pdir / 'merged.pc').exists():
-            cmd += ['--proven-load', str(pdir / 'merged.pc')]
+            cmd += ['--proven-load', str(pdir / 'merged.pc'),
+                    '--proven-load-max', str(int((int(ttmb) << 20) // 32 * PROVEN_LOAD_FRACTION))]
         cmd += ['--proven-save', str(pdir / 'jobs' / (Path(proof).name.split('.')[0] + '_' + str(os.getpid()) + '_'
                                                        + str(abs(hash(str(proof))) % 10**8) + '.pc'))]
     return cmd, note
