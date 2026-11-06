@@ -584,6 +584,7 @@ constexpr int ISO_B = 128;  // buckets: ng <= 64 exact, then steps of 32 groups
 static inline int iso_bucket(int ng) { return ng <= 64 ? ng : min(ISO_B - 1, 64 + (ng - 64 + 31) / 32); }
 static u64 iso_hist[ISO_B], iso_vhist[ISO_B], iso_ch_total[ISO_B], iso_ch_static[ISO_B], iso_ch_ttproven[ISO_B], iso_early[ISO_B];
 static u64 iso_dhist[ISO_B];  // mid calls by depth / 8
+static u64 iso_chv[256];       // generated non-static children by number of core vertices (255 = 255 or more)
 static int iso_min_ng = 1 << 30, iso_max_depth = 0;
 static int live_groups(const State& S, int cap, vector<pair<u16, u8>>* out) {
   if (++iso_tick == 0) { fill(iso_stamp.begin(), iso_stamp.end(), 0); iso_tick = 1; }
@@ -947,7 +948,7 @@ struct Searcher {
     u64 work = 1, prevwork = 0;
     { u32 p, q, wk; int b; if (tt.probe(S.h0, S.h1, p, q, wk, b)) prevwork = wk; }
     int iso_ng = 0, iso_b = 0; u64 iso_entry = 0;
-    if (iso_on) { iso_ng = live_groups(S, 1 << 30, nullptr); iso_b = iso_bucket(iso_ng); iso_hist[iso_b]++; iso_vhist[min(ISO_B - 1, S.core.count())]++;
+    if (iso_on) { iso_ng = live_groups(S, 1 << 30, nullptr); iso_b = iso_bucket(iso_ng); iso_hist[iso_b]++; iso_vhist[min(ISO_B - 1, S.core.count() / 2)]++;
                   iso_min_ng = min(iso_min_ng, iso_ng); iso_entry = mid_calls; iso_dhist[min(ISO_B - 1, d / 8)]++; iso_max_depth = max(iso_max_depth, d); }
     for (int g : avail[S.cur]) {
       if (!S.cnt[g]) continue;
@@ -956,7 +957,7 @@ struct Searcher {
       gen_child(S, g, ci, sc);
       gens++;
       if (opt.selfcheck) selfcheck_child(S, ci);
-      if (iso_on) iso_ch_total[iso_b]++;
+      if (iso_on) { iso_ch_total[iso_b]++; if (ci.stat == -1) iso_chv[min(255, ci.core.count())]++; }
       if (ci.stat == 0) {  // static L child: immediate win
         tt.store(S.h0, S.h1, 0, INF, 1, g);
         rpn = 0; rdn = INF; rwork = 1;
@@ -1314,9 +1315,12 @@ int main(int argc, char** argv) {
         for (int i = 0; i < ISO_B; i++) { if (i) s += ","; s += to_string(a[i]); }
         return s + "]";
       };
-      fprintf(stderr, "{\"min_groups\":%d,\"max_depth\":%d,%s,%s,%s,%s,%s,%s,%s}\n", iso_min_ng, iso_max_depth, arr("mid_by_depth8", iso_dhist).c_str(), arr("mid_by_groups", iso_hist).c_str(), arr("mid_by_core_vertices", iso_vhist).c_str(), arr("children", iso_ch_total).c_str(),
+      string cv = "\"children_by_core_vertices\":[";
+      for (int i = 0; i < 256; i++) { if (i) cv += ","; cv += to_string(iso_chv[i]); }
+      cv += "]";
+      fprintf(stderr, "{\"min_groups\":%d,\"max_depth\":%d,%s,%s,%s,%s,%s,%s,%s,%s}\n", iso_min_ng, iso_max_depth, arr("mid_by_depth8", iso_dhist).c_str(), arr("mid_by_groups", iso_hist).c_str(), arr("mid_by_core_vertices_div2", iso_vhist).c_str(), arr("children", iso_ch_total).c_str(),
               arr("children_static", iso_ch_static).c_str(), arr("children_tt_proven", iso_ch_ttproven).c_str(),
-              arr("mid_static_win", iso_early).c_str());
+              arr("mid_static_win", iso_early).c_str(), cv.c_str());
     }
     string result = rpn == 0 ? "win" : rdn == 0 ? "loss" : "unknown";
     // a solved root needs no resume; only an unfinished search is saved at the end
