@@ -1,0 +1,90 @@
+{
+ "e43": {
+  "mid_calls": 10000384,
+  "min_live_groups": 4,
+  "max_depth": 37,
+  "depth_quantiles": {
+   "50": "<= 15",
+   "90": "<= 23",
+   "99": "<= 31"
+  },
+  "mid_le_24_groups": 74,
+  "mid_le_64_groups": 128,
+  "mid_le_256_groups": 11953,
+  "mid_gt_1024_groups": 8773852,
+  "children": 38796141,
+  "children_static": 59105,
+  "children_tt_proven": 77844,
+  "children_per_mid": 3.88,
+  "small_parents_children": 294,
+  "small_parents_children_static": 7,
+  "small_parents_children_tt_proven": 70,
+  "mid_ended_by_static_child": 185
+ },
+ "e1": {
+  "mid_calls": 10000384,
+  "min_live_groups": 4,
+  "max_depth": 47,
+  "depth_quantiles": {
+   "50": "<= 15",
+   "90": "<= 23",
+   "99": "<= 31"
+  },
+  "mid_le_24_groups": 18,
+  "mid_le_64_groups": 18,
+  "mid_le_256_groups": 29800,
+  "mid_gt_1024_groups": 8830003,
+  "children": 39473683,
+  "children_static": 80414,
+  "children_tt_proven": 115395,
+  "children_per_mid": 3.95,
+  "small_parents_children": 24,
+  "small_parents_children_static": 5,
+  "small_parents_children_tt_proven": 1,
+  "mid_ended_by_static_child": 446
+ },
+ "c5": {
+  "mid_calls": 10000384,
+  "min_live_groups": 4,
+  "max_depth": 39,
+  "depth_quantiles": {
+   "50": "<= 15",
+   "90": "<= 23",
+   "99": "<= 31"
+  },
+  "mid_le_24_groups": 47,
+  "mid_le_64_groups": 60,
+  "mid_le_256_groups": 21703,
+  "mid_gt_1024_groups": 8904227,
+  "children": 39267575,
+  "children_static": 97890,
+  "children_tt_proven": 140521,
+  "children_per_mid": 3.93,
+  "small_parents_children": 81,
+  "small_parents_children_static": 8,
+  "small_parents_children_tt_proven": 3,
+  "mid_ended_by_static_child": 191
+ },
+ "c9": {
+  "mid_calls": 10000384,
+  "min_live_groups": 4,
+  "max_depth": 51,
+  "depth_quantiles": {
+   "50": "<= 23",
+   "90": "<= 23",
+   "99": "<= 31"
+  },
+  "mid_le_24_groups": 200,
+  "mid_le_64_groups": 451,
+  "mid_le_256_groups": 52109,
+  "mid_gt_1024_groups": 8043388,
+  "children": 36849461,
+  "children_static": 48012,
+  "children_tt_proven": 65295,
+  "children_per_mid": 3.68,
+  "small_parents_children": 810,
+  "small_parents_children_static": 19,
+  "small_parents_children_tt_proven": 123,
+  "mid_ended_by_static_child": 154
+ }
+}
