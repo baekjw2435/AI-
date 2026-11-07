@@ -19,9 +19,10 @@
 //   cross that line and be taken for one.)
 //   --tt-load repairs such records in files written before that (2026-11-07): an OPEN record with work >=
 //   PROVEN_BASE is the job's own (cache records are always proven), so its work is capped to PROVEN_BASE - 1;
-//   a PROVEN one is looked up in the --proven-load files: found there, it is left to the cache load; not found,
-//   it is kept as the job's own record with work min(work - PROVEN_BASE, PROVEN_BASE - 1). Counts are reported
-//   as tt_load_open_capped, tt_load_proven_in_cache and tt_load_proven_kept.
+//   a PROVEN one is looked up among the records the --proven-load files will actually insert this run (same
+//   cap as proven_load): found there, it is left to the cache load; otherwise (not in a cache file, or beyond
+//   the cap) it is kept as the job's own record with work min(work - PROVEN_BASE, PROVEN_BASE - 1). Counts are
+//   reported as tt_load_open_capped, tt_load_proven_in_cache and tt_load_proven_kept.
 // Proven values are properties of the canonical state (vertex + canonical counts); the Zobrist keys depend
 // only on the game graph. Loaded entries are hints: certificates are still produced by replay with the
 // reference canonicalization and checked by the verifier. Without these options the behaviour is solver_v5's.
@@ -734,8 +735,50 @@ struct PCHeader {
 };
 struct PCRec { u64 k0, k1; u32 work; u16 best; u8 win, pad; };
 static_assert(sizeof(PCRec) == 24, "PCRec layout");
-// tt_load helper: which of the ambiguous records (proven, work >= PROVEN_BASE) are in a --proven-load file
-// (exact k0 and k1). Only the header is checked here; proven_load checks each file fully afterwards.
+// Which records proven_load() inserts from one cache file: those with work >= --proven-load-min-work and, with
+// --proven-load-max N, at most the N with the most work (a threshold on floor(log2(work)); records in the
+// threshold bucket are taken in file order). proven_load() and mark_in_cache() both use this, so they agree
+// record by record (2026-11-07).
+struct PCSelect {
+  int cut_bucket = -1;
+  u64 cut_room = ~0ull;
+  bool init(const string& path) {  // false: the file cannot be read (proven_load then reports the error)
+    cut_bucket = -1; cut_room = ~0ull;
+    if (!opt.proven_load_max) return true;
+    FILE* g = fopen(path.c_str(), "rb");
+    if (!g) return false;
+    PCHeader hh;
+    if (fread(&hh, sizeof hh, 1, g) != 1) { fclose(g); return false; }
+    u64 hist[33] = {0};
+    vector<PCRec> b2(8192);
+    for (u64 done = 0; done < hh.count;) {
+      size_t k = (size_t)min<u64>(hh.count - done, 8192);
+      if (fread(b2.data(), sizeof(PCRec), k, g) != k) { fclose(g); return false; }
+      for (size_t r = 0; r < k; r++) if (b2[r].work >= opt.proven_load_min_work) { u32 w = b2[r].work; hist[w ? 32 - __builtin_clz(w) : 0]++; }
+      done += k;
+    }
+    fclose(g);
+    u64 acc = 0;
+    for (int b = 32; b >= 0; b--) {
+      if (acc + hist[b] >= opt.proven_load_max) { cut_bucket = b; cut_room = opt.proven_load_max - acc; break; }
+      acc += hist[b];
+    }
+    return true;
+  }
+  bool take(const PCRec& x) {  // call once per record, in file order
+    if (x.work < opt.proven_load_min_work) return false;
+    if (cut_bucket >= 0) {
+      int b = x.work ? 32 - __builtin_clz(x.work) : 0;
+      if (b < cut_bucket) return false;
+      if (b == cut_bucket) { if (!cut_room) return false; cut_room--; }
+    }
+    return true;
+  }
+};
+// tt_load helper: which of the ambiguous records (proven, work >= PROVEN_BASE) proven_load() will ACTUALLY insert
+// this run (same file, same k0 and k1, and selected by the same cap). A record that is in a cache file but
+// beyond the cap is not marked, so tt_load keeps it as the job's own instead of losing it for this run.
+// Only the header is checked here; proven_load checks each file fully afterwards.
 static void mark_in_cache(const vector<array<u64, 4>>& amb, vector<char>& in_cache) {
   vector<u32> idx(amb.size());
   for (size_t i = 0; i < idx.size(); i++) idx[i] = (u32)i;
@@ -749,12 +792,17 @@ static void mark_in_cache(const vector<array<u64, 4>>& amb, vector<char>& in_cac
     if (!g) continue;
     PCHeader hh;
     if (fread(&hh, sizeof hh, 1, g) != 1 || memcmp(hh.magic, PC_MAGIC, 8) || hh.graph0 != want.graph0 || hh.graph1 != want.graph1) { fclose(g); continue; }
+    PCSelect sel;
+    if (!sel.init(pth)) { fclose(g); continue; }
     vector<PCRec> b2(8192);
-    for (u64 done = 0; done < hh.count;) {
+    bool bad = false;
+    for (u64 done = 0; done < hh.count && !bad;) {
       size_t k = (size_t)min<u64>(hh.count - done, 8192);
       if (fread(b2.data(), sizeof(PCRec), k, g) != k) break;
       for (size_t r = 0; r < k; r++) {
         const PCRec& x = b2[r];
+        if (x.win > 1 || x.pad) { bad = true; break; }  // proven_load refuses the file later
+        if (!sel.take(x)) continue;                     // not inserted this run: not "in the cache"
         auto it = lower_bound(idx.begin(), idx.end(), x, [&](u32 a, const PCRec& y) {
           return amb[a][1] != y.k1 ? amb[a][1] < y.k1 : k0of(a) < y.k0; });
         for (; it != idx.end() && amb[*it][1] == x.k1 && k0of(*it) == x.k0; ++it) in_cache[*it] = 1;
@@ -808,28 +856,9 @@ static u64 proven_save(const string& path, u64& skipped_small, u64& skipped_load
 }
 static u64 proven_load(const string& path, u64& inserted) {
   // With --proven-load-max N, a first pass over the file finds the work threshold so that at most N records
-  // (those with the most work) are inserted; the shared cache then takes at most N table slots.
-  int cut_bucket = -1; u64 cut_room = ~0ull;
-  if (opt.proven_load_max) {
-    FILE* g = fopen(path.c_str(), "rb");
-    if (!g) throw runtime_error("cannot open proven file " + path);
-    PCHeader hh;
-    if (fread(&hh, sizeof hh, 1, g) != 1) { fclose(g); throw runtime_error("proven file refused (" + path + "): truncated"); }
-    u64 hist[33] = {0};
-    vector<PCRec> b2(8192);
-    for (u64 done = 0; done < hh.count;) {
-      size_t k = (size_t)min<u64>(hh.count - done, 8192);
-      if (fread(b2.data(), sizeof(PCRec), k, g) != k) { fclose(g); throw runtime_error("proven file refused (" + path + "): truncated"); }
-      for (size_t r = 0; r < k; r++) if (b2[r].work >= opt.proven_load_min_work) { u32 w = b2[r].work; hist[w ? 32 - __builtin_clz(w) : 0]++; }
-      done += k;
-    }
-    fclose(g);
-    u64 acc = 0;
-    for (int b = 32; b >= 0; b--) {
-      if (acc + hist[b] >= opt.proven_load_max) { cut_bucket = b; cut_room = opt.proven_load_max - acc; break; }
-      acc += hist[b];
-    }
-  }
+  // (those with the most work) are inserted; the shared cache then takes at most N table slots (PCSelect).
+  PCSelect sel;
+  if (!sel.init(path)) throw runtime_error("proven file refused (" + path + "): cannot be read or truncated");
   FILE* f = fopen(path.c_str(), "rb");
   if (!f) throw runtime_error("cannot open proven file " + path);
   PCHeader h, want; memset(&want, 0, sizeof want);
@@ -846,12 +875,7 @@ static u64 proven_load(const string& path, u64& inserted) {
       const PCRec& x = buf[r];
       if (x.win > 1 || x.pad) fail("bad record");
       ck_add(ck, x.k0); ck_add(ck, x.k1); ck_add(ck, (u64)x.work | ((u64)x.best << 32) | ((u64)x.win << 48));
-      if (x.work < opt.proven_load_min_work) continue;
-      if (cut_bucket >= 0) {
-        int b = x.work ? 32 - __builtin_clz(x.work) : 0;
-        if (b < cut_bucket) continue;
-        if (b == cut_bucket) { if (!cut_room) continue; cut_room--; }
-      }
+      if (!sel.take(x)) continue;
       inserted++;
       u32 w = PROVEN_BASE + min<u32>(x.work, PROVEN_BASE - 1);
       int best = x.best == 0xFFFF ? -1 : (int)x.best;

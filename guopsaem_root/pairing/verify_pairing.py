@@ -94,9 +94,10 @@ def verify(dictionary_path, expected_word_count, position_path, certificate_path
     names = {name: v for v, name in enumerate(model.names)}
     S_names = cert.get('S')
     require(isinstance(S_names, list) and S_names, 'S must be a non-empty list of vertex names')
+    require(all(isinstance(n, str) for n in S_names), 'S must contain only vertex names (strings)')  # before any hashing
     require(len(set(S_names)) == len(S_names), 'S lists a vertex twice')
     for n in S_names:
-        require(isinstance(n, str) and n in names, f'unknown vertex name {n!r}')
+        require(n in names, f'unknown vertex name {n!r}')
     S = {names[n] for n in S_names}
     pairs = cert.get('pairs')
     require(isinstance(pairs, list), 'pairs must be a list')
@@ -129,7 +130,7 @@ def main():
     a = ap.parse_args()
     try:
         r = verify(a.dictionary, a.expected_word_count, a.position, a.certificate)
-    except (VerificationError, ValueError, KeyError, OSError) as e:
+    except (VerificationError, ValueError, KeyError, TypeError, AttributeError, OSError) as e:
         print(json.dumps({'format': FORMAT, 'verified': False, 'error': str(e)}, ensure_ascii=False))
         sys.exit(1)
     print(json.dumps(r, ensure_ascii=False))
