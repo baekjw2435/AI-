@@ -1,0 +1,2 @@
+{"cases": 419, "losses_core": 38, "pairing": 21, "gadget": 21, "gadget_needs_middle": 0, "agree_without_middle": 419}
+all checks passed

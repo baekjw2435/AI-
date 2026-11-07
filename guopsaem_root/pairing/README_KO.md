@@ -46,6 +46,8 @@
 | `test_pairing.py` | 작은 무작위 사전에서 완전탐색과 대조합니다. |
 | `test_finder_complete.py` | 아주 작은 사전에서 모든 S와 단어쌍을 다 시도해, 탐색기의 '찾음/없음'이 맞는지 확인합니다. |
 | `apply_pairing.py` | 실제 탐색에서 뽑은 국면에 제한된 시간으로 적용해 봅니다. |
+| `gadget.py`, `test_gadget.py`, `apply_gadget.py` | 3수로 답하는 일반화의 가능성 확인용 시제품입니다(증명 형식 아님). |
+| `test_malformed.py` | 형식이 잘못된 증명서를 검증기가 깔끔하게 거부하는지 확인합니다. |
 
 ```sh
 python3 find_pairing.py --dictionary ../words_3436.txt --expected-word-count 3436 --position POS.json --mode canonical --seconds 60 --out CERT.json
