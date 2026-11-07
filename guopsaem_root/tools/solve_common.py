@@ -16,11 +16,14 @@ Environment (defaults in brackets):
   BIG_PROOF_NODES     certificates at least this big take the lock [200000]
   PROVEN_DIR          if set: shared proven-state cache. Every job loads PROVEN_DIR/merged.pc and saves
                       its own proven entries, which are then merged into merged.pc (under a lock), keeping
-                      at most PROVEN_MAX records with the largest work [half of the job's table entries].
+                      at most PROVEN_MAX records with the largest work [half of the job's ACTUAL table entries].
                       Only search hints: certificates are still rebuilt and verified.
   PCMERGE             merge tool [/home/user/AI-/.work/measure/pcmerge]
   PROVEN_LOAD_FRACTION  a job loads at most this fraction of its table slots from the shared cache,
-                      the records with the most work first [0.25]
+                      the records with the most work first [0.25]. The solver applies it to the ACTUAL
+                      table (--proven-load-fraction): the bucket count is rounded down to a power of two,
+                      so --tt-mb 3072 gives a 2 GB table (2026-11-07; before, 25% of the requested size
+                      was 37.5% of a 3072 MB job's real table).
 
 A certificate is accepted only if ALL hold: verifier exit code 0, "verified": true, the
 expected result, "state_storage": "deflate-exact" (v4), and the dictionary, position, input
@@ -63,6 +66,16 @@ def free_gb(path):
     return shutil.disk_usage(path).free / 2**30
 
 
+def table_slots(ttmb):
+    """Entries of the solver's table for --tt-mb ttmb, as TT::alloc computes them: buckets of four 32-byte
+    entries, bucket count rounded DOWN to a power of two (so 3072 MB gives 67,108,864 entries = 2 GB)."""
+    want = (int(ttmb) << 20) // (4 * 32)
+    nb = 1
+    while nb * 2 <= want:
+        nb *= 2
+    return nb * 4
+
+
 def solver_cmd(inp, proof, seconds, ttmb, tt=None, tt_save_max=None):
     """Solver command line. With tt (a path), the search state is checkpointed there every
     CHECKPOINT seconds and loaded again if the file exists, so a job interrupted by a restart
@@ -88,8 +101,7 @@ def solver_cmd(inp, proof, seconds, ttmb, tt=None, tt_save_max=None):
     if PROVEN_DIR:
         pdir = Path(PROVEN_DIR); (pdir / 'jobs').mkdir(parents=True, exist_ok=True)
         if (pdir / 'merged.pc').exists():
-            cmd += ['--proven-load', str(pdir / 'merged.pc'),
-                    '--proven-load-max', str(int((int(ttmb) << 20) // 32 * PROVEN_LOAD_FRACTION))]
+            cmd += ['--proven-load', str(pdir / 'merged.pc'), '--proven-load-fraction', str(PROVEN_LOAD_FRACTION)]
         cmd += ['--proven-save', str(pdir / 'jobs' / (Path(proof).name.split('.')[0] + '_' + str(os.getpid()) + '_'
                                                        + str(abs(hash(str(proof))) % 10**8) + '.pc'))]
     return cmd, note
@@ -103,7 +115,7 @@ def merge_proven(cmd, ttmb):
     job = Path(cmd[cmd.index('--proven-save') + 1])
     if not job.exists():
         return {'merge': 'no job file'}
-    cap = int(os.environ.get('PROVEN_MAX', str((int(ttmb) << 20) // 32 // 2)))
+    cap = int(os.environ.get('PROVEN_MAX', str(table_slots(ttmb) // 2)))
     with open(pdir / 'merge.lock', 'w') as lk:
         fcntl.flock(lk, fcntl.LOCK_EX)
         ins = ([str(pdir / 'merged.pc')] if (pdir / 'merged.pc').exists() else []) + [str(job)]
