@@ -591,6 +591,10 @@ static u64 iso_chv[256];       // generated non-static children by number of cor
 // generated non-static children with <= 64 live groups (live groups <= 64 implies core vertices <= 65):
 // events, distinct states (by h0), and how many were already proven in the table when generated
 static u64 iso_sch = 0, iso_sch_ttp = 0;
+// --sample-log FILE --sample-every K: every K-th mid() call (any size) is written at its end:
+// entry u64, exit u64, h0 u64, h1 u64, work u32, cur u16, result u8, 0 u8, depth u16, ng u16, ng x {group u16, count u8}
+static FILE* samp_fp = nullptr;
+static u64 samp_every = 0;
 static unordered_set<u64> iso_sch_keys;
 static int iso_min_ng = 1 << 30, iso_max_depth = 0;
 static int live_groups(const State& S, int cap, vector<pair<u16, u8>>* out) {
@@ -607,6 +611,17 @@ static int live_groups(const State& S, int cap, vector<pair<u16, u8>>* out) {
     }
   });
   return n;
+}
+static void samp_write(const State& S, u64 entry, u64 exitseq, u64 work, int res, int depth) {
+  vector<pair<u16, u8>> gl;
+  live_groups(S, 1 << 30, &gl);
+  vector<unsigned char> b(44 + 3 * gl.size());
+  u32 w = (u32)min<u64>(work, 0xFFFFFFFFull);
+  u16 cur = (u16)S.cur, dep = (u16)min(depth, 65535), ng = (u16)gl.size();
+  memcpy(&b[0], &entry, 8); memcpy(&b[8], &exitseq, 8); memcpy(&b[16], &S.h0, 8); memcpy(&b[24], &S.h1, 8);
+  memcpy(&b[32], &w, 4); memcpy(&b[36], &cur, 2); b[38] = (u8)res; b[39] = 0; memcpy(&b[40], &dep, 2); memcpy(&b[42], &ng, 2);
+  for (size_t i = 0; i < gl.size(); i++) { memcpy(&b[44 + 3 * i], &gl[i].first, 2); b[46 + 3 * i] = gl[i].second; }
+  fwrite(b.data(), 1, b.size(), samp_fp);
 }
 static void iso_write(const State& S, u64 entry, u64 exitseq, u64 work, int res, int depth) {
   vector<pair<u16, u8>> gl;
@@ -955,6 +970,8 @@ struct Searcher {
     u64 work = 1, prevwork = 0;
     { u32 p, q, wk; int b; if (tt.probe(S.h0, S.h1, p, q, wk, b)) prevwork = wk; }
     int iso_ng = 0, iso_b = 0; u64 iso_entry = 0;
+    const bool samp = iso_on && samp_fp && samp_every && (mid_calls % samp_every == 0);
+    const u64 samp_entry = mid_calls;
     if (iso_on) { iso_ng = live_groups(S, 1 << 30, nullptr); iso_b = iso_bucket(iso_ng); iso_hist[iso_b]++; iso_vhist[min(ISO_B - 1, S.core.count() / 2)]++;
                   iso_min_ng = min(iso_min_ng, iso_ng); iso_entry = mid_calls; iso_dhist[min(ISO_B - 1, d / 8)]++; iso_max_depth = max(iso_max_depth, d); }
     for (int g : avail[S.cur]) {
@@ -987,6 +1004,7 @@ struct Searcher {
           iso_ch_static[iso_b]++; iso_early[iso_b]++;
           if (iso_fp && iso_ng <= iso_maxg) iso_write(S, iso_entry, mid_calls, 1, 1, d);
         }
+        if (samp) samp_write(S, samp_entry, mid_calls, 1, 1, d);
         return;
       }
       if (ci.stat == 1) { ci.pn = 0; ci.dn = INF; ci.known = true; if (iso_on) iso_ch_static[iso_b]++; }
@@ -1064,6 +1082,7 @@ struct Searcher {
     if (iso_on) {
       if (iso_fp && iso_ng <= iso_maxg) iso_write(S, iso_entry, mid_calls, work, pn == 0 ? 1 : dn == 0 ? 2 : 0, d);
     }
+    if (samp) samp_write(S, samp_entry, mid_calls, work, pn == 0 ? 1 : dn == 0 ? 2 : 0, d);
   }
 };
 
@@ -1248,6 +1267,8 @@ int main(int argc, char** argv) {
       else if (x == "--tt-save-loaded") opt.tt_save_loaded = stoi(v) != 0;
       else if (x == "--iso-log") { iso_fp = fopen(v.c_str(), "wb"); if (!iso_fp) throw runtime_error("cannot create iso log"); setvbuf(iso_fp, nullptr, _IOFBF, 1 << 24); }
       else if (x == "--iso-max-groups") iso_maxg = stoi(v);
+      else if (x == "--sample-log") { samp_fp = fopen(v.c_str(), "wb"); if (!samp_fp) throw runtime_error("cannot create sample log"); }
+      else if (x == "--sample-every") samp_every = stoull(v);
       else throw runtime_error("unknown option: " + x);
     }
     if (!isfinite(opt.seconds) || opt.seconds < 0 || opt.threads < 1 || opt.threads > 64 || opt.tt_mb < 1 || opt.eps < 0 ||
@@ -1331,6 +1352,7 @@ int main(int argc, char** argv) {
     double elapsed = chrono::duration<double>(chrono::steady_clock::now() - t_start).count();
     iso_on = false;
     if (iso_fp) { fclose(iso_fp); iso_fp = nullptr; }
+    if (samp_fp) { fclose(samp_fp); samp_fp = nullptr; }
     {
       auto arr = [](const char* name, const u64* a) {
         string s = string("\"") + name + "\":[";
