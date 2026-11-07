@@ -1,0 +1,2 @@
+{"positions": 600, "losses": 343, "static": 502, "raw_found": 286, "canon_found": 27, "either": 287, "losses_core": 43, "core_raw_found": 26, "core_canon_found": 27, "core_either": 27, "mutated": 793, "mutated_accepted": 187, "random_certs": 1800, "random_accepted": 29}
+all checks passed

@@ -1,0 +1,8 @@
+e43 canonical {"seconds": 0.769, "model_pairs": 19500, "model_vertices": 242, "live_groups": 1713, "status": "none"}
+e43 raw {"seconds": 1.605, "model_pairs": 39496, "model_vertices": 340, "live_groups": 2613, "status": "none"}
+e1 canonical {"seconds": 0.472, "model_pairs": 19500, "model_vertices": 242, "live_groups": 1713, "status": "none"}
+e1 raw {"seconds": 1.036, "model_pairs": 39496, "model_vertices": 340, "live_groups": 2613, "status": "none"}
+c5 canonical {"seconds": 0.671, "model_pairs": 19445, "model_vertices": 242, "live_groups": 1712, "status": "none"}
+c5 raw {"seconds": 1.625, "model_pairs": 39420, "model_vertices": 340, "live_groups": 2612, "status": "none"}
+c9 canonical {"seconds": 0.46, "model_pairs": 19435, "model_vertices": 242, "live_groups": 1712, "status": "none"}
+c9 raw {"seconds": 0.959, "model_pairs": 39496, "model_vertices": 340, "live_groups": 2613, "status": "none"}
