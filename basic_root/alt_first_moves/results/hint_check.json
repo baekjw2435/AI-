@@ -1,0 +1,6974 @@
+{
+ "format": "alt817-hint-check-v1",
+ "verified": 95,
+ "verified_same_as_prediction": 83,
+ "verified_by_kind": {
+  "lose (예측 lose, 자기 고리 False)": 26,
+  "win (예측 lose, 자기 고리 False)": 6,
+  "win (예측 lose, 자기 고리 True)": 6,
+  "win (예측 win, 자기 고리 False)": 57
+ },
+ "differs": [
+  "격/격식",
+  "격/격증",
+  "돌/돌돌",
+  "습/습식",
+  "역/역습",
+  "왕/왕왕",
+  "율/율격",
+  "죽/죽죽",
+  "탁/탁탁",
+  "할/할증",
+  "휘/휘휘",
+  "흥/흥흥"
+ ],
+ "losing_refuted_by_known_answer": 24,
+ "losing_with_known_answer": 26,
+ "not_verified": 402,
+ "not_verified_by_prediction": {
+  "예측 lose, 자기 고리 False": 338,
+  "예측 lose, 자기 고리 True": 9,
+  "예측 win, 자기 고리 False": 52,
+  "예측 None, 자기 고리 False": 3
+ },
+ "rows": [
+  {
+   "id": "격/격돌",
+   "split": "final",
+   "hands_over": "돌",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "돌돌"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "격/격랑",
+   "split": "final",
+   "hands_over": "낭",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낭비벽"
+   ],
+   "verified": "lose",
+   "reply": [
+    "낭비벽"
+   ]
+  },
+  {
+   "id": "격/격멸",
+   "split": "final",
+   "hands_over": "멸",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "멸균"
+   ],
+   "verified": "lose",
+   "reply": [
+    "멸치젓"
+   ]
+  },
+  {
+   "id": "격/격변",
+   "split": "final",
+   "hands_over": "변",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "변칙"
+   ],
+   "verified": "lose",
+   "reply": [
+    "변칙"
+   ]
+  },
+  {
+   "id": "격/격식",
+   "split": "final",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "격/격식적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": "lose",
+   "reply": [
+    "적갈색",
+    "적색",
+    "적회색"
+   ]
+  },
+  {
+   "id": "격/격언",
+   "split": "final",
+   "hands_over": "언",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "언약"
+   ],
+   "verified": "lose",
+   "reply": [
+    "언약"
+   ]
+  },
+  {
+   "id": "격/격증",
+   "split": "final",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "격/격찬",
+   "split": "final",
+   "hands_over": "찬",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "찬성표"
+   ],
+   "verified": "lose",
+   "reply": [
+    "찬성표"
+   ]
+  },
+  {
+   "id": "격/격퇴",
+   "split": "final",
+   "hands_over": "퇴",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "퇴색"
+   ],
+   "verified": "lose",
+   "reply": [
+    "퇴색"
+   ]
+  },
+  {
+   "id": "교/교권",
+   "split": "tune",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교섭",
+   "split": "tune",
+   "hands_over": "섭",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "섭렵"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교수법",
+   "split": "tune",
+   "hands_over": "법",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "법칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교수진",
+   "split": "tune",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교습",
+   "split": "tune",
+   "hands_over": "습",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "습식"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교언",
+   "split": "tune",
+   "hands_over": "언",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "언약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교역",
+   "split": "tune",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교육대학",
+   "split": "tune",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교육목표",
+   "split": "tune",
+   "hands_over": "표",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "표기법": "법칙",
+    "표현법": "법칙",
+    "표면적": "적갈색",
+    "표적": "적갈색",
+    "표명": "명색",
+    "표식": "식단표",
+    "표절": "절룩절룩",
+    "표주박": "박색",
+    "표준": "준칙",
+    "표징": "징표",
+    "표현력": "역습"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교육적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교직",
+   "split": "tune",
+   "hands_over": "직",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "직업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교집합",
+   "split": "tune",
+   "hands_over": "합",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "합주곡",
+    "합창곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교칙",
+   "split": "tune",
+   "hands_over": "칙",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "칙칙폭폭": "폭삭"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교탁",
+   "split": "tune",
+   "hands_over": "탁",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탁탁"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교통법규",
+   "split": "tune",
+   "hands_over": "규",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "규칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교통체증",
+   "split": "tune",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교통편",
+   "split": "tune",
+   "hands_over": "편",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "편곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교향곡",
+   "split": "tune",
+   "hands_over": "곡",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "곡명": "명곡",
+    "곡식": "식충",
+    "곡절": "절룩절룩"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교환",
+   "split": "tune",
+   "hands_over": "환",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "환웅"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교활",
+   "split": "tune",
+   "hands_over": "활",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "활극": "극존칭",
+    "활동력": "역할",
+    "활력": "역할",
+    "활동적": "적갈색",
+    "활약": "약식",
+    "활활": "활약"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "교/교훈",
+   "split": "tune",
+   "hands_over": "훈",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "훈련병": "병존"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "군/군계일학",
+   "split": "final",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "군/군대식",
+   "split": "final",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "군/군락",
+   "split": "final",
+   "hands_over": "낙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낙농업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "군/군법",
+   "split": "final",
+   "hands_over": "법",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "법칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "군/군사동맹",
+   "split": "final",
+   "hands_over": "맹",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "맹활약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "군/군사력",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "군/군사적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "군/군왕",
+   "split": "final",
+   "hands_over": "왕",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "왕릉"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "군/군율",
+   "split": "final",
+   "hands_over": "율",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "율격"
+   ],
+   "verified": "lose",
+   "reply": [
+    "율격"
+   ]
+  },
+  {
+   "id": "군/군청색",
+   "split": "final",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "권/권능",
+   "split": "tune",
+   "hands_over": "능",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "능동적": "적갈색",
+    "능률적": "적갈색",
+    "능력": "역기능",
+    "능률": "율격",
+    "능멸": "멸치젓",
+    "능변": "변색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "권/권력",
+   "split": "tune",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "권/권위적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "규/규격",
+   "split": "tune",
+   "hands_over": "격",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "격식",
+    "격증"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "규/규명",
+   "split": "tune",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "규/규범적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "규/규약",
+   "split": "tune",
+   "hands_over": "약",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "약력": "역습",
+    "약손가락": "낙농업",
+    "약식": "식충",
+    "약육강식": "식충",
+    "약혼식": "식충",
+    "약진": "진갈색",
+    "약학": "학업"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "규/규율",
+   "split": "tune",
+   "hands_over": "율",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "율격"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "규/규칙",
+   "split": "tune",
+   "hands_over": "칙",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "칙칙폭폭": "폭삭"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "규/규탄",
+   "split": "tune",
+   "hands_over": "탄",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탄약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "규/규합",
+   "split": "tune",
+   "hands_over": "합",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "합주곡",
+    "합창곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "극/극단적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "극/극락",
+   "split": "final",
+   "hands_over": "낙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낙농업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "극/극력",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "극/극약",
+   "split": "final",
+   "hands_over": "약",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "약력": "역습",
+    "약손가락": "낙농업",
+    "약식": "식충",
+    "약육강식": "식충",
+    "약혼식": "식충",
+    "약진": "진갈색",
+    "약학": "학업"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "극/극언",
+   "split": "final",
+   "hands_over": "언",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "언약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "극/극존칭",
+   "split": "final",
+   "hands_over": "칭",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "칭찬": "찬성표",
+    "칭칭": "칭찬"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "극/극찬",
+   "split": "final",
+   "hands_over": "찬",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "찬성표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "급/급기야",
+   "split": "tune",
+   "hands_over": "야",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "야영객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "급/급락",
+   "split": "tune",
+   "hands_over": "낙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낙농업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "급/급변",
+   "split": "tune",
+   "hands_over": "변",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "변칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "급/급상승",
+   "split": "tune",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "급/급습",
+   "split": "tune",
+   "hands_over": "습",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "습식"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "급/급식",
+   "split": "tune",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "급/급증",
+   "split": "tune",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "급/급진",
+   "split": "tune",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "급/급진적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "급/급행",
+   "split": "tune",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "급/급훈",
+   "split": "tune",
+   "hands_over": "훈",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "훈련병": "병존"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "낙/낙관적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "낙/낙농업",
+   "split": "tune",
+   "hands_over": "업",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "업적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "낙/낙승",
+   "split": "tune",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "낙/낙엽",
+   "split": "tune",
+   "hands_over": "엽",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "엽기적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "낙/낙향",
+   "split": "tune",
+   "hands_over": "향",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "향토색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "낭/낭군",
+   "split": "tune",
+   "hands_over": "군",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "군청색"
+   ],
+   "verified": "lose",
+   "reply": [
+    "군청색"
+   ]
+  },
+  {
+   "id": "낭/낭만적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "낭/낭비벽",
+   "split": "tune",
+   "hands_over": "벽",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "벽돌": "돌돌"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "돌/돌격",
+   "split": "final",
+   "hands_over": "격",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "격식",
+    "격증"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "돌/돌돌",
+   "split": "final",
+   "hands_over": "돌",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "돌돌"
+   ],
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "돌/돌림병",
+   "split": "final",
+   "hands_over": "병",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "병존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "돌/돌발적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "돌/돌변",
+   "split": "final",
+   "hands_over": "변",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "변칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "돌/돌솥",
+   "split": "final",
+   "hands_over": "솥",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "솥뚜껑": "껑충"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "돌/돌진",
+   "split": "final",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": "lose",
+   "reply": [
+    "진갈색"
+   ]
+  },
+  {
+   "id": "돌/돌탑",
+   "split": "final",
+   "hands_over": "탑",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탑승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "돌/돌파력",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "돌/돌풍",
+   "split": "final",
+   "hands_over": "풍",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "풍류객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "득/득득",
+   "split": "tune",
+   "hands_over": "득",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "득표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "득/득점력",
+   "split": "tune",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "득/득점왕",
+   "split": "tune",
+   "hands_over": "왕",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "왕릉"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "득/득표",
+   "split": "tune",
+   "hands_over": "표",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "표기법": "법칙",
+    "표현법": "법칙",
+    "표면적": "적갈색",
+    "표적": "적갈색",
+    "표명": "명색",
+    "표식": "식단표",
+    "표절": "절룩절룩",
+    "표주박": "박색",
+    "표준": "준칙",
+    "표징": "징표",
+    "표현력": "역습"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "득/득표율",
+   "split": "tune",
+   "hands_over": "율",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "율격"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "맹/맹공격",
+   "split": "tune",
+   "hands_over": "격",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "격식",
+    "격증"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "맹/맹목적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "맹/맹탕",
+   "split": "tune",
+   "hands_over": "탕",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탕약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "맹/맹활약",
+   "split": "tune",
+   "hands_over": "약",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "약력": "역습",
+    "약손가락": "낙농업",
+    "약식": "식충",
+    "약육강식": "식충",
+    "약혼식": "식충",
+    "약진": "진갈색",
+    "약학": "학업"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "멸/멸균",
+   "split": "final",
+   "hands_over": "균",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "균형적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "멸/멸치젓",
+   "split": "final",
+   "hands_over": "젓",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "젓가락": "낙농업"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명곡",
+   "split": "tune",
+   "hands_over": "곡",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "곡명": "명곡",
+    "곡식": "식충",
+    "곡절": "절룩절룩"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명란젓",
+   "split": "tune",
+   "hands_over": "젓",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "젓가락": "낙농업"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명랑",
+   "split": "tune",
+   "hands_over": "낭",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낭비벽"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명맥",
+   "split": "tune",
+   "hands_over": "맥",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "맥락": "낙엽",
+    "맥박": "박색",
+    "맥주병": "병존"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명멸",
+   "split": "tune",
+   "hands_over": "멸",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "멸균"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명사절",
+   "split": "tune",
+   "hands_over": "절",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "절룩절룩"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명상법",
+   "split": "tune",
+   "hands_over": "법",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "법칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명상적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명색",
+   "split": "tune",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "명/명승",
+   "split": "tune",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명약",
+   "split": "tune",
+   "hands_over": "약",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "약력": "역습",
+    "약손가락": "낙농업",
+    "약식": "식충",
+    "약육강식": "식충",
+    "약혼식": "식충",
+    "약진": "진갈색",
+    "약학": "학업"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명언",
+   "split": "tune",
+   "hands_over": "언",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "언약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명예직",
+   "split": "tune",
+   "hands_over": "직",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "직업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명운",
+   "split": "tune",
+   "hands_over": "운",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "운송업",
+    "운수업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명증",
+   "split": "tune",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "명/명칭",
+   "split": "tune",
+   "hands_over": "칭",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "칭찬": "찬성표",
+    "칭칭": "칭찬"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "명/명퇴",
+   "split": "tune",
+   "hands_over": "퇴",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "퇴색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "박/박력",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "박/박멸",
+   "split": "final",
+   "hands_over": "멸",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "멸균"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "박/박명",
+   "split": "final",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "박/박박",
+   "split": "final",
+   "hands_over": "박",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "박색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "박/박색",
+   "split": "final",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "박/박약",
+   "split": "final",
+   "hands_over": "약",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "약력": "역습",
+    "약손가락": "낙농업",
+    "약식": "식충",
+    "약육강식": "식충",
+    "약혼식": "식충",
+    "약진": "진갈색",
+    "약학": "학업"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "박/박하사탕",
+   "split": "final",
+   "hands_over": "탕",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탕약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "박/박학",
+   "split": "final",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "박/박학다식",
+   "split": "final",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "법/법규",
+   "split": "final",
+   "hands_over": "규",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "규칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "법/법률",
+   "split": "final",
+   "hands_over": "율",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "율격"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "법/법률적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "법/법명",
+   "split": "final",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "법/법칙",
+   "split": "final",
+   "hands_over": "칙",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "칙칙폭폭": "폭삭"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "법/법학",
+   "split": "final",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "변/변명",
+   "split": "tune",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "변/변별력",
+   "split": "tune",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "변/변비약",
+   "split": "tune",
+   "hands_over": "약",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "약력": "역습",
+    "약손가락": "낙농업",
+    "약식": "식충",
+    "약육강식": "식충",
+    "약혼식": "식충",
+    "약진": "진갈색",
+    "약학": "학업"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "변/변색",
+   "split": "tune",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "변/변절",
+   "split": "tune",
+   "hands_over": "절",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "절룩절룩"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "변/변주곡",
+   "split": "tune",
+   "hands_over": "곡",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "곡명": "명곡",
+    "곡식": "식충",
+    "곡절": "절룩절룩"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "변/변죽",
+   "split": "tune",
+   "hands_over": "죽",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "죽죽"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "변/변칙",
+   "split": "tune",
+   "hands_over": "칙",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "칙칙폭폭": "폭삭"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "변/변칙적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "변/변혁",
+   "split": "tune",
+   "hands_over": "혁",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "혁명": "명색",
+    "혁명적": "적갈색",
+    "혁신적": "적갈색"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "변/변화율",
+   "split": "tune",
+   "hands_over": "율",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "율격"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "변/변환",
+   "split": "tune",
+   "hands_over": "환",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "환웅"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병구완",
+   "split": "final",
+   "hands_over": "완",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "완쾌"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병균",
+   "split": "final",
+   "hands_over": "균",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "균형적": "적갈색"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병뚜껑",
+   "split": "final",
+   "hands_over": "껑",
+   "self_loop": false,
+   "start_result_at_t": null,
+   "predicted": null,
+   "hint": null,
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병력",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병리학",
+   "split": "final",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병명",
+   "split": "final",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병법",
+   "split": "final",
+   "hands_over": "법",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "법칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병색",
+   "split": "final",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병존",
+   "split": "final",
+   "hands_over": "존",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "존칭": "칭칭"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "병/병졸",
+   "split": "final",
+   "hands_over": "졸",
+   "self_loop": false,
+   "start_result_at_t": null,
+   "predicted": null,
+   "hint": null,
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병풍",
+   "split": "final",
+   "hands_over": "풍",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "풍류객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병합",
+   "split": "final",
+   "hands_over": "합",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "합주곡",
+    "합창곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병행",
+   "split": "final",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "병/병환",
+   "split": "final",
+   "hands_over": "환",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "환웅"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "삼/삼계탕",
+   "split": "tune",
+   "hands_over": "탕",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탕약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "삼/삼색",
+   "split": "tune",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "삼/삼십",
+   "split": "tune",
+   "hands_over": "십",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "십계명": "명란젓",
+    "십인십색": "색색",
+    "십진법": "법칙"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "삼/삼인칭",
+   "split": "tune",
+   "hands_over": "칭",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "칭찬": "찬성표",
+    "칭칭": "칭찬"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "삼/삼일절",
+   "split": "tune",
+   "hands_over": "절",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "절룩절룩"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "삼/삼진",
+   "split": "tune",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "삼/삼판양승",
+   "split": "tune",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "삼/삼한사온",
+   "split": "tune",
+   "hands_over": "온",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "온돌": "돌돌",
+    "온조왕": "왕릉",
+    "온탕": "탕약"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "섭/섭렵",
+   "split": "tune",
+   "hands_over": "엽",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "엽기적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "숙/숙맥",
+   "split": "final",
+   "hands_over": "맥",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "맥락": "낙엽",
+    "맥박": "박색",
+    "맥주병": "병존"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "숙/숙명",
+   "split": "final",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "숙/숙명적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "숙/숙박",
+   "split": "final",
+   "hands_over": "박",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "박색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "숙/숙박업",
+   "split": "final",
+   "hands_over": "업",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "업적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "숙/숙변",
+   "split": "final",
+   "hands_over": "변",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "변칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "숙/숙식",
+   "split": "final",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "숙/숙직",
+   "split": "final",
+   "hands_over": "직",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "직업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "순/순간적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "순/순교",
+   "split": "tune",
+   "hands_over": "교",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "교훈"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "순/순기능",
+   "split": "tune",
+   "hands_over": "능",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "능동적": "적갈색",
+    "능률적": "적갈색",
+    "능력": "역기능",
+    "능률": "율격",
+    "능멸": "멸치젓",
+    "능변": "변색"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "순/순발력",
+   "split": "tune",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "순/순백색",
+   "split": "tune",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "순/순위권",
+   "split": "tune",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "순/순직",
+   "split": "tune",
+   "hands_over": "직",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "직업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "순/순진",
+   "split": "tune",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "순/순풍",
+   "split": "tune",
+   "hands_over": "풍",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "풍류객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "순/순항",
+   "split": "tune",
+   "hands_over": "항",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "항균"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "순/순행",
+   "split": "tune",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "순/순환",
+   "split": "tune",
+   "hands_over": "환",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "환웅"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "습/습격",
+   "split": "final",
+   "hands_over": "격",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "격식",
+    "격증"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "습/습관적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "습/습득",
+   "split": "final",
+   "hands_over": "득",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "득표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "습/습식",
+   "split": "final",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "습/습진",
+   "split": "final",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "승/승객",
+   "split": "tune",
+   "hands_over": "객",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "객관식": "식생활",
+    "객관적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "승/승격",
+   "split": "tune",
+   "hands_over": "격",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "격식",
+    "격증"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "승/승급",
+   "split": "tune",
+   "hands_over": "급",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "급훈"
+   ],
+   "verified": "lose",
+   "reply": [
+    "급훈"
+   ]
+  },
+  {
+   "id": "승/승낙",
+   "split": "tune",
+   "hands_over": "낙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낙농업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "승/승률",
+   "split": "tune",
+   "hands_over": "율",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "율격"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "승/승진",
+   "split": "tune",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "승/승차권",
+   "split": "tune",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "식/식곤증",
+   "split": "final",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "식/식권",
+   "split": "final",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "식/식단표",
+   "split": "final",
+   "hands_over": "표",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "표기법": "법칙",
+    "표현법": "법칙",
+    "표면적": "적갈색",
+    "표적": "적갈색",
+    "표명": "명색",
+    "표식": "식단표",
+    "표절": "절룩절룩",
+    "표주박": "박색",
+    "표준": "준칙",
+    "표징": "징표",
+    "표현력": "역습"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "식/식도락",
+   "split": "final",
+   "hands_over": "낙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낙농업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "식/식물학",
+   "split": "final",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "식/식생활",
+   "split": "final",
+   "hands_over": "활",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "활극": "극존칭",
+    "활동력": "역할",
+    "활력": "역할",
+    "활동적": "적갈색",
+    "활약": "약식",
+    "활활": "활약"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "식/식순",
+   "split": "final",
+   "hands_over": "순",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "순백색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "식/식욕부진",
+   "split": "final",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "식/식이요법",
+   "split": "final",
+   "hands_over": "법",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "법칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "식/식충",
+   "split": "final",
+   "hands_over": "충",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "충격": "격퇴",
+    "충격적": "적갈색",
+    "충동적": "적갈색",
+    "충돌": "돌솥",
+    "충언": "언약",
+    "충절": "절충",
+    "충혈": "혈흔"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "식/식탁",
+   "split": "final",
+   "hands_over": "탁",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탁탁"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "압/압권",
+   "split": "final",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "압/압도적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "압/압력",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "압/압력솥",
+   "split": "final",
+   "hands_over": "솥",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "솥뚜껑": "껑충"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "압/압박",
+   "split": "final",
+   "hands_over": "박",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "박색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "압/압승",
+   "split": "final",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "압/압축",
+   "split": "final",
+   "hands_over": "축",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "축산업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "야/야간학교",
+   "split": "tune",
+   "hands_over": "교",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "교훈"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "야/야권",
+   "split": "tune",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "야/야만적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "야/야맹증",
+   "split": "tune",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "야/야식",
+   "split": "tune",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "야/야영객",
+   "split": "tune",
+   "hands_over": "객",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "객관식": "식생활",
+    "객관적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "야/야학",
+   "split": "tune",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "야/야합",
+   "split": "tune",
+   "hands_over": "합",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "합주곡",
+    "합창곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "언/언급",
+   "split": "final",
+   "hands_over": "급",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "급훈"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "언/언변",
+   "split": "final",
+   "hands_over": "변",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "변칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "언/언약",
+   "split": "final",
+   "hands_over": "약",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "약력": "역습",
+    "약손가락": "낙농업",
+    "약식": "식충",
+    "약육강식": "식충",
+    "약혼식": "식충",
+    "약진": "진갈색",
+    "약학": "학업"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "언/언어권",
+   "split": "final",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "언/언어능력",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "언/언어생활",
+   "split": "final",
+   "hands_over": "활",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "활극": "극존칭",
+    "활동력": "역할",
+    "활력": "역할",
+    "활동적": "적갈색",
+    "활약": "약식",
+    "활활": "활약"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "언/언어수행",
+   "split": "final",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "언/언어적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "언/언어학",
+   "split": "final",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "역/역기능",
+   "split": "tune",
+   "hands_over": "능",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "능동적": "적갈색",
+    "능률적": "적갈색",
+    "능력": "역기능",
+    "능률": "율격",
+    "능멸": "멸치젓",
+    "능변": "변색"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "역/역동적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "역/역방향",
+   "split": "tune",
+   "hands_over": "향",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "향토색"
+   ],
+   "verified": "lose",
+   "reply": [
+    "향토색"
+   ]
+  },
+  {
+   "id": "역/역병",
+   "split": "tune",
+   "hands_over": "병",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "병존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "역/역사학",
+   "split": "tune",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": "lose",
+   "reply": [
+    "학업"
+   ]
+  },
+  {
+   "id": "역/역세권",
+   "split": "tune",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "역/역순",
+   "split": "tune",
+   "hands_over": "순",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "순백색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "역/역습",
+   "split": "tune",
+   "hands_over": "습",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "습식"
+   ],
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "역/역전승",
+   "split": "tune",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "역/역풍",
+   "split": "tune",
+   "hands_over": "풍",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "풍류객"
+   ],
+   "verified": "lose",
+   "reply": [
+    "풍류객"
+   ]
+  },
+  {
+   "id": "역/역할",
+   "split": "tune",
+   "hands_over": "할",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "할증"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "역/역할극",
+   "split": "tune",
+   "hands_over": "극",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "극존칭"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "역/역행",
+   "split": "tune",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "완/완급",
+   "split": "tune",
+   "hands_over": "급",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "급훈"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "완/완력",
+   "split": "tune",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "완/완벽",
+   "split": "tune",
+   "hands_over": "벽",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "벽돌": "돌돌"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "완/완봉승",
+   "split": "tune",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "완/완숙",
+   "split": "tune",
+   "hands_over": "숙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "숙박업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "완/완전범죄",
+   "split": "tune",
+   "hands_over": "죄",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "죄명": "명색",
+    "죄의식": "식충"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "완/완충",
+   "split": "tune",
+   "hands_over": "충",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "충격": "격퇴",
+    "충격적": "적갈색",
+    "충동적": "적갈색",
+    "충돌": "돌솥",
+    "충언": "언약",
+    "충절": "절충",
+    "충혈": "혈흔"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "완/완쾌",
+   "split": "tune",
+   "hands_over": "쾌",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "쾌락": "낙엽"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "완/완행",
+   "split": "tune",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "왕/왕권",
+   "split": "final",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "왕/왕릉",
+   "split": "final",
+   "hands_over": "능",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "능동적": "적갈색",
+    "능률적": "적갈색",
+    "능력": "역기능",
+    "능률": "율격",
+    "능멸": "멸치젓",
+    "능변": "변색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "왕/왕명",
+   "split": "final",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "왕/왕왕",
+   "split": "final",
+   "hands_over": "왕",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "왕릉"
+   ],
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "왕/왕진",
+   "split": "final",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "운/운동권",
+   "split": "tune",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": "lose",
+   "reply": [
+    "권력",
+    "권역"
+   ]
+  },
+  {
+   "id": "운/운명",
+   "split": "tune",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "운/운명적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "운/운송업",
+   "split": "tune",
+   "hands_over": "업",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "업적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "운/운운",
+   "split": "tune",
+   "hands_over": "운",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "운송업",
+    "운수업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "운/운율",
+   "split": "tune",
+   "hands_over": "율",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "율격"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "운/운전면허증",
+   "split": "tune",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "운/운전병",
+   "split": "tune",
+   "hands_over": "병",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "병존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "운/운항",
+   "split": "tune",
+   "hands_over": "항",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "항균"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "운/운행",
+   "split": "tune",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "움/움직움직",
+   "split": "tune",
+   "hands_over": "직",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "직업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "움/움큼",
+   "split": "tune",
+   "hands_over": "큼",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "큼직큼직": "직업"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "율/율격",
+   "split": "final",
+   "hands_over": "격",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "격식",
+    "격증"
+   ],
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "율/율동적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": "lose",
+   "reply": [
+    "적갈색",
+    "적색",
+    "적회색"
+   ]
+  },
+  {
+   "id": "율/율법",
+   "split": "final",
+   "hands_over": "법",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "법칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절교",
+   "split": "tune",
+   "hands_over": "교",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "교훈"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절규",
+   "split": "tune",
+   "hands_over": "규",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "규칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절대적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절도죄",
+   "split": "tune",
+   "hands_over": "죄",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "죄명": "명색",
+    "죄의식": "식충"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절룩절룩",
+   "split": "tune",
+   "hands_over": "눅",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "눅진눅진": "진갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "절/절명",
+   "split": "tune",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절벽",
+   "split": "tune",
+   "hands_over": "벽",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "벽돌": "돌돌"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절식",
+   "split": "tune",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절약",
+   "split": "tune",
+   "hands_over": "약",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "약력": "역습",
+    "약손가락": "낙농업",
+    "약식": "식충",
+    "약육강식": "식충",
+    "약혼식": "식충",
+    "약진": "진갈색",
+    "약학": "학업"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절절",
+   "split": "tune",
+   "hands_over": "절",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "절룩절룩"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절찬",
+   "split": "tune",
+   "hands_over": "찬",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "찬성표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절충",
+   "split": "tune",
+   "hands_over": "충",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "충격": "격퇴",
+    "충격적": "적갈색",
+    "충동적": "적갈색",
+    "충돌": "돌솥",
+    "충언": "언약",
+    "충절": "절충",
+    "충혈": "혈흔"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "절/절편",
+   "split": "tune",
+   "hands_over": "편",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "편곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "죽/죽순",
+   "split": "tune",
+   "hands_over": "순",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "순백색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "죽/죽죽",
+   "split": "tune",
+   "hands_over": "죽",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "죽죽"
+   ],
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "준/준결승",
+   "split": "tune",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "준/준공식",
+   "split": "tune",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "준/준법",
+   "split": "tune",
+   "hands_over": "법",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "법칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "준/준칙",
+   "split": "tune",
+   "hands_over": "칙",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "칙칙폭폭": "폭삭"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "즉/즉각적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "즉/즉흥",
+   "split": "tune",
+   "hands_over": "흥",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "흥흥"
+   ],
+   "verified": "lose",
+   "reply": [
+    "흥흥"
+   ]
+  },
+  {
+   "id": "즉/즉흥곡",
+   "split": "tune",
+   "hands_over": "곡",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "곡명": "명곡",
+    "곡식": "식충",
+    "곡절": "절룩절룩"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "증/증가율",
+   "split": "final",
+   "hands_over": "율",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "율격"
+   ],
+   "verified": "lose",
+   "reply": [
+    "율격"
+   ]
+  },
+  {
+   "id": "증/증권",
+   "split": "final",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "증/증명",
+   "split": "final",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "증/증명사진",
+   "split": "final",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "증/증식",
+   "split": "final",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "증/증언",
+   "split": "final",
+   "hands_over": "언",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "언약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "증/증축",
+   "split": "final",
+   "hands_over": "축",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "축산업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "증/증편",
+   "split": "final",
+   "hands_over": "편",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "편곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "증/증폭",
+   "split": "final",
+   "hands_over": "폭",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "폭삭"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "증/증표",
+   "split": "final",
+   "hands_over": "표",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "표기법": "법칙",
+    "표현법": "법칙",
+    "표면적": "적갈색",
+    "표적": "적갈색",
+    "표명": "명색",
+    "표식": "식단표",
+    "표절": "절룩절룩",
+    "표주박": "박색",
+    "표준": "준칙",
+    "표징": "징표",
+    "표현력": "역습"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "증/증후군",
+   "split": "final",
+   "hands_over": "군",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "군청색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직간접적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직격탄",
+   "split": "tune",
+   "hands_over": "탄",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탄약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직관력",
+   "split": "tune",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직권",
+   "split": "tune",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직급",
+   "split": "tune",
+   "hands_over": "급",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "급훈"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직능",
+   "split": "tune",
+   "hands_over": "능",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "능동적": "적갈색",
+    "능률적": "적갈색",
+    "능력": "역기능",
+    "능률": "율격",
+    "능멸": "멸치젓",
+    "능변": "변색"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직명",
+   "split": "tune",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직설법",
+   "split": "tune",
+   "hands_over": "법",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "법칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직언",
+   "split": "tune",
+   "hands_over": "언",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "언약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직업",
+   "split": "tune",
+   "hands_over": "업",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "업적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "직/직업병",
+   "split": "tune",
+   "hands_over": "병",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "병존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직업의식",
+   "split": "tune",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직진",
+   "split": "tune",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직할",
+   "split": "tune",
+   "hands_over": "할",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "할증"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "직/직행",
+   "split": "tune",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진갈색",
+   "split": "final",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "진/진갑",
+   "split": "final",
+   "hands_over": "갑",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "갑갑증": "증표",
+    "갑론을박": "박색",
+    "갑절": "절룩절룩"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진격",
+   "split": "final",
+   "hands_over": "격",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "격식",
+    "격증"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진군",
+   "split": "final",
+   "hands_over": "군",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "군청색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진급",
+   "split": "final",
+   "hands_over": "급",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "급훈"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진도표",
+   "split": "final",
+   "hands_over": "표",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "표기법": "법칙",
+    "표현법": "법칙",
+    "표면적": "적갈색",
+    "표적": "적갈색",
+    "표명": "명색",
+    "표식": "식단표",
+    "표절": "절룩절룩",
+    "표주박": "박색",
+    "표준": "준칙",
+    "표징": "징표",
+    "표현력": "역습"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진두지휘",
+   "split": "final",
+   "hands_over": "휘",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "휘휘"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진력",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진맥",
+   "split": "final",
+   "hands_over": "맥",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "맥락": "낙엽",
+    "맥박": "박색",
+    "맥주병": "병존"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진보적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진분홍",
+   "split": "final",
+   "hands_over": "홍",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "홍색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진수성찬",
+   "split": "final",
+   "hands_over": "찬",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "찬성표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진압",
+   "split": "final",
+   "hands_over": "압",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "압력솥"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진언",
+   "split": "final",
+   "hands_over": "언",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "언약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진즉",
+   "split": "final",
+   "hands_over": "즉",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "즉흥곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진출권",
+   "split": "final",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진탕",
+   "split": "final",
+   "hands_over": "탕",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탕약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진퇴",
+   "split": "final",
+   "hands_over": "퇴",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "퇴색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진퇴유곡",
+   "split": "final",
+   "hands_over": "곡",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "곡명": "명곡",
+    "곡식": "식충",
+    "곡절": "절룩절룩"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진폐증",
+   "split": "final",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진폭",
+   "split": "final",
+   "hands_over": "폭",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "폭삭"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진학",
+   "split": "final",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진학률",
+   "split": "final",
+   "hands_over": "율",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "율격"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진행",
+   "split": "final",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "진/진흥",
+   "split": "final",
+   "hands_over": "흥",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "흥흥"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "찬/찬성표",
+   "split": "final",
+   "hands_over": "표",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "표기법": "법칙",
+    "표현법": "법칙",
+    "표면적": "적갈색",
+    "표적": "적갈색",
+    "표명": "명색",
+    "표식": "식단표",
+    "표절": "절룩절룩",
+    "표주박": "박색",
+    "표준": "준칙",
+    "표징": "징표",
+    "표현력": "역습"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "찬/찬탄",
+   "split": "final",
+   "hands_over": "탄",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탄약"
+   ],
+   "verified": "lose",
+   "reply": [
+    "탄약"
+   ]
+  },
+  {
+   "id": "찬/찬합",
+   "split": "final",
+   "hands_over": "합",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "합주곡",
+    "합창곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "축/축농증",
+   "split": "tune",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "축/축산업",
+   "split": "tune",
+   "hands_over": "업",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "업적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "축/축적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "축/축지법",
+   "split": "tune",
+   "hands_over": "법",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "법칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "축/축축",
+   "split": "tune",
+   "hands_over": "축",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "축산업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "축/축하객",
+   "split": "tune",
+   "hands_over": "객",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "객관식": "식생활",
+    "객관적": "적갈색"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "칠/칠순",
+   "split": "final",
+   "hands_over": "순",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "순백색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "칠/칠십",
+   "split": "final",
+   "hands_over": "십",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "십계명": "명란젓",
+    "십인십색": "색색",
+    "십진법": "법칙"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "칠/칠흑",
+   "split": "final",
+   "hands_over": "흑",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "흑색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "탁/탁발승",
+   "split": "final",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": "lose",
+   "reply": [
+    "승객"
+   ]
+  },
+  {
+   "id": "탁/탁탁",
+   "split": "final",
+   "hands_over": "탁",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탁탁"
+   ],
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "탄/탄력",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "탄/탄력적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "탄/탄식",
+   "split": "final",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": "lose",
+   "reply": [
+    "식충"
+   ]
+  },
+  {
+   "id": "탄/탄압",
+   "split": "final",
+   "hands_over": "압",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "압력솥"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "탄/탄약",
+   "split": "final",
+   "hands_over": "약",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "약력": "역습",
+    "약손가락": "낙농업",
+    "약식": "식충",
+    "약육강식": "식충",
+    "약혼식": "식충",
+    "약진": "진갈색",
+    "약학": "학업"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "탄/탄핵",
+   "split": "final",
+   "hands_over": "핵",
+   "self_loop": false,
+   "start_result_at_t": null,
+   "predicted": null,
+   "hint": null,
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "탄/탄환",
+   "split": "final",
+   "hands_over": "환",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "환웅"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "탑/탑승",
+   "split": "final",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "탑/탑승객",
+   "split": "final",
+   "hands_over": "객",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "객관식": "식생활",
+    "객관적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "탑/탑승권",
+   "split": "final",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "탕/탕약",
+   "split": "final",
+   "hands_over": "약",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "약력": "역습",
+    "약손가락": "낙농업",
+    "약식": "식충",
+    "약육강식": "식충",
+    "약혼식": "식충",
+    "약진": "진갈색",
+    "약학": "학업"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "탕/탕진",
+   "split": "final",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "탕/탕탕",
+   "split": "final",
+   "hands_over": "탕",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탕약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "퇴/퇴락",
+   "split": "tune",
+   "hands_over": "낙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낙농업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "퇴/퇴색",
+   "split": "tune",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "퇴/퇴역",
+   "split": "tune",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "퇴/퇴적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "퇴/퇴직",
+   "split": "tune",
+   "hands_over": "직",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "직업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "퇴/퇴진",
+   "split": "tune",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "퇴/퇴학",
+   "split": "tune",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "퇴/퇴행",
+   "split": "tune",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "편/편곡",
+   "split": "final",
+   "hands_over": "곡",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "곡명": "명곡",
+    "곡식": "식충",
+    "곡절": "절룩절룩"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "편/편동풍",
+   "split": "final",
+   "hands_over": "풍",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "풍류객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "편/편력",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "편/편법",
+   "split": "final",
+   "hands_over": "법",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "법칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "편/편승",
+   "split": "final",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "편/편식",
+   "split": "final",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "편/편싸움",
+   "split": "final",
+   "hands_over": "움",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "움큼"
+   ],
+   "verified": "lose",
+   "reply": [
+    "움큼"
+   ]
+  },
+  {
+   "id": "편/편찬",
+   "split": "final",
+   "hands_over": "찬",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "찬성표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "편/편파적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "편/편향",
+   "split": "final",
+   "hands_over": "향",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "향토색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭격",
+   "split": "tune",
+   "hands_over": "격",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "격식",
+    "격증"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭군",
+   "split": "tune",
+   "hands_over": "군",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "군청색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭락",
+   "split": "tune",
+   "hands_over": "낙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낙농업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭력",
+   "split": "tune",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭력적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": "lose",
+   "reply": [
+    "적갈색",
+    "적색",
+    "적회색"
+   ]
+  },
+  {
+   "id": "폭/폭삭",
+   "split": "tune",
+   "hands_over": "삭",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "삭풍": "풍류객"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "폭/폭식",
+   "split": "tune",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭압",
+   "split": "tune",
+   "hands_over": "압",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "압력솥"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭약",
+   "split": "tune",
+   "hands_over": "약",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "약력": "역습",
+    "약손가락": "낙농업",
+    "약식": "식충",
+    "약육강식": "식충",
+    "약혼식": "식충",
+    "약진": "진갈색",
+    "약학": "학업"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭언",
+   "split": "tune",
+   "hands_over": "언",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "언약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭죽",
+   "split": "tune",
+   "hands_over": "죽",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "죽죽"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭탄",
+   "split": "tune",
+   "hands_over": "탄",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탄약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭폭",
+   "split": "tune",
+   "hands_over": "폭",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "폭삭"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭풍",
+   "split": "tune",
+   "hands_over": "풍",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "풍류객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭행",
+   "split": "tune",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "폭/폭행죄",
+   "split": "tune",
+   "hands_over": "죄",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "죄명": "명색",
+    "죄의식": "식충"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "풍/풍랑",
+   "split": "final",
+   "hands_over": "낭",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낭비벽"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "풍/풍력",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "풍/풍류객",
+   "split": "final",
+   "hands_over": "객",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "객관식": "식생활",
+    "객관적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "풍/풍습",
+   "split": "final",
+   "hands_over": "습",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "습식"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "풍/풍운",
+   "split": "final",
+   "hands_over": "운",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "운송업",
+    "운수업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "풍/풍자적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "풍/풍진",
+   "split": "final",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "풍/풍토병",
+   "split": "final",
+   "hands_over": "병",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "병존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "풍/풍향",
+   "split": "final",
+   "hands_over": "향",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "향토색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학교",
+   "split": "tune",
+   "hands_over": "교",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "교훈"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학교생활",
+   "split": "tune",
+   "hands_over": "활",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "활극": "극존칭",
+    "활동력": "역할",
+    "활력": "역할",
+    "활동적": "적갈색",
+    "활약": "약식",
+    "활활": "활약"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학구적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학군",
+   "split": "tune",
+   "hands_over": "군",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "군청색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학급",
+   "split": "tune",
+   "hands_over": "급",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "급훈"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학력",
+   "split": "tune",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학맥",
+   "split": "tune",
+   "hands_over": "맥",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "맥락": "낙엽",
+    "맥박": "박색",
+    "맥주병": "병존"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학생증",
+   "split": "tune",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학습",
+   "split": "tune",
+   "hands_over": "습",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "습식"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학식",
+   "split": "tune",
+   "hands_over": "식",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "식충"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학업",
+   "split": "tune",
+   "hands_over": "업",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "업적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "학/학칙",
+   "split": "tune",
+   "hands_over": "칙",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "칙칙폭폭": "폭삭"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "학/학풍",
+   "split": "tune",
+   "hands_over": "풍",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "풍류객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "할/할렐루야",
+   "split": "final",
+   "hands_over": "야",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "야영객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "할/할인권",
+   "split": "final",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": "lose",
+   "reply": [
+    "권능"
+   ]
+  },
+  {
+   "id": "할/할인율",
+   "split": "final",
+   "hands_over": "율",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "율격"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "할/할증",
+   "split": "final",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "합/합격",
+   "split": "final",
+   "hands_over": "격",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "격식",
+    "격증"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "합/합격증",
+   "split": "final",
+   "hands_over": "증",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "증표"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "합/합리적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "합/합법",
+   "split": "final",
+   "hands_over": "법",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "법칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "합/합병",
+   "split": "final",
+   "hands_over": "병",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "병존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "합/합숙",
+   "split": "final",
+   "hands_over": "숙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "숙박업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "합/합승",
+   "split": "final",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "합/합주곡",
+   "split": "final",
+   "hands_over": "곡",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "곡명": "명곡",
+    "곡식": "식충",
+    "곡절": "절룩절룩"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "합/합집합",
+   "split": "final",
+   "hands_over": "합",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "합주곡",
+    "합창곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "항/항공권",
+   "split": "final",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "항/항공사진",
+   "split": "final",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "항/항공우편",
+   "split": "final",
+   "hands_over": "편",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "편곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "항/항구적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "항/항균",
+   "split": "final",
+   "hands_over": "균",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "균형적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "항/항변",
+   "split": "final",
+   "hands_over": "변",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "변칙"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "행/행군",
+   "split": "tune",
+   "hands_over": "군",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "군청색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "행/행락",
+   "split": "tune",
+   "hands_over": "낙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낙농업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "행/행락객",
+   "split": "tune",
+   "hands_over": "객",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "객관식": "식생활",
+    "객관적": "적갈색"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "행/행랑",
+   "split": "tune",
+   "hands_over": "낭",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낭비벽"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "행/행방불명",
+   "split": "tune",
+   "hands_over": "명",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "명색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "행/행색",
+   "split": "tune",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "행/행운",
+   "split": "tune",
+   "hands_over": "운",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "운송업",
+    "운수업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "행/행적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "행/행정구역",
+   "split": "tune",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "행/행정권",
+   "split": "tune",
+   "hands_over": "권",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "권능"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "행/행진",
+   "split": "tune",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "행/행진곡",
+   "split": "tune",
+   "hands_over": "곡",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "곡명": "명곡",
+    "곡식": "식충",
+    "곡절": "절룩절룩"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "향/향락",
+   "split": "tune",
+   "hands_over": "낙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낙농업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "향/향락적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "향/향수병",
+   "split": "tune",
+   "hands_over": "병",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "병존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "향/향토색",
+   "split": "tune",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "혈/혈맥",
+   "split": "final",
+   "hands_over": "맥",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "맥락": "낙엽",
+    "맥박": "박색",
+    "맥주병": "병존"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "혈/혈맹",
+   "split": "final",
+   "hands_over": "맹",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "맹활약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "혈/혈색",
+   "split": "final",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "혈/혈압",
+   "split": "final",
+   "hands_over": "압",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "압력솥"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "혈/혈액순환",
+   "split": "final",
+   "hands_over": "환",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "환웅"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "혈/혈흔",
+   "split": "final",
+   "hands_over": "흔",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "흔적": "적갈색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "홍/홍삼",
+   "split": "final",
+   "hands_over": "삼",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "삼십"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "홍/홍색",
+   "split": "final",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "홍/홍역",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "홍/홍학",
+   "split": "final",
+   "hands_over": "학",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "학업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "홍/홍합",
+   "split": "final",
+   "hands_over": "합",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "합주곡",
+    "합창곡"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "환/환갑",
+   "split": "final",
+   "hands_over": "갑",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "갑갑증": "증표",
+    "갑론을박": "박색",
+    "갑절": "절룩절룩"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "환/환경적",
+   "split": "final",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "환/환급",
+   "split": "final",
+   "hands_over": "급",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "급훈"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "환/환락",
+   "split": "final",
+   "hands_over": "낙",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "낙농업"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "환/환멸",
+   "split": "final",
+   "hands_over": "멸",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "멸균"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "환/환산표",
+   "split": "final",
+   "hands_over": "표",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "표기법": "법칙",
+    "표현법": "법칙",
+    "표면적": "적갈색",
+    "표적": "적갈색",
+    "표명": "명색",
+    "표식": "식단표",
+    "표절": "절룩절룩",
+    "표주박": "박색",
+    "표준": "준칙",
+    "표징": "징표",
+    "표현력": "역습"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "환/환상곡",
+   "split": "final",
+   "hands_over": "곡",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "곡명": "명곡",
+    "곡식": "식충",
+    "곡절": "절룩절룩"
+   },
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "환/환승",
+   "split": "final",
+   "hands_over": "승",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "승객"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "환/환승역",
+   "split": "final",
+   "hands_over": "역",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "역습"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "환/환웅",
+   "split": "final",
+   "hands_over": "웅",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "웅변": "변색"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "환/환율",
+   "split": "final",
+   "hands_over": "율",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "율격"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "휘/휘적휘적",
+   "split": "tune",
+   "hands_over": "적",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "적갈색",
+    "적색",
+    "적회색",
+    "적자생존"
+   ],
+   "verified": "lose",
+   "reply": [
+    "적갈색",
+    "적색",
+    "적회색"
+   ]
+  },
+  {
+   "id": "휘/휘휘",
+   "split": "tune",
+   "hands_over": "휘",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "휘휘"
+   ],
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "흑/흑백사진",
+   "split": "tune",
+   "hands_over": "진",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "진갈색"
+   ],
+   "verified": "lose",
+   "reply": [
+    "진갈색"
+   ]
+  },
+  {
+   "id": "흑/흑색",
+   "split": "tune",
+   "hands_over": "색",
+   "self_loop": false,
+   "start_result_at_t": "lose",
+   "predicted": "win",
+   "hint": {
+    "색맹": "맹활약",
+    "색색": "색칠",
+    "색칠": "칠십"
+   },
+   "verified": "win",
+   "reply": []
+  },
+  {
+   "id": "흑/흑설탕",
+   "split": "tune",
+   "hands_over": "탕",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "탕약"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "흑/흑흑",
+   "split": "tune",
+   "hands_over": "흑",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "흑색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "흥/흥행",
+   "split": "final",
+   "hands_over": "행",
+   "self_loop": false,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "행색"
+   ],
+   "verified": null,
+   "reply": []
+  },
+  {
+   "id": "흥/흥흥",
+   "split": "final",
+   "hands_over": "흥",
+   "self_loop": true,
+   "start_result_at_t": "win",
+   "predicted": "lose",
+   "hint": [
+    "흥흥"
+   ],
+   "verified": "win",
+   "reply": []
+  }
+ ]
+}
