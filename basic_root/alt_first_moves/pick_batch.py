@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Choose a small batch of unverified 'other first moves' from many syllables (fixed rule, no results used).
 
-usage: pick_batch.py targets.json OUT.json [PER_SIDE=12] [SALT=alt817-pick-v1:]
+usage: pick_batch.py targets.json OUT.json [PER_SIDE=12] [SALT=alt817-pick-v1:] [--skip-run]
 
 Rule: the syllables of each side (tuning / final comparison) are taken in the order of the split
 (sha256 of the split salt + syllable). From each syllable one target without verification evidence is
 taken: the one with the smallest sha256(SALT + id). Syllables whose first moves are all verified are
 skipped. PER_SIDE targets per side; names p01, p02, ... alternate tuning, final.
 Relayed (Astra) records and solver-only mentions count as not verified, so they can be picked.
+With --skip-run, targets that already have a run record in results/summary.json (any batch, decided or
+not) are skipped too, so a later batch takes new positions. Use a new SALT for each later batch.
 """
 import hashlib
 import json
@@ -23,9 +25,14 @@ def h(s):
 
 def main():
     doc = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
-    per_side = int(sys.argv[3]) if len(sys.argv) > 3 else 12
-    salt = sys.argv[4] if len(sys.argv) > 4 else 'alt817-pick-v1:'
+    args = [a for a in sys.argv if a != '--skip-run']
+    per_side = int(args[3]) if len(args) > 3 else 12
+    salt = args[4] if len(args) > 4 else 'alt817-pick-v1:'
     targets = doc['targets']
+    if '--skip-run' in sys.argv:
+        summ = Path(sys.argv[1]).resolve().parent / 'results' / 'summary.json'
+        done = set(json.loads(summ.read_text(encoding='utf-8'))) if summ.exists() else set()
+        targets = [t for t in targets if t['id'] not in done]
     syls = sorted({t['syllable'] for t in targets}, key=lambda s: h(SPLIT_SALT + s))
     side_of = {t['syllable']: t['split'] for t in targets}
     chosen = {'tune': [], 'final': []}

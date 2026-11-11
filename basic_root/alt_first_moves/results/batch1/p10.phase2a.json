@@ -1,0 +1,20 @@
+{
+ "name": "p10",
+ "id": "탄/탄식",
+ "syllable": "탄",
+ "word": "탄식",
+ "phase": "2a",
+ "phase_seconds": 480.0,
+ "tt_mb": 2048,
+ "search_seconds_before": 120.001,
+ "search_seconds": 360.0,
+ "mid_calls": null,
+ "search_seconds_total": 480.001,
+ "solver_result": "interrupted",
+ "reason": "container_restart",
+ "decided": false,
+ "carried_into_state": true,
+ "lost_search": "at most about 120 s after the 04:27:53 checkpoint",
+ "note": "container restart during phase 2 (between 04:28:00 and 04:29:53 UTC, 2026-11-11). Only the search up to the last checkpoint of state.tt is carried into the next run; the search after it is lost and not counted.",
+ "evidence_for_carried_seconds": "state.tt written by the 120 s checkpoints of phase 2; last write 04:27:53 = third checkpoint (360 s)"
+}
