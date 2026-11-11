@@ -35,6 +35,8 @@ def main():
         last = dec or rs[-1]
         search = last['search_seconds_total']
         mids = sum(r.get('mid_calls') or 0 for r in rs)
+        partial = any(r.get('mid_calls') is None and (r.get('search_seconds') or 0) > 0 for r in rs)
+        mtxt = ('≥' if partial else '') + f'{mids:,}'
         tot['search'] += search
         tot['n'] += 1
         words = '·'.join(p.get('words', [p['word']]))
@@ -44,10 +46,10 @@ def main():
             tot['proof'] += dec['proof_seconds']; tot['verify'] += dec['verify_seconds']; tot['nodes'] += dec['proof_nodes']
             tot['search_decided'] += search
             res = '**지는 수**' if dec['first_move'] == 'lose' else '**이기는 수**'
-            print(f'| {name} | {words} | {side.get(p.get("split"), "")} | {form.get(p.get("root_form"), "")} | {search:.0f} | {mids:,} | {res} | '
+            print(f'| {name} | {words} | {side.get(p.get("split"), "")} | {form.get(p.get("root_form"), "")} | {search:.0f} | {mtxt} | {res} | '
                   f'{dec["proof_nodes"]:,} | {dec["proof_seconds"]:.1f} | {dec["verify_seconds"]:.1f} | {"·".join(dec.get("reply") or []) or "-"} |')
         else:
-            print(f'| {name} | {words} | {side.get(p.get("split"), "")} | {form.get(p.get("root_form"), "")} | {search:.0f} | {mids:,} | 미확정 | - | - | - | - |')
+            print(f'| {name} | {words} | {side.get(p.get("split"), "")} | {form.get(p.get("root_form"), "")} | {search:.0f} | {mtxt} | 미확정 | - | - | - | - |')
         rows.append((name, p, rs, dec))
     print()
     print(json.dumps({k: (round(v, 1) if isinstance(v, float) else v) for k, v in tot.items()}, ensure_ascii=False))

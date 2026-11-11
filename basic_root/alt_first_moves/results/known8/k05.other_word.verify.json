@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "format": "route-proof-v4",
+  "rule": "engine-standard-dueum (ㄹ:ㅑㅕㅖㅛㅠㅣ→ㅇ, ㅏㅐㅗㅚㅜㅡ→ㄴ; ㄴ:ㅕㅛㅠㅣ→ㅇ; one-way)",
+  "result_for_player_to_move": "W",
+  "initial_syllable": "역",
+  "current_vertex": "학",
+  "history": [
+    "역학"
+  ],
+  "initial_used_words": [],
+  "dictionary_words": 817,
+  "used_words": 1,
+  "model_vertices": 160,
+  "model_groups": 718,
+  "shared_groups": 0,
+  "checked_certificate_states": 96637,
+  "checked_certificate_moves": 98929,
+  "checked_static_leaves": 18447,
+  "reduced_root_word_count": 578,
+  "certificate_nodes": 96637,
+  "unreached_nodes": 0,
+  "state_storage": "deflate-exact",
+  "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+  "position_sha256": "37d6034415dce1581b14e656707722976bac4bca67f002205409d43964902a49",
+  "proof_sha256": "506a7ed105b2bafe87991268d8224c9d33f05458be32470de0db879143b39162",
+  "input_sha256": "d0d1539e43695340b0d1b35a70405b87f8dbe68d6da0986ed0bc3bbe31a13249",
+  "elapsed_seconds": 5.265
+}

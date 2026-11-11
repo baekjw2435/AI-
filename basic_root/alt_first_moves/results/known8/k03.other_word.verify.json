@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "format": "route-proof-v4",
+  "rule": "engine-standard-dueum (ㄹ:ㅑㅕㅖㅛㅠㅣ→ㅇ, ㅏㅐㅗㅚㅜㅡ→ㄴ; ㄴ:ㅕㅛㅠㅣ→ㅇ; one-way)",
+  "result_for_player_to_move": "W",
+  "initial_syllable": "격",
+  "current_vertex": "적",
+  "history": [
+    "격정적"
+  ],
+  "initial_used_words": [],
+  "dictionary_words": 817,
+  "used_words": 1,
+  "model_vertices": 160,
+  "model_groups": 718,
+  "shared_groups": 0,
+  "checked_certificate_states": 187278,
+  "checked_certificate_moves": 189926,
+  "checked_static_leaves": 33176,
+  "reduced_root_word_count": 578,
+  "certificate_nodes": 187278,
+  "unreached_nodes": 0,
+  "state_storage": "deflate-exact",
+  "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+  "position_sha256": "78a7ed1cdfb8c9df306554eeda9d9066d6f0f6d37d4558c9afe000c49f1e7ae0",
+  "proof_sha256": "2a95a866f1785e2da1a960506cabdf14a1f62d7b62670d322a748f1637cc88e2",
+  "input_sha256": "cef6dc765cbaa36fe2e06e15c49f3ed8f68e093f13befcac7a31c6f1f021f00d",
+  "elapsed_seconds": 11.227
+}
