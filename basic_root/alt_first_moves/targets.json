@@ -18,7 +18,14 @@
    "적자생존"
   ],
   "unknown": 10,
-  "source": "아스트라 적색 루트 연습실 v3"
+  "source": "아스트라 적색 루트 연습실 v3",
+  "verified_here": {
+   "word": "적자생존",
+   "verdict": "win",
+   "nodes": 747957,
+   "sha256": "9571c3f50f09a647b9051c73aa937f639f976976139303a58318d3a0f988f8c1",
+   "note": "칭·존 연구의 \"적자생존으로 넘겨받은 존\" 증명: 시작 음절 적, 수순 [적자생존], 둘 차례인 사람 패배"
+  }
  },
  "split_rule": "syllables sorted by sha256(\"alt817-split-v1:\" + syllable), alternately tune / final",
  "counts": {
@@ -31,14 +38,14 @@
    "kept_partly_cancelled": 15
   },
   "canonical_first_moves_438": 438,
-  "verified_win": 65,
+  "verified_win": 67,
   "verified_lose": 10,
   "relayed_win": 2,
   "relayed_lose": 7,
   "solver_only": 1,
-  "no_record": 412,
-  "not_verified_total": 422,
-  "not_verified_canonical": 364,
+  "no_record": 410,
+  "not_verified_total": 420,
+  "not_verified_canonical": 362,
   "not_verified_pair_cancelled": 58,
   "child_static": 0,
   "split_syllables": {
@@ -47,7 +54,7 @@
   },
   "split_not_verified": {
    "final": 196,
-   "tune": 226
+   "tune": 224
   }
  },
  "targets": [
@@ -1129,12 +1136,14 @@
     "verifier": "verify_v2.py (원본)",
     "proof": {
      "position": [
-      "극"
+      "극",
+      "극존칭"
      ],
-     "nodes": 385805,
-     "sha256": "752d20eaa45124b227787819c45018c6619b3662b22b4823130be7fc5edded00",
-     "kind": "시작 음절 증명(이기는 첫 수 포함)"
-    }
+     "nodes": 384728,
+     "sha256": "b2980734df72e6c9405a0d623092b0ac04d738a6d8a0bff1eb9e637433d5b60e",
+     "kind": "첫 수 따로 증명"
+    },
+    "also": "시작 음절 증명의 이기는 첫 수이기도 함"
    },
    "split": "final"
   },
@@ -2123,8 +2132,19 @@
    "root_form": "kept",
    "child_static": -1,
    "existing": {
-    "verdict": null,
-    "evidence": "none"
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "명",
+      "명칭"
+     ],
+     "nodes": 304749,
+     "sha256": "9281e8b18796c457bb002b4b37da8de423b8ff49425f95f9d6d54e8ab153000d",
+     "kind": "첫 수 따로 증명"
+    },
+    "note": "사이트 목록에는 미판정으로 나오지만, 칭·존 연구에서 이 국면을 따로 증명했음"
    },
    "split": "tune"
   },
@@ -2768,12 +2788,14 @@
     "verifier": "verify_v2.py (원본)",
     "proof": {
      "position": [
-      "병"
+      "병",
+      "병존"
      ],
-     "nodes": 7789,
-     "sha256": "fa933a195ba03716e761b9302392fd33f9ba2cda5c63087a30c616b795af3596",
-     "kind": "시작 음절 증명(이기는 첫 수 포함)"
-    }
+     "nodes": 8004,
+     "sha256": "031536ffaf3ead732e4bd857cdd7b2c22ec3b719d2c240944c8e5178efdb070f",
+     "kind": "첫 수 따로 증명"
+    },
+    "also": "시작 음절 증명의 이기는 첫 수이기도 함"
    },
    "split": "final"
   },
@@ -2926,8 +2948,19 @@
    "root_form": "kept",
    "child_static": -1,
    "existing": {
-    "verdict": null,
-    "evidence": "none"
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "삼",
+      "삼인칭"
+     ],
+     "nodes": 410515,
+     "sha256": "c1e8e58883e4fb2189e8e95c87d4b26285a16cf99eac3ced8a20b6034fd50276",
+     "kind": "첫 수 따로 증명"
+    },
+    "note": "사이트 목록에는 미판정으로 나오지만, 칭·존 연구에서 이 국면을 따로 증명했음"
    },
    "split": "tune"
   },

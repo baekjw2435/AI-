@@ -87,6 +87,15 @@ def main():
     cat = json.loads(CATALOG.read_text(encoding='utf-8'))
     assert cat['dictionary_sha256'] == hashlib.sha256(dbytes).hexdigest()
     entries = {e['id']: e for e in cat['entries'] if e['kind'] == 'fresh'}
+    # every stored proof of a position 'start syllable + one word', whatever entry lists it. The 칭·존 study
+    # ("칭 received via 명칭" etc.) solved such positions too: start 명, history [명칭] is the first move 명칭.
+    one_word = {}
+    for e in cat['entries']:
+        for p in e.get('proofs', []):
+            if len(p['history']) == 1:
+                k = (p['start'], p['history'][0])
+                assert one_word.setdefault(k, p)['sha256'] == p['sha256']
+    used_one_word = set()
     roots = [s for s, e in entries.items() if e['receiverWins']]
     sk = solved_ko_roots()
     assert sorted(sk) == sorted(roots) and len(roots) == 64, 'SOLVED_KO.md and the site catalog list different roots'
@@ -118,10 +127,7 @@ def main():
         assert sorted(first_words) == sorted(w for w in m2.words if m2.word_endpoints[w][0] == m2.vertex[dueum(s)])
         cat_moves = {tuple(sorted(mv['words'])): mv for mv in e['root']['moves']}
         assert sorted(cat_moves) == sorted(tuple(sorted(v)) for v in states.values()), f'{s}: the site catalog groups first words differently'
-        proofs1 = {}
-        for p in e['proofs']:
-            if len(p['history']) == 1:
-                proofs1[p['history'][0]] = p
+        proofs1 = {w: p for (st_, w), p in one_word.items() if st_ == s}
         notes = e.get('notes') or {}
         for inp, ws in sorted(states.items(), key=lambda kv: sorted(kv[1])):
             ws = sorted(ws)
@@ -134,14 +140,22 @@ def main():
             assert canon[g] or (red[g] == 0 and t != cur), 'a first move removed for another reason than pair cancellation'
             mv = cat_moves[tuple(ws)]
             ex = {'verdict': None, 'evidence': 'none'}
-            if mv['how'] == '증명':
-                ex = {'verdict': mv['status'], 'evidence': 'verified', 'verifier': 'verify_v2.py (원본)'}
-                pw = next((w for w in ws if w in proofs1), None)
+            pw = next((w for w in ws if w in proofs1), None)
+            if pw:
+                used_one_word.add((s, pw))
+            if mv['how'] == '증명' or pw:
                 p = proofs1[pw] if pw else e['proof']
+                verdict = ('win' if p['result'] == 'L' else 'lose') if pw else mv['status']
+                ex = {'verdict': verdict, 'evidence': 'verified', 'verifier': 'verify_v2.py (원본)'}
                 ex['proof'] = {'position': [s] + ([pw] if pw else []), 'nodes': p['nodes'], 'sha256': p['sha256'],
                                'kind': '첫 수 따로 증명' if pw else '시작 음절 증명(이기는 첫 수 포함)'}
-                assert pw or (mv['status'] == 'win' and sorted(e['root']['best']['words']) == ws)
-                assert not pw or (p['result'] == 'L') == (mv['status'] == 'win')
+                is_best = mv['status'] == 'win' and sorted(e['root']['best']['words']) == ws
+                assert pw or is_best
+                assert mv['status'] in ('?', verdict), f'{s} {ws}: proof record and site list disagree'
+                if mv['status'] == '?':
+                    ex['note'] = '사이트 목록에는 미판정으로 나오지만, 칭·존 연구에서 이 국면을 따로 증명했음'
+                if pw and is_best:
+                    ex['also'] = '시작 음절 증명의 이기는 첫 수이기도 함'
                 if mv.get('reply'):
                     ex['reply'] = mv['reply']['word']
             else:
@@ -191,9 +205,17 @@ def main():
     jwords = [w for w in m.words if w[0] in m.keys[jcur]]
     jwin = [mv for mv in je['root']['moves'] if mv['status'] == 'win']
     assert sum(len(mv['words']) for mv in je['root']['moves']) == len(jwords) and all(mv['how'] == '아스트라 증명' for mv in jwin)
+    jp = one_word.get(('적', '적자생존'))
+    assert jp and jp['result'] == 'L'
+    used_one_word.add(('적', '적자생존'))
     jeok = {'words': len(jwords), 'positions': len(je['root']['moves']), 'relayed_win': len(jwin),
             'relayed_win_words': ['·'.join(mv['words']) for mv in jwin],
-            'unknown': sum(1 for mv in je['root']['moves'] if mv['status'] == '?'), 'source': je['proof']['source']}
+            'unknown': sum(1 for mv in je['root']['moves'] if mv['status'] == '?'), 'source': je['proof']['source'],
+            'verified_here': {'word': '적자생존', 'verdict': 'win', 'nodes': jp['nodes'], 'sha256': jp['sha256'],
+                              'note': '칭·존 연구의 "적자생존으로 넘겨받은 존" 증명: 시작 음절 적, 수순 [적자생존], 둘 차례인 사람 패배'}}
+    # every one-word proof must have been used, except those at losing roots (존 → 존칭)
+    left = {k for k in one_word if k not in used_one_word}
+    assert all(not entries[k[0]]['receiverWins'] for k in left), f'unused one-word proofs: {left}'
     doc = {'format': 'alt817-targets-1', 'dictionary_sha256': hashlib.sha256(dbytes).hexdigest(), 'model_check': check, 'jeok': jeok,
            'split_rule': f'syllables sorted by sha256("{SPLIT_SALT}" + syllable), alternately tune / final',
            'counts': counts, 'targets': targets}

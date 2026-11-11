@@ -116,6 +116,10 @@ def main():
         tot.update(words=sum(len(t['words']) for t in ts), pos=len(ts), pair=pair, old_w=old_w, old_l=old_l, nw=nw, nl=nl, rel=rel, left=left)
     rows.append(f'| **합계** | | **{tot["words"]}** | **{tot["pos"]}** | **{tot["pair"]}** | **{tot["old_w"]} / {tot["old_l"]}** | **{tot["nw"]} / {tot["nl"]}** | **{tot["rel"]}** | **{tot["left"]}** |')
     jeok = doc.get('jeok')
+    extra_w = ['·'.join(t['words']) for t in targets if t['existing']['evidence'] == 'verified' and t['existing']['verdict'] == 'win'
+               and t['existing']['proof']['kind'] == '첫 수 따로 증명' and 'also' not in t['existing']]
+    extra_l = Counter(t['syllable'] for t in targets if t['existing']['evidence'] == 'verified' and t['existing']['verdict'] == 'lose')
+    extra_l_txt = ', '.join(f'{k} {v}개' for k, v in sorted(extra_l.items()))
     md = f"""# 한기사(817단어) 이기는 쪽의 다른 첫 수: 대상 목록
 
 이 파일은 `report.py`가 `targets.json`과 `results/`에서 만듭니다. 직접 고치지 마세요.
@@ -142,7 +146,8 @@ def main():
 - **438** = 시작 국면을 단순화한 뒤 남는 첫 수 묶음입니다. 왕복 짝 {c['root_form']['pair_cancelled']}개가 빠져 있어서 '모든 첫 수'가 아니었습니다.
 - **374** = 438 − 64(음절마다 이미 증명한 이기는 수 하나)입니다. 두 가지가 틀렸습니다.
   1. 왕복 짝 {c['root_form']['pair_cancelled']}개를 세지 않았습니다.
-  2. 이미 검증된 수를 음절마다 하나씩만 뺐습니다. 실제로는 격식(승)과 격·역의 지는 수 10개가 더 검증돼 있었습니다.
+  2. 이미 검증된 수를 음절마다 하나씩만 뺐습니다. 실제로는 이기는 수 {len(extra_w)}개({', '.join(extra_w)})와 지는 수 {sum(extra_l.values())}개({extra_l_txt})가 더 검증돼 있었습니다.
+     - 명칭·삼인칭은 칭·존 연구('명칭으로 넘겨받은 칭' 등)에서 증명한 국면입니다. 그 국면이 바로 '명 → 명칭', '삼 → 삼인칭'입니다.
 - **바로잡은 수:** 국면 {c['distinct_positions']}개 중 검증 기록이 있는 것은 {c['verified_win'] + c['verified_lose']}개(승 {c['verified_win']}, 패 {c['verified_lose']})이고, 검증 기록이 없는 것은 **{c['not_verified_total']}개**입니다.
   - 단순화해도 남는 수 {c['not_verified_canonical']}개, 왕복 짝 {c['not_verified_pair_cancelled']}개
   - 전달받은 기록만 있는 것 {c['relayed_win'] + c['relayed_lose']}개(역: 승 {c['relayed_win']}, 패 {c['relayed_lose']}), 탐색기 기록만 있는 것 {c['solver_only']}개(탑승권), 아무 기록 없는 것 {c['no_record']}개
@@ -178,8 +183,12 @@ def main():
         md += f"""
 ## 적 (따로 둠)
 
-- 적은 아스트라 쪽 연구(적색 루트 연습실)의 결과만 있고, 이 저장소의 검증기로 확인한 적이 없습니다. 그래서 위 64개에 넣지 않았습니다.
-- 적의 첫 단어는 {jeok['words']}개, 국면은 {jeok['positions']}개입니다. 전달 기록상 이기는 수는 {jeok['relayed_win']}개 국면({', '.join(jeok['relayed_win_words'])})이고, 나머지 {jeok['unknown']}개는 기록이 없습니다.
+- 적은 `SOLVED_KO.md`에서 아스트라 쪽 연구(적색 루트 연습실) 결과로 따로 적혀 있어서, 위 64개에 넣지 않았습니다.
+- 적의 첫 단어는 {jeok['words']}개, 국면은 {jeok['positions']}개입니다.
+  - 아스트라 기록상 이기는 수는 {jeok['relayed_win']}개 국면({', '.join(jeok['relayed_win_words'])})입니다.
+  - 그중 **적자생존은 이 저장소에도 검증 기록이 있습니다.** 칭·존 연구의 '적자생존으로 넘겨받은 존' 증명({jeok['verified_here']['nodes']:,}국면, verify_v2 통과)이 바로 '적 → 적자생존 뒤 상대가 진다'는 증명입니다.
+  - 그러니 '적을 받으면 이긴다'도 이 저장소의 검증 근거가 있습니다. 적갈색·적색·적회색은 전달 기록뿐입니다.
+  - 나머지 {jeok['unknown']}개 국면은 기록이 없습니다.
 """
     (HERE / 'TARGETS_KO.md').write_text(md, encoding='utf-8')
     # ---- full list
