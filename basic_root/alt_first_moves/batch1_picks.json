@@ -1,0 +1,420 @@
+{
+ "rule": "the syllables of each side (tuning / final comparison) are taken in the order of the split\n(sha256 of the split salt + syllable). From each syllable one target without verification evidence is\ntaken: the one with the smallest sha256(SALT + id). Syllables whose first moves are all verified are\nskipped. PER_SIDE targets per side; names p01, p02, ... alternate tuning, final.\nRelayed (Astra) records and solver-only mentions count as not verified, so they can be picked.",
+ "per_side": 12,
+ "salt": "alt817-pick-v1:",
+ "picks": [
+  {
+   "name": "p01",
+   "id": "폭/폭력적",
+   "syllable": "폭",
+   "word": "폭력적",
+   "words": [
+    "폭력적",
+    "폭발적"
+   ],
+   "target": "적",
+   "input_sha256": "fcc441430cf899a8eec136d2a09998ba9bffea5f2ea214bdff7ff2052a4288f6",
+   "root_form": "kept",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p02",
+   "id": "증/증가율",
+   "syllable": "증",
+   "word": "증가율",
+   "words": [
+    "증가율"
+   ],
+   "target": "율",
+   "input_sha256": "936f5b0fc12a07bbc80428223b837c886f048c243d488dfa0d67fba64ea434cc",
+   "root_form": "kept",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p03",
+   "id": "휘/휘적휘적",
+   "syllable": "휘",
+   "word": "휘적휘적",
+   "words": [
+    "휘적휘적"
+   ],
+   "target": "적",
+   "input_sha256": "849cb6d40fb36094df3b87ae67094269bef4c5ce08850e540fa91e9b0a87ad3c",
+   "root_form": "kept",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p04",
+   "id": "찬/찬탄",
+   "syllable": "찬",
+   "word": "찬탄",
+   "words": [
+    "찬탄"
+   ],
+   "target": "탄",
+   "input_sha256": "7a0b6950d76a4cab5d77b5a6ab4abc0cae8cd5bbb426ec33732c4d831922ed02",
+   "root_form": "kept",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p05",
+   "id": "순/순발력",
+   "syllable": "순",
+   "word": "순발력",
+   "words": [
+    "순발력"
+   ],
+   "target": "역",
+   "input_sha256": "81c25889b9c7c6ec6d3219874506550e21b28ce2f7f5f771090ae94ab1a287f8",
+   "root_form": "pair_cancelled",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p06",
+   "id": "할/할인권",
+   "syllable": "할",
+   "word": "할인권",
+   "words": [
+    "할인권"
+   ],
+   "target": "권",
+   "input_sha256": "ec03da45cc8f1d883055479f413e16b577286cca3e041a3ca1a0773efbd98124",
+   "root_form": "kept",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p07",
+   "id": "승/승급",
+   "syllable": "승",
+   "word": "승급",
+   "words": [
+    "승급"
+   ],
+   "target": "급",
+   "input_sha256": "a5ba46adcbccb08699ed3fe727a0494efbc779bcb1f6f9a6d65a973bc38e8f67",
+   "root_form": "pair_cancelled",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p08",
+   "id": "돌/돌진",
+   "syllable": "돌",
+   "word": "돌진",
+   "words": [
+    "돌진"
+   ],
+   "target": "진",
+   "input_sha256": "b644260e1c94b6eaac2d2a2e02e13161f6e51aa7b9241a9806b0be3559e77302",
+   "root_form": "kept",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p09",
+   "id": "운/운동권",
+   "syllable": "운",
+   "word": "운동권",
+   "words": [
+    "운동권",
+    "운영권"
+   ],
+   "target": "권",
+   "input_sha256": "2cb4294c3929a75561e236a4463f80f42d9a11c80ada91524adec20e076da8ec",
+   "root_form": "kept",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p10",
+   "id": "탄/탄식",
+   "syllable": "탄",
+   "word": "탄식",
+   "words": [
+    "탄식"
+   ],
+   "target": "식",
+   "input_sha256": "7c2fe09cbde016e9512ef1829d0d83c0729f7397b9070aeec7b305af95e4b74b",
+   "root_form": "kept",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p11",
+   "id": "즉/즉흥",
+   "syllable": "즉",
+   "word": "즉흥",
+   "words": [
+    "즉흥"
+   ],
+   "target": "흥",
+   "input_sha256": "566f8c6e51598f73435ad823c58e9982c3c18df95f68274d41f5383fdcb8fa73",
+   "root_form": "kept",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p12",
+   "id": "율/율동적",
+   "syllable": "율",
+   "word": "율동적",
+   "words": [
+    "율동적"
+   ],
+   "target": "적",
+   "input_sha256": "d36674b2aa597442f89c67893b85328fa0d8e5a1bee4d9494a7cb6d1e3f48301",
+   "root_form": "pair_cancelled",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p13",
+   "id": "낭/낭군",
+   "syllable": "낭",
+   "word": "낭군",
+   "words": [
+    "낭군"
+   ],
+   "target": "군",
+   "input_sha256": "0c48fee82b1b5dc3860bf9d4c192ae4d6bae5c731c25920ab92d36d6b16c9fff",
+   "root_form": "kept",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p14",
+   "id": "왕/왕왕",
+   "syllable": "왕",
+   "word": "왕왕",
+   "words": [
+    "왕왕"
+   ],
+   "target": "왕",
+   "input_sha256": "e88a081e649630b55f173964d742e224185844347c07059aafe0ece6cffd7138",
+   "root_form": "kept",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p15",
+   "id": "흑/흑백사진",
+   "syllable": "흑",
+   "word": "흑백사진",
+   "words": [
+    "흑백사진"
+   ],
+   "target": "진",
+   "input_sha256": "9bf901bb7ae7886eef209316f434d6846c4e5bc0cf1e41b5f2fc96b8115cdbb7",
+   "root_form": "kept",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p16",
+   "id": "탁/탁발승",
+   "syllable": "탁",
+   "word": "탁발승",
+   "words": [
+    "탁발승"
+   ],
+   "target": "승",
+   "input_sha256": "6ad3bb61adb595499b7a89c5f4901802704fada30f8c0784dcc8ca8a9ee97800",
+   "root_form": "kept",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p17",
+   "id": "맹/맹탕",
+   "syllable": "맹",
+   "word": "맹탕",
+   "words": [
+    "맹탕"
+   ],
+   "target": "탕",
+   "input_sha256": "4037459ff46ae315f3b6f81fba9a982eafd52f77755920b2764bec12a70152f0",
+   "root_form": "kept",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p18",
+   "id": "군/군율",
+   "syllable": "군",
+   "word": "군율",
+   "words": [
+    "군율"
+   ],
+   "target": "율",
+   "input_sha256": "fdbd47dd2d72221a3d055279c16ed2d94a2059416a2655732e23ee214dc57d06",
+   "root_form": "kept",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p19",
+   "id": "절/절벽",
+   "syllable": "절",
+   "word": "절벽",
+   "words": [
+    "절벽"
+   ],
+   "target": "벽",
+   "input_sha256": "0d09319ceba3c6945d0cf243b1fcf99615867993b0947953216865d175ec7b5d",
+   "root_form": "kept",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p20",
+   "id": "격/격돌",
+   "syllable": "격",
+   "word": "격돌",
+   "words": [
+    "격돌"
+   ],
+   "target": "돌",
+   "input_sha256": "301f7a2e4796f0784fe83119e8b511330f127c3c95b1362fae7810feee231d82",
+   "root_form": "pair_cancelled",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none",
+    "note": "격돌과 돌격이 서로 맞물리는 짝이라 따로 계산해야 해서 아직 판정하지 않음"
+   }
+  },
+  {
+   "name": "p21",
+   "id": "낙/낙엽",
+   "syllable": "낙",
+   "word": "낙엽",
+   "words": [
+    "낙엽"
+   ],
+   "target": "엽",
+   "input_sha256": "c992ba41e97c3fb5f9e22c8bc1d6c64c2bbcc5c4d8247754e7e6ea59993a7f14",
+   "root_form": "kept",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p22",
+   "id": "편/편싸움",
+   "syllable": "편",
+   "word": "편싸움",
+   "words": [
+    "편싸움"
+   ],
+   "target": "움",
+   "input_sha256": "b1fac9bcaa64e37bd3a3d1da91d0beb69a611730ecfbed04ed30354f556e34f7",
+   "root_form": "kept",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p23",
+   "id": "준/준결승",
+   "syllable": "준",
+   "word": "준결승",
+   "words": [
+    "준결승",
+    "준우승",
+    "준준결승"
+   ],
+   "target": "승",
+   "input_sha256": "6a6e7519dea95ee88895bb60c7e4a250751e7eaedabbf16e75f86e487b4b8b44",
+   "root_form": "kept",
+   "split": "tune",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  },
+  {
+   "name": "p24",
+   "id": "홍/홍역",
+   "syllable": "홍",
+   "word": "홍역",
+   "words": [
+    "홍역"
+   ],
+   "target": "역",
+   "input_sha256": "7d70b5c72f9399668422be1b86cc4f357fff55a4ac522ee57cc05937e23e139e",
+   "root_form": "kept",
+   "split": "final",
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   }
+  }
+ ]
+}

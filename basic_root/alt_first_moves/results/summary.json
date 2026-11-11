@@ -1,0 +1,161 @@
+{
+ "격/격멸": [
+  {
+   "id": "격/격멸",
+   "batch": "known8",
+   "name": "k01",
+   "phases": 1,
+   "search_seconds_total": 17.491,
+   "mid_calls_total": 10226199,
+   "decided": true,
+   "first_move": "lose",
+   "reply": [
+    "멸치젓"
+   ],
+   "proof_nodes": 108307,
+   "proof_bytes": 769933,
+   "proof_seconds": 2.215275,
+   "verify_seconds": 6.861,
+   "proof_sha256": "d290ecf1781b56f19505e4f566c91326bf17c451e597f385e807c034215d1a5d",
+   "position_sha256": "f679cf892221b8eff2888c1e7d62f847c6a59354cd7da19d7b7cc7f07884e391",
+   "input_sha256": "914167bcbc61807d866b21859211acf0e7d7bafc6475023714b3939691864bac",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "격/격변": [
+  {
+   "id": "격/격변",
+   "batch": "known8",
+   "name": "k02",
+   "phases": 1,
+   "search_seconds_total": 94.895,
+   "mid_calls_total": 52488788,
+   "decided": true,
+   "first_move": "lose",
+   "reply": [
+    "변칙"
+   ],
+   "proof_nodes": 219905,
+   "proof_bytes": 1572450,
+   "proof_seconds": 4.874856,
+   "verify_seconds": 14.985,
+   "proof_sha256": "8773389003b814bcbff0e7fcded060e2bd3eec90543af33b506024f4caceb933",
+   "position_sha256": "edde62ba18dae863f54f44908cbd3c1b9a8665c182b52b939bf853e6db367784",
+   "input_sha256": "58edb6641888f11ee70ebe474a55fdd224d849f5e8ac5d078e84904a5311bd21",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "격/격식적": [
+  {
+   "id": "격/격식적",
+   "batch": "known8",
+   "name": "k03",
+   "phases": 1,
+   "search_seconds_total": 35.091,
+   "mid_calls_total": 19050047,
+   "decided": true,
+   "first_move": "lose",
+   "reply": [
+    "적갈색",
+    "적색",
+    "적회색"
+   ],
+   "proof_nodes": 187278,
+   "proof_bytes": 1339763,
+   "proof_seconds": 4.360063,
+   "verify_seconds": 12.921,
+   "proof_sha256": "2a95a866f1785e2da1a960506cabdf14a1f62d7b62670d322a748f1637cc88e2",
+   "position_sha256": "fb4c1bc47cd1d171ae7491a4f5656e520bac3aff97572bbf301bb97af0919084",
+   "input_sha256": "cef6dc765cbaa36fe2e06e15c49f3ed8f68e093f13befcac7a31c6f1f021f00d",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "격/격퇴": [
+  {
+   "id": "격/격퇴",
+   "batch": "known8",
+   "name": "k04",
+   "phases": 1,
+   "search_seconds_total": 21.485,
+   "mid_calls_total": 11508763,
+   "decided": true,
+   "first_move": "lose",
+   "reply": [
+    "퇴색"
+   ],
+   "proof_nodes": 177940,
+   "proof_bytes": 1272865,
+   "proof_seconds": 4.196494,
+   "verify_seconds": 12.508,
+   "proof_sha256": "3dc5222364b70154c41379a5b95f4f16dc75dc942a01e8cb6efe275c9fe7be22",
+   "position_sha256": "01ea15c8d60994d58de9b3d1a85dd4c35ed64eef99dfcd2d129caf348deee249",
+   "input_sha256": "3eef6c102d2db1ee752a3c5beb819795e0450b4b1e1973fb265d87227b8918c4",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "역/역사학": [
+  {
+   "id": "역/역사학",
+   "batch": "known8",
+   "name": "k05",
+   "phases": 1,
+   "search_seconds_total": 21.971,
+   "mid_calls_total": 12843087,
+   "decided": true,
+   "first_move": "lose",
+   "reply": [
+    "학업"
+   ],
+   "proof_nodes": 96637,
+   "proof_bytes": 687898,
+   "proof_seconds": 2.011711,
+   "verify_seconds": 6.349,
+   "proof_sha256": "506a7ed105b2bafe87991268d8224c9d33f05458be32470de0db879143b39162",
+   "position_sha256": "edc85199d466a42408ce3dd9cbaf36672353d95bae95d4f41c607a801d723ce7",
+   "input_sha256": "d0d1539e43695340b0d1b35a70405b87f8dbe68d6da0986ed0bc3bbe31a13249",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "역/역방향": [
+  {
+   "id": "역/역방향",
+   "batch": "known8",
+   "name": "k06",
+   "phases": 1,
+   "search_seconds_total": 120.001,
+   "mid_calls_total": 61612032,
+   "decided": false,
+   "reason": "time_limit",
+   "pn": 964,
+   "dn": 5453
+  }
+ ],
+ "격/격랑": [
+  {
+   "id": "격/격랑",
+   "batch": "known8",
+   "name": "k07",
+   "phases": 1,
+   "search_seconds_total": 120.001,
+   "mid_calls_total": 62548992,
+   "decided": false,
+   "reason": "time_limit",
+   "pn": 2712,
+   "dn": 8677
+  }
+ ],
+ "역/역풍": [
+  {
+   "id": "역/역풍",
+   "batch": "known8",
+   "name": "k08",
+   "phases": 1,
+   "search_seconds_total": 120.002,
+   "mid_calls_total": 63413248,
+   "decided": false,
+   "reason": "time_limit",
+   "pn": 2522,
+   "dn": 8904
+  }
+ ]
+}

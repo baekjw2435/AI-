@@ -1,0 +1,8789 @@
+{
+ "format": "alt817-targets-1",
+ "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+ "model_check": {
+  "v2_vertices": 160,
+  "v2_groups": 718,
+  "v3_vertices": 160,
+  "v3_groups": 718,
+  "v2_dead_end_vertices": 0,
+  "same_game": true
+ },
+ "jeok": {
+  "words": 15,
+  "positions": 12,
+  "relayed_win": 2,
+  "relayed_win_words": [
+   "적갈색·적색·적회색",
+   "적자생존"
+  ],
+  "unknown": 10,
+  "source": "아스트라 적색 루트 연습실 v3"
+ },
+ "split_rule": "syllables sorted by sha256(\"alt817-split-v1:\" + syllable), alternately tune / final",
+ "counts": {
+  "winning_syllables": 64,
+  "legal_first_words": 572,
+  "distinct_positions": 497,
+  "root_form": {
+   "pair_cancelled": 59,
+   "kept": 423,
+   "kept_partly_cancelled": 15
+  },
+  "canonical_first_moves_438": 438,
+  "verified_win": 65,
+  "verified_lose": 10,
+  "relayed_win": 2,
+  "relayed_lose": 7,
+  "solver_only": 1,
+  "no_record": 412,
+  "not_verified_total": 422,
+  "not_verified_canonical": 364,
+  "not_verified_pair_cancelled": 58,
+  "child_static": 0,
+  "split_syllables": {
+   "tune": 32,
+   "final": 32
+  },
+  "split_not_verified": {
+   "final": 196,
+   "tune": 226
+  }
+ },
+ "targets": [
+  {
+   "id": "격/격돌",
+   "syllable": "격",
+   "words": [
+    "격돌"
+   ],
+   "target": "돌",
+   "input_sha256": "301f7a2e4796f0784fe83119e8b511330f127c3c95b1362fae7810feee231d82",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none",
+    "note": "격돌과 돌격이 서로 맞물리는 짝이라 따로 계산해야 해서 아직 판정하지 않음"
+   },
+   "split": "final"
+  },
+  {
+   "id": "격/격랑",
+   "syllable": "격",
+   "words": [
+    "격랑"
+   ],
+   "target": "낭",
+   "input_sha256": "0cee8f1aef575270a82f6697b4c222444a6fc365d66de880baff0500840c25d5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "격",
+      "격랑"
+     ],
+     "nodes": 1029671,
+     "sha256": "67433aca248a5bdca165da3a3b736adf677d943236f18da4ec246671361a15a5",
+     "kind": "첫 수 따로 증명"
+    },
+    "reply": "낭비벽"
+   },
+   "split": "final"
+  },
+  {
+   "id": "격/격멸",
+   "syllable": "격",
+   "words": [
+    "격멸"
+   ],
+   "target": "멸",
+   "input_sha256": "914167bcbc61807d866b21859211acf0e7d7bafc6475023714b3939691864bac",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "격",
+      "격멸"
+     ],
+     "nodes": 100933,
+     "sha256": "e55d8f67633b5d9e6fa470ac6f6e2139d4028460705bf22544b8e3b9a36c7ae8",
+     "kind": "첫 수 따로 증명"
+    },
+    "reply": "멸치젓"
+   },
+   "split": "final"
+  },
+  {
+   "id": "격/격변",
+   "syllable": "격",
+   "words": [
+    "격변"
+   ],
+   "target": "변",
+   "input_sha256": "58edb6641888f11ee70ebe474a55fdd224d849f5e8ac5d078e84904a5311bd21",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "격",
+      "격변"
+     ],
+     "nodes": 193753,
+     "sha256": "2ddbba08575cf1f405daaa079adad610788dd8f0ffa8c0c8955184ff9b8808c3",
+     "kind": "첫 수 따로 증명"
+    },
+    "reply": "변색"
+   },
+   "split": "final"
+  },
+  {
+   "id": "격/격식",
+   "syllable": "격",
+   "words": [
+    "격식"
+   ],
+   "target": "식",
+   "input_sha256": "dec49121b72bf6467f6db2dbbafd18ce01e662416d30d602f09b249a79700beb",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "격",
+      "격식"
+     ],
+     "nodes": 10124213,
+     "sha256": "98fb502268ca40456785fd98d6d3cf8e57be2d5267e7926a86f58ab704d5e35c",
+     "kind": "첫 수 따로 증명"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "격/격식적",
+   "syllable": "격",
+   "words": [
+    "격식적",
+    "격정적"
+   ],
+   "target": "적",
+   "input_sha256": "cef6dc765cbaa36fe2e06e15c49f3ed8f68e093f13befcac7a31c6f1f021f00d",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "격",
+      "격식적"
+     ],
+     "nodes": 178494,
+     "sha256": "ad393cc96c1eaddd22f3579129f184193d119b5cf89d00f53168284f1383536a",
+     "kind": "첫 수 따로 증명"
+    },
+    "reply": "적갈색"
+   },
+   "split": "final"
+  },
+  {
+   "id": "격/격언",
+   "syllable": "격",
+   "words": [
+    "격언"
+   ],
+   "target": "언",
+   "input_sha256": "263cc51ef485a64fbe49fbfe767b58dacdbf78ad53eb9a674758e417f7ea9b02",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "격",
+      "격언"
+     ],
+     "nodes": 5805419,
+     "sha256": "88ccaa7b2c2c89ca0b34f148d54dfa23da09e1398e210b3c61a7d5552b4d1e7c",
+     "kind": "첫 수 따로 증명"
+    },
+    "reply": "언약"
+   },
+   "split": "final"
+  },
+  {
+   "id": "격/격증",
+   "syllable": "격",
+   "words": [
+    "격증"
+   ],
+   "target": "증",
+   "input_sha256": "8aa03df67fba3ebfa0df0e8422ef09c94de2bf1262aa914d04fd7f5762f585cf",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "격"
+     ],
+     "nodes": 5673929,
+     "sha256": "259b972335b9a9ae02d66aa5dad5bcec7d706e7a8f7b4b0e35f28526c8a078ca",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "격/격찬",
+   "syllable": "격",
+   "words": [
+    "격찬"
+   ],
+   "target": "찬",
+   "input_sha256": "2ccb4a048889feebeee3f5e52f20625134b43a6a1f5970cf14101818a3781d63",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "격",
+      "격찬"
+     ],
+     "nodes": 10589106,
+     "sha256": "c4cb5a4e087db952f5eb9518a874b95bc9b3d211522b20ada42db687a2cba844",
+     "kind": "첫 수 따로 증명"
+    },
+    "reply": "찬성표"
+   },
+   "split": "final"
+  },
+  {
+   "id": "격/격퇴",
+   "syllable": "격",
+   "words": [
+    "격퇴"
+   ],
+   "target": "퇴",
+   "input_sha256": "3eef6c102d2db1ee752a3c5beb819795e0450b4b1e1973fb265d87227b8918c4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "격",
+      "격퇴"
+     ],
+     "nodes": 176139,
+     "sha256": "228b86e603edd67ddb54c7cb338187a977a7c0d343a3a2aa4003e66cae93b394",
+     "kind": "첫 수 따로 증명"
+    },
+    "reply": "퇴색"
+   },
+   "split": "final"
+  },
+  {
+   "id": "교/교권",
+   "syllable": "교",
+   "words": [
+    "교권",
+    "교환권"
+   ],
+   "target": "권",
+   "input_sha256": "4a3da6261a2636400fc2fe75d61ca54b6dbc6dd10b12f76c1c5bdeea67f9d33a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교섭",
+   "syllable": "교",
+   "words": [
+    "교섭"
+   ],
+   "target": "섭",
+   "input_sha256": "af00c5c68b3469a5c196fd49552d84def578f3858d2d041d31dc4da5b03004ad",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교수법",
+   "syllable": "교",
+   "words": [
+    "교수법",
+    "교육법"
+   ],
+   "target": "법",
+   "input_sha256": "de9b1fd5433086b48a2bdfb7b0e698e210a2f2d6e550ed2fc83ad93e6b752505",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교수진",
+   "syllable": "교",
+   "words": [
+    "교수진"
+   ],
+   "target": "진",
+   "input_sha256": "885a3eac14ff37bae1ff8079d00deccd1a84548e2f840a9b6cb116491665aede",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교습",
+   "syllable": "교",
+   "words": [
+    "교습",
+    "교육실습"
+   ],
+   "target": "습",
+   "input_sha256": "fa70b1642c9b3209b1d3f5954d93f16fabbf6fe830d40e6e6462c02b2069d475",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교언",
+   "syllable": "교",
+   "words": [
+    "교언"
+   ],
+   "target": "언",
+   "input_sha256": "5843ba1a9651c4435ec758097f4ded2e978f60d2cd327e33b62b1650b8f3dc03",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교역",
+   "syllable": "교",
+   "words": [
+    "교역",
+    "교화력"
+   ],
+   "target": "역",
+   "input_sha256": "aa14fe8d97e239d9fbb09e4705995806163666a4faae31401e8a75e14d804bec",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교육대학",
+   "syllable": "교",
+   "words": [
+    "교육대학",
+    "교육철학",
+    "교육학"
+   ],
+   "target": "학",
+   "input_sha256": "dbfdd453c14b113f604f53bf03623d4699376cba6850d8d3308906c31a93da3c",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교육목표",
+   "syllable": "교",
+   "words": [
+    "교육목표",
+    "교표"
+   ],
+   "target": "표",
+   "input_sha256": "6cd0e93dd46d26c1c240af4d1be685477a9b398965962c3b9ba986b67dd91a59",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교육적",
+   "syllable": "교",
+   "words": [
+    "교육적",
+    "교조적",
+    "교훈적"
+   ],
+   "target": "적",
+   "input_sha256": "61960c9bdc8d2cac6e3c5418681daf308259c87a6a4d3511a333f8c5eac334ca",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교직",
+   "syllable": "교",
+   "words": [
+    "교직"
+   ],
+   "target": "직",
+   "input_sha256": "33ad4c92ca5db1d2ad16b21d6c55091bb9149cdfb794966692137bc6004e2ee4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교집합",
+   "syllable": "교",
+   "words": [
+    "교집합",
+    "교합"
+   ],
+   "target": "합",
+   "input_sha256": "2244216c11a563f2de007ac65e4d4d1dbf31cbe4773c1d62167af7b0c0de9fdc",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교칙",
+   "syllable": "교",
+   "words": [
+    "교칙"
+   ],
+   "target": "칙",
+   "input_sha256": "d7d531ec630470109e4d2111ce760c3e6fbc437806b3de98e28cb9fe404939a5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교탁",
+   "syllable": "교",
+   "words": [
+    "교탁"
+   ],
+   "target": "탁",
+   "input_sha256": "05375966cbe7adc6f6718c435c868a465e3e5ca133c13ce000df9ccbc8e185e6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교통법규",
+   "syllable": "교",
+   "words": [
+    "교통법규"
+   ],
+   "target": "규",
+   "input_sha256": "5b8c309e6cb39d71cc81e20c14d9ac7aa5b84689ff26f078e846798a60562c38",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교통체증",
+   "syllable": "교",
+   "words": [
+    "교통체증"
+   ],
+   "target": "증",
+   "input_sha256": "fa21c18e9499264fd889a3be96dcb833ebc3bf0e3a8fe4ca4cebe48ba9388d17",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교통편",
+   "syllable": "교",
+   "words": [
+    "교통편",
+    "교편"
+   ],
+   "target": "편",
+   "input_sha256": "2964e5e10d3bd512596b99d5096b8d9dd9c6cc26f711995d93749e72effca90b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교향곡",
+   "syllable": "교",
+   "words": [
+    "교향곡"
+   ],
+   "target": "곡",
+   "input_sha256": "9299e048682ae04408eb8d311574ff7dd39a1b319b6b334dd53304cfbddfcc6c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교환",
+   "syllable": "교",
+   "words": [
+    "교환"
+   ],
+   "target": "환",
+   "input_sha256": "bdd32c918e594eec3209fd7d39d9ed2897e63a2284e49cd3e5ce4ba7d27750d5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교활",
+   "syllable": "교",
+   "words": [
+    "교활"
+   ],
+   "target": "활",
+   "input_sha256": "ef414315df30aa7d44f386db1d28dbea26b744203a9b8352b6a8df30886bb36c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "교/교훈",
+   "syllable": "교",
+   "words": [
+    "교훈"
+   ],
+   "target": "훈",
+   "input_sha256": "76353ccd830ad6add036e3ae74331df9a83d516272c5a005d4e551c3e7ec3190",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "교"
+     ],
+     "nodes": 8080,
+     "sha256": "52e080dcbefe71107da186627fa67e4590fb4feb69ca1b61e0abe548a3533fd7",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "군/군계일학",
+   "syllable": "군",
+   "words": [
+    "군계일학",
+    "군사학"
+   ],
+   "target": "학",
+   "input_sha256": "7925a14ee2d944faeaa261093b9bba2617b056d8b5e368b242df9af925281570",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "군/군대식",
+   "syllable": "군",
+   "words": [
+    "군대식"
+   ],
+   "target": "식",
+   "input_sha256": "ec571c64e97cb115e39edc9af2698e126f1a2777d43e9e356dfa4b907b021be4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "군/군락",
+   "syllable": "군",
+   "words": [
+    "군락"
+   ],
+   "target": "낙",
+   "input_sha256": "7c770071c1d098bc4d229f56199d4ff474b11e378887ede8326652b990612dd2",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "군/군법",
+   "syllable": "군",
+   "words": [
+    "군법"
+   ],
+   "target": "법",
+   "input_sha256": "92dc761b5ef626a021254b51218c17d71056254b2a4327b62cc8510bafcc9ddd",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "군/군사동맹",
+   "syllable": "군",
+   "words": [
+    "군사동맹"
+   ],
+   "target": "맹",
+   "input_sha256": "c0eb1ef43b9167b771a9a15241446261b2fb3fa1dfe8d19d973a44082aaa7407",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "군/군사력",
+   "syllable": "군",
+   "words": [
+    "군사력"
+   ],
+   "target": "역",
+   "input_sha256": "1e8ad96c55ce62fdbb72d6536692e3ed8c4e375b63e6c109ac5cb26b54d81cb7",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "군/군사적",
+   "syllable": "군",
+   "words": [
+    "군사적"
+   ],
+   "target": "적",
+   "input_sha256": "f27e28cf00bd44243a3a1cb6fbbc5dfea98047059ef54cddba4f682da0f8432f",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "군/군왕",
+   "syllable": "군",
+   "words": [
+    "군왕"
+   ],
+   "target": "왕",
+   "input_sha256": "a5b89e231c46a11352db5d592b2faefdab768665f2ad04544b2242bb3f4cc55d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "군/군율",
+   "syllable": "군",
+   "words": [
+    "군율"
+   ],
+   "target": "율",
+   "input_sha256": "fdbd47dd2d72221a3d055279c16ed2d94a2059416a2655732e23ee214dc57d06",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "군/군청색",
+   "syllable": "군",
+   "words": [
+    "군청색"
+   ],
+   "target": "색",
+   "input_sha256": "68caeb5fbdfe934f5e4b29558e1d5ac3b651eefab5d88419c8114b1667ac884e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "군"
+     ],
+     "nodes": 199080,
+     "sha256": "706ad6e9183c135494667c428b0fc52dc34476514b89567ada5ba3dcce2310d1",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "권/권능",
+   "syllable": "권",
+   "words": [
+    "권능"
+   ],
+   "target": "능",
+   "input_sha256": "d14e1ad0de41b8fca71dc22c066f4829009f99b28b9e5aabf036e18f5c0ca8ba",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "권"
+     ],
+     "nodes": 110934,
+     "sha256": "3b5c4693aaa03f97a8ed372b4a31bfedbdf52712f5852f3c4110505684d85e7f",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "권/권력",
+   "syllable": "권",
+   "words": [
+    "권력",
+    "권역"
+   ],
+   "target": "역",
+   "input_sha256": "1e3fc18d87d3ae06f4e078786fcd9080e26f5fa434b203d13eafb6c9264ca677",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "권/권위적",
+   "syllable": "권",
+   "words": [
+    "권위적",
+    "권위주의적"
+   ],
+   "target": "적",
+   "input_sha256": "3d83fce7459b4b3ec7e3a71573fc52761b49250adf029027d9bfa7fe1cf29c71",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "규/규격",
+   "syllable": "규",
+   "words": [
+    "규격"
+   ],
+   "target": "격",
+   "input_sha256": "d278cc28874807db0a73dc5cca454c75d81074b360d2c3a376d217a5882626bf",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "규/규명",
+   "syllable": "규",
+   "words": [
+    "규명"
+   ],
+   "target": "명",
+   "input_sha256": "3376bc3ee8dee78baa742d820bcdd561c5b28fbbf1e22fc1586aaf7d2e6d56cd",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "규/규범적",
+   "syllable": "규",
+   "words": [
+    "규범적",
+    "규칙적"
+   ],
+   "target": "적",
+   "input_sha256": "0a32e7e3607b27a858fdb8f8c37641da46ec58a2d1b59a0739aa3eec9d46cf9c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "규/규약",
+   "syllable": "규",
+   "words": [
+    "규약"
+   ],
+   "target": "약",
+   "input_sha256": "ad7ee45c0b1dfa25561263bd4d3210ce64f02245e15e6d3ea3e333fd2fa3c377",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "규/규율",
+   "syllable": "규",
+   "words": [
+    "규율"
+   ],
+   "target": "율",
+   "input_sha256": "92017b453b9229228ee2bf8852c25db55f5644d18a374f44806f4b9727599852",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "규/규칙",
+   "syllable": "규",
+   "words": [
+    "규칙"
+   ],
+   "target": "칙",
+   "input_sha256": "ea84284e08ce15e7bf477995291ce9f8895f52f9de3a47ac2caf2cc99aafee6a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "규"
+     ],
+     "nodes": 214966,
+     "sha256": "4d3b70be14f664ba391e9d218b556a10320bc5a733b436a94e23979d560a8e6f",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "규/규탄",
+   "syllable": "규",
+   "words": [
+    "규탄"
+   ],
+   "target": "탄",
+   "input_sha256": "0fd12d44790e25d34e67bfdd0035a69d2bed54cf8a4d8e7d7ff38357208f0958",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "규/규합",
+   "syllable": "규",
+   "words": [
+    "규합"
+   ],
+   "target": "합",
+   "input_sha256": "364c6988aad22cffa7f59a64d7a565035fc0c020f28348f7cceca5fc4a20d574",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "극/극단적",
+   "syllable": "극",
+   "words": [
+    "극단적",
+    "극적"
+   ],
+   "target": "적",
+   "input_sha256": "6649a111df1edfae4dcc37f1150fc174b18f5d956c5c6a8c667d2a6365cba761",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "극/극락",
+   "syllable": "극",
+   "words": [
+    "극락"
+   ],
+   "target": "낙",
+   "input_sha256": "4aa086f6ec07183973e2f7014398248432ccd36c2166d9a965cf0b81bd9facae",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "극/극력",
+   "syllable": "극",
+   "words": [
+    "극력"
+   ],
+   "target": "역",
+   "input_sha256": "9aa5d3a1a02f2d04b742336740fd164663a2c15f83e5ff96a2dbd3147abd1900",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "극/극약",
+   "syllable": "극",
+   "words": [
+    "극약"
+   ],
+   "target": "약",
+   "input_sha256": "63cc349323908782a43a1201de96b158776263ee43d6ea677696472ca0fa6dc5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "극/극언",
+   "syllable": "극",
+   "words": [
+    "극언"
+   ],
+   "target": "언",
+   "input_sha256": "87c03ad30c6386cfd82496cd9f57063591ecf5900e78a258551dfda30ad3c760",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "극/극존칭",
+   "syllable": "극",
+   "words": [
+    "극존칭"
+   ],
+   "target": "칭",
+   "input_sha256": "f91a5234b124466343d250bd103ce5473ff3f73cb0d2c3af7af1bbc2b368772a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "극"
+     ],
+     "nodes": 385805,
+     "sha256": "752d20eaa45124b227787819c45018c6619b3662b22b4823130be7fc5edded00",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "극/극찬",
+   "syllable": "극",
+   "words": [
+    "극찬"
+   ],
+   "target": "찬",
+   "input_sha256": "69e9c9ab2017eb4de5f2cf733c696f98a8270206f1549afdc2bc66d595393d34",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "급/급기야",
+   "syllable": "급",
+   "words": [
+    "급기야"
+   ],
+   "target": "야",
+   "input_sha256": "86a7a8d47af5d9ec611eba6c7a6eff8da720b3d94fdffc32c7b6e6f6698645b6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "급/급락",
+   "syllable": "급",
+   "words": [
+    "급락"
+   ],
+   "target": "낙",
+   "input_sha256": "2701a355ff21953b1bf1f7f6c99f20dea7b1ef29c3ae357de4d1f8b50c0e7ae7",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "급/급변",
+   "syllable": "급",
+   "words": [
+    "급변"
+   ],
+   "target": "변",
+   "input_sha256": "978fac94dfe6a6a265ae33149dcd901655f23e59e0216916eb09ae8dd52be030",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "급/급상승",
+   "syllable": "급",
+   "words": [
+    "급상승"
+   ],
+   "target": "승",
+   "input_sha256": "6117f7cc80af3dffc5fe7da3e81138259d5dad9385d9e400d3fd42205e4d39c5",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "급/급습",
+   "syllable": "급",
+   "words": [
+    "급습"
+   ],
+   "target": "습",
+   "input_sha256": "672165f959855906b7e3e808667b8a06ec2f0b9dc5332c33a68f9632cd257524",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "급/급식",
+   "syllable": "급",
+   "words": [
+    "급식"
+   ],
+   "target": "식",
+   "input_sha256": "74d856e4e7f99c5bb8fde17716501c699e42a027180f3007b5ec4094b7c63b12",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "급/급증",
+   "syllable": "급",
+   "words": [
+    "급증"
+   ],
+   "target": "증",
+   "input_sha256": "ad0b1473d056c5595e5cb4f2b54d8032fe085f57330ded3605fbee70a29d9992",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "급/급진",
+   "syllable": "급",
+   "words": [
+    "급진"
+   ],
+   "target": "진",
+   "input_sha256": "20658feb9de2daa4c8bbd2ccb7d7e1a72d94338ce5cedf22b39538a19fce3a3c",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "급/급진적",
+   "syllable": "급",
+   "words": [
+    "급진적"
+   ],
+   "target": "적",
+   "input_sha256": "a57d409d5f73dfa2be5b16c35baf7419c666b01c6c72919d3e3820ee784bb4b6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "급/급행",
+   "syllable": "급",
+   "words": [
+    "급행"
+   ],
+   "target": "행",
+   "input_sha256": "54706842ea06b29c44dd317e6ee9dc3afe458f86b654d77cbe683d5b15bca468",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "급/급훈",
+   "syllable": "급",
+   "words": [
+    "급훈"
+   ],
+   "target": "훈",
+   "input_sha256": "1ffab2060203ebaf930501d9f7dc03babe2243a0f6da4fea740995f19d7a22fe",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "급"
+     ],
+     "nodes": 8247,
+     "sha256": "95986659deb7c366c88bd65dc51025932a990b22665d3b8e75d529af3f204f07",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "낙/낙관적",
+   "syllable": "낙",
+   "words": [
+    "낙관적",
+    "낙천적"
+   ],
+   "target": "적",
+   "input_sha256": "b222924d978d263e1e905872f0cc98f0a732b7696d995bf1a0b2b17083ca1f73",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "낙/낙농업",
+   "syllable": "낙",
+   "words": [
+    "낙농업"
+   ],
+   "target": "업",
+   "input_sha256": "cb0a1f555f103a03d6a500075f9ecee5337e8c38a5fc18f4ae37876c8a65336d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "낙"
+     ],
+     "nodes": 182087,
+     "sha256": "68d710ccd0c0212c6506a1fabb6678b594b20b3464e29735a97352380293d555",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "낙/낙승",
+   "syllable": "낙",
+   "words": [
+    "낙승"
+   ],
+   "target": "승",
+   "input_sha256": "1b49f3ca8f1f518871ec94fca27716c4542b7da85a0170d4e99ef82cb1df4100",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "낙/낙엽",
+   "syllable": "낙",
+   "words": [
+    "낙엽"
+   ],
+   "target": "엽",
+   "input_sha256": "c992ba41e97c3fb5f9e22c8bc1d6c64c2bbcc5c4d8247754e7e6ea59993a7f14",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "낙/낙향",
+   "syllable": "낙",
+   "words": [
+    "낙향"
+   ],
+   "target": "향",
+   "input_sha256": "0a6efe38854816bd8fd98ec1ed7be7cc48f06c15d40ec7d0f35d19c5e9baaf91",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "낭/낭군",
+   "syllable": "낭",
+   "words": [
+    "낭군"
+   ],
+   "target": "군",
+   "input_sha256": "0c48fee82b1b5dc3860bf9d4c192ae4d6bae5c731c25920ab92d36d6b16c9fff",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "낭/낭만적",
+   "syllable": "낭",
+   "words": [
+    "낭만적"
+   ],
+   "target": "적",
+   "input_sha256": "1c8d74610bf1ba2893883eb84761b5a767001bb106dfcd328d25e1443c975027",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "낭/낭비벽",
+   "syllable": "낭",
+   "words": [
+    "낭비벽"
+   ],
+   "target": "벽",
+   "input_sha256": "762b434e25c9a2ce005413f916ed73658f4102d5b2fd0060735f153d7c65674b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "낭"
+     ],
+     "nodes": 27980,
+     "sha256": "a5779a6d9e4c8752d956a7e1f55e1bbb6ea414c798b2af323597cf535a80589b",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "돌/돌격",
+   "syllable": "돌",
+   "words": [
+    "돌격"
+   ],
+   "target": "격",
+   "input_sha256": "90238c5c4bf02f5b062196ac5a676ca0bf590ecf2f87dd3b82a1801ab4bdd7f2",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "돌/돌돌",
+   "syllable": "돌",
+   "words": [
+    "돌돌"
+   ],
+   "target": "돌",
+   "input_sha256": "dacd05ec9f34aff71791788dbdcc85d43ea7ea04b786616969cb43644ce8f49d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "돌"
+     ],
+     "nodes": 494448,
+     "sha256": "ef1e8ab3e22b6eb7d410aeae6503333bc10ef20c402fd9535835aeb38cf7812c",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "돌/돌림병",
+   "syllable": "돌",
+   "words": [
+    "돌림병"
+   ],
+   "target": "병",
+   "input_sha256": "37e3778c3609f5dc23d460b647dba6b925f1cf7fb76e29acec59a352c3b32252",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "돌/돌발적",
+   "syllable": "돌",
+   "words": [
+    "돌발적"
+   ],
+   "target": "적",
+   "input_sha256": "6f8740661087b0b847ddbc76ae9778485a8ac0ba24533b570921a12ecd098a4c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "돌/돌변",
+   "syllable": "돌",
+   "words": [
+    "돌변"
+   ],
+   "target": "변",
+   "input_sha256": "36c068bb965206ad333d058990e46eb32440026169c66502a4067427b67b5cb5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "돌/돌솥",
+   "syllable": "돌",
+   "words": [
+    "돌솥"
+   ],
+   "target": "솥",
+   "input_sha256": "c57ac876d3f6d50aceff467f92e74b93d400e78d6082e4088d9b9ada5d93ae86",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "돌/돌진",
+   "syllable": "돌",
+   "words": [
+    "돌진"
+   ],
+   "target": "진",
+   "input_sha256": "b644260e1c94b6eaac2d2a2e02e13161f6e51aa7b9241a9806b0be3559e77302",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "돌/돌탑",
+   "syllable": "돌",
+   "words": [
+    "돌탑"
+   ],
+   "target": "탑",
+   "input_sha256": "4b7bcbf779b39412bd871f566bf70df6f4efd331ff5c23d73a4c0570d19fe539",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "돌/돌파력",
+   "syllable": "돌",
+   "words": [
+    "돌파력"
+   ],
+   "target": "역",
+   "input_sha256": "08bca6353590efac3a4cb791da06e06b88dfb0277ee1b23bb5151f98b6e5aa95",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "돌/돌풍",
+   "syllable": "돌",
+   "words": [
+    "돌풍"
+   ],
+   "target": "풍",
+   "input_sha256": "eac0994e82d94fe37e0bfd0527b45ab436aff6623eb25674a3920ce830f88339",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "득/득득",
+   "syllable": "득",
+   "words": [
+    "득득"
+   ],
+   "target": "득",
+   "input_sha256": "fa50c79d5f3c2acb7b4b71f31eb76f082243994761c550cccf7c0e2f4c13cddb",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "득/득점력",
+   "syllable": "득",
+   "words": [
+    "득점력"
+   ],
+   "target": "역",
+   "input_sha256": "aba33025bb3065982dad7afe7c7fd4813ec879c13c4df818d2b1cace93b88da6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "득/득점왕",
+   "syllable": "득",
+   "words": [
+    "득점왕"
+   ],
+   "target": "왕",
+   "input_sha256": "56af3d9b690c589b8b33c29db10ad39838fd0d6db50181774b38f1b7f1a494b0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "득/득표",
+   "syllable": "득",
+   "words": [
+    "득표"
+   ],
+   "target": "표",
+   "input_sha256": "2cb617cff3cffa1f5d0ac9c140105ae1f121440d1ce65328132ab7bd89f29b9b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "득"
+     ],
+     "nodes": 11804913,
+     "sha256": "e7ed743e5037e698f65e8f2d4e23f37f399594a21161e9db6bffecddb9fbc1e4",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "득/득표율",
+   "syllable": "득",
+   "words": [
+    "득표율"
+   ],
+   "target": "율",
+   "input_sha256": "1ac2346847d6f4bec068cdbe73fa1545c9f61d2eff218485a86042925f47311e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "맹/맹공격",
+   "syllable": "맹",
+   "words": [
+    "맹공격",
+    "맹추격"
+   ],
+   "target": "격",
+   "input_sha256": "ca4142c23e6740ad60b1f0511981209e18233cee9556706fd91c65be020950b1",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "맹/맹목적",
+   "syllable": "맹",
+   "words": [
+    "맹목적"
+   ],
+   "target": "적",
+   "input_sha256": "d11739a2c8fc499ef7d42fd37132d9e83828153526c36febb8594c18fced1e3a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "맹/맹탕",
+   "syllable": "맹",
+   "words": [
+    "맹탕"
+   ],
+   "target": "탕",
+   "input_sha256": "4037459ff46ae315f3b6f81fba9a982eafd52f77755920b2764bec12a70152f0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "맹/맹활약",
+   "syllable": "맹",
+   "words": [
+    "맹활약"
+   ],
+   "target": "약",
+   "input_sha256": "e4c307dead453ec0b5c042e0540296465c01b8112bd5ad21f4911caf143624c3",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "맹"
+     ],
+     "nodes": 3545630,
+     "sha256": "bb200420cb60797819b91b4a2ed28f0bbbcbee88e801e549c5b2bab1f25ec2da",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "멸/멸균",
+   "syllable": "멸",
+   "words": [
+    "멸균"
+   ],
+   "target": "균",
+   "input_sha256": "00dac05faf5ae7d3c30eb59313c5012aecf76fac50f9fcf63ce4035098c6f0f0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "멸"
+     ],
+     "nodes": 171707,
+     "sha256": "694ebf88197e1b6562493590ac24f2a83c7ca81af7307d20acc27fdc00135a04",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "멸/멸치젓",
+   "syllable": "멸",
+   "words": [
+    "멸치젓"
+   ],
+   "target": "젓",
+   "input_sha256": "b3320c1666bcbc3de6ae6649b2a47cebd507596db97b7d3cce533444f40ad024",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "명/명곡",
+   "syllable": "명",
+   "words": [
+    "명곡"
+   ],
+   "target": "곡",
+   "input_sha256": "f327728bf40b9a2fd36fff4a2b938969557fab1622d86025b96133d11d5f925d",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명란젓",
+   "syllable": "명",
+   "words": [
+    "명란젓"
+   ],
+   "target": "젓",
+   "input_sha256": "e5e596e6eed6e8dad7104e1028901c8f6c7091c70df60bcfb7ab02d73edc5d02",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명랑",
+   "syllable": "명",
+   "words": [
+    "명랑"
+   ],
+   "target": "낭",
+   "input_sha256": "3aada84ed73b4cadfb1931b713b1190969209959eec343e47d0f1f4abc9d41fc",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명맥",
+   "syllable": "명",
+   "words": [
+    "명맥"
+   ],
+   "target": "맥",
+   "input_sha256": "4ca5f080a34e27f6f1cab2e5533395ae9b1a2a2061fb0d330055df51b3bd9290",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명멸",
+   "syllable": "명",
+   "words": [
+    "명멸"
+   ],
+   "target": "멸",
+   "input_sha256": "20a7466e8d1e4750d94e30a6d48b2505ee47543dff802404670270e3427b8ba9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명사절",
+   "syllable": "명",
+   "words": [
+    "명사절",
+    "명절"
+   ],
+   "target": "절",
+   "input_sha256": "194f604d2552e5acbd6b023a72592b19b00b617626952cb0e6a571bc70d24ba3",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명상법",
+   "syllable": "명",
+   "words": [
+    "명상법"
+   ],
+   "target": "법",
+   "input_sha256": "7152ba6ee34fcfe0c03160aaff9002f93edd54177631d4b8d2754cffade8000c",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명상적",
+   "syllable": "명",
+   "words": [
+    "명상적",
+    "명승고적",
+    "명시적"
+   ],
+   "target": "적",
+   "input_sha256": "01b6b408244338936e72cf4f6e0a3130522442809a64fa22552ae5ba5e163044",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명색",
+   "syllable": "명",
+   "words": [
+    "명색"
+   ],
+   "target": "색",
+   "input_sha256": "9efd1a96cd81a974b8590102d1c3187e71e1c32e39872cca0caf588077b4be61",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "명"
+     ],
+     "nodes": 191730,
+     "sha256": "9ff66005b3f1cafbadf76b8391c20017c2c4dcbc02478bd837436b771ecc590f",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명승",
+   "syllable": "명",
+   "words": [
+    "명승"
+   ],
+   "target": "승",
+   "input_sha256": "7f66faa5dd331d59192ce4a412be499718338f3827bc39bd0dbbdf70a35774b4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명약",
+   "syllable": "명",
+   "words": [
+    "명약"
+   ],
+   "target": "약",
+   "input_sha256": "5c835569084f77ffee3504ab0a53e8572799882869aeca1b3deeea51187750d0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명언",
+   "syllable": "명",
+   "words": [
+    "명언"
+   ],
+   "target": "언",
+   "input_sha256": "bb61392f5bbb537f63c8d05478f3ae0b0bc1730c4a637e4e122d39b497d14a5b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명예직",
+   "syllable": "명",
+   "words": [
+    "명예직",
+    "명예퇴직"
+   ],
+   "target": "직",
+   "input_sha256": "474d584ba164718425525f01230a6b0378da4628e74c0a4cb04ef3619d4e5717",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명운",
+   "syllable": "명",
+   "words": [
+    "명운"
+   ],
+   "target": "운",
+   "input_sha256": "42d27590cb29ad314e8f071e9f0bb7f21a356328d1ae774609d78456d32d5baf",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명증",
+   "syllable": "명",
+   "words": [
+    "명증"
+   ],
+   "target": "증",
+   "input_sha256": "7c7e892cc3fe701aef55d8327429826d661181459a0232e6e46f5808de1ad5f7",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명칭",
+   "syllable": "명",
+   "words": [
+    "명칭"
+   ],
+   "target": "칭",
+   "input_sha256": "a2ef7e4c4e92d287bbb33c6b472ecce07d362ee4a2d4e1767e57435527582115",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "명/명퇴",
+   "syllable": "명",
+   "words": [
+    "명퇴"
+   ],
+   "target": "퇴",
+   "input_sha256": "7d4aee0763bee9a2c1eb5352f122df807c6c61b0aa8c03f4310b868ec321cf62",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "박/박력",
+   "syllable": "박",
+   "words": [
+    "박력"
+   ],
+   "target": "역",
+   "input_sha256": "5ce2a5102eaebf71bf8fa876725f87c3de98c52b24965527cd61899a6d5adb65",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "박/박멸",
+   "syllable": "박",
+   "words": [
+    "박멸"
+   ],
+   "target": "멸",
+   "input_sha256": "0254f671332d653d035269213b81ca0f763caa4e30542c4ea5be4adb06bcf2f1",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "박/박명",
+   "syllable": "박",
+   "words": [
+    "박명"
+   ],
+   "target": "명",
+   "input_sha256": "3d6b4deac642611d07221608c562cf987e7f6ce6a35b35b070822a167ec07c20",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "박/박박",
+   "syllable": "박",
+   "words": [
+    "박박"
+   ],
+   "target": "박",
+   "input_sha256": "d0a9430140d77914dec0d631b35946b86e5fe47c6fb323e1d1def945abef7038",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "박/박색",
+   "syllable": "박",
+   "words": [
+    "박색"
+   ],
+   "target": "색",
+   "input_sha256": "3ea6c641faf9acef723a2eac9eff24b13b171de60856bb6bbe130cf799055519",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "박"
+     ],
+     "nodes": 372504,
+     "sha256": "756f07f9a57bddb0cfd2cd2513e5ce1e9e25d1d240c00382f3008834c9225ddd",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "박/박약",
+   "syllable": "박",
+   "words": [
+    "박약"
+   ],
+   "target": "약",
+   "input_sha256": "e31fb65f25ee3836d0d554e6e1a2aed4127c95aa5e8150f33634bf4a04d4cee0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "박/박하사탕",
+   "syllable": "박",
+   "words": [
+    "박하사탕"
+   ],
+   "target": "탕",
+   "input_sha256": "511d5782e2756887ace34a56384b9190751e5a77202acacde07fd0536f24e7c9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "박/박학",
+   "syllable": "박",
+   "words": [
+    "박학"
+   ],
+   "target": "학",
+   "input_sha256": "67534650c2db72a897f73ca60fce647c18e07e9bb838389d401481eae528ee69",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "박/박학다식",
+   "syllable": "박",
+   "words": [
+    "박학다식"
+   ],
+   "target": "식",
+   "input_sha256": "b1f9766023898c075edf2a274212910803fbda1a12d16e68af0bbb7e23eded08",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "법/법규",
+   "syllable": "법",
+   "words": [
+    "법규"
+   ],
+   "target": "규",
+   "input_sha256": "eaa4e21f1bdf7e679bfacfee1946c50cd4e1e9b96d44dc84319fb75ea7af9012",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "법/법률",
+   "syllable": "법",
+   "words": [
+    "법률"
+   ],
+   "target": "율",
+   "input_sha256": "59c6848235b0130c4ca6ef69f748c66ec5ca28228792a2d3a9c0bb5b60f70b52",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "법/법률적",
+   "syllable": "법",
+   "words": [
+    "법률적",
+    "법적"
+   ],
+   "target": "적",
+   "input_sha256": "3b8849cd263e3292bfcb13e384659711d6a86116cc9e5da0bb5892ea8795a5aa",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "법/법명",
+   "syllable": "법",
+   "words": [
+    "법명"
+   ],
+   "target": "명",
+   "input_sha256": "c2f4fa7182379ec839293e73c231d47dc8728a19881d0caf8d3130245e9e7632",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "법/법칙",
+   "syllable": "법",
+   "words": [
+    "법칙"
+   ],
+   "target": "칙",
+   "input_sha256": "cfe41a30a613c34dfa98ee53498b23b9aeb24db11069ad957fb44a72041f212d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "법"
+     ],
+     "nodes": 244434,
+     "sha256": "c0c35b9a49fb826f3278d03cd22626e8b4696e8ec119048af10cf8902f0bff8f",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "법/법학",
+   "syllable": "법",
+   "words": [
+    "법학"
+   ],
+   "target": "학",
+   "input_sha256": "2f2229e2f5cbce82d5cb0e6369aa41944fca9f7defadd7a8e1f41cbb80c7bdf5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "변/변명",
+   "syllable": "변",
+   "words": [
+    "변명"
+   ],
+   "target": "명",
+   "input_sha256": "c676dc99f63cfa60574ac4542b84d0c753bbcdf9aed1e8f5701fd024eee94a6a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "변/변별력",
+   "syllable": "변",
+   "words": [
+    "변별력"
+   ],
+   "target": "역",
+   "input_sha256": "75377f9ca346a7df257a1993ac78c07438298c11d863a50db5f862a0353f30f7",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "변/변비약",
+   "syllable": "변",
+   "words": [
+    "변비약"
+   ],
+   "target": "약",
+   "input_sha256": "c2a5e414898b4f6581463f4b6c0e5fe65641955246a9dcbe28bf05924543ef97",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "변/변색",
+   "syllable": "변",
+   "words": [
+    "변색"
+   ],
+   "target": "색",
+   "input_sha256": "e7c806357b65a179b1a9a0d81a0b4e72df79dbbf44244aea66937b2df83ef2fc",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "변/변절",
+   "syllable": "변",
+   "words": [
+    "변절"
+   ],
+   "target": "절",
+   "input_sha256": "0694e4719fdd6ef3506cba160f88a49018b4c5cb47d1453d06e2848fd751ff6b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "변/변주곡",
+   "syllable": "변",
+   "words": [
+    "변주곡"
+   ],
+   "target": "곡",
+   "input_sha256": "343b105fc574185e0469d4e37b3209506e044521ae187f868401abce2000cfd4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "변/변죽",
+   "syllable": "변",
+   "words": [
+    "변죽"
+   ],
+   "target": "죽",
+   "input_sha256": "680fc7304de0757f0b013ee357909974381d68f2f07a1f264d1c68909e673af8",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "변/변칙",
+   "syllable": "변",
+   "words": [
+    "변칙"
+   ],
+   "target": "칙",
+   "input_sha256": "ce9f7c12eae18020dce55a80ab4c45d1161139326f60865d3823ef98c7bcf64f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "변"
+     ],
+     "nodes": 218960,
+     "sha256": "552e36530341895be080b6cd86e34c9c396b84819b13748d093f8007d1fc5afb",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "변/변칙적",
+   "syllable": "변",
+   "words": [
+    "변칙적",
+    "변태적"
+   ],
+   "target": "적",
+   "input_sha256": "46951ade2a73aca4d0ab9dcbb029ca7f4526f1fadf9ce51432a466d553eaca2d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "변/변혁",
+   "syllable": "변",
+   "words": [
+    "변혁"
+   ],
+   "target": "혁",
+   "input_sha256": "7a131bc6922808ced4fb5e57cff5de85630d313957c262f08c79263d3f438b1e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "변/변화율",
+   "syllable": "변",
+   "words": [
+    "변화율"
+   ],
+   "target": "율",
+   "input_sha256": "1ff49fd0618c88abc500cd838f54351f2e3ecf3b8b51eaca8a7287d58d2b20e7",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "변/변환",
+   "syllable": "변",
+   "words": [
+    "변환"
+   ],
+   "target": "환",
+   "input_sha256": "0ccf0e865861786af622d51635336e2b2fae8087bbc504a4c4a50f02ce69482f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "병/병구완",
+   "syllable": "병",
+   "words": [
+    "병구완"
+   ],
+   "target": "완",
+   "input_sha256": "8654d5b996d03217fc3746a98205a0460fc4f2c097389f71687dfa9a48a997b0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병균",
+   "syllable": "병",
+   "words": [
+    "병균",
+    "병원균"
+   ],
+   "target": "균",
+   "input_sha256": "32d077046caa2a3ce9e48f1e2416967cfe0d9ca674c8bd5f1c5b6d495126cbe3",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병뚜껑",
+   "syllable": "병",
+   "words": [
+    "병뚜껑"
+   ],
+   "target": "껑",
+   "input_sha256": "65adc97c4727bc7fdf1e3786f5153c103890b7489881ac906f1384ba1e3a1e2d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병력",
+   "syllable": "병",
+   "words": [
+    "병력",
+    "병역"
+   ],
+   "target": "역",
+   "input_sha256": "fd72145e1bbfb8c625cbd853ba09ec19c13344ad79fa65f8a7dc16999f41215e",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병리학",
+   "syllable": "병",
+   "words": [
+    "병리학"
+   ],
+   "target": "학",
+   "input_sha256": "419fe9c0b4edb3ba3e1c2ffe7f4f4c9c3c4a58578d1051e1a451a1d69d766043",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병명",
+   "syllable": "병",
+   "words": [
+    "병명"
+   ],
+   "target": "명",
+   "input_sha256": "96b7f12a550566869f1e4f5de10f82570f84ed94c21fbfcf0de9f245a2e93ab8",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병법",
+   "syllable": "병",
+   "words": [
+    "병법"
+   ],
+   "target": "법",
+   "input_sha256": "936ef25200452a6fde0832a59e917611620d6eeedbb840258828102d058781e0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병색",
+   "syllable": "병",
+   "words": [
+    "병색",
+    "병아리색"
+   ],
+   "target": "색",
+   "input_sha256": "789b7c16b3eb62add898e9863a84a6b2e2bf3f2d085d07bb2b5ebd6d291c37f4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병적",
+   "syllable": "병",
+   "words": [
+    "병적"
+   ],
+   "target": "적",
+   "input_sha256": "e019b941120a19dcfa2d99d945ff7221c5cc4d17b8c0ac131216d2b04dd4ca83",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병존",
+   "syllable": "병",
+   "words": [
+    "병존"
+   ],
+   "target": "존",
+   "input_sha256": "abbe031407114644f0b58cff2fe03a65b55b37068be81275e59a7584839f2f7f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "병"
+     ],
+     "nodes": 7789,
+     "sha256": "fa933a195ba03716e761b9302392fd33f9ba2cda5c63087a30c616b795af3596",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병졸",
+   "syllable": "병",
+   "words": [
+    "병졸"
+   ],
+   "target": "졸",
+   "input_sha256": "ab9c949ff4d71b4e0916b56296b99aadbce9d4928a8f71328df467fdc4f43b3b",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병풍",
+   "syllable": "병",
+   "words": [
+    "병풍"
+   ],
+   "target": "풍",
+   "input_sha256": "b2f515f56213f607121db9cb819c3bb5b6d8e55f883ff9c49a2e2e1758b0957d",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병합",
+   "syllable": "병",
+   "words": [
+    "병합"
+   ],
+   "target": "합",
+   "input_sha256": "bcf8173ef45a558ae26db2aab1140951c3b3f5c217ecfb22f14ec60950e4f657",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병행",
+   "syllable": "병",
+   "words": [
+    "병행"
+   ],
+   "target": "행",
+   "input_sha256": "f77be76ff673e26593807279b9bb8e63d13ff114e87572fa1ef386fc207bcf0c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "병/병환",
+   "syllable": "병",
+   "words": [
+    "병환"
+   ],
+   "target": "환",
+   "input_sha256": "7b7661d837edcc758c433c41d549e9b45d6ce185e58cd982bb588127213bff3d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "삼/삼계탕",
+   "syllable": "삼",
+   "words": [
+    "삼계탕"
+   ],
+   "target": "탕",
+   "input_sha256": "601bb375cf9fc45d35296ca0c34c393f14a491be02a5eda38d7e338a88040ac4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "삼/삼색",
+   "syllable": "삼",
+   "words": [
+    "삼색",
+    "삼원색"
+   ],
+   "target": "색",
+   "input_sha256": "908048ad96abae35af624a76e93f407f86456d0bad570b1b9a9e643f1de046f1",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "삼/삼십",
+   "syllable": "삼",
+   "words": [
+    "삼십"
+   ],
+   "target": "십",
+   "input_sha256": "d16d41fc59b696190d6623a1cb360e8d15a16a2243c5e39c8dd8629dd6c396fa",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "삼"
+     ],
+     "nodes": 201885,
+     "sha256": "8a9fa27464efbf5e36bc7ca529b3d4452c14d2a57bbd04c01b19da4266b2e226",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "삼/삼인칭",
+   "syllable": "삼",
+   "words": [
+    "삼인칭"
+   ],
+   "target": "칭",
+   "input_sha256": "a68e308605936abc28d838b6ae0bb97615e757a673de065d140c0736e32682c4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "삼/삼일절",
+   "syllable": "삼",
+   "words": [
+    "삼일절"
+   ],
+   "target": "절",
+   "input_sha256": "a1c549e2aa6c6f83025322d1e97395a49c517d029800c6825ff0c1740c76bc40",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "삼/삼진",
+   "syllable": "삼",
+   "words": [
+    "삼진"
+   ],
+   "target": "진",
+   "input_sha256": "b6ca3a945b612b54e6be1aae7ddba05b4b73b2aa24de2e1e37f0c8e49621a899",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "삼/삼판양승",
+   "syllable": "삼",
+   "words": [
+    "삼판양승"
+   ],
+   "target": "승",
+   "input_sha256": "7d6c23d637aa13756e68d7ddc69ac36c79966dd7fc7fd83a34855a1c4e761a15",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "삼/삼한사온",
+   "syllable": "삼",
+   "words": [
+    "삼한사온"
+   ],
+   "target": "온",
+   "input_sha256": "93caba89223e8089e58c7c2eb6091f2e31da5adcc31e67e0ffde0b568af488c0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "섭/섭렵",
+   "syllable": "섭",
+   "words": [
+    "섭렵"
+   ],
+   "target": "엽",
+   "input_sha256": "4e26cb75019ec1ed30adc68a41fce15357a453f2e7397492c5d30fbd4647c65f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "섭"
+     ],
+     "nodes": 98127,
+     "sha256": "64eb917537a2ee1540904b34c30b3a738302c941e008ea7d65d54d8de0cc2895",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "숙/숙맥",
+   "syllable": "숙",
+   "words": [
+    "숙맥"
+   ],
+   "target": "맥",
+   "input_sha256": "68b1878dcbebdc0061ec849d84ee37b9e92da89ee4448af61c7b2c29e6fb8b9a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "숙/숙명",
+   "syllable": "숙",
+   "words": [
+    "숙명"
+   ],
+   "target": "명",
+   "input_sha256": "8bddc5ea8f19f174028b8683274e734c880f8a7f48503d38cd6144beaf50df77",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "숙/숙명적",
+   "syllable": "숙",
+   "words": [
+    "숙명적",
+    "숙적"
+   ],
+   "target": "적",
+   "input_sha256": "ddab19b0f92a471959027fb63e45d7dc73f3191fdbbdba55b83c76d9a915c7ea",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "숙/숙박",
+   "syllable": "숙",
+   "words": [
+    "숙박"
+   ],
+   "target": "박",
+   "input_sha256": "1ac532fd64b8cee5604a686d7efa222168400112655bec600e6602b68d8774b8",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "숙/숙박업",
+   "syllable": "숙",
+   "words": [
+    "숙박업"
+   ],
+   "target": "업",
+   "input_sha256": "5ed53f395d6774078e94655ddeb2ef6ab11f85e097334e7ba131fcdb50c7d3ea",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "숙"
+     ],
+     "nodes": 90414,
+     "sha256": "8f3836b03fd0611b0d2b5186d8c74b81b83ba9c12976fef5bd4127aeb85bf6d4",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "숙/숙변",
+   "syllable": "숙",
+   "words": [
+    "숙변"
+   ],
+   "target": "변",
+   "input_sha256": "c73f25f599df2d74096f5334ed8dd0be61fab78e9d1c2d7c8ab4b816d137c4c0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "숙/숙식",
+   "syllable": "숙",
+   "words": [
+    "숙식"
+   ],
+   "target": "식",
+   "input_sha256": "7f1be07d6141d205dac48fb2517fcefc656f43bacedfa3462e424737ad6fb9a9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "숙/숙직",
+   "syllable": "숙",
+   "words": [
+    "숙직"
+   ],
+   "target": "직",
+   "input_sha256": "f5ca855e315931d57e44222c519a37393252ae13344ffedd8f15bca89273fc65",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "순/순간적",
+   "syllable": "순",
+   "words": [
+    "순간적",
+    "순리적",
+    "순종적",
+    "순차적"
+   ],
+   "target": "적",
+   "input_sha256": "409a775588ca37b5e77a347fbe074a011edb5b498787ac32802432accb005889",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "순/순교",
+   "syllable": "순",
+   "words": [
+    "순교"
+   ],
+   "target": "교",
+   "input_sha256": "dd222cbbc23f46d6ee2a30869f6d1bc6c63fd5aae1eb4d41b0b00ecc6d834bf2",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "순/순기능",
+   "syllable": "순",
+   "words": [
+    "순기능"
+   ],
+   "target": "능",
+   "input_sha256": "a797ccc46a9eb595b368ceb6964cc636cb2dd255fd913b3c6bfe6e1be88bc6a3",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "순/순발력",
+   "syllable": "순",
+   "words": [
+    "순발력"
+   ],
+   "target": "역",
+   "input_sha256": "81c25889b9c7c6ec6d3219874506550e21b28ce2f7f5f771090ae94ab1a287f8",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "순/순백색",
+   "syllable": "순",
+   "words": [
+    "순백색"
+   ],
+   "target": "색",
+   "input_sha256": "ff79469f60641db089551aea89e2a9cd4617a43f104edc096e77f56e26d22569",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "순"
+     ],
+     "nodes": 110295,
+     "sha256": "05aa79904ba1d2df96de6d87c7d62fccfac7548eaf9d741f391eb38c03ba2489",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "순/순위권",
+   "syllable": "순",
+   "words": [
+    "순위권"
+   ],
+   "target": "권",
+   "input_sha256": "3cea4c9db1982dd0f8bc25b636ecdedc1d54c9ab238160ea6a05ff024e8ad31c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "순/순직",
+   "syllable": "순",
+   "words": [
+    "순직"
+   ],
+   "target": "직",
+   "input_sha256": "bc244e95140d0babc6c61a96c5c01c71643de0d0acc16fd710682a9c8623caa2",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "순/순진",
+   "syllable": "순",
+   "words": [
+    "순진"
+   ],
+   "target": "진",
+   "input_sha256": "833d333ffe3b45930166ebf6fec749c624f36b8d06a849b9e01bff7c16c6dd21",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "순/순풍",
+   "syllable": "순",
+   "words": [
+    "순풍"
+   ],
+   "target": "풍",
+   "input_sha256": "6ed4260c91406225dc9e8f793d5265e145e3a55d3338416ae640177b62e4e8f5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "순/순항",
+   "syllable": "순",
+   "words": [
+    "순항"
+   ],
+   "target": "항",
+   "input_sha256": "b594e412e29186ffffdc8110ec3a45863cedc8c19e02d72f285bed06f523c079",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "순/순행",
+   "syllable": "순",
+   "words": [
+    "순행"
+   ],
+   "target": "행",
+   "input_sha256": "d79e209e545b2a03543141b2a592ce95036087eb75a403fded53476bf33a6f6f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "순/순환",
+   "syllable": "순",
+   "words": [
+    "순환"
+   ],
+   "target": "환",
+   "input_sha256": "86389cbe73ff2475dccc0cbb0f52c8f75630cf5ce0fc8bc91a84ecc2da54054e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "습/습격",
+   "syllable": "습",
+   "words": [
+    "습격"
+   ],
+   "target": "격",
+   "input_sha256": "8027bb2431a2b6606e04c6b9f2cc746e0afb1290307f4bfea3d7ab7ec8f177db",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "습/습관적",
+   "syllable": "습",
+   "words": [
+    "습관적"
+   ],
+   "target": "적",
+   "input_sha256": "21be2fb1949496152a401d5ac8ed7960b66705f55886d918b986a71de3a1097d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "습/습득",
+   "syllable": "습",
+   "words": [
+    "습득"
+   ],
+   "target": "득",
+   "input_sha256": "50f23717f0b516eed9e2d6340885d8eac6059fabe2ebd98cc4308f6ddd30827e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "습/습식",
+   "syllable": "습",
+   "words": [
+    "습식"
+   ],
+   "target": "식",
+   "input_sha256": "d398f75c20e39a7c40d3fc08836d36976261ff4203be1601d539fd3e9f11427f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "습"
+     ],
+     "nodes": 5248098,
+     "sha256": "021c6bf258d327ea8a25f8ff6514872bb5fad6220e7ccd018da872590117bfa0",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "습/습진",
+   "syllable": "습",
+   "words": [
+    "습진"
+   ],
+   "target": "진",
+   "input_sha256": "24fed6546e97a5bd841dac718b8672163d8b30f7edd7778544e15367a31e03aa",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "승/승객",
+   "syllable": "승",
+   "words": [
+    "승객"
+   ],
+   "target": "객",
+   "input_sha256": "3c2dcd11a3bff86d62f0dd8caf13e38a686aa58f903317f0bc2b1d904829255f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "승"
+     ],
+     "nodes": 1899942,
+     "sha256": "ab6cb065c77bb506ac0b8cfb7121023cf76acbd37e2e16705cfc184db9aacadd",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "승/승격",
+   "syllable": "승",
+   "words": [
+    "승격"
+   ],
+   "target": "격",
+   "input_sha256": "af41fd50d0b4a69a70a5488400530a7d287f1b5e5309eabd50a2e3f96f318585",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "승/승급",
+   "syllable": "승",
+   "words": [
+    "승급"
+   ],
+   "target": "급",
+   "input_sha256": "a5ba46adcbccb08699ed3fe727a0494efbc779bcb1f6f9a6d65a973bc38e8f67",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "승/승낙",
+   "syllable": "승",
+   "words": [
+    "승낙"
+   ],
+   "target": "낙",
+   "input_sha256": "1f4a9c4c8e9c6f90151602da547d41785725162ab69efc6cd499ca969dcbe31c",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "승/승률",
+   "syllable": "승",
+   "words": [
+    "승률"
+   ],
+   "target": "율",
+   "input_sha256": "b2bc0cec51204f0a97f1c7aa805bb94e6676bc529feacc5480d4522a09899e1d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "승/승진",
+   "syllable": "승",
+   "words": [
+    "승진"
+   ],
+   "target": "진",
+   "input_sha256": "a60222f286d9b0fe27eadf32b655a0acdc9383a83d5016cc77b71edf5c7dfc5e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "승/승차권",
+   "syllable": "승",
+   "words": [
+    "승차권"
+   ],
+   "target": "권",
+   "input_sha256": "542aa5ab5978d42bf148542176bdd73b2b6bfb7e4ef542dc489eede2b27f0b32",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "식/식곤증",
+   "syllable": "식",
+   "words": [
+    "식곤증"
+   ],
+   "target": "증",
+   "input_sha256": "70fcb982408bbc63c94522979393de8bdd038d52cf02665d05891afcc008fcb5",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "식/식권",
+   "syllable": "식",
+   "words": [
+    "식권"
+   ],
+   "target": "권",
+   "input_sha256": "23b0dd1f062f2868088efa6cafd14e15ec03b5fe6a98c5ef3c4be76c433592c9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "식/식단표",
+   "syllable": "식",
+   "words": [
+    "식단표"
+   ],
+   "target": "표",
+   "input_sha256": "02ed196d439b960f0ec67c8b5a63e799ee0ecf70dadfa3bf0a0ac910f50fee69",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "식/식도락",
+   "syllable": "식",
+   "words": [
+    "식도락"
+   ],
+   "target": "낙",
+   "input_sha256": "b8555adbd2f9c9691c2b570686cb3ff6e292f12b53308d7442398bd6ff752e4a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "식/식물학",
+   "syllable": "식",
+   "words": [
+    "식물학"
+   ],
+   "target": "학",
+   "input_sha256": "153a6734ed377a00a35d9ae6ffd8a060c95bb344d06d512ee33f9beea7972084",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "식/식생활",
+   "syllable": "식",
+   "words": [
+    "식생활"
+   ],
+   "target": "활",
+   "input_sha256": "8d8486ebfa91a853fd5154b90d176efd8ea9412da3d26799ec59aca339371c22",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "식/식순",
+   "syllable": "식",
+   "words": [
+    "식순"
+   ],
+   "target": "순",
+   "input_sha256": "befd179350a9a1d265439f96843fba97ec41f6f84fab341794dedcfd85c3c43a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "식/식욕부진",
+   "syllable": "식",
+   "words": [
+    "식욕부진"
+   ],
+   "target": "진",
+   "input_sha256": "3e621830aeb0bfc1e68d41da99e29a3d1d4cc35680a222a68e87a5171f203894",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "식/식이요법",
+   "syllable": "식",
+   "words": [
+    "식이요법"
+   ],
+   "target": "법",
+   "input_sha256": "ea2e0c04763892f381238a49cb973ac21d9e1b1384c54323124436379a5ac3ca",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "식/식충",
+   "syllable": "식",
+   "words": [
+    "식충"
+   ],
+   "target": "충",
+   "input_sha256": "4397582fe98d80b050be35cf5d88d71ef7ea351581d7f6a5f9f18a8d687ada75",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "식"
+     ],
+     "nodes": 1396534,
+     "sha256": "6e321c07e9e8a68e8d4503725fa98190165729258886a2097b3c98449d931d14",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "식/식탁",
+   "syllable": "식",
+   "words": [
+    "식탁"
+   ],
+   "target": "탁",
+   "input_sha256": "695df54d0d177bc51028ee0caaf46763672a113006f064d23866fcec5e76cbc3",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "압/압권",
+   "syllable": "압",
+   "words": [
+    "압권"
+   ],
+   "target": "권",
+   "input_sha256": "8cfd846a7dcff4dbaa85d74afb846e8488e10f0ae3364d9cd4daaf4df699b627",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "압/압도적",
+   "syllable": "압",
+   "words": [
+    "압도적"
+   ],
+   "target": "적",
+   "input_sha256": "93b690b284b372ae8a5d48ee68418244c833120fbe18a20a426b6b3b01601406",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "압/압력",
+   "syllable": "압",
+   "words": [
+    "압력"
+   ],
+   "target": "역",
+   "input_sha256": "b8dfa19d9d1fe4736a257b2627a631024333043484204f7f08fe96d2cdd136d8",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "압/압력솥",
+   "syllable": "압",
+   "words": [
+    "압력솥"
+   ],
+   "target": "솥",
+   "input_sha256": "131f498aee57c8e0c534f3c54cb600cf015c4f00f882c3af7b6bbbc2e5cdb535",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "압"
+     ],
+     "nodes": 1051899,
+     "sha256": "8c2c64ee1ee3ae3dab3e2c9748e6bdcc252320a3ad34306c01c93313cd23f096",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "압/압박",
+   "syllable": "압",
+   "words": [
+    "압박"
+   ],
+   "target": "박",
+   "input_sha256": "c4541ab4138c03de1af96aec4e864a6f9b592e0de1d6bba3409365eeb324b758",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "압/압승",
+   "syllable": "압",
+   "words": [
+    "압승"
+   ],
+   "target": "승",
+   "input_sha256": "9cde10b6b87e821784cb57bfbe8222ffd8559bd505c3bd624a7e8a493dd5d748",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "압/압축",
+   "syllable": "압",
+   "words": [
+    "압축"
+   ],
+   "target": "축",
+   "input_sha256": "88fac9a48137d649ae837ffb6e4831554cc714afeee915e4b6db99dc8ed9c399",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "야/야간학교",
+   "syllable": "야",
+   "words": [
+    "야간학교"
+   ],
+   "target": "교",
+   "input_sha256": "e44f3e4ef5ffc93fe0f060caf42d543df14c26377fb0aa1ada47e3b47833e596",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "야/야권",
+   "syllable": "야",
+   "words": [
+    "야권"
+   ],
+   "target": "권",
+   "input_sha256": "948adcf2f1fe788b6b49f469773e72da6a31f134474cc4b1a30a2ed6c9bae2b9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "야/야만적",
+   "syllable": "야",
+   "words": [
+    "야만적",
+    "야성적"
+   ],
+   "target": "적",
+   "input_sha256": "f2ef1f31618e9850c4dbdea50043beda158140179bfc57232da07bf076869d6a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "야/야맹증",
+   "syllable": "야",
+   "words": [
+    "야맹증"
+   ],
+   "target": "증",
+   "input_sha256": "85b1f8e5aae8633990536fff1f45dccbe51981dd5f813ab4ef141454295aeea1",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "야/야식",
+   "syllable": "야",
+   "words": [
+    "야식"
+   ],
+   "target": "식",
+   "input_sha256": "e3678d576e86baceae4a133e36579eda3b1308844da52db781cacb4eafc1b8f9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "야/야영객",
+   "syllable": "야",
+   "words": [
+    "야영객"
+   ],
+   "target": "객",
+   "input_sha256": "97f17234c49b2e5a784cb0d3fcdc3254cf6eb9f5c2827816fd7aca7948890613",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "야"
+     ],
+     "nodes": 295776,
+     "sha256": "54ce32a7944f61352aeb0f93226683349de0888c2a4da2b9d0b45e2371cccec1",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "야/야학",
+   "syllable": "야",
+   "words": [
+    "야학"
+   ],
+   "target": "학",
+   "input_sha256": "beae9d47c30c987154565cd670f9e8a28ba31a466b8adb66d06994532a64b32a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "야/야합",
+   "syllable": "야",
+   "words": [
+    "야합"
+   ],
+   "target": "합",
+   "input_sha256": "197fd89826fe70a930f5db9d2aaf967d474a84deacd56b806add5f50fe4c9b61",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "언/언급",
+   "syllable": "언",
+   "words": [
+    "언급"
+   ],
+   "target": "급",
+   "input_sha256": "0a80e2aa2ff556b3e81f9f942e6faa79c7e705af7c17f558fc4088e189ead5ee",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "언/언변",
+   "syllable": "언",
+   "words": [
+    "언변"
+   ],
+   "target": "변",
+   "input_sha256": "d2d2c62d4c79eb87265d9018ef87eb240f83b1c9dfc3ff13d7eb5538d396057f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "언/언약",
+   "syllable": "언",
+   "words": [
+    "언약"
+   ],
+   "target": "약",
+   "input_sha256": "2968a738642752403a5282ed67d1bd66953b8e6bf85d804d14ec38d554686fab",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "언"
+     ],
+     "nodes": 2703591,
+     "sha256": "db9ed64aecf09dc1c6e86861247065640fa4928449151309ab0ed84b507ca401",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "언/언어권",
+   "syllable": "언",
+   "words": [
+    "언어권"
+   ],
+   "target": "권",
+   "input_sha256": "5ad01aa9ed681d70e7aeb05d7bacefcc214deb48090044ef018c212ea7571e6a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "언/언어능력",
+   "syllable": "언",
+   "words": [
+    "언어능력"
+   ],
+   "target": "역",
+   "input_sha256": "674793791ff5aada0aa2629731c644382c01025120c575def17c2ff378c808a5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "언/언어생활",
+   "syllable": "언",
+   "words": [
+    "언어생활"
+   ],
+   "target": "활",
+   "input_sha256": "66b5f65cae99b6cdcfb7d295a8a4ce4baf6ac061b87b771b179851a48a06623f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "언/언어수행",
+   "syllable": "언",
+   "words": [
+    "언어수행",
+    "언행"
+   ],
+   "target": "행",
+   "input_sha256": "ffc68d9ee6cfd906aaa6275198118c2f5f7d315ea39a2b9bdc3e5afcc1dd5c7b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "언/언어적",
+   "syllable": "언",
+   "words": [
+    "언어적"
+   ],
+   "target": "적",
+   "input_sha256": "f34f25cd0b83986cb4a0d6f589c3444f8c169f325e5c4225bcf605dfe8bc32cb",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "언/언어학",
+   "syllable": "언",
+   "words": [
+    "언어학"
+   ],
+   "target": "학",
+   "input_sha256": "7788bd28e85b042b37f3eedf7ad94ea10727d1b856b1f4dc22f61709f40bd942",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "역/역기능",
+   "syllable": "역",
+   "words": [
+    "역기능"
+   ],
+   "target": "능",
+   "input_sha256": "9a8e48eb5be601b283bca44e25c7bad407dd6f5314ed3040ad9b6330164e64d1",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "relayed",
+    "source": "아스트라 기록 (이 저장소에서 검증한 적 없음)"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역동적",
+   "syllable": "역",
+   "words": [
+    "역동적",
+    "역사적",
+    "역설적",
+    "역적"
+   ],
+   "target": "적",
+   "input_sha256": "1b58f9a637fffbe175b3e3b76f78ffd40a707e4fc59ffcdef89f37fcb0290980",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "relayed",
+    "source": "아스트라 기록 (이 저장소에서 검증한 적 없음)"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역방향",
+   "syllable": "역",
+   "words": [
+    "역방향"
+   ],
+   "target": "향",
+   "input_sha256": "6dbfbe082fdc8d7a6067d2597296872d15339a34f5100446788b8d60161fc60c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "역",
+      "역방향"
+     ],
+     "nodes": 568654,
+     "sha256": "444e7243473dfe54742627ebec1c101a39f13d969f4e393e8368508ca85631ce",
+     "kind": "첫 수 따로 증명"
+    },
+    "reply": "향토색"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역병",
+   "syllable": "역",
+   "words": [
+    "역병"
+   ],
+   "target": "병",
+   "input_sha256": "09d2aef63ec7af71b1d532e02b7580d96db19eaa508e2df2c43e518f1a199936",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "relayed",
+    "source": "아스트라 기록 (이 저장소에서 검증한 적 없음)"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역사학",
+   "syllable": "역",
+   "words": [
+    "역사학",
+    "역학"
+   ],
+   "target": "학",
+   "input_sha256": "d0d1539e43695340b0d1b35a70405b87f8dbe68d6da0986ed0bc3bbe31a13249",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "역",
+      "역사학"
+     ],
+     "nodes": 88772,
+     "sha256": "cdce7af9ed099d528a0fc3f2b9a4164c49999e72a852ab1f9600157ce7941afe",
+     "kind": "첫 수 따로 증명"
+    },
+    "reply": "학업"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역세권",
+   "syllable": "역",
+   "words": [
+    "역세권"
+   ],
+   "target": "권",
+   "input_sha256": "306c085d673460cefab0820235bd796f45d3da133e105e5dc351f92ca10e074d",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "relayed",
+    "source": "아스트라 기록 (이 저장소에서 검증한 적 없음)"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역순",
+   "syllable": "역",
+   "words": [
+    "역순"
+   ],
+   "target": "순",
+   "input_sha256": "4f086617aaf947dcd14cba38a98d5fc1f93da58286c30879d3d0550e6d7271b8",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "relayed",
+    "source": "아스트라 기록 (이 저장소에서 검증한 적 없음)"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역습",
+   "syllable": "역",
+   "words": [
+    "역습"
+   ],
+   "target": "습",
+   "input_sha256": "ff0dc453ecfcc5bc99db03816cde93b11204f0abe3765e196b9768d8e56d1ed8",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "역"
+     ],
+     "nodes": 1406006,
+     "sha256": "5638fbb94a56254229556f08057778da1ab7ce9e3f4af579f8286147242e7d48",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역전승",
+   "syllable": "역",
+   "words": [
+    "역전승"
+   ],
+   "target": "승",
+   "input_sha256": "17437aab35d4300fb1a708e85ca03308f3bdcb10f895be10f0f0d9ea22bdf95a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "relayed",
+    "source": "아스트라 기록 (이 저장소에서 검증한 적 없음)"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역풍",
+   "syllable": "역",
+   "words": [
+    "역풍"
+   ],
+   "target": "풍",
+   "input_sha256": "528c83548dda87377e41531966608f751c9efe34ab508435fcf7dea43a9d9100",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "역",
+      "역풍"
+     ],
+     "nodes": 1913131,
+     "sha256": "324a1f851964704a644548d2487ff66836fa1bbfb3694e69513f6ffe5761f333",
+     "kind": "첫 수 따로 증명"
+    },
+    "reply": "풍류객"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역할",
+   "syllable": "역",
+   "words": [
+    "역할"
+   ],
+   "target": "할",
+   "input_sha256": "8ecb716acc2c4aef40a3cb324fed57afb1b3f1271eae0817226eca5a65bb0ea1",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "relayed",
+    "source": "아스트라 기록 (이 저장소에서 검증한 적 없음)"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역할극",
+   "syllable": "역",
+   "words": [
+    "역할극"
+   ],
+   "target": "극",
+   "input_sha256": "3c7d820b8896bcc8ac87b9186895101ee6e101caadd8e2ce1bddb37e5e3bedeb",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "relayed",
+    "source": "아스트라 기록 (이 저장소에서 검증한 적 없음)"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "역/역행",
+   "syllable": "역",
+   "words": [
+    "역행"
+   ],
+   "target": "행",
+   "input_sha256": "0ac6bedd8d5aa0ebd076856ea3d0f67ac5749b5968cf91f83f6098211e71be9d",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "relayed",
+    "source": "아스트라 기록 (이 저장소에서 검증한 적 없음)"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "완/완급",
+   "syllable": "완",
+   "words": [
+    "완급"
+   ],
+   "target": "급",
+   "input_sha256": "4edf27223315f6afce2acbf873fb18c40c2be244518bb3ef471e00f64caf1507",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "완/완력",
+   "syllable": "완",
+   "words": [
+    "완력"
+   ],
+   "target": "역",
+   "input_sha256": "cf0bc1fbd6fa26236c1c1e423da3de7530ca8183503a3fa26f94a72b6ea18e69",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "완/완벽",
+   "syllable": "완",
+   "words": [
+    "완벽"
+   ],
+   "target": "벽",
+   "input_sha256": "5c4a6e0995a0cb64aaf00c3ee5f81607a5c0f5757c000f9d3abd97e347f0729c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "완/완봉승",
+   "syllable": "완",
+   "words": [
+    "완봉승",
+    "완승"
+   ],
+   "target": "승",
+   "input_sha256": "6bc5b97a4f2e8b6d3bb838facf705e564b2f9a3ee7dbab7681bf9a309e5a3d89",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "완/완숙",
+   "syllable": "완",
+   "words": [
+    "완숙"
+   ],
+   "target": "숙",
+   "input_sha256": "419f894837996c868a1d2114ab84287fea7ba2fd287d32a8050dd2af72749eec",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "완/완전범죄",
+   "syllable": "완",
+   "words": [
+    "완전범죄"
+   ],
+   "target": "죄",
+   "input_sha256": "8844bbabf2bd0b427c81c7fcb20fd5b20fd7d67f57bb0867bb8708795e936024",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "완/완충",
+   "syllable": "완",
+   "words": [
+    "완충"
+   ],
+   "target": "충",
+   "input_sha256": "0b9325e5de6e46e4baf87ab8d0e16eb735a11fed9a9a6d8ca9daccfefbe4ac46",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "완/완쾌",
+   "syllable": "완",
+   "words": [
+    "완쾌"
+   ],
+   "target": "쾌",
+   "input_sha256": "b3c77223505c4aff59f92372a0034c95b41d4f5653233bc8d8883ee0bafb6dd6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "완"
+     ],
+     "nodes": 189402,
+     "sha256": "c0334d19cc9c72b3ae16c631c7c8b7e73fd40f49446f302324445336bffb5fb1",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "완/완행",
+   "syllable": "완",
+   "words": [
+    "완행"
+   ],
+   "target": "행",
+   "input_sha256": "1dc7de08d0421962553625266f673b03876d71b32729f20e9231b484d14db714",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "왕/왕권",
+   "syllable": "왕",
+   "words": [
+    "왕권"
+   ],
+   "target": "권",
+   "input_sha256": "99b9e8432c67cd9c0358c27e78335afd1d6657ad9926db744aeebd22c906297c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "왕/왕릉",
+   "syllable": "왕",
+   "words": [
+    "왕릉"
+   ],
+   "target": "능",
+   "input_sha256": "9d7aac54c1bca1e50413d1eccab8ec103404cdc67e847d4be8aa6c526d6d8754",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "왕"
+     ],
+     "nodes": 682919,
+     "sha256": "be2a363bc7633b0d761668c9ae569783fb266b09583e4fba345420ac9ab12e76",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "왕/왕명",
+   "syllable": "왕",
+   "words": [
+    "왕명"
+   ],
+   "target": "명",
+   "input_sha256": "fd5ae5ec0187fc56ead2f86c0a43bd0a7021ed66ebcd30a1254a5a057e0a2237",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "왕/왕왕",
+   "syllable": "왕",
+   "words": [
+    "왕왕"
+   ],
+   "target": "왕",
+   "input_sha256": "e88a081e649630b55f173964d742e224185844347c07059aafe0ece6cffd7138",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "왕/왕진",
+   "syllable": "왕",
+   "words": [
+    "왕진"
+   ],
+   "target": "진",
+   "input_sha256": "5c994e3307c2d3b6ec1d7156abdfec597fd55fd0e3e555611fa081fcdd61b285",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "운/운동권",
+   "syllable": "운",
+   "words": [
+    "운동권",
+    "운영권"
+   ],
+   "target": "권",
+   "input_sha256": "2cb4294c3929a75561e236a4463f80f42d9a11c80ada91524adec20e076da8ec",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "운/운명",
+   "syllable": "운",
+   "words": [
+    "운명"
+   ],
+   "target": "명",
+   "input_sha256": "686f5741bdc3e9a9b37b11e41c842317eb43957ebe563f732b05dcb45765c4c9",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "운/운명적",
+   "syllable": "운",
+   "words": [
+    "운명적"
+   ],
+   "target": "적",
+   "input_sha256": "fcb177b056476d20ca7df5799808e3574f725b253f7166e1b0eafaa564a46657",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "운/운송업",
+   "syllable": "운",
+   "words": [
+    "운송업",
+    "운수업"
+   ],
+   "target": "업",
+   "input_sha256": "f8e2060fdfdfd81ec788d0d44d41611c4b02aba6cfb06928341aed1a2fa99cce",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "운"
+     ],
+     "nodes": 95106,
+     "sha256": "d9f9dc9a2cb40de7cec68d69ccd376b939fce6684ae1e588162e0e3e7f55298b",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "운/운운",
+   "syllable": "운",
+   "words": [
+    "운운"
+   ],
+   "target": "운",
+   "input_sha256": "06a08cf15deedb4c95c14e690bf11c46c0a95faf64431b61eb41c479d2086a40",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "운/운율",
+   "syllable": "운",
+   "words": [
+    "운율"
+   ],
+   "target": "율",
+   "input_sha256": "2563a8f6048ce9c8f00785beceefb359959cda603409d93286e07adbf6e749c9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "운/운전면허증",
+   "syllable": "운",
+   "words": [
+    "운전면허증"
+   ],
+   "target": "증",
+   "input_sha256": "f40bba2d793f47c57f90f32e55ab70f77107e29cc3bc8095765be4d9c15d7d4e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "운/운전병",
+   "syllable": "운",
+   "words": [
+    "운전병"
+   ],
+   "target": "병",
+   "input_sha256": "24ad488b5f1a55acdc9aab96d994e90edded847e1b865ce13af1788294efba73",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "운/운항",
+   "syllable": "운",
+   "words": [
+    "운항"
+   ],
+   "target": "항",
+   "input_sha256": "d4ed84820647c7129bcbbf5ee4aebf275f06a3d93273b6258ce1b0cb35e60651",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "운/운행",
+   "syllable": "운",
+   "words": [
+    "운행"
+   ],
+   "target": "행",
+   "input_sha256": "34b8737ed49f59458a70c88a8b8023d04a46fdc4d1031fbbf298ef7ef5eb3c20",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "움/움직움직",
+   "syllable": "움",
+   "words": [
+    "움직움직"
+   ],
+   "target": "직",
+   "input_sha256": "de1342a695183f4efa35792a1ce3eb96bf9e3856864b3abcfb5936091ec588d4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "움/움큼",
+   "syllable": "움",
+   "words": [
+    "움큼"
+   ],
+   "target": "큼",
+   "input_sha256": "5a748566905e719c0a536885f6ba0564978afd491ae8f46db568b08ab1822a61",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "움"
+     ],
+     "nodes": 116445,
+     "sha256": "07aca428d9575bf2a0df7ade4e6f9e524cd09783c66d480fa2832e3015ab755e",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "율/율격",
+   "syllable": "율",
+   "words": [
+    "율격"
+   ],
+   "target": "격",
+   "input_sha256": "363213503ee2fa23ff0c0b1e16df3cef3eb5f3138d4948bf21474a094b2dc02a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "율"
+     ],
+     "nodes": 98147,
+     "sha256": "70948bacf06024923426062fd45d8162fdf86c6b41710cad1de7182883802c37",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "율/율동적",
+   "syllable": "율",
+   "words": [
+    "율동적"
+   ],
+   "target": "적",
+   "input_sha256": "d36674b2aa597442f89c67893b85328fa0d8e5a1bee4d9494a7cb6d1e3f48301",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "율/율법",
+   "syllable": "율",
+   "words": [
+    "율법"
+   ],
+   "target": "법",
+   "input_sha256": "16d896d68657fdd646b7de6ed376fb7ff2a75741cb4816a502ac2fd49b79a36d",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "절/절교",
+   "syllable": "절",
+   "words": [
+    "절교"
+   ],
+   "target": "교",
+   "input_sha256": "c4b4a2368bc8f9594c5bda5a8ea96921d52c759510c0bbaf8a6bf63ef8f99bcb",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절규",
+   "syllable": "절",
+   "words": [
+    "절규"
+   ],
+   "target": "규",
+   "input_sha256": "4535a17b2094ef1f86db39dbba5b8b644a613234ca4d6469f21324ce218fbfdc",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절대적",
+   "syllable": "절",
+   "words": [
+    "절대적",
+    "절망적"
+   ],
+   "target": "적",
+   "input_sha256": "7e63af6b3df975ae82f9e3c54e9fb4d315b09c07d2a1b3c4dd29c646fb9f2194",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절도죄",
+   "syllable": "절",
+   "words": [
+    "절도죄"
+   ],
+   "target": "죄",
+   "input_sha256": "ae826a01c607eb2a97b9ef2e17fe490085fdbe7a22f0f87ab1e6d58bcdcd8ac0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절룩절룩",
+   "syllable": "절",
+   "words": [
+    "절룩절룩"
+   ],
+   "target": "눅",
+   "input_sha256": "e843881f8c4755b5f464d953c8b7e3aaf03db2799db68371d2dfb18653bf2c60",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "절"
+     ],
+     "nodes": 286420,
+     "sha256": "a36f29a1fc0eef3d685ad171d34d8d7a65de955cfd59efc79090ef8bda9e9cc7",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절명",
+   "syllable": "절",
+   "words": [
+    "절명"
+   ],
+   "target": "명",
+   "input_sha256": "7ef03ed2775d265792954aac680eabe904c5d95a4db6ab628fefc1c6296abfe2",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절벽",
+   "syllable": "절",
+   "words": [
+    "절벽"
+   ],
+   "target": "벽",
+   "input_sha256": "0d09319ceba3c6945d0cf243b1fcf99615867993b0947953216865d175ec7b5d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절식",
+   "syllable": "절",
+   "words": [
+    "절식"
+   ],
+   "target": "식",
+   "input_sha256": "b72fa7f39cd36ec076a9c518eeaff369dee0f80c980b08645d4de59a1b316207",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절약",
+   "syllable": "절",
+   "words": [
+    "절약"
+   ],
+   "target": "약",
+   "input_sha256": "630202392f7f71fa98a51f23fd1e467785a0079258c154a14706c3f5419b52ab",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절절",
+   "syllable": "절",
+   "words": [
+    "절절"
+   ],
+   "target": "절",
+   "input_sha256": "deba986a2807039b643511641dddc44db85109bd1c5b576aa91e68d850f4644b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절찬",
+   "syllable": "절",
+   "words": [
+    "절찬"
+   ],
+   "target": "찬",
+   "input_sha256": "b8007695669239fddc43b516b872a96b1ea36293000bb1f721d8407c1681631a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절충",
+   "syllable": "절",
+   "words": [
+    "절충"
+   ],
+   "target": "충",
+   "input_sha256": "c82b7d112ccaf0a6906d1ef6bf5b6aea7de47ba2771b2d56999dcc0748fa919e",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "절/절편",
+   "syllable": "절",
+   "words": [
+    "절편"
+   ],
+   "target": "편",
+   "input_sha256": "13174439cb2e5321a78597d5623b262b0230f99cc1492bff111d9c24f95efd5d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "죽/죽순",
+   "syllable": "죽",
+   "words": [
+    "죽순"
+   ],
+   "target": "순",
+   "input_sha256": "5ef2f4faefe8755c170964d7761ccc597b106e8bd52169f7fe0a78330b8bdbae",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "죽/죽죽",
+   "syllable": "죽",
+   "words": [
+    "죽죽"
+   ],
+   "target": "죽",
+   "input_sha256": "bc0b1c097e921e73e5252f70722797206d805dcee79441016aea4569e50399ac",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "죽"
+     ],
+     "nodes": 38311,
+     "sha256": "81b49794de8939930371a950597dbc723448ce9ab273a14f01e4d53f7492b1d2",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "준/준결승",
+   "syllable": "준",
+   "words": [
+    "준결승",
+    "준우승",
+    "준준결승"
+   ],
+   "target": "승",
+   "input_sha256": "6a6e7519dea95ee88895bb60c7e4a250751e7eaedabbf16e75f86e487b4b8b44",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "준/준공식",
+   "syllable": "준",
+   "words": [
+    "준공식"
+   ],
+   "target": "식",
+   "input_sha256": "bce8bbefd46c6631d7091ef31f2e1c049a6127cd1b44ff11359e1fe669e2df36",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "준/준법",
+   "syllable": "준",
+   "words": [
+    "준법"
+   ],
+   "target": "법",
+   "input_sha256": "f8ad93a1bac81dd234544175586365bf58d4d18c17b49b2bd29d899e09dc2596",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "준/준칙",
+   "syllable": "준",
+   "words": [
+    "준칙"
+   ],
+   "target": "칙",
+   "input_sha256": "e12b03ce42bb5d2adf65dca69ad66e75616223e7805ebb40536f0358cb8075e0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "준"
+     ],
+     "nodes": 84440,
+     "sha256": "d8dfe1f3d7d0ae23edb20bf9758e90c78e70f39a7ee4d8f94cfa4b82fc765a0f",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "즉/즉각적",
+   "syllable": "즉",
+   "words": [
+    "즉각적",
+    "즉흥적"
+   ],
+   "target": "적",
+   "input_sha256": "2b04ad3f99c3e87cbaea5658b3e9cb755b5837df0390dba71b693d57a6362f40",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "즉/즉흥",
+   "syllable": "즉",
+   "words": [
+    "즉흥"
+   ],
+   "target": "흥",
+   "input_sha256": "566f8c6e51598f73435ad823c58e9982c3c18df95f68274d41f5383fdcb8fa73",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "즉/즉흥곡",
+   "syllable": "즉",
+   "words": [
+    "즉흥곡"
+   ],
+   "target": "곡",
+   "input_sha256": "0ed373c40e0f15053ce76d34980e59bee45f42988c9e50fb8d40a880babb6117",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "즉"
+     ],
+     "nodes": 679628,
+     "sha256": "0715c7cf3f21dddaac779f70e70cf91955c25e9e70aab5316b918c95f4d41f54",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "증/증가율",
+   "syllable": "증",
+   "words": [
+    "증가율"
+   ],
+   "target": "율",
+   "input_sha256": "936f5b0fc12a07bbc80428223b837c886f048c243d488dfa0d67fba64ea434cc",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "증/증권",
+   "syllable": "증",
+   "words": [
+    "증권"
+   ],
+   "target": "권",
+   "input_sha256": "9d7879e7578b6f25762d605992cd1fc1fb6b336d59946cbe40bd6b6036f126d8",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "증/증명",
+   "syllable": "증",
+   "words": [
+    "증명"
+   ],
+   "target": "명",
+   "input_sha256": "77b4cb22aaa97b5542ce504be13bab67f15c08b93594ce450af58bb05e91f665",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "증/증명사진",
+   "syllable": "증",
+   "words": [
+    "증명사진",
+    "증진"
+   ],
+   "target": "진",
+   "input_sha256": "506202a88890f80de0debce91545fbbfcec24e14032a3c62abd5b6cdb66e0bb4",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "증/증식",
+   "syllable": "증",
+   "words": [
+    "증식"
+   ],
+   "target": "식",
+   "input_sha256": "a8e088f49fa5e4da5d0f29c80eb0c82dd3af3bd70b04c4938f7be1634c133d24",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "증/증언",
+   "syllable": "증",
+   "words": [
+    "증언"
+   ],
+   "target": "언",
+   "input_sha256": "2ff6dccdfc03d8fb1d55ffac0c42a75df344cd533660eb3cec16eb0ef619a74b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "증/증축",
+   "syllable": "증",
+   "words": [
+    "증축"
+   ],
+   "target": "축",
+   "input_sha256": "6dbef6f1324f9a82190cf1556eb54ed45516c518db37265df0cad078e671cf66",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "증/증편",
+   "syllable": "증",
+   "words": [
+    "증편"
+   ],
+   "target": "편",
+   "input_sha256": "166a8f5f8c5dbf300dd0c5d8337334fc70b5f330b08a2808aa5b104451ae434a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "증/증폭",
+   "syllable": "증",
+   "words": [
+    "증폭"
+   ],
+   "target": "폭",
+   "input_sha256": "ffb8a4a1217015b38111b25615f7b91e57c84ebf35d2591e298a598f02300096",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "증/증표",
+   "syllable": "증",
+   "words": [
+    "증표"
+   ],
+   "target": "표",
+   "input_sha256": "4335b0fbefa6be881e3699f77f9c5ab30e026a1ab24e8cb387c7978aa1d79701",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "증"
+     ],
+     "nodes": 1923059,
+     "sha256": "3860ac071ddd5ee90e22a1bb40c6e2022752aa62efbe7c25e7aefea8ad7d9ca1",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "증/증후군",
+   "syllable": "증",
+   "words": [
+    "증후군"
+   ],
+   "target": "군",
+   "input_sha256": "869992588e766e3fa03b7fddd748654a50c31ef8e9ea124428ded74b8e9b5171",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "직/직간접적",
+   "syllable": "직",
+   "words": [
+    "직간접적",
+    "직감적",
+    "직관적",
+    "직선적",
+    "직설적",
+    "직업적",
+    "직접적"
+   ],
+   "target": "적",
+   "input_sha256": "0e501fd79af1457a341006dedeee56ba4664763a261ba35b5311b6a505d7f0bc",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직격탄",
+   "syllable": "직",
+   "words": [
+    "직격탄"
+   ],
+   "target": "탄",
+   "input_sha256": "319f5e88ca7dac926c54ed88689d1edf20aaaebf20c09fe4d58ec12bf6ef7cfb",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직관력",
+   "syllable": "직",
+   "words": [
+    "직관력",
+    "직역"
+   ],
+   "target": "역",
+   "input_sha256": "139486d52f3c58ec978b5a4b117d4f49fec5a92231ebe4690c36b66b5674ebc4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직권",
+   "syllable": "직",
+   "words": [
+    "직권"
+   ],
+   "target": "권",
+   "input_sha256": "9ac2f8ea99e6ecb15f3831fab9de0c313780f13844b0e6bdb4222950bf03fbe0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직급",
+   "syllable": "직",
+   "words": [
+    "직급"
+   ],
+   "target": "급",
+   "input_sha256": "93a8c0957bb42e33619d36e6aac2a901138af62d5154f1127b8914695f5b7bb6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직능",
+   "syllable": "직",
+   "words": [
+    "직능"
+   ],
+   "target": "능",
+   "input_sha256": "1717988da0240c57f2457f746a4684b5096b668a2ca647f548c59dc3dee09f52",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직명",
+   "syllable": "직",
+   "words": [
+    "직명"
+   ],
+   "target": "명",
+   "input_sha256": "911455e8b7d1f355edf27e3eb03c067059781f28e73fc06fc1269eed1a5f24c7",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직설법",
+   "syllable": "직",
+   "words": [
+    "직설법",
+    "직접화법"
+   ],
+   "target": "법",
+   "input_sha256": "df5f07340b32bbbaef6274de15a660492183ae9ea18ab5efbdafc9c0baa5103a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직언",
+   "syllable": "직",
+   "words": [
+    "직언"
+   ],
+   "target": "언",
+   "input_sha256": "014f1a250e29e068fbf74a7ac249a90d8a4cafa8fe85b56187a4c85e11c1cf77",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직업",
+   "syllable": "직",
+   "words": [
+    "직업"
+   ],
+   "target": "업",
+   "input_sha256": "b3dd9967bd992dd463ee9b8a7e6eea4c36b8c98f1c2a5156ac14a6255599cab8",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "직"
+     ],
+     "nodes": 114641,
+     "sha256": "93dc6cda687686a365fae8a51eac202999b7e658025d2ccb0bd4a5b3a11183f9",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직업병",
+   "syllable": "직",
+   "words": [
+    "직업병"
+   ],
+   "target": "병",
+   "input_sha256": "908df71d7cfd101a313c4ebff452415c12a441f08baba66ee230b2f582e3ee53",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직업의식",
+   "syllable": "직",
+   "words": [
+    "직업의식"
+   ],
+   "target": "식",
+   "input_sha256": "7a790720321e26c8c9ca6331ba851c25ed99bc2060a59f4baa30122e6b9c6545",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직진",
+   "syllable": "직",
+   "words": [
+    "직진"
+   ],
+   "target": "진",
+   "input_sha256": "f1c2b2d1a1c6480158fc9df75cc3e72d2b253d591f985169192e2b8cf0e9595c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직할",
+   "syllable": "직",
+   "words": [
+    "직할"
+   ],
+   "target": "할",
+   "input_sha256": "7dd58549da5d617378d36de2a6de16f9f269d99721b622628e83d0b2dc306280",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "직/직행",
+   "syllable": "직",
+   "words": [
+    "직행"
+   ],
+   "target": "행",
+   "input_sha256": "51025a0bab21f991ddf898e62e8ba24bf4316d383803037fc1755a394151b8b1",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "진/진갈색",
+   "syllable": "진",
+   "words": [
+    "진갈색"
+   ],
+   "target": "색",
+   "input_sha256": "2546deee403604479efb26d488432254333885d4acc125568133ce4636835f09",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "진"
+     ],
+     "nodes": 210945,
+     "sha256": "0c089c05ed5429ec6a0fe245404ad8797c506514347e0b801780c1f27861ad48",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진갑",
+   "syllable": "진",
+   "words": [
+    "진갑"
+   ],
+   "target": "갑",
+   "input_sha256": "ae3bf4a321d92d2d02209ad59f8f3ef1759a4adf06f887eb733b1d1ec6cfcbd3",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진격",
+   "syllable": "진",
+   "words": [
+    "진격"
+   ],
+   "target": "격",
+   "input_sha256": "34d7f23ba07140902e7547746cc7369cc8deebf75eec4982473a3c162a36ba43",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진군",
+   "syllable": "진",
+   "words": [
+    "진군"
+   ],
+   "target": "군",
+   "input_sha256": "02b2594beb9cc72f945d43ab51f9537b8478d7d45252c06bd289d33c827ce4e6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진급",
+   "syllable": "진",
+   "words": [
+    "진급"
+   ],
+   "target": "급",
+   "input_sha256": "7a2fe00fd54d8a35da4431c656c5ab8124285bb0c601273f35db22458b36a225",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진도표",
+   "syllable": "진",
+   "words": [
+    "진도표"
+   ],
+   "target": "표",
+   "input_sha256": "94d025d9018843541958b46530b32a51d62a53ec6d5a6122217605967bceeabd",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진두지휘",
+   "syllable": "진",
+   "words": [
+    "진두지휘"
+   ],
+   "target": "휘",
+   "input_sha256": "b71388521c027d622e8d3d8ad13aeca0fc1589622edadcc879fc529ec58152a6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진력",
+   "syllable": "진",
+   "words": [
+    "진력"
+   ],
+   "target": "역",
+   "input_sha256": "12f1271ce939b0abf2c4c598c2c489273d14d2c49592d8fa0f7c2ef10dfd026a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진맥",
+   "syllable": "진",
+   "words": [
+    "진맥"
+   ],
+   "target": "맥",
+   "input_sha256": "9967a74e8dc46ab9e8a61f3efd63de61e90c2d76303e982bdff15a1ccab96b87",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진보적",
+   "syllable": "진",
+   "words": [
+    "진보적",
+    "진취적"
+   ],
+   "target": "적",
+   "input_sha256": "226d8fed4275a7e264ca35ebc0f50e8dc3ee68e451afbaf8ffe2d8f82f033d82",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진분홍",
+   "syllable": "진",
+   "words": [
+    "진분홍",
+    "진홍"
+   ],
+   "target": "홍",
+   "input_sha256": "57b37f5d680f0520960bb69da34f8b095d6ee360d49c07584a112546136f0018",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진수성찬",
+   "syllable": "진",
+   "words": [
+    "진수성찬"
+   ],
+   "target": "찬",
+   "input_sha256": "cc120b04a8002656a987ee8af202949a3ec0fb38f73b221320b797948b53e0c4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진압",
+   "syllable": "진",
+   "words": [
+    "진압"
+   ],
+   "target": "압",
+   "input_sha256": "6c1c5ddca30a1131138c6fad604eb6930503b3e1d405b045aa282f4da1cd78fe",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진언",
+   "syllable": "진",
+   "words": [
+    "진언"
+   ],
+   "target": "언",
+   "input_sha256": "ff0d213dcc536621957914dddfd2ec32e404d27ba36e8877bd4c7daab3d6ee3e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진즉",
+   "syllable": "진",
+   "words": [
+    "진즉"
+   ],
+   "target": "즉",
+   "input_sha256": "5b2c2a10dc7c38db6d40393809dd126510ba98c3bfe11dcf7410929d8f3d90bf",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진출권",
+   "syllable": "진",
+   "words": [
+    "진출권"
+   ],
+   "target": "권",
+   "input_sha256": "09a3a48af26b883ab11e7a9f821c0e2622a493423fd26e940a472ba1f3e8259c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진탕",
+   "syllable": "진",
+   "words": [
+    "진탕",
+    "진흙탕"
+   ],
+   "target": "탕",
+   "input_sha256": "defc6bb92165f5a14ff67431e21655e4e918e1408adedbef29ce49695c46996e",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진퇴",
+   "syllable": "진",
+   "words": [
+    "진퇴"
+   ],
+   "target": "퇴",
+   "input_sha256": "b3dbc78a0d9fcf276e1bb3efccc7bebac9e00becdefc251e85ec19c105d96c5d",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진퇴유곡",
+   "syllable": "진",
+   "words": [
+    "진퇴유곡",
+    "진혼곡"
+   ],
+   "target": "곡",
+   "input_sha256": "7eefbddbe1e913170e2a544cfc10f51b37d709b7945c558b7b575c0a7556f55a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진폐증",
+   "syllable": "진",
+   "words": [
+    "진폐증"
+   ],
+   "target": "증",
+   "input_sha256": "591032677c5caa92d7a3b7d412f5d7d15d2fa31d235ec1602cbeb1452d367c9b",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진폭",
+   "syllable": "진",
+   "words": [
+    "진폭"
+   ],
+   "target": "폭",
+   "input_sha256": "fa39baae8575d3534fcd9caa4ac5ac99dc440adb36bfe6b5f1121020edb1082d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진학",
+   "syllable": "진",
+   "words": [
+    "진학"
+   ],
+   "target": "학",
+   "input_sha256": "a969765a991983f575d5b920ac0c96c8b8d319888ec0e26e189800d8b3a18dd6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진학률",
+   "syllable": "진",
+   "words": [
+    "진학률"
+   ],
+   "target": "율",
+   "input_sha256": "697364dd588a02720fa5629433ab0dbd61035b1dd913592d4cdeb50b394978a1",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진행",
+   "syllable": "진",
+   "words": [
+    "진행"
+   ],
+   "target": "행",
+   "input_sha256": "8d2ed3141737a9e8559c2b5aa4c55b4b1b197c48b3bcdb958f8ad2e8732fdf84",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "진/진흥",
+   "syllable": "진",
+   "words": [
+    "진흥"
+   ],
+   "target": "흥",
+   "input_sha256": "c40f27c23d660c29660f423dfbb37894a0f9a2fa9feb9f4b45eeb28ea1657558",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "찬/찬성표",
+   "syllable": "찬",
+   "words": [
+    "찬성표"
+   ],
+   "target": "표",
+   "input_sha256": "7f3420f5dec51d1688a725c204df26a3b49ff5ef9a49af2863a9734a17194d02",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "찬"
+     ],
+     "nodes": 411026,
+     "sha256": "6fd1401ed78d38f374eede12ddcd023bca6454769569af932907c418cb6a674a",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "찬/찬탄",
+   "syllable": "찬",
+   "words": [
+    "찬탄"
+   ],
+   "target": "탄",
+   "input_sha256": "7a0b6950d76a4cab5d77b5a6ab4abc0cae8cd5bbb426ec33732c4d831922ed02",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "찬/찬합",
+   "syllable": "찬",
+   "words": [
+    "찬합"
+   ],
+   "target": "합",
+   "input_sha256": "fc264f2b2da6d73b35e8065f7d1391c80f02d757e4cec13e8c11cd0837a8828d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "축/축농증",
+   "syllable": "축",
+   "words": [
+    "축농증"
+   ],
+   "target": "증",
+   "input_sha256": "85d10e69806c94f435b55a581a868e3b0cdf5aa97d8e4487059d6377b0624233",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "축/축산업",
+   "syllable": "축",
+   "words": [
+    "축산업"
+   ],
+   "target": "업",
+   "input_sha256": "268778fda2d87ad9fe206cb3e62834affec3f5ea5db267d431c07ef000c63b55",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "축"
+     ],
+     "nodes": 90491,
+     "sha256": "ecf81c849696f428a6edbdbd75e33f19bc51ec76c251890c0c567807905212d0",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "축/축적",
+   "syllable": "축",
+   "words": [
+    "축적"
+   ],
+   "target": "적",
+   "input_sha256": "5ebd282f118327328e308da5013a0866ef5da1f68bf53732ea28c536af900185",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "축/축지법",
+   "syllable": "축",
+   "words": [
+    "축지법"
+   ],
+   "target": "법",
+   "input_sha256": "85922f200a3e82b39a781d061416a05a3c9ae7ecafc90ff23b0a97d217761e6d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "축/축축",
+   "syllable": "축",
+   "words": [
+    "축축"
+   ],
+   "target": "축",
+   "input_sha256": "dffbc3df3b775092f806908c7a32e009e00bec270a13e780aef4fb3ec0b2eda6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "축/축하객",
+   "syllable": "축",
+   "words": [
+    "축하객"
+   ],
+   "target": "객",
+   "input_sha256": "98e322d029efd1abe2bc0dc2c09d96d330dcdee0ce7d0d7a9cc7eabc1bddbe7a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "칠/칠순",
+   "syllable": "칠",
+   "words": [
+    "칠순"
+   ],
+   "target": "순",
+   "input_sha256": "5e45592a8f9f26147dde01fe4cf219efe72fd909fce268b94fec786cb4f01f39",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "칠/칠십",
+   "syllable": "칠",
+   "words": [
+    "칠십"
+   ],
+   "target": "십",
+   "input_sha256": "b4d247fda2a80b3378a238a16997b495ac03646b913810ffc1cfc79fa9bbe810",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "칠"
+     ],
+     "nodes": 15841,
+     "sha256": "2f02d23e233d0eba09ab8b080cc9e3712c1fcc15a587fd4f4102863591ab2a7d",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "칠/칠흑",
+   "syllable": "칠",
+   "words": [
+    "칠흑"
+   ],
+   "target": "흑",
+   "input_sha256": "cc6f93f5500f05bc430bcd6391e8e20b3ad6272a1add31bca575ec77aaddf8ee",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "탁/탁발승",
+   "syllable": "탁",
+   "words": [
+    "탁발승"
+   ],
+   "target": "승",
+   "input_sha256": "6ad3bb61adb595499b7a89c5f4901802704fada30f8c0784dcc8ca8a9ee97800",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "탁/탁탁",
+   "syllable": "탁",
+   "words": [
+    "탁탁"
+   ],
+   "target": "탁",
+   "input_sha256": "51e99e8943751de4892984f9b4c3d027cdedafe399392e5ef6a65289065766bd",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "탁"
+     ],
+     "nodes": 2058,
+     "sha256": "55c23152c54e59026c128d1ed26dee16dd0059401480e081766e4c7cd2ea972a",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "탄/탄력",
+   "syllable": "탄",
+   "words": [
+    "탄력"
+   ],
+   "target": "역",
+   "input_sha256": "172655b8ee06a1d5466dd2f1723da4b56074937751b0c5bf3bd1a676b3c2c05f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "탄/탄력적",
+   "syllable": "탄",
+   "words": [
+    "탄력적"
+   ],
+   "target": "적",
+   "input_sha256": "873214077406e4a22b72472142bd6bff8b0df362e52349eb8b3f458fbf660b23",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "탄/탄식",
+   "syllable": "탄",
+   "words": [
+    "탄식"
+   ],
+   "target": "식",
+   "input_sha256": "7c2fe09cbde016e9512ef1829d0d83c0729f7397b9070aeec7b305af95e4b74b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "탄/탄압",
+   "syllable": "탄",
+   "words": [
+    "탄압"
+   ],
+   "target": "압",
+   "input_sha256": "56e6706b777847cf349896a8aef918c3d683c194a89ab146cdeac33eb2a5e745",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "탄/탄약",
+   "syllable": "탄",
+   "words": [
+    "탄약"
+   ],
+   "target": "약",
+   "input_sha256": "d419e9ecabf25542d662eb3d90362ff8628384693f193daf220da25fda0de667",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "탄"
+     ],
+     "nodes": 2309099,
+     "sha256": "e816e40500d9e9e811a282e51fce3669b87e8676b269c7071ddc6ccd181c2799",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "탄/탄핵",
+   "syllable": "탄",
+   "words": [
+    "탄핵"
+   ],
+   "target": "핵",
+   "input_sha256": "86071d54de386cfa0f00b6ee7afb3921e6acff5c390bb151661252fdedfd24ef",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "탄/탄환",
+   "syllable": "탄",
+   "words": [
+    "탄환"
+   ],
+   "target": "환",
+   "input_sha256": "c72a2ac132fb064f09963e216d4616f17f1cc04ce5cea68672cc89a3a01ea826",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "탑/탑승",
+   "syllable": "탑",
+   "words": [
+    "탑승"
+   ],
+   "target": "승",
+   "input_sha256": "79da85dfabc20291654d0b5830f43e5229a5495df9ac54bc6596de457cc1734c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "탑/탑승객",
+   "syllable": "탑",
+   "words": [
+    "탑승객"
+   ],
+   "target": "객",
+   "input_sha256": "886768cad2995a75ba3a32e06f53920b9e1d7cbbef9b9b25b106ed104dc7d8d1",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "탑"
+     ],
+     "nodes": 644996,
+     "sha256": "34b2cb34fb1113226adb9663ff3e6a8ada0f36ddcedb5ad9fdc9d4e39a3a2d8d",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "탑/탑승권",
+   "syllable": "탑",
+   "words": [
+    "탑승권"
+   ],
+   "target": "권",
+   "input_sha256": "7fbb1f95e5d4284ec889ee35d6bd9b108a6cc8b8143344d15053ef41676db287",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "lose",
+    "evidence": "solver_only",
+    "source": "scan/RESULTS_SCAN.md: \"탑승권은 지는 수(22초에 확정)\" - 탐색기 결과만, 검증 기록 없음"
+   },
+   "split": "final"
+  },
+  {
+   "id": "탕/탕약",
+   "syllable": "탕",
+   "words": [
+    "탕약"
+   ],
+   "target": "약",
+   "input_sha256": "23052c77f28770b31556cc16f9138c5d8e033dc87804d7253303fed6482722e5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "탕"
+     ],
+     "nodes": 2084295,
+     "sha256": "4205f882c2bd6b577171180470d5c7cb138178010610ad0ca231e0c739ad16d9",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "탕/탕진",
+   "syllable": "탕",
+   "words": [
+    "탕진"
+   ],
+   "target": "진",
+   "input_sha256": "612846472bec0edf814caa46d73d38ce3f90127066d26fc0ea55e0a6fb82a78c",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "탕/탕탕",
+   "syllable": "탕",
+   "words": [
+    "탕탕"
+   ],
+   "target": "탕",
+   "input_sha256": "546c8cbea7314cd33547a2fb69cfc46c0636ca11436bb89d740e8340fa6b5d55",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "퇴/퇴락",
+   "syllable": "퇴",
+   "words": [
+    "퇴락"
+   ],
+   "target": "낙",
+   "input_sha256": "b19710a0787c736af3b00061c1cefdcf5d4ce6592f14b367817e0ec63ada49af",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "퇴/퇴색",
+   "syllable": "퇴",
+   "words": [
+    "퇴색"
+   ],
+   "target": "색",
+   "input_sha256": "c6f9a58ab4079999c85aeed84a9a468b2d5125ea747dc40457bbf6889cf2e0b7",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "퇴"
+     ],
+     "nodes": 42525,
+     "sha256": "fb528ad568552c9cb800c0a4d014da1b1ffc05363ee20f986e3691f9b187c98c",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "퇴/퇴역",
+   "syllable": "퇴",
+   "words": [
+    "퇴역"
+   ],
+   "target": "역",
+   "input_sha256": "12b3752af9d5924486579e9e01679e6744c246a94a371c14c7db2662750579e7",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "퇴/퇴적",
+   "syllable": "퇴",
+   "words": [
+    "퇴적",
+    "퇴폐적"
+   ],
+   "target": "적",
+   "input_sha256": "d0cc92fbe682d215bb589df8f820d9842bcbb4c931a8219b526bf9d848be8a7d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "퇴/퇴직",
+   "syllable": "퇴",
+   "words": [
+    "퇴직"
+   ],
+   "target": "직",
+   "input_sha256": "c6c82ebfaafab267f9c01bec8c4cb80d6e23475c8246dd1109008160c6f84820",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "퇴/퇴진",
+   "syllable": "퇴",
+   "words": [
+    "퇴진"
+   ],
+   "target": "진",
+   "input_sha256": "04c07f4ee2c11e2171c0bd7c8532a89728d3278a97be7a0108048c3ce620448b",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "퇴/퇴학",
+   "syllable": "퇴",
+   "words": [
+    "퇴학"
+   ],
+   "target": "학",
+   "input_sha256": "80962e926f2b87a862b9c09c5f9eff049ef866c97c915214f66123bddc8a1dff",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "퇴/퇴행",
+   "syllable": "퇴",
+   "words": [
+    "퇴행"
+   ],
+   "target": "행",
+   "input_sha256": "73d834776a420277110122404f4a0c70b8beff1587d8d06117ea50087e649d4a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "편/편곡",
+   "syllable": "편",
+   "words": [
+    "편곡"
+   ],
+   "target": "곡",
+   "input_sha256": "c931a69a5fc2f074918ab8d789ad41041210a58e1c9331966860115f196245cd",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "편"
+     ],
+     "nodes": 662493,
+     "sha256": "d1bd7b3585b8dacbd0adb9247541276e96443c7ed16220fce5d43ecf3f090d2c",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "편/편동풍",
+   "syllable": "편",
+   "words": [
+    "편동풍",
+    "편서풍"
+   ],
+   "target": "풍",
+   "input_sha256": "3eb531a3e2915bae8c810a6a741b00111728fd78fc00f4054bf2825ab54a1c9e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "편/편력",
+   "syllable": "편",
+   "words": [
+    "편력"
+   ],
+   "target": "역",
+   "input_sha256": "d1535048471297703bbae6911392ca17c81646f80c4daff36a9266fe5c02b8f0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "편/편법",
+   "syllable": "편",
+   "words": [
+    "편법"
+   ],
+   "target": "법",
+   "input_sha256": "7acc78a04b4e8a9f5c94add6de0c1a6a50350765c07cee79654f5da06c5abdfd",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "편/편승",
+   "syllable": "편",
+   "words": [
+    "편승"
+   ],
+   "target": "승",
+   "input_sha256": "77306d55fe776ca519c2d484de8b4fc643147ab13357683120a8b517af951640",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "편/편식",
+   "syllable": "편",
+   "words": [
+    "편식"
+   ],
+   "target": "식",
+   "input_sha256": "cb88569a11e6fd004e6ea2a281faca17082c27a5859f02bacf87180411498747",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "편/편싸움",
+   "syllable": "편",
+   "words": [
+    "편싸움"
+   ],
+   "target": "움",
+   "input_sha256": "b1fac9bcaa64e37bd3a3d1da91d0beb69a611730ecfbed04ed30354f556e34f7",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "편/편찬",
+   "syllable": "편",
+   "words": [
+    "편찬"
+   ],
+   "target": "찬",
+   "input_sha256": "3f08336b3b8347d48aa1e0d57a95ccbf8eb0295f75c7dfe30d9e07b0ddae01e1",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "편/편파적",
+   "syllable": "편",
+   "words": [
+    "편파적",
+    "편향적"
+   ],
+   "target": "적",
+   "input_sha256": "c63cb4d0151be4bb461fcbac5b6205addf509a67f7281358bbaca7b88e2fa05a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "편/편향",
+   "syllable": "편",
+   "words": [
+    "편향"
+   ],
+   "target": "향",
+   "input_sha256": "67fbf6bc2620d1e46146f464829cfa737d8e833cf698760a49a17e6ab516526b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "폭/폭격",
+   "syllable": "폭",
+   "words": [
+    "폭격"
+   ],
+   "target": "격",
+   "input_sha256": "c443462ea05624c134c67911af94b3528b6639c372459b3f23ab1a4647d51f0d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭군",
+   "syllable": "폭",
+   "words": [
+    "폭군"
+   ],
+   "target": "군",
+   "input_sha256": "66f4d3a13fc5e92c8ec5de8abbc9fd0bd94c45be494d6435216b0afafb246cc3",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭락",
+   "syllable": "폭",
+   "words": [
+    "폭락"
+   ],
+   "target": "낙",
+   "input_sha256": "1f09969290a3d1667f7f2076de34179be373753290c7145c5a55a7ec387ff44a",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭력",
+   "syllable": "폭",
+   "words": [
+    "폭력",
+    "폭발력"
+   ],
+   "target": "역",
+   "input_sha256": "d66cfde78dce1d1bc77c902f928f62fe364c880240a8252ef75bad2263dfebb9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭력적",
+   "syllable": "폭",
+   "words": [
+    "폭력적",
+    "폭발적"
+   ],
+   "target": "적",
+   "input_sha256": "fcc441430cf899a8eec136d2a09998ba9bffea5f2ea214bdff7ff2052a4288f6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭삭",
+   "syllable": "폭",
+   "words": [
+    "폭삭"
+   ],
+   "target": "삭",
+   "input_sha256": "30ecae51fcca0faee24bb070534d214174175c16b2fd941c19b582db22774532",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "폭"
+     ],
+     "nodes": 931897,
+     "sha256": "8d35d4209f7690394516a63ebfec45c5bcec6226b9a98d2ff5096be7a026e5ca",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭식",
+   "syllable": "폭",
+   "words": [
+    "폭식"
+   ],
+   "target": "식",
+   "input_sha256": "14bc646766656603f9909d854331956eb275f63928b5ab4aa9bea9e3f4210345",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭압",
+   "syllable": "폭",
+   "words": [
+    "폭압"
+   ],
+   "target": "압",
+   "input_sha256": "f1a8d1670be9e202ae466715a5bcde8dfbffbdd81bb1ec259fa900339d3610cf",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭약",
+   "syllable": "폭",
+   "words": [
+    "폭약"
+   ],
+   "target": "약",
+   "input_sha256": "9cd6f0c9d986002e98255897650aebb9ff963d64fb19d1a1463a18a00b64ed2f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭언",
+   "syllable": "폭",
+   "words": [
+    "폭언",
+    "폭탄선언"
+   ],
+   "target": "언",
+   "input_sha256": "f350f50bf5271bdad9ac5aabeafce269bbe227fb04b037e7f7fed7b4dcea4435",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭죽",
+   "syllable": "폭",
+   "words": [
+    "폭죽"
+   ],
+   "target": "죽",
+   "input_sha256": "00e74cb23a15beb12e362499d4a42ab87a981f91daa3e68128afc4656c191a7f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭탄",
+   "syllable": "폭",
+   "words": [
+    "폭탄"
+   ],
+   "target": "탄",
+   "input_sha256": "115989e128fd3e0bada910b23c62a89f7d96539f61ead110a7f53fb5a4c6af04",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭폭",
+   "syllable": "폭",
+   "words": [
+    "폭폭"
+   ],
+   "target": "폭",
+   "input_sha256": "69eb06f14a2c1b25af748e4d8998b15b193f4fd4d3a4f030f6d694d0a4c8a2df",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭풍",
+   "syllable": "폭",
+   "words": [
+    "폭풍"
+   ],
+   "target": "풍",
+   "input_sha256": "2763d834f341534cfa958ee65268b9e92db7b4689b0c38e506ca6ff56a5fa8c5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭행",
+   "syllable": "폭",
+   "words": [
+    "폭행"
+   ],
+   "target": "행",
+   "input_sha256": "f0e5b515acd5bfd35364944eec1c16db9f903f42629dff365b353224669e542e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "폭/폭행죄",
+   "syllable": "폭",
+   "words": [
+    "폭행죄"
+   ],
+   "target": "죄",
+   "input_sha256": "da9ebc6f3498a7789e0b2045e3662ca9755119245efd929cc6d3b4a8c43e386f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "풍/풍랑",
+   "syllable": "풍",
+   "words": [
+    "풍랑"
+   ],
+   "target": "낭",
+   "input_sha256": "ee21db2216112537ae9c641df18f23e50e9508ff2b5996a7545ad3c2b929de1b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "풍/풍력",
+   "syllable": "풍",
+   "words": [
+    "풍력"
+   ],
+   "target": "역",
+   "input_sha256": "d417c1fba5ba9e56f34a035669b2fecb3014c9eb79d553bca02670dc9f22e2a6",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "풍/풍류객",
+   "syllable": "풍",
+   "words": [
+    "풍류객"
+   ],
+   "target": "객",
+   "input_sha256": "e8499573e7daf4c39db117d5f3ce276eeb2939a75075e08cd02fb02017f2aaed",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "풍"
+     ],
+     "nodes": 752729,
+     "sha256": "0a4ad256fcc399ace4d04d41eb7781061f88cda8b860302b952e6cbb6a82adf8",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "풍/풍습",
+   "syllable": "풍",
+   "words": [
+    "풍습"
+   ],
+   "target": "습",
+   "input_sha256": "3606df044b822679a2cc69eb267c9eeccf71d94124534340d369ede14b26ba56",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "풍/풍운",
+   "syllable": "풍",
+   "words": [
+    "풍운"
+   ],
+   "target": "운",
+   "input_sha256": "c49044c3c82638ae62eee3580c223788e9498cc496ddda1fc6911f3931028f3f",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "풍/풍자적",
+   "syllable": "풍",
+   "words": [
+    "풍자적"
+   ],
+   "target": "적",
+   "input_sha256": "9065a4ba6925478601573ee18315b213de72c660d319d76484479e111b6e5f6e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "풍/풍진",
+   "syllable": "풍",
+   "words": [
+    "풍진"
+   ],
+   "target": "진",
+   "input_sha256": "22b251135f61c8a002f2691174ccff183a58a43acfa0e7282caf039c073e1e99",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "풍/풍토병",
+   "syllable": "풍",
+   "words": [
+    "풍토병"
+   ],
+   "target": "병",
+   "input_sha256": "1e895665934800a2738b16268e10d757d25356535286819048248daf882705ce",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "풍/풍향",
+   "syllable": "풍",
+   "words": [
+    "풍향"
+   ],
+   "target": "향",
+   "input_sha256": "40641c4bb77ef4d897dfcd8b6d98e19d6726b14cc2d4d34eacc9c566a1ae94dc",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "학/학교",
+   "syllable": "학",
+   "words": [
+    "학교"
+   ],
+   "target": "교",
+   "input_sha256": "dc38201e4232f49b717922aae84cf7b99d9d1aa7e2a289686bdceb98b154eadf",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학교생활",
+   "syllable": "학",
+   "words": [
+    "학교생활"
+   ],
+   "target": "활",
+   "input_sha256": "daa2a951d53687682f522a9b756dab4e5ae4790d6a861b896ff860e45cb99228",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학구적",
+   "syllable": "학",
+   "words": [
+    "학구적",
+    "학문적",
+    "학술적",
+    "학자적",
+    "학적"
+   ],
+   "target": "적",
+   "input_sha256": "c933d9da985d809740c5b1ec6e77b7aa7973b59283bf7d03088a031236b9ede9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학군",
+   "syllable": "학",
+   "words": [
+    "학군"
+   ],
+   "target": "군",
+   "input_sha256": "a5a1e007a11016893da6d2abc1a37c5fb824f532dcfdb6b3601bd0cb728094d7",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학급",
+   "syllable": "학",
+   "words": [
+    "학급"
+   ],
+   "target": "급",
+   "input_sha256": "8a50b4cf895d2e78da972071a9dc89f1ce9a274bfc26674c1fd0c8355ff2720d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학력",
+   "syllable": "학",
+   "words": [
+    "학력"
+   ],
+   "target": "역",
+   "input_sha256": "e7c7a40ede63b5236eb746e0c265c2942784361895def6171be74163239ce951",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학맥",
+   "syllable": "학",
+   "words": [
+    "학맥"
+   ],
+   "target": "맥",
+   "input_sha256": "690ad69ac6dd0d24ee27e44d6a18504bc1ca637c09c89396533267f72783aef5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학생증",
+   "syllable": "학",
+   "words": [
+    "학생증"
+   ],
+   "target": "증",
+   "input_sha256": "0a7c726eddcfcfb7491a2b3fc3e57dc61109c7e9401f4a342a2872506a92b1c4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학습",
+   "syllable": "학",
+   "words": [
+    "학습"
+   ],
+   "target": "습",
+   "input_sha256": "c4e676d3eef83317df86c194ba40bff874fd16e4c4aabe36765859c165b990fc",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학식",
+   "syllable": "학",
+   "words": [
+    "학식"
+   ],
+   "target": "식",
+   "input_sha256": "a1ff526348a5e5461c97f5c17b012e13a573773584702cc62a9dc9e0d5f2efa3",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학업",
+   "syllable": "학",
+   "words": [
+    "학업"
+   ],
+   "target": "업",
+   "input_sha256": "402745bd8af4854fb6e57487964d6bdb71779fadfc57f1237f40e3a0243105cd",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "학"
+     ],
+     "nodes": 102350,
+     "sha256": "38608515ef8666f31d1ea61d83fbf96ae20db5f5384b401c3c1dd1b74b230620",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학칙",
+   "syllable": "학",
+   "words": [
+    "학칙"
+   ],
+   "target": "칙",
+   "input_sha256": "876de6f1b4fefabefa0f0f10541142095f1c782bf386f7f7fbe675b28b2cb5b7",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "학/학풍",
+   "syllable": "학",
+   "words": [
+    "학풍"
+   ],
+   "target": "풍",
+   "input_sha256": "44986d84b106fee8df47b5c55119a119fdc64ac5187d875571af29846088cfb1",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "할/할렐루야",
+   "syllable": "할",
+   "words": [
+    "할렐루야"
+   ],
+   "target": "야",
+   "input_sha256": "b389a53b6442bcbea8c5725059d5fec29b2c9efb4a03d5d83388a1a1c04619a6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "할/할인권",
+   "syllable": "할",
+   "words": [
+    "할인권"
+   ],
+   "target": "권",
+   "input_sha256": "ec03da45cc8f1d883055479f413e16b577286cca3e041a3ca1a0773efbd98124",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "할/할인율",
+   "syllable": "할",
+   "words": [
+    "할인율"
+   ],
+   "target": "율",
+   "input_sha256": "81c09f485858d1e18aaa9c2ec6b9af3cd3de047acde2548764d4129ce04586ab",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "할/할증",
+   "syllable": "할",
+   "words": [
+    "할증"
+   ],
+   "target": "증",
+   "input_sha256": "6106b8a59a0b0ca272b4a437c307d73b767e773085c8a279266733879a319aa7",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "할"
+     ],
+     "nodes": 12725616,
+     "sha256": "dc59568565ddde8e09357335b34048f3cedffa9a056e13b24463ac530d2e016e",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "합/합격",
+   "syllable": "합",
+   "words": [
+    "합격"
+   ],
+   "target": "격",
+   "input_sha256": "78742553cab51d53db70a664a4852acac63eaa3f746b59c680d8f118114c92e2",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "합/합격증",
+   "syllable": "합",
+   "words": [
+    "합격증",
+    "합병증"
+   ],
+   "target": "증",
+   "input_sha256": "9d1ef3d9f001746acb76872f024e97b01c235d82b138ef9f09c9409d0a017d46",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "합/합리적",
+   "syllable": "합",
+   "words": [
+    "합리적",
+    "합법적"
+   ],
+   "target": "적",
+   "input_sha256": "5be9b55bc1465c0e1ad51da6d2b3c87ce2041579ffe99c54d9378f00b78cdaa5",
+   "root_form": "kept_partly_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "합/합법",
+   "syllable": "합",
+   "words": [
+    "합법"
+   ],
+   "target": "법",
+   "input_sha256": "8beaef64667221bd461d98a74beb8e647ee8edf306c3c2fc5340629662027258",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "합/합병",
+   "syllable": "합",
+   "words": [
+    "합병"
+   ],
+   "target": "병",
+   "input_sha256": "25491431ab66501b9692e1fcac27c5757194d995ec80a301b10dcbd0dee8cac9",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "합/합숙",
+   "syllable": "합",
+   "words": [
+    "합숙"
+   ],
+   "target": "숙",
+   "input_sha256": "8e6a7eccdccdb9cb7c9912a3e9991b3de0db0063335ffe331e10803b53d84b6c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "합/합승",
+   "syllable": "합",
+   "words": [
+    "합승"
+   ],
+   "target": "승",
+   "input_sha256": "21ec6ec88ca479ccc99d4db0afd6997320eec7428f58fdb9d50c1427fa5f0961",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "합/합주곡",
+   "syllable": "합",
+   "words": [
+    "합주곡",
+    "합창곡"
+   ],
+   "target": "곡",
+   "input_sha256": "c35c0cdd1785f7be02f23e1c36f97d5fad7656ca4df4f345d321fd88c0edeefe",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "합"
+     ],
+     "nodes": 665855,
+     "sha256": "462c017eda4529f0868ccd33838a7a7ee4a9bf9c206de5e005a119cc1758bce0",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "합/합집합",
+   "syllable": "합",
+   "words": [
+    "합집합"
+   ],
+   "target": "합",
+   "input_sha256": "a4b0d4f527d12e4733bdaada18784bec615e98ca745e848fa22408a8e6257e50",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "항/항공권",
+   "syllable": "항",
+   "words": [
+    "항공권"
+   ],
+   "target": "권",
+   "input_sha256": "a6c9ec2c07ad67ec24d6dc48c3f7d386f4815b8074be60de53cffa97c0b12cd8",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "항/항공사진",
+   "syllable": "항",
+   "words": [
+    "항공사진"
+   ],
+   "target": "진",
+   "input_sha256": "eca5e66d86eb09d500b052e68eabbe63e56975113ef6dbc6a5de1f7227d8550c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "항/항공우편",
+   "syllable": "항",
+   "words": [
+    "항공우편",
+    "항공편"
+   ],
+   "target": "편",
+   "input_sha256": "33a23a7cd2249c032fc9e15791884b71815a958956f8495a6955949826f07ef2",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "항/항구적",
+   "syllable": "항",
+   "words": [
+    "항구적"
+   ],
+   "target": "적",
+   "input_sha256": "cc7b837111bd1dcd39f13caa7a4828ddb7bbd1f440c864732b6660d6bb527bb6",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "항/항균",
+   "syllable": "항",
+   "words": [
+    "항균"
+   ],
+   "target": "균",
+   "input_sha256": "61afe146ac3a3b82b797a0ee84dc11754ac9c03bd91d3d0116ac1fcece1dace9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "항"
+     ],
+     "nodes": 143410,
+     "sha256": "1ddc060112a310271fdec2127f0aa58101a7d262913da837454e77ffebf107af",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "항/항변",
+   "syllable": "항",
+   "words": [
+    "항변"
+   ],
+   "target": "변",
+   "input_sha256": "8e497fee7a6b349c530fdebdc1b52c3ae1d2e8e6458cc1698bd42144780cc3c3",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "행/행군",
+   "syllable": "행",
+   "words": [
+    "행군"
+   ],
+   "target": "군",
+   "input_sha256": "826179da49696943b59c0912185c51eee050bf77dbf04cff4fd58d636f3f367e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "행/행락",
+   "syllable": "행",
+   "words": [
+    "행락"
+   ],
+   "target": "낙",
+   "input_sha256": "3cab2ca7949afe6e8017ef6cd0aa5fa6a8d6b2d97816280b13f3970f4d0c9b3d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "행/행락객",
+   "syllable": "행",
+   "words": [
+    "행락객"
+   ],
+   "target": "객",
+   "input_sha256": "4e35a7f92d3837d00fb344ac0eecdd98c5eba3b59dbe0636038db7364da86489",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "행/행랑",
+   "syllable": "행",
+   "words": [
+    "행랑"
+   ],
+   "target": "낭",
+   "input_sha256": "5545e5e3ab5531c566cf5be6c1ee47bbc20e0c400c3ce848790642afd9cf29ce",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "행/행방불명",
+   "syllable": "행",
+   "words": [
+    "행방불명"
+   ],
+   "target": "명",
+   "input_sha256": "70ef9e4b2247f66d329ca13f3ea5870cde0a019be6f5b5023d9c0cd264a85d98",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "행/행색",
+   "syllable": "행",
+   "words": [
+    "행색"
+   ],
+   "target": "색",
+   "input_sha256": "ec69007d9a21f9550927ae1cf3888344ee861cc7f3fe75eb7b7454969419dfb9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "행"
+     ],
+     "nodes": 74477,
+     "sha256": "9c76835096ddbb4084926a7d3c23d8e527e274ccb5d02e9e928007c39126c2ee",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "행/행운",
+   "syllable": "행",
+   "words": [
+    "행운"
+   ],
+   "target": "운",
+   "input_sha256": "71d561c2eb27d2105fc112c7a87641e51b9ef29555262467c35d2c5e07dbf953",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "행/행적",
+   "syllable": "행",
+   "words": [
+    "행적",
+    "행정적"
+   ],
+   "target": "적",
+   "input_sha256": "43aea9190fd6cbef82f28bad4fc8ed94cea4c764aa6f5e52a840cce5687cae72",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "행/행정구역",
+   "syllable": "행",
+   "words": [
+    "행정구역"
+   ],
+   "target": "역",
+   "input_sha256": "fdb26a42f852e71f2caa25a36d52772884ea4846c93625f2c2d4fa09b6a29ebc",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "행/행정권",
+   "syllable": "행",
+   "words": [
+    "행정권"
+   ],
+   "target": "권",
+   "input_sha256": "2f4c843e1363fbbd974101a51568dd8e61b5400023a26158154feb52abfe38a2",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "행/행진",
+   "syllable": "행",
+   "words": [
+    "행진"
+   ],
+   "target": "진",
+   "input_sha256": "27ad104ad624622d7d2948ca7bf737adaec14c92be8d2aec408f0ec7fafa0d66",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "행/행진곡",
+   "syllable": "행",
+   "words": [
+    "행진곡"
+   ],
+   "target": "곡",
+   "input_sha256": "aa08aceba5ffb299fc51c1ce981f86470405cd311c3e7b053436b2feeb91a6fe",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "향/향락",
+   "syllable": "향",
+   "words": [
+    "향락"
+   ],
+   "target": "낙",
+   "input_sha256": "6d6b6d3c0b7aa146cdd9322f9260ed982382360c3bfb7f65c8e2374fafd0a010",
+   "root_form": "pair_cancelled",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "향/향락적",
+   "syllable": "향",
+   "words": [
+    "향락적"
+   ],
+   "target": "적",
+   "input_sha256": "9313bfe1348a2b23a7a9c40c66b05f88dfc2acdadcba58967fca30bda1e9e13d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "향/향수병",
+   "syllable": "향",
+   "words": [
+    "향수병"
+   ],
+   "target": "병",
+   "input_sha256": "75354e78839d72ecccf784cd0aac4444bc8d2a714e35de0fbd22e444e188b019",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "향/향토색",
+   "syllable": "향",
+   "words": [
+    "향토색"
+   ],
+   "target": "색",
+   "input_sha256": "45a95b06192ba2c3eef499ac058ce8779b8b75f00538b5336f248a08c6b7027e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "향"
+     ],
+     "nodes": 3950,
+     "sha256": "0489437f2efc5915993b5a54e6a2200dc8a5251ad044fea92024b25fbe559897",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "혈/혈맥",
+   "syllable": "혈",
+   "words": [
+    "혈맥"
+   ],
+   "target": "맥",
+   "input_sha256": "4c763c6c837f750cfa911ee09b46a9951627c7899c36c37653becf1648a0fff5",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "혈/혈맹",
+   "syllable": "혈",
+   "words": [
+    "혈맹"
+   ],
+   "target": "맹",
+   "input_sha256": "2c7ad5df9157461252693e1fbb941b68cdafd99f204dab3a5e26cdcd52d3caa4",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "혈/혈색",
+   "syllable": "혈",
+   "words": [
+    "혈색"
+   ],
+   "target": "색",
+   "input_sha256": "5c4f14e39f6630fc07073dc5608b0fb0e46373b17108dee0b1d90fdd250e7f64",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "혈/혈압",
+   "syllable": "혈",
+   "words": [
+    "혈압"
+   ],
+   "target": "압",
+   "input_sha256": "c5c2ceec32bdc89d0a7a3add9309cffae29e3153ee020ccd07c5f34050c114eb",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "혈/혈액순환",
+   "syllable": "혈",
+   "words": [
+    "혈액순환"
+   ],
+   "target": "환",
+   "input_sha256": "75f52dab96ba6529d867a2c1dc4525923cf5beeaeaafdd04c36dcd2a64386c7d",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "혈/혈흔",
+   "syllable": "혈",
+   "words": [
+    "혈흔"
+   ],
+   "target": "흔",
+   "input_sha256": "fad46a9c7622d58fd2266018524ee9f626062834b236533c28b01eeae88a0784",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "혈"
+     ],
+     "nodes": 198192,
+     "sha256": "6aa7879f74440f02b1eeab4fd13d3acf88aa3a58edddbac1ab22a2472d9416ce",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "홍/홍삼",
+   "syllable": "홍",
+   "words": [
+    "홍삼"
+   ],
+   "target": "삼",
+   "input_sha256": "45e6b4d92c3c258a74263b3d7e7f3f8bd98c5bca690edde4fce7bf5b189fc08e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "홍/홍색",
+   "syllable": "홍",
+   "words": [
+    "홍색"
+   ],
+   "target": "색",
+   "input_sha256": "371ea72a0c409ad7321755c8d41bd11f081b2e17d929252d1cf9b35290348995",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "홍"
+     ],
+     "nodes": 186790,
+     "sha256": "eeaab8662da2b9b667b8818819edc2495e70925075e217b441abc0e3c0fb583b",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "홍/홍역",
+   "syllable": "홍",
+   "words": [
+    "홍역"
+   ],
+   "target": "역",
+   "input_sha256": "7d70b5c72f9399668422be1b86cc4f357fff55a4ac522ee57cc05937e23e139e",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "홍/홍학",
+   "syllable": "홍",
+   "words": [
+    "홍학"
+   ],
+   "target": "학",
+   "input_sha256": "61a2b340987ec8995bc27c9dbf4cc56b2a971abc678fc17f0bbf98d6c5094203",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "홍/홍합",
+   "syllable": "홍",
+   "words": [
+    "홍합"
+   ],
+   "target": "합",
+   "input_sha256": "5a45e0e7fc37203333a7f5c2da5afdfe38f2e09fc2ef6c5ebdf53d0458b199c9",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "환/환갑",
+   "syllable": "환",
+   "words": [
+    "환갑"
+   ],
+   "target": "갑",
+   "input_sha256": "9ce792329272e466cfca32cfd53d85e6b5c341dec5ff4d4472cf8acad9bb3bc1",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "환/환경적",
+   "syllable": "환",
+   "words": [
+    "환경적",
+    "환상적"
+   ],
+   "target": "적",
+   "input_sha256": "2eb95fca640c65fa145018e57f54b675abe316244c5f8162afc8f2276e5f8846",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "환/환급",
+   "syllable": "환",
+   "words": [
+    "환급"
+   ],
+   "target": "급",
+   "input_sha256": "c3a4db3bdb1ede5e9ce11a1a8dd9ca47758f20b5e61f2cd6064dd3c2f9d00c74",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "환/환락",
+   "syllable": "환",
+   "words": [
+    "환락"
+   ],
+   "target": "낙",
+   "input_sha256": "2a1c965da1f78dad308038be8bc44a2efe19003ff00f510c432899ba2a60dd44",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "환/환멸",
+   "syllable": "환",
+   "words": [
+    "환멸"
+   ],
+   "target": "멸",
+   "input_sha256": "32553bbdf08be59bb8dc1a4f91298e7cd32f2dda6ce8ea95543f96d794ea8b15",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "환/환산표",
+   "syllable": "환",
+   "words": [
+    "환산표"
+   ],
+   "target": "표",
+   "input_sha256": "405cc979cc88c04bedbfa05567edb6de3cce797407c7e44a184666403e4f88da",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "환/환상곡",
+   "syllable": "환",
+   "words": [
+    "환상곡"
+   ],
+   "target": "곡",
+   "input_sha256": "d566f39f21b211ded80158cf329c3f02e1b4016b0c9421c1da891895bfcdea26",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "환/환승",
+   "syllable": "환",
+   "words": [
+    "환승"
+   ],
+   "target": "승",
+   "input_sha256": "4fc191767cf718d03532f965d4c95d8faf13f20f94e28999912594911a887722",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "환/환승역",
+   "syllable": "환",
+   "words": [
+    "환승역"
+   ],
+   "target": "역",
+   "input_sha256": "2fccdd691169c339aad19097ba68bde54cf301d147e6380a8a783d2c0833cc32",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "환/환웅",
+   "syllable": "환",
+   "words": [
+    "환웅"
+   ],
+   "target": "웅",
+   "input_sha256": "3a7de47bf27f1bcb19903b272cc65a3f1ef577be9c8606448eba284c810b6a53",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "환"
+     ],
+     "nodes": 208428,
+     "sha256": "663cc712dbbac5308739c55d9e9785e67c97cf932d58d170a66b65461aeb9e3f",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  },
+  {
+   "id": "환/환율",
+   "syllable": "환",
+   "words": [
+    "환율"
+   ],
+   "target": "율",
+   "input_sha256": "c124f43b36608fd0a8fbb562eb6c50c9a0638c9f1a97bf10309a3335e4b5f314",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "휘/휘적휘적",
+   "syllable": "휘",
+   "words": [
+    "휘적휘적"
+   ],
+   "target": "적",
+   "input_sha256": "849cb6d40fb36094df3b87ae67094269bef4c5ce08850e540fa91e9b0a87ad3c",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "휘/휘휘",
+   "syllable": "휘",
+   "words": [
+    "휘휘"
+   ],
+   "target": "휘",
+   "input_sha256": "0c63559b22f4f99e14684b6180503028b0f36b710c4dfe8fd080ee13d6992307",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "휘"
+     ],
+     "nodes": 177815,
+     "sha256": "9808a1742c0ad470af98fb4777a20fd2cee062ed837119817b72bc12bad00f50",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "흑/흑백사진",
+   "syllable": "흑",
+   "words": [
+    "흑백사진"
+   ],
+   "target": "진",
+   "input_sha256": "9bf901bb7ae7886eef209316f434d6846c4e5bc0cf1e41b5f2fc96b8115cdbb7",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "흑/흑색",
+   "syllable": "흑",
+   "words": [
+    "흑색"
+   ],
+   "target": "색",
+   "input_sha256": "cda8cc8c49e5253caaacc559474c1f0d179ea2cd414721193342425b912ec673",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "흑"
+     ],
+     "nodes": 274097,
+     "sha256": "8ddd83b7baf4b216a5a2dbb1e233adc604c569a92ebb3e4e3d2b51e5135cc41a",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "tune"
+  },
+  {
+   "id": "흑/흑설탕",
+   "syllable": "흑",
+   "words": [
+    "흑설탕"
+   ],
+   "target": "탕",
+   "input_sha256": "68dccbb119eab85b65e20f56d0635f7af199d06fc266954a0fc8a41043040325",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "흑/흑흑",
+   "syllable": "흑",
+   "words": [
+    "흑흑"
+   ],
+   "target": "흑",
+   "input_sha256": "8725ced89dfd61a52cf473b30b56d56c624cd6831a26c9cc8305d9cf4cb21c9b",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "tune"
+  },
+  {
+   "id": "흥/흥행",
+   "syllable": "흥",
+   "words": [
+    "흥행"
+   ],
+   "target": "행",
+   "input_sha256": "35f75e79496beab74e9f44bb577d0e115fda273ac06b7e352fa6d47a3dcd19ed",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": null,
+    "evidence": "none"
+   },
+   "split": "final"
+  },
+  {
+   "id": "흥/흥흥",
+   "syllable": "흥",
+   "words": [
+    "흥흥"
+   ],
+   "target": "흥",
+   "input_sha256": "0a6505a2de9217a075abcbedf037c6bee28edf037ce482cdb35dbd51ff884cb0",
+   "root_form": "kept",
+   "child_static": -1,
+   "existing": {
+    "verdict": "win",
+    "evidence": "verified",
+    "verifier": "verify_v2.py (원본)",
+    "proof": {
+     "position": [
+      "흥"
+     ],
+     "nodes": 74208,
+     "sha256": "1b355c124043536fd39af814253dc0be51b3088edabe4ce032e759354997ed00",
+     "kind": "시작 음절 증명(이기는 첫 수 포함)"
+    }
+   },
+   "split": "final"
+  }
+ ]
+}
