@@ -622,13 +622,22 @@
    "id": "역/역방향",
    "batch": "known8",
    "name": "k06",
-   "phases": 1,
-   "search_seconds_total": 120.001,
-   "mid_calls_total": 61612032,
-   "decided": false,
-   "reason": "time_limit",
-   "pn": 964,
-   "dn": 5453
+   "phases": 2,
+   "search_seconds_total": 168.37,
+   "mid_calls_total": 92600312,
+   "decided": true,
+   "first_move": "lose",
+   "reply": [
+    "향토색"
+   ],
+   "proof_nodes": 557709,
+   "proof_bytes": 4015098,
+   "proof_seconds": 13.319808,
+   "verify_seconds": 33.524,
+   "proof_sha256": "992218be97fca1bd48c60fb16c55e44ed1543e0ea74684ebd08ef60090d6ad67",
+   "position_sha256": "6a6db23dd81e7907a589a6b0f9a08f063b307698a72072860595f43a89cc166c",
+   "input_sha256": "6dbfbe082fdc8d7a6067d2597296872d15339a34f5100446788b8d60161fc60c",
+   "verifier": "verify_v4 (C++)"
   }
  ],
  "격/격랑": [
@@ -636,13 +645,13 @@
    "id": "격/격랑",
    "batch": "known8",
    "name": "k07",
-   "phases": 1,
-   "search_seconds_total": 120.001,
-   "mid_calls_total": 62548992,
+   "phases": 2,
+   "search_seconds_total": 600.003,
+   "mid_calls_total": 338258944,
    "decided": false,
    "reason": "time_limit",
-   "pn": 2712,
-   "dn": 8677
+   "pn": 537,
+   "dn": 25856
   }
  ],
  "역/역풍": [
@@ -650,13 +659,13 @@
    "id": "역/역풍",
    "batch": "known8",
    "name": "k08",
-   "phases": 1,
-   "search_seconds_total": 120.002,
-   "mid_calls_total": 63413248,
+   "phases": 2,
+   "search_seconds_total": 600.003,
+   "mid_calls_total": 345181184,
    "decided": false,
    "reason": "time_limit",
-   "pn": 2522,
-   "dn": 8904
+   "pn": 4479,
+   "dn": 15301
   }
  ]
 }
