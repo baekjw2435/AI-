@@ -1,0 +1,85 @@
+{
+ "verifier_sha256": "292670d48e0b30d2e2581181e7e7adec58984678f38374fdd9003e687fc813d1",
+ "cases": {
+  "f01": {
+   "proof_nodes": 994767,
+   "verify_seconds_before": 58.084,
+   "verify_seconds_after": 27.03,
+   "search_seconds": 379.057,
+   "proof_seconds": 22.184653,
+   "solver_wall_seconds": 402.54
+  },
+  "f02": {
+   "proof_nodes": 1917106,
+   "verify_seconds_before": 102.495,
+   "verify_seconds_after": 51.836,
+   "search_seconds": 496.409,
+   "proof_seconds": 40.028668,
+   "solver_wall_seconds": 538.31
+  },
+  "f03": {
+   "proof_nodes": 539757,
+   "verify_seconds_before": 28.73,
+   "verify_seconds_after": 16.109,
+   "search_seconds": 71.613,
+   "proof_seconds": 10.05172,
+   "solver_wall_seconds": 82.87
+  },
+  "f04": {
+   "proof_nodes": 917700,
+   "verify_seconds_before": 53.365,
+   "verify_seconds_after": 26.24,
+   "search_seconds": 444.188,
+   "proof_seconds": 19.160811,
+   "solver_wall_seconds": 464.56
+  },
+  "f05": {
+   "proof_nodes": 1962489,
+   "verify_seconds_before": 106.33,
+   "verify_seconds_after": 54.812,
+   "search_seconds": 552.377,
+   "proof_seconds": 40.268863,
+   "solver_wall_seconds": 594.58
+  },
+  "f06": {
+   "proof_nodes": 61316,
+   "verify_seconds_before": 3.501,
+   "verify_seconds_after": 1.349,
+   "search_seconds": 7.437,
+   "proof_seconds": 1.352927,
+   "solver_wall_seconds": 9.67
+  },
+  "f07": {
+   "proof_nodes": 77647,
+   "verify_seconds_before": 4.696,
+   "verify_seconds_after": 2.109,
+   "search_seconds": 12.074,
+   "proof_seconds": 1.551009,
+   "solver_wall_seconds": 14.53
+  },
+  "f10": {
+   "proof_nodes": 833470,
+   "verify_seconds_before": 49.059,
+   "verify_seconds_after": 22.352,
+   "search_seconds": 386.876,
+   "proof_seconds": 18.816407,
+   "solver_wall_seconds": 406.98
+  },
+  "f11": {
+   "proof_nodes": 922980,
+   "verify_seconds_before": 52.037,
+   "verify_seconds_after": 24.902,
+   "search_seconds": 540.965,
+   "proof_seconds": 19.793547,
+   "solver_wall_seconds": 562.05
+  },
+  "f12": {
+   "proof_nodes": 98210,
+   "verify_seconds_before": 5.613,
+   "verify_seconds_after": 2.751,
+   "search_seconds": 6.653,
+   "proof_seconds": 2.013494,
+   "solver_wall_seconds": 9.77
+  }
+ }
+}

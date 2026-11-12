@@ -3,9 +3,11 @@
 이미 푼 국면의 증명서를 **조금 다른 국면**에 따라가 보고, 따라갈 수 없는 곳만 다시 푸는 방법입니다.
 한기사의 '다른 첫 수'에서는 넘겨준 음절의 증명서를 '단어 하나 빠진 국면'에 씁니다.
 
-- 결과와 시간 비교: `basic_root/alt_first_moves/results/replay1/README_KO.md`
+- 결과와 시간 비교: `basic_root/alt_first_moves/results/replay1/README_KO.md`(조정용 28개), `results/replay2/README_KO.md`(비교용 12개)
+- 증명서 쓰기·검증 시간 측정과 개선: `basic_root/alt_first_moves/results/replay2/TIMING_KO.md`
+- **재생은 선택 기능입니다.** 기본 계산기(`solver_v5`)와 기존 실행 도구는 재생을 쓰지 않습니다. 재생은 이 사본과 아래 도구로만 돕니다.
 - 계산기: `solver_v5_replay.cpp` (`../../solver_v5.cpp`에 재생 단계만 더한 사본. `--replay`를 안 주면 solver_v5와 같습니다.)
-- 실행 도구: `basic_root/alt_first_moves/replay_prep.py`(원본 증명 준비), `replay_test.py`(직접 탐색과 비교)
+- 실행 도구(`basic_root/alt_first_moves/`): `replay_prep.py`(원본 증명 준비), `replay_pick.py`(대상을 실행 전에 고정), `replay_test.py`(직접 탐색과 비교), `replay_collect.py`·`replay_table.py`(기록과 표), `replay_archive.py`(증명서 보관과 재검증)
 
 ## 하는 일
 
@@ -35,6 +37,8 @@ solver_v5_replay 새국면.txt --replay 옛증명.v4.gz [--replay-stuck-nodes 20
    - **음절 증명서 여러 개 (`--replay-lib`).** 막힌 국면의 현재 꼭짓점에 해당하는 음절의 증명서를 함께 주면, 막힌 곳 탐색 전에 그 증명서를 뿌리부터 같은 방식으로 따라가 봅니다. 꼭짓점 번호는 계산기 입력의 번호입니다(`ModelV3.vertex_of(음절)`).
 4. **남은 탐색.** 재생으로 뿌리가 증명되지 않으면, 지금까지의 기록을 가진 채 보통 탐색을 이어 갑니다. 시간 한도(`--seconds`)에는 재생 시간도 들어갑니다. 한도 안에 못 풀면 결과는 `unknown`(미확정)입니다.
 5. **증명서.** 기존 증명 생성 코드가 그대로 씁니다. 기준 정규화로 뿌리부터 다시 재생하며 모든 마디를 대조합니다.
+   - **`--emit-check 0` (선택).** 고정 라벨이 아닌 자식은 증분 정규화만으로 만들어 대조를 건너뜁니다. 쓰기가 약 3배 빨라지고, 증명서는 같은 파일입니다. 기본값 1은 전과 같습니다.
+6. **저장과 재개.** `--tt-save`를 주면 재생 단계에서도 저장 간격마다 저장합니다. 끊긴 뒤 같은 명령에 `--tt-load`를 주면, 증명해 둔 국면을 건너뛰며 빠르게 다시 따라갑니다. 저장 파일에는 누적 탐색 시간이 들어 있습니다.
 
 ## 정확성을 지키는 방법
 
@@ -70,6 +74,8 @@ python3 test_replay_random.py $M/solver_v5 $M/solver_v5_replay $M/verify_v4 /hom
 | `replay_local_calls`, `replay_local_solved`, `replay_local_mid` | 막힌 곳 탐색 횟수, 풀린 횟수, 그 탐색의 국면 수 |
 | `replay_unknown_below` | 아래쪽이 풀리지 않아 증명하지 못한 마디 수 |
 | `replay_flips` | 옛 증명에서는 패였지만 새 국면에서는 승으로 증명된 마디 수 |
+| `emit_profile` | 증명서 쓰기의 구간별 시간(초) |
+| `carried_seconds`, `total_search_seconds` | 불러온 저장 상태에 들어 있던 탐색 시간, 이번 실행까지의 합 |
 | `replay_local_repeat` | 이미 탐색한 막힌 국면이라 다시 탐색하지 않은 횟수 |
 | `replay_libs`, `replay_lib_tries`, `replay_lib_solved` | 함께 준 음절 증명서 수, 그것을 따라가 본 횟수, 그렇게 증명된 횟수 |
 
@@ -80,3 +86,5 @@ python3 test_replay_random.py $M/solver_v5 $M/solver_v5_replay $M/verify_v4 /hom
 - 재생 뒤에는 증명서 쓰기와 검증이 시간의 대부분입니다. 재생은 탐색만 줄입니다.
 - 옛 증명서는 계산기가 쓰는 줄 형식(`{"id":…,"r":"W","m":[[묶음,자식],…]}`)만 읽습니다.
 - 한 스레드로만 재생합니다.
+- 탐색이 저장 간격(60초)보다 길면, 저장 시점에 따라 탐색 경로가 달라져 실행마다 다른 증명서가 나올 수 있습니다(둘 다 올바름). 짧은 탐색은 늘 같은 증명서가 나옵니다.
+- 쉬운 국면은 직접 탐색이 더 빠를 수 있습니다(비교용의 언어능력: 직접 13초, 재생 52초).
