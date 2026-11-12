@@ -97,6 +97,7 @@
 #include <cstring>
 #include <ctime>
 #include <fstream>
+#include <functional>
 #include <map>
 #include <iostream>
 #include <mutex>
@@ -626,9 +627,15 @@ static const char TT_END[8] = {'Y', 'S', 'T', 'T', 'E', 'N', 'D', 0};
 struct TTHeader {
   char magic[8];
   u64 graph0, graph1, root0, root1;
-  int32_t init, init_div, wpn, reserved;
+  int32_t init, init_div, wpn;
+  int32_t carried_cs;  // search time inside this state, in 1/100 s, over all runs (2026-11-12; was "reserved" = 0)
   u64 count, created;
 };
+// Search seconds already inside the state loaded with --tt-load (0: none loaded, or a file written before
+// 2026-11-12). Every save writes carried + this run's search time so far, so a runner can read from the file
+// how much search an interrupted run really left behind, and continue with the right remaining budget.
+static double carried_seconds = 0;
+static double search_seconds_now();
 static void graph_fingerprint(u64& f0, u64& f1) {
   u64 s = 0x7474667031ull;
   f0 = 0; f1 = 0;
@@ -654,6 +661,7 @@ static u64 tt_save(const string& path, const State& root) {
   if (!f) throw runtime_error("cannot create TT file");
   TTHeader h; fill_header(h, root);
   h.created = (u64)time(nullptr);
+  h.carried_cs = (int32_t)min(2147483647.0, max(1.0, (carried_seconds + search_seconds_now()) * 100.0 + 0.5));
   bool ok = fwrite(&h, sizeof h, 1, f) == 1;
   u64 ck = 0x5eedc0de, n = 0;
   // --tt-save-max N: keep the N entries with the most work (the costliest results to recompute).
@@ -753,6 +761,7 @@ static u64 tt_load(const string& path, const State& root) {
     }
   }
   tt.stores = 0; tt.replacements = 0;
+  carried_seconds = h.carried_cs > 0 ? h.carried_cs / 100.0 : 0;
   return h.count;
 }
 
@@ -943,6 +952,12 @@ static atomic<bool> ckpt_flag{false};  // stop requested only to write a TT chec
 static double next_ckpt = 1e300;
 static atomic<u64> g_mid{0}, g_gen{0}, g_selfchecks{0};
 static chrono::steady_clock::time_point t_start;
+static bool search_clock_on = false;   // set when the search starts
+static double search_clock_final = -1; // set when the search has ended: later saves use this value
+static double search_seconds_now() {
+  if (search_clock_final >= 0) return search_clock_final;
+  return search_clock_on ? chrono::duration<double>(chrono::steady_clock::now() - t_start).count() : 0;
+}
 static string stop_reason = "none";
 static mutex reason_mu;
 // proof-emission deadline (--emit-seconds); checked per emitted node and inside re-solves
@@ -1177,10 +1192,13 @@ struct Replayer {
   u64 unknown_below = 0, flips = 0, local_calls = 0, local_solved = 0, local_mid = 0, local_repeat = 0;
   u64 lib_tries = 0, lib_solved = 0;
   bool expired = false;
+  function<void()> checkpoint;                           // saves the table when a checkpoint is due (set by main)
 
   bool out_of_time() {
-    if (!expired && (nodes & 255) == 0 &&
-        chrono::duration<double>(chrono::steady_clock::now() - t_start).count() >= opt.seconds) expired = true;
+    if (!expired && (nodes & 255) == 0) {
+      if (chrono::duration<double>(chrono::steady_clock::now() - t_start).count() >= opt.seconds) expired = true;
+      else if (checkpoint) checkpoint();  // between two replay nodes no search is running: the table can be saved
+    }
     return expired;
   }
   // One budgeted df-pn search of the state the searcher is in (depth d). 1 / 0 = proven, -1 = not solved.
@@ -1574,15 +1592,25 @@ int main(int argc, char** argv) {
     }
     if (opt.checkpoint > 0) next_ckpt = opt.checkpoint;
     t_start = chrono::steady_clock::now();
+    search_clock_on = true;
     vector<Searcher> ss(opt.threads);
     for (int i = 0; i < opt.threads; i++) ss[i].init(maxdepth, i);
     u32 rpn = rstat == -1 ? 1 : (rstat ? 0 : INF), rdn = rstat == -1 ? 1 : (rstat ? INF : 0);
     bool root_solved = false;
     if (!opt.replay.empty() && rstat == -1) {
-      // replay phase (one thread; its time is part of --seconds). No checkpoints meanwhile: the table is saved
-      // by the first checkpoint of the search, or at the end.
+      // replay phase (one thread; its time is part of --seconds). The search's own checkpoint timer is off
+      // meanwhile (it would stop a local search); the replayer saves the table itself between two nodes, so a run
+      // cut off during a long replay continues from what it had proven (the next replay walks over it quickly).
       const double keep_ckpt = next_ckpt;
       next_ckpt = 1e300;
+      double replay_next_ckpt = keep_ckpt;
+      if (opt.checkpoint > 0)
+        rp_.checkpoint = [&]() {
+          double el = chrono::duration<double>(chrono::steady_clock::now() - t_start).count();
+          if (el < replay_next_ckpt) return;
+          save_now();
+          replay_next_ckpt = chrono::duration<double>(chrono::steady_clock::now() - t_start).count() + opt.checkpoint;
+        };
       rp_.S = &ss[0];
       rp_.rfr.resize(maxdepth + 2);
       ss[0].S = root;
@@ -1625,6 +1653,7 @@ int main(int argc, char** argv) {
       ckpt_flag = false;
     }
     double elapsed = chrono::duration<double>(chrono::steady_clock::now() - t_start).count();
+    search_clock_final = elapsed;
     string result = rpn == 0 ? "win" : rdn == 0 ? "loss" : "unknown";
     // The final state is saved whether or not the root is solved (2026-11-12, Fable review). A solved root used
     // to be left at its last checkpoint; if the certificate then could not be written or was not accepted, the
@@ -1723,6 +1752,7 @@ int main(int argc, char** argv) {
            "\"emit_crosschecks\":%llu,\"emit_seconds\":%s,\"selfchecks\":%llu,\"proof_error\":\"%s\","
            "\"tt_loaded\":%llu,\"tt_load_seconds\":%s,\"tt_saves\":%llu,\"tt_saved\":%llu,\"tt_save_seconds\":%s,"
            "\"tt_save_error\":\"%s\",\"tt_load_open_capped\":%llu,\"tt_load_proven_in_cache\":%llu,\"tt_load_proven_kept\":%llu,"
+           "\"carried_seconds\":%s,\"total_search_seconds\":%s,"
            "\"proven_load_cap\":%llu,"
            "\"replay_root\":%d,\"replay_old_nodes\":%llu,\"replay_load_seconds\":%s,\"replay_seconds\":%s,\"replay_nodes\":%llu,"
            "\"replay_proven\":%llu,\"replay_memo_proven\":%llu,\"replay_memo_unknown\":%llu,\"replay_stuck_old_leaf\":%llu,"
@@ -1738,6 +1768,7 @@ int main(int argc, char** argv) {
            (unsigned long long)g_selfchecks.load(), proof_error.c_str(), (unsigned long long)tt_loaded, jnum(tt_load_s).c_str(),
            (unsigned long long)tt_saves, (unsigned long long)tt_saved, jnum(tt_save_s).c_str(), tt_save_error.c_str(),
            (unsigned long long)tt_fix_open_capped, (unsigned long long)tt_fix_proven_in_cache, (unsigned long long)tt_fix_proven_kept,
+           jnum(carried_seconds).c_str(), jnum(carried_seconds + elapsed).c_str(),
            (unsigned long long)opt.proven_load_max,
            replay_root, (unsigned long long)oldproof.win.size(), jnum(replay_load_s).c_str(), jnum(replay_s).c_str(),
            (unsigned long long)rp_.nodes, (unsigned long long)rp_.proven, (unsigned long long)rp_.memo_proven,

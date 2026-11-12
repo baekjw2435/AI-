@@ -36,13 +36,17 @@ Saved search states (2026-11-12, after the Fable review):
   * a state is deleted only by release_state(), i.e. after verify() ACCEPTED the certificate and the
     certificate file is still there. A solved position whose certificate could not be written or was not
     accepted keeps its state (solver_v5 now saves a solved root too), so the next run has the result at once;
-  * a state file the solver refuses (damaged, other root) is renamed aside, never deleted.
+  * a state file the solver refuses (damaged, other root) is renamed aside, never deleted;
+  * a state file says how much search is inside it (state_carried_seconds): the solver adds each run's search
+    time to the file's header at every checkpoint, so after an interrupted run the remaining budget and the
+    carried time can be read from the file instead of being reconstructed by hand.
 """
 import fcntl
 import hashlib
 import json
 import os
 import shutil
+import struct
 import subprocess
 import sys
 import time
@@ -182,6 +186,20 @@ def release_state(tt, accepted, proof=None):
         tt.unlink()
         return True
     return False
+
+
+def state_carried_seconds(tt):
+    """Search seconds inside a saved state file, from its header (solver_v5 since 2026-11-12), or None when the
+    file is missing, unreadable or was written by an older solver (which left the field 0)."""
+    try:
+        with open(tt, 'rb') as f:
+            head = f.read(72)
+        magic, _, _, _, _, _, _, _, carried_cs, _, _ = struct.unpack('<8sQQQQiiiiQQ', head)
+    except (OSError, struct.error):
+        return None
+    if magic[:5] != b'YSTT1' or carried_cs <= 0:
+        return None
+    return carried_cs / 100.0
 
 
 def set_aside_refused_state(tt, stderr_text):

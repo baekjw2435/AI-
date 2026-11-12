@@ -89,8 +89,19 @@ def main():
             return {'name': p['name'], 'id': p['id'], 'decided': False, 'not_run': str(e)}
         solve_wall = time.time() - t0
         resumed = bool(sol.get('state_loaded'))
+        recovered = None
         if not resumed:
             carried_before = 0.0      # nothing was loaded: this run starts the carried chain again
+        elif (sol.get('carried_seconds') or 0) > 0:
+            # The state file itself says how much search it holds. If that is more than the phase records add up
+            # to, a run was cut off (container restart) after saving: its saved part is carried and counted now;
+            # what it searched after its last checkpoint is unknown, so the spent total becomes a lower bound.
+            in_state = round(sol['carried_seconds'], 3)
+            if in_state > carried_before + 1:
+                recovered = round(in_state - carried_before, 3)
+                spent_before = round(spent_before + recovered, 3)
+                spent_lower = True
+            carried_before = in_state
         rec = {'name': p['name'], 'id': p['id'], 'syllable': p['syllable'], 'word': p['word'], 'phase': phase,
                'phase_seconds': seconds, 'tt_mb': opt['--tt-mb'],
                'search_seconds_before': carried_before, 'spent_seconds_before': spent_before, 'resumed': resumed,
@@ -100,6 +111,7 @@ def main():
                'proof_nodes': sol.get('proof_nodes'), 'proof_seconds': sol.get('emit_seconds'),
                'proof_error': sol.get('proof_error'), 'run_note': sol.get('run_note'),
                'tt_save_error': sol.get('tt_save_error') or None, 'state_set_aside': sol.get('state_set_aside'),
+               'recovered_from_interrupted_run_seconds': recovered,
                'solve_wall_seconds': round(solve_wall, 1), 'decided': False}
         rec['search_seconds_total'] = round(carried_before + (rec['search_seconds'] or 0), 3)
         rec['spent_seconds_total'] = round(spent_before + (rec['search_seconds'] or 0), 3)
