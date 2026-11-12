@@ -1,0 +1,33 @@
+{
+ "syllable": "행",
+ "vertex": "행",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 14.985,
+ "lost_runs": [],
+ "spent_is_lower_bound": false,
+ "unfinished_starts": 0,
+ "mid_calls": 8271181,
+ "proof_nodes": 75145,
+ "proof_seconds": 1.677336,
+ "solver_wall_seconds": 18.57,
+ "verify_seconds": 4.203,
+ "verify_wall_seconds": 4.21,
+ "proof_bytes": 532187,
+ "proof_sha256": "3cd959924c68a1cb67f835604c658b34971a76721bcc972d822c7bf55caa9e92",
+ "position_sha256": "4a095b2eb3ede2af25fba5005aaf6fee9067cd102cba31d8225075f49e3a0e36",
+ "input_sha256": "ed493856464126b5f724ad73d507b94e2373a124d1fbe2a8a31224953952c01b",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "ea7ff989f0c96cc377e78881f040ea79798302a3b65555b1220c4831fbe18471"
+}

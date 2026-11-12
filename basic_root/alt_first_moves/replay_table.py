@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Markdown tables of the replay experiment, from results/<NAME>/*.json (see replay_test.py).
+"""Markdown tables of the replay experiment, from results/<NAME>/*.phase1.json (replay_test.py, replay_collect.py).
 
 usage: replay_table.py NAME        (NAME: folder under results/, e.g. replay1)
 Times are seconds on this machine. 'total' of a run = wall time of the solver process (table set-up, reading
@@ -31,7 +31,7 @@ def verdict(r):
 
 def main():
     res = HERE / 'results' / sys.argv[1]
-    recs = [json.loads(p.read_text(encoding='utf-8')) for p in sorted(res.glob('*.json'))]
+    recs = [json.loads(p.read_text(encoding='utf-8')) for p in sorted(res.glob('*.phase1.json'))]
     print('| 번호 | 첫 수 | 넘겨준 음절(원본 증명 국면) | 직접: 판정 | 직접 전체(초) | 재생: 판정 | 재생 전체(초) | 배 |')
     print('|---|---|---|---|---:|---|---:|---:|')
     for r in recs:
@@ -53,6 +53,21 @@ def main():
                   f'{f(x.get("proof_seconds")) if x["decided"] else "-"} | {f(x.get("verify_seconds")) if x["decided"] else "-"} | '
                   f'{x.get("mid_calls") or 0:,} | {(x.get("proof_nodes") or 0):,} | {rp.get("nodes", 0):,} | {stuck:,} | '
                   + (f'{rp.get("local_calls", 0):,} / {rp.get("local_solved", 0):,} / {rp.get("local_mid", 0):,}' if rp else '-') + ' |')
+    # per source: what preparing it cost, and what its uses cost with and without that
+    print()
+    print('| 원본 음절 | 준비: 탐색(초) | 준비: 증명 생성 | 준비: 검증 | 준비 합계 | 쓴 첫 수 | 재생으로 확정 | 재생 전체 합계(초) | 준비 포함 합계 | 준비 포함 첫 수당 | 직접 탐색을 돌린 첫 수 | 직접으로 확정 | 그 첫 수들: 직접 합계 / 재생 합계(초) |')
+    print('|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|')
+    groups = {}
+    for r in recs:
+        groups.setdefault(r['source']['syllable'], []).append(r)
+    for syl, rs in groups.items():
+        s = rs[0]['source']
+        prep = s['prep_search_seconds_spent'] + (s['prep_proof_seconds'] or 0) + (s['prep_verify_seconds'] or 0)
+        rep_total = sum(total(r['replay']) for r in rs)
+        both = [r for r in rs if r.get('direct')]
+        print(f'| {syl} | {f(s["prep_search_seconds_spent"])} | {f(s["prep_proof_seconds"])} | {f(s["prep_verify_seconds"])} | {f(prep)} | {len(rs)} | '
+              f'{sum(r["replay"]["decided"] for r in rs)} | {f(rep_total)} | {f(prep + rep_total)} | {f((prep + rep_total) / len(rs))} | {len(both)} | '
+              f'{sum(r["direct"]["decided"] for r in both)} | {f(sum(total(r["direct"]) for r in both))} / {f(sum(total(r["replay"]) for r in both))} |')
 
 
 if __name__ == '__main__':
