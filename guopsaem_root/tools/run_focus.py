@@ -45,6 +45,7 @@ def main():
             ok, v = sc.verify(dic, nwords, f['pos'], proof, f['input'], want, sol.get('proof_nodes', 0))
             rec['verify'] = v
             rec['verified'] = ok
+            rec['state_released'] = sc.release_state(f['tt'], ok, proof)     # only after acceptance
         out.write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding='utf-8')
         return rec
 
@@ -66,8 +67,8 @@ def main():
                 f' / 불러온 상태 {s.get("tt_loaded", 0):,}개, 탐색 {s.get("mid_calls", 0):,}국면, pn {s.get("pn")} dn {s.get("dn")}')
             if r['verified']:
                 summary[f['name']]['result'] = 'W' if s['result'] == 'win' else 'L'
-            elif s.get('result') not in ('win', 'loss'):
-                still.append(f)
+            else:
+                still.append(f)       # undecided, or solved without an accepted certificate (state kept): try again
         active = still
         (work / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=1), encoding='utf-8')
     say('[끝] ' + ', '.join(f'{n}: {v["result"] or "미정"}' for n, v in summary.items()))

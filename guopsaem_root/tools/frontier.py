@@ -170,8 +170,11 @@ def solve(dic, nwords, work, seconds, ttmb, jobs):
         if not f.exists():
             return True
         r = json.loads(f.read_text(encoding='utf-8'))
-        return not r.get('verified') and r['solver'].get('result') not in ('win', 'loss') \
-            and r['solver'].get('seconds', 0) < budget(e) - 1
+        if r.get('verified'):
+            return False
+        if r['solver'].get('result') in ('win', 'loss'):
+            return True        # solved but no accepted certificate: run again from the saved state
+        return r['solver'].get('seconds', 0) < budget(e) - 1
 
     queue = [e for e in order if todo(e)]
     lock = threading.Lock()
@@ -191,7 +194,11 @@ def solve(dic, nwords, work, seconds, ttmb, jobs):
     def run(e):
         d = work / 'jobs' / f'e{e["id"]}'
         sc.wait_for_disk(work, f'e{e["id"]}')
-        sol = sc.solve(d / 'in.txt', d / 'cert.jsonl.gz', budget(e), ttmb, tt=d / 'state.tt', log=d / 'solver.out')
+        try:
+            sol = sc.solve(d / 'in.txt', d / 'cert.jsonl.gz', budget(e), ttmb, tt=d / 'state.tt', log=d / 'solver.out')
+        except sc.LowDisk as err:
+            say(f'  e{e["id"]} 시작하지 않음 (디스크 부족, 저장 상태는 그대로 둠): {err}')
+            return
         res = {'endpoint': e['id'], 'vertex': e['vertex'], 'roots': e['roots'], 'solver': sol, 'verified': False}
         if sol.get('result') in ('win', 'loss') and not sol.get('proof_error'):
             want = 'W' if sol['result'] == 'win' else 'L'
@@ -199,6 +206,7 @@ def solve(dic, nwords, work, seconds, ttmb, jobs):
                                sol.get('proof_nodes', 0))
             res['verify'] = vr
             res['verified'] = ok
+            res['state_released'] = sc.release_state(d / 'state.tt', ok, d / 'cert.jsonl.gz')   # only after acceptance
         elif (d / 'cert.jsonl.gz').exists() and sol.get('result') not in ('win', 'loss'):
             (d / 'cert.jsonl.gz').unlink()
         (d / 'res.json').write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding='utf-8')

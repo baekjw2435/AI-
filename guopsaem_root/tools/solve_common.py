@@ -11,7 +11,8 @@ Environment (defaults in brackets):
                       (longer) run of the same job continues from it [1]
   TT_SAVE_MAX         saved states keep only the N table entries with the most work [1000000 = 32 MB];
                       0 = keep everything (up to the whole table, e.g. 1 GB per job)
-  MIN_FREE_GB         do not start a job (or do not save state) below this free disk [4]
+  MIN_FREE_GB         free disk that must remain after a job's saved state is written [4]. A job that cannot
+                      keep this is NOT started (LowDisk) and an existing saved state is left untouched.
   VERIFY_LOCK         lock file so that only one big verification runs at a time
   BIG_PROOF_NODES     certificates at least this big take the lock [200000]
   PROVEN_DIR          if set: shared proven-state cache. Every job loads PROVEN_DIR/merged.pc and saves
@@ -28,6 +29,14 @@ Environment (defaults in brackets):
 A certificate is accepted only if ALL hold: verifier exit code 0, "verified": true, the
 expected result, "state_storage": "deflate-exact" (v4), and the dictionary, position, input
 and certificate SHA-256 reported by the verifier equal the hashes of the files we hold.
+
+Saved search states (2026-11-12, after the Fable review):
+  * loading and saving are decided separately: an existing state is ALWAYS loaded (loading needs no disk);
+  * if there is not enough disk to save a new state the job is not started (LowDisk) - the old file stays;
+  * a state is deleted only by release_state(), i.e. after verify() ACCEPTED the certificate and the
+    certificate file is still there. A solved position whose certificate could not be written or was not
+    accepted keeps its state (solver_v5 now saves a solved root too), so the next run has the result at once;
+  * a state file the solver refuses (damaged, other root) is renamed aside, never deleted.
 """
 import fcntl
 import hashlib
@@ -66,6 +75,10 @@ def free_gb(path):
     return shutil.disk_usage(path).free / 2**30
 
 
+class LowDisk(RuntimeError):
+    """Not enough free disk to save the search state. The job was not started; a saved state is untouched."""
+
+
 def table_slots(ttmb):
     """Entries of the solver's table for --tt-mb ttmb, as TT::alloc computes them: buckets of four 32-byte
     entries, bucket count rounded DOWN to a power of two (so 3072 MB gives 67,108,864 entries = 2 GB)."""
@@ -76,10 +89,19 @@ def table_slots(ttmb):
     return nb * 4
 
 
+def state_file_bytes(ttmb, keep_max):
+    """Largest size of one saved state: 32 bytes per kept entry (all entries of the table if keep_max is 0),
+    plus header and tail. While a checkpoint is written the old file is still there, so this much must be free."""
+    slots = table_slots(ttmb)
+    return 32 * (min(slots, int(keep_max)) if keep_max else slots) + 128
+
+
 def solver_cmd(inp, proof, seconds, ttmb, tt=None, tt_save_max=None):
     """Solver command line. With tt (a path), the search state is checkpointed there every
     CHECKPOINT seconds and loaded again if the file exists, so a job interrupted by a restart
-    continues instead of starting over. Returns (cmd, note)."""
+    continues instead of starting over. Returns (cmd, note).
+    An existing state is always loaded. If the disk cannot take a new checkpoint (its real size, not the
+    table size) and still keep MIN_FREE_GB free, LowDisk is raised and nothing is run or deleted."""
     cmd = [SOLVER, str(inp), '--seconds', str(seconds), '--tt-mb', str(ttmb), '--threads', '1',
            '--proof', str(proof), '--proof-format', PROOF_FORMAT]
     note = ''
@@ -87,17 +109,19 @@ def solver_cmd(inp, proof, seconds, ttmb, tt=None, tt_save_max=None):
         tt = Path(tt)
         if Path(str(tt) + '.tmp').exists():
             Path(str(tt) + '.tmp').unlink()          # a checkpoint cut short by a restart
-        if free_gb(tt.parent) - int(ttmb) / 1024 >= MIN_FREE_GB:
-            if tt.exists():
-                cmd += ['--tt-load', str(tt)]
-                note = 'resumed from saved state'
-            every = max(60.0, 60.0 * int(ttmb) / 1024) if CHECKPOINT == 'auto' else float(CHECKPOINT)
-            cmd += ['--tt-save', str(tt), '--checkpoint-seconds', str(every)]
-            keep_max = TT_SAVE_MAX if tt_save_max is None else tt_save_max
-            if keep_max:
-                cmd += ['--tt-save-max', str(keep_max)]
-        else:
-            note = f'no state saving (free disk {free_gb(tt.parent):.1f} GB)'
+        keep_max = TT_SAVE_MAX if tt_save_max is None else tt_save_max
+        need_gb = state_file_bytes(ttmb, keep_max) / 2**30
+        free = free_gb(tt.parent)
+        if free - need_gb < MIN_FREE_GB:
+            raise LowDisk(f'free disk {free:.2f} GB; a checkpoint needs {need_gb:.2f} GB and {MIN_FREE_GB:g} GB must stay free. '
+                          f'Job not started' + (f', saved state kept: {tt}' if tt.exists() else ''))
+        if tt.exists():
+            cmd += ['--tt-load', str(tt)]
+            note = 'resumed from saved state'
+        every = max(60.0, 60.0 * int(ttmb) / 1024) if CHECKPOINT == 'auto' else float(CHECKPOINT)
+        cmd += ['--tt-save', str(tt), '--checkpoint-seconds', str(every)]
+        if keep_max:
+            cmd += ['--tt-save-max', str(keep_max)]
     if PROVEN_DIR:
         pdir = Path(PROVEN_DIR); (pdir / 'jobs').mkdir(parents=True, exist_ok=True)
         if (pdir / 'merged.pc').exists():
@@ -130,14 +154,47 @@ def merge_proven(cmd, ttmb):
 
 
 def finish_tt(tt, sol, keep_unknown):
-    """After a job: drop the saved state if decided (or if undecided states are not kept)."""
+    """After a solver run: tidy up, but never delete the state of a solved position (see release_state) and
+    never delete because the disk is low. Only an UNDECIDED state is dropped, and only if the caller does
+    not keep undecided states (keep_unknown false)."""
     if tt is None:
         return
     tt = Path(tt)
     if Path(str(tt) + '.tmp').exists():
         Path(str(tt) + '.tmp').unlink()
-    if tt.exists() and (sol.get('result') in ('win', 'loss') or not keep_unknown or free_gb(tt.parent) < MIN_FREE_GB):
+    if tt.exists() and not keep_unknown and sol.get('result') == 'unknown':
         tt.unlink()
+
+
+def release_state(tt, accepted, proof=None):
+    """Delete a saved search state after its position is finished: `accepted` must be the first value
+    verify() returned for this position's certificate (every acceptance condition, including that the
+    certificate file on disk has the verified SHA-256), and the certificate file must still exist.
+    Returns True if a state file was deleted."""
+    if tt is None:
+        return False
+    tt = Path(tt)
+    if accepted is not True or (proof is not None and not Path(proof).exists()):
+        return False
+    if Path(str(tt) + '.tmp').exists():
+        Path(str(tt) + '.tmp').unlink()
+    if tt.exists():
+        tt.unlink()
+        return True
+    return False
+
+
+def set_aside_refused_state(tt, stderr_text):
+    """If the solver refused the saved state (damaged file, other root or options), move it aside so that the
+    next run can start; the file is kept for inspection. Returns the new path or None."""
+    if tt is None or 'TT file refused' not in (stderr_text or '') and 'cannot open TT file' not in (stderr_text or ''):
+        return None
+    tt = Path(tt)
+    if not tt.exists():
+        return None
+    aside = tt.with_name(tt.name + time.strftime('.refused-%Y%m%d-%H%M%S'))
+    tt.rename(aside)
+    return str(aside)
 
 
 def parse_solver_output(text, returncode):
@@ -148,7 +205,9 @@ def parse_solver_output(text, returncode):
 
 
 def solve(inp, proof, seconds, ttmb, tt=None, log=None, keep_unknown=None, tt_save_max=None):
-    """Run the solver once (blocking); see solver_cmd. Returns the solver's JSON."""
+    """Run the solver once (blocking); see solver_cmd (which may raise LowDisk before anything runs).
+    Returns the solver's JSON. A saved state is NOT deleted here when the position is solved: call
+    release_state(tt, accepted, proof) after verify() accepted the certificate."""
     cmd, note = solver_cmd(inp, proof, seconds, ttmb, tt, tt_save_max)
     out = subprocess.run(cmd, capture_output=True, text=True)
     if log is not None:
@@ -165,7 +224,14 @@ def solve(inp, proof, seconds, ttmb, tt=None, log=None, keep_unknown=None, tt_sa
     pm = merge_proven(cmd, ttmb)
     if pm is not None:
         sol['proven_merge'] = pm
+    if sol.get('result') == 'error':
+        aside = set_aside_refused_state(tt, out.stderr)
+        if aside:
+            sol['state_set_aside'] = aside
     finish_tt(tt, sol, KEEP_UNKNOWN_TT if keep_unknown is None else keep_unknown)
+    if tt is not None:
+        sol['state_loaded'] = '--tt-load' in cmd and (sol.get('tt_loaded') or 0) > 0
+        sol['state_kept'] = Path(tt).exists()
     return sol
 
 

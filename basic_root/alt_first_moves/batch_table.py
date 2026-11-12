@@ -11,6 +11,8 @@ from pathlib import Path
 import sys
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+from phase_time import phase_key  # noqa: E402
 
 
 def main():
@@ -28,7 +30,7 @@ def main():
     rows = []
     for name in sorted(picks):
         p = picks[name]
-        rs = sorted(runs.get(name, []), key=lambda r: str(r['phase']))
+        rs = sorted(runs.get(name, []), key=lambda r: phase_key(r['phase']))
         if not rs:
             continue
         dec = next((r for r in rs if r.get('decided')), None)

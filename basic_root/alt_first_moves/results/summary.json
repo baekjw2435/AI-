@@ -8,6 +8,7 @@
    "search_seconds_total": 47.113,
    "mid_calls_total": 25310725,
    "decided": true,
+   "spent_seconds_total": 47.113,
    "first_move": "lose",
    "reply": [
     "적갈색",
@@ -33,6 +34,7 @@
    "search_seconds_total": 13.926,
    "mid_calls_total": 8665655,
    "decided": true,
+   "spent_seconds_total": 13.926,
    "first_move": "lose",
    "reply": [
     "율격"
@@ -56,6 +58,7 @@
    "search_seconds_total": 37.147,
    "mid_calls_total": 19993972,
    "decided": true,
+   "spent_seconds_total": 37.147,
    "first_move": "lose",
    "reply": [
     "적갈색",
@@ -81,6 +84,7 @@
    "search_seconds_total": 391.606,
    "mid_calls_total": 207194644,
    "decided": true,
+   "spent_seconds_total": 391.605,
    "first_move": "lose",
    "reply": [
     "탄약"
@@ -104,6 +108,8 @@
    "search_seconds_total": 600.003,
    "mid_calls_total": 139985920,
    "decided": false,
+   "spent_seconds_total": 600.003,
+   "spent_is_lower_bound": true,
    "reason": "time_limit",
    "pn": 1036,
    "dn": 37708
@@ -118,6 +124,7 @@
    "search_seconds_total": 21.312,
    "mid_calls_total": 11786874,
    "decided": true,
+   "spent_seconds_total": 21.312,
    "first_move": "lose",
    "reply": [
     "권능"
@@ -141,6 +148,7 @@
    "search_seconds_total": 1.589,
    "mid_calls_total": 908556,
    "decided": true,
+   "spent_seconds_total": 1.589,
    "first_move": "lose",
    "reply": [
     "급훈"
@@ -164,6 +172,7 @@
    "search_seconds_total": 63.302,
    "mid_calls_total": 34018296,
    "decided": true,
+   "spent_seconds_total": 63.302,
    "first_move": "lose",
    "reply": [
     "진갈색"
@@ -187,6 +196,7 @@
    "search_seconds_total": 40.326,
    "mid_calls_total": 20737370,
    "decided": true,
+   "spent_seconds_total": 40.326,
    "first_move": "lose",
    "reply": [
     "권력",
@@ -211,6 +221,8 @@
    "search_seconds_total": 567.62,
    "mid_calls_total": 121904907,
    "decided": true,
+   "spent_seconds_total": 567.62,
+   "spent_is_lower_bound": true,
    "first_move": "lose",
    "reply": [
     "식충"
@@ -234,6 +246,7 @@
    "search_seconds_total": 13.276,
    "mid_calls_total": 7560498,
    "decided": true,
+   "spent_seconds_total": 13.276,
    "first_move": "lose",
    "reply": [
     "흥흥"
@@ -257,6 +270,7 @@
    "search_seconds_total": 16.224,
    "mid_calls_total": 8263847,
    "decided": true,
+   "spent_seconds_total": 16.224,
    "first_move": "lose",
    "reply": [
     "적갈색",
@@ -282,6 +296,7 @@
    "search_seconds_total": 34.037,
    "mid_calls_total": 18373275,
    "decided": true,
+   "spent_seconds_total": 34.037,
    "first_move": "lose",
    "reply": [
     "군청색"
@@ -305,6 +320,8 @@
    "search_seconds_total": 294.742,
    "mid_calls_total": 169136708,
    "decided": true,
+   "spent_seconds_total": 294.742,
+   "spent_is_lower_bound": true,
    "first_move": "win",
    "reply": null,
    "proof_nodes": 923542,
@@ -326,6 +343,7 @@
    "search_seconds_total": 79.876,
    "mid_calls_total": 41923540,
    "decided": true,
+   "spent_seconds_total": 79.876,
    "first_move": "lose",
    "reply": [
     "진갈색"
@@ -349,6 +367,7 @@
    "search_seconds_total": 513.517,
    "mid_calls_total": 296648647,
    "decided": true,
+   "spent_seconds_total": 513.518,
    "first_move": "lose",
    "reply": [
     "승객"
@@ -372,6 +391,7 @@
    "search_seconds_total": 600.002,
    "mid_calls_total": 351139840,
    "decided": false,
+   "spent_seconds_total": 600.002,
    "reason": "time_limit",
    "pn": 6244,
    "dn": 14111
@@ -386,6 +406,7 @@
    "search_seconds_total": 10.392,
    "mid_calls_total": 6073569,
    "decided": true,
+   "spent_seconds_total": 10.392,
    "first_move": "lose",
    "reply": [
     "율격"
@@ -409,6 +430,7 @@
    "search_seconds_total": 120.001,
    "mid_calls_total": 63536128,
    "decided": false,
+   "spent_seconds_total": 120.001,
    "reason": "time_limit",
    "pn": 9931,
    "dn": 3969
@@ -423,6 +445,7 @@
    "search_seconds_total": 120.001,
    "mid_calls_total": 62988288,
    "decided": false,
+   "spent_seconds_total": 120.001,
    "reason": "time_limit",
    "pn": 3942,
    "dn": 11472
@@ -437,6 +460,7 @@
    "search_seconds_total": 37.812,
    "mid_calls_total": 20491203,
    "decided": true,
+   "spent_seconds_total": 37.812,
    "first_move": "win",
    "reply": null,
    "proof_nodes": 195039,
@@ -458,6 +482,7 @@
    "search_seconds_total": 15.586,
    "mid_calls_total": 8700659,
    "decided": true,
+   "spent_seconds_total": 15.586,
    "first_move": "lose",
    "reply": [
     "움큼"
@@ -481,6 +506,7 @@
    "search_seconds_total": 120.001,
    "mid_calls_total": 64657408,
    "decided": false,
+   "spent_seconds_total": 120.001,
    "reason": "time_limit",
    "pn": 1843,
    "dn": 7748
@@ -495,6 +521,7 @@
    "search_seconds_total": 120.001,
    "mid_calls_total": 62349312,
    "decided": false,
+   "spent_seconds_total": 120.001,
    "reason": "time_limit",
    "pn": 2272,
    "dn": 10029
@@ -509,6 +536,7 @@
    "search_seconds_total": 17.491,
    "mid_calls_total": 10226199,
    "decided": true,
+   "spent_seconds_total": 17.491,
    "first_move": "lose",
    "reply": [
     "멸치젓"
@@ -532,6 +560,7 @@
    "search_seconds_total": 94.895,
    "mid_calls_total": 52488788,
    "decided": true,
+   "spent_seconds_total": 94.895,
    "first_move": "lose",
    "reply": [
     "변칙"
@@ -555,6 +584,7 @@
    "search_seconds_total": 35.091,
    "mid_calls_total": 19050047,
    "decided": true,
+   "spent_seconds_total": 35.091,
    "first_move": "lose",
    "reply": [
     "적갈색",
@@ -580,6 +610,7 @@
    "search_seconds_total": 21.485,
    "mid_calls_total": 11508763,
    "decided": true,
+   "spent_seconds_total": 21.485,
    "first_move": "lose",
    "reply": [
     "퇴색"
@@ -603,6 +634,7 @@
    "search_seconds_total": 21.971,
    "mid_calls_total": 12843087,
    "decided": true,
+   "spent_seconds_total": 21.971,
    "first_move": "lose",
    "reply": [
     "학업"
@@ -626,6 +658,7 @@
    "search_seconds_total": 168.37,
    "mid_calls_total": 92600312,
    "decided": true,
+   "spent_seconds_total": 168.37,
    "first_move": "lose",
    "reply": [
     "향토색"
@@ -649,6 +682,7 @@
    "search_seconds_total": 600.003,
    "mid_calls_total": 338258944,
    "decided": false,
+   "spent_seconds_total": 600.003,
    "reason": "time_limit",
    "pn": 537,
    "dn": 25856
@@ -663,6 +697,7 @@
    "search_seconds_total": 600.003,
    "mid_calls_total": 345181184,
    "decided": false,
+   "spent_seconds_total": 600.003,
    "reason": "time_limit",
    "pn": 4479,
    "dn": 15301

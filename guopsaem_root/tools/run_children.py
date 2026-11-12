@@ -11,8 +11,11 @@ Each child is the position after the receiver's first move (the other side to mo
 Defaults: solver_v5, route-proof-v4 certificates, C++ verify_v4 with every acceptance
 condition (see solve_common). With --tt-save each child checkpoints its search state in
 DIR/c_<k>.tt (every CHECKPOINT_SECONDS, default 60 s per GB of table) and a later run, or the
-same run after a container restart, resumes from it; the file is deleted once decided.
-Resumable: decided children, and undecided ones already run at least SECONDS, are skipped.
+same run after a container restart, resumes from it; the file is deleted only after the child's
+certificate was accepted by the verifier.
+Resumable: children with a certificate on disk, and undecided ones already run at least SECONDS, are
+skipped. A child that was solved but has no certificate (writing failed) or whose certificate was
+rejected is solved again from its saved state.
 """
 import json
 import subprocess
@@ -50,9 +53,19 @@ def main():
             res[k] = json.loads(f.read_text(encoding='utf-8'))
 
     def decided(k):
-        return k in res and res[k]['result'] in ('win', 'loss')
+        """Solved, with a certificate on disk that has not been rejected. (Solved without a usable certificate
+        is NOT decided: it is run again; its saved state is still there.)"""
+        r = res.get(k)
+        if not r or r['result'] not in ('win', 'loss') or r.get('proof_error') or not (d / f'{k}.pf.gz').exists():
+            return False
+        acc = (r.get('verify') or {}).get('acceptance')
+        return acc is None or all(acc.values())
 
-    todo = [k for k in kids if not decided(k) and not (k in res and res[k].get('seconds', 0) >= seconds - 1)]
+    def solved_without_certificate(k):
+        return k in res and res[k]['result'] in ('win', 'loss') and not decided(k)
+
+    todo = [k for k in kids if not decided(k)
+            and (solved_without_certificate(k) or not (k in res and res[k].get('seconds', 0) >= seconds - 1))]
     if only:
         todo = [k for k in todo if k in only]
     say(f'[시작] {name}: 첫 수 {len(kids)}개 중 {len(todo)}개를 {int(seconds)}초씩, {jobs}개 동시에 풉니다 '
@@ -67,7 +80,13 @@ def main():
             k = todo.pop(0)
             sc.wait_for_disk(d, word[k])
             tt = d / f'{k}.tt' if save else None
-            cmd, note = sc.solver_cmd(d / f'{k}.txt', d / f'{k}.pf.gz', seconds, ttmb, tt)
+            try:
+                cmd, note = sc.solver_cmd(d / f'{k}.txt', d / f'{k}.pf.gz', seconds, ttmb, tt)
+            except sc.LowDisk as e:
+                say(f'  시작하지 않음: {word[k]} (디스크 부족, 저장 상태는 그대로 둠): {e}')
+                todo.append(k)
+                time.sleep(60)
+                break
             out = open(d / f'{k}.out', 'w')
             running[k] = (subprocess.Popen(cmd, stdout=out, stderr=subprocess.STDOUT), out, tt, cmd)
             say(f'  풀기 시작: {word[k]}' + (f' ({note})' if note else ''))
@@ -82,11 +101,13 @@ def main():
             r['word'] = word[k]
             res[k] = r
             (d / f'res_{k}.json').write_text(json.dumps(r, ensure_ascii=False), encoding='utf-8')
-            sc.finish_tt(tt, r, keep_unknown=True)
+            sc.finish_tt(tt, r, keep_unknown=True)        # never deletes the state of a solved child
             pm = sc.merge_proven(cmd, ttmb)
             if pm is not None:
                 r['proven_merge'] = pm
-            if r['result'] == 'loss':
+            if r['result'] in ('win', 'loss') and not decided(k):
+                say(f'  {word[k]} → 풀렸지만 증명서가 없음 ({r.get("proof_error") or "파일 없음"}). 저장 상태를 남겼고, 다시 돌리면 이어서 증명서를 씁니다.')
+            elif r['result'] == 'loss':
                 say(f'  ★ {word[k]} → 상대가 짐. 받는 쪽이 이기는 첫 수입니다 (증명 {r.get("proof_nodes", 0):,}국면, {r["seconds"]:.0f}초)')
                 found = k
             elif r['result'] == 'win':
@@ -110,6 +131,7 @@ def main():
             (d / f'res_{k}.json').write_text(json.dumps(res[k], ensure_ascii=False), encoding='utf-8')
             bad = [c for c, okc in v.get('acceptance', {}).items() if not okc]
             say(f'  검증 {"통과" if good else "실패"}: {word[k]} ({v.get("elapsed_seconds", "?")}초) {v.get("error", "")} {bad if bad else ""}')
+            sc.release_state(d / f'{k}.tt', good, d / f'{k}.pf.gz')      # the saved state goes only after acceptance
             ok = ok and good
         return ok
 

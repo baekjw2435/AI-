@@ -19,6 +19,8 @@ import sys
 
 HERE = Path(__file__).resolve().parent
 RES = HERE / 'results'
+sys.path.insert(0, str(HERE))
+from phase_time import phase_key, totals  # noqa: E402
 KO = {'win': '승', 'lose': '패'}
 
 
@@ -38,12 +40,17 @@ def summarize(runs):
         for r in rs:
             by_batch[r['batch']].append(r)
         for batch, bs in by_batch.items():
-            bs.sort(key=lambda r: str(r['phase']))
+            bs.sort(key=lambda r: phase_key(r['phase']))
             dec = next((r for r in bs if r.get('decided')), None)
             last = dec or bs[-1]
             e = {'id': tid, 'batch': batch, 'name': last['name'], 'phases': len(bs),
                  'search_seconds_total': last['search_seconds_total'], 'mid_calls_total': sum(r.get('mid_calls') or 0 for r in bs),
                  'decided': bool(dec)}
+            # all search time used on the position (also what a restart lost), next to the carried total above
+            _, spent, lower = totals(bs[:bs.index(last) + 1])
+            e['spent_seconds_total'] = spent
+            if lower:
+                e['spent_is_lower_bound'] = True
             if dec:
                 v = dec['verify']
                 e.update(first_move=dec['first_move'], reply=dec.get('reply'), proof_nodes=dec['proof_nodes'],

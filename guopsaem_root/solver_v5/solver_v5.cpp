@@ -79,6 +79,7 @@
 #include <unordered_map>
 #include <vector>
 #include <sys/mman.h>
+#include <unistd.h>
 #include <zlib.h>
 using namespace std;
 typedef uint64_t u64;
@@ -665,6 +666,7 @@ static u64 tt_save(const string& path, const State& root) {
   if (ok) ok = fwrite(tail, 8, 2, f) == 2 && fwrite(TT_END, 8, 1, f) == 1;
   // the header's count is patched in last, so a file cut short anywhere fails the load checks
   if (ok) { h.count = n; ok = fseek(f, 0, SEEK_SET) == 0 && fwrite(&h, sizeof h, 1, f) == 1; }
+  if (ok) ok = fflush(f) == 0 && fsync(fileno(f)) == 0;  // on disk before the rename (2026-11-12)
   if (fclose(f) != 0) ok = false;
   if (!ok) { remove(tmp.c_str()); throw runtime_error("TT file write failure"); }
   if (rename(tmp.c_str(), path.c_str())) { remove(tmp.c_str()); throw runtime_error("TT file rename failure"); }
@@ -1337,8 +1339,11 @@ int main(int argc, char** argv) {
     }
     double elapsed = chrono::duration<double>(chrono::steady_clock::now() - t_start).count();
     string result = rpn == 0 ? "win" : rdn == 0 ? "loss" : "unknown";
-    // a solved root needs no resume; only an unfinished search is saved at the end
-    if (!opt.tt_save.empty() && result == "unknown") save_now();
+    // The final state is saved whether or not the root is solved (2026-11-12, Fable review). A solved root used
+    // to be left at its last checkpoint; if the certificate then could not be written or was not accepted, the
+    // search since that checkpoint was gone. With the solved state on disk the next run has the result at once.
+    // The runner deletes the file only after the certificate is accepted (solve_common.release_state).
+    if (!opt.tt_save.empty() && rstat == -1) save_now();
     if (result != "unknown") stop_reason = "none";
     u64 mid_total = 0, gen_total = 0;
     for (auto& s : ss) { mid_total += s.mid_calls; gen_total += s.gens; }
@@ -1353,6 +1358,7 @@ int main(int argc, char** argv) {
       auto t0 = chrono::steady_clock::now();
       emit_deadline = t0 + chrono::duration_cast<chrono::steady_clock::duration>(chrono::duration<double>(min(opt.emit_seconds, 1e9)));
       emit_deadline_on = true;
+      next_ckpt = 1e300;  // no checkpoints while the certificate is written: the timer used to interrupt every re-solve after 1,024 nodes
       const string tmp = opt.proof + ".body.tmp", out = opt.proof + ".tmp";
       Emitter em;
       try {
