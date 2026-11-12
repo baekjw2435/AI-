@@ -1,0 +1,33 @@
+{
+ "syllable": "순",
+ "vertex": "순",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 22.206,
+ "lost_runs": [],
+ "spent_is_lower_bound": false,
+ "unfinished_starts": 0,
+ "mid_calls": 10025336,
+ "proof_nodes": 115032,
+ "proof_seconds": 2.882232,
+ "solver_wall_seconds": 29.12,
+ "verify_seconds": 6.689,
+ "verify_wall_seconds": 6.7,
+ "proof_bytes": 839655,
+ "proof_sha256": "4344b1eb26fb34f43f41e30e1ffa09e1144a11c15132a29658d6e6688b512fe7",
+ "position_sha256": "5fc5540b9bc9bb1a08af4dd5d30e4d51517e264fcba78fe792b2b86f43db69b1",
+ "input_sha256": "f1f6acb9fb471616f481991ea566fe2eb06f2998d7eef0431528c64d07086d20",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "ea7ff989f0c96cc377e78881f040ea79798302a3b65555b1220c4831fbe18471"
+}

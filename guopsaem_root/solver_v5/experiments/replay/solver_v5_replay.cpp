@@ -14,9 +14,14 @@
 //                          new state has a move the old node did not list, the old node was a static leaf but the
 //                          new state is not) the state is "stuck".
 //   --replay-stuck-nodes N each stuck state gets one df-pn search of at most about N nodes (default 200000;
-//                          0 = none). What stays unknown is left to the normal search that follows, inside the
-//                          same --seconds budget (replay time counts), and if that does not finish the result is
-//                          "unknown" as always.
+//                          0 = none; a state is searched this way at most once). What stays unknown is left to the
+//                          normal search that follows, inside the same --seconds budget (replay time counts), and
+//                          if that does not finish the result is "unknown" as always.
+//   --replay-lib V=FILE    (repeatable) more old certificates, each of the position 'vertex V received, no word
+//                          used' (V is the vertex number of the solver input). A stuck state whose current vertex is
+//                          V is first walked with that certificate from its root, in the same way, before the local
+//                          search. Typical use: after 순발력 the other side may answer with a 역->순 word that the old
+//                          역 certificate never met (the pair was cancelled there); the 순 certificate guides that line.
 //   The certificate is then written by the unchanged emitter (replay with the reference canonicalization) and
 //   must pass the unchanged verifier: replay results are table hints like any other table content.
 //   Output adds replay_* fields. Without --replay the program behaves as solver_v5.
@@ -606,6 +611,7 @@ struct Opt {
   bool tt_save_loaded = false;  // also write records that came from --proven-load into --tt-save files
   string replay;                // old v4 certificate to replay before the search
   u64 replay_stuck_nodes = 200000;  // df-pn node budget per stuck state (0: no local search)
+  vector<pair<int, string>> replay_lib;  // (vertex, certificate of that vertex's first-presentation position)
 } opt;
 static TT tt;
 
@@ -1161,12 +1167,15 @@ struct KeyHash128 { size_t operator()(const pair<u64, u64>& k) const { return (s
 
 struct Replayer {
   Searcher* S = nullptr;
-  const OldProof* op = nullptr;
+  vector<OldProof> lib;                                  // --replay-lib certificates
+  vector<int> lib_at;                                    // vertex -> index into lib, or -1
   vector<vector<CI>> rfr;                                // children per depth (the searcher's own lists are used by mid)
   unordered_set<pair<u64, u64>, KeyHash128> seen;        // new states handled without a proof, by their own key
+  unordered_set<pair<u64, u64>, KeyHash128> tried;       // stuck states that already had their local search
   u64 nodes = 0, proven = 0, memo_proven = 0, memo_unknown = 0;
   u64 stuck_old_leaf = 0, stuck_witness_gone = 0, stuck_witness_static = 0, stuck_witness_refuted = 0, stuck_new_move = 0;
-  u64 unknown_below = 0, flips = 0, local_calls = 0, local_solved = 0, local_mid = 0;
+  u64 unknown_below = 0, flips = 0, local_calls = 0, local_solved = 0, local_mid = 0, local_repeat = 0;
+  u64 lib_tries = 0, lib_solved = 0;
   bool expired = false;
 
   bool out_of_time() {
@@ -1177,6 +1186,7 @@ struct Replayer {
   // One budgeted df-pn search of the state the searcher is in (depth d). 1 / 0 = proven, -1 = not solved.
   int local(int d) {
     if (!opt.replay_stuck_nodes || expired) return -1;
+    if (!tried.insert({S->S.h0, S->S.h1}).second) { local_repeat++; return -1; }  // once per state
     local_calls++;
     const u64 keep_max = opt.max_mid, before = S->mid_calls;
     opt.max_mid = min(keep_max, g_mid.load() + max<u64>(opt.replay_stuck_nodes, 1024));
@@ -1194,8 +1204,24 @@ struct Replayer {
     if (rd == 0) { local_solved++; return 0; }
     return -1;
   }
-  // Value of the canonical non-static state the searcher is in, guided by old node `oid`.
-  int run(int d, u32 oid, u64& work) {
+  // A stuck state: first the library certificate of its vertex (walked from that certificate's root), then one
+  // local search. `op`/`oid` is the guide that just failed, so that the same guide is not tried twice.
+  int fallback(int d, const OldProof* op, u32 oid, bool allow_lib) {
+    const int k = lib_at.empty() ? -1 : lib_at[S->S.cur];
+    if (allow_lib && k >= 0 && !expired) {
+      const OldProof* lp = &lib[k];
+      const u32 lroot = (u32)lp->win.size() - 1;
+      if (!(lp == op && oid == lroot)) {
+        lib_tries++;
+        u64 w = 0;
+        int r = expand(d, lp, lroot, w, false);
+        if (r != -1) { lib_solved++; return r; }
+      }
+    }
+    return local(d);
+  }
+  // Value of the canonical non-static state the searcher is in, guided by node `oid` of certificate `op`.
+  int run(int d, const OldProof* op, u32 oid, u64& work) {
     State& st = S->S;
     work = 1;
     { u32 p, q, w; int b;
@@ -1203,6 +1229,11 @@ struct Replayer {
     if (!seen.insert({st.h0, st.h1}).second) { memo_unknown++; return -1; }
     nodes++;
     if (out_of_time()) return -1;
+    return expand(d, op, oid, work, true);
+  }
+  int expand(int d, const OldProof* op, u32 oid, u64& work, bool allow_lib) {
+    State& st = S->S;
+    work = 1;
     vector<CI>& ch = rfr[d];
     ch.clear();
     for (int g : avail[st.cur]) {
@@ -1223,23 +1254,31 @@ struct Replayer {
       apply_child(st, ci, S->undo[d]);
       if (opt.selfcheck) S->selfcheck_state(st);
       int r;
-      if (cid >= 0) r = run(d + 1, (u32)cid, cw);
-      else {  // no old node for this move: table first, then a local search
-        u32 p, q, w; int b;
+      if (cid >= 0) r = run(d + 1, op, (u32)cid, cw);
+      else {  // no old node for this move: the library certificate of the child's vertex, else table and local search
+        const int k = lib_at.empty() ? -1 : lib_at[st.cur];
         cw = 1;
-        if (tt.probe(st.h0, st.h1, p, q, w, b) && (p == 0 || q == 0)) r = p == 0 ? 1 : 0;
-        else r = local(d + 1);
+        if (k >= 0) {
+          lib_tries++;
+          r = run(d + 1, &lib[k], (u32)lib[k].win.size() - 1, cw);
+          if (r != -1) lib_solved++;
+          else r = local(d + 1);
+        } else {
+          u32 p, q, w; int b;
+          if (tt.probe(st.h0, st.h1, p, q, w, b) && (p == 0 || q == 0)) r = p == 0 ? 1 : 0;
+          else r = local(d + 1);
+        }
       }
       revert_child(st, S->undo[d]);
       return r;
     };
-    if (lo == hi) { stuck_old_leaf++; return local(d); }  // the old state was static, this one is not
+    if (lo == hi) { stuck_old_leaf++; return fallback(d, op, oid, allow_lib); }  // the old state was static, this one is not
     if (op->win[oid]) {
       const int g0 = (int)op->mv[2 * lo];
       size_t wi = ch.size();
       for (size_t i = 0; i < ch.size(); i++) if (ch[i].g == g0) wi = i;
-      if (wi == ch.size()) { stuck_witness_gone++; return local(d); }
-      if (ch[wi].stat == 1) { stuck_witness_static++; return local(d); }
+      if (wi == ch.size()) { stuck_witness_gone++; return fallback(d, op, oid, allow_lib); }
+      if (ch[wi].stat == 1) { stuck_witness_static++; return fallback(d, op, oid, allow_lib); }
       u64 cw = 0;
       int r = descend(wi, (long long)op->mv[2 * lo + 1], cw);
       work += cw;
@@ -1248,7 +1287,7 @@ struct Replayer {
         proven++;
         return 1;
       }
-      if (r == 1) { stuck_witness_refuted++; return local(d); }
+      if (r == 1) { stuck_witness_refuted++; return fallback(d, op, oid, allow_lib); }
       unknown_below++;  // the stuck state is deeper and had its own search; the normal search goes on from the table
       return -1;
     }
@@ -1431,7 +1470,7 @@ static string jnum(double x) { char b[64]; snprintf(b, sizeof b, "%.6f", x); ret
 
 int main(int argc, char** argv) {
   try {
-    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--proof-format v3|v4] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--tt-save-max N] [--checkpoint-seconds S] [--proven-load FILE]... [--proven-load-max N] [--proven-load-fraction F] [--proven-save FILE] [--tt-save-loaded 0|1] [--proven-min-work W] [--proven-save-loaded 0|1] [--replay OLD_V4_PROOF] [--replay-stuck-nodes N]");
+    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--proof-format v3|v4] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--tt-save-max N] [--checkpoint-seconds S] [--proven-load FILE]... [--proven-load-max N] [--proven-load-fraction F] [--proven-save FILE] [--tt-save-loaded 0|1] [--proven-min-work W] [--proven-save-loaded 0|1] [--replay OLD_V4_PROOF] [--replay-stuck-nodes N] [--replay-lib VERTEX=OLD_V4_PROOF]...");
     for (int i = 2; i < argc; i++) {
       string x = argv[i];
       if (i + 1 >= argc) throw runtime_error("missing option value");
@@ -1465,6 +1504,11 @@ int main(int argc, char** argv) {
       else if (x == "--tt-save-loaded") opt.tt_save_loaded = stoi(v) != 0;
       else if (x == "--replay") opt.replay = v;
       else if (x == "--replay-stuck-nodes") opt.replay_stuck_nodes = stoull(v);
+      else if (x == "--replay-lib") {
+        size_t eq = v.find('=');
+        if (eq == string::npos) throw runtime_error("--replay-lib needs VERTEX=FILE");
+        opt.replay_lib.push_back({stoi(v.substr(0, eq)), v.substr(eq + 1)});
+      }
       else throw runtime_error("unknown option: " + x);
     }
     if (!isfinite(opt.seconds) || opt.seconds < 0 || opt.threads < 1 || opt.threads > 64 || opt.tt_mb < 1 || opt.eps < 0 ||
@@ -1516,6 +1560,16 @@ int main(int argc, char** argv) {
     if (!opt.replay.empty()) {
       auto t0 = chrono::steady_clock::now();
       oldproof.load(opt.replay);
+      if (!opt.replay_lib.empty()) {
+        rp_.lib.resize(opt.replay_lib.size());
+        rp_.lib_at.assign(N, -1);
+        for (size_t i = 0; i < opt.replay_lib.size(); i++) {
+          int v = opt.replay_lib[i].first;
+          if (v < 0 || v >= N) throw runtime_error("--replay-lib: vertex out of range");
+          rp_.lib[i].load(opt.replay_lib[i].second);
+          rp_.lib_at[v] = (int)i;
+        }
+      }
       replay_load_s = chrono::duration<double>(chrono::steady_clock::now() - t0).count();
     }
     if (opt.checkpoint > 0) next_ckpt = opt.checkpoint;
@@ -1529,11 +1583,11 @@ int main(int argc, char** argv) {
       // by the first checkpoint of the search, or at the end.
       const double keep_ckpt = next_ckpt;
       next_ckpt = 1e300;
-      rp_.S = &ss[0]; rp_.op = &oldproof;
+      rp_.S = &ss[0];
       rp_.rfr.resize(maxdepth + 2);
       ss[0].S = root;
       u64 w = 0;
-      replay_root = rp_.run(0, (u32)oldproof.win.size() - 1, w);
+      replay_root = rp_.run(0, &oldproof, (u32)oldproof.win.size() - 1, w);
       replay_s = chrono::duration<double>(chrono::steady_clock::now() - t_start).count();
       if (keep_ckpt < 1e299) next_ckpt = replay_s + opt.checkpoint;
       if (!rp_.expired) stop_flag = false;
@@ -1674,7 +1728,8 @@ int main(int argc, char** argv) {
            "\"replay_proven\":%llu,\"replay_memo_proven\":%llu,\"replay_memo_unknown\":%llu,\"replay_stuck_old_leaf\":%llu,"
            "\"replay_stuck_witness_gone\":%llu,\"replay_stuck_witness_static\":%llu,\"replay_stuck_witness_refuted\":%llu,"
            "\"replay_stuck_new_move\":%llu,\"replay_unknown_below\":%llu,\"replay_flips\":%llu,\"replay_local_calls\":%llu,"
-           "\"replay_local_solved\":%llu,\"replay_local_mid\":%llu}\n",
+           "\"replay_local_solved\":%llu,\"replay_local_mid\":%llu,\"replay_local_repeat\":%llu,\"replay_libs\":%llu,"
+           "\"replay_lib_tries\":%llu,\"replay_lib_solved\":%llu}\n",
            result.c_str(), stop_reason.c_str(), (unsigned long long)mid_total, (unsigned long long)gen_total,
            (unsigned long long)used, (unsigned long long)(tt.nb * 4), (size_t)(tt.bytes >> 20),
            (unsigned long long)tt.stores.load(), (unsigned long long)tt.replacements.load(), jnum(elapsed).c_str(), rpn, rdn, bestg,
@@ -1689,7 +1744,9 @@ int main(int argc, char** argv) {
            (unsigned long long)rp_.memo_unknown, (unsigned long long)rp_.stuck_old_leaf, (unsigned long long)rp_.stuck_witness_gone,
            (unsigned long long)rp_.stuck_witness_static, (unsigned long long)rp_.stuck_witness_refuted,
            (unsigned long long)rp_.stuck_new_move, (unsigned long long)rp_.unknown_below, (unsigned long long)rp_.flips,
-           (unsigned long long)rp_.local_calls, (unsigned long long)rp_.local_solved, (unsigned long long)rp_.local_mid);
+           (unsigned long long)rp_.local_calls, (unsigned long long)rp_.local_solved, (unsigned long long)rp_.local_mid,
+           (unsigned long long)rp_.local_repeat, (unsigned long long)rp_.lib.size(), (unsigned long long)rp_.lib_tries,
+           (unsigned long long)rp_.lib_solved);
     return !proof_error.empty() ? 3 : !tt_save_error.empty() ? 4 : !pc_save_error.empty() ? 5 : 0;
   } catch (const exception& e) {
     fprintf(stderr, "solver error: %s\n", e.what());

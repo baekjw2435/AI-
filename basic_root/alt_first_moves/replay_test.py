@@ -2,7 +2,7 @@
 """Strategy replay against direct search, same machine, same limits, everything timed (2026-11-12).
 
 usage: replay_test.py CASES.json SOURCES WORKDIR [--seconds 120] [--tt-mb 1024] [--stuck-nodes 200000]
-                      [--only r01,r02] [--direct 1]
+                      [--only r01,r02] [--direct 1] [--add-direct 0]
 
 CASES.json: {"cases": [{"name": "r01", "id": "승/승급", "syllable": "승", "word": "승급", "source": "급"}, ...]}
 SOURCES/<source>/ is made by replay_prep.py: the certificate of 'source syllable received, nothing used'.
@@ -19,7 +19,8 @@ undecided, cannot write its certificate or is not accepted stays undecided; its 
 Recorded per run, kept apart: reading the source, replay (with its local searches), remaining search,
 certificate writing, verification, and the wall time of the whole solver process. The cost of preparing the
 source is copied from SOURCES/<source>/prep.json so that a first use and a reuse can be told apart.
-Result: WORKDIR/<name>/result.json. Re-running skips what is done.
+Result: WORKDIR/<name>/result.json. Re-running skips what is done. --direct 0 leaves the direct run out;
+--add-direct 1 adds it later to a case that has only its replay run (same limits as recorded in the case).
 """
 import hashlib
 import json
@@ -86,7 +87,7 @@ def run(kind, cmd, d, words_of, verify_args):
 def main():
     cases_path, sources, work = sys.argv[1:4]
     rest = sys.argv[4:]
-    opt = {'--seconds': 120.0, '--tt-mb': 1024, '--stuck-nodes': 200000, '--only': '', '--direct': 1}
+    opt = {'--seconds': 120.0, '--tt-mb': 1024, '--stuck-nodes': 200000, '--only': '', '--direct': 1, '--add-direct': 0}
     for i in range(0, len(rest), 2):
         opt[rest[i]] = type(opt[rest[i]])(rest[i + 1])
     sources, work = Path(sources), Path(work)
@@ -104,6 +105,17 @@ def main():
         d.mkdir(exist_ok=True)
         out = d / 'result.json'
         if out.exists():
+            rec = json.loads(out.read_text(encoding='utf-8'))
+            if opt['--add-direct'] and 'direct' not in rec:
+                rec['direct'] = run('direct', [sc.SOLVER, str(d / 'in.txt'), '--seconds', str(rec['seconds_limit']), '--tt-mb',
+                                               str(rec['tt_mb']), '--threads', '1', '--proof-format', 'v4', '--proof',
+                                               str(d / 'direct.v4.gz')], d, words_of, (d / 'pos.json', d / 'direct.v4.gz', d / 'in.txt'))
+                a, b = rec['direct'], rec['replay']
+                if a['decided'] and b['decided']:
+                    assert a['first_move'] == b['first_move'], f'{c["name"]}: two accepted certificates with different verdicts'
+                out.write_text(json.dumps(rec, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+                say(f'{c["name"]} {c["id"]} 직접 탐색 추가: ' + ('확정 ' + a['first_move'] if a['decided'] else '미확정')
+                    + f' ({a["solver_wall_seconds"]:.0f}초)')
             continue
         pos = {'initial_syllable': c['syllable'], 'history': [c['word']]}
         cur, counts, _ = model.position(pos)

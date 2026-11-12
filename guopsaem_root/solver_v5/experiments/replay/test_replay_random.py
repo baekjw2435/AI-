@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Random check of solver_v5_replay: a replayed position must still get the true value, whatever the old file is.
 
-usage: test_replay_random.py SOLVER REPLAY_SOLVER VERIFY_V4 WORKDIR DICTS SEED
+usage: test_replay_random.py SOLVER REPLAY_SOLVER VERIFY_V4 WORKDIR DICTS SEED [lib]
 
 For random small dictionaries (many ㄹ/ㄴ/ㅇ syllables, so shared groups occur):
   1. solve 'syllable s received' with SOLVER and keep its v4 certificate (the old strategy);
   2. take the same position with one or two words already used, or after one legal move, and run
      REPLAY_SOLVER --replay OLD --selfcheck 1 with a tiny stuck budget;
      every third time the old certificate is one of ANOTHER start syllable (a useless hint);
+     with the last argument 'lib', the certificates of the other start syllables are also given as --replay-lib
+     (every second time under a WRONG vertex number, which must be harmless too);
   3. the new certificate must pass VERIFY_V4 with the solver's result, and that result must equal a word-level
      brute force written from the rule text (no model code).
 Replay may only change how fast the result is found, never the result.
@@ -21,6 +23,7 @@ from pathlib import Path
 
 SOLVER, REPLAY, VERIFY, WORK = sys.argv[1], sys.argv[2], sys.argv[3], Path(sys.argv[4])
 NDICT, SEED = int(sys.argv[5]), int(sys.argv[6])
+USE_LIB = len(sys.argv) > 7 and sys.argv[7] == 'lib'
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / 'verifier_v3'))
 from verify_v3 import ModelV3, VerificationError  # noqa: E402  (only to write solver inputs)
@@ -136,8 +139,13 @@ def main():
             proof = WORK / 'new.gz'
             if proof.exists():
                 proof.unlink()
+            libs = []
+            if USE_LIB:
+                for j, (ls, lp) in enumerate(olds.items()):
+                    v = m.vertex_of(ls) if (st['replays'] + j) % 2 == 0 else rng.randrange(len(m.keys))
+                    libs += ['--replay-lib', f'{v}={lp}']
             r = subprocess.run([REPLAY, str(WORK / 'new.in'), '--seconds', '20', '--tt-mb', '1', '--proof', str(proof), '--proof-format', 'v4',
-                                '--replay', str(hint), '--replay-stuck-nodes', str(rng.choice([0, 1024, 200000])), '--selfcheck', '1'],
+                                '--replay', str(hint), '--replay-stuck-nodes', str(rng.choice([0, 1024, 200000])), '--selfcheck', '1'] + libs,
                                capture_output=True, text=True)
             sol = last_json(r.stdout)
             st['replays'] += 1
@@ -165,6 +173,8 @@ def main():
             st['stuck_states'] += sum(sol.get(k, 0) for k in ('replay_stuck_old_leaf', 'replay_stuck_witness_gone', 'replay_stuck_witness_static',
                                                              'replay_stuck_witness_refuted', 'replay_stuck_new_move'))
             st['local_solved'] += sol.get('replay_local_solved', 0)
+            st['lib_tries'] = st.get('lib_tries', 0) + sol.get('replay_lib_tries', 0)
+            st['lib_solved'] = st.get('lib_solved', 0) + sol.get('replay_lib_solved', 0)
             st['replay_nodes'] += sol.get('replay_nodes', 0)
             st['selfchecks'] += sol.get('selfchecks', 0)
     print(json.dumps(st, ensure_ascii=False))
