@@ -1,0 +1,1 @@
+{"case": "즉/즉흥", "hands_over": "흥", "old_root": {"result": "win", "search_nodes": 7560498, "proof_nodes": 72797, "seconds": 9.8181}, "replay_root_value_for_mover": "W", "first_move": "lose", "replay_new_nodes": 72797, "replay_python_seconds": 14.5, "stats": {"new_nodes": 72797, "static_leaf": 12143}, "stuck_calls": 0, "stuck_biggest": []}
