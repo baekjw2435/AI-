@@ -11,6 +11,7 @@
 
 ```sh
 solver_v5_replay 새국면.txt --replay 옛증명.v4.gz [--replay-stuck-nodes 200000] \
+    [--replay-lib 꼭짓점번호=다른음절증명.v4.gz ...] \
     --seconds 600 --tt-mb 1024 --proof 새증명.v4.gz --proof-format v4
 ```
 
@@ -21,7 +22,7 @@ solver_v5_replay 새국면.txt --replay 옛증명.v4.gz [--replay-stuck-nodes 20
    - 승: 그 국면의 자식 하나가 패로 증명됨.
    - 패: 그 국면에서 **지금 둘 수 있는 모든 수**의 자식이 승으로 증명됨.
    - 기록의 열쇠는 새 국면 자체(128비트 해시)입니다. 옛 증명의 마디 번호로 국면을 구분하지 않습니다.
-3. **막힌 곳.** 아래 경우에는 옛 증명을 따라갈 수 없습니다. 그 국면만 정해진 예산(기본 20만 국면)으로 다시 탐색합니다.
+3. **막힌 곳.** 아래 경우에는 옛 증명을 따라갈 수 없습니다. 그 국면만 정해진 예산(기본 20만 국면)으로 다시 탐색합니다. 같은 국면은 한 번만 탐색합니다.
 
    | 출력 이름 | 뜻 |
    |---|---|
@@ -31,6 +32,7 @@ solver_v5_replay 새국면.txt --replay 옛증명.v4.gz [--replay-stuck-nodes 20
    | `stuck_new_move` | 새 국면에 옛 마디에 없던 수가 있음 |
    | `stuck_old_leaf` | 옛 마디는 고정 라벨로 끝났는데 새 국면은 아님 |
 
+   - **음절 증명서 여러 개 (`--replay-lib`).** 막힌 국면의 현재 꼭짓점에 해당하는 음절의 증명서를 함께 주면, 막힌 곳 탐색 전에 그 증명서를 뿌리부터 같은 방식으로 따라가 봅니다. 꼭짓점 번호는 계산기 입력의 번호입니다(`ModelV3.vertex_of(음절)`).
 4. **남은 탐색.** 재생으로 뿌리가 증명되지 않으면, 지금까지의 기록을 가진 채 보통 탐색을 이어 갑니다. 시간 한도(`--seconds`)에는 재생 시간도 들어갑니다. 한도 안에 못 풀면 결과는 `unknown`(미확정)입니다.
 5. **증명서.** 기존 증명 생성 코드가 그대로 씁니다. 기준 정규화로 뿌리부터 다시 재생하며 모든 마디를 대조합니다.
 
@@ -44,12 +46,15 @@ solver_v5_replay 새국면.txt --replay 옛증명.v4.gz [--replay-stuck-nodes 20
 
 무작위 작은 사전에서 '시작 국면의 증명서'를 '단어가 빠지거나 한 수 둔 국면'에 재생했습니다. 세 번에 한 번은 일부러 다른 시작 음절의 증명서를 줬습니다. 계산기 자체 점검(`--selfcheck 1`)을 켰고, 결과는 규칙 글만 보고 짠 단어 수준 완전탐색과 비교했습니다.
 
-결과는 `basic_root/alt_first_moves/results/replay1/README_KO.md`의 '무작위 시험'에 적었습니다.
+마지막 인자로 `lib`를 주면 다른 시작 음절의 증명서를 `--replay-lib`로 함께 줍니다. 그중 절반은 일부러 틀린 꼭짓점 번호로 줍니다.
+
+결과(1만 7천여 번 재생, 틀린 판정 0)는 `basic_root/alt_first_moves/results/replay1/README_KO.md`의 '무작위 시험'에 적었습니다.
 
 ```sh
 M=/home/user/AI-/.work/measure
 g++ -O3 -march=x86-64-v3 -std=c++17 -o $M/solver_v5_replay solver_v5_replay.cpp -lz -pthread
 python3 test_replay_random.py $M/solver_v5 $M/solver_v5_replay $M/verify_v4 /home/user/AI-/.work/replay_rnd 2000 11
+python3 test_replay_random.py $M/solver_v5 $M/solver_v5_replay $M/verify_v4 /home/user/AI-/.work/replay_rnd 2000 21 lib
 ```
 
 ## 출력에 더해진 값
@@ -65,10 +70,13 @@ python3 test_replay_random.py $M/solver_v5 $M/solver_v5_replay $M/verify_v4 /hom
 | `replay_local_calls`, `replay_local_solved`, `replay_local_mid` | 막힌 곳 탐색 횟수, 풀린 횟수, 그 탐색의 국면 수 |
 | `replay_unknown_below` | 아래쪽이 풀리지 않아 증명하지 못한 마디 수 |
 | `replay_flips` | 옛 증명에서는 패였지만 새 국면에서는 승으로 증명된 마디 수 |
+| `replay_local_repeat` | 이미 탐색한 막힌 국면이라 다시 탐색하지 않은 횟수 |
+| `replay_libs`, `replay_lib_tries`, `replay_lib_solved` | 함께 준 음절 증명서 수, 그것을 따라가 본 횟수, 그렇게 증명된 횟수 |
 
 ## 한계
 
-- 한 번에 옛 증명서 하나만 재생합니다.
+- 음절 증명서 여러 개 쓰기는 시험한 두 사례(순발력, 행정구역)에서 효과가 없었습니다. 둘 다 600초 안에 결론이 나지 않았습니다.
 - 막힌 곳 탐색이 예산 안에 안 끝나면 그 위쪽 마디는 재생 단계에서 증명되지 않습니다. 남은 탐색이 처음부터 다시 내려가며 풉니다.
+- 재생 뒤에는 증명서 쓰기와 검증이 시간의 대부분입니다. 재생은 탐색만 줄입니다.
 - 옛 증명서는 계산기가 쓰는 줄 형식(`{"id":…,"r":"W","m":[[묶음,자식],…]}`)만 읽습니다.
 - 한 스레드로만 재생합니다.
