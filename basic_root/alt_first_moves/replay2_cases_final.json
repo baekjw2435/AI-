@@ -1,0 +1,125 @@
+{
+ "rule": "final split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay-final-v1:\" + id), first 12",
+ "eligible": 32,
+ "eligible_by_source": {
+  "급": 3,
+  "순": 2,
+  "승": 5,
+  "역": 13,
+  "엽": 0,
+  "율": 4,
+  "행": 4,
+  "흥": 1
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "f01",
+   "id": "박/박력",
+   "syllable": "박",
+   "word": "박력",
+   "source": "역",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "f02",
+   "id": "탑/탑승",
+   "syllable": "탑",
+   "word": "탑승",
+   "source": "승",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "f03",
+   "id": "법/법률",
+   "syllable": "법",
+   "word": "법률",
+   "source": "율",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "f04",
+   "id": "홍/홍역",
+   "syllable": "홍",
+   "word": "홍역",
+   "source": "역",
+   "root_form": "kept",
+   "earlier_search_seconds": 120.001
+  },
+  {
+   "name": "f05",
+   "id": "합/합승",
+   "syllable": "합",
+   "word": "합승",
+   "source": "승",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "f06",
+   "id": "언/언어능력",
+   "syllable": "언",
+   "word": "언어능력",
+   "source": "역",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "f07",
+   "id": "언/언어수행",
+   "syllable": "언",
+   "word": "언어수행",
+   "source": "행",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "f08",
+   "id": "돌/돌파력",
+   "syllable": "돌",
+   "word": "돌파력",
+   "source": "역",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "f09",
+   "id": "편/편승",
+   "syllable": "편",
+   "word": "편승",
+   "source": "승",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "f10",
+   "id": "풍/풍력",
+   "syllable": "풍",
+   "word": "풍력",
+   "source": "역",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "f11",
+   "id": "환/환승역",
+   "syllable": "환",
+   "word": "환승역",
+   "source": "역",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "f12",
+   "id": "환/환율",
+   "syllable": "환",
+   "word": "환율",
+   "source": "율",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}
