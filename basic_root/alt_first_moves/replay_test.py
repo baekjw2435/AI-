@@ -2,7 +2,7 @@
 """Strategy replay against direct search, same machine, same limits, same load, everything timed.
 
 usage: replay_test.py CASES.json SOURCES WORKDIR [--seconds 120] [--tt-mb 1024] [--stuck-nodes 200000]
-                      [--jobs 1] [--kinds direct,replay] [--only r01,r02]
+                      [--jobs 1] [--kinds direct,replay] [--only r01,r02] [--emit-check 1]
 
 CASES.json: {"cases": [{"name": "r01", "id": "승/승급", "syllable": "승", "word": "승급", "source": "급"}, ...]}
 SOURCES/<source>/ is made by replay_prep.py: the certificate of 'source syllable received, nothing used'.
@@ -16,6 +16,9 @@ Two kinds of run per case:
 Both write an ordinary route-proof-v4 certificate of the case's own position and both are accepted only by
 solve_common.verify (exit code 0, verified, expected result, deflate-exact, four SHA-256). A run that ends
 undecided, cannot write its certificate or is not accepted stays undecided; its time is recorded all the same.
+
+--emit-check 0 makes the replay solver write the certificate from its incremental states alone (about three
+times faster writing, the same file; see solver_v5_replay.cpp). The direct solver has no such option.
 
 Load. --jobs N runs N jobs at a time; a job is one run of one kind with its verification. The jobs of all cases
 are queued in case order, direct then replay, so both kinds meet the same load (N busy processes).
@@ -177,7 +180,8 @@ def line(r):
 def main():
     cases_path, sources, work = sys.argv[1:4]
     rest = sys.argv[4:]
-    opt = {'--seconds': 120.0, '--tt-mb': 1024, '--stuck-nodes': 200000, '--only': '', '--jobs': 1, '--kinds': 'direct,replay'}
+    opt = {'--seconds': 120.0, '--tt-mb': 1024, '--stuck-nodes': 200000, '--only': '', '--jobs': 1, '--kinds': 'direct,replay',
+           '--emit-check': 1}
     for i in range(0, len(rest), 2):
         opt[rest[i]] = type(opt[rest[i]])(rest[i + 1])
     kinds = [k for k in ('direct', 'replay') if k in opt['--kinds'].split(',')]
@@ -206,6 +210,7 @@ def main():
         head[c['name']] = {
             'name': c['name'], 'id': c['id'], 'syllable': c['syllable'], 'word': c['word'], 'hands_over': model.names[cur],
             'seconds_limit': opt['--seconds'], 'tt_mb': opt['--tt-mb'], 'stuck_nodes': opt['--stuck-nodes'], 'jobs': opt['--jobs'],
+            'emit_check': opt['--emit-check'],
             'input_sha256': sha(d / 'in.txt'), 'position_sha256': sha(d / 'pos.json'),
             'source': {'syllable': c['source'], 'proof_sha256': prep['proof_sha256'], 'proof_nodes': prep['proof_nodes'],
                        'prep_search_seconds_spent': prep['search_seconds_spent'], 'prep_proof_seconds': prep['proof_seconds'],
@@ -235,7 +240,8 @@ def main():
         if kind in old and not (d / f'{kind}.json').exists():
             return                                     # done by an earlier version of this tool
         base = [sc.SOLVER, str(d / 'in.txt')] if kind == 'direct' else \
-            [REPLAY_SOLVER, str(d / 'in.txt'), '--replay', str(sources / c['source'] / 'proof.v4.gz'), '--replay-stuck-nodes', str(opt['--stuck-nodes'])]
+            [REPLAY_SOLVER, str(d / 'in.txt'), '--replay', str(sources / c['source'] / 'proof.v4.gz'), '--replay-stuck-nodes', str(opt['--stuck-nodes'])] \
+            + ([] if opt['--emit-check'] else ['--emit-check', '0'])
         try:
             run_kind(kind, base, d, opt['--seconds'], opt['--tt-mb'], words_of)
         except sc.LowDisk as e:

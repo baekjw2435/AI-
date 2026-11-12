@@ -24,7 +24,14 @@
 //                          역 certificate never met (the pair was cancelled there); the 순 certificate guides that line.
 //   The certificate is then written by the unchanged emitter (replay with the reference canonicalization) and
 //   must pass the unchanged verifier: replay results are table hints like any other table content.
-//   Output adds replay_* fields. Without --replay the program behaves as solver_v5.
+//   --emit-check 0|1       certificate writing (2026-11-12). 1 (default, as solver_v5): the state of every child is
+//                          rebuilt with the reference canonicalization and compared with the incremental one.
+//                          0: a non-static child is taken from the incremental canonicalization alone (the code
+//                          the search itself uses); static children still go through the reference code, which
+//                          gives their key. The reference pass was 76% of the writing time (emit_profile). The
+//                          certificate is the same file when both canonicalizations agree, and a disagreement
+//                          could only make a certificate the verifier rejects: the verifier re-derives every state.
+//   Output adds replay_* fields and emit_profile. Without --replay the program behaves as solver_v5.
 //
 // solver_v5 (with the proven-state cache): solver_v5 plus a proven-state cache shared across jobs of the same dictionary.
 //   --proven-save FILE   at the end, write every proven TT entry (pn == 0 or dn == 0) to FILE; the header
@@ -109,6 +116,7 @@
 #include <unordered_set>
 #include <vector>
 #include <sys/mman.h>
+#include <x86intrin.h>
 #include <unistd.h>
 #include <zlib.h>
 using namespace std;
@@ -613,6 +621,7 @@ struct Opt {
   string replay;                // old v4 certificate to replay before the search
   u64 replay_stuck_nodes = 200000;  // df-pn node budget per stuck state (0: no local search)
   vector<pair<int, string>> replay_lib;  // (vertex, certificate of that vertex's first-presentation position)
+  bool emit_check = true;                // cross-check every emitted child with the reference canonicalization
 } opt;
 static TT tt;
 
@@ -1341,6 +1350,17 @@ struct Replayer {
 };
 
 // ---------------------------------------------------------------- proof emission
+// Time counters of the certificate writer (2026-11-12), printed as emit_profile: where the writing time goes.
+// Exclusive sections (the recursion itself is not inside any of them); a counter costs a few nanoseconds.
+enum { EP_ENSURE, EP_GEN, EP_REF, EP_BUILD, EP_ORDER, EP_FIND, EP_LINE, EP_WRITE, EP_FINAL, EP_N };
+static unsigned long long eprof[EP_N];
+static const char* eprof_name[EP_N] = {"table_lookup_or_resolve", "children_incremental", "children_reference_canon", "children_build_state",
+                                       "winning_move_order", "seen_lookup", "line_text", "gzip_write", "final_copy"};
+struct ETm {
+  int k; unsigned long long t0;
+  explicit ETm(int kk) : k(kk), t0(__rdtsc()) {}
+  ~ETm() { eprof[k] += __rdtsc() - t0; }
+};
 struct Emitter {
   gzFile gz = nullptr;
   FILE* fp = nullptr;
@@ -1350,12 +1370,15 @@ struct Emitter {
   u64 resolves = 0, resolve_mid = 0, crosschecks = 0;
   Searcher* S = nullptr;
   vector<State> es;
+  vector<Undo> eundo;  // --emit-check 0: scratch of apply_child per depth
   chrono::steady_clock::time_point t0;
   void write(const string& s) {
+    ETm tm_(EP_WRITE);
     if (gz) { if (gzwrite(gz, s.data(), (unsigned)s.size()) != (int)s.size()) throw runtime_error("proof write failure"); }
     else if (fwrite(s.data(), 1, s.size(), fp) != s.size()) throw runtime_error("proof write failure");
   }
   bool find(u64 h0, u64 h1, u32& id) {
+    ETm tm_(EP_FIND);
     auto it = ids.find(h0);
     if (it == ids.end()) return false;
     for (auto& p : it->second) if (p.first == h1) { id = p.second; return true; }
@@ -1364,6 +1387,7 @@ struct Emitter {
   u32 put(int v, const vector<u8>& k, bool win, const vector<pair<int, u32>>& moves, u64 h0, u64 h1) {
     static const char* hx = "0123456789abcdef";
     string line;
+    unsigned long long t_line = __rdtsc();
     line.reserve(64 + 2 * G + 16 * moves.size());
     line += "{\"id\":"; line += to_string(count);
     if (opt.proof_format == 3) {
@@ -1377,8 +1401,9 @@ struct Emitter {
       line += '['; line += to_string(moves[i].first); line += ','; line += to_string(moves[i].second); line += ']';
     }
     line += "]}\n";
+    eprof[EP_LINE] += __rdtsc() - t_line;
     write(line);
-    ids[h0].push_back({h1, count});
+    { ETm tm_(EP_FIND); ids[h0].push_back({h1, count}); }
     return count++;
   }
   // make sure state es[d] (canonical non-static) is proven in the TT; returns win?
@@ -1418,31 +1443,47 @@ struct Emitter {
       res.push_back(win);
       return id;
     }
-    bool claim = ensure(d);
+    bool claim;
+    { ETm tm_(EP_ENSURE); claim = ensure(d); }
     // enumerate children
     vector<CI> ch;
-    for (int g : avail[E.cur]) if (E.cnt[g]) { ch.emplace_back(); gen_child(E, g, ch.back(), S->sc); }
+    { ETm tm_(EP_GEN);
+      for (int g : avail[E.cur]) if (E.cnt[g]) { ch.emplace_back(); gen_child(E, g, ch.back(), S->sc); } }
     vector<pair<int, u32>> moves;
     auto child = [&](const CI& ci, bool& cwin) -> u32 {
+      if (!opt.emit_check && ci.stat == -1) {
+        // the incremental child alone (what the search uses): copy the parent, apply the move in place
+        unsigned long long t_inc = __rdtsc();
+        State& C = es[d + 1];
+        C = E;
+        apply_child(C, ci, eundo[d]);
+        eprof[EP_BUILD] += __rdtsc() - t_inc;
+        return emit(d + 1, -1, cwin);
+      }
       // exact reference child, cross-checked against the incremental child
+      unsigned long long t_ref = __rdtsc();
       vector<u8> k = E.cnt;
       k[ci.g]--;
       int w = dst_[ci.g];
       int s = ref_canon(w, k, false);
+      eprof[EP_REF] += __rdtsc() - t_ref;
       if (s != ci.stat) throw runtime_error("emission: static mismatch between incremental and reference canonicalization");
       State& C = es[d + 1];
+      unsigned long long t_build = __rdtsc();
       if (s == -1) {
         build_state(w, k, C);
         if (C.h0 != ci.h0 || C.h1 != ci.h1 || C.core != ci.core) throw runtime_error("emission: hash/core mismatch");
       } else {
         C.init(); C.cur = w; C.cnt = k; full_hash(w, k.data(), C.h0, C.h1);
       }
+      eprof[EP_BUILD] += __rdtsc() - t_build;
       crosschecks++;
       return emit(d + 1, s, cwin);
     };
     if (claim) {
       // candidate order: static L, TT best, TT-proven L (least work first), rest
       u32 p, q, wk; int best = -1;
+      unsigned long long t_order = __rdtsc();
       tt.probe(E.h0, E.h1, p, q, wk, best);
       vector<pair<u64, int>> order;
       for (size_t i = 0; i < ch.size(); i++) {
@@ -1461,6 +1502,7 @@ struct Emitter {
         order.push_back({key, (int)i});
       }
       sort(order.begin(), order.end());
+      eprof[EP_ORDER] += __rdtsc() - t_order;
       bool found = false;
       for (auto& o : order) {
         bool cw;
@@ -1488,7 +1530,7 @@ static string jnum(double x) { char b[64]; snprintf(b, sizeof b, "%.6f", x); ret
 
 int main(int argc, char** argv) {
   try {
-    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--proof-format v3|v4] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--tt-save-max N] [--checkpoint-seconds S] [--proven-load FILE]... [--proven-load-max N] [--proven-load-fraction F] [--proven-save FILE] [--tt-save-loaded 0|1] [--proven-min-work W] [--proven-save-loaded 0|1] [--replay OLD_V4_PROOF] [--replay-stuck-nodes N] [--replay-lib VERTEX=OLD_V4_PROOF]...");
+    if (argc < 2) throw runtime_error("usage: solver_v3 INPUT [--seconds S] [--nodes MAXMID] [--proof OUT[.gz]] [--proof-format v3|v4] [--tt-mb MB] [--threads T] [--eps E] [--init 0|1|2] [--wpn 0|1] [--selfcheck 0|1] [--emit-seconds S] [--tt-load FILE] [--tt-save FILE] [--tt-save-max N] [--checkpoint-seconds S] [--proven-load FILE]... [--proven-load-max N] [--proven-load-fraction F] [--proven-save FILE] [--tt-save-loaded 0|1] [--proven-min-work W] [--proven-save-loaded 0|1] [--replay OLD_V4_PROOF] [--replay-stuck-nodes N] [--replay-lib VERTEX=OLD_V4_PROOF]... [--emit-check 0|1]");
     for (int i = 2; i < argc; i++) {
       string x = argv[i];
       if (i + 1 >= argc) throw runtime_error("missing option value");
@@ -1522,6 +1564,7 @@ int main(int argc, char** argv) {
       else if (x == "--tt-save-loaded") opt.tt_save_loaded = stoi(v) != 0;
       else if (x == "--replay") opt.replay = v;
       else if (x == "--replay-stuck-nodes") opt.replay_stuck_nodes = stoull(v);
+      else if (x == "--emit-check") opt.emit_check = stoi(v) != 0;
       else if (x == "--replay-lib") {
         size_t eq = v.find('=');
         if (eq == string::npos) throw runtime_error("--replay-lib needs VERTEX=FILE");
@@ -1592,6 +1635,7 @@ int main(int argc, char** argv) {
     }
     if (opt.checkpoint > 0) next_ckpt = opt.checkpoint;
     t_start = chrono::steady_clock::now();
+    const unsigned long long tsc_start = __rdtsc();
     search_clock_on = true;
     vector<Searcher> ss(opt.threads);
     for (int i = 0; i < opt.threads; i++) ss[i].init(maxdepth, i);
@@ -1684,6 +1728,7 @@ int main(int argc, char** argv) {
       em.t0 = t0;
       em.es.resize(maxdepth + 2);
       for (auto& s : em.es) s.init();
+      if (!opt.emit_check) em.eundo.resize(maxdepth + 2);
       bool gzip = opt.proof.size() > 3 && opt.proof.substr(opt.proof.size() - 3) == ".gz";
       if (gzip) { em.gz = gzopen(tmp.c_str(), "wb6"); if (!em.gz) throw runtime_error("cannot create proof body"); }
       else { em.fp = fopen(tmp.c_str(), "wb"); if (!em.fp) throw runtime_error("cannot create proof body"); }
@@ -1692,8 +1737,10 @@ int main(int argc, char** argv) {
       bool win;
       u32 rid = em.emit(0, rstat, win);
       if (win != (result == "win")) throw runtime_error("emission result differs from search result");
-      if (gzip) { gzclose(em.gz); em.gz = nullptr; } else { fclose(em.fp); em.fp = nullptr; }
+      { ETm tm_(EP_WRITE);
+        if (gzip) { gzclose(em.gz); em.gz = nullptr; } else { fclose(em.fp); em.fp = nullptr; } }
       string head = string("{\"format\":\"route-proof-v") + (opt.proof_format == 4 ? "4" : "3") + "\",\"groups\":" + to_string(G) + ",\"vertices\":" + to_string(N) + ",\"root\":" + to_string(rid) + "}\n";
+      ETm tm_final(EP_FINAL);
       if (gzip) {
         // concatenated gzip members are a valid gzip stream
         gzFile h = gzopen(out.c_str(), "wb6");
@@ -1741,6 +1788,14 @@ int main(int argc, char** argv) {
       pc_save_s = chrono::duration<double>(chrono::steady_clock::now() - t0).count();
     }
     u64 used = tt.used();
+    string emit_profile_json = "{";
+    {
+      // ticks -> seconds with the whole run as the yardstick
+      const double run_s = chrono::duration<double>(chrono::steady_clock::now() - t_start).count();
+      const double tps = run_s > 0 ? (double)(__rdtsc() - tsc_start) / run_s : 1;
+      for (int i = 0; i < EP_N; i++) emit_profile_json += string(i ? "," : "") + "\"" + eprof_name[i] + "\":" + jnum(eprof[i] / tps);
+      emit_profile_json += "}";
+    }
     if (!opt.proven_load.empty() || !opt.proven_save.empty())
       fprintf(stderr, "{\"proven_loaded\":%llu,\"proven_inserted\":%llu,\"proven_tt_used_after_load\":%llu,\"proven_load_seconds\":%s,\"proven_saved\":%llu,"
               "\"proven_skipped_small\":%llu,\"proven_skipped_loaded\":%llu,\"proven_save_seconds\":%s,\"proven_save_error\":\"%s\"}\n",
@@ -1752,7 +1807,7 @@ int main(int argc, char** argv) {
            "\"emit_crosschecks\":%llu,\"emit_seconds\":%s,\"selfchecks\":%llu,\"proof_error\":\"%s\","
            "\"tt_loaded\":%llu,\"tt_load_seconds\":%s,\"tt_saves\":%llu,\"tt_saved\":%llu,\"tt_save_seconds\":%s,"
            "\"tt_save_error\":\"%s\",\"tt_load_open_capped\":%llu,\"tt_load_proven_in_cache\":%llu,\"tt_load_proven_kept\":%llu,"
-           "\"carried_seconds\":%s,\"total_search_seconds\":%s,"
+           "\"emit_profile\":%s,\"carried_seconds\":%s,\"total_search_seconds\":%s,"
            "\"proven_load_cap\":%llu,"
            "\"replay_root\":%d,\"replay_old_nodes\":%llu,\"replay_load_seconds\":%s,\"replay_seconds\":%s,\"replay_nodes\":%llu,"
            "\"replay_proven\":%llu,\"replay_memo_proven\":%llu,\"replay_memo_unknown\":%llu,\"replay_stuck_old_leaf\":%llu,"
@@ -1768,7 +1823,7 @@ int main(int argc, char** argv) {
            (unsigned long long)g_selfchecks.load(), proof_error.c_str(), (unsigned long long)tt_loaded, jnum(tt_load_s).c_str(),
            (unsigned long long)tt_saves, (unsigned long long)tt_saved, jnum(tt_save_s).c_str(), tt_save_error.c_str(),
            (unsigned long long)tt_fix_open_capped, (unsigned long long)tt_fix_proven_in_cache, (unsigned long long)tt_fix_proven_kept,
-           jnum(carried_seconds).c_str(), jnum(carried_seconds + elapsed).c_str(),
+           emit_profile_json.c_str(), jnum(carried_seconds).c_str(), jnum(carried_seconds + elapsed).c_str(),
            (unsigned long long)opt.proven_load_max,
            replay_root, (unsigned long long)oldproof.win.size(), jnum(replay_load_s).c_str(), jnum(replay_s).c_str(),
            (unsigned long long)rp_.nodes, (unsigned long long)rp_.proven, (unsigned long long)rp_.memo_proven,

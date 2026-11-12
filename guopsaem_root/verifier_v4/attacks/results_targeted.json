@@ -83,36 +83,6 @@
    "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/gz_bad_header_crc"
   },
   {
-   "name": "input_underscores",
-   "expect": "accept:W",
-   "note": "0_1 tokens",
-   "outcomes": {
-    "py": [
-     "reject",
-     "numeric solver input differs from dictionary/history"
-    ],
-    "py_digest": [
-     "reject",
-     "numeric solver input differs from dictionary/history"
-    ],
-    "cpp": [
-     "reject",
-     "numeric solver input differs from dictionary/history"
-    ],
-    "cpp_digest": [
-     "reject",
-     "numeric solver input differs from dictionary/history"
-    ]
-   },
-   "problems": [
-    "py rejected a valid certificate: numeric solver input differs from dictionary/history",
-    "py_digest rejected a valid certificate: numeric solver input differs from dictionary/history",
-    "cpp rejected a valid certificate: numeric solver input differs from dictionary/history",
-    "cpp_digest rejected a valid certificate: numeric solver input differs from dictionary/history"
-   ],
-   "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_underscores"
-  },
-  {
    "name": "input_19_digit_leading_zeros",
    "expect": "accept:W",
    "note": "first token zero-padded to 19+ digits",
@@ -2460,31 +2430,26 @@
   {
    "name": "input_underscores",
    "expect": "accept:W",
-   "note": "0_1 tokens",
+   "note": "1_2 tokens (underscores between digits)",
    "outcomes": {
     "py": [
-     "reject",
-     "numeric solver input differs from dictionary/history"
+     "accept",
+     "W"
     ],
     "py_digest": [
-     "reject",
-     "numeric solver input differs from dictionary/history"
+     "accept",
+     "W"
     ],
     "cpp": [
-     "reject",
-     "numeric solver input differs from dictionary/history"
+     "accept",
+     "W"
     ],
     "cpp_digest": [
-     "reject",
-     "numeric solver input differs from dictionary/history"
+     "accept",
+     "W"
     ]
    },
-   "problems": [
-    "py rejected a valid certificate: numeric solver input differs from dictionary/history",
-    "py_digest rejected a valid certificate: numeric solver input differs from dictionary/history",
-    "cpp rejected a valid certificate: numeric solver input differs from dictionary/history",
-    "cpp_digest rejected a valid certificate: numeric solver input differs from dictionary/history"
-   ],
+   "problems": [],
    "dir": "/home/user/AI-/guopsaem_root/verifier_v4/attacks/cases/input_underscores"
   },
   {

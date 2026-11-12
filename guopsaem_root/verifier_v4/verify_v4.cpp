@@ -708,10 +708,15 @@ static bool fast_line(const string& s, u64& id, bool& win, vector<u64>& nums) {
 
 static bool int_ok(const JV* v) { return v && v->t == JV::INT; }
 
-// Recorded states. Exact mode: each state is a raw-deflate stream (level 6) with the root
-// state as preset dictionary (states resemble the root; about half the size of plain zlib);
-// comparisons decompress and compare all G bytes. Digest mode: a SHA-256 per recorded state.
+// Recorded states. Exact mode: each state is a raw-deflate stream with the root state as preset
+// dictionary; comparisons decompress and compare all G bytes. Digest mode: a SHA-256 per recorded state.
 // Compressed bytes live in 64 MB chunks (no reallocation spikes).
+// Compressor settings (2026-11-12): run-length strategy (Z_RLE), memLevel 4. Until then the default strategy
+// with memLevel 9 was used; packing a state was 60% of the whole verification time (measured with
+// profile/verify_v4_timed.cpp: 36 us of 59 us per node). A state is a sparse vector of small counts, so
+// run lengths plus Huffman codes do as well as string matching: 126 instead of 130 bytes per state on the
+// 817-word list, at 8 us. Only how the verifier stores a state it has derived changes; what is stored is
+// still decompressed and compared byte for byte, and every check is the same.
 struct Store {
   static const u64 CHUNK = 1ull << 26;
   bool digest_only;
@@ -723,7 +728,7 @@ struct Store {
   vector<u8> dict, zbuf;
   z_stream ds{}, is{};
   Store(size_t n, bool d, const vector<u8>& dictionary) : digest_only(d), vertex(n), start(n), len(n), dict(dictionary) {
-    if (deflateInit2(&ds, 6, Z_DEFLATED, -15, 9, Z_DEFAULT_STRATEGY) != Z_OK || inflateInit2(&is, -15) != Z_OK)
+    if (deflateInit2(&ds, 6, Z_DEFLATED, -15, 4, Z_RLE) != Z_OK || inflateInit2(&is, -15) != Z_OK)
       throw VErr("zlib init failure");
   }
   ~Store() { deflateEnd(&ds); inflateEnd(&is); }

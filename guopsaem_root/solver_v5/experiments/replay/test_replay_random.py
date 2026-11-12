@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Random check of solver_v5_replay: a replayed position must still get the true value, whatever the old file is.
 
-usage: test_replay_random.py SOLVER REPLAY_SOLVER VERIFY_V4 WORKDIR DICTS SEED [lib]
+usage: test_replay_random.py SOLVER REPLAY_SOLVER VERIFY_V4 WORKDIR DICTS SEED [lib] [emit]
 
 For random small dictionaries (many ㄹ/ㄴ/ㅇ syllables, so shared groups occur):
   1. solve 'syllable s received' with SOLVER and keep its v4 certificate (the old strategy);
@@ -12,6 +12,8 @@ For random small dictionaries (many ㄹ/ㄴ/ㅇ syllables, so shared groups occu
      (every second time under a WRONG vertex number, which must be harmless too);
   3. the new certificate must pass VERIFY_V4 with the solver's result, and that result must equal a word-level
      brute force written from the rule text (no model code).
+     with the argument 'emit', every replay is run a second time with --emit-check 0 (certificate written from the
+     incremental states alone): that certificate must be the same file, byte for byte.
 Replay may only change how fast the result is found, never the result.
 """
 import json
@@ -23,7 +25,8 @@ from pathlib import Path
 
 SOLVER, REPLAY, VERIFY, WORK = sys.argv[1], sys.argv[2], sys.argv[3], Path(sys.argv[4])
 NDICT, SEED = int(sys.argv[5]), int(sys.argv[6])
-USE_LIB = len(sys.argv) > 7 and sys.argv[7] == 'lib'
+USE_LIB = 'lib' in sys.argv[7:]
+USE_EMIT = 'emit' in sys.argv[7:]
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / 'verifier_v3'))
 from verify_v3 import ModelV3, VerificationError  # noqa: E402  (only to write solver inputs)
@@ -166,6 +169,17 @@ def main():
                 problems.append(('rejected', words, pos, vj))
                 continue
             st['accepted'] += 1
+            if USE_EMIT:
+                proof0 = WORK / 'new0.gz'
+                if proof0.exists():
+                    proof0.unlink()
+                cmd0 = [a if a != str(proof) else str(proof0) for a in r.args] + ['--emit-check', '0']
+                subprocess.run(cmd0, capture_output=True, text=True)
+                same = proof0.exists() and proof0.read_bytes() == proof.read_bytes()
+                st['emit0_same'] = st.get('emit0_same', 0) + same
+                if not same:
+                    st['emit0_differs'] = st.get('emit0_differs', 0) + 1
+                    problems.append(('--emit-check 0 wrote a different certificate', words, pos))
             if (want == 'W') != truth:
                 st['wrong'] += 1
                 problems.append(('WRONG VERDICT ACCEPTED', words, pos, want, truth))

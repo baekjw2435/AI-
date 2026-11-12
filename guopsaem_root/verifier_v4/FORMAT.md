@@ -81,10 +81,13 @@ JSON parser with the same rules.
    no claim about any position. They are only syntax-checked and are counted in
    `unreached_nodes`. The solver never writes them.
 
-State storage: by default, each recorded state is kept as a raw-deflate stream (level 6)
-with the root state as preset dictionary. Most states resemble the root, so this is about
-110 bytes per state, half of plain zlib. A comparison decompresses the stored state and
-compares all bytes exactly (`state_storage: "deflate-exact"`).
+State storage: by default, each recorded state is kept as a raw-deflate stream with the
+root state as preset dictionary. A comparison decompresses the stored state and compares all
+bytes exactly (`state_storage: "deflate-exact"`). How the stream is produced is the
+verifier's own business and no part of the format: the C++ verifier uses the run-length
+strategy (`Z_RLE`, memLevel 4) since 2026-11-12 - before that the default strategy, which
+took 60% of the verification time - and the Python verifier uses zlib's defaults (level 6).
+About 110 to 130 bytes per state on the lists used here.
 `--digest-only` keeps a SHA-256 digest of each recorded state instead
 (`state_storage: "sha256"`). This is the same digest equality that verify_v3 already
 relies on, and it is opt-in.
