@@ -1,0 +1,75 @@
+{
+ "note": "조정용 음절의 첫 수만 골랐습니다. 넘겨주는 음절의 원본 증명이 준비된 것(급·흥·엽·율) 전부입니다. r01·r05·r06은 첫 묶음에서 이미 확정된 수이고, 나머지 7개는 미검증이던 수입니다.",
+ "cases": [
+  {
+   "name": "r01",
+   "id": "승/승급",
+   "syllable": "승",
+   "word": "승급",
+   "source": "급"
+  },
+  {
+   "name": "r02",
+   "id": "완/완급",
+   "syllable": "완",
+   "word": "완급",
+   "source": "급"
+  },
+  {
+   "name": "r03",
+   "id": "직/직급",
+   "syllable": "직",
+   "word": "직급",
+   "source": "급"
+  },
+  {
+   "name": "r04",
+   "id": "학/학급",
+   "syllable": "학",
+   "word": "학급",
+   "source": "급"
+  },
+  {
+   "name": "r05",
+   "id": "즉/즉흥",
+   "syllable": "즉",
+   "word": "즉흥",
+   "source": "흥"
+  },
+  {
+   "name": "r06",
+   "id": "낙/낙엽",
+   "syllable": "낙",
+   "word": "낙엽",
+   "source": "엽"
+  },
+  {
+   "name": "r07",
+   "id": "규/규율",
+   "syllable": "규",
+   "word": "규율",
+   "source": "율"
+  },
+  {
+   "name": "r08",
+   "id": "득/득표율",
+   "syllable": "득",
+   "word": "득표율",
+   "source": "율"
+  },
+  {
+   "name": "r09",
+   "id": "변/변화율",
+   "syllable": "변",
+   "word": "변화율",
+   "source": "율"
+  },
+  {
+   "name": "r10",
+   "id": "운/운율",
+   "syllable": "운",
+   "word": "운율",
+   "source": "율"
+  }
+ ]
+}

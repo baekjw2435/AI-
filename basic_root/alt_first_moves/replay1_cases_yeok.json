@@ -1,0 +1,82 @@
+{
+ "note": "조정용 음절의 첫 수 가운데 역(력 포함)을 넘겨주는 것 전부입니다(11개, 모두 미검증). 순발력은 첫 묶음에서 직접 탐색 누적 600초에 미확정이었습니다.",
+ "cases": [
+  {
+   "name": "h01",
+   "id": "순/순발력",
+   "syllable": "순",
+   "word": "순발력",
+   "source": "역"
+  },
+  {
+   "name": "h02",
+   "id": "교/교역",
+   "syllable": "교",
+   "word": "교역",
+   "source": "역"
+  },
+  {
+   "name": "h03",
+   "id": "권/권력",
+   "syllable": "권",
+   "word": "권력",
+   "source": "역"
+  },
+  {
+   "name": "h04",
+   "id": "득/득점력",
+   "syllable": "득",
+   "word": "득점력",
+   "source": "역"
+  },
+  {
+   "name": "h05",
+   "id": "변/변별력",
+   "syllable": "변",
+   "word": "변별력",
+   "source": "역"
+  },
+  {
+   "name": "h06",
+   "id": "완/완력",
+   "syllable": "완",
+   "word": "완력",
+   "source": "역"
+  },
+  {
+   "name": "h07",
+   "id": "직/직관력",
+   "syllable": "직",
+   "word": "직관력",
+   "source": "역"
+  },
+  {
+   "name": "h08",
+   "id": "퇴/퇴역",
+   "syllable": "퇴",
+   "word": "퇴역",
+   "source": "역"
+  },
+  {
+   "name": "h09",
+   "id": "폭/폭력",
+   "syllable": "폭",
+   "word": "폭력",
+   "source": "역"
+  },
+  {
+   "name": "h10",
+   "id": "학/학력",
+   "syllable": "학",
+   "word": "학력",
+   "source": "역"
+  },
+  {
+   "name": "h11",
+   "id": "행/행정구역",
+   "syllable": "행",
+   "word": "행정구역",
+   "source": "역"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "syllable": "엽",
+ "vertex": "엽",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 14.751,
+ "lost_runs": [],
+ "unfinished_starts": 0,
+ "mid_calls": 8780623,
+ "proof_nodes": 99077,
+ "proof_seconds": 2.079955,
+ "solver_wall_seconds": 18.59,
+ "verify_seconds": 5.712,
+ "verify_wall_seconds": 5.72,
+ "proof_bytes": 703825,
+ "proof_sha256": "f482d296a172dd5e375b41b01976368e2aff97d460cc389b7b6ed8d3338139f9",
+ "position_sha256": "2a85f66a04ba73857b787964251dd619f48cb3c6313eeb23c885d048cf719e04",
+ "input_sha256": "12697b31ffa36f8f6b021865e78fd50711c97d352dc3dd54710aa3762b5929f2",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "ea7ff989f0c96cc377e78881f040ea79798302a3b65555b1220c4831fbe18471"
+}

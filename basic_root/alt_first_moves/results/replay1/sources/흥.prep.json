@@ -1,0 +1,32 @@
+{
+ "syllable": "흥",
+ "vertex": "흥",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 12.377,
+ "lost_runs": [],
+ "unfinished_starts": 0,
+ "mid_calls": 7560498,
+ "proof_nodes": 72797,
+ "proof_seconds": 1.509512,
+ "solver_wall_seconds": 14.76,
+ "verify_seconds": 4.587,
+ "verify_wall_seconds": 4.59,
+ "proof_bytes": 515451,
+ "proof_sha256": "e18df571117a726854b50288a852f51e20073163e37e1831b39656bad281d950",
+ "position_sha256": "097823d549b3195adb2185303f9a7c133d76a5fa2a42c2970af352951139e40a",
+ "input_sha256": "d9451ade8814e9c4f884d03435561bb4cd0b8d1c8215465de3363b025d134876",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "ea7ff989f0c96cc377e78881f040ea79798302a3b65555b1220c4831fbe18471"
+}
