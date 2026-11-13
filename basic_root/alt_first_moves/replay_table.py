@@ -35,9 +35,12 @@ def main():
     print('| 번호 | 첫 수 | 넘겨준 음절(원본 증명 국면) | 직접: 판정 | 직접 전체(초) | 재생: 판정 | 재생 전체(초) | 배 |')
     print('|---|---|---|---|---:|---|---:|---:|')
     for r in recs:
-        a, b = r.get('direct'), r['replay']
+        a, b = r.get('direct'), r.get('replay')
         ta, tb = total(a), total(b)
-        ratio = f'{ta / tb:.1f}' if a and a['decided'] and b['decided'] and tb else ('-' if not (a and b['decided']) else f'>{ta / tb:.1f}')
+        if not (a and b and b['decided'] and tb):
+            ratio = '-'
+        else:
+            ratio = f'{ta / tb:.1f}' if a['decided'] else f'>{ta / tb:.1f}'
         print(f'| {r["name"]} | {r["word"]} | {r["source"]["syllable"]} ({r["source"]["proof_nodes"]:,}) | {verdict(a)} | {f(ta)} | {verdict(b)} | {f(tb)} | {ratio} |')
     print()
     print('| 번호 | 방법 | 탐색(초) | 그중 재생(초) | 증명 생성(초) | 검증(초) | 탐색 국면 | 증명 국면 | 재생 국면 | 막힌 곳 | 막힌 곳 탐색: 번/풀림/국면 |')
@@ -63,10 +66,13 @@ def main():
     for syl, rs in groups.items():
         s = rs[0]['source']
         prep = s['prep_search_seconds_spent'] + (s['prep_proof_seconds'] or 0) + (s['prep_verify_seconds'] or 0)
-        rep_total = sum(total(r['replay']) for r in rs)
-        both = [r for r in rs if r.get('direct')]
-        print(f'| {syl} | {f(s["prep_search_seconds_spent"])} | {f(s["prep_proof_seconds"])} | {f(s["prep_verify_seconds"])} | {f(prep)} | {len(rs)} | '
-              f'{sum(r["replay"]["decided"] for r in rs)} | {f(rep_total)} | {f(prep + rep_total)} | {f((prep + rep_total) / len(rs))} | {len(both)} | '
+        reps = [r for r in rs if r.get('replay')]
+        if not reps:        # a direct-search-only batch does not use the source
+            continue
+        rep_total = sum(total(r['replay']) for r in reps)
+        both = [r for r in reps if r.get('direct')]
+        print(f'| {syl} | {f(s["prep_search_seconds_spent"])} | {f(s["prep_proof_seconds"])} | {f(s["prep_verify_seconds"])} | {f(prep)} | {len(reps)} | '
+              f'{sum(r["replay"]["decided"] for r in reps)} | {f(rep_total)} | {f(prep + rep_total)} | {f((prep + rep_total) / len(reps))} | {len(both)} | '
               f'{sum(r["direct"]["decided"] for r in both)} | {f(sum(total(r["direct"]) for r in both))} / {f(sum(total(r["replay"]) for r in both))} |')
 
 

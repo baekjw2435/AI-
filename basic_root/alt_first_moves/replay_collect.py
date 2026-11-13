@@ -15,10 +15,11 @@ HERE = Path(__file__).resolve().parent
 
 
 def to_phase(rec):
-    b, a = rec['replay'], rec.get('direct')
-    dec = b if b['decided'] else (a if a and a['decided'] else None)
-    shown = dec or b
-    spent = round((b.get('search_seconds') or 0) + ((a.get('search_seconds') or 0) if a else 0), 3)
+    b, a = rec.get('replay'), rec.get('direct')      # a batch may have run only one kind
+    runs = [x for x in (b, a) if x]
+    dec = next((x for x in runs if x['decided']), None)
+    shown = dec or runs[0]
+    spent = round(sum(x.get('search_seconds') or 0 for x in runs), 3)
     out = dict(rec)
     out.update(phase='1', phase_seconds=rec['seconds_limit'], decided=bool(dec),
                method=None if dec is None else ('replay' if dec is b else 'direct'),

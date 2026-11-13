@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Write results/NAME/README_KO.md for a solving batch (replay runs only), from the records of that folder.
+"""Write results/NAME/README_KO.md for a solving batch of one kind of run (replay only, or direct search only),
+from the records of that folder. Also writes TABLES.md (replay_table.py) and copies NAME_cases.json to cases.json.
 
 usage: replay_batch_readme.py NAME "한 줄 설명"
 Reads results/NAME/*.phase1.json, archive/INDEX.json and sources/*/prep.json. Everything in the README is
@@ -8,6 +9,8 @@ computed from those files; nothing is typed in by hand except the one-line descr
 from collections import defaultdict
 import json
 from pathlib import Path
+import shutil
+import subprocess
 import sys
 
 HERE = Path(__file__).resolve().parent
@@ -20,23 +23,27 @@ def main():
     recs = [json.loads(p.read_text(encoding='utf-8')) for p in sorted(res.glob('*.phase1.json'))]
     index = json.loads((res / 'archive' / 'INDEX.json').read_text(encoding='utf-8'))
     words = {t['id']: '·'.join(t['words']) for t in json.loads((HERE / 'targets.json').read_text(encoding='utf-8'))['targets']}
+    kind = 'replay' if recs[0].get('replay') else 'direct'      # the one kind of run this batch made
+    assert all(r.get(kind) for r in recs), 'a batch with both kinds of run is a comparison: write its README by hand'
+    for r in recs:
+        r['run'] = r[kind]
     dec = [r for r in recs if r['decided']]
     und = [r for r in recs if not r['decided']]
 
     def tot(x):
         return x['solver_wall_seconds'] + (x.get('verify_seconds') or 0)
 
-    L = [f'# 재생 풀이 묶음: {name}', '', desc, '']
+    L = [f'# {"재생 풀이" if kind == "replay" else "직접 탐색"} 묶음: {name}', '', desc, '']
     L += ['## 결과', '',
           f'- 첫 수 {len(recs)}개 중 **{len(dec)}개 확정**(지는 수 {sum(r["first_move"] == "lose" for r in dec)}, '
           f'이기는 수 {sum(r["first_move"] == "win" for r in dec)}), 미확정 {len(und)}개.',
           '- 확정은 모두 그 국면의 v4 증명서가 C++ `verify_v4`의 수락 조건을 통과한 것입니다.',
-          f'- 걸린 시간 합계(계산기 + 검증): {sum(tot(r["replay"]) for r in recs):,.0f}초. '
-          f'탐색 {sum(r["replay"]["search_seconds"] or 0 for r in recs):,.0f}초, '
-          f'증명서 쓰기 {sum(r["replay"].get("proof_seconds") or 0 for r in dec):,.0f}초, '
-          f'검증 {sum(r["replay"].get("verify_seconds") or 0 for r in dec):,.0f}초.',
-          f'- 재시작으로 끊긴 실행 {sum(r["replay"]["interrupted_runs"] for r in recs)}개, '
-          f'증명서를 못 썼거나 거부된 실행 {sum(1 for r in recs if r["replay"].get("problem"))}개.', '']
+          f'- 걸린 시간 합계(계산기 + 검증): {sum(tot(r["run"]) for r in recs):,.0f}초. '
+          f'탐색 {sum(r["run"]["search_seconds"] or 0 for r in recs):,.0f}초, '
+          f'증명서 쓰기 {sum(r["run"].get("proof_seconds") or 0 for r in dec):,.0f}초, '
+          f'검증 {sum(r["run"].get("verify_seconds") or 0 for r in dec):,.0f}초.',
+          f'- 재시작으로 끊긴 실행 {sum(r["run"]["interrupted_runs"] for r in recs)}개, '
+          f'증명서를 못 썼거나 거부된 실행 {sum(1 for r in recs if r["run"].get("problem"))}개.', '']
     by = defaultdict(list)
     for r in dec:
         by[r['source']['syllable']].append(r)
@@ -48,18 +55,19 @@ def main():
         L.append(f'| {s} | {", ".join(lose)} | {"·".join(rep)} | {", ".join(win)} |')
     L.append('')
     if und:
-        L += ['## 미확정', '', '| 첫 수 | 넘겨준 음절 | 쓴 탐색 시간(초) | 막힌 곳 |', '|---|---|---:|---:|']
+        L += ['## 미확정', '', '| 첫 수 | 넘겨준 음절 | 쓴 탐색 시간(초) | 탐색 국면 | 막힌 곳 |', '|---|---|---:|---:|---:|']
         for r in und:
-            rp = r['replay'].get('replay') or {}
+            rp = r['run'].get('replay') or {}
             stuck = sum(rp.get(k, 0) for k in ('stuck_old_leaf', 'stuck_witness_gone', 'stuck_witness_static', 'stuck_witness_refuted', 'stuck_new_move'))
-            L.append(f'| {words[r["id"]]} | {r["source"]["syllable"]} | {r["replay"]["search_seconds"] or 0:,.0f} | {stuck:,} |')
+            L.append(f'| {words[r["id"]]} | {r["source"]["syllable"]} | {r["run"]["search_seconds"] or 0:,.0f} | {r["run"].get("mid_calls") or 0:,} | '
+                     f'{f"{stuck:,}" if kind == "replay" else "-"} |')
         L.append('')
-    slow = sorted(dec, key=lambda r: -tot(r['replay']))[:8]
+    slow = sorted(dec, key=lambda r: -tot(r['run']))[:8]
     L += ['## 오래 걸린 것', '', '| 첫 수 | 넘겨준 음절 | 전체(초) | 탐색 · 증명서 쓰기 · 검증 | 증명 국면 | 막힌 곳 탐색 |', '|---|---|---:|---|---:|---:|']
     for r in slow:
-        b = r['replay']
+        b = r['run']
         L.append(f'| {words[r["id"]]} | {r["source"]["syllable"]} | {tot(b):,.1f} | {b["search_seconds"]:.1f} · {b["proof_seconds"]:.1f} · '
-                 f'{b["verify_seconds"]:.1f} | {b["proof_nodes"]:,} | {(b.get("replay") or {}).get("local_calls", 0):,} |')
+                 f'{b["verify_seconds"]:.1f} | {b["proof_nodes"]:,} | {f"{(b.get("replay") or {}).get("local_calls", 0):,}" if kind == "replay" else "-"} |')
     L.append('')
     srcs = sorted((res / 'sources').glob('*/prep.json')) if (res / 'sources').exists() else []
     if srcs:
@@ -78,17 +86,27 @@ def main():
     L += ['## 보관', '']
     if rel:
         L += [f'- 증명서 파일 {files}개({index["certificate_bytes"] / 1e6:,.0f}MB)는 저장소에 넣지 않습니다. GitHub 릴리스 `{rel["tag"]}`의 첨부파일로 둡니다.',
-              f'- 상태: {rel["status"]}',
+              ('- 상태: **릴리스에 올렸습니다.** 올린 파일을 모두 다시 내려받아 sha256이 색인과 같음을 확인했습니다'
+               f'({rel.get("checked", "")}). 주소: {rel["url"]}' if rel['status'].startswith('uploaded') else
+               '- 상태: 아직 릴리스에 올리지 않았습니다. 파일은 세션 브랜치의 `release_staging/`에 있습니다.'
+               if rel['status'].startswith('staged') else f'- 상태: {rel["status"]}'),
               '- 저장소에는 국면(`archive/<사례>/pos.json`), 입력(`in.txt`), 보관본을 다시 검증한 기록(`verify.json`), 그리고 파일마다 sha256과 주소를 적은 색인(`archive/INDEX.json`)이 있습니다.',
-              f'- 올린 뒤 확인: `python3 replay_archive.py {name} --check-release 1` (주소마다 다시 내려받아 sha256 비교).', '']
+              f'- 다시 확인하려면: `python3 replay_archive.py {name} --check-release 1` (주소마다 다시 내려받아 sha256 비교).', '']
     else:
         L += [f'- 증명서 파일 {files}개는 `archive/certs/`에 있습니다.', '']
     L += ['## 조건', '',
-          f'- 재생만 돌렸습니다(`--kinds replay --emit-check 0`). 한도 {recs[0]["seconds_limit"]:.0f}초, 저장표 {recs[0]["tt_mb"]}MB, 막힌 곳 예산 {recs[0]["stuck_nodes"]:,}국면, 동시에 {recs[0].get("jobs", 1)}개.',
+          (f'- 재생만 돌렸습니다(`--kinds replay --emit-check 0`). 한도 {recs[0]["seconds_limit"]:.0f}초, 저장표 {recs[0]["tt_mb"]}MB, 막힌 곳 예산 {recs[0]["stuck_nodes"]:,}국면, 동시에 {recs[0].get("jobs", 1)}개.'
+           if kind == 'replay' else
+           f'- 직접 탐색만 돌렸습니다(`--kinds direct`: 기본 계산기 `solver_v5`, 원본 증명서를 쓰지 않음). 한도 {recs[0]["seconds_limit"]:.0f}초, 저장표 {recs[0]["tt_mb"]}MB, 동시에 {recs[0].get("jobs", 1)}개.'),
           '- 대상은 실행 전에 `cases.json`으로 고정해 먼저 커밋했습니다.',
-          f'- 실행 파일 sha256 앞 16자: 재생 계산기 `{recs[0]["replay_solver_sha256"][:16]}`, 검증기 `{recs[0]["verifier_sha256"][:16]}`.',
+          f'- 실행 파일 sha256 앞 16자: ' + (f'재생 계산기 `{recs[0]["replay_solver_sha256"][:16]}`' if kind == 'replay' else f'계산기 `{recs[0]["solver_sha256"][:16]}`')
+          + f', 검증기 `{recs[0]["verifier_sha256"][:16]}`.',
           '- 사례별 숫자는 `TABLES.md`와 `*.phase1.json`에 있습니다.', '']
     (res / 'README_KO.md').write_text('\n'.join(L), encoding='utf-8')
+    with open(res / 'TABLES.md', 'w', encoding='utf-8') as f:
+        subprocess.run([sys.executable, str(HERE / 'replay_table.py'), name], stdout=f, check=True)
+    if (HERE / f'{name}_cases.json').exists():
+        shutil.copyfile(HERE / f'{name}_cases.json', res / 'cases.json')
     print(res / 'README_KO.md', len(L), 'lines')
 
 

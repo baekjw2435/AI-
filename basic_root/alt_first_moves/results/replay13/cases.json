@@ -1,0 +1,62 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay13-v1:\" + id), first 999",
+ "eligible": 5,
+ "eligible_by_source": {
+  "벽": 2,
+  "온": 1,
+  "충": 2
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "x01",
+   "id": "절/절벽",
+   "syllable": "절",
+   "word": "절벽",
+   "source": "벽",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 120.001
+  },
+  {
+   "name": "x02",
+   "id": "삼/삼한사온",
+   "syllable": "삼",
+   "word": "삼한사온",
+   "source": "온",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "x03",
+   "id": "완/완충",
+   "syllable": "완",
+   "word": "완충",
+   "source": "충",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "x04",
+   "id": "절/절충",
+   "syllable": "절",
+   "word": "절충",
+   "source": "충",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "x05",
+   "id": "완/완벽",
+   "syllable": "완",
+   "word": "완벽",
+   "source": "벽",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}

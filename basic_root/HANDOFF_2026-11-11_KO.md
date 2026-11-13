@@ -307,8 +307,13 @@ python3 replay_progress.py
 
 - 저장소(`results/replayN/archive/`): 국면 `pos.json`, 입력 `in.txt`, 보관본을 다시 검증한 기록 `verify.json`, 색인 `INDEX.json`(파일마다 sha256, 크기, 릴리스 주소, 올린 뒤 확인했는지). 원본 증명서의 기록은 `results/replayN/sources/<음절>/`.
 - 증명서 파일: 릴리스 `alt817-proofs-replayN`의 첨부파일 `<sha256>.v4.gz`. 같은 국면에서 같은 증명서가 나온 경우 파일은 하나입니다.
-- **작업 세션에는 릴리스를 만들 권한이 없었습니다.** 그래서 파일을 세션 브랜치 `ccr-e9c317a6-opqe7c`의 `release_staging/<태그>/`에 임시로 두었습니다(올리는 법은 그 폴더의 `README_KO.md`). 올리기 전에는 그 브랜치를 지우지 마세요.
-- 올린 뒤: `python3 replay_archive.py replayN --check-release 1`. 주소마다 다시 내려받아 sha256을 비교하고 `INDEX.json`에 적습니다. 그다음 `replay_progress.py`를 다시 돌리면 표의 '아직 안 올림'이 '확인됨'으로 바뀝니다.
+- **올리는 방법.** 작업 세션은 릴리스를 직접 만들 수 없어서, 저장소의 GitHub Actions 작업으로 올립니다.
+  1. `replay_archive.py … --release 태그 --staging 폴더`가 모아 둔 파일을 세션 브랜치 `ccr-e9c317a6-opqe7c`의 `release_staging/<태그>/`에 커밋해 올립니다.
+  2. 그 브랜치의 작업 `upload-proof-releases`(`.github/workflows/upload-proof-releases.yml`)를 **손으로 실행**합니다. 입력은 `tags`(태그), `upload`(`yes`), `target`(태그를 붙일 곳: 연구 브랜치)입니다. 작업은 릴리스를 만들어 파일을 첨부하고, 첨부한 파일을 모두 다시 내려받아 sha256을 비교합니다. 손으로 실행하지 않으면 아무것도 올리지 않습니다.
+  3. 작업 환경에서도 `python3 replay_archive.py replayN --check-release 1`로 다시 내려받아 확인합니다.
+- 2026-11-13에 묶음 3~12의 증명서 286개(약 1.3GB)를 이렇게 올렸고, 모두 다시 내려받아 sha256이 같음을 확인했습니다. 주소는 `https://github.com/baekjw2435/AI-/releases/tag/alt817-proofs-replayN`입니다.
+- 확인이 끝난 묶음의 `release_staging/` 파일은 더 필요하지 않지만, 지우지 않고 두었습니다. 지울지는 사용자가 정합니다.
+- `--check-release 1`은 주소마다 다시 내려받아 sha256을 비교하고 `INDEX.json`에 적습니다. 그다음 `replay_batch_readme.py`와 `replay_progress.py`를 다시 돌리면 문서의 상태가 '확인됨'으로 바뀝니다.
 - 묶음 1·2의 증명서(약 200MB)는 저장소에 그대로 둡니다. 과거 기록은 고치지 않습니다.
 
 ### 7-4. 알아 둘 점

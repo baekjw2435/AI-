@@ -26,7 +26,7 @@ def main():
     batches = sorted((p for p in res.glob('replay*') if (p / 'archive' / 'INDEX.json').exists()),
                      key=lambda p: int(re.sub(r'\D', '', p.name) or 0))
     L = ['# 재생으로 푼 묶음 정리', '',
-         '이 파일은 `replay_progress.py`가 `results/replay*/`의 기록에서 만듭니다. 직접 고치지 마세요.', '',
+         '이 파일은 `replay_progress.py`가 `results/replay*/`와 `results/direct*/`의 기록에서 만듭니다. 직접 고치지 마세요.', '',
          '- 확정은 모두 그 국면의 v4 증명서가 C++ `verify_v4`의 수락 조건을 통과한 것입니다.',
          '- 시간은 재생 실행만 더한 값입니다(계산기 + 검증). 원본 증명서 준비 시간은 따로 적습니다.',
          '- 묶음 1·2는 직접 탐색과 비교한 실험입니다. 여기에는 재생 쪽 숫자만 적습니다.', '',
@@ -66,6 +66,35 @@ def main():
     L.append(f'| **합계** | {T["n"]:.0f} | {T["dec"]:.0f} | {T["lose"]:.0f} | {T["win"]:.0f} | {T["und"]:.0f} | {T["secs"]:,.0f} | {T["src"]:.0f} | '
              f'{T["prep"]:,.0f} 이상 | {T["files"]:.0f} | {T["bytes"] / 1e6:,.0f} | |')
     L.append('')
+    # batches that ran direct search only (first moves the replay could not decide)
+    dbatches = sorted((p for p in res.glob('direct*') if (p / 'archive' / 'INDEX.json').exists()),
+                      key=lambda p: int(re.sub(r'\D', '', p.name) or 0))
+    direct_runs = defaultdict(list)     # id -> [(batch, run record)] : every direct-search run of a first move
+    for b in batches + dbatches:
+        for p in sorted(b.glob('*.phase1.json')):
+            r = json.loads(p.read_text(encoding='utf-8'))
+            if r.get('direct'):
+                direct_runs[r['id']].append((b.name, r))
+    if dbatches:
+        L += ['직접 탐색만 돌린 묶음(재생이 못 푼 첫 수):', '',
+              '| 묶음 | 첫 수 | 확정 | 지는 수 | 이기는 수 | 미확정 | 시간(초) | 증명서 파일 | 크기(MB) | 증명서 위치 |',
+              '|---|---:|---:|---:|---:|---:|---:|---:|---:|---|']
+        for b in dbatches:
+            recs = [json.loads(p.read_text(encoding='utf-8')) for p in sorted(b.glob('*.phase1.json'))]
+            idx = json.loads((b / 'archive' / 'INDEX.json').read_text(encoding='utf-8'))
+            dec = [r for r in recs if r['decided']]
+            secs = sum(r['direct']['solver_wall_seconds'] + (r['direct'].get('verify_seconds') or 0) for r in recs)
+            rel = idx.get('release')
+            if rel:
+                where = f'릴리스 `{rel["tag"]}`' + (' (확인됨)' if rel['status'].startswith('uploaded') else ' (**아직 안 올림**)')
+                if not rel['status'].startswith('uploaded') and idx['certificate_files']:
+                    staged.append((rel['tag'], idx['certificate_files'], idx['certificate_bytes']))
+            else:
+                where = f'저장소 `results/{b.name}/archive/certs/`'
+            L.append(f'| {b.name} | {len(recs)} | {len(dec)} | {sum(r["first_move"] == "lose" for r in dec)} | {sum(r["first_move"] == "win" for r in dec)} | '
+                     f'{len(recs) - len(dec)} | {secs:,.0f} | {idx["certificate_files"]} | {idx["certificate_bytes"] / 1e6:,.0f} | {where} |')
+            wins += [(b.name + ' (직접 탐색)', words[r['id']], r['source']['syllable']) for r in dec if r['first_move'] == 'win']
+        L.append('')
     L += ['- 같은 첫 수를 두 묶음에서 돌린 경우가 있어, 확정 합계는 새로 확정된 첫 수의 수와 다를 수 있습니다. 정확한 수는 `TARGETS_KO.md`에 있습니다.',
           "- 원본 준비의 '이상'은 재시작으로 잃은 계산이 있어 하한이라는 뜻입니다" + (f'({", ".join(lows)}).' if lows else '.'), '']
     left = [t for t in doc['targets'] if t['existing']['evidence'] != 'verified' and not any(e['decided'] for e in summ.get(t['id'], []))]
@@ -74,18 +103,23 @@ def main():
         by[t['words'][0][-1]] += 1
     L += ['## 아직 미검증인 첫 수', '', f'- **{len(left)}개**가 남았습니다. 넘겨주는 음절별: ' +
           ', '.join(f'{s} {n}' for s, n in sorted(by.items(), key=lambda x: (-x[1], x[0]))), '']
-    still = [u for u in unds if not any(e['decided'] for e in summ.get(u[1], []))]
-    if still:
-        L += ['## 재생으로 못 푼 것 (미확정)', '', '| 묶음 | 첫 수 | 넘겨준 음절 |', '|---|---|---|']
+    if unds:
+        L += ['## 재생이 한도 안에 못 푼 첫 수', '',
+              '| 재생 묶음 | 첫 수 | 넘겨준 음절 | 직접 탐색 | 지금 |', '|---|---|---|---|---|']
         seen = set()
-        for bn, tid, w, s in still:
+        n_left = 0
+        for bn, tid, w, s in unds:
             if tid in seen:
                 continue
             seen.add(tid)
-            L.append(f'| {bn} | {w} | {s} |')
-        L.append('')
+            d = [f'{dn}: ' + ('확정' if r['direct']['decided'] else f'미확정({r["direct"]["search_seconds"] or 0:,.0f}초)') for dn, r in direct_runs.get(tid, [])]
+            first = next((e for e in summ.get(tid, []) if e['decided']), None)
+            now = '미확정' if first is None else ('**지는 수**' if first['first_move'] == 'lose' else '**이기는 수**') + f' ({first["batch"]})'
+            n_left += first is None
+            L.append(f'| {bn} | {w} | {s} | {", ".join(d) if d else "안 해 봄"} | {now} |')
+        L += ['', f'- 이 가운데 지금도 미확정인 것은 {n_left}개입니다.', '']
     if wins:
-        L += ['## 재생으로 확정된 이기는 첫 수', '', '| 묶음 | 첫 수 | 넘겨준 음절 |', '|---|---|---|']
+        L += ['## 확정된 이기는 첫 수 (묶음 1부터)', '', '| 묶음 | 첫 수 | 넘겨준 음절 |', '|---|---|---|']
         L += [f'| {bn} | {w} | {s} |' for bn, w, s in wins]
         L.append('')
     if staged:

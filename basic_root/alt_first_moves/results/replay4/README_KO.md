@@ -1,4 +1,4 @@
-# 재생 풀이 묶음 replay4 
+# 재생 풀이 묶음: replay4
 
 미검증 첫 수가 많이 걸려 있고 기존 증명이 작은 음절 20개의 원본 증명서를 새로 준비해, 그 음절을 넘겨주는 미검증 첫 수 160개를 재생으로 풀었습니다(2026-11-13).
 
@@ -78,9 +78,9 @@
 ## 보관
 
 - 증명서 파일 104개(124MB)는 저장소에 넣지 않습니다. GitHub 릴리스 `alt817-proofs-replay4`의 첨부파일로 둡니다.
-- 상태: staged: the files are not attached to the release yet
+- 상태: **릴리스에 올렸습니다.** 올린 파일을 모두 다시 내려받아 sha256이 색인과 같음을 확인했습니다(2026-11-13 17:05:38). 주소: https://github.com/baekjw2435/AI-/releases/tag/alt817-proofs-replay4
 - 저장소에는 국면(`archive/<사례>/pos.json`), 입력(`in.txt`), 보관본을 다시 검증한 기록(`verify.json`), 그리고 파일마다 sha256과 주소를 적은 색인(`archive/INDEX.json`)이 있습니다.
-- 올린 뒤 확인: `python3 replay_archive.py replay4 --check-release 1` (주소마다 다시 내려받아 sha256 비교).
+- 다시 확인하려면: `python3 replay_archive.py replay4 --check-release 1` (주소마다 다시 내려받아 sha256 비교).
 
 ## 조건
 

@@ -1,0 +1,110 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay9-v1:\" + id), first 999",
+ "eligible": 10,
+ "eligible_by_source": {
+  "증": 10
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "t01",
+   "id": "합/합격증",
+   "syllable": "합",
+   "word": "합격증",
+   "source": "증",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "t02",
+   "id": "명/명증",
+   "syllable": "명",
+   "word": "명증",
+   "source": "증",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "t03",
+   "id": "식/식곤증",
+   "syllable": "식",
+   "word": "식곤증",
+   "source": "증",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "t04",
+   "id": "야/야맹증",
+   "syllable": "야",
+   "word": "야맹증",
+   "source": "증",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "t05",
+   "id": "축/축농증",
+   "syllable": "축",
+   "word": "축농증",
+   "source": "증",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "t06",
+   "id": "운/운전면허증",
+   "syllable": "운",
+   "word": "운전면허증",
+   "source": "증",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "t07",
+   "id": "급/급증",
+   "syllable": "급",
+   "word": "급증",
+   "source": "증",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "t08",
+   "id": "교/교통체증",
+   "syllable": "교",
+   "word": "교통체증",
+   "source": "증",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "t09",
+   "id": "학/학생증",
+   "syllable": "학",
+   "word": "학생증",
+   "source": "증",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "t10",
+   "id": "진/진폐증",
+   "syllable": "진",
+   "word": "진폐증",
+   "source": "증",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  }
+ ]
+}
