@@ -8487,5 +8487,284 @@
    "input_sha256": "eac0994e82d94fe37e0bfd0527b45ab436aff6623eb25674a3920ce830f88339",
    "verifier": "verify_v4 (C++)"
   }
+ ],
+ "박/박학다식": [
+  {
+   "id": "박/박학다식",
+   "batch": "replay8",
+   "name": "s01",
+   "phases": 1,
+   "search_seconds_total": 2.87,
+   "mid_calls_total": 98772,
+   "decided": true,
+   "spent_seconds_total": 2.87,
+   "first_move": "lose",
+   "reply": [
+    "식충"
+   ],
+   "proof_nodes": 1519380,
+   "proof_bytes": 11001886,
+   "proof_seconds": 9.081236,
+   "verify_seconds": 34.97,
+   "proof_sha256": "8d8717b8fb151366aab9f53a25418cbc3f6a602dc860d3e3600a5acb3777b28a",
+   "position_sha256": "99e2a8c69dc0a6cb0c9575bdc74f039ca23f7be7adb6aa216d0acb355814c5e5",
+   "input_sha256": "b1f9766023898c075edf2a274212910803fbda1a12d16e68af0bbb7e23eded08",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "군/군대식": [
+  {
+   "id": "군/군대식",
+   "batch": "replay8",
+   "name": "s02",
+   "phases": 1,
+   "search_seconds_total": 3.052,
+   "mid_calls_total": 226853,
+   "decided": true,
+   "spent_seconds_total": 3.052,
+   "first_move": "lose",
+   "reply": [
+    "식충"
+   ],
+   "proof_nodes": 1522870,
+   "proof_bytes": 11028078,
+   "proof_seconds": 9.46715,
+   "verify_seconds": 35.404,
+   "proof_sha256": "0c61b6edbd1ef84ca207a81bb208c552764f8d535be8d5880232ebcd2df0ecb0",
+   "position_sha256": "36d773f1826651cff638de92d2ddfd97c5de54f1930e2f97d89e39398d379c6d",
+   "input_sha256": "ec571c64e97cb115e39edc9af2698e126f1a2777d43e9e356dfa4b907b021be4",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "절/절식": [
+  {
+   "id": "절/절식",
+   "batch": "replay8",
+   "name": "s03",
+   "phases": 1,
+   "search_seconds_total": 2.892,
+   "mid_calls_total": 40,
+   "decided": true,
+   "spent_seconds_total": 2.892,
+   "first_move": "lose",
+   "reply": [
+    "식충"
+   ],
+   "proof_nodes": 1513270,
+   "proof_bytes": 10957412,
+   "proof_seconds": 9.113449,
+   "verify_seconds": 35.567,
+   "proof_sha256": "4d971d44205a11857304395159cfe743549fb17a08a08a11720ba138379ed88f",
+   "position_sha256": "c3822d8033b6c7488b78fe8c7e8b58c8b71587e36da158d78a31361ea1193832",
+   "input_sha256": "b72fa7f39cd36ec076a9c518eeaff369dee0f80c980b08645d4de59a1b316207",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "급/급식": [
+  {
+   "id": "급/급식",
+   "batch": "replay8",
+   "name": "s04",
+   "phases": 1,
+   "search_seconds_total": 2.528,
+   "mid_calls_total": 104,
+   "decided": true,
+   "spent_seconds_total": 2.528,
+   "first_move": "lose",
+   "reply": [
+    "식충"
+   ],
+   "proof_nodes": 1512911,
+   "proof_bytes": 10954235,
+   "proof_seconds": 9.102903,
+   "verify_seconds": 35.211,
+   "proof_sha256": "24759a2bf3919e389961be64f86b4968ca8ca8efda63fb38976067eda151c32b",
+   "position_sha256": "86f844407af87258dbb3618078d49081fc0d75bee3ea79c37da3d1f36682beb0",
+   "input_sha256": "74d856e4e7f99c5bb8fde17716501c699e42a027180f3007b5ec4094b7c63b12",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "준/준공식": [
+  {
+   "id": "준/준공식",
+   "batch": "replay8",
+   "name": "s05",
+   "phases": 1,
+   "search_seconds_total": 2.693,
+   "mid_calls_total": 3632,
+   "decided": true,
+   "spent_seconds_total": 2.693,
+   "first_move": "lose",
+   "reply": [
+    "식충"
+   ],
+   "proof_nodes": 1512850,
+   "proof_bytes": 10954268,
+   "proof_seconds": 9.237892,
+   "verify_seconds": 34.489,
+   "proof_sha256": "42ec50830d5780e9fe5d3527e9afc1c4f378cdc02971ed90480848cd153d19a3",
+   "position_sha256": "69507de13834db2105589490300200a53a7a29a9552b8efb682cd972b52801fd",
+   "input_sha256": "bce8bbefd46c6631d7091ef31f2e1c049a6127cd1b44ff11359e1fe669e2df36",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "직/직업의식": [
+  {
+   "id": "직/직업의식",
+   "batch": "replay8",
+   "name": "s06",
+   "phases": 1,
+   "search_seconds_total": 2.367,
+   "mid_calls_total": 98971,
+   "decided": true,
+   "spent_seconds_total": 2.367,
+   "first_move": "lose",
+   "reply": [
+    "식충"
+   ],
+   "proof_nodes": 1522811,
+   "proof_bytes": 11023638,
+   "proof_seconds": 9.084948,
+   "verify_seconds": 35.441,
+   "proof_sha256": "3847251f8da6178fe5dbb417be9585233ff9984e2b434380663d7e0f8eeda53a",
+   "position_sha256": "8704883a228864d79d9824f63da67c61e8f2d9b8a4ab8d6c738ed90029c10571",
+   "input_sha256": "7a790720321e26c8c9ca6331ba851c25ed99bc2060a59f4baa30122e6b9c6545",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "숙/숙식": [
+  {
+   "id": "숙/숙식",
+   "batch": "replay8",
+   "name": "s07",
+   "phases": 1,
+   "search_seconds_total": 2.388,
+   "mid_calls_total": 15,
+   "decided": true,
+   "spent_seconds_total": 2.388,
+   "first_move": "lose",
+   "reply": [
+    "식충"
+   ],
+   "proof_nodes": 1512927,
+   "proof_bytes": 10954319,
+   "proof_seconds": 8.876006,
+   "verify_seconds": 34.965,
+   "proof_sha256": "729203aae8cbea0ef6c0ce2bbf217db59f1683e9b88a713aa3c97ba583d088c1",
+   "position_sha256": "45bd4d1e2610519ccedf45258351e24c25e452e46a8adccf48034590582e3867",
+   "input_sha256": "7f1be07d6141d205dac48fb2517fcefc656f43bacedfa3462e424737ad6fb9a9",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "학/학식": [
+  {
+   "id": "학/학식",
+   "batch": "replay8",
+   "name": "s08",
+   "phases": 1,
+   "search_seconds_total": 8.389,
+   "mid_calls_total": 4536710,
+   "decided": true,
+   "spent_seconds_total": 8.389,
+   "first_move": "lose",
+   "reply": [
+    "식충"
+   ],
+   "proof_nodes": 1580490,
+   "proof_bytes": 11444002,
+   "proof_seconds": 8.570774,
+   "verify_seconds": 36.406,
+   "proof_sha256": "7d0f51e63c3346508943f8f2160e1a30f69f309c276fee9db5684d6048462e26",
+   "position_sha256": "bd476a2c12ebd76132146c83485ceac4567b075e7cbef2562e5845fb630014db",
+   "input_sha256": "a1ff526348a5e5461c97f5c17b012e13a573773584702cc62a9dc9e0d5f2efa3",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "야/야식": [
+  {
+   "id": "야/야식",
+   "batch": "replay8",
+   "name": "s09",
+   "phases": 1,
+   "search_seconds_total": 600.001,
+   "mid_calls_total": 417210368,
+   "decided": false,
+   "spent_seconds_total": 600.001,
+   "reason": "time_limit",
+   "pn": null,
+   "dn": null
+  }
+ ],
+ "편/편식": [
+  {
+   "id": "편/편식",
+   "batch": "replay8",
+   "name": "s10",
+   "phases": 1,
+   "search_seconds_total": 2.381,
+   "mid_calls_total": 32797,
+   "decided": true,
+   "spent_seconds_total": 2.381,
+   "first_move": "lose",
+   "reply": [
+    "식충"
+   ],
+   "proof_nodes": 1515130,
+   "proof_bytes": 10969560,
+   "proof_seconds": 8.57963,
+   "verify_seconds": 35.324,
+   "proof_sha256": "5ceffd4813ebff84d903b927f81e750cee70359dc9bec4e853df204ef2a19501",
+   "position_sha256": "ee72b16a0835abb0b1577666b110e5601227de8bca845d7e035dbb23457a77c9",
+   "input_sha256": "cb88569a11e6fd004e6ea2a281faca17082c27a5859f02bacf87180411498747",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "폭/폭식": [
+  {
+   "id": "폭/폭식",
+   "batch": "replay8",
+   "name": "s11",
+   "phases": 1,
+   "search_seconds_total": 5.324,
+   "mid_calls_total": 2773825,
+   "decided": true,
+   "spent_seconds_total": 5.324,
+   "first_move": "lose",
+   "reply": [
+    "식충"
+   ],
+   "proof_nodes": 1629859,
+   "proof_bytes": 11794636,
+   "proof_seconds": 9.345403,
+   "verify_seconds": 36.96,
+   "proof_sha256": "a6710f58a5c3f9bb3de4b90d637d0e7c90f352503ea91f745a3d4f84fa265664",
+   "position_sha256": "363e8faa219c7d8a7197ad35bc541ef4742e031371ab79349ea265bd17166791",
+   "input_sha256": "14bc646766656603f9909d854331956eb275f63928b5ab4aa9bea9e3f4210345",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "증/증식": [
+  {
+   "id": "증/증식",
+   "batch": "replay8",
+   "name": "s12",
+   "phases": 1,
+   "search_seconds_total": 95.942,
+   "mid_calls_total": 66407466,
+   "decided": true,
+   "spent_seconds_total": 95.942,
+   "first_move": "lose",
+   "reply": [
+    "식충"
+   ],
+   "proof_nodes": 1937775,
+   "proof_bytes": 14012893,
+   "proof_seconds": 12.251474,
+   "verify_seconds": 44.712,
+   "proof_sha256": "1824b5e498dfcf5fd0f8c5b4021e22ccfc69f6fb7d6ba684897ea9b816a4c016",
+   "position_sha256": "25183d7fc3a2524e278ad11ecd6ade27cfa4d8d18e8709b5317092cc7ef54ca3",
+   "input_sha256": "a8e088f49fa5e4da5d0f29c80eb0c82dd3af3bd70b04c4938f7be1634c133d24",
+   "verifier": "verify_v4 (C++)"
+  }
  ]
 }
