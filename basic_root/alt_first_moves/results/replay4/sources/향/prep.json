@@ -1,0 +1,33 @@
+{
+ "syllable": "향",
+ "vertex": "향",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 0.138,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 88130,
+ "proof_nodes": 3950,
+ "proof_seconds": 0.079614,
+ "solver_wall_seconds": 0.89,
+ "verify_seconds": 0.108,
+ "verify_wall_seconds": 0.11,
+ "proof_bytes": 28463,
+ "proof_sha256": "ed871b272fe7cea890f100c0934dbc2bc9762343eaaa4b5a12ff4179e187c4b2",
+ "position_sha256": "8104a4385925d69f46d9fad105d7f45eec2df000a2ddd7ff1784dab254c13ea1",
+ "input_sha256": "db161e14b5ce75bf46d6043222548c494bc91a03686f6e4a2b417411a8bb4afa",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

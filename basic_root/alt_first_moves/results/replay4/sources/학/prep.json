@@ -1,0 +1,33 @@
+{
+ "syllable": "학",
+ "vertex": "학",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 18.801,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 12920916,
+ "proof_nodes": 102350,
+ "proof_seconds": 1.731471,
+ "solver_wall_seconds": 21.59,
+ "verify_seconds": 2.528,
+ "verify_wall_seconds": 2.53,
+ "proof_bytes": 729128,
+ "proof_sha256": "0f0b1ab954d5122110d3a4326dc162eb59f014ef416a1b016ddc406608e12bd0",
+ "position_sha256": "828022f9c38f09b13fd04174f2cf83c1782394bccdb0dcfbdc395cb710d325b5",
+ "input_sha256": "9693ab79d4751404fe15c26efa1137c4db52cc71d34449fc08101ef7a452c4f4",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

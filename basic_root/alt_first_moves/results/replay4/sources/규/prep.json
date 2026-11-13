@@ -1,0 +1,33 @@
+{
+ "syllable": "규",
+ "vertex": "규",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 51.111,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 37273010,
+ "proof_nodes": 214966,
+ "proof_seconds": 4.089742,
+ "solver_wall_seconds": 56.19,
+ "verify_seconds": 5.497,
+ "verify_wall_seconds": 5.51,
+ "proof_bytes": 1538492,
+ "proof_sha256": "c62b9327775342193b7c80653d2f1bab8834c905874308af7706ff03ddca6f19",
+ "position_sha256": "16806061784daa259464056c99e9491e2d829f61c944107657691f07ba66a8ec",
+ "input_sha256": "01ba9a700221369c86a6b42f00e9db2c5c38e56977951b8c03d740bbd519d214",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

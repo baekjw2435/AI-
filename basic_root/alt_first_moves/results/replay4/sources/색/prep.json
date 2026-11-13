@@ -1,0 +1,33 @@
+{
+ "syllable": "색",
+ "vertex": "색",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 18.295,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 11757746,
+ "proof_nodes": 186926,
+ "proof_seconds": 3.766748,
+ "solver_wall_seconds": 23.05,
+ "verify_seconds": 5.355,
+ "verify_wall_seconds": 5.36,
+ "proof_bytes": 1337596,
+ "proof_sha256": "9d75941480f9676174cbb9570b36f5ef0633880d60051c7c8c0cf03bbb0d88b9",
+ "position_sha256": "15f42b53d1b745be840fd41e6381c8c42068d06a94b8480aeef86336d8438a93",
+ "input_sha256": "46bfce08f9b7b1c05db0118179a88eb2080db626062a6c29eb19d0d8db6f9f18",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

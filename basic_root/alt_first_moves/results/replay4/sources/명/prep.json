@@ -1,0 +1,33 @@
+{
+ "syllable": "명",
+ "vertex": "명",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 64.013,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 41634966,
+ "proof_nodes": 192984,
+ "proof_seconds": 3.990562,
+ "solver_wall_seconds": 69.1,
+ "verify_seconds": 5.076,
+ "verify_wall_seconds": 5.08,
+ "proof_bytes": 1380790,
+ "proof_sha256": "4ba77651aa781f5c3d9b05830def4c055076a85696865d9b2409ce2423203b76",
+ "position_sha256": "7f042d6baa23472076a3d955f2d52547831d26a0ccf613eb41442704666e01c2",
+ "input_sha256": "3450afc0db9e051a89a652270f9951b2d39e81e6c9acc72368aa9df070053afa",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

@@ -1,0 +1,33 @@
+{
+ "syllable": "군",
+ "vertex": "군",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 29.196,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 19082697,
+ "proof_nodes": 199080,
+ "proof_seconds": 4.125034,
+ "solver_wall_seconds": 34.39,
+ "verify_seconds": 5.5,
+ "verify_wall_seconds": 5.51,
+ "proof_bytes": 1422899,
+ "proof_sha256": "734e61f64390905e765d13ead843c13c5b6ee4f594c516c7366d58441a091387",
+ "position_sha256": "e2715e3142d301610cddcaa38576e3424f5055cc89da2950068c06f1a1547769",
+ "input_sha256": "75061a097618e6d942f3e28efe0ee989ab251a5b345498c3052b9d537c5621e1",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

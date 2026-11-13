@@ -1,0 +1,33 @@
+{
+ "syllable": "절",
+ "vertex": "절",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 88.323,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 57769130,
+ "proof_nodes": 274847,
+ "proof_seconds": 5.388999,
+ "solver_wall_seconds": 94.73,
+ "verify_seconds": 7.242,
+ "verify_wall_seconds": 7.25,
+ "proof_bytes": 1966534,
+ "proof_sha256": "bff074cc0af8738718a985e3ce45e4e423c36b2b698ca407c465977090dafaa5",
+ "position_sha256": "8793e742a032b5111cf70ef8fcc72aec1aef36ee9edb524443f87579cb47c05d",
+ "input_sha256": "0f26d8c127b596ac35cf694b5ca3c8918e38c5c8abbd9373703819d71a360b1f",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}
