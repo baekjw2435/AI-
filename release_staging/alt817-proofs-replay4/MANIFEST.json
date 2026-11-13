@@ -1,0 +1,811 @@
+{
+ "release_tag": "alt817-proofs-replay4",
+ "files": {
+  "b0818872a503b508ad5749c1a876dd250b721aab2fa9b42cf02784fd3c563e53.v4.gz": {
+   "sha256": "b0818872a503b508ad5749c1a876dd250b721aab2fa9b42cf02784fd3c563e53",
+   "bytes": 1348565,
+   "certifies": [
+    "replay4/k001 즉/즉각적",
+    "replay4/k008 퇴/퇴적",
+    "replay4/k025 학/학구적",
+    "replay4/k029 변/변칙적",
+    "replay4/k041 항/항구적",
+    "replay4/k042 압/압도적",
+    "replay4/k049 진/진보적",
+    "replay4/k050 급/급진적",
+    "replay4/k061 병/병적",
+    "replay4/k063 역/역동적",
+    "replay4/k072 환/환경적",
+    "replay4/k100 편/편파적",
+    "replay4/k101 교/교육적",
+    "replay4/k102 숙/숙명적",
+    "replay4/k104 규/규범적",
+    "replay4/k108 순/순간적",
+    "replay4/k111 명/명상적",
+    "replay4/k115 야/야만적",
+    "replay4/k135 절/절대적",
+    "replay4/k138 축/축적",
+    "replay4/k148 직/직간접적",
+    "replay4/k153 행/행적",
+    "replay4/k155 운/운명적"
+   ]
+  },
+  "00f68a547a60324acbd17136cd72b87fff967a55cd90c611bc62b93f710da461.v4.gz": {
+   "sha256": "00f68a547a60324acbd17136cd72b87fff967a55cd90c611bc62b93f710da461",
+   "bytes": 1379895,
+   "certifies": [
+    "replay4/k002 변/변명",
+    "replay4/k026 운/운명",
+    "replay4/k032 병/병명",
+    "replay4/k077 절/절명",
+    "replay4/k084 규/규명",
+    "replay4/k106 박/박명",
+    "replay4/k107 숙/숙명",
+    "replay4/k124 직/직명"
+   ]
+  },
+  "0dd327a6f0c1e689b260827089697628f71c9e4eb8c604706565396186d5e076.v4.gz": {
+   "sha256": "0dd327a6f0c1e689b260827089697628f71c9e4eb8c604706565396186d5e076",
+   "bytes": 1962681,
+   "certifies": [
+    "replay4/k003 절/절절",
+    "replay4/k028 변/변절",
+    "replay4/k133 명/명사절"
+   ]
+  },
+  "c7dfe3309a49544180ed17e0893ca84b651b89e7a035153de924baa0bbd13e6d.v4.gz": {
+   "sha256": "c7dfe3309a49544180ed17e0893ca84b651b89e7a035153de924baa0bbd13e6d",
+   "bytes": 728798,
+   "certifies": [
+    "replay4/k004 박/박학",
+    "replay4/k007 진/진학",
+    "replay4/k017 야/야학",
+    "replay4/k040 군/군계일학",
+    "replay4/k043 법/법학",
+    "replay4/k053 식/식물학",
+    "replay4/k099 병/병리학",
+    "replay4/k109 홍/홍학",
+    "replay4/k110 퇴/퇴학",
+    "replay4/k113 교/교육대학"
+   ]
+  },
+  "e8d100b50eeea888700fc01352eb54093c6f67b740fa20265331797a3dfe7a35.v4.gz": {
+   "sha256": "e8d100b50eeea888700fc01352eb54093c6f67b740fa20265331797a3dfe7a35",
+   "bytes": 1299104,
+   "certifies": [
+    "replay4/k005 군/군락",
+    "replay4/k062 환/환락",
+    "replay4/k134 급/급락"
+   ]
+  },
+  "f003929c7b996fc2befd06857e724e3270b727c3d1a70b05d055a311a8ccd9e5.v4.gz": {
+   "sha256": "f003929c7b996fc2befd06857e724e3270b727c3d1a70b05d055a311a8ccd9e5",
+   "bytes": 634017,
+   "certifies": [
+    "replay4/k006 순/순직"
+   ]
+  },
+  "a178b32f517e66fc5e93f2122770a74f85e20c4ebcb0cf59cfc8687d5593d5e2.v4.gz": {
+   "sha256": "a178b32f517e66fc5e93f2122770a74f85e20c4ebcb0cf59cfc8687d5593d5e2",
+   "bytes": 1407467,
+   "certifies": [
+    "replay4/k009 승/승차권"
+   ]
+  },
+  "f6472b3f42747c563cec1004f3d3334ec3337762349741714b6c2ef83fa0b235.v4.gz": {
+   "sha256": "f6472b3f42747c563cec1004f3d3334ec3337762349741714b6c2ef83fa0b235",
+   "bytes": 1538182,
+   "certifies": [
+    "replay4/k010 절/절규",
+    "replay4/k031 법/법규",
+    "replay4/k073 교/교통법규"
+   ]
+  },
+  "13198f0b237942a35261486ea60d1d909334852ee4e27e0fc0c732d1b58355c1.v4.gz": {
+   "sha256": "13198f0b237942a35261486ea60d1d909334852ee4e27e0fc0c732d1b58355c1",
+   "bytes": 1445345,
+   "certifies": [
+    "replay4/k011 식/식욕부진"
+   ]
+  },
+  "26e9210eb58f10f0230daf0a7076d58826091809d68202bbd579b81440c4fd5e.v4.gz": {
+   "sha256": "26e9210eb58f10f0230daf0a7076d58826091809d68202bbd579b81440c4fd5e",
+   "bytes": 768602,
+   "certifies": [
+    "replay4/k012 움/움직움직",
+    "replay4/k033 숙/숙직",
+    "replay4/k089 명/명예직",
+    "replay4/k090 교/교직"
+   ]
+  },
+  "af35c94a0407cf2872484c0dbf58dd2bb333a1f8df9d0a72e6fbe19f9dfc8da0.v4.gz": {
+   "sha256": "af35c94a0407cf2872484c0dbf58dd2bb333a1f8df9d0a72e6fbe19f9dfc8da0",
+   "bytes": 1578151,
+   "certifies": [
+    "replay4/k013 돌/돌변"
+   ]
+  },
+  "035c121f75fecf9e971d257b08e77841be2266a6e4f4e783583bb7c64862fc5f.v4.gz": {
+   "sha256": "035c121f75fecf9e971d257b08e77841be2266a6e4f4e783583bb7c64862fc5f",
+   "bytes": 1358979,
+   "certifies": [
+    "replay4/k014 순/순환"
+   ]
+  },
+  "92cf26ad39672a6a03651060bcd6e093b973ff74cecab88c813cd7014adab0a9.v4.gz": {
+   "sha256": "92cf26ad39672a6a03651060bcd6e093b973ff74cecab88c813cd7014adab0a9",
+   "bytes": 1354375,
+   "certifies": [
+    "replay4/k015 돌/돌발적"
+   ]
+  },
+  "d1324372f7174b3abd19cfb9f91274f49539b109cdde01110549fdcde35839eb.v4.gz": {
+   "sha256": "d1324372f7174b3abd19cfb9f91274f49539b109cdde01110549fdcde35839eb",
+   "bytes": 1508267,
+   "certifies": [
+    "replay4/k016 교/교수진",
+    "replay4/k023 퇴/퇴진",
+    "replay4/k030 급/급진",
+    "replay4/k036 탕/탕진",
+    "replay4/k044 삼/삼진",
+    "replay4/k052 풍/풍진",
+    "replay4/k058 항/항공사진",
+    "replay4/k129 직/직진",
+    "replay4/k136 행/행진"
+   ]
+  },
+  "7ef4bb291881e2da41b47632ee37725400c31604c4f2b08988af70da411ae9ad.v4.gz": {
+   "sha256": "7ef4bb291881e2da41b47632ee37725400c31604c4f2b08988af70da411ae9ad",
+   "bytes": 1335294,
+   "certifies": [
+    "replay4/k018 맹/맹목적"
+   ]
+  },
+  "a345b7c41d7da13e9528347c043cf9a2af568efc1d0e12b16c00acd5ff37c576.v4.gz": {
+   "sha256": "a345b7c41d7da13e9528347c043cf9a2af568efc1d0e12b16c00acd5ff37c576",
+   "bytes": 1457687,
+   "certifies": [
+    "replay4/k019 직/직권"
+   ]
+  },
+  "69a70dd2eafe8bdffad1ae2f8cb1f72f131ab80aea87ed5717122473255d913d.v4.gz": {
+   "sha256": "69a70dd2eafe8bdffad1ae2f8cb1f72f131ab80aea87ed5717122473255d913d",
+   "bytes": 1416830,
+   "certifies": [
+    "replay4/k020 폭/폭군",
+    "replay4/k070 진/진군",
+    "replay4/k097 행/행군",
+    "replay4/k132 학/학군"
+   ]
+  },
+  "8620bf8883d1a6f7bf1a1aff132c427dc1125b06d4b7d350bcfdc8b8919c73b7.v4.gz": {
+   "sha256": "8620bf8883d1a6f7bf1a1aff132c427dc1125b06d4b7d350bcfdc8b8919c73b7",
+   "bytes": 1577167,
+   "certifies": [
+    "replay4/k021 언/언변"
+   ]
+  },
+  "41abf3a7bade1c31048f97e544757a19205afd8d59e74c186a14100fab63f3f6.v4.gz": {
+   "sha256": "41abf3a7bade1c31048f97e544757a19205afd8d59e74c186a14100fab63f3f6",
+   "bytes": 1590620,
+   "certifies": [
+    "replay4/k022 승/승낙"
+   ]
+  },
+  "e9d4198fb581c037c8d82eb7f530639092e4b7043f07b5c4a87c47a62952a0c4.v4.gz": {
+   "sha256": "e9d4198fb581c037c8d82eb7f530639092e4b7043f07b5c4a87c47a62952a0c4",
+   "bytes": 1452292,
+   "certifies": [
+    "replay4/k024 교/교권"
+   ]
+  },
+  "1f6fb239438713bc3c2d96c0f4ddf7adcff785dad62cd14d0c915c138722845e.v4.gz": {
+   "sha256": "1f6fb239438713bc3c2d96c0f4ddf7adcff785dad62cd14d0c915c138722845e",
+   "bytes": 1452661,
+   "certifies": [
+    "replay4/k027 탑/탑승권"
+   ]
+  },
+  "20dc74ed639e7feaac0d63c24bfc7378bb66671d015674069013122c514772df.v4.gz": {
+   "sha256": "20dc74ed639e7feaac0d63c24bfc7378bb66671d015674069013122c514772df",
+   "bytes": 1202173,
+   "certifies": [
+    "replay4/k034 식/식도락"
+   ]
+  },
+  "fe9b45e5339dafcaba39f3fa01b766e32a5e8c11585558130c5e356f07d5aa6e.v4.gz": {
+   "sha256": "fe9b45e5339dafcaba39f3fa01b766e32a5e8c11585558130c5e356f07d5aa6e",
+   "bytes": 768755,
+   "certifies": [
+    "replay4/k035 박/박멸"
+   ]
+  },
+  "48ee88cbe9b0bd5b3ee67c7dc0ecddd90ca0f24028f79d5b0e730fe5db538b93.v4.gz": {
+   "sha256": "48ee88cbe9b0bd5b3ee67c7dc0ecddd90ca0f24028f79d5b0e730fe5db538b93",
+   "bytes": 57353,
+   "certifies": [
+    "replay4/k037 운/운전병",
+    "replay4/k065 합/합병",
+    "replay4/k069 풍/풍토병",
+    "replay4/k095 향/향수병",
+    "replay4/k128 돌/돌림병",
+    "replay4/k142 직/직업병",
+    "replay4/k160 역/역병"
+   ]
+  },
+  "b4daf49751171ca3a97b266eb6f8d36607f8378b3661749348fa2270e468b240.v4.gz": {
+   "sha256": "b4daf49751171ca3a97b266eb6f8d36607f8378b3661749348fa2270e468b240",
+   "bytes": 659816,
+   "certifies": [
+    "replay4/k038 명/명운",
+    "replay4/k086 운/운운",
+    "replay4/k093 행/행운",
+    "replay4/k123 풍/풍운"
+   ]
+  },
+  "2003ebf48b9bfd04979e15948067ed8c54733b882a5b1923fb6933756f84a7d8.v4.gz": {
+   "sha256": "2003ebf48b9bfd04979e15948067ed8c54733b882a5b1923fb6933756f84a7d8",
+   "bytes": 1578918,
+   "certifies": [
+    "replay4/k039 급/급변",
+    "replay4/k085 숙/숙변",
+    "replay4/k114 항/항변"
+   ]
+  },
+  "cca8bf7f38b4610d74c4065bc87afe9675866e219f1f2d2de8376b021e900e45.v4.gz": {
+   "sha256": "cca8bf7f38b4610d74c4065bc87afe9675866e219f1f2d2de8376b021e900e45",
+   "bytes": 1336699,
+   "certifies": [
+    "replay4/k045 병/병색",
+    "replay4/k056 삼/삼색"
+   ]
+  },
+  "44e9ee258d98b9bd26856e6cea174a6bc59bb7c9a059d035212c8ee89c7bd426.v4.gz": {
+   "sha256": "44e9ee258d98b9bd26856e6cea174a6bc59bb7c9a059d035212c8ee89c7bd426",
+   "bytes": 701701,
+   "certifies": [
+    "replay4/k046 향/향락적"
+   ]
+  },
+  "25ac85d5c5d7f05015c1058f87a646ec0594aefc2883d0b7d597c3863f216be8.v4.gz": {
+   "sha256": "25ac85d5c5d7f05015c1058f87a646ec0594aefc2883d0b7d597c3863f216be8",
+   "bytes": 1348379,
+   "certifies": [
+    "replay4/k047 풍/풍자적"
+   ]
+  },
+  "70d791fe2cc33964a8f48f34c94bf6a10be8656f4189a4696c67247def4e12d4.v4.gz": {
+   "sha256": "70d791fe2cc33964a8f48f34c94bf6a10be8656f4189a4696c67247def4e12d4",
+   "bytes": 59541,
+   "certifies": [
+    "replay4/k048 야/야간학교",
+    "replay4/k144 절/절교",
+    "replay4/k159 학/학교"
+   ]
+  },
+  "12558391a4efb88f97ab4a072cb13cb100f5e49e8c80c4e42ada2b652f3d4111.v4.gz": {
+   "sha256": "12558391a4efb88f97ab4a072cb13cb100f5e49e8c80c4e42ada2b652f3d4111",
+   "bytes": 765594,
+   "certifies": [
+    "replay4/k051 퇴/퇴직"
+   ]
+  },
+  "be3f74dab46cf2e4b9fb4d4345f7f6823d85c0079f88ddceea80690e4de58488.v4.gz": {
+   "sha256": "be3f74dab46cf2e4b9fb4d4345f7f6823d85c0079f88ddceea80690e4de58488",
+   "bytes": 1348395,
+   "certifies": [
+    "replay4/k054 낙/낙관적"
+   ]
+  },
+  "6c17f876e54799fd17598ae459df178d0f68dbc79ad676c7706a1feb035cc072.v4.gz": {
+   "sha256": "6c17f876e54799fd17598ae459df178d0f68dbc79ad676c7706a1feb035cc072",
+   "bytes": 1452145,
+   "certifies": [
+    "replay4/k055 항/항공권"
+   ]
+  },
+  "3b00aaba17c90c6aaa6d48b3e21d0fb8f425ff004a9729a96f5091d516717af3.v4.gz": {
+   "sha256": "3b00aaba17c90c6aaa6d48b3e21d0fb8f425ff004a9729a96f5091d516717af3",
+   "bytes": 1506385,
+   "certifies": [
+    "replay4/k057 왕/왕진"
+   ]
+  },
+  "4855aff2578f8ba51788e0e42111f3b8c04a3f4947b4c666899d7f8c3eb7cd87.v4.gz": {
+   "sha256": "4855aff2578f8ba51788e0e42111f3b8c04a3f4947b4c666899d7f8c3eb7cd87",
+   "bytes": 1410849,
+   "certifies": [
+    "replay4/k059 교/교환",
+    "replay4/k080 병/병환",
+    "replay4/k143 변/변환"
+   ]
+  },
+  "37e9de466191b0253efd6340b5372faac84932974dcab17f8e365c4dc51092dd.v4.gz": {
+   "sha256": "37e9de466191b0253efd6340b5372faac84932974dcab17f8e365c4dc51092dd",
+   "bytes": 1477610,
+   "certifies": [
+    "replay4/k060 승/승진"
+   ]
+  },
+  "1e2d34c74921998f4b31cdbec7cab6c9fb62ee35e535779115be40d1386c4049.v4.gz": {
+   "sha256": "1e2d34c74921998f4b31cdbec7cab6c9fb62ee35e535779115be40d1386c4049",
+   "bytes": 1453591,
+   "certifies": [
+    "replay4/k064 압/압권"
+   ]
+  },
+  "bf52b1a9fbbb690d9eae5183a2007444a7ace572b334cbe9bf9ffc6ad4d33bc9.v4.gz": {
+   "sha256": "bf52b1a9fbbb690d9eae5183a2007444a7ace572b334cbe9bf9ffc6ad4d33bc9",
+   "bytes": 1598581,
+   "certifies": [
+    "replay4/k066 군/군사적"
+   ]
+  },
+  "17efc278b42db9afe625c8827a1b0348e58ccfef87516970251b66a1740faa81.v4.gz": {
+   "sha256": "17efc278b42db9afe625c8827a1b0348e58ccfef87516970251b66a1740faa81",
+   "bytes": 1962284,
+   "certifies": [
+    "replay4/k067 삼/삼일절"
+   ]
+  },
+  "432a41bb95328acccad3f17905376a9bf6da0e63633b6155968daeef3566609a.v4.gz": {
+   "sha256": "432a41bb95328acccad3f17905376a9bf6da0e63633b6155968daeef3566609a",
+   "bytes": 1567870,
+   "certifies": [
+    "replay4/k068 순/순위권"
+   ]
+  },
+  "ee59850df0c3c713345188933095c01d5eae2899d4d894da80b00e76fd7d1246.v4.gz": {
+   "sha256": "ee59850df0c3c713345188933095c01d5eae2899d4d894da80b00e76fd7d1246",
+   "bytes": 768765,
+   "certifies": [
+    "replay4/k071 명/명멸",
+    "replay4/k152 환/환멸"
+   ]
+  },
+  "f5cbfaa93c683f7b001e929dfe1582577084f951cb5f3d357d806c5a0608e9e6.v4.gz": {
+   "sha256": "f5cbfaa93c683f7b001e929dfe1582577084f951cb5f3d357d806c5a0608e9e6",
+   "bytes": 1499225,
+   "certifies": [
+    "replay4/k074 순/순진"
+   ]
+  },
+  "edb68c01ed50ce816cc124966936e75e9ffbd4eadbda3e22e2e1db717784d64e.v4.gz": {
+   "sha256": "edb68c01ed50ce816cc124966936e75e9ffbd4eadbda3e22e2e1db717784d64e",
+   "bytes": 1338572,
+   "certifies": [
+    "replay4/k075 권/권위적"
+   ]
+  },
+  "e0c1dc850895ee68acc55dffe7f3ecaf60c5a0aafa284e7640afc51014ed6425.v4.gz": {
+   "sha256": "e0c1dc850895ee68acc55dffe7f3ecaf60c5a0aafa284e7640afc51014ed6425",
+   "bytes": 1737274,
+   "certifies": [
+    "replay4/k076 언/언어권"
+   ]
+  },
+  "04e2c94c87a67c85d2c49d357163e0b5537705dd24dc1cb2f4fd0c9a18923951.v4.gz": {
+   "sha256": "04e2c94c87a67c85d2c49d357163e0b5537705dd24dc1cb2f4fd0c9a18923951",
+   "bytes": 561388,
+   "certifies": [
+    "replay4/k078 법/법률적"
+   ]
+  },
+  "ed871b272fe7cea890f100c0934dbc2bc9762343eaaa4b5a12ff4179e187c4b2.v4.gz": {
+   "sha256": "ed871b272fe7cea890f100c0934dbc2bc9762343eaaa4b5a12ff4179e187c4b2",
+   "bytes": 28463,
+   "certifies": [
+    "replay4/k079 편/편향",
+    "replay4/source 향"
+   ]
+  },
+  "22ee04f0ccf241d1e3e003f3a9d9d4f725d1a50433dfc90e0c295f30b2944bf7.v4.gz": {
+   "sha256": "22ee04f0ccf241d1e3e003f3a9d9d4f725d1a50433dfc90e0c295f30b2944bf7",
+   "bytes": 667775,
+   "certifies": [
+    "replay4/k081 압/압축"
+   ]
+  },
+  "56910141c8888a8812d1e6b93b9380af4d23830eb67a88195f6aff73ab84dee6.v4.gz": {
+   "sha256": "56910141c8888a8812d1e6b93b9380af4d23830eb67a88195f6aff73ab84dee6",
+   "bytes": 1711978,
+   "certifies": [
+    "replay4/k082 탄/탄력적"
+   ]
+  },
+  "96644002cc4ca588c3bd51ab0b341a0ddc6e19e2cf437e802d1302887643b18f.v4.gz": {
+   "sha256": "96644002cc4ca588c3bd51ab0b341a0ddc6e19e2cf437e802d1302887643b18f",
+   "bytes": 668014,
+   "certifies": [
+    "replay4/k083 증/증축"
+   ]
+  },
+  "1dedc87452c2a15386d9460c833e5d1e92bd09442110b0893ee0ad9a637b8f5f.v4.gz": {
+   "sha256": "1dedc87452c2a15386d9460c833e5d1e92bd09442110b0893ee0ad9a637b8f5f",
+   "bytes": 1833523,
+   "certifies": [
+    "replay4/k087 증/증권"
+   ]
+  },
+  "94e766eb4d1043ad2ff1805909aa276d93fbc0645165b04ed00087a5303835fe.v4.gz": {
+   "sha256": "94e766eb4d1043ad2ff1805909aa276d93fbc0645165b04ed00087a5303835fe",
+   "bytes": 69630,
+   "certifies": [
+    "replay4/k088 풍/풍향"
+   ]
+  },
+  "270b68867d14d0a6145adb984e640e97c931d2d6a2074e1c46a734827c151343.v4.gz": {
+   "sha256": "270b68867d14d0a6145adb984e640e97c931d2d6a2074e1c46a734827c151343",
+   "bytes": 1415019,
+   "certifies": [
+    "replay4/k091 증/증후군"
+   ]
+  },
+  "6cdb040f7f5e6ab63399c1260b3beaba4add6305e44f3b77cdd3937437f242e1.v4.gz": {
+   "sha256": "6cdb040f7f5e6ab63399c1260b3beaba4add6305e44f3b77cdd3937437f242e1",
+   "bytes": 1452244,
+   "certifies": [
+    "replay4/k092 폭/폭락"
+   ]
+  },
+  "f35d8be3243cf400c03e3f3fedade03d1535483ad74c7a8cda6440df2152d014.v4.gz": {
+   "sha256": "f35d8be3243cf400c03e3f3fedade03d1535483ad74c7a8cda6440df2152d014",
+   "bytes": 1410674,
+   "certifies": [
+    "replay4/k094 탄/탄환"
+   ]
+  },
+  "7d8562b5d926c3adc1b633312599b423de43b080b10ccebf309bf65d7d2f191e.v4.gz": {
+   "sha256": "7d8562b5d926c3adc1b633312599b423de43b080b10ccebf309bf65d7d2f191e",
+   "bytes": 1720278,
+   "certifies": [
+    "replay4/k096 합/합리적"
+   ]
+  },
+  "2448e4fd4e568c2f988a9b56cd282230357b8d0461833ad5d0d5d4becec77360.v4.gz": {
+   "sha256": "2448e4fd4e568c2f988a9b56cd282230357b8d0461833ad5d0d5d4becec77360",
+   "bytes": 1262075,
+   "certifies": [
+    "replay4/k098 낭/낭만적"
+   ]
+  },
+  "d609d572d4feef28c08d43b9159f7ac1825f1cbb831f5c1252421649c153b594.v4.gz": {
+   "sha256": "d609d572d4feef28c08d43b9159f7ac1825f1cbb831f5c1252421649c153b594",
+   "bytes": 1325296,
+   "certifies": [
+    "replay4/k103 습/습관적"
+   ]
+  },
+  "bb48c490f1256b0f8dc2c01735104c17d0f7c9c13b89ff59d3bbd74288688321.v4.gz": {
+   "sha256": "bb48c490f1256b0f8dc2c01735104c17d0f7c9c13b89ff59d3bbd74288688321",
+   "bytes": 206829,
+   "certifies": [
+    "replay4/k105 행/행랑"
+   ]
+  },
+  "3180407469bbee4655b11f2f2a20f81901c53290df52a12882c235f7a1523353.v4.gz": {
+   "sha256": "3180407469bbee4655b11f2f2a20f81901c53290df52a12882c235f7a1523353",
+   "bytes": 1347671,
+   "certifies": [
+    "replay4/k112 극/극단적"
+   ]
+  },
+  "eab8056609637fc919320d8a538516f25d03b315034c6683aeb66e786bd96887.v4.gz": {
+   "sha256": "eab8056609637fc919320d8a538516f25d03b315034c6683aeb66e786bd96887",
+   "bytes": 39404,
+   "certifies": [
+    "replay4/k116 낙/낙향"
+   ]
+  },
+  "f96052c4260b2f4d47afb5ecbff29c61fc79851ad1247afb3a03a94b5f83f80d.v4.gz": {
+   "sha256": "f96052c4260b2f4d47afb5ecbff29c61fc79851ad1247afb3a03a94b5f83f80d",
+   "bytes": 58860,
+   "certifies": [
+    "replay4/k117 순/순교"
+   ]
+  },
+  "dfe3f7fdde343445e1472b441a085f500f3356e4ea0054337e730e07cece0b2c.v4.gz": {
+   "sha256": "dfe3f7fdde343445e1472b441a085f500f3356e4ea0054337e730e07cece0b2c",
+   "bytes": 1431416,
+   "certifies": [
+    "replay4/k118 왕/왕권"
+   ]
+  },
+  "11b0e9b395182c30df56696db528b0db6ea240f12c4fdaae501b033fa5630fd6.v4.gz": {
+   "sha256": "11b0e9b395182c30df56696db528b0db6ea240f12c4fdaae501b033fa5630fd6",
+   "bytes": 1379607,
+   "certifies": [
+    "replay4/k119 행/행방불명"
+   ]
+  },
+  "6a8bb4f202d195f2f71444e7fca9202ff24cec3a88d022bf37e5ddf536863126.v4.gz": {
+   "sha256": "6a8bb4f202d195f2f71444e7fca9202ff24cec3a88d022bf37e5ddf536863126",
+   "bytes": 1221340,
+   "certifies": [
+    "replay4/k120 향/향락"
+   ]
+  },
+  "19f367943bd3eda5b06b9e01757c0a0cbf4db7070e7c4be9d9a41436e22a43b7.v4.gz": {
+   "sha256": "19f367943bd3eda5b06b9e01757c0a0cbf4db7070e7c4be9d9a41436e22a43b7",
+   "bytes": 1336861,
+   "certifies": [
+    "replay4/k121 변/변색"
+   ]
+  },
+  "69dfc9fe0e3a1e7692ed95e21a72beaf4704a1e1ed7fd48580d6a8a891d04216.v4.gz": {
+   "sha256": "69dfc9fe0e3a1e7692ed95e21a72beaf4704a1e1ed7fd48580d6a8a891d04216",
+   "bytes": 1410919,
+   "certifies": [
+    "replay4/k122 혈/혈액순환"
+   ]
+  },
+  "21f737aa970e7d2a3bd127b6ade64e89c2c6dd0a7c29fef42e4a3b745ed8737e.v4.gz": {
+   "sha256": "21f737aa970e7d2a3bd127b6ade64e89c2c6dd0a7c29fef42e4a3b745ed8737e",
+   "bytes": 1347104,
+   "certifies": [
+    "replay4/k125 언/언어적"
+   ]
+  },
+  "24b88b93c218d9c59ae6915eb6aede84c926b947d7f16fb8428adb9b69a00a61.v4.gz": {
+   "sha256": "24b88b93c218d9c59ae6915eb6aede84c926b947d7f16fb8428adb9b69a00a61",
+   "bytes": 1336826,
+   "certifies": [
+    "replay4/k126 혈/혈색"
+   ]
+  },
+  "ce29f5eb0688a2a17e7cb448b4e5872c75cc21b8b74a5988bad5e7659b5b0635.v4.gz": {
+   "sha256": "ce29f5eb0688a2a17e7cb448b4e5872c75cc21b8b74a5988bad5e7659b5b0635",
+   "bytes": 1508300,
+   "certifies": [
+    "replay4/k127 증/증명사진"
+   ]
+  },
+  "c79257ebc1ebef03a4c49db4362bf573671ef4d7d1ae5c69ca146c02ef47d18a.v4.gz": {
+   "sha256": "c79257ebc1ebef03a4c49db4362bf573671ef4d7d1ae5c69ca146c02ef47d18a",
+   "bytes": 1400870,
+   "certifies": [
+    "replay4/k130 역/역세권"
+   ]
+  },
+  "79f4d01db880868eecb8ef885b6f7fb402663d7adb293cfce097329b81bdc7f6.v4.gz": {
+   "sha256": "79f4d01db880868eecb8ef885b6f7fb402663d7adb293cfce097329b81bdc7f6",
+   "bytes": 1376641,
+   "certifies": [
+    "replay4/k131 왕/왕명"
+   ]
+  },
+  "5d917f1b2dc12746457faa6b367e06b59c66804a64d50dd60c6df6c006b3ede0.v4.gz": {
+   "sha256": "5d917f1b2dc12746457faa6b367e06b59c66804a64d50dd60c6df6c006b3ede0",
+   "bytes": 1452511,
+   "certifies": [
+    "replay4/k137 야/야권"
+   ]
+  },
+  "08d9a84d0ca1e9946a0d1ba4f5b85052559796840997b1a1145ee8512411a82e.v4.gz": {
+   "sha256": "08d9a84d0ca1e9946a0d1ba4f5b85052559796840997b1a1145ee8512411a82e",
+   "bytes": 1301136,
+   "certifies": [
+    "replay4/k139 행/행락"
+   ]
+  },
+  "eb58139b58abc6cc532f72c93e7839dea1ed5c2a30a03c1ea3e2e0add4b63368.v4.gz": {
+   "sha256": "eb58139b58abc6cc532f72c93e7839dea1ed5c2a30a03c1ea3e2e0add4b63368",
+   "bytes": 667803,
+   "certifies": [
+    "replay4/k140 축/축축"
+   ]
+  },
+  "e2dc3165aab2e81b25ab3f57a86b1732f678392deca9c6c689bb77d637cb1694.v4.gz": {
+   "sha256": "e2dc3165aab2e81b25ab3f57a86b1732f678392deca9c6c689bb77d637cb1694",
+   "bytes": 1452404,
+   "certifies": [
+    "replay4/k141 진/진출권"
+   ]
+  },
+  "ad8affa33e0d939fbd8e610aaa356a8075ad6a2305c48b5c68dbabe713e5fc5e.v4.gz": {
+   "sha256": "ad8affa33e0d939fbd8e610aaa356a8075ad6a2305c48b5c68dbabe713e5fc5e",
+   "bytes": 1383051,
+   "certifies": [
+    "replay4/k145 증/증명"
+   ]
+  },
+  "1a5385619b1dfd8898f0816a279340056c16afa5af5daa18f0a20c1f3c6b3828.v4.gz": {
+   "sha256": "1a5385619b1dfd8898f0816a279340056c16afa5af5daa18f0a20c1f3c6b3828",
+   "bytes": 1325567,
+   "certifies": [
+    "replay4/k146 법/법명"
+   ]
+  },
+  "ea5d827424dbcca569f5514adbcad0a9ea1e0232ef8b49a4d68106138d3ba855.v4.gz": {
+   "sha256": "ea5d827424dbcca569f5514adbcad0a9ea1e0232ef8b49a4d68106138d3ba855",
+   "bytes": 1294660,
+   "certifies": [
+    "replay4/k147 퇴/퇴락"
+   ]
+  },
+  "b573c2dfd61e5fef74fb21a0ed1be2a31a3a4243116ffeab2f9e7f03f128a62f.v4.gz": {
+   "sha256": "b573c2dfd61e5fef74fb21a0ed1be2a31a3a4243116ffeab2f9e7f03f128a62f",
+   "bytes": 728656,
+   "certifies": [
+    "replay4/k149 언/언어학"
+   ]
+  },
+  "283825990d15c83d31efe70fb415d4d8e7e8d943aee95e3db162729cb3d97b9c.v4.gz": {
+   "sha256": "283825990d15c83d31efe70fb415d4d8e7e8d943aee95e3db162729cb3d97b9c",
+   "bytes": 1494723,
+   "certifies": [
+    "replay4/k150 습/습진"
+   ]
+  },
+  "9457c504d746ce78469404e06f53825ff6555932d3bbc137cf9237174d13aacd.v4.gz": {
+   "sha256": "9457c504d746ce78469404e06f53825ff6555932d3bbc137cf9237174d13aacd",
+   "bytes": 254158,
+   "certifies": [
+    "replay4/k151 명/명랑"
+   ]
+  },
+  "87c7fd8cb58279c0c08d3d2176789a1f8a5e0c3b97f2b40a8d2ff0ba16c181d9.v4.gz": {
+   "sha256": "87c7fd8cb58279c0c08d3d2176789a1f8a5e0c3b97f2b40a8d2ff0ba16c181d9",
+   "bytes": 1710995,
+   "certifies": [
+    "replay4/k154 행/행정권"
+   ]
+  },
+  "e963180f3604d55f00afb7994183e964b20dc29e6a2f621a48eec8c166f50930.v4.gz": {
+   "sha256": "e963180f3604d55f00afb7994183e964b20dc29e6a2f621a48eec8c166f50930",
+   "bytes": 3302559,
+   "certifies": [
+    "replay4/k156 식/식권"
+   ]
+  },
+  "b2a8697a42150c2e288b70f65022b22c85e9e2a3deab53eda77c34941aca2bc7.v4.gz": {
+   "sha256": "b2a8697a42150c2e288b70f65022b22c85e9e2a3deab53eda77c34941aca2bc7",
+   "bytes": 900942,
+   "certifies": [
+    "replay4/k157 풍/풍랑"
+   ]
+  },
+  "1ce46f63780bc7736863df6fd7eacd6c80748fea618fbb161debea668340f704.v4.gz": {
+   "sha256": "1ce46f63780bc7736863df6fd7eacd6c80748fea618fbb161debea668340f704",
+   "bytes": 1312745,
+   "certifies": [
+    "replay4/k158 극/극락"
+   ]
+  },
+  "51ea30e32d113434a6dc979c32f3f7afe40976fcef0327eb7b8dfc8db76b11ab.v4.gz": {
+   "sha256": "51ea30e32d113434a6dc979c32f3f7afe40976fcef0327eb7b8dfc8db76b11ab",
+   "bytes": 59547,
+   "certifies": [
+    "replay4/source 교"
+   ]
+  },
+  "734e61f64390905e765d13ead843c13c5b6ee4f594c516c7366d58441a091387.v4.gz": {
+   "sha256": "734e61f64390905e765d13ead843c13c5b6ee4f594c516c7366d58441a091387",
+   "bytes": 1422899,
+   "certifies": [
+    "replay4/source 군"
+   ]
+  },
+  "658ecc89c68e4a1e3137d83a897ed1e9ae050839184a9853400a46c46d35d67d.v4.gz": {
+   "sha256": "658ecc89c68e4a1e3137d83a897ed1e9ae050839184a9853400a46c46d35d67d",
+   "bytes": 1452967,
+   "certifies": [
+    "replay4/source 권"
+   ]
+  },
+  "c62b9327775342193b7c80653d2f1bab8834c905874308af7706ff03ddca6f19.v4.gz": {
+   "sha256": "c62b9327775342193b7c80653d2f1bab8834c905874308af7706ff03ddca6f19",
+   "bytes": 1538492,
+   "certifies": [
+    "replay4/source 규"
+   ]
+  },
+  "e3b737228f5731e136f4d7d6a71334db09be815b1d6274445f1c530487e923df.v4.gz": {
+   "sha256": "e3b737228f5731e136f4d7d6a71334db09be815b1d6274445f1c530487e923df",
+   "bytes": 1299094,
+   "certifies": [
+    "replay4/source 낙"
+   ]
+  },
+  "a90334483bb1faf4ed1475dc436baf932d1752065e0891ad6957399d03ccfd91.v4.gz": {
+   "sha256": "a90334483bb1faf4ed1475dc436baf932d1752065e0891ad6957399d03ccfd91",
+   "bytes": 200822,
+   "certifies": [
+    "replay4/source 낭"
+   ]
+  },
+  "4a199aaf4dbb1aca61859db9bcf9195536fb2a00a8c1a87436cfc8987cead475.v4.gz": {
+   "sha256": "4a199aaf4dbb1aca61859db9bcf9195536fb2a00a8c1a87436cfc8987cead475",
+   "bytes": 768751,
+   "certifies": [
+    "replay4/source 멸"
+   ]
+  },
+  "4ba77651aa781f5c3d9b05830def4c055076a85696865d9b2409ce2423203b76.v4.gz": {
+   "sha256": "4ba77651aa781f5c3d9b05830def4c055076a85696865d9b2409ce2423203b76",
+   "bytes": 1380790,
+   "certifies": [
+    "replay4/source 명"
+   ]
+  },
+  "223498660ed618ca606b4f5a1844cd469d0c0e817ff30b282dccf39a6ac5c33a.v4.gz": {
+   "sha256": "223498660ed618ca606b4f5a1844cd469d0c0e817ff30b282dccf39a6ac5c33a",
+   "bytes": 1579914,
+   "certifies": [
+    "replay4/source 변"
+   ]
+  },
+  "88fad0dc1c140c8203f13182c2760e92397ef109a9e33c2e36f67bab33e80118.v4.gz": {
+   "sha256": "88fad0dc1c140c8203f13182c2760e92397ef109a9e33c2e36f67bab33e80118",
+   "bytes": 57386,
+   "certifies": [
+    "replay4/source 병"
+   ]
+  },
+  "9d75941480f9676174cbb9570b36f5ef0633880d60051c7c8c0cf03bbb0d88b9.v4.gz": {
+   "sha256": "9d75941480f9676174cbb9570b36f5ef0633880d60051c7c8c0cf03bbb0d88b9",
+   "bytes": 1337596,
+   "certifies": [
+    "replay4/source 색"
+   ]
+  },
+  "f1f2860b55a515bb86739b1900a37ee3155f4d8c244f1a80808f4f5851d601f6.v4.gz": {
+   "sha256": "f1f2860b55a515bb86739b1900a37ee3155f4d8c244f1a80808f4f5851d601f6",
+   "bytes": 660522,
+   "certifies": [
+    "replay4/source 운"
+   ]
+  },
+  "40b93f5f93acf03322f4f757ee1c08357f78511d5f3af4de7510572520245871.v4.gz": {
+   "sha256": "40b93f5f93acf03322f4f757ee1c08357f78511d5f3af4de7510572520245871",
+   "bytes": 1349024,
+   "certifies": [
+    "replay4/source 적"
+   ]
+  },
+  "bff074cc0af8738718a985e3ce45e4e423c36b2b698ca407c465977090dafaa5.v4.gz": {
+   "sha256": "bff074cc0af8738718a985e3ce45e4e423c36b2b698ca407c465977090dafaa5",
+   "bytes": 1966534,
+   "certifies": [
+    "replay4/source 절"
+   ]
+  },
+  "42d391d82d7ae7ba1ca2dc73083032b48cbba0b2bf6ac560f8ae8798a9be920b.v4.gz": {
+   "sha256": "42d391d82d7ae7ba1ca2dc73083032b48cbba0b2bf6ac560f8ae8798a9be920b",
+   "bytes": 770474,
+   "certifies": [
+    "replay4/source 직"
+   ]
+  },
+  "2382d8aef736afefd4990d18f1a4b493a125b75efa5b74f7175e9f08b0ffc2f4.v4.gz": {
+   "sha256": "2382d8aef736afefd4990d18f1a4b493a125b75efa5b74f7175e9f08b0ffc2f4",
+   "bytes": 1508890,
+   "certifies": [
+    "replay4/source 진"
+   ]
+  },
+  "ef6a9c399ec220def5f74773c339b878a9e4ae72efb71ee1284506886d2647af.v4.gz": {
+   "sha256": "ef6a9c399ec220def5f74773c339b878a9e4ae72efb71ee1284506886d2647af",
+   "bytes": 667948,
+   "certifies": [
+    "replay4/source 축"
+   ]
+  },
+  "0f0b1ab954d5122110d3a4326dc162eb59f014ef416a1b016ddc406608e12bd0.v4.gz": {
+   "sha256": "0f0b1ab954d5122110d3a4326dc162eb59f014ef416a1b016ddc406608e12bd0",
+   "bytes": 729128,
+   "certifies": [
+    "replay4/source 학"
+   ]
+  },
+  "df60f57a674ad2db62bf282c2894f5ad06c78cee0f8ab7662d39a79ac9e798ed.v4.gz": {
+   "sha256": "df60f57a674ad2db62bf282c2894f5ad06c78cee0f8ab7662d39a79ac9e798ed",
+   "bytes": 1411739,
+   "certifies": [
+    "replay4/source 환"
+   ]
+  }
+ },
+ "file_count": 104,
+ "total_bytes": 124468886
+}
