@@ -1,0 +1,11 @@
+{
+ "format": "replay-archive-2",
+ "experiment": "direct2",
+ "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+ "decided_cases": 0,
+ "archived": 0,
+ "accepted": 0,
+ "certificate_files": 0,
+ "certificate_bytes": 0,
+ "cases": []
+}

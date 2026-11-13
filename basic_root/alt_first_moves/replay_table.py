@@ -13,8 +13,16 @@ import sys
 HERE = Path(__file__).resolve().parent
 
 
+def run_seconds(r):
+    """Solver time of one run (all its processes) + the verifier's own time."""
+    # a run that was cut by a restart and resumed from its saved state records the wall time of the LAST solver
+    # process only; its search time (carried in the state) can be larger. Count whichever is larger.
+    solver = max(r['solver_wall_seconds'], (r.get('search_seconds') or 0) + (r.get('proof_seconds') or 0))
+    return solver + (r.get('verify_seconds') or 0)
+
+
 def total(r):
-    return None if r is None else round(r['solver_wall_seconds'] + (r.get('verify_seconds') or 0), 1)
+    return None if r is None else round(run_seconds(r), 1)
 
 
 def f(x, nd=1):

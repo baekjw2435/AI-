@@ -36,6 +36,29 @@ def to_phase(rec):
     return out
 
 
+def end_numbers(case_dir, kind):
+    """Root proof/disproof numbers of the last solver run of an UNDECIDED run, from its run log: how far it got.
+    pn small = close to 'the side to move wins' (the first word loses); dn small = close to the first word winning.
+    Only a rough guide for choosing what to run longer; never a verdict."""
+    out = None
+    f = case_dir / f'{kind}.runs.jsonl'
+    if f.exists():
+        for line in f.read_text(encoding='utf-8').splitlines():
+            e = json.loads(line)
+            if e.get('event') == 'end' and isinstance(e.get('solver'), dict):
+                out = e['solver']
+    elif (case_dir / f'{kind}.log').exists():       # first experiment: the solver's own output line
+        for line in (case_dir / f'{kind}.log').read_text(encoding='utf-8').splitlines():
+            if line.strip().startswith('{'):
+                try:
+                    out = json.loads(line)
+                except ValueError:
+                    pass
+    if out and out.get('result') == 'unknown' and 'pn' in out:
+        return {'end_pn': out['pn'], 'end_dn': out['dn']}
+    return {}
+
+
 def main():
     dst = HERE / 'results' / sys.argv[1]
     dst.mkdir(parents=True, exist_ok=True)
@@ -43,6 +66,9 @@ def main():
     for work in sys.argv[2:]:
         for f in sorted(Path(work).glob('*/result.json')):
             rec = json.loads(f.read_text(encoding='utf-8'))
+            for kind in ('replay', 'direct'):
+                if rec.get(kind) and not rec[kind]['decided']:
+                    rec[kind].update(end_numbers(f.parent, kind))
             (dst / f'{f.parent.name}.phase1.json').write_text(json.dumps(to_phase(rec), ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
             n += 1
     print(n, 'records ->', dst)

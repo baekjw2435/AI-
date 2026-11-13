@@ -17,7 +17,7 @@
    "release_tag": "alt817-proofs-replay13",
    "asset": "603fc73f934bcf756bbd28f4c3fac45c80c2e49e58980fcd0aba0b335df16492.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay13/603fc73f934bcf756bbd28f4c3fac45c80c2e49e58980fcd0aba0b335df16492.v4.gz",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-13 18:05:54",
    "proof_sha256": "603fc73f934bcf756bbd28f4c3fac45c80c2e49e58980fcd0aba0b335df16492",
    "position_sha256": "8b2a7e818f16590afd92d8aa2c57d023de9d7b9942f1577d04fca0eee92acac1",
    "input_sha256": "0d09319ceba3c6945d0cf243b1fcf99615867993b0947953216865d175ec7b5d",
@@ -37,7 +37,7 @@
    "release_tag": "alt817-proofs-replay13",
    "asset": "1c44dda69da0466e3433db526fb43cb1e9f07ee4024287aa0427e91cc58c8dfe.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay13/1c44dda69da0466e3433db526fb43cb1e9f07ee4024287aa0427e91cc58c8dfe.v4.gz",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-13 18:05:54",
    "proof_sha256": "1c44dda69da0466e3433db526fb43cb1e9f07ee4024287aa0427e91cc58c8dfe",
    "position_sha256": "f2064f5678865441e006eb08151c9d6655f8505763abd1c3f9b371a1311d008b",
    "input_sha256": "0b9325e5de6e46e4baf87ab8d0e16eb735a11fed9a9a6d8ca9daccfefbe4ac46",
@@ -57,7 +57,7 @@
    "release_tag": "alt817-proofs-replay13",
    "asset": "a2dc6c7018c7fd70ae5d4bf830dae33092a85f0c4a77a976a163f9afa5e5962e.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay13/a2dc6c7018c7fd70ae5d4bf830dae33092a85f0c4a77a976a163f9afa5e5962e.v4.gz",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-13 18:05:54",
    "proof_sha256": "a2dc6c7018c7fd70ae5d4bf830dae33092a85f0c4a77a976a163f9afa5e5962e",
    "position_sha256": "f58fba3044a8a96a619411d52bae9f6a01bcb347aa8c846572326c0c308b7986",
    "input_sha256": "c82b7d112ccaf0a6906d1ef6bf5b6aea7de47ba2771b2d56999dcc0748fa919e",
@@ -77,7 +77,7 @@
    "release_tag": "alt817-proofs-replay13",
    "asset": "4875be6e27810cad1b90f41826dadeddd0fce2217d12f9b743ba6f3a7a8d2013.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay13/4875be6e27810cad1b90f41826dadeddd0fce2217d12f9b743ba6f3a7a8d2013.v4.gz",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-13 18:05:54",
    "proof_sha256": "4875be6e27810cad1b90f41826dadeddd0fce2217d12f9b743ba6f3a7a8d2013",
    "position_sha256": "c0cd5f73e878b7a40c9e22a3de12ff6b7ae54694b2b86919a1d31daaabc1ba0c",
    "input_sha256": "5c4a6e0995a0cb64aaf00c3ee5f81607a5c0f5757c000f9d3abd97e347f0729c",
@@ -103,7 +103,7 @@
    "release_tag": "alt817-proofs-replay13",
    "asset": "e8b97a58434243770f94ebffe0ac9ef45ef83df44fe2d9b50616a77643a97f82.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay13/e8b97a58434243770f94ebffe0ac9ef45ef83df44fe2d9b50616a77643a97f82.v4.gz",
-   "uploaded_verified": false
+   "uploaded_verified": "2026-11-13 18:05:54"
   },
   {
    "syllable": "온",
@@ -118,7 +118,7 @@
    "release_tag": "alt817-proofs-replay13",
    "asset": "ee2bbd37aa2bab1e80940cc4ac51b440cdd633313ea1374e87f625afc91ee98b.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay13/ee2bbd37aa2bab1e80940cc4ac51b440cdd633313ea1374e87f625afc91ee98b.v4.gz",
-   "uploaded_verified": false
+   "uploaded_verified": "2026-11-13 18:05:54"
   },
   {
    "syllable": "충",
@@ -133,12 +133,13 @@
    "release_tag": "alt817-proofs-replay13",
    "asset": "b753afa10de3a5a60a033722f1ebd60eb499cf91f40f8299fc99ebd7894fac29.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay13/b753afa10de3a5a60a033722f1ebd60eb499cf91f40f8299fc99ebd7894fac29.v4.gz",
-   "uploaded_verified": false
+   "uploaded_verified": "2026-11-13 18:05:54"
   }
  ],
  "release": {
   "tag": "alt817-proofs-replay13",
   "url": "https://github.com/baekjw2435/AI-/releases/tag/alt817-proofs-replay13",
-  "status": "staged: the files are not attached to the release yet"
+  "status": "uploaded, every file downloaded again and its SHA-256 compared",
+  "checked": "2026-11-13 18:05:54"
  }
 }

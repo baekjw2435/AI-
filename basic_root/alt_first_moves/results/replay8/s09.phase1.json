@@ -64,7 +64,9 @@
    "lib_solved": 0
   },
   "search_after_replay_seconds": 566.795,
-  "total_wall_seconds": 601.25
+  "total_wall_seconds": 601.25,
+  "end_pn": 6529,
+  "end_dn": 14009
  },
  "phase": "1",
  "phase_seconds": 600.0,

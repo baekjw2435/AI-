@@ -14,6 +14,8 @@ import subprocess
 import sys
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+from replay_table import run_seconds  # noqa: E402
 KO = {'lose': '지는 수', 'win': '이기는 수'}
 
 
@@ -31,7 +33,7 @@ def main():
     und = [r for r in recs if not r['decided']]
 
     def tot(x):
-        return x['solver_wall_seconds'] + (x.get('verify_seconds') or 0)
+        return run_seconds(x)
 
     L = [f'# {"재생 풀이" if kind == "replay" else "직접 탐색"} 묶음: {name}', '', desc, '']
     L += ['## 결과', '',
@@ -43,7 +45,12 @@ def main():
           f'증명서 쓰기 {sum(r["run"].get("proof_seconds") or 0 for r in dec):,.0f}초, '
           f'검증 {sum(r["run"].get("verify_seconds") or 0 for r in dec):,.0f}초.',
           f'- 재시작으로 끊긴 실행 {sum(r["run"]["interrupted_runs"] for r in recs)}개, '
-          f'증명서를 못 썼거나 거부된 실행 {sum(1 for r in recs if r["run"].get("problem"))}개.', '']
+          f'증명서를 못 썼거나 거부된 실행 {sum(1 for r in recs if r["run"].get("problem"))}개.']
+    cut = [words[r['id']] for r in recs if r['run'].get('spent_is_lower_bound')]
+    if cut:
+        L += [f'- 재시작으로 끊긴 실행({", ".join(cut)})은 저장해 둔 상태에서 남은 시간만 이어 돌렸습니다. '
+              '마지막 저장 뒤 끊길 때까지 한 탐색(저장 간격 60초 이하)은 잃었고, 위 합계에 들어 있지 않습니다.']
+    L.append('')
     by = defaultdict(list)
     for r in dec:
         by[r['source']['syllable']].append(r)
@@ -92,8 +99,10 @@ def main():
                if rel['status'].startswith('staged') else f'- 상태: {rel["status"]}'),
               '- 저장소에는 국면(`archive/<사례>/pos.json`), 입력(`in.txt`), 보관본을 다시 검증한 기록(`verify.json`), 그리고 파일마다 sha256과 주소를 적은 색인(`archive/INDEX.json`)이 있습니다.',
               f'- 다시 확인하려면: `python3 replay_archive.py {name} --check-release 1` (주소마다 다시 내려받아 sha256 비교).', '']
-    else:
+    elif files:
         L += [f'- 증명서 파일 {files}개는 `archive/certs/`에 있습니다.', '']
+    else:
+        L += ['- 확정된 첫 수가 없어 보관할 증명서가 없습니다. 실행 기록은 `*.phase1.json`에 있습니다.', '']
     L += ['## 조건', '',
           (f'- 재생만 돌렸습니다(`--kinds replay --emit-check 0`). 한도 {recs[0]["seconds_limit"]:.0f}초, 저장표 {recs[0]["tt_mb"]}MB, 막힌 곳 예산 {recs[0]["stuck_nodes"]:,}국면, 동시에 {recs[0].get("jobs", 1)}개.'
            if kind == 'replay' else
