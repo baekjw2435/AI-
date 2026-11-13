@@ -1,0 +1,33 @@
+{
+ "syllable": "압",
+ "vertex": "압",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 387.059,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 197566570,
+ "proof_nodes": 1009776,
+ "proof_seconds": 24.940869,
+ "solver_wall_seconds": 414.76,
+ "verify_seconds": 34.879,
+ "verify_wall_seconds": 34.9,
+ "proof_bytes": 7343977,
+ "proof_sha256": "c114836bfa52c063934bac1fb065c041b7522f707603005fa7e7cf5684cd9744",
+ "position_sha256": "6c06b985b58db01887c69aefa25c356f74d731ded42582315654b4e2e7500cc4",
+ "input_sha256": "de4b63904d0f1d80a770eef4756791d60a28650df20d43610e4dd1d999bd0f60",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

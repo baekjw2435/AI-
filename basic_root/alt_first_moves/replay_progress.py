@@ -33,7 +33,7 @@ def main():
          '| 묶음 | 첫 수 | 확정 | 지는 수 | 이기는 수 | 미확정 | 재생 시간(초) | 새 원본 | 원본 준비(초) | 증명서 파일 | 크기(MB) | 증명서 위치 |',
          '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|']
     T = defaultdict(float)
-    wins, unds, staged = [], [], []
+    wins, unds, staged, lows = [], [], [], []
     for b in batches:
         recs = [json.loads(p.read_text(encoding='utf-8')) for p in sorted(b.glob('*.phase1.json'))]
         idx = json.loads((b / 'archive' / 'INDEX.json').read_text(encoding='utf-8'))
@@ -47,6 +47,7 @@ def main():
         preps = [json.loads(p.read_text(encoding='utf-8')) for p in sorted((b / 'sources').glob('*/prep.json'))] if (b / 'sources').exists() else []
         prep_s = sum(j['search_seconds_spent'] + (j['proof_seconds'] or 0) + (j['verify_seconds'] or 0) for j in preps)
         lower = any(j.get('spent_is_lower_bound') for j in preps)
+        lows += [f'{b.name}의 {j["syllable"]}' for j in preps if j.get('spent_is_lower_bound')]
         rel = idx.get('release')
         if rel:
             where = f'릴리스 `{rel["tag"]}`' + (' (확인됨)' if rel['status'].startswith('uploaded') else ' (**아직 안 올림**)')
@@ -66,7 +67,7 @@ def main():
              f'{T["prep"]:,.0f} 이상 | {T["files"]:.0f} | {T["bytes"] / 1e6:,.0f} | |')
     L.append('')
     L += ['- 같은 첫 수를 두 묶음에서 돌린 경우가 있어, 확정 합계는 새로 확정된 첫 수의 수와 다를 수 있습니다. 정확한 수는 `TARGETS_KO.md`에 있습니다.',
-          '- 묶음 1의 원본 8개 중 역·승은 저장 없이 돌리다 재시작으로 잃은 계산이 있어 준비 시간이 하한입니다.', '']
+          "- 원본 준비의 '이상'은 재시작으로 잃은 계산이 있어 하한이라는 뜻입니다" + (f'({", ".join(lows)}).' if lows else '.'), '']
     left = [t for t in doc['targets'] if t['existing']['evidence'] != 'verified' and not any(e['decided'] for e in summ.get(t['id'], []))]
     by = defaultdict(int)
     for t in left:

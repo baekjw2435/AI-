@@ -1,0 +1,33 @@
+{
+ "syllable": "죄",
+ "vertex": "죄",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 558.503,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 283583861,
+ "proof_nodes": 1120500,
+ "proof_seconds": 29.932928,
+ "solver_wall_seconds": 590.02,
+ "verify_seconds": 38.9,
+ "verify_wall_seconds": 38.93,
+ "proof_bytes": 8141102,
+ "proof_sha256": "9abed2868c731816214fc3e0fb661fb1ca1844ae5058e8c99718dc3c3cd95ef4",
+ "position_sha256": "2e87dce4dabc73a15f60263fb2247ebbec92d31767d153a2a65d2ea909d9d7f6",
+ "input_sha256": "80ed00d5cfc612bbdb630798f6a1f43991e5afbfdc742875b48f399c2afe3fce",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}
