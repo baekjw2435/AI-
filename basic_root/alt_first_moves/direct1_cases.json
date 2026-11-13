@@ -1,0 +1,110 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-direct1-v1:\" + id), first 999",
+ "eligible": 9,
+ "eligible_by_source": {
+  "능": 1,
+  "돌": 1,
+  "솥": 1,
+  "식": 1,
+  "언": 1,
+  "역": 1,
+  "증": 1,
+  "풍": 1,
+  "핵": 1
+ },
+ "excluded": [
+  "순/순발력"
+ ],
+ "cases": [
+  {
+   "name": "d01",
+   "id": "극/극언",
+   "syllable": "극",
+   "word": "극언",
+   "source": "언",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 600.001
+  },
+  {
+   "name": "d02",
+   "id": "식/식곤증",
+   "syllable": "식",
+   "word": "식곤증",
+   "source": "증",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 600.001
+  },
+  {
+   "name": "d03",
+   "id": "탄/탄핵",
+   "syllable": "탄",
+   "word": "탄핵",
+   "source": "핵",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 600.0
+  },
+  {
+   "name": "d04",
+   "id": "야/야식",
+   "syllable": "야",
+   "word": "야식",
+   "source": "식",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 600.001
+  },
+  {
+   "name": "d05",
+   "id": "행/행정구역",
+   "syllable": "행",
+   "word": "행정구역",
+   "source": "역",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 600.001
+  },
+  {
+   "name": "d06",
+   "id": "순/순풍",
+   "syllable": "순",
+   "word": "순풍",
+   "source": "풍",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 600.001
+  },
+  {
+   "name": "d07",
+   "id": "격/격돌",
+   "syllable": "격",
+   "word": "격돌",
+   "source": "돌",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 600.0
+  },
+  {
+   "name": "d08",
+   "id": "역/역기능",
+   "syllable": "역",
+   "word": "역기능",
+   "source": "능",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 600.0
+  },
+  {
+   "name": "d09",
+   "id": "돌/돌솥",
+   "syllable": "돌",
+   "word": "돌솥",
+   "source": "솥",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 600.001
+  }
+ ]
+}
