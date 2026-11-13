@@ -1,0 +1,151 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay10-v1:\" + id), first 999",
+ "eligible": 14,
+ "eligible_by_source": {
+  "약": 7,
+  "언": 7
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "u01",
+   "id": "변/변비약",
+   "syllable": "변",
+   "word": "변비약",
+   "source": "약",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u02",
+   "id": "규/규약",
+   "syllable": "규",
+   "word": "규약",
+   "source": "약",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u03",
+   "id": "명/명언",
+   "syllable": "명",
+   "word": "명언",
+   "source": "언",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u04",
+   "id": "극/극약",
+   "syllable": "극",
+   "word": "극약",
+   "source": "약",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u05",
+   "id": "교/교언",
+   "syllable": "교",
+   "word": "교언",
+   "source": "언",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u06",
+   "id": "증/증언",
+   "syllable": "증",
+   "word": "증언",
+   "source": "언",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u07",
+   "id": "극/극언",
+   "syllable": "극",
+   "word": "극언",
+   "source": "언",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u08",
+   "id": "폭/폭약",
+   "syllable": "폭",
+   "word": "폭약",
+   "source": "약",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u09",
+   "id": "폭/폭언",
+   "syllable": "폭",
+   "word": "폭언",
+   "source": "언",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u10",
+   "id": "명/명약",
+   "syllable": "명",
+   "word": "명약",
+   "source": "약",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u11",
+   "id": "진/진언",
+   "syllable": "진",
+   "word": "진언",
+   "source": "언",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u12",
+   "id": "절/절약",
+   "syllable": "절",
+   "word": "절약",
+   "source": "약",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u13",
+   "id": "직/직언",
+   "syllable": "직",
+   "word": "직언",
+   "source": "언",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "u14",
+   "id": "박/박약",
+   "syllable": "박",
+   "word": "박약",
+   "source": "약",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}
