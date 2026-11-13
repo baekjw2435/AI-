@@ -38,7 +38,7 @@
 ## 보관
 
 - 증명서 파일 1개(12MB)는 저장소에 넣지 않습니다. GitHub 릴리스 `alt817-proofs-direct1`의 첨부파일로 둡니다.
-- 상태: 아직 릴리스에 올리지 않았습니다. 파일은 세션 브랜치의 `release_staging/`에 있습니다.
+- 상태: **릴리스에 올렸습니다.** 올린 파일을 모두 다시 내려받아 sha256이 색인과 같음을 확인했습니다(2026-11-13 19:07:46). 주소: https://github.com/baekjw2435/AI-/releases/tag/alt817-proofs-direct1
 - 저장소에는 국면(`archive/<사례>/pos.json`), 입력(`in.txt`), 보관본을 다시 검증한 기록(`verify.json`), 그리고 파일마다 sha256과 주소를 적은 색인(`archive/INDEX.json`)이 있습니다.
 - 다시 확인하려면: `python3 replay_archive.py direct1 --check-release 1` (주소마다 다시 내려받아 sha256 비교).
 

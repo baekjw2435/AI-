@@ -17,7 +17,7 @@
    "release_tag": "alt817-proofs-direct1",
    "asset": "8e545511085a55b67b5d755f375ac8c7fd785f8e3bacf304c2ce861a403cbf6c.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-direct1/8e545511085a55b67b5d755f375ac8c7fd785f8e3bacf304c2ce861a403cbf6c.v4.gz",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-13 19:07:46",
    "proof_sha256": "8e545511085a55b67b5d755f375ac8c7fd785f8e3bacf304c2ce861a403cbf6c",
    "position_sha256": "4fa121fcfbde3f56fdb5c07d70fd2a4c5d3cd7bbcc2d95215eb091ae8a139314",
    "input_sha256": "9a8e48eb5be601b283bca44e25c7bad407dd6f5314ed3040ad9b6330164e64d1",
@@ -32,6 +32,7 @@
  "release": {
   "tag": "alt817-proofs-direct1",
   "url": "https://github.com/baekjw2435/AI-/releases/tag/alt817-proofs-direct1",
-  "status": "staged: the files are not attached to the release yet"
+  "status": "uploaded, every file downloaded again and its SHA-256 compared",
+  "checked": "2026-11-13 19:07:46"
  }
 }
