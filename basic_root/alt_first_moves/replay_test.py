@@ -18,7 +18,8 @@ solve_common.verify (exit code 0, verified, expected result, deflate-exact, four
 undecided, cannot write its certificate or is not accepted stays undecided; its time is recorded all the same.
 
 --emit-check 0 makes the replay solver write the certificate from its incremental states alone (about three
-times faster writing, the same file; see solver_v5_replay.cpp). The direct solver has no such option.
+times faster writing, the same file for the same search path; see solver_v5_replay.cpp). The direct solver has no
+such option. Either way a run counts only if verify_v4 accepts its certificate.
 
 Load. --jobs N runs N jobs at a time; a job is one run of one kind with its verification. The jobs of all cases
 are queued in case order, direct then replay, so both kinds meet the same load (N busy processes).

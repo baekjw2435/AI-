@@ -29,8 +29,10 @@
 //                          0: a non-static child is taken from the incremental canonicalization alone (the code
 //                          the search itself uses); static children still go through the reference code, which
 //                          gives their key. The reference pass was 76% of the writing time (emit_profile). The
-//                          certificate is the same file when both canonicalizations agree, and a disagreement
-//                          could only make a certificate the verifier rejects: the verifier re-derives every state.
+//                          certificate is the same file for the same search path when both canonicalizations
+//                          agree (a long search with checkpoints may take another path and write another, equally
+//                          valid, file). A disagreement could only make a certificate the verifier rejects: the
+//                          verifier re-derives every state, and a certificate counts only if the verifier accepts it.
 //   Output adds replay_* fields and emit_profile. Without --replay the program behaves as solver_v5.
 //
 // solver_v5 (with the proven-state cache): solver_v5 plus a proven-state cache shared across jobs of the same dictionary.

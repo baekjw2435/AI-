@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Fix the cases of a replay comparison BEFORE anything is run.
 
-usage: replay_pick.py SPLIT COUNT SALT SOURCES OUT.json [--exclude ID,ID]
-  SPLIT    tune or final (the split of targets.json)
+usage: replay_pick.py SPLIT COUNT SALT SOURCES OUT.json [--exclude ID,ID] [--prefix f] [--only-sources 급,율]
+  SPLIT    tune, final (the split of targets.json) or any (both: for solving, not for comparing methods)
   SOURCES  folder of prepared source certificates (replay_prep.py); only first moves whose handed-over vertex
            has one are eligible, so no new source has to be prepared
 Eligible: targets of that split with no verified verdict yet (neither the earlier study nor results/summary.json).
@@ -20,14 +20,19 @@ from verify_v3 import ModelV3  # noqa: E402
 
 def main():
     split, count, salt, sources, out = sys.argv[1:6]
-    exclude = set(sys.argv[7].split(',')) if len(sys.argv) > 7 and sys.argv[6] == '--exclude' else set()
+    rest = sys.argv[6:]
+    o = {rest[i]: rest[i + 1] for i in range(0, len(rest), 2)}
+    exclude = set(o['--exclude'].split(',')) if '--exclude' in o else set()
+    prefix = o.get('--prefix', 'f')
+    only = set(o['--only-sources'].split(',')) if '--only-sources' in o else None
     m = ModelV3((HERE.parent / 'words_817.txt').read_bytes(), 817)
     doc = json.loads((HERE / 'targets.json').read_text(encoding='utf-8'))
     summ = json.loads((HERE / 'results' / 'summary.json').read_text(encoding='utf-8'))
-    src = {m.vertex_of(d.name): d.name for d in sorted(Path(sources).iterdir()) if (d / 'prep.json').exists()}
+    src = {m.vertex_of(d.name): d.name for d in sorted(Path(sources).iterdir())
+           if (d / 'prep.json').exists() and (only is None or d.name in only)}
     eligible = []
     for t in doc['targets']:
-        if t['split'] != split or t['existing']['evidence'] == 'verified' or t['id'] in exclude:
+        if (split != 'any' and t['split'] != split) or t['existing']['evidence'] == 'verified' or t['id'] in exclude:
             continue
         if any(e['decided'] for e in summ.get(t['id'], [])):
             continue
@@ -36,8 +41,10 @@ def main():
             eligible.append((hashlib.sha256((salt + t['id']).encode('utf-8')).hexdigest(), t, src[v]))
     eligible.sort(key=lambda x: x[0])
     picked = eligible[:int(count)]
-    cases = [{'name': f'f{i + 1:02d}', 'id': t['id'], 'syllable': t['syllable'], 'word': t['words'][0], 'source': s,
-              'root_form': t['root_form'], 'earlier_search_seconds': max((e['search_seconds_total'] for e in summ.get(t['id'], [])), default=0)}
+    width = max(2, len(str(len(picked))))
+    cases = [{'name': f'{prefix}{i + 1:0{width}d}', 'id': t['id'], 'syllable': t['syllable'], 'word': t['words'][0], 'source': s,
+              'split': t['split'], 'root_form': t['root_form'],
+              'earlier_search_seconds': max((e['search_seconds_total'] for e in summ.get(t['id'], [])), default=0)}
              for i, (_, t, s) in enumerate(picked)]
     doc_out = {'rule': f'{split} split, no verified verdict, source prepared in {Path(sources).name}; sorted by sha256("{salt}" + id), first {count}',
                'eligible': len(eligible), 'eligible_by_source': {s: sum(1 for _, _, x in eligible if x == s) for s in sorted(set(src.values()))},
