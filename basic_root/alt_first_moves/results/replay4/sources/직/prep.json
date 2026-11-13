@@ -1,0 +1,33 @@
+{
+ "syllable": "직",
+ "vertex": "직",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 11.246,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 7919740,
+ "proof_nodes": 108109,
+ "proof_seconds": 1.93704,
+ "solver_wall_seconds": 14.07,
+ "verify_seconds": 2.414,
+ "verify_wall_seconds": 2.42,
+ "proof_bytes": 770474,
+ "proof_sha256": "42d391d82d7ae7ba1ca2dc73083032b48cbba0b2bf6ac560f8ae8798a9be920b",
+ "position_sha256": "db166162c2e37b2c4bbe8c2b30f09a722a3c8f2ef6c9d25bd04ec82c0f59e06a",
+ "input_sha256": "715103abce71111ecdd0cd355eb3ef8d8c3a6bbf14780cb64db1c03551ef93f7",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

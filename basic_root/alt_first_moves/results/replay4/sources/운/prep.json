@@ -1,0 +1,33 @@
+{
+ "syllable": "운",
+ "vertex": "운",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 14.839,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 10093774,
+ "proof_nodes": 92913,
+ "proof_seconds": 1.721542,
+ "solver_wall_seconds": 17.56,
+ "verify_seconds": 2.26,
+ "verify_wall_seconds": 2.27,
+ "proof_bytes": 660522,
+ "proof_sha256": "f1f2860b55a515bb86739b1900a37ee3155f4d8c244f1a80808f4f5851d601f6",
+ "position_sha256": "77b3cf27436f45b20b8de655bed8ab8f5ed6b9b7fe87c0dbe607681a6135577b",
+ "input_sha256": "58e8198a7b139f8be3c5e9d56723fc9d927bee7223347808b8476fb8c78f4b46",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}
