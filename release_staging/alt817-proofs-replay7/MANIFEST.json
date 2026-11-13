@@ -1,0 +1,211 @@
+{
+ "release_tag": "alt817-proofs-replay7",
+ "files": {
+  "476f7784f141d0a2f36155dfc0bfded2d9426295dbf6d99975f2edb2a8f336e7.v4.gz": {
+   "sha256": "476f7784f141d0a2f36155dfc0bfded2d9426295dbf6d99975f2edb2a8f336e7",
+   "bytes": 4817145,
+   "certifies": [
+    "replay7/q01 환/환상곡"
+   ]
+  },
+  "aa4c9eddb781c62fba6add21558b8eaff357016c39974251d0658807f37ffe20.v4.gz": {
+   "sha256": "aa4c9eddb781c62fba6add21558b8eaff357016c39974251d0658807f37ffe20",
+   "bytes": 7341235,
+   "certifies": [
+    "replay7/q02 혈/혈압"
+   ]
+  },
+  "87b52627e302ccc3a48fb8dadb4f9f39f3a45e04417625c19d4c51a9375c2cb6.v4.gz": {
+   "sha256": "87b52627e302ccc3a48fb8dadb4f9f39f3a45e04417625c19d4c51a9375c2cb6",
+   "bytes": 12497875,
+   "certifies": [
+    "replay7/q04 명/명곡"
+   ]
+  },
+  "3e0d455cc2a1ece4f791a40b210760458ca8c905c7fb5ecc989b881110fc3f29.v4.gz": {
+   "sha256": "3e0d455cc2a1ece4f791a40b210760458ca8c905c7fb5ecc989b881110fc3f29",
+   "bytes": 5406250,
+   "certifies": [
+    "replay7/q05 편/편동풍",
+    "replay7/q16 학/학풍"
+   ]
+  },
+  "b19141deba5026013bf536a5877ecd6d59020dd90a4700cac4c62c4d6ffcdb65.v4.gz": {
+   "sha256": "b19141deba5026013bf536a5877ecd6d59020dd90a4700cac4c62c4d6ffcdb65",
+   "bytes": 13996397,
+   "certifies": [
+    "replay7/q06 폭/폭행죄"
+   ]
+  },
+  "6ef87c31f00d7f5ea652a24f2d36977c4a39b85d0f1a60f74211fa6d45b5e527.v4.gz": {
+   "sha256": "6ef87c31f00d7f5ea652a24f2d36977c4a39b85d0f1a60f74211fa6d45b5e527",
+   "bytes": 10504228,
+   "certifies": [
+    "replay7/q07 행/행락객"
+   ]
+  },
+  "ef63df34e21f63b0a754a332ebf0bba19f620062c900c52cdb3ef864c51d9578.v4.gz": {
+   "sha256": "ef63df34e21f63b0a754a332ebf0bba19f620062c900c52cdb3ef864c51d9578",
+   "bytes": 5537361,
+   "certifies": [
+    "replay7/q08 폭/폭풍"
+   ]
+  },
+  "bbb7cd4330781e7f8809f70f23c66bb0454cd4f98f98c997c56b85bd5392ba1d.v4.gz": {
+   "sha256": "bbb7cd4330781e7f8809f70f23c66bb0454cd4f98f98c997c56b85bd5392ba1d",
+   "bytes": 7416119,
+   "certifies": [
+    "replay7/q09 진/진폭"
+   ]
+  },
+  "0eac400a4b2350d42a796f1d4ae9ef1befe37b11ebf945922eda943dde0c80c0.v4.gz": {
+   "sha256": "0eac400a4b2350d42a796f1d4ae9ef1befe37b11ebf945922eda943dde0c80c0",
+   "bytes": 7345648,
+   "certifies": [
+    "replay7/q10 탄/탄압"
+   ]
+  },
+  "e30e4415e5fc45120e96ebf96cdb637963f63ea925d7610dafff611012742e6d.v4.gz": {
+   "sha256": "e30e4415e5fc45120e96ebf96cdb637963f63ea925d7610dafff611012742e6d",
+   "bytes": 5094729,
+   "certifies": [
+    "replay7/q11 진/진퇴유곡"
+   ]
+  },
+  "58155fc6d18dad49773b4d938128ca05c52cb0b48add4e044719bcd63e00f428.v4.gz": {
+   "sha256": "58155fc6d18dad49773b4d938128ca05c52cb0b48add4e044719bcd63e00f428",
+   "bytes": 5407954,
+   "certifies": [
+    "replay7/q12 병/병풍"
+   ]
+  },
+  "062d58b43434c7ad2883eb2701bcdf4bdcc852c2db353adbde88d9098449880a.v4.gz": {
+   "sha256": "062d58b43434c7ad2883eb2701bcdf4bdcc852c2db353adbde88d9098449880a",
+   "bytes": 5194379,
+   "certifies": [
+    "replay7/q13 행/행진곡"
+   ]
+  },
+  "539ba3c6f96263915edbfe512d5fee16665162399b1bc1067798c5850dac5980.v4.gz": {
+   "sha256": "539ba3c6f96263915edbfe512d5fee16665162399b1bc1067798c5850dac5980",
+   "bytes": 7340978,
+   "certifies": [
+    "replay7/q15 폭/폭압"
+   ]
+  },
+  "d7d05897e221af8c1ca969c35ba17a971ca2f27e0081a4ec11667c7e279c4529.v4.gz": {
+   "sha256": "d7d05897e221af8c1ca969c35ba17a971ca2f27e0081a4ec11667c7e279c4529",
+   "bytes": 8137181,
+   "certifies": [
+    "replay7/q17 완/완전범죄"
+   ]
+  },
+  "ed4054856166d6445a9fb4143887593009401eedbdf14449640c1f578cdc7ab1.v4.gz": {
+   "sha256": "ed4054856166d6445a9fb4143887593009401eedbdf14449640c1f578cdc7ab1",
+   "bytes": 4824314,
+   "certifies": [
+    "replay7/q18 교/교향곡"
+   ]
+  },
+  "1ce832f31dee190297c2ec896aa6866dca48038482ba0eaf52f2f81e23ec68d2.v4.gz": {
+   "sha256": "1ce832f31dee190297c2ec896aa6866dca48038482ba0eaf52f2f81e23ec68d2",
+   "bytes": 7340967,
+   "certifies": [
+    "replay7/q19 진/진압"
+   ]
+  },
+  "099cfe2d7f26981d935c1c45c27eb68cec75a0af2ab81093a8c0f8d9410638a1.v4.gz": {
+   "sha256": "099cfe2d7f26981d935c1c45c27eb68cec75a0af2ab81093a8c0f8d9410638a1",
+   "bytes": 7415847,
+   "certifies": [
+    "replay7/q20 폭/폭폭"
+   ]
+  },
+  "3b21ac8c0a63cfac6519adc458da0cd08f0fb16a871b85f9fadcce0ded40e51f.v4.gz": {
+   "sha256": "3b21ac8c0a63cfac6519adc458da0cd08f0fb16a871b85f9fadcce0ded40e51f",
+   "bytes": 5311825,
+   "certifies": [
+    "replay7/q21 축/축하객"
+   ]
+  },
+  "182ce5c08485bcca990684b5e8a354c3c9f6aa2b9416d508404bdbe0a791c781.v4.gz": {
+   "sha256": "182ce5c08485bcca990684b5e8a354c3c9f6aa2b9416d508404bdbe0a791c781",
+   "bytes": 7336246,
+   "certifies": [
+    "replay7/q22 증/증폭"
+   ]
+  },
+  "a743e245ec88378b39e9a13706b285606e6342bc0e7db58fdae4cd50564c84ac.v4.gz": {
+   "sha256": "a743e245ec88378b39e9a13706b285606e6342bc0e7db58fdae4cd50564c84ac",
+   "bytes": 4875690,
+   "certifies": [
+    "replay7/q23 변/변주곡"
+   ]
+  },
+  "934c5955364ca379c8bef3da182d18bbcfd55ac5cb2b39f861a6305a074beef2.v4.gz": {
+   "sha256": "934c5955364ca379c8bef3da182d18bbcfd55ac5cb2b39f861a6305a074beef2",
+   "bytes": 8397759,
+   "certifies": [
+    "replay7/q24 절/절도죄"
+   ]
+  },
+  "af6e2ed5210125237e8898566046441672eb4f13d00a86287ea43918f2957327.v4.gz": {
+   "sha256": "af6e2ed5210125237e8898566046441672eb4f13d00a86287ea43918f2957327",
+   "bytes": 5420185,
+   "certifies": [
+    "replay7/q25 돌/돌풍"
+   ]
+  },
+  "8ce52741d6613d38a15b4c3eb8d357cf65c0b827cd4e4a67a6d15b14c5190a40.v4.gz": {
+   "sha256": "8ce52741d6613d38a15b4c3eb8d357cf65c0b827cd4e4a67a6d15b14c5190a40",
+   "bytes": 5315056,
+   "certifies": [
+    "replay7/source 객"
+   ]
+  },
+  "733088373ff3d06a831eb1e69a8c9bcf60945f1fb230715b3eb7b40f777943af.v4.gz": {
+   "sha256": "733088373ff3d06a831eb1e69a8c9bcf60945f1fb230715b3eb7b40f777943af",
+   "bytes": 4822174,
+   "certifies": [
+    "replay7/source 곡"
+   ]
+  },
+  "5db2a1173e8aeac01eb82e494df784639ac83f93b8d30a2e9f51c2c52fe8410d.v4.gz": {
+   "sha256": "5db2a1173e8aeac01eb82e494df784639ac83f93b8d30a2e9f51c2c52fe8410d",
+   "bytes": 7982547,
+   "certifies": [
+    "replay7/source 솥"
+   ]
+  },
+  "c114836bfa52c063934bac1fb065c041b7522f707603005fa7e7cf5684cd9744.v4.gz": {
+   "sha256": "c114836bfa52c063934bac1fb065c041b7522f707603005fa7e7cf5684cd9744",
+   "bytes": 7343977,
+   "certifies": [
+    "replay7/source 압"
+   ]
+  },
+  "9abed2868c731816214fc3e0fb661fb1ca1844ae5058e8c99718dc3c3cd95ef4.v4.gz": {
+   "sha256": "9abed2868c731816214fc3e0fb661fb1ca1844ae5058e8c99718dc3c3cd95ef4",
+   "bytes": 8141102,
+   "certifies": [
+    "replay7/source 죄"
+   ]
+  },
+  "61884ad6f680faf34f4cd508b67c698377ca5cce4a04f5f6067149f95213fa3e.v4.gz": {
+   "sha256": "61884ad6f680faf34f4cd508b67c698377ca5cce4a04f5f6067149f95213fa3e",
+   "bytes": 7422949,
+   "certifies": [
+    "replay7/source 폭"
+   ]
+  },
+  "ad541aeeb7b626f611fe3723c78331c900c8739c24371b2ad8cc415c6f49a10e.v4.gz": {
+   "sha256": "ad541aeeb7b626f611fe3723c78331c900c8739c24371b2ad8cc415c6f49a10e",
+   "bytes": 5415828,
+   "certifies": [
+    "replay7/source 풍"
+   ]
+  }
+ },
+ "file_count": 29,
+ "total_bytes": 203403945
+}

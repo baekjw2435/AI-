@@ -1,0 +1,33 @@
+{
+ "syllable": "솥",
+ "vertex": "솥",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 249.647,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 131360827,
+ "proof_nodes": 1097956,
+ "proof_seconds": 27.01411,
+ "solver_wall_seconds": 278.28,
+ "verify_seconds": 34.783,
+ "verify_wall_seconds": 34.8,
+ "proof_bytes": 7982547,
+ "proof_sha256": "5db2a1173e8aeac01eb82e494df784639ac83f93b8d30a2e9f51c2c52fe8410d",
+ "position_sha256": "97f3a606a15c0183d431b30b5ca17d6caec0c8536a44d3787d492c4b2ebbe670",
+ "input_sha256": "40175e9bfb30fa9e274db4011f0805ee5e6a0352ea75b277e742aedbbf4ea19c",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}
