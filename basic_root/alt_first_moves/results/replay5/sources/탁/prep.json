@@ -1,0 +1,33 @@
+{
+ "syllable": "탁",
+ "vertex": "탁",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 0.277,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 226823,
+ "proof_nodes": 2058,
+ "proof_seconds": 0.038152,
+ "solver_wall_seconds": 1.12,
+ "verify_seconds": 0.046,
+ "verify_wall_seconds": 0.05,
+ "proof_bytes": 14815,
+ "proof_sha256": "493c4ee8422a6ff6a41f61ad8b752c2eb62f4c16ba7395333903b2a80d506247",
+ "position_sha256": "87f8a430e85b268b6d02823352a6055395f72dade84235bef7f8c92470122b33",
+ "input_sha256": "f30327a6339cc1a9fc025902005624c09150361acd9e78b62573f80443d38fc3",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

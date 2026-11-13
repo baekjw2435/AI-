@@ -1,0 +1,380 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay5-v1:\" + id), first 999",
+ "eligible": 35,
+ "eligible_by_source": {
+  "균": 1,
+  "극": 1,
+  "박": 3,
+  "삼": 1,
+  "섭": 1,
+  "숙": 2,
+  "야": 2,
+  "완": 1,
+  "젓": 2,
+  "졸": 1,
+  "죽": 2,
+  "찬": 4,
+  "칙": 2,
+  "탁": 2,
+  "퇴": 2,
+  "항": 2,
+  "핵": 1,
+  "혁": 1,
+  "홍": 1,
+  "휘": 1,
+  "흑": 2
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "m01",
+   "id": "진/진수성찬",
+   "syllable": "진",
+   "word": "진수성찬",
+   "source": "찬",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m02",
+   "id": "숙/숙박",
+   "syllable": "숙",
+   "word": "숙박",
+   "source": "박",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m03",
+   "id": "칠/칠흑",
+   "syllable": "칠",
+   "word": "칠흑",
+   "source": "흑",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m04",
+   "id": "학/학칙",
+   "syllable": "학",
+   "word": "학칙",
+   "source": "칙",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m05",
+   "id": "진/진분홍",
+   "syllable": "진",
+   "word": "진분홍",
+   "source": "홍",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m06",
+   "id": "탄/탄핵",
+   "syllable": "탄",
+   "word": "탄핵",
+   "source": "핵",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m07",
+   "id": "극/극찬",
+   "syllable": "극",
+   "word": "극찬",
+   "source": "찬",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m08",
+   "id": "명/명란젓",
+   "syllable": "명",
+   "word": "명란젓",
+   "source": "젓",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m09",
+   "id": "병/병졸",
+   "syllable": "병",
+   "word": "병졸",
+   "source": "졸",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m10",
+   "id": "압/압박",
+   "syllable": "압",
+   "word": "압박",
+   "source": "박",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m11",
+   "id": "변/변혁",
+   "syllable": "변",
+   "word": "변혁",
+   "source": "혁",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m12",
+   "id": "교/교섭",
+   "syllable": "교",
+   "word": "교섭",
+   "source": "섭",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m13",
+   "id": "홍/홍삼",
+   "syllable": "홍",
+   "word": "홍삼",
+   "source": "삼",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m14",
+   "id": "진/진두지휘",
+   "syllable": "진",
+   "word": "진두지휘",
+   "source": "휘",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m15",
+   "id": "식/식탁",
+   "syllable": "식",
+   "word": "식탁",
+   "source": "탁",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m16",
+   "id": "급/급기야",
+   "syllable": "급",
+   "word": "급기야",
+   "source": "야",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m17",
+   "id": "합/합숙",
+   "syllable": "합",
+   "word": "합숙",
+   "source": "숙",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m18",
+   "id": "할/할렐루야",
+   "syllable": "할",
+   "word": "할렐루야",
+   "source": "야",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m19",
+   "id": "역/역할극",
+   "syllable": "역",
+   "word": "역할극",
+   "source": "극",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m20",
+   "id": "명/명퇴",
+   "syllable": "명",
+   "word": "명퇴",
+   "source": "퇴",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m21",
+   "id": "병/병구완",
+   "syllable": "병",
+   "word": "병구완",
+   "source": "완",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m22",
+   "id": "편/편찬",
+   "syllable": "편",
+   "word": "편찬",
+   "source": "찬",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m23",
+   "id": "운/운항",
+   "syllable": "운",
+   "word": "운항",
+   "source": "항",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m24",
+   "id": "절/절찬",
+   "syllable": "절",
+   "word": "절찬",
+   "source": "찬",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m25",
+   "id": "진/진퇴",
+   "syllable": "진",
+   "word": "진퇴",
+   "source": "퇴",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m26",
+   "id": "교/교칙",
+   "syllable": "교",
+   "word": "교칙",
+   "source": "칙",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m27",
+   "id": "순/순항",
+   "syllable": "순",
+   "word": "순항",
+   "source": "항",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m28",
+   "id": "변/변죽",
+   "syllable": "변",
+   "word": "변죽",
+   "source": "죽",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m29",
+   "id": "병/병균",
+   "syllable": "병",
+   "word": "병균",
+   "source": "균",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m30",
+   "id": "멸/멸치젓",
+   "syllable": "멸",
+   "word": "멸치젓",
+   "source": "젓",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m31",
+   "id": "완/완숙",
+   "syllable": "완",
+   "word": "완숙",
+   "source": "숙",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m32",
+   "id": "폭/폭죽",
+   "syllable": "폭",
+   "word": "폭죽",
+   "source": "죽",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m33",
+   "id": "박/박박",
+   "syllable": "박",
+   "word": "박박",
+   "source": "박",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m34",
+   "id": "흑/흑흑",
+   "syllable": "흑",
+   "word": "흑흑",
+   "source": "흑",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "m35",
+   "id": "교/교탁",
+   "syllable": "교",
+   "word": "교탁",
+   "source": "탁",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}

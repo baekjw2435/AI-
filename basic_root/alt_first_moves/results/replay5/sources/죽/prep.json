@@ -1,0 +1,33 @@
+{
+ "syllable": "죽",
+ "vertex": "죽",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 2.807,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 1989631,
+ "proof_nodes": 38311,
+ "proof_seconds": 0.627823,
+ "solver_wall_seconds": 4.21,
+ "verify_seconds": 0.896,
+ "verify_wall_seconds": 0.9,
+ "proof_bytes": 277485,
+ "proof_sha256": "1a89aa7c29ebbb866d15be338f7a4533d9f38fd8ac3341c40be30b20480eabbb",
+ "position_sha256": "1cf5fedf7f625949cb46c42aa26d9f491fab24c5bfe063e149ca885782bcaa00",
+ "input_sha256": "6dbf15727ec8ca38bc6d3d7da320bee0c6f1e549ecbeff8e1c86d1288307cf97",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

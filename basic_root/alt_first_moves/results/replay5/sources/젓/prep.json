@@ -1,0 +1,33 @@
+{
+ "syllable": "젓",
+ "vertex": "젓",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 11.65,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 8182501,
+ "proof_nodes": 106238,
+ "proof_seconds": 1.731708,
+ "solver_wall_seconds": 14.3,
+ "verify_seconds": 2.565,
+ "verify_wall_seconds": 2.57,
+ "proof_bytes": 754908,
+ "proof_sha256": "52f03b5cd004e6dc58320be71f4c896cef45bdedbe6fef104fe274766cb01f9e",
+ "position_sha256": "36e16091cd44ccfb3ebc6ad13530b11940fdf092a82a553ad3ea2fef5bafcf55",
+ "input_sha256": "be2f27e3b0524d42ff10104433c5245fc2b726e73410365fcd70feb5da2a41c8",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

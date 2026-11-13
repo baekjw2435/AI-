@@ -17,9 +17,9 @@ lists moves only, so it is kept once):
                       holds only position, input, verification record, hash and download address
                       (https://github.com/<owner>/<repo>/releases/download/TAG/<sha256>.v4.gz), and
                       DIR/TAG/MANIFEST.json lists every file of the release with its hash.
-  --sources SRCDIR    (with --release) also the source certificates of SRCDIR (replay_prep.py) that are not yet in
-                      the repository: prep.json, position, input and run log go to results/NAME/sources/<syllable>/,
-                      the certificate to DIR/TAG/.
+  --sources SRCDIR    (with --release) also the source certificates of SRCDIR (replay_prep.py) that this experiment's
+                      cases used and that no other experiment has recorded: prep.json, position, input and run log
+                      go to results/NAME/sources/<syllable>/, the certificate to DIR/TAG/.
 With WORKDIR arguments the files are copied from WORKDIR/<case>/ (as replay_test.py left them) and their hashes
 are compared with the case records first. Without WORKDIR nothing is copied: what is kept is only checked.
 A case is done when its verify.json says accepted for the certificate hash in the record; re-running skips it
@@ -178,9 +178,11 @@ def main():
     # ---- source certificates that are not in the repository yet
     sources = []
     if tag and opt['--sources']:
+        # only the sources this experiment's cases used, and only those no OTHER experiment has recorded already
         known = {json.loads(p.read_text(encoding='utf-8'))['proof_sha256'] for p in (HERE / 'results').glob('*/sources/*/prep.json')
-                 if (p.parent / 'proof.v4.gz').exists()}
-        for sd in sorted(p for p in Path(opt['--sources']).iterdir() if (p / 'prep.json').exists()):
+                 if p.parents[2].name != name}
+        used_syllables = {r['source']['syllable'] for r in recs}
+        for sd in sorted(p for p in Path(opt['--sources']).iterdir() if (p / 'prep.json').exists() and p.name in used_syllables):
             prep = json.loads((sd / 'prep.json').read_text(encoding='utf-8'))
             h = prep['proof_sha256']
             if h in known:
