@@ -1,0 +1,1629 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay4-v1:\" + id), first 999",
+ "eligible": 160,
+ "eligible_by_source": {
+  "교": 4,
+  "군": 5,
+  "권": 15,
+  "규": 3,
+  "낙": 10,
+  "낭": 3,
+  "멸": 3,
+  "명": 12,
+  "변": 5,
+  "병": 7,
+  "색": 4,
+  "운": 4,
+  "적": 37,
+  "절": 4,
+  "직": 6,
+  "진": 15,
+  "축": 3,
+  "학": 11,
+  "향": 3,
+  "환": 6
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "k001",
+   "id": "즉/즉각적",
+   "syllable": "즉",
+   "word": "즉각적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k002",
+   "id": "변/변명",
+   "syllable": "변",
+   "word": "변명",
+   "source": "명",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k003",
+   "id": "절/절절",
+   "syllable": "절",
+   "word": "절절",
+   "source": "절",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k004",
+   "id": "박/박학",
+   "syllable": "박",
+   "word": "박학",
+   "source": "학",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k005",
+   "id": "군/군락",
+   "syllable": "군",
+   "word": "군락",
+   "source": "낙",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k006",
+   "id": "순/순직",
+   "syllable": "순",
+   "word": "순직",
+   "source": "직",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k007",
+   "id": "진/진학",
+   "syllable": "진",
+   "word": "진학",
+   "source": "학",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k008",
+   "id": "퇴/퇴적",
+   "syllable": "퇴",
+   "word": "퇴적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k009",
+   "id": "승/승차권",
+   "syllable": "승",
+   "word": "승차권",
+   "source": "권",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k010",
+   "id": "절/절규",
+   "syllable": "절",
+   "word": "절규",
+   "source": "규",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k011",
+   "id": "식/식욕부진",
+   "syllable": "식",
+   "word": "식욕부진",
+   "source": "진",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k012",
+   "id": "움/움직움직",
+   "syllable": "움",
+   "word": "움직움직",
+   "source": "직",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k013",
+   "id": "돌/돌변",
+   "syllable": "돌",
+   "word": "돌변",
+   "source": "변",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k014",
+   "id": "순/순환",
+   "syllable": "순",
+   "word": "순환",
+   "source": "환",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k015",
+   "id": "돌/돌발적",
+   "syllable": "돌",
+   "word": "돌발적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k016",
+   "id": "교/교수진",
+   "syllable": "교",
+   "word": "교수진",
+   "source": "진",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k017",
+   "id": "야/야학",
+   "syllable": "야",
+   "word": "야학",
+   "source": "학",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k018",
+   "id": "맹/맹목적",
+   "syllable": "맹",
+   "word": "맹목적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k019",
+   "id": "직/직권",
+   "syllable": "직",
+   "word": "직권",
+   "source": "권",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k020",
+   "id": "폭/폭군",
+   "syllable": "폭",
+   "word": "폭군",
+   "source": "군",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k021",
+   "id": "언/언변",
+   "syllable": "언",
+   "word": "언변",
+   "source": "변",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k022",
+   "id": "승/승낙",
+   "syllable": "승",
+   "word": "승낙",
+   "source": "낙",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k023",
+   "id": "퇴/퇴진",
+   "syllable": "퇴",
+   "word": "퇴진",
+   "source": "진",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k024",
+   "id": "교/교권",
+   "syllable": "교",
+   "word": "교권",
+   "source": "권",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k025",
+   "id": "학/학구적",
+   "syllable": "학",
+   "word": "학구적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k026",
+   "id": "운/운명",
+   "syllable": "운",
+   "word": "운명",
+   "source": "명",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k027",
+   "id": "탑/탑승권",
+   "syllable": "탑",
+   "word": "탑승권",
+   "source": "권",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k028",
+   "id": "변/변절",
+   "syllable": "변",
+   "word": "변절",
+   "source": "절",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k029",
+   "id": "변/변칙적",
+   "syllable": "변",
+   "word": "변칙적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k030",
+   "id": "급/급진",
+   "syllable": "급",
+   "word": "급진",
+   "source": "진",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k031",
+   "id": "법/법규",
+   "syllable": "법",
+   "word": "법규",
+   "source": "규",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k032",
+   "id": "병/병명",
+   "syllable": "병",
+   "word": "병명",
+   "source": "명",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k033",
+   "id": "숙/숙직",
+   "syllable": "숙",
+   "word": "숙직",
+   "source": "직",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k034",
+   "id": "식/식도락",
+   "syllable": "식",
+   "word": "식도락",
+   "source": "낙",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k035",
+   "id": "박/박멸",
+   "syllable": "박",
+   "word": "박멸",
+   "source": "멸",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k036",
+   "id": "탕/탕진",
+   "syllable": "탕",
+   "word": "탕진",
+   "source": "진",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k037",
+   "id": "운/운전병",
+   "syllable": "운",
+   "word": "운전병",
+   "source": "병",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k038",
+   "id": "명/명운",
+   "syllable": "명",
+   "word": "명운",
+   "source": "운",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k039",
+   "id": "급/급변",
+   "syllable": "급",
+   "word": "급변",
+   "source": "변",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k040",
+   "id": "군/군계일학",
+   "syllable": "군",
+   "word": "군계일학",
+   "source": "학",
+   "split": "final",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k041",
+   "id": "항/항구적",
+   "syllable": "항",
+   "word": "항구적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k042",
+   "id": "압/압도적",
+   "syllable": "압",
+   "word": "압도적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k043",
+   "id": "법/법학",
+   "syllable": "법",
+   "word": "법학",
+   "source": "학",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k044",
+   "id": "삼/삼진",
+   "syllable": "삼",
+   "word": "삼진",
+   "source": "진",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k045",
+   "id": "병/병색",
+   "syllable": "병",
+   "word": "병색",
+   "source": "색",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k046",
+   "id": "향/향락적",
+   "syllable": "향",
+   "word": "향락적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k047",
+   "id": "풍/풍자적",
+   "syllable": "풍",
+   "word": "풍자적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k048",
+   "id": "야/야간학교",
+   "syllable": "야",
+   "word": "야간학교",
+   "source": "교",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k049",
+   "id": "진/진보적",
+   "syllable": "진",
+   "word": "진보적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k050",
+   "id": "급/급진적",
+   "syllable": "급",
+   "word": "급진적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k051",
+   "id": "퇴/퇴직",
+   "syllable": "퇴",
+   "word": "퇴직",
+   "source": "직",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k052",
+   "id": "풍/풍진",
+   "syllable": "풍",
+   "word": "풍진",
+   "source": "진",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k053",
+   "id": "식/식물학",
+   "syllable": "식",
+   "word": "식물학",
+   "source": "학",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k054",
+   "id": "낙/낙관적",
+   "syllable": "낙",
+   "word": "낙관적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k055",
+   "id": "항/항공권",
+   "syllable": "항",
+   "word": "항공권",
+   "source": "권",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k056",
+   "id": "삼/삼색",
+   "syllable": "삼",
+   "word": "삼색",
+   "source": "색",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k057",
+   "id": "왕/왕진",
+   "syllable": "왕",
+   "word": "왕진",
+   "source": "진",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k058",
+   "id": "항/항공사진",
+   "syllable": "항",
+   "word": "항공사진",
+   "source": "진",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k059",
+   "id": "교/교환",
+   "syllable": "교",
+   "word": "교환",
+   "source": "환",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k060",
+   "id": "승/승진",
+   "syllable": "승",
+   "word": "승진",
+   "source": "진",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k061",
+   "id": "병/병적",
+   "syllable": "병",
+   "word": "병적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k062",
+   "id": "환/환락",
+   "syllable": "환",
+   "word": "환락",
+   "source": "낙",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k063",
+   "id": "역/역동적",
+   "syllable": "역",
+   "word": "역동적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k064",
+   "id": "압/압권",
+   "syllable": "압",
+   "word": "압권",
+   "source": "권",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k065",
+   "id": "합/합병",
+   "syllable": "합",
+   "word": "합병",
+   "source": "병",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k066",
+   "id": "군/군사적",
+   "syllable": "군",
+   "word": "군사적",
+   "source": "적",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k067",
+   "id": "삼/삼일절",
+   "syllable": "삼",
+   "word": "삼일절",
+   "source": "절",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k068",
+   "id": "순/순위권",
+   "syllable": "순",
+   "word": "순위권",
+   "source": "권",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k069",
+   "id": "풍/풍토병",
+   "syllable": "풍",
+   "word": "풍토병",
+   "source": "병",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k070",
+   "id": "진/진군",
+   "syllable": "진",
+   "word": "진군",
+   "source": "군",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k071",
+   "id": "명/명멸",
+   "syllable": "명",
+   "word": "명멸",
+   "source": "멸",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k072",
+   "id": "환/환경적",
+   "syllable": "환",
+   "word": "환경적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k073",
+   "id": "교/교통법규",
+   "syllable": "교",
+   "word": "교통법규",
+   "source": "규",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k074",
+   "id": "순/순진",
+   "syllable": "순",
+   "word": "순진",
+   "source": "진",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k075",
+   "id": "권/권위적",
+   "syllable": "권",
+   "word": "권위적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k076",
+   "id": "언/언어권",
+   "syllable": "언",
+   "word": "언어권",
+   "source": "권",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k077",
+   "id": "절/절명",
+   "syllable": "절",
+   "word": "절명",
+   "source": "명",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k078",
+   "id": "법/법률적",
+   "syllable": "법",
+   "word": "법률적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k079",
+   "id": "편/편향",
+   "syllable": "편",
+   "word": "편향",
+   "source": "향",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k080",
+   "id": "병/병환",
+   "syllable": "병",
+   "word": "병환",
+   "source": "환",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k081",
+   "id": "압/압축",
+   "syllable": "압",
+   "word": "압축",
+   "source": "축",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k082",
+   "id": "탄/탄력적",
+   "syllable": "탄",
+   "word": "탄력적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k083",
+   "id": "증/증축",
+   "syllable": "증",
+   "word": "증축",
+   "source": "축",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k084",
+   "id": "규/규명",
+   "syllable": "규",
+   "word": "규명",
+   "source": "명",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k085",
+   "id": "숙/숙변",
+   "syllable": "숙",
+   "word": "숙변",
+   "source": "변",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k086",
+   "id": "운/운운",
+   "syllable": "운",
+   "word": "운운",
+   "source": "운",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k087",
+   "id": "증/증권",
+   "syllable": "증",
+   "word": "증권",
+   "source": "권",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k088",
+   "id": "풍/풍향",
+   "syllable": "풍",
+   "word": "풍향",
+   "source": "향",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k089",
+   "id": "명/명예직",
+   "syllable": "명",
+   "word": "명예직",
+   "source": "직",
+   "split": "tune",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k090",
+   "id": "교/교직",
+   "syllable": "교",
+   "word": "교직",
+   "source": "직",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k091",
+   "id": "증/증후군",
+   "syllable": "증",
+   "word": "증후군",
+   "source": "군",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k092",
+   "id": "폭/폭락",
+   "syllable": "폭",
+   "word": "폭락",
+   "source": "낙",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k093",
+   "id": "행/행운",
+   "syllable": "행",
+   "word": "행운",
+   "source": "운",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k094",
+   "id": "탄/탄환",
+   "syllable": "탄",
+   "word": "탄환",
+   "source": "환",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k095",
+   "id": "향/향수병",
+   "syllable": "향",
+   "word": "향수병",
+   "source": "병",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k096",
+   "id": "합/합리적",
+   "syllable": "합",
+   "word": "합리적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k097",
+   "id": "행/행군",
+   "syllable": "행",
+   "word": "행군",
+   "source": "군",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k098",
+   "id": "낭/낭만적",
+   "syllable": "낭",
+   "word": "낭만적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k099",
+   "id": "병/병리학",
+   "syllable": "병",
+   "word": "병리학",
+   "source": "학",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k100",
+   "id": "편/편파적",
+   "syllable": "편",
+   "word": "편파적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k101",
+   "id": "교/교육적",
+   "syllable": "교",
+   "word": "교육적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k102",
+   "id": "숙/숙명적",
+   "syllable": "숙",
+   "word": "숙명적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k103",
+   "id": "습/습관적",
+   "syllable": "습",
+   "word": "습관적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k104",
+   "id": "규/규범적",
+   "syllable": "규",
+   "word": "규범적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k105",
+   "id": "행/행랑",
+   "syllable": "행",
+   "word": "행랑",
+   "source": "낭",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k106",
+   "id": "박/박명",
+   "syllable": "박",
+   "word": "박명",
+   "source": "명",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k107",
+   "id": "숙/숙명",
+   "syllable": "숙",
+   "word": "숙명",
+   "source": "명",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k108",
+   "id": "순/순간적",
+   "syllable": "순",
+   "word": "순간적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k109",
+   "id": "홍/홍학",
+   "syllable": "홍",
+   "word": "홍학",
+   "source": "학",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k110",
+   "id": "퇴/퇴학",
+   "syllable": "퇴",
+   "word": "퇴학",
+   "source": "학",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k111",
+   "id": "명/명상적",
+   "syllable": "명",
+   "word": "명상적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k112",
+   "id": "극/극단적",
+   "syllable": "극",
+   "word": "극단적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k113",
+   "id": "교/교육대학",
+   "syllable": "교",
+   "word": "교육대학",
+   "source": "학",
+   "split": "tune",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k114",
+   "id": "항/항변",
+   "syllable": "항",
+   "word": "항변",
+   "source": "변",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k115",
+   "id": "야/야만적",
+   "syllable": "야",
+   "word": "야만적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k116",
+   "id": "낙/낙향",
+   "syllable": "낙",
+   "word": "낙향",
+   "source": "향",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k117",
+   "id": "순/순교",
+   "syllable": "순",
+   "word": "순교",
+   "source": "교",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k118",
+   "id": "왕/왕권",
+   "syllable": "왕",
+   "word": "왕권",
+   "source": "권",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k119",
+   "id": "행/행방불명",
+   "syllable": "행",
+   "word": "행방불명",
+   "source": "명",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k120",
+   "id": "향/향락",
+   "syllable": "향",
+   "word": "향락",
+   "source": "낙",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k121",
+   "id": "변/변색",
+   "syllable": "변",
+   "word": "변색",
+   "source": "색",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k122",
+   "id": "혈/혈액순환",
+   "syllable": "혈",
+   "word": "혈액순환",
+   "source": "환",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k123",
+   "id": "풍/풍운",
+   "syllable": "풍",
+   "word": "풍운",
+   "source": "운",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k124",
+   "id": "직/직명",
+   "syllable": "직",
+   "word": "직명",
+   "source": "명",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k125",
+   "id": "언/언어적",
+   "syllable": "언",
+   "word": "언어적",
+   "source": "적",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k126",
+   "id": "혈/혈색",
+   "syllable": "혈",
+   "word": "혈색",
+   "source": "색",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k127",
+   "id": "증/증명사진",
+   "syllable": "증",
+   "word": "증명사진",
+   "source": "진",
+   "split": "final",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k128",
+   "id": "돌/돌림병",
+   "syllable": "돌",
+   "word": "돌림병",
+   "source": "병",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k129",
+   "id": "직/직진",
+   "syllable": "직",
+   "word": "직진",
+   "source": "진",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k130",
+   "id": "역/역세권",
+   "syllable": "역",
+   "word": "역세권",
+   "source": "권",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k131",
+   "id": "왕/왕명",
+   "syllable": "왕",
+   "word": "왕명",
+   "source": "명",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k132",
+   "id": "학/학군",
+   "syllable": "학",
+   "word": "학군",
+   "source": "군",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k133",
+   "id": "명/명사절",
+   "syllable": "명",
+   "word": "명사절",
+   "source": "절",
+   "split": "tune",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k134",
+   "id": "급/급락",
+   "syllable": "급",
+   "word": "급락",
+   "source": "낙",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k135",
+   "id": "절/절대적",
+   "syllable": "절",
+   "word": "절대적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k136",
+   "id": "행/행진",
+   "syllable": "행",
+   "word": "행진",
+   "source": "진",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k137",
+   "id": "야/야권",
+   "syllable": "야",
+   "word": "야권",
+   "source": "권",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k138",
+   "id": "축/축적",
+   "syllable": "축",
+   "word": "축적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k139",
+   "id": "행/행락",
+   "syllable": "행",
+   "word": "행락",
+   "source": "낙",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k140",
+   "id": "축/축축",
+   "syllable": "축",
+   "word": "축축",
+   "source": "축",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k141",
+   "id": "진/진출권",
+   "syllable": "진",
+   "word": "진출권",
+   "source": "권",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k142",
+   "id": "직/직업병",
+   "syllable": "직",
+   "word": "직업병",
+   "source": "병",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k143",
+   "id": "변/변환",
+   "syllable": "변",
+   "word": "변환",
+   "source": "환",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k144",
+   "id": "절/절교",
+   "syllable": "절",
+   "word": "절교",
+   "source": "교",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k145",
+   "id": "증/증명",
+   "syllable": "증",
+   "word": "증명",
+   "source": "명",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k146",
+   "id": "법/법명",
+   "syllable": "법",
+   "word": "법명",
+   "source": "명",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k147",
+   "id": "퇴/퇴락",
+   "syllable": "퇴",
+   "word": "퇴락",
+   "source": "낙",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k148",
+   "id": "직/직간접적",
+   "syllable": "직",
+   "word": "직간접적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k149",
+   "id": "언/언어학",
+   "syllable": "언",
+   "word": "언어학",
+   "source": "학",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k150",
+   "id": "습/습진",
+   "syllable": "습",
+   "word": "습진",
+   "source": "진",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k151",
+   "id": "명/명랑",
+   "syllable": "명",
+   "word": "명랑",
+   "source": "낭",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k152",
+   "id": "환/환멸",
+   "syllable": "환",
+   "word": "환멸",
+   "source": "멸",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k153",
+   "id": "행/행적",
+   "syllable": "행",
+   "word": "행적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k154",
+   "id": "행/행정권",
+   "syllable": "행",
+   "word": "행정권",
+   "source": "권",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k155",
+   "id": "운/운명적",
+   "syllable": "운",
+   "word": "운명적",
+   "source": "적",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k156",
+   "id": "식/식권",
+   "syllable": "식",
+   "word": "식권",
+   "source": "권",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k157",
+   "id": "풍/풍랑",
+   "syllable": "풍",
+   "word": "풍랑",
+   "source": "낭",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k158",
+   "id": "극/극락",
+   "syllable": "극",
+   "word": "극락",
+   "source": "낙",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k159",
+   "id": "학/학교",
+   "syllable": "학",
+   "word": "학교",
+   "source": "교",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "k160",
+   "id": "역/역병",
+   "syllable": "역",
+   "word": "역병",
+   "source": "병",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  }
+ ]
+}
