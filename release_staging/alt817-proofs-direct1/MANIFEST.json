@@ -1,0 +1,14 @@
+{
+ "release_tag": "alt817-proofs-direct1",
+ "files": {
+  "8e545511085a55b67b5d755f375ac8c7fd785f8e3bacf304c2ce861a403cbf6c.v4.gz": {
+   "sha256": "8e545511085a55b67b5d755f375ac8c7fd785f8e3bacf304c2ce861a403cbf6c",
+   "bytes": 11966712,
+   "certifies": [
+    "direct1/d08 역/역기능"
+   ]
+  }
+ },
+ "file_count": 1,
+ "total_bytes": 11966712
+}
