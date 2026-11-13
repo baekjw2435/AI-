@@ -1,0 +1,100 @@
+{
+ "release_tag": "alt817-proofs-replay10",
+ "files": {
+  "20f70b7e01aed5f46b0d7ed98232b3d9520f304a2a53e54008ce61d401cd888c.v4.gz": {
+   "sha256": "20f70b7e01aed5f46b0d7ed98232b3d9520f304a2a53e54008ce61d401cd888c",
+   "bytes": 17362327,
+   "certifies": [
+    "replay10/u01 변/변비약",
+    "replay10/u02 규/규약"
+   ]
+  },
+  "ee599f68b9253578c7dab2c06c61c390d2fcf98b2b97f854276b29be0d146ea3.v4.gz": {
+   "sha256": "ee599f68b9253578c7dab2c06c61c390d2fcf98b2b97f854276b29be0d146ea3",
+   "bytes": 17340881,
+   "certifies": [
+    "replay10/u03 명/명언"
+   ]
+  },
+  "121ac1e009b9b5babaaeceea8d9a55c12367f61b2977ce05587281be051b028c.v4.gz": {
+   "sha256": "121ac1e009b9b5babaaeceea8d9a55c12367f61b2977ce05587281be051b028c",
+   "bytes": 17085911,
+   "certifies": [
+    "replay10/u04 극/극약"
+   ]
+  },
+  "2e0c8b8314096dc8737b69be8563e75b5a69ddde1d46c0ce1cb27f91faf64dc9.v4.gz": {
+   "sha256": "2e0c8b8314096dc8737b69be8563e75b5a69ddde1d46c0ce1cb27f91faf64dc9",
+   "bytes": 17371391,
+   "certifies": [
+    "replay10/u05 교/교언",
+    "replay10/u09 폭/폭언"
+   ]
+  },
+  "438022bd7f1321423869617d0994d0bacba25e0bb13315b996e5d93288ad0604.v4.gz": {
+   "sha256": "438022bd7f1321423869617d0994d0bacba25e0bb13315b996e5d93288ad0604",
+   "bytes": 16673353,
+   "certifies": [
+    "replay10/u06 증/증언"
+   ]
+  },
+  "652b3e74f2b8afe466c58b50b56d36c367e0cb0fc1077944de1a54c5e809bde8.v4.gz": {
+   "sha256": "652b3e74f2b8afe466c58b50b56d36c367e0cb0fc1077944de1a54c5e809bde8",
+   "bytes": 17366518,
+   "certifies": [
+    "replay10/u08 폭/폭약"
+   ]
+  },
+  "4a7d2ae5e72979aa18c6751f23acdb923c695e89ab6993ae42aa58a4244392de.v4.gz": {
+   "sha256": "4a7d2ae5e72979aa18c6751f23acdb923c695e89ab6993ae42aa58a4244392de",
+   "bytes": 17769146,
+   "certifies": [
+    "replay10/u10 명/명약"
+   ]
+  },
+  "8fcadaab67cbc9bce5f126a8710b027a0efe4e0cc6ad047c2e6d8e8fa33b468d.v4.gz": {
+   "sha256": "8fcadaab67cbc9bce5f126a8710b027a0efe4e0cc6ad047c2e6d8e8fa33b468d",
+   "bytes": 17371513,
+   "certifies": [
+    "replay10/u11 진/진언"
+   ]
+  },
+  "aa728d2ffb64b448a40241f146e90f58b43a4eb819fa06d48a1989a2591c636c.v4.gz": {
+   "sha256": "aa728d2ffb64b448a40241f146e90f58b43a4eb819fa06d48a1989a2591c636c",
+   "bytes": 17372818,
+   "certifies": [
+    "replay10/u12 절/절약"
+   ]
+  },
+  "854245572347a0aac8aee20fbc80efb75d7846979e0a2bcb95edeff1f6771aa9.v4.gz": {
+   "sha256": "854245572347a0aac8aee20fbc80efb75d7846979e0a2bcb95edeff1f6771aa9",
+   "bytes": 17363364,
+   "certifies": [
+    "replay10/u13 직/직언"
+   ]
+  },
+  "64a51f309ded16e7e97b8d05777fc3f1cdad5c892834e0e6dae097a25cf35e73.v4.gz": {
+   "sha256": "64a51f309ded16e7e97b8d05777fc3f1cdad5c892834e0e6dae097a25cf35e73",
+   "bytes": 17443419,
+   "certifies": [
+    "replay10/u14 박/박약"
+   ]
+  },
+  "01f7c211d1d0a31351f83610df8fbbf5faccf26a94d4b3c7e8a5402d4256499c.v4.gz": {
+   "sha256": "01f7c211d1d0a31351f83610df8fbbf5faccf26a94d4b3c7e8a5402d4256499c",
+   "bytes": 17387123,
+   "certifies": [
+    "replay10/source 약"
+   ]
+  },
+  "fa1dbeb5b4b487485c3a59795ac152e2041a353caede8161f605baae738ec20d.v4.gz": {
+   "sha256": "fa1dbeb5b4b487485c3a59795ac152e2041a353caede8161f605baae738ec20d",
+   "bytes": 17393044,
+   "certifies": [
+    "replay10/source 언"
+   ]
+  }
+ },
+ "file_count": 13,
+ "total_bytes": 225300808
+}
