@@ -1,0 +1,33 @@
+{
+ "syllable": "벽",
+ "vertex": "벽",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 1515.147,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 1143615838,
+ "proof_nodes": 3016545,
+ "proof_seconds": 57.941575,
+ "solver_wall_seconds": 1575.16,
+ "verify_seconds": 69.19,
+ "verify_wall_seconds": 69.22,
+ "proof_bytes": 21758384,
+ "proof_sha256": "e8b97a58434243770f94ebffe0ac9ef45ef83df44fe2d9b50616a77643a97f82",
+ "position_sha256": "f677a549583fa7757f85bfdd9a55e70e1fc6590f37fe11eb0a64ac779c5376cf",
+ "input_sha256": "a874b2da7bd64a70e2dcb0fc666feba07360addb851bf4d460501151c538dcf8",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}
