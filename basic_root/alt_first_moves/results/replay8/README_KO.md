@@ -17,9 +17,9 @@
 
 ## 미확정
 
-| 첫 수 | 넘겨준 음절 | 쓴 탐색 시간(초) | 막힌 곳 |
-|---|---|---:|---:|
-| 야식 | 식 | 600 | 891 |
+| 첫 수 | 넘겨준 음절 | 쓴 탐색 시간(초) | 탐색 국면 | 막힌 곳 |
+|---|---|---:|---:|---:|
+| 야식 | 식 | 600 | 417,210,368 | 891 |
 
 ## 오래 걸린 것
 
@@ -46,9 +46,9 @@
 ## 보관
 
 - 증명서 파일 12개(136MB)는 저장소에 넣지 않습니다. GitHub 릴리스 `alt817-proofs-replay8`의 첨부파일로 둡니다.
-- 상태: staged: the files are not attached to the release yet
+- 상태: **릴리스에 올렸습니다.** 올린 파일을 모두 다시 내려받아 sha256이 색인과 같음을 확인했습니다(2026-11-13 17:06:34). 주소: https://github.com/baekjw2435/AI-/releases/tag/alt817-proofs-replay8
 - 저장소에는 국면(`archive/<사례>/pos.json`), 입력(`in.txt`), 보관본을 다시 검증한 기록(`verify.json`), 그리고 파일마다 sha256과 주소를 적은 색인(`archive/INDEX.json`)이 있습니다.
-- 올린 뒤 확인: `python3 replay_archive.py replay8 --check-release 1` (주소마다 다시 내려받아 sha256 비교).
+- 다시 확인하려면: `python3 replay_archive.py replay8 --check-release 1` (주소마다 다시 내려받아 sha256 비교).
 
 ## 조건
 

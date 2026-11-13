@@ -86,9 +86,12 @@ def main():
     L += ['## 보관', '']
     if rel:
         L += [f'- 증명서 파일 {files}개({index["certificate_bytes"] / 1e6:,.0f}MB)는 저장소에 넣지 않습니다. GitHub 릴리스 `{rel["tag"]}`의 첨부파일로 둡니다.',
-              f'- 상태: {rel["status"]}',
+              ('- 상태: **릴리스에 올렸습니다.** 올린 파일을 모두 다시 내려받아 sha256이 색인과 같음을 확인했습니다'
+               f'({rel.get("checked", "")}). 주소: {rel["url"]}' if rel['status'].startswith('uploaded') else
+               '- 상태: 아직 릴리스에 올리지 않았습니다. 파일은 세션 브랜치의 `release_staging/`에 있습니다.'
+               if rel['status'].startswith('staged') else f'- 상태: {rel["status"]}'),
               '- 저장소에는 국면(`archive/<사례>/pos.json`), 입력(`in.txt`), 보관본을 다시 검증한 기록(`verify.json`), 그리고 파일마다 sha256과 주소를 적은 색인(`archive/INDEX.json`)이 있습니다.',
-              f'- 올린 뒤 확인: `python3 replay_archive.py {name} --check-release 1` (주소마다 다시 내려받아 sha256 비교).', '']
+              f'- 다시 확인하려면: `python3 replay_archive.py {name} --check-release 1` (주소마다 다시 내려받아 sha256 비교).', '']
     else:
         L += [f'- 증명서 파일 {files}개는 `archive/certs/`에 있습니다.', '']
     L += ['## 조건', '',
