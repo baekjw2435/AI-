@@ -1,0 +1,33 @@
+{
+ "syllable": "약",
+ "vertex": "약",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 692.012,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 490254885,
+ "proof_nodes": 2409849,
+ "proof_seconds": 46.505869,
+ "solver_wall_seconds": 740.16,
+ "verify_seconds": 56.41,
+ "verify_wall_seconds": 56.44,
+ "proof_bytes": 17387123,
+ "proof_sha256": "01f7c211d1d0a31351f83610df8fbbf5faccf26a94d4b3c7e8a5402d4256499c",
+ "position_sha256": "6e9b9b3ad827dd9c740c8b03568812ec9bae8c68e57c6b9898f26d6bd5e849ef",
+ "input_sha256": "017fa3c0789fd8d54b93ca2f6230272a22c221bd4b120b362f6ecc3dd19ebe34",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}
