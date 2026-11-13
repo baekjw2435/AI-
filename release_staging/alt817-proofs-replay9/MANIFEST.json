@@ -1,0 +1,71 @@
+{
+ "release_tag": "alt817-proofs-replay9",
+ "files": {
+  "afb52ea17858a298329f867fb1d3aa625fc3c1810099bb45ae35f126ea271a37.v4.gz": {
+   "sha256": "afb52ea17858a298329f867fb1d3aa625fc3c1810099bb45ae35f126ea271a37",
+   "bytes": 14512392,
+   "certifies": [
+    "replay9/t01 합/합격증"
+   ]
+  },
+  "938442d351231e9446e8c235e041038aabb6276236372fba8a6b5bb36a2f5c46.v4.gz": {
+   "sha256": "938442d351231e9446e8c235e041038aabb6276236372fba8a6b5bb36a2f5c46",
+   "bytes": 14613120,
+   "certifies": [
+    "replay9/t02 명/명증"
+   ]
+  },
+  "a3ed18ddace676cb2426458c3e4829d3d27f9ea02c803f9c970ff0c526a740b0.v4.gz": {
+   "sha256": "a3ed18ddace676cb2426458c3e4829d3d27f9ea02c803f9c970ff0c526a740b0",
+   "bytes": 14503002,
+   "certifies": [
+    "replay9/t04 야/야맹증",
+    "replay9/t08 교/교통체증"
+   ]
+  },
+  "84b64bda5437035d99033e64d5455a61a49454c1dbaf1dc7b29a8dc809b66362.v4.gz": {
+   "sha256": "84b64bda5437035d99033e64d5455a61a49454c1dbaf1dc7b29a8dc809b66362",
+   "bytes": 14606300,
+   "certifies": [
+    "replay9/t05 축/축농증"
+   ]
+  },
+  "650ba588df7a0f611198fe6c52cd32591b2eac19c0fe03b93e539b6708f852f6.v4.gz": {
+   "sha256": "650ba588df7a0f611198fe6c52cd32591b2eac19c0fe03b93e539b6708f852f6",
+   "bytes": 14502840,
+   "certifies": [
+    "replay9/t06 운/운전면허증"
+   ]
+  },
+  "26a8af0bf1173a11d5cab1d60e5b1a3ce90db8c8450b580984841806bfa79b8c.v4.gz": {
+   "sha256": "26a8af0bf1173a11d5cab1d60e5b1a3ce90db8c8450b580984841806bfa79b8c",
+   "bytes": 14502511,
+   "certifies": [
+    "replay9/t07 급/급증"
+   ]
+  },
+  "32edcb29d5a00f7daed22e28c6079517998a169b4c1903f10721a3daf05479e1.v4.gz": {
+   "sha256": "32edcb29d5a00f7daed22e28c6079517998a169b4c1903f10721a3daf05479e1",
+   "bytes": 14501535,
+   "certifies": [
+    "replay9/t09 학/학생증"
+   ]
+  },
+  "a838f889f6a0d7178f3411085704b8abf53f9b8cb4ca39a5baac76d558eaceb6.v4.gz": {
+   "sha256": "a838f889f6a0d7178f3411085704b8abf53f9b8cb4ca39a5baac76d558eaceb6",
+   "bytes": 14708817,
+   "certifies": [
+    "replay9/t10 진/진폐증"
+   ]
+  },
+  "1a81f6205617ef694ef56dc7333c00dcc4ab6ba533347df895a38cc1d6d54688.v4.gz": {
+   "sha256": "1a81f6205617ef694ef56dc7333c00dcc4ab6ba533347df895a38cc1d6d54688",
+   "bytes": 14526707,
+   "certifies": [
+    "replay9/source 증"
+   ]
+  }
+ },
+ "file_count": 9,
+ "total_bytes": 130977224
+}
