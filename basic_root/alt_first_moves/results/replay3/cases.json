@@ -1,0 +1,330 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay3-v1:\" + id), first 999",
+ "eligible": 31,
+ "eligible_by_source": {
+  "급": 3,
+  "순": 4,
+  "승": 2,
+  "역": 7,
+  "엽": 0,
+  "율": 3,
+  "행": 11,
+  "흥": 1
+ },
+ "excluded": [
+  "순/순발력",
+  "행/행정구역"
+ ],
+ "cases": [
+  {
+   "name": "g01",
+   "id": "병/병행",
+   "syllable": "병",
+   "word": "병행",
+   "source": "행",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g02",
+   "id": "병/병력",
+   "syllable": "병",
+   "word": "병력",
+   "source": "역",
+   "split": "final",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g03",
+   "id": "압/압력",
+   "syllable": "압",
+   "word": "압력",
+   "source": "역",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g04",
+   "id": "진/진학률",
+   "syllable": "진",
+   "word": "진학률",
+   "source": "율",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g05",
+   "id": "극/극력",
+   "syllable": "극",
+   "word": "극력",
+   "source": "역",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g06",
+   "id": "진/진행",
+   "syllable": "진",
+   "word": "진행",
+   "source": "행",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g07",
+   "id": "탄/탄력",
+   "syllable": "탄",
+   "word": "탄력",
+   "source": "역",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g08",
+   "id": "폭/폭행",
+   "syllable": "폭",
+   "word": "폭행",
+   "source": "행",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g09",
+   "id": "편/편력",
+   "syllable": "편",
+   "word": "편력",
+   "source": "역",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g10",
+   "id": "직/직행",
+   "syllable": "직",
+   "word": "직행",
+   "source": "행",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g11",
+   "id": "언/언급",
+   "syllable": "언",
+   "word": "언급",
+   "source": "급",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g12",
+   "id": "칠/칠순",
+   "syllable": "칠",
+   "word": "칠순",
+   "source": "순",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g13",
+   "id": "식/식순",
+   "syllable": "식",
+   "word": "식순",
+   "source": "순",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g14",
+   "id": "역/역순",
+   "syllable": "역",
+   "word": "역순",
+   "source": "순",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g15",
+   "id": "압/압승",
+   "syllable": "압",
+   "word": "압승",
+   "source": "승",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g16",
+   "id": "역/역행",
+   "syllable": "역",
+   "word": "역행",
+   "source": "행",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g17",
+   "id": "완/완행",
+   "syllable": "완",
+   "word": "완행",
+   "source": "행",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g18",
+   "id": "운/운행",
+   "syllable": "운",
+   "word": "운행",
+   "source": "행",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g19",
+   "id": "환/환승",
+   "syllable": "환",
+   "word": "환승",
+   "source": "승",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g20",
+   "id": "급/급행",
+   "syllable": "급",
+   "word": "급행",
+   "source": "행",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g21",
+   "id": "죽/죽순",
+   "syllable": "죽",
+   "word": "죽순",
+   "source": "순",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g22",
+   "id": "할/할인율",
+   "syllable": "할",
+   "word": "할인율",
+   "source": "율",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g23",
+   "id": "순/순행",
+   "syllable": "순",
+   "word": "순행",
+   "source": "행",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g24",
+   "id": "진/진급",
+   "syllable": "진",
+   "word": "진급",
+   "source": "급",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g25",
+   "id": "승/승률",
+   "syllable": "승",
+   "word": "승률",
+   "source": "율",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g26",
+   "id": "환/환급",
+   "syllable": "환",
+   "word": "환급",
+   "source": "급",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g27",
+   "id": "퇴/퇴행",
+   "syllable": "퇴",
+   "word": "퇴행",
+   "source": "행",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g28",
+   "id": "군/군사력",
+   "syllable": "군",
+   "word": "군사력",
+   "source": "역",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g29",
+   "id": "진/진흥",
+   "syllable": "진",
+   "word": "진흥",
+   "source": "흥",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g30",
+   "id": "진/진력",
+   "syllable": "진",
+   "word": "진력",
+   "source": "역",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g31",
+   "id": "흥/흥행",
+   "syllable": "흥",
+   "word": "흥행",
+   "source": "행",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}
