@@ -1,0 +1,33 @@
+{
+ "syllable": "홍",
+ "vertex": "홍",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 20.36,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 13429716,
+ "proof_nodes": 186790,
+ "proof_seconds": 3.85004,
+ "solver_wall_seconds": 25.22,
+ "verify_seconds": 4.981,
+ "verify_wall_seconds": 4.99,
+ "proof_bytes": 1336081,
+ "proof_sha256": "f85f0541f315dc44a252690a94cb59ece456889e5bda66b48454f61534fa7a6d",
+ "position_sha256": "b2860c32ee476ec538589ae22a8873a046838c6e8a38b1b74c185c7396e047ed",
+ "input_sha256": "d87a08298ec75f09810afe17849991cc11279a0b6bdcd5d715be915b67d89965",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

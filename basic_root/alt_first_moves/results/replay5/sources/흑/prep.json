@@ -1,0 +1,33 @@
+{
+ "syllable": "흑",
+ "vertex": "흑",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 39.243,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 24762440,
+ "proof_nodes": 274097,
+ "proof_seconds": 5.208295,
+ "solver_wall_seconds": 45.53,
+ "verify_seconds": 7.387,
+ "verify_wall_seconds": 7.4,
+ "proof_bytes": 2005848,
+ "proof_sha256": "d59757d76a88737ee2611c9778fe09569f75bc409482269256bde3c91f7649a5",
+ "position_sha256": "0ba994d91da8922926833fb6d1ed1a6fb6cc343c0a87d4d9ed4261282d48858e",
+ "input_sha256": "d1171478a53e98e806c61ed80b22ec93c407010d9861c9f184090d78a2ea2b42",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

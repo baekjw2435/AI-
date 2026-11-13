@@ -1,0 +1,33 @@
+{
+ "syllable": "퇴",
+ "vertex": "퇴",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 3.621,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 2472136,
+ "proof_nodes": 42525,
+ "proof_seconds": 0.863342,
+ "solver_wall_seconds": 5.26,
+ "verify_seconds": 1.281,
+ "verify_wall_seconds": 1.29,
+ "proof_bytes": 299317,
+ "proof_sha256": "84f49835eeba417ac039ff9d1ea4d85213d656bebff90adee1823a1ddcde37f4",
+ "position_sha256": "e45743ca3ab114a8f2c26c804a42058c9969f5e9041921d41f3af0888f65c383",
+ "input_sha256": "56b4b0659455ee33a943dc27fa89735200091a9258fb6b3d6170e0a3c04cca89",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}
