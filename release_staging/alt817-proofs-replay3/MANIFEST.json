@@ -1,0 +1,194 @@
+{
+ "release_tag": "alt817-proofs-replay3",
+ "files": {
+  "ad1179b485d7d6de6d2f2602c9ce61205252fc767daa4d99ed56bcd6017a779d.v4.gz": {
+   "sha256": "ad1179b485d7d6de6d2f2602c9ce61205252fc767daa4d99ed56bcd6017a779d",
+   "bytes": 525999,
+   "certifies": [
+    "replay3/g01 병/병행",
+    "replay3/g10 직/직행",
+    "replay3/g17 완/완행",
+    "replay3/g20 급/급행",
+    "replay3/g31 흥/흥행"
+   ]
+  },
+  "25d2425c886d453a148a6239ea3516745bb9c7589d19a82159117c690ac2c999.v4.gz": {
+   "sha256": "25d2425c886d453a148a6239ea3516745bb9c7589d19a82159117c690ac2c999",
+   "bytes": 6422824,
+   "certifies": [
+    "replay3/g02 병/병력"
+   ]
+  },
+  "5cb5188bbfeade532b26c187965318c8e5d9bccfded33c7224d0b84a92b8a760.v4.gz": {
+   "sha256": "5cb5188bbfeade532b26c187965318c8e5d9bccfded33c7224d0b84a92b8a760",
+   "bytes": 6423194,
+   "certifies": [
+    "replay3/g03 압/압력"
+   ]
+  },
+  "6f6a845c491c468c60d996804080c24ff115ef169cd97579baec12615f817dcb.v4.gz": {
+   "sha256": "6f6a845c491c468c60d996804080c24ff115ef169cd97579baec12615f817dcb",
+   "bytes": 966300,
+   "certifies": [
+    "replay3/g04 진/진학률"
+   ]
+  },
+  "36e55d77e8b45733c65c600ac54931074ed5ff3d6a03d2ed4a2d945cf18c20f2.v4.gz": {
+   "sha256": "36e55d77e8b45733c65c600ac54931074ed5ff3d6a03d2ed4a2d945cf18c20f2",
+   "bytes": 19897564,
+   "certifies": [
+    "replay3/g05 극/극력"
+   ]
+  },
+  "bdec18277af49f809187b880654f2e1d012ed6f6416df83cffd058fa0dc394e7.v4.gz": {
+   "sha256": "bdec18277af49f809187b880654f2e1d012ed6f6416df83cffd058fa0dc394e7",
+   "bytes": 526452,
+   "certifies": [
+    "replay3/g06 진/진행"
+   ]
+  },
+  "2e7f14bb746b38eb89afaa9b5fa70e62d31cd5a80fc3bc9e8fa8820086287cbf.v4.gz": {
+   "sha256": "2e7f14bb746b38eb89afaa9b5fa70e62d31cd5a80fc3bc9e8fa8820086287cbf",
+   "bytes": 977397,
+   "certifies": [
+    "replay3/g07 탄/탄력"
+   ]
+  },
+  "b6f642aa5a0a09af0a3c46618514d65924e58cdc294edc29a5ba47f4c0cc937b.v4.gz": {
+   "sha256": "b6f642aa5a0a09af0a3c46618514d65924e58cdc294edc29a5ba47f4c0cc937b",
+   "bytes": 527070,
+   "certifies": [
+    "replay3/g08 폭/폭행"
+   ]
+  },
+  "50eb37ef8b6075932f85c5f22889b13aab98d385f65a85e37094fd21d8178419.v4.gz": {
+   "sha256": "50eb37ef8b6075932f85c5f22889b13aab98d385f65a85e37094fd21d8178419",
+   "bytes": 6435630,
+   "certifies": [
+    "replay3/g09 편/편력"
+   ]
+  },
+  "6d6701ffb9547f91c4ea9d03ea202ee649bbad2f7ae0ec5c1eff88988927d4d9.v4.gz": {
+   "sha256": "6d6701ffb9547f91c4ea9d03ea202ee649bbad2f7ae0ec5c1eff88988927d4d9",
+   "bytes": 60390,
+   "certifies": [
+    "replay3/g11 언/언급"
+   ]
+  },
+  "eb0fd3c8d2dde25492e6fa198d440c144fa29f109c3fff162e66c93b7c8b153e.v4.gz": {
+   "sha256": "eb0fd3c8d2dde25492e6fa198d440c144fa29f109c3fff162e66c93b7c8b153e",
+   "bytes": 2621893,
+   "certifies": [
+    "replay3/g12 칠/칠순"
+   ]
+  },
+  "f7b94876c1b2a844d4f76a1a5047d4f3e687b7bcfa72ebc58108da0c83a23ea6.v4.gz": {
+   "sha256": "f7b94876c1b2a844d4f76a1a5047d4f3e687b7bcfa72ebc58108da0c83a23ea6",
+   "bytes": 1148814,
+   "certifies": [
+    "replay3/g13 식/식순"
+   ]
+  },
+  "fa0fb2c00c27c47d53bc57c3224bb353acf304c2c41c1a2cc15815e76d0ba149.v4.gz": {
+   "sha256": "fa0fb2c00c27c47d53bc57c3224bb353acf304c2c41c1a2cc15815e76d0ba149",
+   "bytes": 1132751,
+   "certifies": [
+    "replay3/g14 역/역순"
+   ]
+  },
+  "1271a9317e3dff45081407dcdc574c9d3f02f648684c59b61ed582b8d1b5a7a6.v4.gz": {
+   "sha256": "1271a9317e3dff45081407dcdc574c9d3f02f648684c59b61ed582b8d1b5a7a6",
+   "bytes": 13944229,
+   "certifies": [
+    "replay3/g15 압/압승"
+   ]
+  },
+  "6eb7f8756d4edfe9c990ecf6ec26050fca0d22cbdd08d4bef27bc40e9a44821c.v4.gz": {
+   "sha256": "6eb7f8756d4edfe9c990ecf6ec26050fca0d22cbdd08d4bef27bc40e9a44821c",
+   "bytes": 1658180,
+   "certifies": [
+    "replay3/g16 역/역행"
+   ]
+  },
+  "3b62a66e5b48ff66c977c6beb3181522dfb55adc6dedddc1cc72167d71bc1755.v4.gz": {
+   "sha256": "3b62a66e5b48ff66c977c6beb3181522dfb55adc6dedddc1cc72167d71bc1755",
+   "bytes": 526172,
+   "certifies": [
+    "replay3/g18 운/운행"
+   ]
+  },
+  "7fdc9c307d33451e4f946c80eb555c95e0321eafcf3322920fc2ea55e4fa842f.v4.gz": {
+   "sha256": "7fdc9c307d33451e4f946c80eb555c95e0321eafcf3322920fc2ea55e4fa842f",
+   "bytes": 13951827,
+   "certifies": [
+    "replay3/g19 환/환승"
+   ]
+  },
+  "ffe5ef79e6120d0a5854d6648c74e7bc591c8d9211eacbed71193a0aac68df72.v4.gz": {
+   "sha256": "ffe5ef79e6120d0a5854d6648c74e7bc591c8d9211eacbed71193a0aac68df72",
+   "bytes": 837056,
+   "certifies": [
+    "replay3/g21 죽/죽순"
+   ]
+  },
+  "c4018a55c857ae6727f535d13503cb465e4126811cb4db3c1f206dff8808cfd1.v4.gz": {
+   "sha256": "c4018a55c857ae6727f535d13503cb465e4126811cb4db3c1f206dff8808cfd1",
+   "bytes": 1171231,
+   "certifies": [
+    "replay3/g22 할/할인율"
+   ]
+  },
+  "9fe2380fddce3c60a1acaf6efc5d2c8116d049906928bd665dc8046aa2a80c79.v4.gz": {
+   "sha256": "9fe2380fddce3c60a1acaf6efc5d2c8116d049906928bd665dc8046aa2a80c79",
+   "bytes": 1287642,
+   "certifies": [
+    "replay3/g23 순/순행"
+   ]
+  },
+  "a423592ad513a3585fe555f8df9af6110dfe0c9cb1e8401797274b3fa356ed96.v4.gz": {
+   "sha256": "a423592ad513a3585fe555f8df9af6110dfe0c9cb1e8401797274b3fa356ed96",
+   "bytes": 60703,
+   "certifies": [
+    "replay3/g24 진/진급",
+    "replay3/g26 환/환급"
+   ]
+  },
+  "cfc02b216dcd87d1425c1934d9f1e1395a71d684f9dfe6c7e9b8401bb1041b2a.v4.gz": {
+   "sha256": "cfc02b216dcd87d1425c1934d9f1e1395a71d684f9dfe6c7e9b8401bb1041b2a",
+   "bytes": 1931856,
+   "certifies": [
+    "replay3/g25 승/승률"
+   ]
+  },
+  "8c15915dfc4b72019eac2375bb7087e2520b70e33a446d49277582df181e6f95.v4.gz": {
+   "sha256": "8c15915dfc4b72019eac2375bb7087e2520b70e33a446d49277582df181e6f95",
+   "bytes": 525702,
+   "certifies": [
+    "replay3/g27 퇴/퇴행"
+   ]
+  },
+  "0e191b19126e3bb68bec3eca5844696d64087826ae11e7b316230b6408f64ec2.v4.gz": {
+   "sha256": "0e191b19126e3bb68bec3eca5844696d64087826ae11e7b316230b6408f64ec2",
+   "bytes": 8857544,
+   "certifies": [
+    "replay3/g28 군/군사력"
+   ]
+  },
+  "386c4519efb14ce31b7218377d40ac88d985131b389c847ce9acf31832e3d6fe.v4.gz": {
+   "sha256": "386c4519efb14ce31b7218377d40ac88d985131b389c847ce9acf31832e3d6fe",
+   "bytes": 545644,
+   "certifies": [
+    "replay3/g29 진/진흥"
+   ]
+  },
+  "4b2664a06d84ec4859a8f6f51e4dea214fd191a7321fd47322d5efe3c35b72d2.v4.gz": {
+   "sha256": "4b2664a06d84ec4859a8f6f51e4dea214fd191a7321fd47322d5efe3c35b72d2",
+   "bytes": 6485656,
+   "certifies": [
+    "replay3/g30 진/진력"
+   ]
+  }
+ },
+ "file_count": 26,
+ "total_bytes": 99449720
+}
