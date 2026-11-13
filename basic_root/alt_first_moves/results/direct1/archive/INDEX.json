@@ -1,0 +1,37 @@
+{
+ "format": "replay-archive-2",
+ "experiment": "direct1",
+ "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+ "decided_cases": 1,
+ "archived": 1,
+ "accepted": 1,
+ "certificate_files": 1,
+ "certificate_bytes": 11966712,
+ "cases": [
+  {
+   "case": "d08",
+   "id": "역/역기능",
+   "first_move": "win",
+   "method": "direct",
+   "store": "release",
+   "release_tag": "alt817-proofs-direct1",
+   "asset": "8e545511085a55b67b5d755f375ac8c7fd785f8e3bacf304c2ce861a403cbf6c.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-direct1/8e545511085a55b67b5d755f375ac8c7fd785f8e3bacf304c2ce861a403cbf6c.v4.gz",
+   "uploaded_verified": false,
+   "proof_sha256": "8e545511085a55b67b5d755f375ac8c7fd785f8e3bacf304c2ce861a403cbf6c",
+   "position_sha256": "4fa121fcfbde3f56fdb5c07d70fd2a4c5d3cd7bbcc2d95215eb091ae8a139314",
+   "input_sha256": "9a8e48eb5be601b283bca44e25c7bad407dd6f5314ed3040ad9b6330164e64d1",
+   "proof_nodes": 1654685,
+   "archived": true,
+   "accepted": true,
+   "proof_bytes": 11966712,
+   "verify_seconds": 37.002,
+   "checked": "2026-11-13 19:02:07"
+  }
+ ],
+ "release": {
+  "tag": "alt817-proofs-direct1",
+  "url": "https://github.com/baekjw2435/AI-/releases/tag/alt817-proofs-direct1",
+  "status": "staged: the files are not attached to the release yet"
+ }
+}

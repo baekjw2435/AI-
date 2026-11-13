@@ -9,8 +9,11 @@ from collections import defaultdict
 import json
 from pathlib import Path
 import re
+import sys
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+from replay_table import run_seconds  # noqa: E402
 
 
 def main():
@@ -43,7 +46,7 @@ def main():
         und = [r for r in rep if r not in dec]
         lose = sum(r['first_move'] == 'lose' for r in dec)
         win = sum(r['first_move'] == 'win' for r in dec)
-        secs = sum(r['replay']['solver_wall_seconds'] + (r['replay'].get('verify_seconds') or 0) for r in rep)
+        secs = sum(run_seconds(r['replay']) for r in rep)
         preps = [json.loads(p.read_text(encoding='utf-8')) for p in sorted((b / 'sources').glob('*/prep.json'))] if (b / 'sources').exists() else []
         prep_s = sum(j['search_seconds_spent'] + (j['proof_seconds'] or 0) + (j['verify_seconds'] or 0) for j in preps)
         lower = any(j.get('spent_is_lower_bound') for j in preps)
@@ -83,14 +86,14 @@ def main():
             recs = [json.loads(p.read_text(encoding='utf-8')) for p in sorted(b.glob('*.phase1.json'))]
             idx = json.loads((b / 'archive' / 'INDEX.json').read_text(encoding='utf-8'))
             dec = [r for r in recs if r['decided']]
-            secs = sum(r['direct']['solver_wall_seconds'] + (r['direct'].get('verify_seconds') or 0) for r in recs)
+            secs = sum(run_seconds(r['direct']) for r in recs)
             rel = idx.get('release')
             if rel:
                 where = f'릴리스 `{rel["tag"]}`' + (' (확인됨)' if rel['status'].startswith('uploaded') else ' (**아직 안 올림**)')
                 if not rel['status'].startswith('uploaded') and idx['certificate_files']:
                     staged.append((rel['tag'], idx['certificate_files'], idx['certificate_bytes']))
             else:
-                where = f'저장소 `results/{b.name}/archive/certs/`'
+                where = f'저장소 `results/{b.name}/archive/certs/`' if idx['certificate_files'] else '- (확정 없음)'
             L.append(f'| {b.name} | {len(recs)} | {len(dec)} | {sum(r["first_move"] == "lose" for r in dec)} | {sum(r["first_move"] == "win" for r in dec)} | '
                      f'{len(recs) - len(dec)} | {secs:,.0f} | {idx["certificate_files"]} | {idx["certificate_bytes"] / 1e6:,.0f} | {where} |')
             wins += [(b.name + ' (직접 탐색)', words[r['id']], r['source']['syllable']) for r in dec if r['first_move'] == 'win']
