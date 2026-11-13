@@ -1,0 +1,28 @@
+{
+ "release_tag": "alt817-proofs-replay12",
+ "files": {
+  "4b5db8a7fe8d7d072887fbd8fdfc36ed14557835c2649ba47f3f0a3876bb7741.v4.gz": {
+   "sha256": "4b5db8a7fe8d7d072887fbd8fdfc36ed14557835c2649ba47f3f0a3876bb7741",
+   "bytes": 18190915,
+   "certifies": [
+    "replay12/w01 환/환갑"
+   ]
+  },
+  "df9226f717491299abff848a321f1cd85e4aa6780d7a875408984a3e100aa6be.v4.gz": {
+   "sha256": "df9226f717491299abff848a321f1cd85e4aa6780d7a875408984a3e100aa6be",
+   "bytes": 18033671,
+   "certifies": [
+    "replay12/w02 진/진갑"
+   ]
+  },
+  "5781cc1f05996e85f93b9422d5c5b78e210ebd1014dde22cd65c67718e5a5d4e.v4.gz": {
+   "sha256": "5781cc1f05996e85f93b9422d5c5b78e210ebd1014dde22cd65c67718e5a5d4e",
+   "bytes": 18229810,
+   "certifies": [
+    "replay12/source 갑"
+   ]
+  }
+ },
+ "file_count": 3,
+ "total_bytes": 54454396
+}
