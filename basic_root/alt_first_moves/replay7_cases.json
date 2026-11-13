@@ -1,0 +1,266 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay7-v1:\" + id), first 999",
+ "eligible": 25,
+ "eligible_by_source": {
+  "객": 2,
+  "곡": 6,
+  "솥": 1,
+  "압": 4,
+  "죄": 3,
+  "폭": 3,
+  "풍": 6
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "q01",
+   "id": "환/환상곡",
+   "syllable": "환",
+   "word": "환상곡",
+   "source": "곡",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q02",
+   "id": "혈/혈압",
+   "syllable": "혈",
+   "word": "혈압",
+   "source": "압",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q03",
+   "id": "순/순풍",
+   "syllable": "순",
+   "word": "순풍",
+   "source": "풍",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q04",
+   "id": "명/명곡",
+   "syllable": "명",
+   "word": "명곡",
+   "source": "곡",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q05",
+   "id": "편/편동풍",
+   "syllable": "편",
+   "word": "편동풍",
+   "source": "풍",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q06",
+   "id": "폭/폭행죄",
+   "syllable": "폭",
+   "word": "폭행죄",
+   "source": "죄",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q07",
+   "id": "행/행락객",
+   "syllable": "행",
+   "word": "행락객",
+   "source": "객",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q08",
+   "id": "폭/폭풍",
+   "syllable": "폭",
+   "word": "폭풍",
+   "source": "풍",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q09",
+   "id": "진/진폭",
+   "syllable": "진",
+   "word": "진폭",
+   "source": "폭",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q10",
+   "id": "탄/탄압",
+   "syllable": "탄",
+   "word": "탄압",
+   "source": "압",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q11",
+   "id": "진/진퇴유곡",
+   "syllable": "진",
+   "word": "진퇴유곡",
+   "source": "곡",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q12",
+   "id": "병/병풍",
+   "syllable": "병",
+   "word": "병풍",
+   "source": "풍",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q13",
+   "id": "행/행진곡",
+   "syllable": "행",
+   "word": "행진곡",
+   "source": "곡",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q14",
+   "id": "돌/돌솥",
+   "syllable": "돌",
+   "word": "돌솥",
+   "source": "솥",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q15",
+   "id": "폭/폭압",
+   "syllable": "폭",
+   "word": "폭압",
+   "source": "압",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q16",
+   "id": "학/학풍",
+   "syllable": "학",
+   "word": "학풍",
+   "source": "풍",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q17",
+   "id": "완/완전범죄",
+   "syllable": "완",
+   "word": "완전범죄",
+   "source": "죄",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q18",
+   "id": "교/교향곡",
+   "syllable": "교",
+   "word": "교향곡",
+   "source": "곡",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q19",
+   "id": "진/진압",
+   "syllable": "진",
+   "word": "진압",
+   "source": "압",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q20",
+   "id": "폭/폭폭",
+   "syllable": "폭",
+   "word": "폭폭",
+   "source": "폭",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q21",
+   "id": "축/축하객",
+   "syllable": "축",
+   "word": "축하객",
+   "source": "객",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q22",
+   "id": "증/증폭",
+   "syllable": "증",
+   "word": "증폭",
+   "source": "폭",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q23",
+   "id": "변/변주곡",
+   "syllable": "변",
+   "word": "변주곡",
+   "source": "곡",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q24",
+   "id": "절/절도죄",
+   "syllable": "절",
+   "word": "절도죄",
+   "source": "죄",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "q25",
+   "id": "돌/돌풍",
+   "syllable": "돌",
+   "word": "돌풍",
+   "source": "풍",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}

@@ -1,0 +1,368 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay6-v1:\" + id), first 999",
+ "eligible": 35,
+ "eligible_by_source": {
+  "능": 3,
+  "돌": 1,
+  "맥": 5,
+  "법": 11,
+  "왕": 2,
+  "즉": 1,
+  "탑": 1,
+  "편": 4,
+  "합": 7
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "n01",
+   "id": "군/군법",
+   "syllable": "군",
+   "word": "군법",
+   "source": "법",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n02",
+   "id": "절/절편",
+   "syllable": "절",
+   "word": "절편",
+   "source": "편",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n03",
+   "id": "돌/돌탑",
+   "syllable": "돌",
+   "word": "돌탑",
+   "source": "탑",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n04",
+   "id": "교/교집합",
+   "syllable": "교",
+   "word": "교집합",
+   "source": "합",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n05",
+   "id": "편/편법",
+   "syllable": "편",
+   "word": "편법",
+   "source": "법",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n06",
+   "id": "학/학맥",
+   "syllable": "학",
+   "word": "학맥",
+   "source": "맥",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n07",
+   "id": "야/야합",
+   "syllable": "야",
+   "word": "야합",
+   "source": "합",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n08",
+   "id": "득/득점왕",
+   "syllable": "득",
+   "word": "득점왕",
+   "source": "왕",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n09",
+   "id": "율/율법",
+   "syllable": "율",
+   "word": "율법",
+   "source": "법",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n10",
+   "id": "순/순기능",
+   "syllable": "순",
+   "word": "순기능",
+   "source": "능",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n11",
+   "id": "찬/찬합",
+   "syllable": "찬",
+   "word": "찬합",
+   "source": "합",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n12",
+   "id": "항/항공우편",
+   "syllable": "항",
+   "word": "항공우편",
+   "source": "편",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n13",
+   "id": "진/진즉",
+   "syllable": "진",
+   "word": "진즉",
+   "source": "즉",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n14",
+   "id": "합/합법",
+   "syllable": "합",
+   "word": "합법",
+   "source": "법",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n15",
+   "id": "축/축지법",
+   "syllable": "축",
+   "word": "축지법",
+   "source": "법",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n16",
+   "id": "명/명상법",
+   "syllable": "명",
+   "word": "명상법",
+   "source": "법",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n17",
+   "id": "교/교통편",
+   "syllable": "교",
+   "word": "교통편",
+   "source": "편",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n18",
+   "id": "숙/숙맥",
+   "syllable": "숙",
+   "word": "숙맥",
+   "source": "맥",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n19",
+   "id": "준/준법",
+   "syllable": "준",
+   "word": "준법",
+   "source": "법",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n20",
+   "id": "진/진맥",
+   "syllable": "진",
+   "word": "진맥",
+   "source": "맥",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n21",
+   "id": "군/군왕",
+   "syllable": "군",
+   "word": "군왕",
+   "source": "왕",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n22",
+   "id": "병/병합",
+   "syllable": "병",
+   "word": "병합",
+   "source": "합",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n23",
+   "id": "역/역기능",
+   "syllable": "역",
+   "word": "역기능",
+   "source": "능",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n24",
+   "id": "격/격돌",
+   "syllable": "격",
+   "word": "격돌",
+   "source": "돌",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 120.001
+  },
+  {
+   "name": "n25",
+   "id": "혈/혈맥",
+   "syllable": "혈",
+   "word": "혈맥",
+   "source": "맥",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n26",
+   "id": "직/직능",
+   "syllable": "직",
+   "word": "직능",
+   "source": "능",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n27",
+   "id": "직/직설법",
+   "syllable": "직",
+   "word": "직설법",
+   "source": "법",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n28",
+   "id": "병/병법",
+   "syllable": "병",
+   "word": "병법",
+   "source": "법",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n29",
+   "id": "증/증편",
+   "syllable": "증",
+   "word": "증편",
+   "source": "편",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n30",
+   "id": "교/교수법",
+   "syllable": "교",
+   "word": "교수법",
+   "source": "법",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n31",
+   "id": "규/규합",
+   "syllable": "규",
+   "word": "규합",
+   "source": "합",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n32",
+   "id": "명/명맥",
+   "syllable": "명",
+   "word": "명맥",
+   "source": "맥",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n33",
+   "id": "합/합집합",
+   "syllable": "합",
+   "word": "합집합",
+   "source": "합",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n34",
+   "id": "홍/홍합",
+   "syllable": "홍",
+   "word": "홍합",
+   "source": "합",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "n35",
+   "id": "식/식이요법",
+   "syllable": "식",
+   "word": "식이요법",
+   "source": "법",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}

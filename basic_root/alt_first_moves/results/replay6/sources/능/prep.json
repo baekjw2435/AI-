@@ -1,0 +1,33 @@
+{
+ "syllable": "능",
+ "vertex": "능",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 162.761,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 87493145,
+ "proof_nodes": 689118,
+ "proof_seconds": 17.013163,
+ "solver_wall_seconds": 181.31,
+ "verify_seconds": 23.875,
+ "verify_wall_seconds": 23.89,
+ "proof_bytes": 4995087,
+ "proof_sha256": "76ae567b3cf0e27eaff0f8e01aebdcd721e3e838d6bf5ab1eaccb92ffc3518a5",
+ "position_sha256": "27eb54624b673639c88d0c49ceadb69aad8d8945c64e0988a1515eef79ab81d1",
+ "input_sha256": "4197d3a7170597d3ff328c05803fc234a398ae6cbbd324608ba4649b651579a6",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

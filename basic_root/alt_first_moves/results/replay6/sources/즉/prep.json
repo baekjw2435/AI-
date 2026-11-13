@@ -1,0 +1,39 @@
+{
+ "syllable": "즉",
+ "vertex": "즉",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 190.138,
+ "spent_is_lower_bound": true,
+ "lost_runs": [
+  {
+   "event": "interrupted",
+   "seconds": null,
+   "note": "this run did not finish (restart). Its checkpoints are in state.tt; the search after the last one (at most 60 s) is lost and not counted"
+  }
+ ],
+ "rejected_certificates": 0,
+ "mid_calls": 36903492,
+ "proof_nodes": 730532,
+ "proof_seconds": 19.638766,
+ "solver_wall_seconds": 92.94,
+ "verify_seconds": 24.747,
+ "verify_wall_seconds": 24.76,
+ "proof_bytes": 5296504,
+ "proof_sha256": "39ca86d5a36ba5f00cdd090fd1098c071af24bc938b00ab315696310044521e1",
+ "position_sha256": "dc17a03403daf5299c6d2b8e79ebb86fab0b8613eb6e4f11da297698ada8c8ab",
+ "input_sha256": "795f5bbe22bf855c20f83a4caaa8b5c8712d8d849ac969cc63b208ceeaacb55d",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

@@ -62,7 +62,7 @@
   - 첫 수로 나눠 풀기(같은 총예산에서 오히려 손해)
   - 수 순서 점수: 둘 다 푼 국면에서 국면 수는 14~17% 줄었지만 시간은 비슷했습니다(−4.4~+0.2%). 미확정까지 넣은 총시간은 7~11% 늘었습니다.
   - 이름만 다른 같은 구조의 작은 끝판 재사용: 작은 국면이 탐색의 0.01% 이하
-  - 짝 전략: 작은 게임에서는 강했지만, 구없샘 약 2,800곳에서 1곳뿐이었습니다.
+  - 짝 전략: 작은 게임에서는 강했지만, 구없샘 약 2,300곳(두 방식을 따로 세면 2,794회)에서 1곳뿐이었습니다.
   - 3수 답 일반화: 표본 20곳과 그 자식 110개에서 0곳(미확정으로 둠)
 - **저장 상태 버그를 세 번 고쳤습니다.** 틀린 판정과는 관계없고, 계산 기록을 잃던 문제였습니다. 기록은 `guopsaem_root/experiments/2026-11-06_focus/SAVE_AUDIT_KO.md`에 있습니다.
 - 자세한 기록
@@ -123,7 +123,7 @@
   - 첫 묶음에서 확정된 18개 중 17개가 예측과 같았습니다. 다른 하나는 자기 고리 단어 왕왕입니다.
   - 근거: 단어 하나가 빠져도, 이긴 쪽에게 그 단어를 쓰지 않는 필승 전략이 있으면 승패는 같습니다.
 - 어려움도 t의 기존 증명 크기로 갈렸습니다.
-  - 21만 1천 국면 이하: 14개 모두 80초 안에 확정
+  - 21만 1천 국면 이하, 또는 적(크기 기록이 없어 첫 묶음 결과를 보고 넣음): 14개 모두 80초 안에 확정
   - 49만 이상: 10개 모두 2분 안에 안 끝남
   - 안 돌린 396개 중 쉬운 쪽 198개, 어려운 쪽 157개, 그 사이 38개, 기존 결과 없음 3개
 - 알려진 답을 둔 뒤의 국면을 먼저 푸는 힌트는, 어려운 조정용 4개에서 2분 안에 하나도 안 풀렸습니다. 어려운 국면은 그 뒤의 국면 자체가 큽니다.
@@ -182,6 +182,7 @@ python3 batch_table.py batch2 batch2_picks.json
 - 증명 생성 시간과 검증 시간은 탐색 시간과 따로 기록합니다.
 - 방법 조정은 조정용으로, 마지막 비교는 비교용으로 합니다.
 - 작은 묶음 결과를 보고 전체 시간을 다시 추정합니다. 그전에는 대규모 계산을 하지 않습니다.
+- 대규모 계산(예: 쉬운 쪽 198개 전체)은 사용자·아스트라와 먼저 정합니다.
 - 전달 기록(아스트라)과 이 저장소의 검증 결과는 구분해서 적습니다.
 
 ## 5. 운영 주의
@@ -248,3 +249,67 @@ g++ -O3 -march=x86-64-v3 -std=c++17 -o .work/measure/solver_v5_replay guopsaem_r
   - 바꾸기 전 빌드의 sha256은 `b1fe5c51…`, 바꾼 빌드는 `292670d4…`입니다. 이전 기록의 검증은 모두 바꾸기 전 빌드로 했습니다.
 - `solver_v5_replay --emit-check 0`(선택)은 증명서 쓰기를 약 3배 빠르게 합니다. 탐색 경로가 같으면 증명서도 같은 파일입니다. `replay_test.py --emit-check 0`으로 씁니다. 독립 검증은 그대로 필수입니다.
 - 저장 상태 파일에 누적 탐색 시간이 들어갑니다(`solve_common.state_carried_seconds`). `run_batch.py`는 끊긴 실행이 저장해 둔 탐색을 파일에서 읽어 시간 기록에 넣습니다.
+
+## 7. 재생으로 남은 첫 수 풀기 (2026-11-13부터)
+
+아스트라와 정한 것: 압축 설정 변경과 `--emit-check 0`은 **독립 검증을 필수로 유지하는 조건**으로 채택. 남은 첫 수는 작은 묶음으로 재생해 풉니다. 큰 증명서는 GitHub 릴리스 첨부파일로 두고, 저장소에는 국면·입력·검증 기록·해시·주소를 둡니다.
+
+### 7-1. 지금 상태
+
+- 묶음별 숫자, 남은 수, 미확정, 이기는 첫 수: `basic_root/alt_first_moves/results/REPLAY_BATCHES_KO.md` (자동 생성)
+- 대상 전체: `TARGETS_KO.md`, `TARGETS_LIST_KO.md`
+- 원본 증명서를 이번에 처음 검증한 음절이 있습니다. 적(받으면 승: 전에는 전달 기록만 있었음), 졸(승), 핵(패)입니다.
+
+### 7-2. 한 묶음 푸는 순서
+
+```sh
+cd /home/user/AI-/basic_root/alt_first_moves
+S=/home/user/AI-/.work/sources          # 원본 증명서 작업 폴더
+G=/home/user/AI-/.work/release_staging  # 릴리스에 올릴 증명서를 모으는 폴더
+
+# 0) 새 작업 환경이면: 보관해 둔 원본 증명서를 작업 폴더로 되돌리기 (없으면 2번에서 다시 준비해도 됨)
+python3 replay_restore_sources.py $S --staging $G
+
+# 1) 남은 수를 넘겨주는 음절별로 보기
+python3 replay_progress.py && sed -n '/아직 미검증/,/^$/p;' results/REPLAY_BATCHES_KO.md
+
+# 2) 원본 증명서 준비: 음절마다 한도 900초, 저장표 1GB, 동시에 2개. 못 끝낸 음절은 저장 상태가 남고,
+#    같은 명령을 더 큰 한도로 다시 돌리면 이어서 풉니다.
+python3 replay_sources.py $S 900 1024 2 식 증 약
+
+# 3) 대상 고정 → 먼저 커밋 (씨앗과 접두어는 묶음마다 새로)
+python3 replay_pick.py any 999 alt817-replay7-v1: $S replay7_cases.json --prefix q --only-sources 식,증,약
+git add replay7_cases.json && git commit -m "재생 풀이 묶음 7 준비: ..."
+
+# 4) 재생만 실행 (한도 600초, 저장표 1GB, 동시에 3개). 끊기면 같은 명령을 다시 돌리면 이어집니다.
+python3 replay_test.py replay7_cases.json $S /home/user/AI-/.work/replay7/run \
+    --seconds 600 --tt-mb 1024 --jobs 3 --kinds replay --emit-check 0
+
+# 5) 기록 → 보관(보관본을 다시 검증) → 문서
+python3 replay_collect.py replay7 /home/user/AI-/.work/replay7/run
+python3 replay_table.py replay7
+python3 replay_archive.py replay7 /home/user/AI-/.work/replay7/run \
+    --release alt817-proofs-replay7 --staging $G --sources $S
+python3 report.py
+python3 replay_batch_readme.py replay7 "한 줄 설명"
+python3 replay_progress.py
+```
+
+- `--only-sources`를 꼭 주세요. 안 주면 전에 미확정으로 끝난 첫 수(순발력, 행정구역, 탄핵)가 다시 들어옵니다.
+- 계산기 프로세스는 합쳐서 3개까지만 돌립니다(4코어). 원본 준비와 재생을 같이 돌릴 때는 2 + 1로 나눕니다.
+- 재생은 선택 기능입니다. `run_batch.py` 등 기존 도구는 그대로입니다.
+
+### 7-3. 증명서 보관 (묶음 3부터)
+
+- 저장소(`results/replayN/archive/`): 국면 `pos.json`, 입력 `in.txt`, 보관본을 다시 검증한 기록 `verify.json`, 색인 `INDEX.json`(파일마다 sha256, 크기, 릴리스 주소, 올린 뒤 확인했는지). 원본 증명서의 기록은 `results/replayN/sources/<음절>/`.
+- 증명서 파일: 릴리스 `alt817-proofs-replayN`의 첨부파일 `<sha256>.v4.gz`. 같은 국면에서 같은 증명서가 나온 경우 파일은 하나입니다.
+- **작업 세션에는 릴리스를 만들 권한이 없었습니다.** 그래서 파일을 세션 브랜치 `ccr-e9c317a6-opqe7c`의 `release_staging/<태그>/`에 임시로 두었습니다(올리는 법은 그 폴더의 `README_KO.md`). 올리기 전에는 그 브랜치를 지우지 마세요.
+- 올린 뒤: `python3 replay_archive.py replayN --check-release 1`. 주소마다 다시 내려받아 sha256을 비교하고 `INDEX.json`에 적습니다. 그다음 `replay_progress.py`를 다시 돌리면 표의 '아직 안 올림'이 '확인됨'으로 바뀝니다.
+- 묶음 1·2의 증명서(약 200MB)는 저장소에 그대로 둡니다. 과거 기록은 고치지 않습니다.
+
+### 7-4. 알아 둘 점
+
+- 재생이 한도 안에 못 푼 첫 수는 미확정입니다. 저장 상태가 작업 폴더에 남아 있으면 더 큰 `--seconds`로 같은 명령을 돌려 이어 갈 수 있습니다.
+- 원본 증명서가 큰 음절(식·증·탕·탄·약·갑·언·벽·온·충·맹·습·격·활·표·득·할)은 원본 준비부터 오래 걸립니다.
+- 속도 숫자는 이 기계에서 한 번 잰 값입니다. 정해진 배수로 말하지 않습니다.
+- 검증기의 정규화 최적화는 별도 실험으로 남겨 두었습니다(`results/replay2/TIMING_KO.md` 4절). 풀이를 막지 않습니다.

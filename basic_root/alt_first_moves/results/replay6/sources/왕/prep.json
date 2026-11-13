@@ -1,0 +1,33 @@
+{
+ "syllable": "왕",
+ "vertex": "왕",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 310.597,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 157589739,
+ "proof_nodes": 673215,
+ "proof_seconds": 16.784717,
+ "solver_wall_seconds": 329.04,
+ "verify_seconds": 23.613,
+ "verify_wall_seconds": 23.63,
+ "proof_bytes": 4884260,
+ "proof_sha256": "678ec2bb354c79f34aff6c5eb3e011755dbbd1e6f9505bdab6266bcbbb96cb16",
+ "position_sha256": "0a9bcd2e8c11d87d1f3b62c8ea8daf2ff347602a4e7b5871593dab06f7a538ee",
+ "input_sha256": "cb93f424898bbd939649a6649c683fb52bea4c842e3d8b3f288c0d3962b6afb0",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

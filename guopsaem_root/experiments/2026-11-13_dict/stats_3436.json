@@ -1,0 +1,4770 @@
+{
+ "summary": {
+  "dictionary": "words_3436.txt",
+  "words": 3436,
+  "vertices": 461,
+  "groups": 2613,
+  "shared_groups": 55,
+  "start_syllables": 470,
+  "static_W": 0,
+  "static_L": 0,
+  "open": 470,
+  "distinct_open_positions": 459,
+  "core_sizes_most_common": [
+   {
+    "words": 2252,
+    "groups": 1713,
+    "vertices": 243,
+    "syllables": 251
+   },
+   {
+    "words": 2253,
+    "groups": 1714,
+    "vertices": 244,
+    "syllables": 53
+   },
+   {
+    "words": 2254,
+    "groups": 1715,
+    "vertices": 244,
+    "syllables": 39
+   },
+   {
+    "words": 2255,
+    "groups": 1716,
+    "vertices": 244,
+    "syllables": 21
+   },
+   {
+    "words": 2255,
+    "groups": 1715,
+    "vertices": 244,
+    "syllables": 12
+   },
+   {
+    "words": 2254,
+    "groups": 1714,
+    "vertices": 244,
+    "syllables": 6
+   },
+   {
+    "words": 2256,
+    "groups": 1716,
+    "vertices": 244,
+    "syllables": 5
+   },
+   {
+    "words": 2256,
+    "groups": 1717,
+    "vertices": 244,
+    "syllables": 5
+   }
+  ],
+  "core_words_min_max": [
+   2252,
+   2306
+  ]
+ },
+ "rows": [
+  {
+   "syllable": "객",
+   "vertex": "객",
+   "first_words": 14,
+   "static": null,
+   "position": 0,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "갬",
+   "vertex": "갬",
+   "first_words": 1,
+   "static": null,
+   "position": 1,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "갭",
+   "vertex": "갭",
+   "first_words": 1,
+   "static": null,
+   "position": 2,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "갱",
+   "vertex": "갱",
+   "first_words": 15,
+   "static": null,
+   "position": 3,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "겅",
+   "vertex": "겅",
+   "first_words": 5,
+   "static": null,
+   "position": 4,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "겐",
+   "vertex": "겐",
+   "first_words": 3,
+   "static": null,
+   "position": 5,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "겔",
+   "vertex": "겔",
+   "first_words": 4,
+   "static": null,
+   "position": 6,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "겜",
+   "vertex": "겜",
+   "first_words": 4,
+   "static": null,
+   "position": 7,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "격",
+   "vertex": "격",
+   "first_words": 26,
+   "static": null,
+   "position": 8,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "견",
+   "vertex": "견",
+   "first_words": 32,
+   "static": null,
+   "position": 9,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "겸",
+   "vertex": "겸",
+   "first_words": 18,
+   "static": null,
+   "position": 10,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "곤",
+   "vertex": "곤",
+   "first_words": 31,
+   "static": null,
+   "position": 11,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "곶",
+   "vertex": "곶",
+   "first_words": 2,
+   "static": null,
+   "position": 12,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "곽",
+   "vertex": "곽",
+   "first_words": 6,
+   "static": null,
+   "position": 13,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "괄",
+   "vertex": "괄",
+   "first_words": 2,
+   "static": null,
+   "position": 14,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "괘",
+   "vertex": "괘",
+   "first_words": 12,
+   "static": null,
+   "position": 15,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "굉",
+   "vertex": "굉",
+   "first_words": 7,
+   "static": null,
+   "position": 16,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "굽",
+   "vertex": "굽",
+   "first_words": 9,
+   "static": null,
+   "position": 17,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "굿",
+   "vertex": "굿",
+   "first_words": 6,
+   "static": null,
+   "position": 18,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "궐",
+   "vertex": "궐",
+   "first_words": 3,
+   "static": null,
+   "position": 19,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "궤",
+   "vertex": "궤",
+   "first_words": 21,
+   "static": null,
+   "position": 20,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "규",
+   "vertex": "규",
+   "first_words": 30,
+   "static": null,
+   "position": 21,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "균",
+   "vertex": "균",
+   "first_words": 14,
+   "static": null,
+   "position": 22,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "귤",
+   "vertex": "귤",
+   "first_words": 9,
+   "static": null,
+   "position": 23,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "급",
+   "vertex": "급",
+   "first_words": 22,
+   "static": null,
+   "position": 24,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "긍",
+   "vertex": "긍",
+   "first_words": 4,
+   "static": null,
+   "position": 25,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "긴",
+   "vertex": "긴",
+   "first_words": 29,
+   "static": null,
+   "position": 26,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "깃",
+   "vertex": "깃",
+   "first_words": 5,
+   "static": null,
+   "position": 27,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "깝",
+   "vertex": "깝",
+   "first_words": 5,
+   "static": null,
+   "position": 28,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "깡",
+   "vertex": "깡",
+   "first_words": 12,
+   "static": null,
+   "position": 29,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "껑",
+   "vertex": "껑",
+   "first_words": 7,
+   "static": null,
+   "position": 30,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "꼽",
+   "vertex": "꼽",
+   "first_words": 8,
+   "static": null,
+   "position": 31,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "꼿",
+   "vertex": "꼿",
+   "first_words": 2,
+   "static": null,
+   "position": 32,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "꽁",
+   "vertex": "꽁",
+   "first_words": 9,
+   "static": null,
+   "position": 33,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "꽂",
+   "vertex": "꽂",
+   "first_words": 4,
+   "static": null,
+   "position": 34,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "꽈",
+   "vertex": "꽈",
+   "first_words": 4,
+   "static": null,
+   "position": 35,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "꽝",
+   "vertex": "꽝",
+   "first_words": 2,
+   "static": null,
+   "position": 36,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "꽤",
+   "vertex": "꽤",
+   "first_words": 1,
+   "static": null,
+   "position": 37,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "꾼",
+   "vertex": "꾼",
+   "first_words": 2,
+   "static": null,
+   "position": 38,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "꿍",
+   "vertex": "꿍",
+   "first_words": 3,
+   "static": null,
+   "position": 39,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "꿩",
+   "vertex": "꿩",
+   "first_words": 2,
+   "static": null,
+   "position": 40,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뀌",
+   "vertex": "뀌",
+   "first_words": 2,
+   "static": null,
+   "position": 41,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "끔",
+   "vertex": "끔",
+   "first_words": 9,
+   "static": null,
+   "position": 42,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "끗",
+   "vertex": "끗",
+   "first_words": 1,
+   "static": null,
+   "position": 43,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "끽",
+   "vertex": "끽",
+   "first_words": 4,
+   "static": null,
+   "position": 44,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "낄",
+   "vertex": "낄",
+   "first_words": 5,
+   "static": null,
+   "position": 45,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "낙",
+   "vertex": "낙",
+   "first_words": 37,
+   "static": null,
+   "position": 46,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "낚",
+   "vertex": "낚",
+   "first_words": 5,
+   "static": null,
+   "position": 47,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "냐",
+   "vertex": "냐",
+   "first_words": 1,
+   "static": null,
+   "position": 48,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "넬",
+   "vertex": "넬",
+   "first_words": 1,
+   "static": null,
+   "position": 49,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "넷",
+   "vertex": "넷",
+   "first_words": 7,
+   "static": null,
+   "position": 50,
+   "core_words": 2271,
+   "core_groups": 1729,
+   "core_vertices": 247
+  },
+  {
+   "syllable": "녓",
+   "vertex": "녓/엿",
+   "first_words": 10,
+   "static": null,
+   "position": 51,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "눅",
+   "vertex": "눅",
+   "first_words": 2,
+   "static": null,
+   "position": 52,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "눙",
+   "vertex": "눙",
+   "first_words": 2,
+   "static": null,
+   "position": 53,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뉘",
+   "vertex": "뉘",
+   "first_words": 5,
+   "static": null,
+   "position": 54,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "늉",
+   "vertex": "융",
+   "first_words": 18,
+   "static": null,
+   "position": 55,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "늬",
+   "vertex": "늬",
+   "first_words": 2,
+   "static": null,
+   "position": 56,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "닢",
+   "vertex": "잎",
+   "first_words": 8,
+   "static": null,
+   "position": 57,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "댕",
+   "vertex": "댕",
+   "first_words": 4,
+   "static": null,
+   "position": 58,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "덕",
+   "vertex": "덕",
+   "first_words": 30,
+   "static": null,
+   "position": 59,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "돔",
+   "vertex": "돔",
+   "first_words": 6,
+   "static": null,
+   "position": 60,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "돗",
+   "vertex": "돗",
+   "first_words": 8,
+   "static": null,
+   "position": 61,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "둑",
+   "vertex": "둑",
+   "first_words": 2,
+   "static": null,
+   "position": 62,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "둔",
+   "vertex": "둔",
+   "first_words": 17,
+   "static": null,
+   "position": 63,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "득",
+   "vertex": "득",
+   "first_words": 13,
+   "static": null,
+   "position": 64,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "듬",
+   "vertex": "듬",
+   "first_words": 5,
+   "static": null,
+   "position": 65,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "듯",
+   "vertex": "듯",
+   "first_words": 1,
+   "static": null,
+   "position": 66,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "딩",
+   "vertex": "딩",
+   "first_words": 5,
+   "static": null,
+   "position": 67,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "딱",
+   "vertex": "딱",
+   "first_words": 4,
+   "static": null,
+   "position": 68,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "딴",
+   "vertex": "딴",
+   "first_words": 11,
+   "static": null,
+   "position": 69,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "땜",
+   "vertex": "땜",
+   "first_words": 2,
+   "static": null,
+   "position": 70,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "떵",
+   "vertex": "떵",
+   "first_words": 2,
+   "static": null,
+   "position": 71,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "또",
+   "vertex": "또",
+   "first_words": 19,
+   "static": null,
+   "position": 72,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "똑",
+   "vertex": "똑",
+   "first_words": 5,
+   "static": null,
+   "position": 73,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "똘",
+   "vertex": "똘",
+   "first_words": 5,
+   "static": null,
+   "position": 74,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뚝",
+   "vertex": "뚝",
+   "first_words": 6,
+   "static": null,
+   "position": 75,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뚬",
+   "vertex": "뚬",
+   "first_words": 3,
+   "static": null,
+   "position": 76,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뚱",
+   "vertex": "뚱",
+   "first_words": 5,
+   "static": null,
+   "position": 77,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뜀",
+   "vertex": "뜀",
+   "first_words": 1,
+   "static": null,
+   "position": 78,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뜩",
+   "vertex": "뜩",
+   "first_words": 2,
+   "static": null,
+   "position": 79,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뜰",
+   "vertex": "뜰",
+   "first_words": 11,
+   "static": null,
+   "position": 80,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뜻",
+   "vertex": "뜻",
+   "first_words": 2,
+   "static": null,
+   "position": 81,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "락",
+   "vertex": "낙/락",
+   "first_words": 50,
+   "static": null,
+   "position": 82,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "럼",
+   "vertex": "럼",
+   "first_words": 1,
+   "static": null,
+   "position": 83,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "럽",
+   "vertex": "럽",
+   "first_words": 1,
+   "static": null,
+   "position": 84,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "렌",
+   "vertex": "렌",
+   "first_words": 6,
+   "static": null,
+   "position": 85,
+   "core_words": 2271,
+   "core_groups": 1729,
+   "core_vertices": 247
+  },
+  {
+   "syllable": "렘",
+   "vertex": "렘",
+   "first_words": 1,
+   "static": null,
+   "position": 86,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "렷",
+   "vertex": "엿",
+   "first_words": 9,
+   "static": null,
+   "position": 87,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "롕",
+   "vertex": "옝",
+   "first_words": 2,
+   "static": null,
+   "position": 88,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "룩",
+   "vertex": "눅",
+   "first_words": 2,
+   "static": null,
+   "position": 52,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "룸",
+   "vertex": "룸",
+   "first_words": 1,
+   "static": null,
+   "position": 89,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "륜",
+   "vertex": "륜/윤",
+   "first_words": 36,
+   "static": null,
+   "position": 90,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "륭",
+   "vertex": "융",
+   "first_words": 18,
+   "static": null,
+   "position": 55,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "름",
+   "vertex": "늠",
+   "first_words": 5,
+   "static": null,
+   "position": 91,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "릊",
+   "vertex": "늦",
+   "first_words": 15,
+   "static": null,
+   "position": 92,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "릿",
+   "vertex": "잇",
+   "first_words": 7,
+   "static": null,
+   "position": 93,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "맛",
+   "vertex": "맛",
+   "first_words": 3,
+   "static": null,
+   "position": 94,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "맹",
+   "vertex": "맹",
+   "first_words": 37,
+   "static": null,
+   "position": 95,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "멩",
+   "vertex": "멩",
+   "first_words": 14,
+   "static": null,
+   "position": 96,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "면",
+   "vertex": "면",
+   "first_words": 47,
+   "static": null,
+   "position": 97,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "멸",
+   "vertex": "멸",
+   "first_words": 6,
+   "static": null,
+   "position": 98,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "못",
+   "vertex": "못",
+   "first_words": 3,
+   "static": null,
+   "position": 99,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "몽",
+   "vertex": "몽",
+   "first_words": 39,
+   "static": null,
+   "position": 100,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뭉",
+   "vertex": "뭉",
+   "first_words": 21,
+   "static": null,
+   "position": 101,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뮈",
+   "vertex": "뮈",
+   "first_words": 2,
+   "static": null,
+   "position": 102,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "믄",
+   "vertex": "믄",
+   "first_words": 2,
+   "static": null,
+   "position": 103,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "밑",
+   "vertex": "밑",
+   "first_words": 18,
+   "static": null,
+   "position": 104,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "밖",
+   "vertex": "밖",
+   "first_words": 3,
+   "static": null,
+   "position": 105,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뱀",
+   "vertex": "뱀",
+   "first_words": 3,
+   "static": null,
+   "position": 106,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "벅",
+   "vertex": "벅",
+   "first_words": 2,
+   "static": null,
+   "position": 107,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "벙",
+   "vertex": "벙",
+   "first_words": 5,
+   "static": null,
+   "position": 108,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "벚",
+   "vertex": "벚",
+   "first_words": 1,
+   "static": null,
+   "position": 109,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "벡",
+   "vertex": "벡",
+   "first_words": 9,
+   "static": null,
+   "position": 110,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "벳",
+   "vertex": "벳",
+   "first_words": 4,
+   "static": null,
+   "position": 111,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "벽",
+   "vertex": "벽",
+   "first_words": 21,
+   "static": null,
+   "position": 112,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "볕",
+   "vertex": "볕",
+   "first_words": 2,
+   "static": null,
+   "position": 113,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "붕",
+   "vertex": "붕",
+   "first_words": 18,
+   "static": null,
+   "position": 114,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뷰",
+   "vertex": "뷰",
+   "first_words": 5,
+   "static": null,
+   "position": 115,
+   "core_words": 2271,
+   "core_groups": 1729,
+   "core_vertices": 247
+  },
+  {
+   "syllable": "빅",
+   "vertex": "빅",
+   "first_words": 1,
+   "static": null,
+   "position": 116,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "빔",
+   "vertex": "빔",
+   "first_words": 1,
+   "static": null,
+   "position": 117,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "빙",
+   "vertex": "빙",
+   "first_words": 24,
+   "static": null,
+   "position": 118,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "빛",
+   "vertex": "빛",
+   "first_words": 11,
+   "static": null,
+   "position": 119,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "빠",
+   "vertex": "빠",
+   "first_words": 32,
+   "static": null,
+   "position": 120,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "빡",
+   "vertex": "빡",
+   "first_words": 3,
+   "static": null,
+   "position": 121,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "빨",
+   "vertex": "빨",
+   "first_words": 16,
+   "static": null,
+   "position": 122,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뻑",
+   "vertex": "뻑",
+   "first_words": 2,
+   "static": null,
+   "position": 123,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뻬",
+   "vertex": "뻬",
+   "first_words": 7,
+   "static": null,
+   "position": 124,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뽈",
+   "vertex": "뽈",
+   "first_words": 11,
+   "static": null,
+   "position": 125,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뽕",
+   "vertex": "뽕",
+   "first_words": 7,
+   "static": null,
+   "position": 126,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뿍",
+   "vertex": "뿍",
+   "first_words": 2,
+   "static": null,
+   "position": 127,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뿔",
+   "vertex": "뿔",
+   "first_words": 22,
+   "static": null,
+   "position": 128,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "삭",
+   "vertex": "삭",
+   "first_words": 17,
+   "static": null,
+   "position": 129,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "삽",
+   "vertex": "삽",
+   "first_words": 13,
+   "static": null,
+   "position": 130,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "샅",
+   "vertex": "샅",
+   "first_words": 1,
+   "static": null,
+   "position": 131,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "샬",
+   "vertex": "샬",
+   "first_words": 2,
+   "static": null,
+   "position": 132,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "샷",
+   "vertex": "샷",
+   "first_words": 1,
+   "static": null,
+   "position": 133,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "섀",
+   "vertex": "섀",
+   "first_words": 2,
+   "static": null,
+   "position": 134,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "섭",
+   "vertex": "섭",
+   "first_words": 10,
+   "static": null,
+   "position": 135,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "섶",
+   "vertex": "섶",
+   "first_words": 1,
+   "static": null,
+   "position": 136,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "셔",
+   "vertex": "셔",
+   "first_words": 3,
+   "static": null,
+   "position": 137,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "셸",
+   "vertex": "셸",
+   "first_words": 1,
+   "static": null,
+   "position": 138,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "쇄",
+   "vertex": "쇄",
+   "first_words": 16,
+   "static": null,
+   "position": 139,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "슥",
+   "vertex": "슥",
+   "first_words": 3,
+   "static": null,
+   "position": 140,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "슨",
+   "vertex": "슨",
+   "first_words": 1,
+   "static": null,
+   "position": 141,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "슴",
+   "vertex": "슴",
+   "first_words": 4,
+   "static": null,
+   "position": 142,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "십",
+   "vertex": "십",
+   "first_words": 37,
+   "static": null,
+   "position": 143,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "싹",
+   "vertex": "싹",
+   "first_words": 8,
+   "static": null,
+   "position": 144,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "쌈",
+   "vertex": "쌈",
+   "first_words": 5,
+   "static": null,
+   "position": 145,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "쌔",
+   "vertex": "쌔",
+   "first_words": 15,
+   "static": null,
+   "position": 146,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "썽",
+   "vertex": "썽",
+   "first_words": 3,
+   "static": null,
+   "position": 147,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "앗",
+   "vertex": "앗",
+   "first_words": 1,
+   "static": null,
+   "position": 148,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "앙",
+   "vertex": "앙",
+   "first_words": 22,
+   "static": null,
+   "position": 149,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "얄",
+   "vertex": "얄",
+   "first_words": 16,
+   "static": null,
+   "position": 150,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "억",
+   "vertex": "억",
+   "first_words": 15,
+   "static": null,
+   "position": 151,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "엿",
+   "vertex": "엿",
+   "first_words": 9,
+   "static": null,
+   "position": 87,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "욱",
+   "vertex": "욱",
+   "first_words": 6,
+   "static": null,
+   "position": 152,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "운",
+   "vertex": "운",
+   "first_words": 56,
+   "static": null,
+   "position": 153,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "웅",
+   "vertex": "웅",
+   "first_words": 24,
+   "static": null,
+   "position": 154,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "웰",
+   "vertex": "웰",
+   "first_words": 6,
+   "static": null,
+   "position": 155,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "윤",
+   "vertex": "윤",
+   "first_words": 26,
+   "static": null,
+   "position": 156,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "융",
+   "vertex": "융",
+   "first_words": 18,
+   "static": null,
+   "position": 55,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "윷",
+   "vertex": "윷",
+   "first_words": 3,
+   "static": null,
+   "position": 157,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "읍",
+   "vertex": "읍",
+   "first_words": 9,
+   "static": null,
+   "position": 158,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "읏",
+   "vertex": "읏",
+   "first_words": 1,
+   "static": null,
+   "position": 159,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "응",
+   "vertex": "응",
+   "first_words": 30,
+   "static": null,
+   "position": 160,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "잎",
+   "vertex": "잎",
+   "first_words": 8,
+   "static": null,
+   "position": 57,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "잣",
+   "vertex": "잣",
+   "first_words": 11,
+   "static": null,
+   "position": 161,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "쟁",
+   "vertex": "쟁",
+   "first_words": 12,
+   "static": null,
+   "position": 162,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "쟝",
+   "vertex": "쟝",
+   "first_words": 2,
+   "static": null,
+   "position": 163,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "접",
+   "vertex": "접",
+   "first_words": 48,
+   "static": null,
+   "position": 164,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "젖",
+   "vertex": "젖",
+   "first_words": 10,
+   "static": null,
+   "position": 165,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "젤",
+   "vertex": "젤",
+   "first_words": 3,
+   "static": null,
+   "position": 166,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "죽",
+   "vertex": "죽",
+   "first_words": 30,
+   "static": null,
+   "position": 167,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "즉",
+   "vertex": "즉",
+   "first_words": 14,
+   "static": null,
+   "position": 168,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "즌",
+   "vertex": "즌",
+   "first_words": 1,
+   "static": null,
+   "position": 169,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "즐",
+   "vertex": "즐",
+   "first_words": 3,
+   "static": null,
+   "position": 170,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "즙",
+   "vertex": "즙",
+   "first_words": 1,
+   "static": null,
+   "position": 171,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "즛",
+   "vertex": "즛",
+   "first_words": 1,
+   "static": null,
+   "position": 172,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "짐",
+   "vertex": "짐",
+   "first_words": 17,
+   "static": null,
+   "position": 173,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "짚",
+   "vertex": "짚",
+   "first_words": 2,
+   "static": null,
+   "position": 174,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "짱",
+   "vertex": "짱",
+   "first_words": 4,
+   "static": null,
+   "position": 175,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "쩍",
+   "vertex": "쩍",
+   "first_words": 2,
+   "static": null,
+   "position": 176,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "쭉",
+   "vertex": "쭉",
+   "first_words": 2,
+   "static": null,
+   "position": 177,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "쭝",
+   "vertex": "쭝",
+   "first_words": 3,
+   "static": null,
+   "position": 178,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "찍",
+   "vertex": "찍",
+   "first_words": 4,
+   "static": null,
+   "position": 179,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "찟",
+   "vertex": "찟",
+   "first_words": 3,
+   "static": null,
+   "position": 180,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "착",
+   "vertex": "착",
+   "first_words": 17,
+   "static": null,
+   "position": 181,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "창",
+   "vertex": "창",
+   "first_words": 55,
+   "static": null,
+   "position": 182,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "찾",
+   "vertex": "찾",
+   "first_words": 2,
+   "static": null,
+   "position": 183,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "척",
+   "vertex": "척",
+   "first_words": 25,
+   "static": null,
+   "position": 184,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "첩",
+   "vertex": "첩",
+   "first_words": 7,
+   "static": null,
+   "position": 185,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "청",
+   "vertex": "청",
+   "first_words": 126,
+   "static": null,
+   "position": 186,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "촉",
+   "vertex": "촉",
+   "first_words": 7,
+   "static": null,
+   "position": 187,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "춘",
+   "vertex": "춘",
+   "first_words": 26,
+   "static": null,
+   "position": 188,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "춤",
+   "vertex": "춤",
+   "first_words": 4,
+   "static": null,
+   "position": 189,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "칙",
+   "vertex": "칙",
+   "first_words": 4,
+   "static": null,
+   "position": 190,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "칭",
+   "vertex": "칭",
+   "first_words": 7,
+   "static": null,
+   "position": 191,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "캉",
+   "vertex": "캉",
+   "first_words": 2,
+   "static": null,
+   "position": 192,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "캠",
+   "vertex": "캠",
+   "first_words": 4,
+   "static": null,
+   "position": 193,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "켄",
+   "vertex": "켄",
+   "first_words": 1,
+   "static": null,
+   "position": 194,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "쾌",
+   "vertex": "쾌",
+   "first_words": 12,
+   "static": null,
+   "position": 195,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "킬",
+   "vertex": "킬",
+   "first_words": 3,
+   "static": null,
+   "position": 196,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "탁",
+   "vertex": "탁",
+   "first_words": 21,
+   "static": null,
+   "position": 197,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "탐",
+   "vertex": "탐",
+   "first_words": 26,
+   "static": null,
+   "position": 198,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "탱",
+   "vertex": "탱",
+   "first_words": 2,
+   "static": null,
+   "position": 199,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "턴",
+   "vertex": "턴",
+   "first_words": 3,
+   "static": null,
+   "position": 200,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "템",
+   "vertex": "템",
+   "first_words": 3,
+   "static": null,
+   "position": 201,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "톡",
+   "vertex": "톡",
+   "first_words": 3,
+   "static": null,
+   "position": 202,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "톤",
+   "vertex": "톤",
+   "first_words": 2,
+   "static": null,
+   "position": 203,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "톱",
+   "vertex": "톱",
+   "first_words": 6,
+   "static": null,
+   "position": 204,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "툭",
+   "vertex": "툭",
+   "first_words": 4,
+   "static": null,
+   "position": 205,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "툼",
+   "vertex": "툼",
+   "first_words": 3,
+   "static": null,
+   "position": 206,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "퉁",
+   "vertex": "퉁",
+   "first_words": 3,
+   "static": null,
+   "position": 207,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "틀",
+   "vertex": "틀",
+   "first_words": 7,
+   "static": null,
+   "position": 208,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "틈",
+   "vertex": "틈",
+   "first_words": 5,
+   "static": null,
+   "position": 209,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "틱",
+   "vertex": "틱",
+   "first_words": 1,
+   "static": null,
+   "position": 210,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "틸",
+   "vertex": "틸",
+   "first_words": 2,
+   "static": null,
+   "position": 211,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "팍",
+   "vertex": "팍",
+   "first_words": 3,
+   "static": null,
+   "position": 212,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "팡",
+   "vertex": "팡",
+   "first_words": 4,
+   "static": null,
+   "position": 213,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "팥",
+   "vertex": "팥",
+   "first_words": 7,
+   "static": null,
+   "position": 214,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "폄",
+   "vertex": "폄",
+   "first_words": 4,
+   "static": null,
+   "position": 215,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "폐",
+   "vertex": "폐",
+   "first_words": 29,
+   "static": null,
+   "position": 216,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "푀",
+   "vertex": "푀",
+   "first_words": 2,
+   "static": null,
+   "position": 217,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "푼",
+   "vertex": "푼",
+   "first_words": 7,
+   "static": null,
+   "position": 218,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "퓌",
+   "vertex": "퓌",
+   "first_words": 1,
+   "static": null,
+   "position": 219,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "핀",
+   "vertex": "핀",
+   "first_words": 7,
+   "static": null,
+   "position": 220,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "핍",
+   "vertex": "핍",
+   "first_words": 2,
+   "static": null,
+   "position": 221,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "학",
+   "vertex": "학",
+   "first_words": 47,
+   "static": null,
+   "position": 222,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "핵",
+   "vertex": "핵",
+   "first_words": 23,
+   "static": null,
+   "position": 223,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "행",
+   "vertex": "행",
+   "first_words": 51,
+   "static": null,
+   "position": 224,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "향",
+   "vertex": "향",
+   "first_words": 41,
+   "static": null,
+   "position": 225,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "험",
+   "vertex": "험",
+   "first_words": 11,
+   "static": null,
+   "position": 226,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "혀",
+   "vertex": "혀",
+   "first_words": 6,
+   "static": null,
+   "position": 227,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "혁",
+   "vertex": "혁",
+   "first_words": 11,
+   "static": null,
+   "position": 228,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "현",
+   "vertex": "현",
+   "first_words": 61,
+   "static": null,
+   "position": 229,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "형",
+   "vertex": "형",
+   "first_words": 37,
+   "static": null,
+   "position": 230,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "혜",
+   "vertex": "혜",
+   "first_words": 10,
+   "static": null,
+   "position": 231,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "혹",
+   "vertex": "혹",
+   "first_words": 6,
+   "static": null,
+   "position": 232,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "홍",
+   "vertex": "홍",
+   "first_words": 62,
+   "static": null,
+   "position": 233,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "확",
+   "vertex": "확",
+   "first_words": 11,
+   "static": null,
+   "position": 234,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "홰",
+   "vertex": "홰",
+   "first_words": 5,
+   "static": null,
+   "position": 235,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "회",
+   "vertex": "회",
+   "first_words": 71,
+   "static": null,
+   "position": 236,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "획",
+   "vertex": "획",
+   "first_words": 4,
+   "static": null,
+   "position": 237,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "횡",
+   "vertex": "횡",
+   "first_words": 30,
+   "static": null,
+   "position": 238,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "효",
+   "vertex": "효",
+   "first_words": 21,
+   "static": null,
+   "position": 239,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "훤",
+   "vertex": "훤",
+   "first_words": 3,
+   "static": null,
+   "position": 240,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "휴",
+   "vertex": "휴",
+   "first_words": 21,
+   "static": null,
+   "position": 241,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "휼",
+   "vertex": "휼",
+   "first_words": 3,
+   "static": null,
+   "position": 242,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "흉",
+   "vertex": "흉",
+   "first_words": 21,
+   "static": null,
+   "position": 243,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "흡",
+   "vertex": "흡",
+   "first_words": 11,
+   "static": null,
+   "position": 244,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "갇",
+   "vertex": "갇",
+   "first_words": 1,
+   "static": null,
+   "position": 245,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "갉",
+   "vertex": "갉",
+   "first_words": 2,
+   "static": null,
+   "position": 246,
+   "core_words": 2254,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "갖",
+   "vertex": "갖",
+   "first_words": 3,
+   "static": null,
+   "position": 247,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "같",
+   "vertex": "같",
+   "first_words": 2,
+   "static": null,
+   "position": 248,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "갠",
+   "vertex": "갠",
+   "first_words": 7,
+   "static": null,
+   "position": 249,
+   "core_words": 2259,
+   "core_groups": 1718,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "갸",
+   "vertex": "갸",
+   "first_words": 10,
+   "static": null,
+   "position": 250,
+   "core_words": 2262,
+   "core_groups": 1719,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "곁",
+   "vertex": "곁",
+   "first_words": 12,
+   "static": null,
+   "position": 251,
+   "core_words": 2266,
+   "core_groups": 1725,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "곧",
+   "vertex": "곧",
+   "first_words": 5,
+   "static": null,
+   "position": 252,
+   "core_words": 2257,
+   "core_groups": 1718,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "곬",
+   "vertex": "곬",
+   "first_words": 1,
+   "static": null,
+   "position": 253,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "괭",
+   "vertex": "괭",
+   "first_words": 3,
+   "static": null,
+   "position": 254,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "궈",
+   "vertex": "궈",
+   "first_words": 1,
+   "static": null,
+   "position": 255,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "깁",
+   "vertex": "깁",
+   "first_words": 2,
+   "static": null,
+   "position": 256,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "깅",
+   "vertex": "깅",
+   "first_words": 2,
+   "static": null,
+   "position": 257,
+   "core_words": 2262,
+   "core_groups": 1720,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "깰",
+   "vertex": "깰",
+   "first_words": 2,
+   "static": null,
+   "position": 258,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "꺄",
+   "vertex": "꺄",
+   "first_words": 8,
+   "static": null,
+   "position": 259,
+   "core_words": 2260,
+   "core_groups": 1718,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "꺌",
+   "vertex": "꺌",
+   "first_words": 2,
+   "static": null,
+   "position": 260,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "꺽",
+   "vertex": "꺽",
+   "first_words": 7,
+   "static": null,
+   "position": 261,
+   "core_words": 2259,
+   "core_groups": 1718,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "껀",
+   "vertex": "껀",
+   "first_words": 5,
+   "static": null,
+   "position": 262,
+   "core_words": 2257,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "꼭",
+   "vertex": "꼭",
+   "first_words": 11,
+   "static": null,
+   "position": 263,
+   "core_words": 2263,
+   "core_groups": 1723,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "꽹",
+   "vertex": "꽹",
+   "first_words": 3,
+   "static": null,
+   "position": 264,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뀀",
+   "vertex": "뀀",
+   "first_words": 1,
+   "static": null,
+   "position": 265,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "낑",
+   "vertex": "낑",
+   "first_words": 2,
+   "static": null,
+   "position": 266,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "낯",
+   "vertex": "낯",
+   "first_words": 4,
+   "static": null,
+   "position": 267,
+   "core_words": 2256,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "낼",
+   "vertex": "낼",
+   "first_words": 4,
+   "static": null,
+   "position": 268,
+   "core_words": 2258,
+   "core_groups": 1717,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "냄",
+   "vertex": "냄",
+   "first_words": 5,
+   "static": null,
+   "position": 269,
+   "core_words": 2258,
+   "core_groups": 1719,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "넉",
+   "vertex": "넉",
+   "first_words": 6,
+   "static": null,
+   "position": 270,
+   "core_words": 2258,
+   "core_groups": 1719,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "넛",
+   "vertex": "넛",
+   "first_words": 1,
+   "static": null,
+   "position": 271,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "넥",
+   "vertex": "넥",
+   "first_words": 2,
+   "static": null,
+   "position": 272,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "녜",
+   "vertex": "녜",
+   "first_words": 1,
+   "static": null,
+   "position": 273,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "늄",
+   "vertex": "늄",
+   "first_words": 2,
+   "static": null,
+   "position": 274,
+   "core_words": 2254,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "늙",
+   "vertex": "늙",
+   "first_words": 3,
+   "static": null,
+   "position": 275,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "늠",
+   "vertex": "늠",
+   "first_words": 5,
+   "static": null,
+   "position": 91,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "늡",
+   "vertex": "늡",
+   "first_words": 2,
+   "static": null,
+   "position": 276,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "늦",
+   "vertex": "늦",
+   "first_words": 15,
+   "static": null,
+   "position": 92,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "닻",
+   "vertex": "닻",
+   "first_words": 4,
+   "static": null,
+   "position": 277,
+   "core_words": 2256,
+   "core_groups": 1717,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "댐",
+   "vertex": "댐",
+   "first_words": 4,
+   "static": null,
+   "position": 278,
+   "core_words": 2256,
+   "core_groups": 1717,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "덫",
+   "vertex": "덫",
+   "first_words": 2,
+   "static": null,
+   "position": 279,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뎃",
+   "vertex": "뎃",
+   "first_words": 1,
+   "static": null,
+   "position": 280,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뎐",
+   "vertex": "뎐",
+   "first_words": 1,
+   "static": null,
+   "position": 281,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "둠",
+   "vertex": "둠",
+   "first_words": 2,
+   "static": null,
+   "position": 282,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "듁",
+   "vertex": "듁",
+   "first_words": 1,
+   "static": null,
+   "position": 283,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "듕",
+   "vertex": "듕",
+   "first_words": 1,
+   "static": null,
+   "position": 284,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "딧",
+   "vertex": "딧",
+   "first_words": 11,
+   "static": null,
+   "position": 285,
+   "core_words": 2267,
+   "core_groups": 1728,
+   "core_vertices": 246
+  },
+  {
+   "syllable": "땍",
+   "vertex": "땍",
+   "first_words": 3,
+   "static": null,
+   "position": 286,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "땔",
+   "vertex": "땔",
+   "first_words": 4,
+   "static": null,
+   "position": 287,
+   "core_words": 2257,
+   "core_groups": 1718,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "똠",
+   "vertex": "똠",
+   "first_words": 4,
+   "static": null,
+   "position": 288,
+   "core_words": 2260,
+   "core_groups": 1718,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "뛸",
+   "vertex": "뛸",
+   "first_words": 2,
+   "static": null,
+   "position": 289,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뜬",
+   "vertex": "뜬",
+   "first_words": 8,
+   "static": null,
+   "position": 290,
+   "core_words": 2262,
+   "core_groups": 1723,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "띤",
+   "vertex": "띤",
+   "first_words": 1,
+   "static": null,
+   "position": 291,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "띰",
+   "vertex": "띰",
+   "first_words": 1,
+   "static": null,
+   "position": 292,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "띵",
+   "vertex": "띵",
+   "first_words": 2,
+   "static": null,
+   "position": 293,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "랓",
+   "vertex": "낯",
+   "first_words": 4,
+   "static": null,
+   "position": 267,
+   "core_words": 2256,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "랜",
+   "vertex": "낸/랜",
+   "first_words": 5,
+   "static": null,
+   "position": 294,
+   "core_words": 2257,
+   "core_groups": 1718,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "렉",
+   "vertex": "렉",
+   "first_words": 1,
+   "static": null,
+   "position": 295,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "렙",
+   "vertex": "렙",
+   "first_words": 3,
+   "static": null,
+   "position": 296,
+   "core_words": 2257,
+   "core_groups": 1718,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "렛",
+   "vertex": "렛",
+   "first_words": 1,
+   "static": null,
+   "position": 297,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "렫",
+   "vertex": "엳",
+   "first_words": 1,
+   "static": null,
+   "position": 298,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "롶",
+   "vertex": "높",
+   "first_words": 15,
+   "static": null,
+   "position": 299,
+   "core_words": 2267,
+   "core_groups": 1720,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "룽",
+   "vertex": "눙/룽",
+   "first_words": 4,
+   "static": null,
+   "position": 300,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "뤄",
+   "vertex": "뤄",
+   "first_words": 1,
+   "static": null,
+   "position": 301,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "릅",
+   "vertex": "늡",
+   "first_words": 2,
+   "static": null,
+   "position": 276,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "맏",
+   "vertex": "맏",
+   "first_words": 7,
+   "static": null,
+   "position": 302,
+   "core_words": 2299,
+   "core_groups": 1746,
+   "core_vertices": 246
+  },
+  {
+   "syllable": "맑",
+   "vertex": "맑",
+   "first_words": 1,
+   "static": null,
+   "position": 303,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "맴",
+   "vertex": "맴",
+   "first_words": 2,
+   "static": null,
+   "position": 304,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "맵",
+   "vertex": "맵",
+   "first_words": 1,
+   "static": null,
+   "position": 305,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "멕",
+   "vertex": "멕",
+   "first_words": 3,
+   "static": null,
+   "position": 306,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "멱",
+   "vertex": "멱",
+   "first_words": 5,
+   "static": null,
+   "position": 307,
+   "core_words": 2257,
+   "core_groups": 1718,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "몹",
+   "vertex": "몹",
+   "first_words": 1,
+   "static": null,
+   "position": 308,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뫼",
+   "vertex": "뫼",
+   "first_words": 1,
+   "static": null,
+   "position": 309,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뭍",
+   "vertex": "뭍",
+   "first_words": 1,
+   "static": null,
+   "position": 310,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뮌",
+   "vertex": "뮌",
+   "first_words": 1,
+   "static": null,
+   "position": 311,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "믹",
+   "vertex": "믹",
+   "first_words": 3,
+   "static": null,
+   "position": 312,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "밍",
+   "vertex": "밍",
+   "first_words": 4,
+   "static": null,
+   "position": 313,
+   "core_words": 2256,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "밴",
+   "vertex": "밴",
+   "first_words": 10,
+   "static": null,
+   "position": 314,
+   "core_words": 2262,
+   "core_groups": 1723,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뱁",
+   "vertex": "뱁",
+   "first_words": 1,
+   "static": null,
+   "position": 315,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뱐",
+   "vertex": "뱐",
+   "first_words": 5,
+   "static": null,
+   "position": 316,
+   "core_words": 2257,
+   "core_groups": 1717,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "봇",
+   "vertex": "봇",
+   "first_words": 5,
+   "static": null,
+   "position": 317,
+   "core_words": 2290,
+   "core_groups": 1746,
+   "core_vertices": 250
+  },
+  {
+   "syllable": "붙",
+   "vertex": "붙",
+   "first_words": 5,
+   "static": null,
+   "position": 318,
+   "core_words": 2257,
+   "core_groups": 1718,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뷔",
+   "vertex": "뷔",
+   "first_words": 2,
+   "static": null,
+   "position": 319,
+   "core_words": 2256,
+   "core_groups": 1717,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "빤",
+   "vertex": "빤",
+   "first_words": 6,
+   "static": null,
+   "position": 320,
+   "core_words": 2258,
+   "core_groups": 1717,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "빼",
+   "vertex": "빼",
+   "first_words": 29,
+   "static": null,
+   "position": 321,
+   "core_words": 2292,
+   "core_groups": 1739,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "뺀",
+   "vertex": "뺀",
+   "first_words": 3,
+   "static": null,
+   "position": 322,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뺌",
+   "vertex": "뺌",
+   "first_words": 1,
+   "static": null,
+   "position": 323,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뺑",
+   "vertex": "뺑",
+   "first_words": 4,
+   "static": null,
+   "position": 324,
+   "core_words": 2256,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뺨",
+   "vertex": "뺨",
+   "first_words": 2,
+   "static": null,
+   "position": 325,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뻔",
+   "vertex": "뻔",
+   "first_words": 13,
+   "static": null,
+   "position": 326,
+   "core_words": 2265,
+   "core_groups": 1722,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뻥",
+   "vertex": "뻥",
+   "first_words": 3,
+   "static": null,
+   "position": 327,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뼘",
+   "vertex": "뼘",
+   "first_words": 2,
+   "static": null,
+   "position": 328,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "뿜",
+   "vertex": "뿜",
+   "first_words": 3,
+   "static": null,
+   "position": 329,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "삔",
+   "vertex": "삔",
+   "first_words": 2,
+   "static": null,
+   "position": 330,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "삘",
+   "vertex": "삘",
+   "first_words": 3,
+   "static": null,
+   "position": 331,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "삥",
+   "vertex": "삥",
+   "first_words": 3,
+   "static": null,
+   "position": 332,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "샌",
+   "vertex": "샌",
+   "first_words": 2,
+   "static": null,
+   "position": 333,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "샥",
+   "vertex": "샥",
+   "first_words": 1,
+   "static": null,
+   "position": 334,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "샨",
+   "vertex": "샨",
+   "first_words": 1,
+   "static": null,
+   "position": 335,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "섞",
+   "vertex": "섞",
+   "first_words": 6,
+   "static": null,
+   "position": 336,
+   "core_words": 2259,
+   "core_groups": 1718,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "셧",
+   "vertex": "셧",
+   "first_words": 1,
+   "static": null,
+   "position": 337,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "셴",
+   "vertex": "셴",
+   "first_words": 1,
+   "static": null,
+   "position": 338,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쇡",
+   "vertex": "쇡",
+   "first_words": 3,
+   "static": null,
+   "position": 339,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쇵",
+   "vertex": "쇵",
+   "first_words": 1,
+   "static": null,
+   "position": 340,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "숑",
+   "vertex": "숑",
+   "first_words": 3,
+   "static": null,
+   "position": 341,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "숩",
+   "vertex": "숩",
+   "first_words": 1,
+   "static": null,
+   "position": 342,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "숯",
+   "vertex": "숯",
+   "first_words": 2,
+   "static": null,
+   "position": 343,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "숲",
+   "vertex": "숲",
+   "first_words": 1,
+   "static": null,
+   "position": 344,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쉰",
+   "vertex": "쉰",
+   "first_words": 2,
+   "static": null,
+   "position": 345,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쉼",
+   "vertex": "쉼",
+   "first_words": 1,
+   "static": null,
+   "position": 346,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "슌",
+   "vertex": "슌",
+   "first_words": 1,
+   "static": null,
+   "position": 347,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "슐",
+   "vertex": "슐",
+   "first_words": 1,
+   "static": null,
+   "position": 348,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "싀",
+   "vertex": "싀",
+   "first_words": 2,
+   "static": null,
+   "position": 349,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "썸",
+   "vertex": "썸",
+   "first_words": 4,
+   "static": null,
+   "position": 350,
+   "core_words": 2256,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쏘",
+   "vertex": "쏘",
+   "first_words": 9,
+   "static": null,
+   "position": 351,
+   "core_words": 2261,
+   "core_groups": 1720,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쏜",
+   "vertex": "쏜",
+   "first_words": 2,
+   "static": null,
+   "position": 352,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쏠",
+   "vertex": "쏠",
+   "first_words": 7,
+   "static": null,
+   "position": 353,
+   "core_words": 2259,
+   "core_groups": 1719,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쏴",
+   "vertex": "쏴",
+   "first_words": 3,
+   "static": null,
+   "position": 354,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쐐",
+   "vertex": "쐐",
+   "first_words": 7,
+   "static": null,
+   "position": 355,
+   "core_words": 2259,
+   "core_groups": 1719,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쐬",
+   "vertex": "쐬",
+   "first_words": 1,
+   "static": null,
+   "position": 356,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쑤",
+   "vertex": "쑤",
+   "first_words": 9,
+   "static": null,
+   "position": 357,
+   "core_words": 2261,
+   "core_groups": 1720,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쑨",
+   "vertex": "쑨",
+   "first_words": 1,
+   "static": null,
+   "position": 358,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쑹",
+   "vertex": "쑹",
+   "first_words": 2,
+   "static": null,
+   "position": 359,
+   "core_words": 2258,
+   "core_groups": 1717,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "쓱",
+   "vertex": "쓱",
+   "first_words": 4,
+   "static": null,
+   "position": 360,
+   "core_words": 2256,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쓴",
+   "vertex": "쓴",
+   "first_words": 2,
+   "static": null,
+   "position": 361,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쓸",
+   "vertex": "쓸",
+   "first_words": 4,
+   "static": null,
+   "position": 362,
+   "core_words": 2256,
+   "core_groups": 1717,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "씁",
+   "vertex": "씁",
+   "first_words": 2,
+   "static": null,
+   "position": 363,
+   "core_words": 2258,
+   "core_groups": 1719,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "씩",
+   "vertex": "씩",
+   "first_words": 5,
+   "static": null,
+   "position": 364,
+   "core_words": 2257,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "씽",
+   "vertex": "씽",
+   "first_words": 5,
+   "static": null,
+   "position": 365,
+   "core_words": 2257,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "앍",
+   "vertex": "앍",
+   "first_words": 2,
+   "static": null,
+   "position": 366,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "앨",
+   "vertex": "앨",
+   "first_words": 2,
+   "static": null,
+   "position": 367,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "얌",
+   "vertex": "얌",
+   "first_words": 4,
+   "static": null,
+   "position": 368,
+   "core_words": 2256,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "얍",
+   "vertex": "얍",
+   "first_words": 1,
+   "static": null,
+   "position": 369,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "얭",
+   "vertex": "얭",
+   "first_words": 2,
+   "static": null,
+   "position": 370,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "엣",
+   "vertex": "엣",
+   "first_words": 1,
+   "static": null,
+   "position": 371,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "옆",
+   "vertex": "옆",
+   "first_words": 10,
+   "static": null,
+   "position": 372,
+   "core_words": 2262,
+   "core_groups": 1722,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "옘",
+   "vertex": "옘",
+   "first_words": 1,
+   "static": null,
+   "position": 373,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "옝",
+   "vertex": "옝",
+   "first_words": 2,
+   "static": null,
+   "position": 88,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "왝",
+   "vertex": "왝",
+   "first_words": 3,
+   "static": null,
+   "position": 374,
+   "core_words": 2258,
+   "core_groups": 1718,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "욧",
+   "vertex": "욧",
+   "first_words": 2,
+   "static": null,
+   "position": 375,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "웜",
+   "vertex": "웜",
+   "first_words": 1,
+   "static": null,
+   "position": 376,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "웬",
+   "vertex": "웬",
+   "first_words": 3,
+   "static": null,
+   "position": 377,
+   "core_words": 2264,
+   "core_groups": 1723,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "윌",
+   "vertex": "윌",
+   "first_words": 4,
+   "static": null,
+   "position": 378,
+   "core_words": 2256,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "윳",
+   "vertex": "윳",
+   "first_words": 1,
+   "static": null,
+   "position": 379,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "잇",
+   "vertex": "잇",
+   "first_words": 7,
+   "static": null,
+   "position": 93,
+   "core_words": 2252,
+   "core_groups": 1713,
+   "core_vertices": 243
+  },
+  {
+   "syllable": "잭",
+   "vertex": "잭",
+   "first_words": 3,
+   "static": null,
+   "position": 380,
+   "core_words": 2306,
+   "core_groups": 1758,
+   "core_vertices": 253
+  },
+  {
+   "syllable": "잴",
+   "vertex": "잴",
+   "first_words": 9,
+   "static": null,
+   "position": 381,
+   "core_words": 2299,
+   "core_groups": 1751,
+   "core_vertices": 251
+  },
+  {
+   "syllable": "젬",
+   "vertex": "젬",
+   "first_words": 1,
+   "static": null,
+   "position": 382,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "젯",
+   "vertex": "젯",
+   "first_words": 8,
+   "static": null,
+   "position": 383,
+   "core_words": 2260,
+   "core_groups": 1718,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "졋",
+   "vertex": "졋",
+   "first_words": 2,
+   "static": null,
+   "position": 384,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "졔",
+   "vertex": "졔",
+   "first_words": 1,
+   "static": null,
+   "position": 385,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 246
+  },
+  {
+   "syllable": "좔",
+   "vertex": "좔",
+   "first_words": 2,
+   "static": null,
+   "position": 386,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "죔",
+   "vertex": "죔",
+   "first_words": 3,
+   "static": null,
+   "position": 387,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "죤",
+   "vertex": "죤",
+   "first_words": 1,
+   "static": null,
+   "position": 388,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "줍",
+   "vertex": "줍",
+   "first_words": 2,
+   "static": null,
+   "position": 389,
+   "core_words": 2264,
+   "core_groups": 1722,
+   "core_vertices": 246
+  },
+  {
+   "syllable": "짠",
+   "vertex": "짠",
+   "first_words": 5,
+   "static": null,
+   "position": 390,
+   "core_words": 2257,
+   "core_groups": 1717,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "짤",
+   "vertex": "짤",
+   "first_words": 25,
+   "static": null,
+   "position": 391,
+   "core_words": 2291,
+   "core_groups": 1736,
+   "core_vertices": 248
+  },
+  {
+   "syllable": "짭",
+   "vertex": "짭",
+   "first_words": 4,
+   "static": null,
+   "position": 392,
+   "core_words": 2295,
+   "core_groups": 1739,
+   "core_vertices": 249
+  },
+  {
+   "syllable": "짯",
+   "vertex": "짯",
+   "first_words": 3,
+   "static": null,
+   "position": 393,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쨀",
+   "vertex": "쨀",
+   "first_words": 7,
+   "static": null,
+   "position": 394,
+   "core_words": 2259,
+   "core_groups": 1717,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쨈",
+   "vertex": "쨈",
+   "first_words": 1,
+   "static": null,
+   "position": 395,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쨍",
+   "vertex": "쨍",
+   "first_words": 4,
+   "static": null,
+   "position": 396,
+   "core_words": 2256,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쩜",
+   "vertex": "쩜",
+   "first_words": 2,
+   "static": null,
+   "position": 397,
+   "core_words": 2254,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쩟",
+   "vertex": "쩟",
+   "first_words": 3,
+   "static": null,
+   "position": 398,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쫀",
+   "vertex": "쫀",
+   "first_words": 3,
+   "static": null,
+   "position": 399,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쫄",
+   "vertex": "쫄",
+   "first_words": 11,
+   "static": null,
+   "position": 400,
+   "core_words": 2263,
+   "core_groups": 1721,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쫠",
+   "vertex": "쫠",
+   "first_words": 2,
+   "static": null,
+   "position": 401,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쭌",
+   "vertex": "쭌",
+   "first_words": 3,
+   "static": null,
+   "position": 402,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "찡",
+   "vertex": "찡",
+   "first_words": 3,
+   "static": null,
+   "position": 403,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "찹",
+   "vertex": "찹",
+   "first_words": 3,
+   "static": null,
+   "position": 404,
+   "core_words": 2256,
+   "core_groups": 1717,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "챔",
+   "vertex": "챔",
+   "first_words": 3,
+   "static": null,
+   "position": 405,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "첸",
+   "vertex": "첸",
+   "first_words": 3,
+   "static": null,
+   "position": 406,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "첼",
+   "vertex": "첼",
+   "first_words": 2,
+   "static": null,
+   "position": 407,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "췌",
+   "vertex": "췌",
+   "first_words": 5,
+   "static": null,
+   "position": 408,
+   "core_words": 2257,
+   "core_groups": 1718,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "츤",
+   "vertex": "츤",
+   "first_words": 2,
+   "static": null,
+   "position": 409,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "츳",
+   "vertex": "츳",
+   "first_words": 2,
+   "static": null,
+   "position": 410,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "칡",
+   "vertex": "칡",
+   "first_words": 7,
+   "static": null,
+   "position": 411,
+   "core_words": 2259,
+   "core_groups": 1719,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "칵",
+   "vertex": "칵",
+   "first_words": 2,
+   "static": null,
+   "position": 412,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "캄",
+   "vertex": "캄",
+   "first_words": 4,
+   "static": null,
+   "position": 413,
+   "core_words": 2266,
+   "core_groups": 1725,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "캥",
+   "vertex": "캥",
+   "first_words": 2,
+   "static": null,
+   "position": 414,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "컵",
+   "vertex": "컵",
+   "first_words": 3,
+   "static": null,
+   "position": 415,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "켠",
+   "vertex": "켠",
+   "first_words": 1,
+   "static": null,
+   "position": 416,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "콥",
+   "vertex": "콥",
+   "first_words": 1,
+   "static": null,
+   "position": 417,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "콱",
+   "vertex": "콱",
+   "first_words": 3,
+   "static": null,
+   "position": 418,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "콴",
+   "vertex": "콴",
+   "first_words": 1,
+   "static": null,
+   "position": 419,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "쿤",
+   "vertex": "쿤",
+   "first_words": 1,
+   "static": null,
+   "position": 420,
+   "core_words": 2257,
+   "core_groups": 1716,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "퀘",
+   "vertex": "퀘",
+   "first_words": 3,
+   "static": null,
+   "position": 421,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "탯",
+   "vertex": "탯",
+   "first_words": 1,
+   "static": null,
+   "position": 422,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "텀",
+   "vertex": "텀",
+   "first_words": 2,
+   "static": null,
+   "position": 423,
+   "core_words": 2254,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "텃",
+   "vertex": "텃",
+   "first_words": 3,
+   "static": null,
+   "position": 424,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "텡",
+   "vertex": "텡",
+   "first_words": 2,
+   "static": null,
+   "position": 425,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "톄",
+   "vertex": "톄",
+   "first_words": 1,
+   "static": null,
+   "position": 426,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "튀",
+   "vertex": "튀",
+   "first_words": 7,
+   "static": null,
+   "position": 427,
+   "core_words": 2259,
+   "core_groups": 1720,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "튐",
+   "vertex": "튐",
+   "first_words": 4,
+   "static": null,
+   "position": 428,
+   "core_words": 2256,
+   "core_groups": 1717,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "튜",
+   "vertex": "튜",
+   "first_words": 3,
+   "static": null,
+   "position": 429,
+   "core_words": 2256,
+   "core_groups": 1717,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "팜",
+   "vertex": "팜",
+   "first_words": 2,
+   "static": null,
+   "position": 430,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 245
+  },
+  {
+   "syllable": "팝",
+   "vertex": "팝",
+   "first_words": 1,
+   "static": null,
+   "position": 431,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "팟",
+   "vertex": "팟",
+   "first_words": 4,
+   "static": null,
+   "position": 432,
+   "core_words": 2303,
+   "core_groups": 1755,
+   "core_vertices": 252
+  },
+  {
+   "syllable": "팰",
+   "vertex": "팰",
+   "first_words": 1,
+   "static": null,
+   "position": 433,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "팸",
+   "vertex": "팸",
+   "first_words": 2,
+   "static": null,
+   "position": 434,
+   "core_words": 2254,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "펀",
+   "vertex": "펀",
+   "first_words": 10,
+   "static": null,
+   "position": 435,
+   "core_words": 2262,
+   "core_groups": 1721,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "펌",
+   "vertex": "펌",
+   "first_words": 1,
+   "static": null,
+   "position": 436,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "펴",
+   "vertex": "펴",
+   "first_words": 1,
+   "static": null,
+   "position": 437,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "폼",
+   "vertex": "폼",
+   "first_words": 1,
+   "static": null,
+   "position": 438,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "폿",
+   "vertex": "폿",
+   "first_words": 1,
+   "static": null,
+   "position": 439,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "퐁",
+   "vertex": "퐁",
+   "first_words": 2,
+   "static": null,
+   "position": 440,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "퐅",
+   "vertex": "퐅",
+   "first_words": 1,
+   "static": null,
+   "position": 441,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "핫",
+   "vertex": "핫",
+   "first_words": 3,
+   "static": null,
+   "position": 442,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "햄",
+   "vertex": "햄",
+   "first_words": 3,
+   "static": null,
+   "position": 443,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "헙",
+   "vertex": "헙",
+   "first_words": 3,
+   "static": null,
+   "position": 444,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "헥",
+   "vertex": "헥",
+   "first_words": 4,
+   "static": null,
+   "position": 445,
+   "core_words": 2262,
+   "core_groups": 1720,
+   "core_vertices": 246
+  },
+  {
+   "syllable": "헨",
+   "vertex": "헨",
+   "first_words": 2,
+   "static": null,
+   "position": 446,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "헷",
+   "vertex": "헷",
+   "first_words": 4,
+   "static": null,
+   "position": 447,
+   "core_words": 2256,
+   "core_groups": 1717,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "헹",
+   "vertex": "헹",
+   "first_words": 1,
+   "static": null,
+   "position": 448,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "혐",
+   "vertex": "혐",
+   "first_words": 5,
+   "static": null,
+   "position": 449,
+   "core_words": 2299,
+   "core_groups": 1744,
+   "core_vertices": 250
+  },
+  {
+   "syllable": "홉",
+   "vertex": "홉",
+   "first_words": 1,
+   "static": null,
+   "position": 450,
+   "core_words": 2253,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "홧",
+   "vertex": "홧",
+   "first_words": 2,
+   "static": null,
+   "position": 451,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "횃",
+   "vertex": "횃",
+   "first_words": 2,
+   "static": null,
+   "position": 452,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "훅",
+   "vertex": "훅",
+   "first_words": 2,
+   "static": null,
+   "position": 453,
+   "core_words": 2254,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "훔",
+   "vertex": "훔",
+   "first_words": 3,
+   "static": null,
+   "position": 454,
+   "core_words": 2255,
+   "core_groups": 1715,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "훨",
+   "vertex": "훨",
+   "first_words": 3,
+   "static": null,
+   "position": 455,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "훼",
+   "vertex": "훼",
+   "first_words": 9,
+   "static": null,
+   "position": 456,
+   "core_words": 2260,
+   "core_groups": 1720,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "휠",
+   "vertex": "휠",
+   "first_words": 2,
+   "static": null,
+   "position": 457,
+   "core_words": 2254,
+   "core_groups": 1714,
+   "core_vertices": 244
+  },
+  {
+   "syllable": "힌",
+   "vertex": "힌",
+   "first_words": 3,
+   "static": null,
+   "position": 458,
+   "core_words": 2255,
+   "core_groups": 1716,
+   "core_vertices": 244
+  }
+ ]
+}

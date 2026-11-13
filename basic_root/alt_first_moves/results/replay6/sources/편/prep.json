@@ -1,0 +1,33 @@
+{
+ "syllable": "편",
+ "vertex": "편",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 137.101,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 89364945,
+ "proof_nodes": 659342,
+ "proof_seconds": 13.071808,
+ "solver_wall_seconds": 151.31,
+ "verify_seconds": 16.955,
+ "verify_wall_seconds": 16.97,
+ "proof_bytes": 4832300,
+ "proof_sha256": "56e7cbfe8257492ad572d35d5462d83fdd72db9e0f7e0e979475485371606acf",
+ "position_sha256": "f1f352bb91fd5ac81a025150fe989ff60006b6653f8604d34d5d81d80c3b54f6",
+ "input_sha256": "ef8464f3e6f0b06ca42e60cd8e243856b5e56dc2b10bc14aaed4afebd805a32f",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

@@ -1,0 +1,33 @@
+{
+ "syllable": "맥",
+ "vertex": "맥",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 109.621,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 71498789,
+ "proof_nodes": 579623,
+ "proof_seconds": 11.306088,
+ "solver_wall_seconds": 122.07,
+ "verify_seconds": 15.383,
+ "verify_wall_seconds": 15.4,
+ "proof_bytes": 4165601,
+ "proof_sha256": "acec431f60e5ffa07826984e75bd15cb679b6063afaec593b9703caad2d4463c",
+ "position_sha256": "9801242087d921a5ca4401fdd87a259fe18e03a317413f6d82af114f37ef6cad",
+ "input_sha256": "3af70c844647693ecca11fa455506656222f903e52e7d6c7c3596aa33e5b55b5",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

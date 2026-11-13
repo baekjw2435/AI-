@@ -1,0 +1,33 @@
+{
+ "syllable": "법",
+ "vertex": "법",
+ "result_for_receiver": "W",
+ "runs": 2,
+ "search_seconds_spent": 362.157,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 249725733,
+ "proof_nodes": 192667,
+ "proof_seconds": 3.47361,
+ "solver_wall_seconds": 367.62,
+ "verify_seconds": 4.511,
+ "verify_wall_seconds": 4.52,
+ "proof_bytes": 1369339,
+ "proof_sha256": "87bcabc3410aa986fb0b582622c096b932c04349d0ddb7da2a7975632fc88f66",
+ "position_sha256": "a551ef190f61ae3b699be7f90e89f1cd923efecacb962740e4ee55e3cf76f5a0",
+ "input_sha256": "1a8868241768c843a97a9342ea292d1599c82b6e86e95e7a5b8ff805cfbc29b0",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}
