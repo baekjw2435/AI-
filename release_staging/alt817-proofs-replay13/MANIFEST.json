@@ -1,0 +1,56 @@
+{
+ "release_tag": "alt817-proofs-replay13",
+ "files": {
+  "603fc73f934bcf756bbd28f4c3fac45c80c2e49e58980fcd0aba0b335df16492.v4.gz": {
+   "sha256": "603fc73f934bcf756bbd28f4c3fac45c80c2e49e58980fcd0aba0b335df16492",
+   "bytes": 23704924,
+   "certifies": [
+    "replay13/x01 절/절벽"
+   ]
+  },
+  "1c44dda69da0466e3433db526fb43cb1e9f07ee4024287aa0427e91cc58c8dfe.v4.gz": {
+   "sha256": "1c44dda69da0466e3433db526fb43cb1e9f07ee4024287aa0427e91cc58c8dfe",
+   "bytes": 23808065,
+   "certifies": [
+    "replay13/x03 완/완충"
+   ]
+  },
+  "a2dc6c7018c7fd70ae5d4bf830dae33092a85f0c4a77a976a163f9afa5e5962e.v4.gz": {
+   "sha256": "a2dc6c7018c7fd70ae5d4bf830dae33092a85f0c4a77a976a163f9afa5e5962e",
+   "bytes": 27280225,
+   "certifies": [
+    "replay13/x04 절/절충"
+   ]
+  },
+  "4875be6e27810cad1b90f41826dadeddd0fce2217d12f9b743ba6f3a7a8d2013.v4.gz": {
+   "sha256": "4875be6e27810cad1b90f41826dadeddd0fce2217d12f9b743ba6f3a7a8d2013",
+   "bytes": 21723461,
+   "certifies": [
+    "replay13/x05 완/완벽"
+   ]
+  },
+  "e8b97a58434243770f94ebffe0ac9ef45ef83df44fe2d9b50616a77643a97f82.v4.gz": {
+   "sha256": "e8b97a58434243770f94ebffe0ac9ef45ef83df44fe2d9b50616a77643a97f82",
+   "bytes": 21758384,
+   "certifies": [
+    "replay13/source 벽"
+   ]
+  },
+  "ee2bbd37aa2bab1e80940cc4ac51b440cdd633313ea1374e87f625afc91ee98b.v4.gz": {
+   "sha256": "ee2bbd37aa2bab1e80940cc4ac51b440cdd633313ea1374e87f625afc91ee98b",
+   "bytes": 23298369,
+   "certifies": [
+    "replay13/source 온"
+   ]
+  },
+  "b753afa10de3a5a60a033722f1ebd60eb499cf91f40f8299fc99ebd7894fac29.v4.gz": {
+   "sha256": "b753afa10de3a5a60a033722f1ebd60eb499cf91f40f8299fc99ebd7894fac29",
+   "bytes": 23856789,
+   "certifies": [
+    "replay13/source 충"
+   ]
+  }
+ },
+ "file_count": 7,
+ "total_bytes": 165430217
+}
