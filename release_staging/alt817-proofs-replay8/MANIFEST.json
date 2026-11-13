@@ -1,0 +1,91 @@
+{
+ "release_tag": "alt817-proofs-replay8",
+ "files": {
+  "8d8717b8fb151366aab9f53a25418cbc3f6a602dc860d3e3600a5acb3777b28a.v4.gz": {
+   "sha256": "8d8717b8fb151366aab9f53a25418cbc3f6a602dc860d3e3600a5acb3777b28a",
+   "bytes": 11001886,
+   "certifies": [
+    "replay8/s01 박/박학다식"
+   ]
+  },
+  "0c61b6edbd1ef84ca207a81bb208c552764f8d535be8d5880232ebcd2df0ecb0.v4.gz": {
+   "sha256": "0c61b6edbd1ef84ca207a81bb208c552764f8d535be8d5880232ebcd2df0ecb0",
+   "bytes": 11028078,
+   "certifies": [
+    "replay8/s02 군/군대식"
+   ]
+  },
+  "4d971d44205a11857304395159cfe743549fb17a08a08a11720ba138379ed88f.v4.gz": {
+   "sha256": "4d971d44205a11857304395159cfe743549fb17a08a08a11720ba138379ed88f",
+   "bytes": 10957412,
+   "certifies": [
+    "replay8/s03 절/절식"
+   ]
+  },
+  "24759a2bf3919e389961be64f86b4968ca8ca8efda63fb38976067eda151c32b.v4.gz": {
+   "sha256": "24759a2bf3919e389961be64f86b4968ca8ca8efda63fb38976067eda151c32b",
+   "bytes": 10954235,
+   "certifies": [
+    "replay8/s04 급/급식"
+   ]
+  },
+  "42ec50830d5780e9fe5d3527e9afc1c4f378cdc02971ed90480848cd153d19a3.v4.gz": {
+   "sha256": "42ec50830d5780e9fe5d3527e9afc1c4f378cdc02971ed90480848cd153d19a3",
+   "bytes": 10954268,
+   "certifies": [
+    "replay8/s05 준/준공식"
+   ]
+  },
+  "3847251f8da6178fe5dbb417be9585233ff9984e2b434380663d7e0f8eeda53a.v4.gz": {
+   "sha256": "3847251f8da6178fe5dbb417be9585233ff9984e2b434380663d7e0f8eeda53a",
+   "bytes": 11023638,
+   "certifies": [
+    "replay8/s06 직/직업의식"
+   ]
+  },
+  "729203aae8cbea0ef6c0ce2bbf217db59f1683e9b88a713aa3c97ba583d088c1.v4.gz": {
+   "sha256": "729203aae8cbea0ef6c0ce2bbf217db59f1683e9b88a713aa3c97ba583d088c1",
+   "bytes": 10954319,
+   "certifies": [
+    "replay8/s07 숙/숙식"
+   ]
+  },
+  "7d0f51e63c3346508943f8f2160e1a30f69f309c276fee9db5684d6048462e26.v4.gz": {
+   "sha256": "7d0f51e63c3346508943f8f2160e1a30f69f309c276fee9db5684d6048462e26",
+   "bytes": 11444002,
+   "certifies": [
+    "replay8/s08 학/학식"
+   ]
+  },
+  "5ceffd4813ebff84d903b927f81e750cee70359dc9bec4e853df204ef2a19501.v4.gz": {
+   "sha256": "5ceffd4813ebff84d903b927f81e750cee70359dc9bec4e853df204ef2a19501",
+   "bytes": 10969560,
+   "certifies": [
+    "replay8/s10 편/편식"
+   ]
+  },
+  "a6710f58a5c3f9bb3de4b90d637d0e7c90f352503ea91f745a3d4f84fa265664.v4.gz": {
+   "sha256": "a6710f58a5c3f9bb3de4b90d637d0e7c90f352503ea91f745a3d4f84fa265664",
+   "bytes": 11794636,
+   "certifies": [
+    "replay8/s11 폭/폭식"
+   ]
+  },
+  "1824b5e498dfcf5fd0f8c5b4021e22ccfc69f6fb7d6ba684897ea9b816a4c016.v4.gz": {
+   "sha256": "1824b5e498dfcf5fd0f8c5b4021e22ccfc69f6fb7d6ba684897ea9b816a4c016",
+   "bytes": 14012893,
+   "certifies": [
+    "replay8/s12 증/증식"
+   ]
+  },
+  "3a22d073185abb63fb20c586044d786b7b4bad443d9123875527cea0ab44f756.v4.gz": {
+   "sha256": "3a22d073185abb63fb20c586044d786b7b4bad443d9123875527cea0ab44f756",
+   "bytes": 10968105,
+   "certifies": [
+    "replay8/source 식"
+   ]
+  }
+ },
+ "file_count": 12,
+ "total_bytes": 136063032
+}
