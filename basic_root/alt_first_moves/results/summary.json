@@ -506,6 +506,19 @@
    "reason": "time_limit",
    "pn": 3942,
    "dn": 11472
+  },
+  {
+   "id": "격/격돌",
+   "batch": "replay6",
+   "name": "n24",
+   "phases": 1,
+   "search_seconds_total": 600.0,
+   "mid_calls_total": 297650176,
+   "decided": false,
+   "spent_seconds_total": 600.0,
+   "reason": "time_limit",
+   "pn": null,
+   "dn": null
   }
  ],
  "낙/낙엽": [
@@ -7110,6 +7123,806 @@
    "proof_sha256": "493c4ee8422a6ff6a41f61ad8b752c2eb62f4c16ba7395333903b2a80d506247",
    "position_sha256": "8be4500bc5007530ca5d9ed3241a9c78d092fa1e47f7d0cdcda09d28f6f203e7",
    "input_sha256": "05375966cbe7adc6f6718c435c868a465e3e5ca133c13ce000df9ccbc8e185e6",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "군/군법": [
+  {
+   "id": "군/군법",
+   "batch": "replay6",
+   "name": "n01",
+   "phases": 1,
+   "search_seconds_total": 0.307,
+   "mid_calls_total": 14,
+   "decided": true,
+   "spent_seconds_total": 0.307,
+   "first_move": "lose",
+   "reply": [
+    "법칙"
+   ],
+   "proof_nodes": 192133,
+   "proof_bytes": 1365409,
+   "proof_seconds": 1.528671,
+   "verify_seconds": 6.281,
+   "proof_sha256": "8a3c1fb199da116a49e83724ce6770955227f7e4143db510e8c961bd10826849",
+   "position_sha256": "4bee719499c2708c5704d7567db98e3b5775c322fa0d434b0b40e4db8dde8d0d",
+   "input_sha256": "92dc761b5ef626a021254b51218c17d71056254b2a4327b62cc8510bafcc9ddd",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "절/절편": [
+  {
+   "id": "절/절편",
+   "batch": "replay6",
+   "name": "n02",
+   "phases": 1,
+   "search_seconds_total": 1.389,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.389,
+   "first_move": "lose",
+   "reply": [
+    "편곡"
+   ],
+   "proof_nodes": 657729,
+   "proof_bytes": 4820831,
+   "proof_seconds": 4.774982,
+   "verify_seconds": 21.728,
+   "proof_sha256": "de13aac6ec495cd8eaf9342f568b540e3b95ed97a6922d2988f8fca3b07ac751",
+   "position_sha256": "908c2baef01f9bc2ba6acba8def91a36be6aa777fb846cbc0fe197746464045a",
+   "input_sha256": "13174439cb2e5321a78597d5623b262b0230f99cc1492bff111d9c24f95efd5d",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "돌/돌탑": [
+  {
+   "id": "돌/돌탑",
+   "batch": "replay6",
+   "name": "n03",
+   "phases": 1,
+   "search_seconds_total": 17.604,
+   "mid_calls_total": 8894626,
+   "decided": true,
+   "spent_seconds_total": 17.604,
+   "first_move": "lose",
+   "reply": [
+    "탑승객"
+   ],
+   "proof_nodes": 739574,
+   "proof_bytes": 5340373,
+   "proof_seconds": 5.791277,
+   "verify_seconds": 26.048,
+   "proof_sha256": "1d13e3f614e863062145833ee8c72ea72e9bd30877fee0a15db1a1d2de7f06d1",
+   "position_sha256": "428690912ef3f4fb460740b2d0193ec599c8ae8e1c2e3058575b55228b1bcb67",
+   "input_sha256": "4b7bcbf779b39412bd871f566bf70df6f4efd331ff5c23d73a4c0570d19fe539",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "교/교집합": [
+  {
+   "id": "교/교집합",
+   "batch": "replay6",
+   "name": "n04",
+   "phases": 1,
+   "search_seconds_total": 1.436,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.436,
+   "first_move": "lose",
+   "reply": [
+    "합주곡",
+    "합창곡"
+   ],
+   "proof_nodes": 634947,
+   "proof_bytes": 4653927,
+   "proof_seconds": 4.806214,
+   "verify_seconds": 20.998,
+   "proof_sha256": "5450351e4e8c467cd47cc99ead49e1a631ba8f2a1ca4401406890c1fa4160c8c",
+   "position_sha256": "caff4c9b1e1f6c24a614d10ad14854a804c473caef3530c7c6a9d6178a2beaf4",
+   "input_sha256": "2244216c11a563f2de007ac65e4d4d1dbf31cbe4773c1d62167af7b0c0de9fdc",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "편/편법": [
+  {
+   "id": "편/편법",
+   "batch": "replay6",
+   "name": "n05",
+   "phases": 1,
+   "search_seconds_total": 0.297,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 0.297,
+   "first_move": "lose",
+   "reply": [
+    "법칙"
+   ],
+   "proof_nodes": 192088,
+   "proof_bytes": 1364979,
+   "proof_seconds": 1.351605,
+   "verify_seconds": 5.767,
+   "proof_sha256": "3d84d0cce5688bafa4076aaea7912fb9a18eb7d1422a8a463b6b13429043f5ea",
+   "position_sha256": "0436416f9623774455da0429ab4f0eda130070b7f0ab976f01c23c0a1216b83e",
+   "input_sha256": "7acc78a04b4e8a9f5c94add6de0c1a6a50350765c07cee79654f5da06c5abdfd",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "학/학맥": [
+  {
+   "id": "학/학맥",
+   "batch": "replay6",
+   "name": "n06",
+   "phases": 1,
+   "search_seconds_total": 1.105,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.105,
+   "first_move": "win",
+   "reply": null,
+   "proof_nodes": 579406,
+   "proof_bytes": 4163832,
+   "proof_seconds": 4.583095,
+   "verify_seconds": 20.603,
+   "proof_sha256": "8f5a7ce49874e9d66a6331ab2c694d357d262adeb77b986aa38d03a18d85bbf0",
+   "position_sha256": "eb7c005e17d6d5f56cc5e2a95935126dc574bab2c0ef3954f56a305ac6f6f7eb",
+   "input_sha256": "690ad69ac6dd0d24ee27e44d6a18504bc1ca637c09c89396533267f72783aef5",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "야/야합": [
+  {
+   "id": "야/야합",
+   "batch": "replay6",
+   "name": "n07",
+   "phases": 1,
+   "search_seconds_total": 1.238,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.238,
+   "first_move": "lose",
+   "reply": [
+    "합주곡",
+    "합창곡"
+   ],
+   "proof_nodes": 634947,
+   "proof_bytes": 4653927,
+   "proof_seconds": 4.710697,
+   "verify_seconds": 21.146,
+   "proof_sha256": "5450351e4e8c467cd47cc99ead49e1a631ba8f2a1ca4401406890c1fa4160c8c",
+   "position_sha256": "f796eb8936328b65e3565fc8e90d7b633c2d34ef3ee594e455252c98d8e4205b",
+   "input_sha256": "197fd89826fe70a930f5db9d2aaf967d474a84deacd56b806add5f50fe4c9b61",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "득/득점왕": [
+  {
+   "id": "득/득점왕",
+   "batch": "replay6",
+   "name": "n08",
+   "phases": 1,
+   "search_seconds_total": 1.34,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.34,
+   "first_move": "lose",
+   "reply": [
+    "왕릉"
+   ],
+   "proof_nodes": 672696,
+   "proof_bytes": 4880345,
+   "proof_seconds": 5.337339,
+   "verify_seconds": 23.447,
+   "proof_sha256": "9378a2fa2ba65443e2d380cba87a149297f3b86a4b76be282860153d2b663f7d",
+   "position_sha256": "c54c583233f9512d89a9aeb4c300f3eb6b8b21dd649a6cea2afff1698c466144",
+   "input_sha256": "56af3d9b690c589b8b33c29db10ad39838fd0d6db50181774b38f1b7f1a494b0",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "율/율법": [
+  {
+   "id": "율/율법",
+   "batch": "replay6",
+   "name": "n09",
+   "phases": 1,
+   "search_seconds_total": 89.133,
+   "mid_calls_total": 47002134,
+   "decided": true,
+   "spent_seconds_total": 89.133,
+   "first_move": "lose",
+   "reply": [
+    "법칙"
+   ],
+   "proof_nodes": 285126,
+   "proof_bytes": 2065376,
+   "proof_seconds": 2.436748,
+   "verify_seconds": 9.134,
+   "proof_sha256": "a1f0aeadd4594907f7b33720ef836904a7c8bbbf0f999a4967236f6d500f8f74",
+   "position_sha256": "a891bddfd86df8b9bee41aad30996452544ed67dba6649474ad88493577c26ab",
+   "input_sha256": "16d896d68657fdd646b7de6ed376fb7ff2a75741cb4816a502ac2fd49b79a36d",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "순/순기능": [
+  {
+   "id": "순/순기능",
+   "batch": "replay6",
+   "name": "n10",
+   "phases": 1,
+   "search_seconds_total": 55.092,
+   "mid_calls_total": 31367208,
+   "decided": true,
+   "spent_seconds_total": 55.092,
+   "first_move": "win",
+   "reply": null,
+   "proof_nodes": 726212,
+   "proof_bytes": 5265451,
+   "proof_seconds": 5.729155,
+   "verify_seconds": 24.321,
+   "proof_sha256": "e35bc3605006d7b959024eb3e5fbc6684e69a95ae8282769888fe422861d2527",
+   "position_sha256": "55db9643b6b0d07badc824a3c8147acbbbfb2a59ceaa16fab30f680b48d4d456",
+   "input_sha256": "a797ccc46a9eb595b368ceb6964cc636cb2dd255fd913b3c6bfe6e1be88bc6a3",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "찬/찬합": [
+  {
+   "id": "찬/찬합",
+   "batch": "replay6",
+   "name": "n11",
+   "phases": 1,
+   "search_seconds_total": 1.179,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.179,
+   "first_move": "lose",
+   "reply": [
+    "합주곡",
+    "합창곡"
+   ],
+   "proof_nodes": 578431,
+   "proof_bytes": 4230242,
+   "proof_seconds": 4.137359,
+   "verify_seconds": 18.287,
+   "proof_sha256": "4becdc25b1b53a907380eb140b6b052468417f181bebfa8edc31fdc18c760452",
+   "position_sha256": "022b228ddcd2e8b853240b1ffb08a4c75555e0329c6f66897d8410e340ae862f",
+   "input_sha256": "fc264f2b2da6d73b35e8065f7d1391c80f02d757e4cec13e8c11cd0837a8828d",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "항/항공우편": [
+  {
+   "id": "항/항공우편",
+   "batch": "replay6",
+   "name": "n12",
+   "phases": 1,
+   "search_seconds_total": 1.413,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.413,
+   "first_move": "lose",
+   "reply": [
+    "편곡"
+   ],
+   "proof_nodes": 658255,
+   "proof_bytes": 4824596,
+   "proof_seconds": 5.084849,
+   "verify_seconds": 21.551,
+   "proof_sha256": "7f565372da8b709980b6482b892bb01f384d46332afbdabd827f9989af195754",
+   "position_sha256": "59f6e775daa87e2b23a100452cc2fe315b7c4ae561c8fac1f2cc19761af8d025",
+   "input_sha256": "33a23a7cd2249c032fc9e15791884b71815a958956f8495a6955949826f07ef2",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "진/진즉": [
+  {
+   "id": "진/진즉",
+   "batch": "replay6",
+   "name": "n13",
+   "phases": 1,
+   "search_seconds_total": 1.606,
+   "mid_calls_total": 68583,
+   "decided": true,
+   "spent_seconds_total": 1.606,
+   "first_move": "lose",
+   "reply": [
+    "즉흥곡"
+   ],
+   "proof_nodes": 732572,
+   "proof_bytes": 5312022,
+   "proof_seconds": 5.742599,
+   "verify_seconds": 24.557,
+   "proof_sha256": "8004b05e2b874a4f36e766584cbf7b4dbda41141ab1e32821f571a13626d3856",
+   "position_sha256": "0a0bcd88f13c26f00cab663718d27c3d2d66e02a36f509d7b5c8cb844778c184",
+   "input_sha256": "5b2c2a10dc7c38db6d40393809dd126510ba98c3bfe11dcf7410929d8f3d90bf",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "합/합법": [
+  {
+   "id": "합/합법",
+   "batch": "replay6",
+   "name": "n14",
+   "phases": 1,
+   "search_seconds_total": 0.355,
+   "mid_calls_total": 20584,
+   "decided": true,
+   "spent_seconds_total": 0.355,
+   "first_move": "lose",
+   "reply": [
+    "법칙"
+   ],
+   "proof_nodes": 196437,
+   "proof_bytes": 1397527,
+   "proof_seconds": 1.518318,
+   "verify_seconds": 6.009,
+   "proof_sha256": "21ee11720fb2e9aaf51a32b2caec424cec6fd260322c3e8da22e981473ef180d",
+   "position_sha256": "c1d7ee0c33f11db2883d6adcf816022e515a534ce35a6ec88a5e27c40fd4fc73",
+   "input_sha256": "8beaef64667221bd461d98a74beb8e647ee8edf306c3c2fc5340629662027258",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "축/축지법": [
+  {
+   "id": "축/축지법",
+   "batch": "replay6",
+   "name": "n15",
+   "phases": 1,
+   "search_seconds_total": 0.351,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 0.351,
+   "first_move": "lose",
+   "reply": [
+    "법칙"
+   ],
+   "proof_nodes": 192088,
+   "proof_bytes": 1364979,
+   "proof_seconds": 1.482705,
+   "verify_seconds": 5.602,
+   "proof_sha256": "3d84d0cce5688bafa4076aaea7912fb9a18eb7d1422a8a463b6b13429043f5ea",
+   "position_sha256": "b94281b457e778b3929e38346644eb813730c4338cc4980272faa89b980a7a94",
+   "input_sha256": "85922f200a3e82b39a781d061416a05a3c9ae7ecafc90ff23b0a97d217761e6d",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "명/명상법": [
+  {
+   "id": "명/명상법",
+   "batch": "replay6",
+   "name": "n16",
+   "phases": 1,
+   "search_seconds_total": 147.922,
+   "mid_calls_total": 82063947,
+   "decided": true,
+   "spent_seconds_total": 147.922,
+   "first_move": "lose",
+   "reply": [
+    "법칙"
+   ],
+   "proof_nodes": 347784,
+   "proof_bytes": 2468554,
+   "proof_seconds": 2.823536,
+   "verify_seconds": 9.974,
+   "proof_sha256": "01fac38d1449541abecb1361fdc4c66c30cf758779feaa25b31f96962b3f8824",
+   "position_sha256": "1901368de4862870a9aa499ee5624f9ccc7347936712801fcb01b46f99d1fc1b",
+   "input_sha256": "7152ba6ee34fcfe0c03160aaff9002f93edd54177631d4b8d2754cffade8000c",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "교/교통편": [
+  {
+   "id": "교/교통편",
+   "batch": "replay6",
+   "name": "n17",
+   "phases": 1,
+   "search_seconds_total": 1.604,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.604,
+   "first_move": "lose",
+   "reply": [
+    "편곡"
+   ],
+   "proof_nodes": 658255,
+   "proof_bytes": 4824596,
+   "proof_seconds": 4.911834,
+   "verify_seconds": 22.572,
+   "proof_sha256": "7f565372da8b709980b6482b892bb01f384d46332afbdabd827f9989af195754",
+   "position_sha256": "e7d6a8eeedff0929a180a4e943a12d404d86c9130d5fe735d41a5fc00a6e8ad7",
+   "input_sha256": "2964e5e10d3bd512596b99d5096b8d9dd9c6cc26f711995d93749e72effca90b",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "숙/숙맥": [
+  {
+   "id": "숙/숙맥",
+   "batch": "replay6",
+   "name": "n18",
+   "phases": 1,
+   "search_seconds_total": 1.213,
+   "mid_calls_total": 41,
+   "decided": true,
+   "spent_seconds_total": 1.213,
+   "first_move": "win",
+   "reply": null,
+   "proof_nodes": 579404,
+   "proof_bytes": 4163968,
+   "proof_seconds": 4.500453,
+   "verify_seconds": 19.685,
+   "proof_sha256": "fea28dfaccf3472d1d677293f00ddf1e89020db6e3b7dc590c00eaeacbd2f55c",
+   "position_sha256": "de6b11d0660da129471b31eed1aaea669c475134177d34fee1e01545d2d90c14",
+   "input_sha256": "68b1878dcbebdc0061ec849d84ee37b9e92da89ee4448af61c7b2c29e6fb8b9a",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "준/준법": [
+  {
+   "id": "준/준법",
+   "batch": "replay6",
+   "name": "n19",
+   "phases": 1,
+   "search_seconds_total": 0.294,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 0.294,
+   "first_move": "lose",
+   "reply": [
+    "법칙"
+   ],
+   "proof_nodes": 192088,
+   "proof_bytes": 1364979,
+   "proof_seconds": 1.449917,
+   "verify_seconds": 5.909,
+   "proof_sha256": "3d84d0cce5688bafa4076aaea7912fb9a18eb7d1422a8a463b6b13429043f5ea",
+   "position_sha256": "e4b7516f08ea1e3c3e75e65b7ddfcbecbb84343cc7a6428e599f44d43f9bcdda",
+   "input_sha256": "f8ad93a1bac81dd234544175586365bf58d4d18c17b49b2bd29d899e09dc2596",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "진/진맥": [
+  {
+   "id": "진/진맥",
+   "batch": "replay6",
+   "name": "n20",
+   "phases": 1,
+   "search_seconds_total": 1.493,
+   "mid_calls_total": 99307,
+   "decided": true,
+   "spent_seconds_total": 1.493,
+   "first_move": "win",
+   "reply": null,
+   "proof_nodes": 582503,
+   "proof_bytes": 4180476,
+   "proof_seconds": 4.633188,
+   "verify_seconds": 21.072,
+   "proof_sha256": "ecaf43314fd87fe3975d5a2a5ff180d8a0ed446542862bbb50a49794120a89bf",
+   "position_sha256": "505fbd44f142a18b5aa3bc8728a6ff8f43f16420489cafb7ecbf2c59e7ab71dd",
+   "input_sha256": "9967a74e8dc46ab9e8a61f3efd63de61e90c2d76303e982bdff15a1ccab96b87",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "군/군왕": [
+  {
+   "id": "군/군왕",
+   "batch": "replay6",
+   "name": "n21",
+   "phases": 1,
+   "search_seconds_total": 1.454,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.454,
+   "first_move": "lose",
+   "reply": [
+    "왕릉"
+   ],
+   "proof_nodes": 672696,
+   "proof_bytes": 4880345,
+   "proof_seconds": 5.038689,
+   "verify_seconds": 22.918,
+   "proof_sha256": "9378a2fa2ba65443e2d380cba87a149297f3b86a4b76be282860153d2b663f7d",
+   "position_sha256": "9264eefd68f23ee7d4feb8789f9223129b2905277ea8fa1bc555d3f6a0508a48",
+   "input_sha256": "a5b89e231c46a11352db5d592b2faefdab768665f2ad04544b2242bb3f4cc55d",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "병/병합": [
+  {
+   "id": "병/병합",
+   "batch": "replay6",
+   "name": "n22",
+   "phases": 1,
+   "search_seconds_total": 1.579,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.579,
+   "first_move": "lose",
+   "reply": [
+    "합주곡",
+    "합창곡"
+   ],
+   "proof_nodes": 634947,
+   "proof_bytes": 4653927,
+   "proof_seconds": 5.183781,
+   "verify_seconds": 21.876,
+   "proof_sha256": "5450351e4e8c467cd47cc99ead49e1a631ba8f2a1ca4401406890c1fa4160c8c",
+   "position_sha256": "6262c24efb112bbb6e9374cf92e727feda764f59042871ac6c8bdb2dc9ccdb29",
+   "input_sha256": "bcf8173ef45a558ae26db2aab1140951c3b3f5c217ecfb22f14ec60950e4f657",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "역/역기능": [
+  {
+   "id": "역/역기능",
+   "batch": "replay6",
+   "name": "n23",
+   "phases": 1,
+   "search_seconds_total": 600.0,
+   "mid_calls_total": 298793984,
+   "decided": false,
+   "spent_seconds_total": 600.0,
+   "reason": "time_limit",
+   "pn": null,
+   "dn": null
+  }
+ ],
+ "혈/혈맥": [
+  {
+   "id": "혈/혈맥",
+   "batch": "replay6",
+   "name": "n25",
+   "phases": 1,
+   "search_seconds_total": 1.141,
+   "mid_calls_total": 181,
+   "decided": true,
+   "spent_seconds_total": 1.141,
+   "first_move": "win",
+   "reply": null,
+   "proof_nodes": 579418,
+   "proof_bytes": 4163567,
+   "proof_seconds": 5.231971,
+   "verify_seconds": 20.272,
+   "proof_sha256": "d3685f4b5c07fccd5a13b6145c6c2ed843af5a83f3d353cb0410229249ba7733",
+   "position_sha256": "b7950bf05afb9cd85321150b1154fedd8d4dc0c41256f4ce445115b66f1b1d9a",
+   "input_sha256": "4c763c6c837f750cfa911ee09b46a9951627c7899c36c37653becf1648a0fff5",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "직/직능": [
+  {
+   "id": "직/직능",
+   "batch": "replay6",
+   "name": "n26",
+   "phases": 1,
+   "search_seconds_total": 1.553,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.553,
+   "first_move": "win",
+   "reply": null,
+   "proof_nodes": 687648,
+   "proof_bytes": 4984821,
+   "proof_seconds": 5.397882,
+   "verify_seconds": 24.132,
+   "proof_sha256": "b7f2e7bcb811ff15135421a6b107d275c16a1f9cbb916b51577e35c18ed741e2",
+   "position_sha256": "5bc847069e6d7e91ad136e804e66aa5c431040c8ed8eb75b55c89b630834023c",
+   "input_sha256": "1717988da0240c57f2457f746a4684b5096b668a2ca647f548c59dc3dee09f52",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "직/직설법": [
+  {
+   "id": "직/직설법",
+   "batch": "replay6",
+   "name": "n27",
+   "phases": 1,
+   "search_seconds_total": 0.292,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 0.292,
+   "first_move": "lose",
+   "reply": [
+    "법칙"
+   ],
+   "proof_nodes": 192088,
+   "proof_bytes": 1364979,
+   "proof_seconds": 1.384248,
+   "verify_seconds": 5.638,
+   "proof_sha256": "3d84d0cce5688bafa4076aaea7912fb9a18eb7d1422a8a463b6b13429043f5ea",
+   "position_sha256": "c56bf7a1419ac38acb0d0e0f77a185fe3165a1aaba9e1e13be67a81d53c6525f",
+   "input_sha256": "df5f07340b32bbbaef6274de15a660492183ae9ea18ab5efbdafc9c0baa5103a",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "병/병법": [
+  {
+   "id": "병/병법",
+   "batch": "replay6",
+   "name": "n28",
+   "phases": 1,
+   "search_seconds_total": 0.305,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 0.305,
+   "first_move": "lose",
+   "reply": [
+    "법칙"
+   ],
+   "proof_nodes": 192088,
+   "proof_bytes": 1364979,
+   "proof_seconds": 1.402942,
+   "verify_seconds": 5.963,
+   "proof_sha256": "3d84d0cce5688bafa4076aaea7912fb9a18eb7d1422a8a463b6b13429043f5ea",
+   "position_sha256": "aa717eefe4e6351c08b4e151afbb097917e4dd26c07030ef94f3ee7152ad1d1f",
+   "input_sha256": "936ef25200452a6fde0832a59e917611620d6eeedbb840258828102d058781e0",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "증/증편": [
+  {
+   "id": "증/증편",
+   "batch": "replay6",
+   "name": "n29",
+   "phases": 1,
+   "search_seconds_total": 1.306,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.306,
+   "first_move": "lose",
+   "reply": [
+    "편곡"
+   ],
+   "proof_nodes": 656462,
+   "proof_bytes": 4809283,
+   "proof_seconds": 4.810586,
+   "verify_seconds": 22.919,
+   "proof_sha256": "b665d377d24cb1280d9d85faffa9ce69c7c42376d7d98fdf06937aa6e6912ab1",
+   "position_sha256": "70db309f5dfa08dda33daadce0b1185a4f0c6e589f3a4ec23deb989dea8893d1",
+   "input_sha256": "166a8f5f8c5dbf300dd0c5d8337334fc70b5f330b08a2808aa5b104451ae434a",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "교/교수법": [
+  {
+   "id": "교/교수법",
+   "batch": "replay6",
+   "name": "n30",
+   "phases": 1,
+   "search_seconds_total": 0.319,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 0.319,
+   "first_move": "lose",
+   "reply": [
+    "법칙"
+   ],
+   "proof_nodes": 192088,
+   "proof_bytes": 1364979,
+   "proof_seconds": 1.6133,
+   "verify_seconds": 6.576,
+   "proof_sha256": "3d84d0cce5688bafa4076aaea7912fb9a18eb7d1422a8a463b6b13429043f5ea",
+   "position_sha256": "2d390c86cbb5e4848cfbe8a51e318232d003300c4f061ff615e8efac71538e73",
+   "input_sha256": "de9b1fd5433086b48a2bdfb7b0e698e210a2f2d6e550ed2fc83ad93e6b752505",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "규/규합": [
+  {
+   "id": "규/규합",
+   "batch": "replay6",
+   "name": "n31",
+   "phases": 1,
+   "search_seconds_total": 1.268,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.268,
+   "first_move": "lose",
+   "reply": [
+    "합주곡",
+    "합창곡"
+   ],
+   "proof_nodes": 634947,
+   "proof_bytes": 4653927,
+   "proof_seconds": 5.092609,
+   "verify_seconds": 22.31,
+   "proof_sha256": "5450351e4e8c467cd47cc99ead49e1a631ba8f2a1ca4401406890c1fa4160c8c",
+   "position_sha256": "104c18ed0368831e4de6d7a2c2975b29fde8b170f78dec3472c3426c82011276",
+   "input_sha256": "364c6988aad22cffa7f59a64d7a565035fc0c020f28348f7cceca5fc4a20d574",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "명/명맥": [
+  {
+   "id": "명/명맥",
+   "batch": "replay6",
+   "name": "n32",
+   "phases": 1,
+   "search_seconds_total": 1.575,
+   "mid_calls_total": 283412,
+   "decided": true,
+   "spent_seconds_total": 1.575,
+   "first_move": "win",
+   "reply": null,
+   "proof_nodes": 571084,
+   "proof_bytes": 4101820,
+   "proof_seconds": 4.461158,
+   "verify_seconds": 21.481,
+   "proof_sha256": "7f911d039b1a8ba672e9395f3ef16ef0d1d7fee26b4b3d6558e033e472879797",
+   "position_sha256": "693f042de30867e1cb5bff4b54e00a902efff57814e4fc0cd655836859662f92",
+   "input_sha256": "4ca5f080a34e27f6f1cab2e5533395ae9b1a2a2061fb0d330055df51b3bd9290",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "합/합집합": [
+  {
+   "id": "합/합집합",
+   "batch": "replay6",
+   "name": "n33",
+   "phases": 1,
+   "search_seconds_total": 1.478,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.478,
+   "first_move": "lose",
+   "reply": [
+    "합주곡",
+    "합창곡"
+   ],
+   "proof_nodes": 634947,
+   "proof_bytes": 4653927,
+   "proof_seconds": 5.016488,
+   "verify_seconds": 21.199,
+   "proof_sha256": "5450351e4e8c467cd47cc99ead49e1a631ba8f2a1ca4401406890c1fa4160c8c",
+   "position_sha256": "92a763724aaa04ddb514f347c420fed574a598d31db9cb968f771e0a0962ebbd",
+   "input_sha256": "a4b0d4f527d12e4733bdaada18784bec615e98ca745e848fa22408a8e6257e50",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "홍/홍합": [
+  {
+   "id": "홍/홍합",
+   "batch": "replay6",
+   "name": "n34",
+   "phases": 1,
+   "search_seconds_total": 1.237,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 1.237,
+   "first_move": "lose",
+   "reply": [
+    "합주곡",
+    "합창곡"
+   ],
+   "proof_nodes": 634881,
+   "proof_bytes": 4653336,
+   "proof_seconds": 4.903219,
+   "verify_seconds": 22.56,
+   "proof_sha256": "5c6839f08ec51f5f8b49480ab17f72e6c2b6ec39964b53f51cb41d6217fdd779",
+   "position_sha256": "27d54b88bacfed879e46c4c3fa52b1d8fa95d06e298ec7e5bbde4538b24336ac",
+   "input_sha256": "5a45e0e7fc37203333a7f5c2da5afdfe38f2e09fc2ef6c5ebdf53d0458b199c9",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "식/식이요법": [
+  {
+   "id": "식/식이요법",
+   "batch": "replay6",
+   "name": "n35",
+   "phases": 1,
+   "search_seconds_total": 24.008,
+   "mid_calls_total": 11989480,
+   "decided": true,
+   "spent_seconds_total": 24.008,
+   "first_move": "lose",
+   "reply": [
+    "법칙"
+   ],
+   "proof_nodes": 227960,
+   "proof_bytes": 1612420,
+   "proof_seconds": 1.747004,
+   "verify_seconds": 7.989,
+   "proof_sha256": "7fef8de3dc17bda2174d69e4ebc5d9beaff98b1ba07cacda82b346b62f92c63a",
+   "position_sha256": "aabead0423a8638c7615868748462b57c5414091ad120857774d146dc6164671",
+   "input_sha256": "ea2e0c04763892f381238a49cb973ac21d9e1b1384c54323124436379a5ac3ca",
    "verifier": "verify_v4 (C++)"
   }
  ]

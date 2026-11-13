@@ -1,0 +1,33 @@
+{
+ "syllable": "합",
+ "vertex": "합",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 134.119,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 87975569,
+ "proof_nodes": 635996,
+ "proof_seconds": 12.20903,
+ "solver_wall_seconds": 147.41,
+ "verify_seconds": 22.094,
+ "verify_wall_seconds": 22.11,
+ "proof_bytes": 4660864,
+ "proof_sha256": "10acbb707c60e26f4f115d27914d1b21e13471e2c0ab0cd482b0d5f03fc69b68",
+ "position_sha256": "20a8831452ee1250779a7e76c364f98236ba154c776aebfe508c8b1122c32835",
+ "input_sha256": "5e9fc6f0ecb16c1ca3bff0458a86fdeed90e8224b1720d44f108b24876183489",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

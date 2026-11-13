@@ -1,0 +1,33 @@
+{
+ "syllable": "돌",
+ "vertex": "돌",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 175.229,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 109991277,
+ "proof_nodes": 528568,
+ "proof_seconds": 11.430962,
+ "solver_wall_seconds": 187.81,
+ "verify_seconds": 14.603,
+ "verify_wall_seconds": 14.61,
+ "proof_bytes": 3833497,
+ "proof_sha256": "25807d51cabfdca577e3478457e278aad10d9691075528a7e136dde36c0608ac",
+ "position_sha256": "e53fdd345c412492252d5ef7e9beda8560aa0f2360a131b835d84c2651c60af0",
+ "input_sha256": "1535b360376b218c8b3af725bef5a48b2d651c36ad7678dd9c04b6b191a55b42",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}
