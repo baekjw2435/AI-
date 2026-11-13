@@ -1,0 +1,126 @@
+name: upload-proof-releases
+
+# Certificate files that are too large for the repository wait in release_staging/<tag>/ on this branch.
+# This job attaches them to the GitHub release <tag> and then downloads every attached file again and
+# compares its SHA-256 with release_staging/<tag>/MANIFEST.json.
+#
+# It uploads ONLY when it is started by hand (workflow_dispatch) with upload = yes.
+# A push that changes this file only checks the staged files; no release is touched.
+
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: "Release tags to upload, space separated, or 'all' for every folder of release_staging/"
+        default: "all"
+      target:
+        description: "Branch or commit the release tags are put on (the research branch: no large files in its history)"
+        default: "ccr-15ac48c4-91g5f3"
+      upload:
+        description: "yes = create the releases and attach the files; anything else = only check the staged files"
+        default: "no"
+  push:
+    branches: [ccr-e9c317a6-opqe7c]
+    paths: [".github/workflows/upload-proof-releases.yml"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: upload-proof-releases
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: release_staging
+          fetch-depth: 1
+      - name: Check the staged files against MANIFEST.json
+        run: |
+          python3 - <<'EOF'
+          import hashlib, json, sys
+          from pathlib import Path
+          bad = 0
+          total = 0
+          for d in sorted(p for p in Path('release_staging').iterdir() if p.is_dir()):
+              m = json.loads((d / 'MANIFEST.json').read_text(encoding='utf-8'))
+              assert m['release_tag'] == d.name, d.name
+              on_disk = {p.name for p in d.glob('*.v4.gz')}
+              if on_disk != set(m['files']):
+                  print('file list differs from MANIFEST:', d.name)
+                  bad += 1
+              for name, e in m['files'].items():
+                  f = d / name
+                  h = hashlib.sha256(f.read_bytes()).hexdigest() if f.exists() else None
+                  if h != e['sha256'] or name != e['sha256'] + '.v4.gz' or f.stat().st_size != e['bytes']:
+                      print('differs:', d.name, name)
+                      bad += 1
+                  total += 1
+              print(d.name, len(m['files']), 'files', m['total_bytes'], 'bytes')
+          print('staged files checked:', total, 'problems:', bad)
+          sys.exit(1 if bad else 0)
+          EOF
+
+  upload:
+    needs: check
+    if: github.event_name == 'workflow_dispatch' && inputs.upload == 'yes'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      TAGS: ${{ inputs.tags }}
+      TARGET: ${{ inputs.target }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: release_staging
+          fetch-depth: 1
+      - name: Create the releases and attach the files
+        run: |
+          set -euo pipefail
+          cd release_staging
+          if [ "$TAGS" = "all" ]; then TAGS=$(ls -d */ | tr -d / | tr '\n' ' '); fi
+          echo "$TAGS" > "$RUNNER_TEMP/tags.txt"
+          for tag in $TAGS; do
+            case "$tag" in alt817-proofs-*) ;; *) echo "unexpected tag: $tag"; exit 1 ;; esac
+            [ -f "$tag/MANIFEST.json" ] || { echo "no staged folder for $tag"; exit 1; }
+            if ! gh release view "$tag" >/dev/null 2>&1; then
+              {
+                echo "한기사(817단어) '이기는 쪽의 다른 첫 수' 연구의 증명서(route-proof-v4) 파일입니다."
+                echo
+                echo "- 파일 이름은 그 파일의 SHA-256입니다."
+                echo "- 어떤 국면의 증명서인지는 첨부한 MANIFEST.json과, 저장소의 basic_root/alt_first_moves/results/<묶음>/archive/INDEX.json에 있습니다."
+                echo "- 검증기: guopsaem_root/verifier_v4/verify_v4.cpp"
+              } > "$RUNNER_TEMP/notes.md"
+              gh release create "$tag" --target "$TARGET" --title "$tag" --notes-file "$RUNNER_TEMP/notes.md" --latest=false
+            fi
+            ls "$tag"/*.v4.gz "$tag/MANIFEST.json" | xargs -n 10 gh release upload "$tag" --clobber
+            echo "uploaded: $tag"
+          done
+      - name: Download every attached file again and compare SHA-256
+        run: |
+          set -euo pipefail
+          for tag in $(cat "$RUNNER_TEMP/tags.txt"); do
+            rm -rf "$RUNNER_TEMP/dl" && mkdir "$RUNNER_TEMP/dl"
+            gh release download "$tag" --dir "$RUNNER_TEMP/dl" --pattern '*.v4.gz'
+            TAG="$tag" DL="$RUNNER_TEMP/dl" python3 - <<'EOF'
+          import hashlib, json, os, sys
+          from pathlib import Path
+          tag, dl = os.environ['TAG'], Path(os.environ['DL'])
+          m = json.loads((Path('release_staging') / tag / 'MANIFEST.json').read_text(encoding='utf-8'))
+          got = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in dl.glob('*.v4.gz')}
+          bad = [n for n, e in m['files'].items() if got.get(n) != e['sha256']] + [n for n in got if n not in m['files']]
+          line = f'{tag}: {len(m["files"])} files in MANIFEST, {len(got)} downloaded again, {len(bad)} differ'
+          print(line)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
+              f.write('- ' + line + '\n')
+          sys.exit(1 if bad or len(got) != len(m['files']) else 0)
+          EOF
+          done
