@@ -54,7 +54,9 @@
    "local_mid": 25099275
   },
   "search_after_replay_seconds": 552.627,
-  "total_wall_seconds": 602.1
+  "total_wall_seconds": 602.1,
+  "end_pn": 2645,
+  "end_dn": 20951
  },
  "phase": "1",
  "phase_seconds": 600.0,

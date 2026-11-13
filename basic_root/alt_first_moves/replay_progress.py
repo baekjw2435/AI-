@@ -62,7 +62,7 @@ def main():
             T[k] += v
         wins += [(b.name, words[r['id']] + (' (이미 검증된 수를 다시 확인)' if again(r['id'], b.name) else ''), r['source']['syllable'])
                  for r in dec if r['first_move'] == 'win']
-        unds += [(b.name, r['id'], words[r['id']], r['source']['syllable']) for r in und]
+        unds += [(b.name, r['id'], words[r['id']], r['source']['syllable'], r['replay']) for r in und]
     L.append(f'| **합계** | {T["n"]:.0f} | {T["dec"]:.0f} | {T["lose"]:.0f} | {T["win"]:.0f} | {T["und"]:.0f} | {T["secs"]:,.0f} | {T["src"]:.0f} | '
              f'{T["prep"]:,.0f} 이상 | {T["files"]:.0f} | {T["bytes"] / 1e6:,.0f} | |')
     L.append('')
@@ -104,20 +104,25 @@ def main():
     L += ['## 아직 미검증인 첫 수', '', f'- **{len(left)}개**가 남았습니다. 넘겨주는 음절별: ' +
           ', '.join(f'{s} {n}' for s, n in sorted(by.items(), key=lambda x: (-x[1], x[0]))), '']
     if unds:
+        def far(x):     # where an undecided run stood when it stopped
+            return f'{x["search_seconds"] or 0:,.0f}초' + (f', pn {x["end_pn"]:,} / dn {x["end_dn"]:,}' if 'end_pn' in x else '')
+
         L += ['## 재생이 한도 안에 못 푼 첫 수', '',
-              '| 재생 묶음 | 첫 수 | 넘겨준 음절 | 직접 탐색 | 지금 |', '|---|---|---|---|---|']
+              '| 재생 묶음 | 첫 수 | 넘겨준 음절 | 재생이 멈춘 곳 | 직접 탐색 | 지금 |', '|---|---|---|---|---|---|']
         seen = set()
         n_left = 0
-        for bn, tid, w, s in unds:
+        for bn, tid, w, s, rr in unds:
             if tid in seen:
                 continue
             seen.add(tid)
-            d = [f'{dn}: ' + ('확정' if r['direct']['decided'] else f'미확정({r["direct"]["search_seconds"] or 0:,.0f}초)') for dn, r in direct_runs.get(tid, [])]
+            d = [f'{dn}: ' + ('확정' if r['direct']['decided'] else f'미확정({far(r["direct"])})') for dn, r in direct_runs.get(tid, [])]
             first = next((e for e in summ.get(tid, []) if e['decided']), None)
             now = '미확정' if first is None else ('**지는 수**' if first['first_move'] == 'lose' else '**이기는 수**') + f' ({first["batch"]})'
             n_left += first is None
-            L.append(f'| {bn} | {w} | {s} | {", ".join(d) if d else "안 해 봄"} | {now} |')
-        L += ['', f'- 이 가운데 지금도 미확정인 것은 {n_left}개입니다.', '']
+            L.append(f'| {bn} | {w} | {s} | {far(rr)} | {", ".join(d) if d else "안 해 봄"} | {now} |')
+        L += ['', f'- 이 가운데 지금도 미확정인 것은 {n_left}개입니다.',
+              '- pn·dn은 탐색이 멈출 때 뿌리의 증명수·반증수입니다. pn이 작으면 "그 첫 수가 지는 수"라는 증명에, dn이 작으면 "이기는 수"라는 증명에 가까웠다는 뜻입니다. '
+              '더 오래 돌릴 대상을 고르는 참고일 뿐이고, 판정이 아닙니다.', '']
     if wins:
         L += ['## 확정된 이기는 첫 수 (묶음 1부터)', '', '| 묶음 | 첫 수 | 넘겨준 음절 |', '|---|---|---|']
         L += [f'| {bn} | {w} | {s} |' for bn, w, s in wins]

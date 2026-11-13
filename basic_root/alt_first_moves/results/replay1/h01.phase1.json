@@ -54,7 +54,9 @@
    "local_mid": 66529363
   },
   "search_after_replay_seconds": 492.74,
-  "total_wall_seconds": 600.71
+  "total_wall_seconds": 600.71,
+  "end_pn": 692,
+  "end_dn": 34583
  },
  "direct": {
   "solver_result": "unknown",
@@ -67,7 +69,9 @@
   "proof_error": null,
   "solver_wall_seconds": 601.0,
   "decided": false,
-  "total_wall_seconds": 601.0
+  "total_wall_seconds": 601.0,
+  "end_pn": 1214,
+  "end_dn": 47314
  },
  "phase": "1",
  "phase_seconds": 600.0,

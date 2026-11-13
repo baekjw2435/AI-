@@ -87,7 +87,9 @@
   "proof_error": null,
   "solver_wall_seconds": 600.64,
   "decided": false,
-  "total_wall_seconds": 600.64
+  "total_wall_seconds": 600.64,
+  "end_pn": 4657,
+  "end_dn": 11019
  },
  "phase": "1",
  "phase_seconds": 600.0,
