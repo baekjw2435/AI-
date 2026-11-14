@@ -413,5 +413,6 @@ python3 replay_progress.py
 
 - 두 부분과 기존 지도의 77개를 주소 하나에 모은 폴더 `presentation-map/`과 그 ZIP을 만들었습니다. 안내: `basic_root/alt_first_moves/site/PORTING_KO.md`
 - 파일 786개, 585,334,856바이트. 가장 큰 파일은 1,843,042바이트입니다. ZIP은 562,846,290바이트이고, sha256 목록은 `site/SHA256SUMS_portable.txt`에 있습니다.
-- 큰 파일은 Git에 넣지 않았습니다. 작업 환경의 `/home/user/AI-/.work/portable/`에만 있습니다(환경이 정리되면 사라짐). 릴리스에 올리는 방법은 사용자가 정하기로 했습니다.
+- 큰 파일은 이 저장소에 넣지 않았습니다. 전달용 저장소 https://github.com/baekjw2435/presentation-map (공개)에 폴더째 올렸습니다. 그 저장소의 자동 작업(`.github/workflows/release-zip.yml`)이 ZIP을 만들어 SHA-256을 확인하고 릴리스에 올립니다.
+  - ZIP: https://github.com/baekjw2435/presentation-map/releases/download/presentation-map-2026-11-14/presentation-map-2026-11-14.zip
 - 다시 만들기: `make_portable.py` → `check_tables.js` → `test_portable.js` → `pack_portable.py` (ZIP은 같은 파일에서 항상 같은 바이트가 나옴)

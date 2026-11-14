@@ -60,6 +60,8 @@ for k in 0 1; do node test_books.js /home/user/AI-/.work/site_pages/part$k /home
 - `test_portable.js`: 묶음에서 자체 392개와 기존 77개의 무작위 대국 시험
 - `pack_portable.py`: 설명서와 `SHA256SUMS.txt`를 넣고, 같은 파일에서 항상 같은 바이트가 나오는 ZIP 만들기
 - `SHA256SUMS_portable.txt`: 묶음의 파일 786개, 그리고 ZIP 자체의 sha256
+- 올린 곳: 전달용 저장소 https://github.com/baekjw2435/presentation-map (폴더째), ZIP은 그 저장소의 릴리스 `presentation-map-2026-11-14`
+- `PORTING_KO.md`는 묶음 안의 `README_KO.md`와 같은 파일이라, 고치면 묶음의 sha256이 바뀝니다. 고칠 때는 묶음과 ZIP을 다시 만들고 전달용 저장소도 함께 바꿉니다.
 
 ## 증명서를 다시 만든 15개
 
