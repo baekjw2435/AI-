@@ -1,0 +1,54 @@
+{
+ "format": "replay-archive-2",
+ "experiment": "replay15",
+ "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+ "decided_cases": 1,
+ "archived": 1,
+ "accepted": 1,
+ "certificate_files": 2,
+ "certificate_bytes": 46331646,
+ "cases": [
+  {
+   "case": "z01",
+   "id": "병/병뚜껑",
+   "first_move": "lose",
+   "method": "replay",
+   "store": "release",
+   "release_tag": "alt817-proofs-replay15",
+   "asset": "5d437cd4120cb265d8d7c36f99abb06479dadca9ec7c4970bbc644f9ca9db1df.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay15/5d437cd4120cb265d8d7c36f99abb06479dadca9ec7c4970bbc644f9ca9db1df.v4.gz",
+   "uploaded_verified": false,
+   "proof_sha256": "5d437cd4120cb265d8d7c36f99abb06479dadca9ec7c4970bbc644f9ca9db1df",
+   "position_sha256": "8a6b15d2f2000f394a1a806bb25e37ac44d35c9f393c25dcfa3e296579effea4",
+   "input_sha256": "65adc97c4727bc7fdf1e3786f5153c103890b7489881ac906f1384ba1e3a1e2d",
+   "proof_nodes": 3258140,
+   "archived": true,
+   "accepted": true,
+   "proof_bytes": 23595816,
+   "verify_seconds": 83.659,
+   "checked": "2026-11-14 07:29:46"
+  }
+ ],
+ "sources": [
+  {
+   "syllable": "껑",
+   "result_for_receiver": "W",
+   "proof_nodes": 3142414,
+   "proof_bytes": 22735830,
+   "proof_sha256": "d8cc3c2e4d065e9192350c589bab412d4ab9969c4b6c42aef1b62736fc833c21",
+   "position_sha256": "b90c87e3e2d28f9f4c1bc2b0f5759feb0e92fd925a601a5b6bc6aae19348ac8a",
+   "input_sha256": "207008d8e536003b7e54e56fc0f7fef98a80ecbdd89010798b11d2270dc76011",
+   "accepted": true,
+   "store": "release",
+   "release_tag": "alt817-proofs-replay15",
+   "asset": "d8cc3c2e4d065e9192350c589bab412d4ab9969c4b6c42aef1b62736fc833c21.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay15/d8cc3c2e4d065e9192350c589bab412d4ab9969c4b6c42aef1b62736fc833c21.v4.gz",
+   "uploaded_verified": false
+  }
+ ],
+ "release": {
+  "tag": "alt817-proofs-replay15",
+  "url": "https://github.com/baekjw2435/AI-/releases/tag/alt817-proofs-replay15",
+  "status": "staged: the files are not attached to the release yet"
+ }
+}
