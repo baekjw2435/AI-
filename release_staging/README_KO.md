@@ -7,4 +7,6 @@
 - 올리는 법(자동, 2026-11-13부터): 이 브랜치의 `.github/workflows/upload-proof-releases.yml`을 손으로 실행합니다(입력 `upload`에 `yes`). 릴리스를 만들어 파일을 첨부하고, 첨부한 파일을 모두 다시 내려받아 sha256을 `MANIFEST.json`과 비교합니다. 릴리스 태그는 연구 브랜치의 커밋에 붙습니다(큰 파일이 없는 쪽).
 - 올리는 법(손으로): 저장소의 Releases에서 폴더 이름과 같은 태그로 릴리스를 만들고, 폴더 안의 파일을 모두 첨부합니다.
 - 올린 뒤 확인: `basic_root/alt_first_moves`에서 `python3 replay_archive.py <실험 이름> --check-release 1`을 돌리면 주소마다 다시 내려받아 sha256을 비교하고 색인에 적습니다.
-- 확인이 끝나면 이 폴더(와 이 브랜치)는 지워도 됩니다. 국면, 입력, 검증 기록, 해시, 주소는 연구 브랜치의 `basic_root/alt_first_moves/results/<실험 이름>/archive/`에 있습니다.
+- 릴리스에 올리고 다시 내려받아 해시까지 확인한 폴더는 릴리스와 겹치는 사본이라 정리해도 됩니다. 국면, 입력, 검증 기록, 해시, 주소는 연구 브랜치의 `basic_root/alt_first_moves/results/<실험 이름>/archive/`에 있습니다.
+- 다만 이 폴더를 지워도 저장소 용량은 줄지 않습니다. 이미 커밋한 파일은 Git의 과거 기록에 남고, 지우면 이 브랜치의 최신 상태만 작아집니다. 과거 기록을 다시 쓰는 작업은 하지 않습니다.
+- 이 브랜치에는 업로드 작업 파일(`.github/workflows/upload-proof-releases.yml`)도 있으니, 브랜치는 지우지 마세요.
