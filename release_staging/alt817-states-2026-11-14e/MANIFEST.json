@@ -1,0 +1,14 @@
+{
+ "release_tag": "alt817-states-2026-11-14e",
+ "files": {
+  "a7b8814935c19ad90aa02adf7b004a317fd11643f57b0cfe0186ae11c44186b5.tt.gz": {
+   "sha256": "a7b8814935c19ad90aa02adf7b004a317fd11643f57b0cfe0186ae11c44186b5",
+   "bytes": 48157545,
+   "state_sha256": "0244afeb930add172367f346b3648b91e92e6c3ca8dc28d875acd6cf5f3d4e28",
+   "work_path": "sources/습/state.tt",
+   "carried_search_seconds": 3600.0
+  }
+ },
+ "file_count": 1,
+ "total_bytes": 48157545
+}
