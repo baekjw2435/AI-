@@ -1,0 +1,30 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay14-v1:\" + id), first 999",
+ "eligible": 2,
+ "eligible_by_source": {
+  "맹": 2
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "y01",
+   "id": "군/군사동맹",
+   "syllable": "군",
+   "word": "군사동맹",
+   "source": "맹",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "y02",
+   "id": "혈/혈맹",
+   "syllable": "혈",
+   "word": "혈맹",
+   "source": "맹",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}

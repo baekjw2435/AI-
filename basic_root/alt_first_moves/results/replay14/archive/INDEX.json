@@ -1,0 +1,74 @@
+{
+ "format": "replay-archive-2",
+ "experiment": "replay14",
+ "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+ "decided_cases": 2,
+ "archived": 2,
+ "accepted": 2,
+ "certificate_files": 3,
+ "certificate_bytes": 77485993,
+ "cases": [
+  {
+   "case": "y01",
+   "id": "군/군사동맹",
+   "first_move": "lose",
+   "method": "replay",
+   "store": "release",
+   "release_tag": "alt817-proofs-replay14",
+   "asset": "a8af4bd4bab03c81a816447e4ef06de6c3611ed74a2cff40ff5afe5285e11c17.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay14/a8af4bd4bab03c81a816447e4ef06de6c3611ed74a2cff40ff5afe5285e11c17.v4.gz",
+   "uploaded_verified": false,
+   "proof_sha256": "a8af4bd4bab03c81a816447e4ef06de6c3611ed74a2cff40ff5afe5285e11c17",
+   "position_sha256": "b52064bd3e619e83e7ca24d635f3a48d97a2432ce24c5f29520100791540fb1c",
+   "input_sha256": "c0eb1ef43b9167b771a9a15241446261b2fb3fa1dfe8d19d973a44082aaa7407",
+   "proof_nodes": 3574728,
+   "archived": true,
+   "accepted": true,
+   "proof_bytes": 25808825,
+   "verify_seconds": 91.404,
+   "checked": "2026-11-14 05:40:13"
+  },
+  {
+   "case": "y02",
+   "id": "혈/혈맹",
+   "first_move": "lose",
+   "method": "replay",
+   "store": "release",
+   "release_tag": "alt817-proofs-replay14",
+   "asset": "1e69dcb686dc97d77bf120d0e911afe40e257bafe52cfe80263fd068f5820172.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay14/1e69dcb686dc97d77bf120d0e911afe40e257bafe52cfe80263fd068f5820172.v4.gz",
+   "uploaded_verified": false,
+   "proof_sha256": "1e69dcb686dc97d77bf120d0e911afe40e257bafe52cfe80263fd068f5820172",
+   "position_sha256": "b6e61598ad00864802d4afefb898ea31982d40ca1419fad3c49ccb1d7b422b2b",
+   "input_sha256": "2c7ad5df9157461252693e1fbb941b68cdafd99f204dab3a5e26cdcd52d3caa4",
+   "proof_nodes": 3570123,
+   "archived": true,
+   "accepted": true,
+   "proof_bytes": 25777306,
+   "verify_seconds": 94.392,
+   "checked": "2026-11-14 05:41:47"
+  }
+ ],
+ "sources": [
+  {
+   "syllable": "맹",
+   "result_for_receiver": "W",
+   "proof_nodes": 3587201,
+   "proof_bytes": 25899862,
+   "proof_sha256": "58f1742f136a08d3e6b703c6f2c699e49344662c78d425bb422f1ec1832eac0f",
+   "position_sha256": "accfca306f34c3447baee1e5916b3ddfba7654e3f7867ca5621d1cdc36e6c41b",
+   "input_sha256": "0ca3477ea1f3bbd183203c3b57ca3bf9f4b0c6363993dfe8d4de69c990a4b50f",
+   "accepted": true,
+   "store": "release",
+   "release_tag": "alt817-proofs-replay14",
+   "asset": "58f1742f136a08d3e6b703c6f2c699e49344662c78d425bb422f1ec1832eac0f.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay14/58f1742f136a08d3e6b703c6f2c699e49344662c78d425bb422f1ec1832eac0f.v4.gz",
+   "uploaded_verified": false
+  }
+ ],
+ "release": {
+  "tag": "alt817-proofs-replay14",
+  "url": "https://github.com/baekjw2435/AI-/releases/tag/alt817-proofs-replay14",
+  "status": "staged: the files are not attached to the release yet"
+ }
+}

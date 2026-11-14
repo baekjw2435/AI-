@@ -58,6 +58,43 @@ def load_index():
 def save_index(ix):
     INDEX.parent.mkdir(parents=True, exist_ok=True)
     INDEX.write_text(json.dumps(ix, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+    if INDEX == HERE / 'results' / 'states' / 'INDEX.json':
+        write_readme(ix)
+
+
+def still_needed(e):
+    """Is the position of this state still undecided? From the repository's records only."""
+    pos = e.get('position') or {}
+    hist = pos.get('history') or []
+    if not hist:                                   # a source: 'syllable received, nothing used'
+        syl = Path(e['work_path']).parts[1]
+        done = list((HERE / 'results').glob(f'*/sources/{syl}/prep.json'))
+        return (False, f'원본 완성({done[0].parts[-4]})') if done else (True, '원본 미완성')
+    doc = json.loads((HERE / 'targets.json').read_text(encoding='utf-8'))
+    summ = json.loads((HERE / 'results' / 'summary.json').read_text(encoding='utf-8'))
+    t = next((t for t in doc['targets'] if t['syllable'] == pos['initial_syllable'] and hist[0] in t['words']), None)
+    if t is None:
+        return True, '?'
+    dec = next((x for x in summ.get(t['id'], []) if x['decided']), None)
+    return (False, f'확정({dec["batch"]})') if dec else (True, '미확정')
+
+
+def write_readme(ix):
+    L = ['# 저장 상태 백업', '',
+         '이 파일은 `backup_states.py`가 `INDEX.json`에서 만듭니다. 직접 고치지 마세요.', '',
+         '- 저장 상태(`state.tt`)를 gzip으로 묶어 GitHub 릴리스에 첨부한 목록입니다. 작업 환경이 바뀌어도 이어 풀 수 있게 하려는 것입니다.',
+         '- 저장 상태는 다시 계산하기 가장 비싼 기록 200만 개만 남깁니다. 불러와 이어 풀어도 끊기지 않은 것과 같지는 않습니다.',
+         '- 판정이 아닙니다. 확정은 검증을 통과한 증명서로만 합니다.',
+         '- 되돌리기: `python3 backup_states.py restore /home/user/AI-/.work [태그]`', '',
+         '| 태그 | 국면 | 되돌릴 경로 | 든 탐색(초) | 크기(MB) | 올린 뒤 확인 | 지금 |', '|---|---|---|---:|---:|---|---|']
+    for e in sorted(ix['states'], key=lambda e: (e['release_tag'], e['work_path'])):
+        pos = e.get('position') or {}
+        what = f'{pos.get("initial_syllable", "?")} 받음' + (f', {pos["history"][0]}' if pos.get('history') else ', 단어 없음(원본)')
+        need, now = still_needed(e)
+        L.append(f'| `{e["release_tag"]}` | {what} | `{e["work_path"]}` | {e["carried_search_seconds"]:,.0f} | {e["gz_bytes"] / 1e6:,.0f} | '
+                 f'{e["uploaded_verified"] or "아직"} | {now if need else now + " - 더 필요 없음"} |')
+    L.append('')
+    (INDEX.parent / 'README_KO.md').write_text('\n'.join(L), encoding='utf-8')
 
 
 def describe(state):

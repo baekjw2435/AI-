@@ -2277,6 +2277,54 @@
    "verifier": "verify_v4 (C++)"
   }
  ],
+ "군/군사동맹": [
+  {
+   "id": "군/군사동맹",
+   "batch": "replay14",
+   "name": "y01",
+   "phases": 1,
+   "search_seconds_total": 7.02,
+   "mid_calls_total": 1102,
+   "decided": true,
+   "spent_seconds_total": 7.02,
+   "first_move": "lose",
+   "reply": [
+    "맹활약"
+   ],
+   "proof_nodes": 3574728,
+   "proof_bytes": 25808825,
+   "proof_seconds": 22.957698,
+   "verify_seconds": 94.429,
+   "proof_sha256": "a8af4bd4bab03c81a816447e4ef06de6c3611ed74a2cff40ff5afe5285e11c17",
+   "position_sha256": "b52064bd3e619e83e7ca24d635f3a48d97a2432ce24c5f29520100791540fb1c",
+   "input_sha256": "c0eb1ef43b9167b771a9a15241446261b2fb3fa1dfe8d19d973a44082aaa7407",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "혈/혈맹": [
+  {
+   "id": "혈/혈맹",
+   "batch": "replay14",
+   "name": "y02",
+   "phases": 1,
+   "search_seconds_total": 6.949,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 6.949,
+   "first_move": "lose",
+   "reply": [
+    "맹활약"
+   ],
+   "proof_nodes": 3570123,
+   "proof_bytes": 25777306,
+   "proof_seconds": 22.814281,
+   "verify_seconds": 93.573,
+   "proof_sha256": "1e69dcb686dc97d77bf120d0e911afe40e257bafe52cfe80263fd068f5820172",
+   "position_sha256": "b6e61598ad00864802d4afefb898ea31982d40ca1419fad3c49ccb1d7b422b2b",
+   "input_sha256": "2c7ad5df9157461252693e1fbb941b68cdafd99f204dab3a5e26cdcd52d3caa4",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
  "박/박력": [
   {
    "id": "박/박력",
