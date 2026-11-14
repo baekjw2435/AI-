@@ -479,6 +479,46 @@
    },
    "position_sha256": "ae42243e508525b8ea99280a9fcb99b47b564dcb72780193961a4cd7852aec19",
    "input_sha256": "8027bb2431a2b6606e04c6b9f2cc746e0afb1290307f4bfea3d7ab7ec8f177db"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14d",
+   "asset": "7cb85937e36181cf88dd1285bd68ffc71c07316f349eb290a0589c374e946b0f.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14d/7cb85937e36181cf88dd1285bd68ffc71c07316f349eb290a0589c374e946b0f.tt.gz",
+   "gz_sha256": "7cb85937e36181cf88dd1285bd68ffc71c07316f349eb290a0589c374e946b0f",
+   "gz_bytes": 47707685,
+   "state_sha256": "416ba82ea70b579d6cf6c8374f1e7f0680645bc93b8abd78bf8acf0fa06a9856",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 1800.0,
+   "work_path": "sources/습/state.tt",
+   "note": "2026-11-14 세 번째 계산 뒤 백업. 습·활 원본: 새로 1,800초 탐색, 한도에 닿아 미완성(각 누적 1,800초)",
+   "staged": "2026-11-14 13:46:50",
+   "uploaded_verified": "2026-11-14 13:58:43",
+   "position": {
+    "initial_syllable": "습",
+    "history": []
+   },
+   "position_sha256": "ec998fd919228783e68fca0ddf960ab3ee5e8f15baf47a6020ffa5ef0e2dbb39",
+   "input_sha256": "8c418805146bf06e44528d0dd37a5cead28f1b9dd0b0b32b921d3b2c8e76a842"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14d",
+   "asset": "97e2d9aa71b34f2722585cb036d5bbcde38a60803cb7f581ec771aafbb8620b7.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14d/97e2d9aa71b34f2722585cb036d5bbcde38a60803cb7f581ec771aafbb8620b7.tt.gz",
+   "gz_sha256": "97e2d9aa71b34f2722585cb036d5bbcde38a60803cb7f581ec771aafbb8620b7",
+   "gz_bytes": 47646807,
+   "state_sha256": "9691a30dfbc4e7eec192324534491d2eed40ce392c0f8d63d8fa225d1de019be",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 1800.0,
+   "work_path": "sources/활/state.tt",
+   "note": "2026-11-14 세 번째 계산 뒤 백업. 습·활 원본: 새로 1,800초 탐색, 한도에 닿아 미완성(각 누적 1,800초)",
+   "staged": "2026-11-14 13:46:55",
+   "uploaded_verified": "2026-11-14 13:58:43",
+   "position": {
+    "initial_syllable": "활",
+    "history": []
+   },
+   "position_sha256": "6d0bc23fa0edb8ad25fc78ddf479926099d65bee39b06758b48c0c220f590fd0",
+   "input_sha256": "cb08d946e08dd0e59b42d895c9d4e25a75b4ffbb4d2b9629d3f05c39dc54798f"
   }
  ]
 }
