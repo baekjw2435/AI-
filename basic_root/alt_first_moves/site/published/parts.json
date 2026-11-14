@@ -10,11 +10,20 @@
  },
  {
   "part": 1,
-  "name": "약~흥",
-  "syllables": 55,
-  "books": 227,
-  "entries": 55265996,
-  "files": 308,
-  "mb": 218.8
+  "name": "약~환",
+  "syllables": 49,
+  "books": 222,
+  "entries": 54636509,
+  "files": 302,
+  "mb": 216.2
+ },
+ {
+  "part": 2,
+  "name": "활~흥",
+  "syllables": 6,
+  "books": 9,
+  "entries": 8151140,
+  "files": 31,
+  "mb": 34.3
  }
 ]
