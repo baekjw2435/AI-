@@ -1,0 +1,145 @@
+{
+ "rule": "first-batch positions verified on 2026-11-11 whose certificates were kept only in that work environment: solve and verify again so the route map can show their lines (the earlier verified verdicts stay the record)",
+ "cases": [
+  {
+   "name": "c01",
+   "id": "폭/폭력적",
+   "syllable": "폭",
+   "word": "폭력적",
+   "source": "적",
+   "split": "tune",
+   "verdict_before": "lose",
+   "proof_sha256_before": "3cbfced9651992603dedb075d91bfca737ac9bf1b65d809fa460faf782294573"
+  },
+  {
+   "name": "c02",
+   "id": "증/증가율",
+   "syllable": "증",
+   "word": "증가율",
+   "source": "율",
+   "split": "final",
+   "verdict_before": "lose",
+   "proof_sha256_before": "cff869c6c684df1fab9dd2ced84ad7ca8ed6750542937a8d3d967201529636c2"
+  },
+  {
+   "name": "c03",
+   "id": "휘/휘적휘적",
+   "syllable": "휘",
+   "word": "휘적휘적",
+   "source": "적",
+   "split": "tune",
+   "verdict_before": "lose",
+   "proof_sha256_before": "504e581dd5b0ac872358b03400e2253de251a9e2ef7cd9c9e0ad9b99b6618086"
+  },
+  {
+   "name": "c04",
+   "id": "찬/찬탄",
+   "syllable": "찬",
+   "word": "찬탄",
+   "source": "탄",
+   "split": "final",
+   "verdict_before": "lose",
+   "proof_sha256_before": "59e1c3e85267498a8d0402f04bd067f92a83b9dc0f1bdaefd2fa9333e90f97a1"
+  },
+  {
+   "name": "c05",
+   "id": "할/할인권",
+   "syllable": "할",
+   "word": "할인권",
+   "source": "권",
+   "split": "final",
+   "verdict_before": "lose",
+   "proof_sha256_before": "f73c9ee0849848844505db44cc65a258df61046d94eac9bfa1b26996de79c457"
+  },
+  {
+   "name": "c06",
+   "id": "돌/돌진",
+   "syllable": "돌",
+   "word": "돌진",
+   "source": "진",
+   "split": "final",
+   "verdict_before": "lose",
+   "proof_sha256_before": "e3032337dccb58daaf71b2213e13f8a714edf3a384c69daadb617d19860e7eac"
+  },
+  {
+   "name": "c07",
+   "id": "운/운동권",
+   "syllable": "운",
+   "word": "운동권",
+   "source": "권",
+   "split": "tune",
+   "verdict_before": "lose",
+   "proof_sha256_before": "47f0b9b2426ff80b213660c435b572b55cca9750282b62e103029d387cab55b3"
+  },
+  {
+   "name": "c08",
+   "id": "탄/탄식",
+   "syllable": "탄",
+   "word": "탄식",
+   "source": "식",
+   "split": "final",
+   "verdict_before": "lose",
+   "proof_sha256_before": "6382c1e52c2275fd8c66ce0e41d98a465cde8a8da96b01dc747dde2f7397b40f"
+  },
+  {
+   "name": "c09",
+   "id": "율/율동적",
+   "syllable": "율",
+   "word": "율동적",
+   "source": "적",
+   "split": "final",
+   "verdict_before": "lose",
+   "proof_sha256_before": "8ae3bbec56593be9399f430f18b2fd24f2262996774cf5b6b49780d7ab825245"
+  },
+  {
+   "name": "c10",
+   "id": "낭/낭군",
+   "syllable": "낭",
+   "word": "낭군",
+   "source": "군",
+   "split": "tune",
+   "verdict_before": "lose",
+   "proof_sha256_before": "2ca6b82e2ee2b47ba43a3013008d4f21256012beab2c4b3c7177d6fe0feec81c"
+  },
+  {
+   "name": "c11",
+   "id": "왕/왕왕",
+   "syllable": "왕",
+   "word": "왕왕",
+   "source": "왕",
+   "split": "final",
+   "verdict_before": "win",
+   "proof_sha256_before": "3109d185d68f6c6e372e165f97c5bf6768e8210d1851e291915e2ab09d227baf"
+  },
+  {
+   "name": "c12",
+   "id": "흑/흑백사진",
+   "syllable": "흑",
+   "word": "흑백사진",
+   "source": "진",
+   "split": "tune",
+   "verdict_before": "lose",
+   "proof_sha256_before": "2c23d51c81cbccab6039d3ebe87dc095287261fc55fa18552ef3b634e9e36a72"
+  },
+  {
+   "name": "c13",
+   "id": "탁/탁발승",
+   "syllable": "탁",
+   "word": "탁발승",
+   "source": "승",
+   "split": "final",
+   "verdict_before": "lose",
+   "proof_sha256_before": "25822cfaaa47972d075da76bd9fb4c64a19baadc214fbd77b5b19a8f9992b2a7"
+  },
+  {
+   "name": "c14",
+   "id": "군/군율",
+   "syllable": "군",
+   "word": "군율",
+   "source": "율",
+   "split": "final",
+   "verdict_before": "lose",
+   "proof_sha256_before": "02be99441a04ffda89435717213ff0089ea41221ce3c70ab9b71ea76e73d658d"
+  }
+ ]
+}

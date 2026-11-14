@@ -30,6 +30,7 @@ def main():
                      key=lambda p: int(re.sub(r'\D', '', p.name) or 0))
     L = ['# 재생으로 푼 묶음 정리', '',
          '이 파일은 `replay_progress.py`가 `results/replay*/`와 `results/direct*/`의 기록에서 만듭니다. 직접 고치지 마세요.', '',
+         '- **용어와 읽는 법:** `TERMS_KO.md`. 제시자 = `~t` 단어를 내서 상대에게 t를 넘기는 사람(낸 쪽). ‘지는 수’ = 그 단어를 낸 쪽(제시자) 패, t를 받은 쪽 승. 497개 중 검증 수는 이번 추가 조사 대상의 진행률입니다.', '',
          '- 확정은 모두 그 국면의 v4 증명서가 C++ `verify_v4`의 수락 조건을 통과한 것입니다.',
          '- 시간은 재생 실행만 더한 값입니다(계산기 + 검증). 원본 증명서 준비 시간은 따로 적습니다.',
          '- 묶음 1·2는 직접 탐색과 비교한 실험입니다. 여기에는 재생 쪽 숫자만 적습니다.', '',
@@ -111,7 +112,7 @@ def main():
             return f'{x["search_seconds"] or 0:,.0f}초' + (f', pn {x["end_pn"]:,} / dn {x["end_dn"]:,}' if 'end_pn' in x else '')
 
         L += ['## 재생이 한도 안에 못 푼 첫 수', '',
-              '| 재생 묶음 | 첫 수 | 넘겨준 음절 | 재생: 탐색 시간, 멈출 때의 pn / dn | 직접 탐색 | 지금 |', '|---|---|---|---|---|---|']
+              '| 재생 묶음 | 제시 단어 | 제시한 음절 | 재생: 탐색 시간, 멈출 때의 pn / dn | 직접 탐색 | 지금 |', '|---|---|---|---|---|---|']
         seen = set()
         n_left = 0
         for bn, tid, w, s, rr in unds:
@@ -120,7 +121,7 @@ def main():
             seen.add(tid)
             d = [f'{dn}: ' + ('확정' if r['direct']['decided'] else f'미확정({far(r["direct"])})') for dn, r in direct_runs.get(tid, [])]
             first = next((e for e in summ.get(tid, []) if e['decided']), None)
-            now = '미확정' if first is None else ('**지는 수**' if first['first_move'] == 'lose' else '**이기는 수**') + f' ({first["batch"]})'
+            now = '미확정' if first is None else ('**지는 수**(제시자 패)' if first['first_move'] == 'lose' else '**이기는 수**(제시자 승)') + f' ({first["batch"]})'
             n_left += first is None
             L.append(f'| {bn} | {w} | {s} | {far(rr)} | {", ".join(d) if d else "안 해 봄"} | {now} |')
         L += ['', f'- 이 가운데 지금도 미확정인 것은 {n_left}개입니다.',
@@ -128,7 +129,7 @@ def main():
               '남은 시간이나 남은 계산량이 아닙니다. 값이 작다고 결론에 가깝다고 볼 수 없습니다. 다음 계산 대상은 이 값이 아니라 '
               '저장 상태와 그 계산으로 풀 수 있는 첫 수의 수를 함께 보고 고릅니다(인수인계 문서 7-5).', '']
     if wins:
-        L += ['## 확정된 이기는 첫 수 (묶음 1부터)', '', '| 묶음 | 첫 수 | 넘겨준 음절 |', '|---|---|---|']
+        L += ['## 이기는 수로 확정된 제시 단어 (그 단어를 낸 쪽 승, 제시한 음절을 받은 쪽 패)', '', '| 묶음 | 제시 단어 | 제시한 음절 |', '|---|---|---|']
         L += [f'| {bn} | {w} | {s} |' for bn, w, s in wins]
         L.append('')
     if staged:
