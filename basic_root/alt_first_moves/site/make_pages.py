@@ -48,6 +48,24 @@ def hexid(s):
     return ''.join('%04x' % ord(c) for c in s)
 
 
+def main_line(t, main_cat, main_man, sm, model):
+    """(book, hash) of the existing map's line for an earlier-study position, kept on its own proof's history.
+    The proof is the one whose position is exactly t's: the bare syllable s (its winning first move is w) or s -> w.
+    A position that is an entry of the existing map (e.g. 칭<명칭) opens at that entry; otherwise the fresh entry of s
+    with w played (the existing map's explorer, s's book)."""
+    pos = t['existing']['proof']['position']
+    hits = [(b['id'], q) for b in main_man['books'] for q in b['proofs'] if q['start'] == pos[0] and q['history'] == pos[1:]]
+    assert len(hits) == 1, (t['id'], hits)
+    book, q = hits[0]
+    via = next((e for e in main_cat['entries'] if e['kind'] == 'via' and e['proof']['id'] == q['id']), None)
+    if via:
+        return book, '#e' + hexid(via['id'])
+    e = next(x for x in main_cat['entries'] if x['kind'] == 'fresh' and x['start'] == t['syllable'] and x['book'] == book)
+    c0, _ = sm.root({'initial_syllable': e['start'], 'history': []})
+    legal = sorted(w for g in model['outgoing'][c0] for w in model['words'][g])
+    return book, '#e' + hexid(e['id']) + '-' + str(legal.index(t['words'][0]))
+
+
 def main():
     work, out = Path(sys.argv[1]), Path(sys.argv[2])
     rest = sys.argv[3:]
@@ -61,6 +79,7 @@ def main():
     doc = json.loads((ALT / 'targets.json').read_text(encoding='utf-8'))
     summ = json.loads((ALT / 'results' / 'summary.json').read_text(encoding='utf-8'))
     main_cat = json.loads((Path(opt['--model']).parent / 'catalog.json').read_text(encoding='utf-8'))
+    main_man = json.loads((Path(opt['--model']).parent / 'manifest.json').read_text(encoding='utf-8'))
     fresh = {e['start']: e for e in main_cat['entries'] if e['kind'] == 'fresh'}
     names = model['syllables']
     # every position of the study
@@ -79,11 +98,8 @@ def main():
                        proof={'nodes': it['nodes'], 'sha256': it['proof_sha256'], 'certificate': it['certificate'], 'source': it['source']})
         elif t['existing']['evidence'] == 'verified':
             st = 'W' if t['existing']['verdict'] == 'lose' else 'L'
-            e = fresh.get(t['syllable']) or next(x for x in main_cat['entries'] if x['kind'] == 'fresh' and x['syllable'] == names[sm.root({'initial_syllable': t['syllable'], 'history': []})[0]])
-            p = e['start']
-            c0, _ = sm.root({'initial_syllable': p, 'history': []})
-            legal = sorted(w for g in model['outgoing'][c0] for w in model['words'][g])
-            rec.update(status=st, where='main', mainHash='#e' + hexid(e['id']) + '-' + str(legal.index(words[0])))
+            book, link = main_line(t, main_cat, main_man, sm, model)
+            rec.update(status=st, where='main', mainHash=link, mainBook=book)
         elif dec:
             rec.update(status='W' if dec['first_move'] == 'lose' else 'L', where='record')
         else:

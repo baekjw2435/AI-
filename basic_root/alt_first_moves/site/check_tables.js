@@ -19,7 +19,9 @@ for (const b of manifest.books) for (const f of b.files) {
   const kb = Buffer.alloc(8 * T.n), gb = Buffer.alloc(2 * T.n);
   for (let i = 0; i < T.n; i++) { kb.writeBigUInt64LE(BigInt(T.keys[i]), 8 * i); gb.writeUInt16LE(T.groups[i], 2 * i); }
   const h = crypto.createHash("sha256").update(kb).update(gb).digest("hex");
-  if (T.n !== f.n || h !== f.content_sha256) { bad++; console.log("MISMATCH", f.path); }
+  // own tables carry content_sha256 (decoded keys + groups); the existing map's tables carry sha256 of the RSB1 payload
+  const ok = f.content_sha256 ? h === f.content_sha256 : crypto.createHash("sha256").update(Buffer.from(load(dir, f.path, manifest))).digest("hex") === f.sha256;
+  if (T.n !== f.n || !ok) { bad++; console.log("MISMATCH", f.path); }
   files++;
 }
 console.log(JSON.stringify({ files, bad }));

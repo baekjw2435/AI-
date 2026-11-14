@@ -52,6 +52,17 @@ for k in 0 1; do node test_books.js /home/user/AI-/.work/site_pages/part$k /home
 - 새로 확정된 자리가 생기면 `build_site_tables.py`를 다시 돌리면 그 자리만 새로 뽑습니다. 그 뒤 `make_pages.py`와 시험을 거쳐, 바뀐 파일만 다시 올리면 됩니다.
 - `published/`: 게시한 두 부분의 `manifest.json`, `pindex.json`, 크기 요약, 주소
 
+## 이식용 묶음
+
+두 부분과 기존 지도의 77개 표를 주소 하나에 모은 폴더입니다. 다른 사이트로 옮길 때 씁니다. 실행·이식 방법과 크기는 `PORTING_KO.md`에 있습니다.
+
+- `make_portable.py`: 묶음 폴더 만들기(`--page-only`는 화면만 다시 만들기)
+- `test_portable.js`: 묶음에서 자체 392개와 기존 77개의 무작위 대국 시험
+- `pack_portable.py`: 설명서와 `SHA256SUMS.txt`를 넣고, 같은 파일에서 항상 같은 바이트가 나오는 ZIP 만들기
+- `SHA256SUMS_portable.txt`: 묶음의 파일 786개, 그리고 ZIP 자체의 sha256
+- 올린 곳: 전달용 저장소 https://github.com/baekjw2435/presentation-map (폴더째), ZIP은 그 저장소의 릴리스 `presentation-map-2026-11-14`
+- `PORTING_KO.md`는 묶음 안의 `README_KO.md`와 같은 파일이라, 고치면 묶음의 sha256이 바뀝니다. 고칠 때는 묶음과 ZIP을 다시 만들고 전달용 저장소도 함께 바꿉니다.
+
 ## 증명서를 다시 만든 15개
 
 이번 연구 첫 묶음(2026-11-11)에서 검증한 15개는 증명서를 그 작업 환경에만 두어 남아 있지 않았습니다. 수순을 보이려고 다시 풀어 검증했고(`../results/recert1/`), 15개 모두 그때의 판정과 같았습니다.

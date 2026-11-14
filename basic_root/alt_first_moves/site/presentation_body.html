@@ -143,10 +143,10 @@
   function go() { var hs = hashFor(state.entry, state.history); if (location.hash !== hs) location.hash = hs; else renderExplorer(); }
   function wordBoxes(w) { return '<span class="boxes">' + Array.from(w).map(function (ch) { return "<i>" + esc(ch) + "</i>"; }).join("") + "</span>"; }
   function statusLine(a) {
-    var mover = a.toMove === "receiver" ? "받은 쪽" : "제시자";
-    if (a.end) return '<span class="pill lose">' + mover + "이 낼 단어가 없어 집니다</span>";
-    if (a.status === "W") return '<span class="pill win">' + mover + "이 이기는 국면</span><span class=\"meta\">근거: " + esc(a.how) + "</span>";
-    if (a.status === "L") return '<span class="pill lose">' + mover + "이 지는 국면</span><span class=\"meta\">근거: " + esc(a.how) + "</span>";
+    var mover = a.toMove === "receiver" ? "받은 쪽이" : "제시자가";
+    if (a.end) return '<span class="pill lose">' + mover + " 낼 단어가 없어 집니다</span>";
+    if (a.status === "W") return '<span class="pill win">' + mover + " 이기는 국면</span><span class=\"meta\">근거: " + esc(a.how) + "</span>";
+    if (a.status === "L") return '<span class="pill lose">' + mover + " 지는 국면</span><span class=\"meta\">근거: " + esc(a.how) + "</span>";
     return '<span class="pill open">판정 없음</span><span class="meta">증명 밖으로 나온 수순입니다. 이기는 쪽이 증명에 없는 수(미확인)를 두면 여기로 옵니다.</span>';
   }
   function moveRow(mv, a) {
