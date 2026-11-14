@@ -1,6 +1,7 @@
 name: upload-proof-releases
 
-# Certificate files that are too large for the repository wait in release_staging/<tag>/ on this branch.
+# Certificate files (<sha256>.v4.gz) and saved search states (<sha256>.tt.gz) that are too large for the
+# repository wait in release_staging/<tag>/ on this branch.
 # This job attaches them to the GitHub release <tag> and then downloads every attached file again and
 # compares its SHA-256 with release_staging/<tag>/MANIFEST.json.
 #
@@ -49,14 +50,14 @@ jobs:
           for d in sorted(p for p in Path('release_staging').iterdir() if p.is_dir()):
               m = json.loads((d / 'MANIFEST.json').read_text(encoding='utf-8'))
               assert m['release_tag'] == d.name, d.name
-              on_disk = {p.name for p in d.glob('*.v4.gz')}
+              on_disk = {p.name for p in d.iterdir() if p.is_file() and p.name != 'MANIFEST.json'}
               if on_disk != set(m['files']):
                   print('file list differs from MANIFEST:', d.name)
                   bad += 1
               for name, e in m['files'].items():
                   f = d / name
                   h = hashlib.sha256(f.read_bytes()).hexdigest() if f.exists() else None
-                  if h != e['sha256'] or name != e['sha256'] + '.v4.gz' or f.stat().st_size != e['bytes']:
+                  if h != e['sha256'] or name not in (e['sha256'] + '.v4.gz', e['sha256'] + '.tt.gz') or f.stat().st_size != e['bytes']:
                       print('differs:', d.name, name)
                       bad += 1
                   total += 1
@@ -89,7 +90,7 @@ jobs:
           if [ "$TAGS" = "all" ]; then TAGS=$(ls -d */ | tr -d / | tr '\n' ' '); fi
           echo "$TAGS" > "$RUNNER_TEMP/tags.txt"
           for tag in $TAGS; do
-            case "$tag" in alt817-proofs-*) ;; *) echo "unexpected tag: $tag"; exit 1 ;; esac
+            case "$tag" in alt817-proofs-*|alt817-states-*) ;; *) echo "unexpected tag: $tag"; exit 1 ;; esac
             [ -f "$tag/MANIFEST.json" ] || { echo "no staged folder for $tag"; exit 1; }
             if ! gh release view "$tag" >/dev/null 2>&1; then
               {
@@ -98,10 +99,11 @@ jobs:
                 echo "- 파일 이름은 그 파일의 SHA-256입니다."
                 echo "- 어떤 국면의 증명서인지는 첨부한 MANIFEST.json과, 저장소의 basic_root/alt_first_moves/results/<묶음>/archive/INDEX.json에 있습니다."
                 echo "- 검증기: guopsaem_root/verifier_v4/verify_v4.cpp"
+                echo "- 저장 상태(.tt.gz)는 계산기의 탐색 저장 파일을 gzip으로 묶은 것입니다. 판정이 아니라 탐색을 이어 가기 위한 파일입니다. 색인: basic_root/alt_first_moves/results/states/INDEX.json"
               } > "$RUNNER_TEMP/notes.md"
               gh release create "$tag" --target "$TARGET" --title "$tag" --notes-file "$RUNNER_TEMP/notes.md" --latest=false
             fi
-            ls "$tag"/*.v4.gz "$tag/MANIFEST.json" | xargs -n 10 gh release upload "$tag" --clobber
+            ls "$tag"/* | xargs -n 10 gh release upload "$tag" --clobber
             echo "uploaded: $tag"
           done
       - name: Download every attached file again and compare SHA-256
@@ -109,13 +111,13 @@ jobs:
           set -euo pipefail
           for tag in $(cat "$RUNNER_TEMP/tags.txt"); do
             rm -rf "$RUNNER_TEMP/dl" && mkdir "$RUNNER_TEMP/dl"
-            gh release download "$tag" --dir "$RUNNER_TEMP/dl" --pattern '*.v4.gz'
+            gh release download "$tag" --dir "$RUNNER_TEMP/dl"
             TAG="$tag" DL="$RUNNER_TEMP/dl" python3 - <<'EOF'
           import hashlib, json, os, sys
           from pathlib import Path
           tag, dl = os.environ['TAG'], Path(os.environ['DL'])
           m = json.loads((Path('release_staging') / tag / 'MANIFEST.json').read_text(encoding='utf-8'))
-          got = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in dl.glob('*.v4.gz')}
+          got = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in dl.iterdir() if p.name != 'MANIFEST.json'}
           bad = [n for n, e in m['files'].items() if got.get(n) != e['sha256']] + [n for n in got if n not in m['files']]
           line = f'{tag}: {len(m["files"])} files in MANIFEST, {len(got)} downloaded again, {len(bad)} differ'
           print(line)
