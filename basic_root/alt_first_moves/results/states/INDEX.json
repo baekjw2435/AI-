@@ -435,6 +435,50 @@
    },
    "position_sha256": "581f56e72ac369e29782f4ce3579e955a57cff3f07fa3e22a1d0db4daef1fade",
    "input_sha256": "24e963cb4b0b25005311eee6edfaa30b19944fccd4f198686fbe6a952b52e594"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14c",
+   "asset": "9d99fe60acb8ee2ff9ebbd2e49afdae09c82a132a812fe8990b4cbe33704fe83.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14c/9d99fe60acb8ee2ff9ebbd2e49afdae09c82a132a812fe8990b4cbe33704fe83.tt.gz",
+   "gz_sha256": "9d99fe60acb8ee2ff9ebbd2e49afdae09c82a132a812fe8990b4cbe33704fe83",
+   "gz_bytes": 46912260,
+   "state_sha256": "640d5f4fbd330fc2cec30020a99a2bb8a3565406ae8620ff57888a24fc02bbfe",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "replay16/run/g04/replay.state.tt",
+   "note": "2026-11-14 격 원본으로 재생 600초에 결론이 안 난 첫 수(승격, 습격)의 재생 상태",
+   "staged": "2026-11-14 08:03:52",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "승",
+    "history": [
+     "승격"
+    ]
+   },
+   "position_sha256": "fcc162e36f5b330dad3e4b9a04b7c7eb3cbff3a919d41def03a82283dc538859",
+   "input_sha256": "af41fd50d0b4a69a70a5488400530a7d287f1b5e5309eabd50a2e3f96f318585"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14c",
+   "asset": "b540b94e85f7a0223bc854f3b35d742c05a7a5c62e070d2c657c16d5c6052b80.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14c/b540b94e85f7a0223bc854f3b35d742c05a7a5c62e070d2c657c16d5c6052b80.tt.gz",
+   "gz_sha256": "b540b94e85f7a0223bc854f3b35d742c05a7a5c62e070d2c657c16d5c6052b80",
+   "gz_bytes": 47086714,
+   "state_sha256": "1731d42d2de1ee7211abced2907444f57cecde09daedbf99010629e608745a15",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "replay16/run/g07/replay.state.tt",
+   "note": "2026-11-14 격 원본으로 재생 600초에 결론이 안 난 첫 수(승격, 습격)의 재생 상태",
+   "staged": "2026-11-14 08:03:56",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "습",
+    "history": [
+     "습격"
+    ]
+   },
+   "position_sha256": "ae42243e508525b8ea99280a9fcb99b47b564dcb72780193961a4cd7852aec19",
+   "input_sha256": "8027bb2431a2b6606e04c6b9f2cc746e0afb1290307f4bfea3d7ab7ec8f177db"
   }
  ]
 }

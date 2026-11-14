@@ -2350,6 +2350,180 @@
    "verifier": "verify_v4 (C++)"
   }
  ],
+ "돌/돌격": [
+  {
+   "id": "돌/돌격",
+   "batch": "replay16",
+   "name": "g01",
+   "phases": 1,
+   "search_seconds_total": 438.943,
+   "mid_calls_total": 277535548,
+   "decided": true,
+   "spent_seconds_total": 438.943,
+   "first_move": "lose",
+   "reply": [
+    "격증"
+   ],
+   "proof_nodes": 8159152,
+   "proof_bytes": 59042805,
+   "proof_seconds": 63.793709,
+   "verify_seconds": 218.259,
+   "proof_sha256": "e74d2ed0b81f742bbb9859b07b9a4b875c1566f8fe3e8ec55e906466cf2dc3ef",
+   "position_sha256": "27ce00064663dcf30bbc1f867a5b5c92bdc2b202539ea122957581fccad2a189",
+   "input_sha256": "90238c5c4bf02f5b062196ac5a676ca0bf590ecf2f87dd3b82a1801ab4bdd7f2",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "합/합격": [
+  {
+   "id": "합/합격",
+   "batch": "replay16",
+   "name": "g02",
+   "phases": 1,
+   "search_seconds_total": 53.93,
+   "mid_calls_total": 30559641,
+   "decided": true,
+   "spent_seconds_total": 53.93,
+   "first_move": "lose",
+   "reply": [
+    "격증"
+   ],
+   "proof_nodes": 6205014,
+   "proof_bytes": 44988620,
+   "proof_seconds": 41.511464,
+   "verify_seconds": 163.237,
+   "proof_sha256": "a181a42eef2d2c6031ba54526c4ceb422fe8aa9cbcdfa74b45afe566b662abc0",
+   "position_sha256": "b2ba18661804e1bea58f9dbdfc059acfa303c91f910051520e2e092b2dcfc885",
+   "input_sha256": "78742553cab51d53db70a664a4852acac63eaa3f746b59c680d8f118114c92e2",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "맹/맹공격": [
+  {
+   "id": "맹/맹공격",
+   "batch": "replay16",
+   "name": "g03",
+   "phases": 1,
+   "search_seconds_total": 11.792,
+   "mid_calls_total": 1,
+   "decided": true,
+   "spent_seconds_total": 11.792,
+   "first_move": "lose",
+   "reply": [
+    "격증"
+   ],
+   "proof_nodes": 5765544,
+   "proof_bytes": 41707170,
+   "proof_seconds": 36.972264,
+   "verify_seconds": 154.914,
+   "proof_sha256": "2c1e2ec1be816aa7c44fb6a20a17fcefd3d07cbf7d1b5cef112277460a2fc71b",
+   "position_sha256": "738a540205f2c90a6ffb00b1eab047926c0018dd7c69e137f67f191a44be9620",
+   "input_sha256": "ca4142c23e6740ad60b1f0511981209e18233cee9556706fd91c65be020950b1",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "승/승격": [
+  {
+   "id": "승/승격",
+   "batch": "replay16",
+   "name": "g04",
+   "phases": 1,
+   "search_seconds_total": 600.0,
+   "mid_calls_total": 384366592,
+   "decided": false,
+   "spent_seconds_total": 600.0,
+   "reason": "time_limit",
+   "pn": null,
+   "dn": null
+  }
+ ],
+ "폭/폭격": [
+  {
+   "id": "폭/폭격",
+   "batch": "replay16",
+   "name": "g05",
+   "phases": 1,
+   "search_seconds_total": 17.341,
+   "mid_calls_total": 3040491,
+   "decided": true,
+   "spent_seconds_total": 17.341,
+   "first_move": "lose",
+   "reply": [
+    "격증"
+   ],
+   "proof_nodes": 5783736,
+   "proof_bytes": 41843738,
+   "proof_seconds": 40.966511,
+   "verify_seconds": 153.042,
+   "proof_sha256": "ca0afe906e5d47e5bdbd9705a818a05e58f9f826c398e76d01184b0c89c60f1e",
+   "position_sha256": "eaddf95fe3ba08be94ed8efd729c6d4b472dc7ff799aa07a8c08185216d5b943",
+   "input_sha256": "c443462ea05624c134c67911af94b3528b6639c372459b3f23ab1a4647d51f0d",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "진/진격": [
+  {
+   "id": "진/진격",
+   "batch": "replay16",
+   "name": "g06",
+   "phases": 1,
+   "search_seconds_total": 11.754,
+   "mid_calls_total": 15160,
+   "decided": true,
+   "spent_seconds_total": 11.754,
+   "first_move": "lose",
+   "reply": [
+    "격증"
+   ],
+   "proof_nodes": 5767418,
+   "proof_bytes": 41718374,
+   "proof_seconds": 40.213588,
+   "verify_seconds": 158.066,
+   "proof_sha256": "61b5557381f076e68085ed6637dbb71fedee5a10740b69a38b8a08531e5fb8da",
+   "position_sha256": "98d48453404f956dc6cc2433752bfbdbc32a7a0f3871b59333db0a9b8530fd40",
+   "input_sha256": "34d7f23ba07140902e7547746cc7369cc8deebf75eec4982473a3c162a36ba43",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "습/습격": [
+  {
+   "id": "습/습격",
+   "batch": "replay16",
+   "name": "g07",
+   "phases": 1,
+   "search_seconds_total": 600.001,
+   "mid_calls_total": 388278272,
+   "decided": false,
+   "spent_seconds_total": 600.001,
+   "reason": "time_limit",
+   "pn": null,
+   "dn": null
+  }
+ ],
+ "규/규격": [
+  {
+   "id": "규/규격",
+   "batch": "replay16",
+   "name": "g08",
+   "phases": 1,
+   "search_seconds_total": 12.793,
+   "mid_calls_total": 1934,
+   "decided": true,
+   "spent_seconds_total": 12.793,
+   "first_move": "lose",
+   "reply": [
+    "격증"
+   ],
+   "proof_nodes": 5768191,
+   "proof_bytes": 41724355,
+   "proof_seconds": 39.878297,
+   "verify_seconds": 152.341,
+   "proof_sha256": "f75a4d43619e6da8afb3a2e9f220f090e9be28bd8062df085161645cfabeafd8",
+   "position_sha256": "8f2b404a75ce9dd232ca3f886834ced7f8241b928d8b9e0dee700c8c1985d996",
+   "input_sha256": "d278cc28874807db0a73dc5cca454c75d81074b360d2c3a376d217a5882626bf",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
  "박/박력": [
   {
    "id": "박/박력",
