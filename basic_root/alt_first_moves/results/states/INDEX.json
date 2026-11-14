@@ -14,7 +14,7 @@
    "work_path": "sources/맹/state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:22:52",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "맹",
     "history": []
@@ -34,7 +34,7 @@
    "work_path": "sources/껑/state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:22:56",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "껑",
     "history": []
@@ -54,7 +54,7 @@
    "work_path": "replay5/run/m06/replay.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:23:02",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "탄",
     "history": [
@@ -76,7 +76,7 @@
    "work_path": "direct1/run/d03/direct.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:23:08",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "탄",
     "history": [
@@ -98,7 +98,7 @@
    "work_path": "replay6/run/n24/replay.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:23:14",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "격",
     "history": [
@@ -120,7 +120,7 @@
    "work_path": "direct1/run/d07/direct.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:23:20",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "격",
     "history": [
@@ -142,7 +142,7 @@
    "work_path": "replay7/run/q03/replay.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:23:26",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "순",
     "history": [
@@ -164,7 +164,7 @@
    "work_path": "direct1/run/d06/direct.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:23:32",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "순",
     "history": [
@@ -186,7 +186,7 @@
    "work_path": "replay7/run/q14/replay.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:23:38",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "돌",
     "history": [
@@ -208,7 +208,7 @@
    "work_path": "direct1/run/d09/direct.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:23:43",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "돌",
     "history": [
@@ -230,7 +230,7 @@
    "work_path": "replay8/run/s09/replay.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:23:49",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "야",
     "history": [
@@ -252,7 +252,7 @@
    "work_path": "direct1/run/d04/direct.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:23:54",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "야",
     "history": [
@@ -274,7 +274,7 @@
    "work_path": "replay9/run/t03/replay.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:24:00",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "식",
     "history": [
@@ -296,7 +296,7 @@
    "work_path": "direct1/run/d02/direct.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:24:06",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "식",
     "history": [
@@ -318,7 +318,7 @@
    "work_path": "replay10/run/u07/replay.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:24:12",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "극",
     "history": [
@@ -340,7 +340,7 @@
    "work_path": "direct1/run/d01/direct.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:24:18",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "극",
     "history": [
@@ -362,7 +362,7 @@
    "work_path": "replay13/run/x02/replay.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:24:23",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "삼",
     "history": [
@@ -384,7 +384,7 @@
    "work_path": "direct2/run/e01/direct.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:24:29",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "삼",
     "history": [
@@ -406,7 +406,7 @@
    "work_path": "direct1/run/d05/direct.state.tt",
    "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
    "staged": "2026-11-14 05:24:34",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 05:36:29",
    "position": {
     "initial_syllable": "행",
     "history": [
