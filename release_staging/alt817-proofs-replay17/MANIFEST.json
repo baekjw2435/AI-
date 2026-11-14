@@ -1,0 +1,42 @@
+{
+ "release_tag": "alt817-proofs-replay17",
+ "files": {
+  "ff36195c2a40069c52bb72f4d87dfaefc22c015fbfe62e7553ef27e9301a152b.v4.gz": {
+   "sha256": "ff36195c2a40069c52bb72f4d87dfaefc22c015fbfe62e7553ef27e9301a152b",
+   "bytes": 35560633,
+   "certifies": [
+    "replay17/h01 언/언어생활"
+   ]
+  },
+  "33ecae595b51418d07abfecaa468c83840d72be05453a20f4512d7320db07f48.v4.gz": {
+   "sha256": "33ecae595b51418d07abfecaa468c83840d72be05453a20f4512d7320db07f48",
+   "bytes": 43239605,
+   "certifies": [
+    "replay17/h02 학/학교생활"
+   ]
+  },
+  "5da15cbfd89b4b7f9a3b36e49525fe9fc651bc849c5d29959b1a39fdfea910bc.v4.gz": {
+   "sha256": "5da15cbfd89b4b7f9a3b36e49525fe9fc651bc849c5d29959b1a39fdfea910bc",
+   "bytes": 22292359,
+   "certifies": [
+    "replay17/h03 식/식생활"
+   ]
+  },
+  "ba00db35aea61a211ff855ebe2e62d78451d28eac05476a0d74f0675298111f6.v4.gz": {
+   "sha256": "ba00db35aea61a211ff855ebe2e62d78451d28eac05476a0d74f0675298111f6",
+   "bytes": 43244097,
+   "certifies": [
+    "replay17/h04 교/교활"
+   ]
+  },
+  "98a0d559862684e89521f99bf41bc99082e782d37082550e6025dcc24d34f822.v4.gz": {
+   "sha256": "98a0d559862684e89521f99bf41bc99082e782d37082550e6025dcc24d34f822",
+   "bytes": 43325764,
+   "certifies": [
+    "replay17/source 활"
+   ]
+  }
+ },
+ "file_count": 5,
+ "total_bytes": 187662458
+}
