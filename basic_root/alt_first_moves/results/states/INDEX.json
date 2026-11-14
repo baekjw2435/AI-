@@ -519,6 +519,26 @@
    },
    "position_sha256": "6d0bc23fa0edb8ad25fc78ddf479926099d65bee39b06758b48c0c220f590fd0",
    "input_sha256": "cb08d946e08dd0e59b42d895c9d4e25a75b4ffbb4d2b9629d3f05c39dc54798f"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14e",
+   "asset": "a7b8814935c19ad90aa02adf7b004a317fd11643f57b0cfe0186ae11c44186b5.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14e/a7b8814935c19ad90aa02adf7b004a317fd11643f57b0cfe0186ae11c44186b5.tt.gz",
+   "gz_sha256": "a7b8814935c19ad90aa02adf7b004a317fd11643f57b0cfe0186ae11c44186b5",
+   "gz_bytes": 48157545,
+   "state_sha256": "0244afeb930add172367f346b3648b91e92e6c3ca8dc28d875acd6cf5f3d4e28",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 3600.0,
+   "work_path": "sources/습/state.tt",
+   "note": "2026-11-14 네 번째 계산 뒤 백업. 습 원본: 저장 상태에서 1,800초 더, 한도에 닿아 미완성(누적 3,600초)",
+   "staged": "2026-11-14 14:38:26",
+   "uploaded_verified": "2026-11-14 14:50:56",
+   "position": {
+    "initial_syllable": "습",
+    "history": []
+   },
+   "position_sha256": "ec998fd919228783e68fca0ddf960ab3ee5e8f15baf47a6020ffa5ef0e2dbb39",
+   "input_sha256": "8c418805146bf06e44528d0dd37a5cead28f1b9dd0b0b32b921d3b2c8e76a842"
   }
  ]
 }

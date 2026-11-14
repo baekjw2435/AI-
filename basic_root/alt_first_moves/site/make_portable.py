@@ -3,15 +3,16 @@
 
 usage: make_portable.py PARTS_DIR MAIN_DIR OUT_DIR
        make_portable.py --page-only OUT_DIR      (rebuild only index.html)
-  PARTS_DIR  make_pages.py's output (part0/, part1/: the two published parts)
+  PARTS_DIR  make_pages.py's output (part0/, part1/, …: the published parts)
   MAIN_DIR   files of the existing route map (model.json, manifest.json, catalog.json, t/k.../NN.wasm), read with the
              Artifact tool; only the tables the 77 earlier-study positions need are copied
   OUT_DIR    the bundle: index.html, site-engine.js, model.json, manifest.json, pindex.json, t/<book>/NN.wasm,
              README_KO.md, SHA256SUMS.txt
 
-All 497 positions of the study are listed. 392 open from their own v4 certificate's table (one book per position, as on
-the two parts). 77 open from the existing map's table of the syllable s they were played from, with the history kept:
-start s, the presentation word w already used (the same line the existing map shows after s → w). 28 are undecided.
+All 497 positions of the study are listed. Those verified in this study open from their own v4 certificate's table (one
+book per position, as on the parts). The 77 of the earlier study open from the existing map's table of the syllable s
+they were played from, with the history kept: start s, the presentation word w already used (the same line the existing
+map shows after s → w). The rest are listed as undecided.
 The table files are copied byte for byte; the page only fetches the files a line needs.
 """
 import hashlib
@@ -97,8 +98,9 @@ def main():
     fresh = {e['start']: e for e in main_cat['entries'] if e['kind'] == 'fresh'}
     targets = {t['id']: t for t in json.loads((ALT / 'targets.json').read_text(encoding='utf-8'))['targets']}
     books, copied = [], 0
-    # 1. the two parts' own books, file for file
-    for k in (0, 1):
+    # 1. every part's own books, file for file
+    nparts = sum(1 for d in parts.iterdir() if d.is_dir() and d.name.startswith('part'))
+    for k in range(nparts):
         man = json.loads((parts / f'part{k}' / 'manifest.json').read_text(encoding='utf-8'))
         for b in man['books']:
             for f in b['files']:

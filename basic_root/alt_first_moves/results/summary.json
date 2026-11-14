@@ -2860,6 +2860,94 @@
    "verifier": "verify_v4 (C++)"
   }
  ],
+ "언/언어생활": [
+  {
+   "id": "언/언어생활",
+   "batch": "replay17",
+   "name": "h01",
+   "phases": 1,
+   "search_seconds_total": 145.888,
+   "mid_calls_total": 89679523,
+   "decided": true,
+   "spent_seconds_total": 145.888,
+   "first_move": "win",
+   "reply": null,
+   "proof_nodes": 4933205,
+   "proof_bytes": 35560633,
+   "proof_seconds": 35.042815,
+   "verify_seconds": 130.013,
+   "proof_sha256": "ff36195c2a40069c52bb72f4d87dfaefc22c015fbfe62e7553ef27e9301a152b",
+   "position_sha256": "53057fda705cb08e4e9b196e1b5fda2910ff57b2ed7bb4d6c9cf110c733085dd",
+   "input_sha256": "66b5f65cae99b6cdcfb7d295a8a4ce4baf6ac061b87b771b179851a48a06623f",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "학/학교생활": [
+  {
+   "id": "학/학교생활",
+   "batch": "replay17",
+   "name": "h02",
+   "phases": 1,
+   "search_seconds_total": 11.833,
+   "mid_calls_total": 4602,
+   "decided": true,
+   "spent_seconds_total": 11.833,
+   "first_move": "win",
+   "reply": null,
+   "proof_nodes": 6004940,
+   "proof_bytes": 43239605,
+   "proof_seconds": 41.002464,
+   "verify_seconds": 156.408,
+   "proof_sha256": "33ecae595b51418d07abfecaa468c83840d72be05453a20f4512d7320db07f48",
+   "position_sha256": "53df342672dea3c1588b8abe6e60fc0678dde27b588949e1d2426253bfe8c287",
+   "input_sha256": "daa2a951d53687682f522a9b756dab4e5ae4790d6a861b896ff860e45cb99228",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "식/식생활": [
+  {
+   "id": "식/식생활",
+   "batch": "replay17",
+   "name": "h03",
+   "phases": 1,
+   "search_seconds_total": 134.458,
+   "mid_calls_total": 85187074,
+   "decided": true,
+   "spent_seconds_total": 134.458,
+   "first_move": "win",
+   "reply": null,
+   "proof_nodes": 3086184,
+   "proof_bytes": 22292359,
+   "proof_seconds": 21.43132,
+   "verify_seconds": 82.225,
+   "proof_sha256": "5da15cbfd89b4b7f9a3b36e49525fe9fc651bc849c5d29959b1a39fdfea910bc",
+   "position_sha256": "d99d8a3ab00606ad0bd4888dad5b11add12780ac6573c6e86d79932d3ebb8682",
+   "input_sha256": "8d8486ebfa91a853fd5154b90d176efd8ea9412da3d26799ec59aca339371c22",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
+ "교/교활": [
+  {
+   "id": "교/교활",
+   "batch": "replay17",
+   "name": "h04",
+   "phases": 1,
+   "search_seconds_total": 11.721,
+   "mid_calls_total": 534,
+   "decided": true,
+   "spent_seconds_total": 11.721,
+   "first_move": "win",
+   "reply": null,
+   "proof_nodes": 6005550,
+   "proof_bytes": 43244097,
+   "proof_seconds": 41.19103,
+   "verify_seconds": 162.176,
+   "proof_sha256": "ba00db35aea61a211ff855ebe2e62d78451d28eac05476a0d74f0675298111f6",
+   "position_sha256": "63c0afb92f677745bf33173cb14428b33681778c2d9e5b9c2339a8dd999e1b29",
+   "input_sha256": "ef414315df30aa7d44f386db1d28dbea26b744203a9b8352b6a8df30886bb36c",
+   "verifier": "verify_v4 (C++)"
+  }
+ ],
  "박/박력": [
   {
    "id": "박/박력",
