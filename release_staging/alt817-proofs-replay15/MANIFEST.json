@@ -1,0 +1,21 @@
+{
+ "release_tag": "alt817-proofs-replay15",
+ "files": {
+  "5d437cd4120cb265d8d7c36f99abb06479dadca9ec7c4970bbc644f9ca9db1df.v4.gz": {
+   "sha256": "5d437cd4120cb265d8d7c36f99abb06479dadca9ec7c4970bbc644f9ca9db1df",
+   "bytes": 23595816,
+   "certifies": [
+    "replay15/z01 병/병뚜껑"
+   ]
+  },
+  "d8cc3c2e4d065e9192350c589bab412d4ab9969c4b6c42aef1b62736fc833c21.v4.gz": {
+   "sha256": "d8cc3c2e4d065e9192350c589bab412d4ab9969c4b6c42aef1b62736fc833c21",
+   "bytes": 22735830,
+   "certifies": [
+    "replay15/source 껑"
+   ]
+  }
+ },
+ "file_count": 2,
+ "total_bytes": 46331646
+}

@@ -1,0 +1,56 @@
+{
+ "release_tag": "alt817-proofs-replay16",
+ "files": {
+  "e74d2ed0b81f742bbb9859b07b9a4b875c1566f8fe3e8ec55e906466cf2dc3ef.v4.gz": {
+   "sha256": "e74d2ed0b81f742bbb9859b07b9a4b875c1566f8fe3e8ec55e906466cf2dc3ef",
+   "bytes": 59042805,
+   "certifies": [
+    "replay16/g01 돌/돌격"
+   ]
+  },
+  "a181a42eef2d2c6031ba54526c4ceb422fe8aa9cbcdfa74b45afe566b662abc0.v4.gz": {
+   "sha256": "a181a42eef2d2c6031ba54526c4ceb422fe8aa9cbcdfa74b45afe566b662abc0",
+   "bytes": 44988620,
+   "certifies": [
+    "replay16/g02 합/합격"
+   ]
+  },
+  "2c1e2ec1be816aa7c44fb6a20a17fcefd3d07cbf7d1b5cef112277460a2fc71b.v4.gz": {
+   "sha256": "2c1e2ec1be816aa7c44fb6a20a17fcefd3d07cbf7d1b5cef112277460a2fc71b",
+   "bytes": 41707170,
+   "certifies": [
+    "replay16/g03 맹/맹공격"
+   ]
+  },
+  "ca0afe906e5d47e5bdbd9705a818a05e58f9f826c398e76d01184b0c89c60f1e.v4.gz": {
+   "sha256": "ca0afe906e5d47e5bdbd9705a818a05e58f9f826c398e76d01184b0c89c60f1e",
+   "bytes": 41843738,
+   "certifies": [
+    "replay16/g05 폭/폭격"
+   ]
+  },
+  "61b5557381f076e68085ed6637dbb71fedee5a10740b69a38b8a08531e5fb8da.v4.gz": {
+   "sha256": "61b5557381f076e68085ed6637dbb71fedee5a10740b69a38b8a08531e5fb8da",
+   "bytes": 41718374,
+   "certifies": [
+    "replay16/g06 진/진격"
+   ]
+  },
+  "f75a4d43619e6da8afb3a2e9f220f090e9be28bd8062df085161645cfabeafd8.v4.gz": {
+   "sha256": "f75a4d43619e6da8afb3a2e9f220f090e9be28bd8062df085161645cfabeafd8",
+   "bytes": 41724355,
+   "certifies": [
+    "replay16/g08 규/규격"
+   ]
+  },
+  "3539259d18d88b129e5de316b8d04418802bee1a16579ee7d86b90fcb0f34081.v4.gz": {
+   "sha256": "3539259d18d88b129e5de316b8d04418802bee1a16579ee7d86b90fcb0f34081",
+   "bytes": 41845624,
+   "certifies": [
+    "replay16/source 격"
+   ]
+  }
+ },
+ "file_count": 7,
+ "total_bytes": 312870686
+}
