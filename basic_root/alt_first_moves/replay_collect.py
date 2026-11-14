@@ -37,9 +37,10 @@ def to_phase(rec):
 
 
 def end_numbers(case_dir, kind):
-    """Root proof/disproof numbers of the last solver run of an UNDECIDED run, from its run log: how far it got.
-    pn small = close to 'the side to move wins' (the first word loses); dn small = close to the first word winning.
-    Only a rough guide for choosing what to run longer; never a verdict."""
+    """Root proof/disproof numbers of the last solver run of an UNDECIDED run, from its run log.
+    df-pn uses them to decide which branch to search next. They are NOT the remaining time or the remaining amount
+    of work, and a small value does not mean the run was close to a result. Kept only as a record of the state the
+    search stopped in."""
     out = None
     f = case_dir / f'{kind}.runs.jsonl'
     if f.exists():

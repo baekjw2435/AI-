@@ -107,11 +107,11 @@ def main():
     L += ['## 아직 미검증인 첫 수', '', f'- **{len(left)}개**가 남았습니다. 넘겨주는 음절별: ' +
           ', '.join(f'{s} {n}' for s, n in sorted(by.items(), key=lambda x: (-x[1], x[0]))), '']
     if unds:
-        def far(x):     # where an undecided run stood when it stopped
+        def far(x):     # search time of an undecided run, and the root pn/dn it stopped with (a record, not a distance)
             return f'{x["search_seconds"] or 0:,.0f}초' + (f', pn {x["end_pn"]:,} / dn {x["end_dn"]:,}' if 'end_pn' in x else '')
 
         L += ['## 재생이 한도 안에 못 푼 첫 수', '',
-              '| 재생 묶음 | 첫 수 | 넘겨준 음절 | 재생이 멈춘 곳 | 직접 탐색 | 지금 |', '|---|---|---|---|---|---|']
+              '| 재생 묶음 | 첫 수 | 넘겨준 음절 | 재생: 탐색 시간, 멈출 때의 pn / dn | 직접 탐색 | 지금 |', '|---|---|---|---|---|---|']
         seen = set()
         n_left = 0
         for bn, tid, w, s, rr in unds:
@@ -124,8 +124,9 @@ def main():
             n_left += first is None
             L.append(f'| {bn} | {w} | {s} | {far(rr)} | {", ".join(d) if d else "안 해 봄"} | {now} |')
         L += ['', f'- 이 가운데 지금도 미확정인 것은 {n_left}개입니다.',
-              '- pn·dn은 탐색이 멈출 때 뿌리의 증명수·반증수입니다. pn이 작으면 "그 첫 수가 지는 수"라는 증명에, dn이 작으면 "이기는 수"라는 증명에 가까웠다는 뜻입니다. '
-              '더 오래 돌릴 대상을 고르는 참고일 뿐이고, 판정이 아닙니다.', '']
+              '- pn·dn은 탐색이 멈출 때 뿌리의 증명수·반증수입니다. 계산기가 다음에 어느 가지를 볼지 정하는 값일 뿐, '
+              '남은 시간이나 남은 계산량이 아닙니다. 값이 작다고 결론에 가깝다고 볼 수 없습니다. 다음 계산 대상은 이 값이 아니라 '
+              '저장 상태와 그 계산으로 풀 수 있는 첫 수의 수를 함께 보고 고릅니다(인수인계 문서 7-5).', '']
     if wins:
         L += ['## 확정된 이기는 첫 수 (묶음 1부터)', '', '| 묶음 | 첫 수 | 넘겨준 음절 |', '|---|---|---|']
         L += [f'| {bn} | {w} | {s} |' for bn, w, s in wins]
