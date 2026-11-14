@@ -54,7 +54,10 @@ def main():
     by = defaultdict(list)
     for r in dec:
         by[r['source']['syllable']].append(r)
-    L += ['## 확정된 첫 수', '', '| 넘겨준 음절 | 지는 수 | 상대의 반박 | 이기는 수 |', '|---|---|---|---|']
+    L += ['## 확정된 제시 단어', '',
+          '음절 t를 제시한 단어별 판정입니다(용어: `../../TERMS_KO.md`). **지는 수 = 그 단어를 낸 쪽(제시자) 패, t를 받은 쪽 승. '
+          '이기는 수 = 그 단어를 낸 쪽 승, t를 받은 쪽 패.** \'받은 쪽의 승리수\'는 t를 받은 쪽이 이기는 수입니다.', '',
+          '| 제시한 음절 t | 지는 수 (제시자 패) | 받은 쪽의 승리수 | 이기는 수 (제시자 승) |', '|---|---|---|---|']
     for s in sorted(by):
         lose = sorted(words[r['id']] for r in by[s] if r['first_move'] == 'lose')
         win = sorted(words[r['id']] for r in by[s] if r['first_move'] == 'win')
@@ -62,7 +65,7 @@ def main():
         L.append(f'| {s} | {", ".join(lose)} | {"·".join(rep)} | {", ".join(win)} |')
     L.append('')
     if und:
-        L += ['## 미확정', '', '| 첫 수 | 넘겨준 음절 | 쓴 탐색 시간(초) | 탐색 국면 | 막힌 곳 |', '|---|---|---:|---:|---:|']
+        L += ['## 미확정', '', '| 제시 단어 | 제시한 음절 | 쓴 탐색 시간(초) | 탐색 국면 | 막힌 곳 |', '|---|---|---:|---:|---:|']
         for r in und:
             rp = r['run'].get('replay') or {}
             stuck = sum(rp.get(k, 0) for k in ('stuck_old_leaf', 'stuck_witness_gone', 'stuck_witness_static', 'stuck_witness_refuted', 'stuck_new_move'))
@@ -70,7 +73,7 @@ def main():
                      f'{f"{stuck:,}" if kind == "replay" else "-"} |')
         L.append('')
     slow = sorted(dec, key=lambda r: -tot(r['run']))[:8]
-    L += ['## 오래 걸린 것', '', '| 첫 수 | 넘겨준 음절 | 전체(초) | 탐색 · 증명서 쓰기 · 검증 | 증명 국면 | 막힌 곳 탐색 |', '|---|---|---:|---|---:|---:|']
+    L += ['## 오래 걸린 것', '', '| 제시 단어 | 제시한 음절 | 전체(초) | 탐색 · 증명서 쓰기 · 검증 | 증명 국면 | 막힌 곳 탐색 |', '|---|---|---:|---|---:|---:|']
     for r in slow:
         b = r['run']
         L.append(f'| {words[r["id"]]} | {r["source"]["syllable"]} | {tot(b):,.1f} | {b["search_seconds"]:.1f} · {b["proof_seconds"]:.1f} · '
