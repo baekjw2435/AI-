@@ -1,0 +1,28 @@
+{
+ "release_tag": "alt817-proofs-replay14",
+ "files": {
+  "a8af4bd4bab03c81a816447e4ef06de6c3611ed74a2cff40ff5afe5285e11c17.v4.gz": {
+   "sha256": "a8af4bd4bab03c81a816447e4ef06de6c3611ed74a2cff40ff5afe5285e11c17",
+   "bytes": 25808825,
+   "certifies": [
+    "replay14/y01 군/군사동맹"
+   ]
+  },
+  "1e69dcb686dc97d77bf120d0e911afe40e257bafe52cfe80263fd068f5820172.v4.gz": {
+   "sha256": "1e69dcb686dc97d77bf120d0e911afe40e257bafe52cfe80263fd068f5820172",
+   "bytes": 25777306,
+   "certifies": [
+    "replay14/y02 혈/혈맹"
+   ]
+  },
+  "58f1742f136a08d3e6b703c6f2c699e49344662c78d425bb422f1ec1832eac0f.v4.gz": {
+   "sha256": "58f1742f136a08d3e6b703c6f2c699e49344662c78d425bb422f1ec1832eac0f",
+   "bytes": 25899862,
+   "certifies": [
+    "replay14/source 맹"
+   ]
+  }
+ },
+ "file_count": 3,
+ "total_bytes": 77485993
+}
