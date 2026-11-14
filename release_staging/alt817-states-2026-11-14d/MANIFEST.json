@@ -1,0 +1,21 @@
+{
+ "release_tag": "alt817-states-2026-11-14d",
+ "files": {
+  "7cb85937e36181cf88dd1285bd68ffc71c07316f349eb290a0589c374e946b0f.tt.gz": {
+   "sha256": "7cb85937e36181cf88dd1285bd68ffc71c07316f349eb290a0589c374e946b0f",
+   "bytes": 47707685,
+   "state_sha256": "416ba82ea70b579d6cf6c8374f1e7f0680645bc93b8abd78bf8acf0fa06a9856",
+   "work_path": "sources/습/state.tt",
+   "carried_search_seconds": 1800.0
+  },
+  "97e2d9aa71b34f2722585cb036d5bbcde38a60803cb7f581ec771aafbb8620b7.tt.gz": {
+   "sha256": "97e2d9aa71b34f2722585cb036d5bbcde38a60803cb7f581ec771aafbb8620b7",
+   "bytes": 47646807,
+   "state_sha256": "9691a30dfbc4e7eec192324534491d2eed40ce392c0f8d63d8fa225d1de019be",
+   "work_path": "sources/활/state.tt",
+   "carried_search_seconds": 1800.0
+  }
+ },
+ "file_count": 2,
+ "total_bytes": 95354492
+}
