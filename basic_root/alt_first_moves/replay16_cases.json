@@ -1,0 +1,90 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay16-v1:\" + id), first 999",
+ "eligible": 8,
+ "eligible_by_source": {
+  "격": 8
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "g01",
+   "id": "돌/돌격",
+   "syllable": "돌",
+   "word": "돌격",
+   "source": "격",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g02",
+   "id": "합/합격",
+   "syllable": "합",
+   "word": "합격",
+   "source": "격",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g03",
+   "id": "맹/맹공격",
+   "syllable": "맹",
+   "word": "맹공격",
+   "source": "격",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g04",
+   "id": "승/승격",
+   "syllable": "승",
+   "word": "승격",
+   "source": "격",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g05",
+   "id": "폭/폭격",
+   "syllable": "폭",
+   "word": "폭격",
+   "source": "격",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g06",
+   "id": "진/진격",
+   "syllable": "진",
+   "word": "진격",
+   "source": "격",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g07",
+   "id": "습/습격",
+   "syllable": "습",
+   "word": "습격",
+   "source": "격",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "g08",
+   "id": "규/규격",
+   "syllable": "규",
+   "word": "규격",
+   "source": "격",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}

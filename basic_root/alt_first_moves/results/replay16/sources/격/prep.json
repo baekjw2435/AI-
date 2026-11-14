@@ -1,0 +1,33 @@
+{
+ "syllable": "격",
+ "vertex": "격",
+ "result_for_receiver": "W",
+ "runs": 2,
+ "search_seconds_spent": 4018.404,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 2788155847,
+ "proof_nodes": 5785021,
+ "proof_seconds": 156.381416,
+ "solver_wall_seconds": 4179.74,
+ "verify_seconds": 154.221,
+ "verify_wall_seconds": 154.29,
+ "proof_bytes": 41845624,
+ "proof_sha256": "3539259d18d88b129e5de316b8d04418802bee1a16579ee7d86b90fcb0f34081",
+ "position_sha256": "581f56e72ac369e29782f4ce3579e955a57cff3f07fa3e22a1d0db4daef1fade",
+ "input_sha256": "24e963cb4b0b25005311eee6edfaa30b19944fccd4f198686fbe6a952b52e594",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

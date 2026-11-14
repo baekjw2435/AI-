@@ -1,0 +1,33 @@
+{
+ "syllable": "껑",
+ "vertex": "껑",
+ "result_for_receiver": "W",
+ "runs": 2,
+ "search_seconds_spent": 957.492,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 654996177,
+ "proof_nodes": 3142414,
+ "proof_seconds": 65.758943,
+ "solver_wall_seconds": 1026.78,
+ "verify_seconds": 84.101,
+ "verify_wall_seconds": 84.14,
+ "proof_bytes": 22735830,
+ "proof_sha256": "d8cc3c2e4d065e9192350c589bab412d4ab9969c4b6c42aef1b62736fc833c21",
+ "position_sha256": "b90c87e3e2d28f9f4c1bc2b0f5759feb0e92fd925a601a5b6bc6aae19348ac8a",
+ "input_sha256": "207008d8e536003b7e54e56fc0f7fef98a80ecbdd89010798b11d2270dc76011",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}
