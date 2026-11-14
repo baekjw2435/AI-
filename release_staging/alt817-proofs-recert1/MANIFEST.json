@@ -1,0 +1,106 @@
+{
+ "release_tag": "alt817-proofs-recert1",
+ "files": {
+  "b0818872a503b508ad5749c1a876dd250b721aab2fa9b42cf02784fd3c563e53.v4.gz": {
+   "sha256": "b0818872a503b508ad5749c1a876dd250b721aab2fa9b42cf02784fd3c563e53",
+   "bytes": 1348565,
+   "certifies": [
+    "recert1/c01 폭/폭력적",
+    "recert1/c03 휘/휘적휘적"
+   ]
+  },
+  "4e9b4d47316dfa9a7d75ab5788b5273bcd9842710c38f69c200d0dc4034877cc.v4.gz": {
+   "sha256": "4e9b4d47316dfa9a7d75ab5788b5273bcd9842710c38f69c200d0dc4034877cc",
+   "bytes": 1008139,
+   "certifies": [
+    "recert1/c02 증/증가율"
+   ]
+  },
+  "7caffb5352fd1938fb8225955af949a411d2f5fdff2ad94103abc6c9a064cc77.v4.gz": {
+   "sha256": "7caffb5352fd1938fb8225955af949a411d2f5fdff2ad94103abc6c9a064cc77",
+   "bytes": 9026144,
+   "certifies": [
+    "recert1/c04 찬/찬탄"
+   ]
+  },
+  "4edc2d6bf8765951032811f19c6b00249357fd3082b33917e6df0d98507f1827.v4.gz": {
+   "sha256": "4edc2d6bf8765951032811f19c6b00249357fd3082b33917e6df0d98507f1827",
+   "bytes": 1431143,
+   "certifies": [
+    "recert1/c05 할/할인권"
+   ]
+  },
+  "5a277967f3fc4662f1f1425868449d95552b12bb6b794b64f38eba1e1a27da9d.v4.gz": {
+   "sha256": "5a277967f3fc4662f1f1425868449d95552b12bb6b794b64f38eba1e1a27da9d",
+   "bytes": 1496941,
+   "certifies": [
+    "recert1/c06 돌/돌진"
+   ]
+  },
+  "e9d4198fb581c037c8d82eb7f530639092e4b7043f07b5c4a87c47a62952a0c4.v4.gz": {
+   "sha256": "e9d4198fb581c037c8d82eb7f530639092e4b7043f07b5c4a87c47a62952a0c4",
+   "bytes": 1452292,
+   "certifies": [
+    "recert1/c07 운/운동권"
+   ]
+  },
+  "a1773f38b99cd02c55fa31d381690165291ce10c7e6878460d13400eef1933cf.v4.gz": {
+   "sha256": "a1773f38b99cd02c55fa31d381690165291ce10c7e6878460d13400eef1933cf",
+   "bytes": 11798467,
+   "certifies": [
+    "recert1/c08 탄/탄식"
+   ]
+  },
+  "78ff0199f10c6c9d923df5aedb1332f49b4101dbc24b61a15b34a3318ce8a6c5.v4.gz": {
+   "sha256": "78ff0199f10c6c9d923df5aedb1332f49b4101dbc24b61a15b34a3318ce8a6c5",
+   "bytes": 950930,
+   "certifies": [
+    "recert1/c09 율/율동적"
+   ]
+  },
+  "de6cf251ffdf699244bdb630c6863d1dca96f3e9bc5f2687347c9c07cac1c39e.v4.gz": {
+   "sha256": "de6cf251ffdf699244bdb630c6863d1dca96f3e9bc5f2687347c9c07cac1c39e",
+   "bytes": 1360779,
+   "certifies": [
+    "recert1/c10 낭/낭군"
+   ]
+  },
+  "9f9eb9f4b00f762ac71800d310f209b6a445f893864bff99c45f285d0307188f.v4.gz": {
+   "sha256": "9f9eb9f4b00f762ac71800d310f209b6a445f893864bff99c45f285d0307188f",
+   "bytes": 7364971,
+   "certifies": [
+    "recert1/c11 왕/왕왕"
+   ]
+  },
+  "cfa070ceede820dd98e6e8421addf9a9fe86873923f53d4fb4ed0f3d12ee305f.v4.gz": {
+   "sha256": "cfa070ceede820dd98e6e8421addf9a9fe86873923f53d4fb4ed0f3d12ee305f",
+   "bytes": 1495109,
+   "certifies": [
+    "recert1/c12 흑/흑백사진"
+   ]
+  },
+  "aa6363014dd72eeacabe25a2c6d2b4282f95ba354be5a57378ffd9f67cb865a3.v4.gz": {
+   "sha256": "aa6363014dd72eeacabe25a2c6d2b4282f95ba354be5a57378ffd9f67cb865a3",
+   "bytes": 9960828,
+   "certifies": [
+    "recert1/c13 탁/탁발승"
+   ]
+  },
+  "59df857f1daf9eaf48e4010b567569c55192962f4ea76652130bc05cd12c2720.v4.gz": {
+   "sha256": "59df857f1daf9eaf48e4010b567569c55192962f4ea76652130bc05cd12c2720",
+   "bytes": 1106816,
+   "certifies": [
+    "recert1/c14 군/군율"
+   ]
+  },
+  "42c126b209bad2ff6b74ab645adcd9c7939707d1ec3d6d325cf163be7ee8336b.v4.gz": {
+   "sha256": "42c126b209bad2ff6b74ab645adcd9c7939707d1ec3d6d325cf163be7ee8336b",
+   "bytes": 780755,
+   "certifies": [
+    "recert1/c15 편/편싸움"
+   ]
+  }
+ },
+ "file_count": 14,
+ "total_bytes": 50581879
+}
