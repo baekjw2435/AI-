@@ -29,5 +29,5 @@
 | `alt817-states-2026-11-14a` | 껑 받음, 단어 없음(원본) | `sources/껑/state.tt` | 300 | 47 | 2026-11-14 05:36:29 | 원본 완성(replay15) - 더 필요 없음 |
 | `alt817-states-2026-11-14a` | 맹 받음, 단어 없음(원본) | `sources/맹/state.tt` | 1,800 | 48 | 2026-11-14 05:36:29 | 원본 완성(replay14) - 더 필요 없음 |
 | `alt817-states-2026-11-14b` | 격 받음, 단어 없음(원본) | `sources/격/state.tt` | 3,600 | 48 | 2026-11-14 06:26:34 | 원본 완성(replay16) - 더 필요 없음 |
-| `alt817-states-2026-11-14c` | 승 받음, 승격 | `replay16/run/g04/replay.state.tt` | 600 | 47 | 아직 | 미확정 |
-| `alt817-states-2026-11-14c` | 습 받음, 습격 | `replay16/run/g07/replay.state.tt` | 600 | 47 | 아직 | 미확정 |
+| `alt817-states-2026-11-14c` | 승 받음, 승격 | `replay16/run/g04/replay.state.tt` | 600 | 47 | 2026-11-14 08:14:42 | 미확정 |
+| `alt817-states-2026-11-14c` | 습 받음, 습격 | `replay16/run/g07/replay.state.tt` | 600 | 47 | 2026-11-14 08:14:42 | 미확정 |

@@ -17,7 +17,7 @@
    "release_tag": "alt817-proofs-replay16",
    "asset": "e74d2ed0b81f742bbb9859b07b9a4b875c1566f8fe3e8ec55e906466cf2dc3ef.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay16/e74d2ed0b81f742bbb9859b07b9a4b875c1566f8fe3e8ec55e906466cf2dc3ef.v4.gz",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 08:14:42",
    "proof_sha256": "e74d2ed0b81f742bbb9859b07b9a4b875c1566f8fe3e8ec55e906466cf2dc3ef",
    "position_sha256": "27ce00064663dcf30bbc1f867a5b5c92bdc2b202539ea122957581fccad2a189",
    "input_sha256": "90238c5c4bf02f5b062196ac5a676ca0bf590ecf2f87dd3b82a1801ab4bdd7f2",
@@ -37,7 +37,7 @@
    "release_tag": "alt817-proofs-replay16",
    "asset": "a181a42eef2d2c6031ba54526c4ceb422fe8aa9cbcdfa74b45afe566b662abc0.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay16/a181a42eef2d2c6031ba54526c4ceb422fe8aa9cbcdfa74b45afe566b662abc0.v4.gz",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 08:14:42",
    "proof_sha256": "a181a42eef2d2c6031ba54526c4ceb422fe8aa9cbcdfa74b45afe566b662abc0",
    "position_sha256": "b2ba18661804e1bea58f9dbdfc059acfa303c91f910051520e2e092b2dcfc885",
    "input_sha256": "78742553cab51d53db70a664a4852acac63eaa3f746b59c680d8f118114c92e2",
@@ -57,7 +57,7 @@
    "release_tag": "alt817-proofs-replay16",
    "asset": "2c1e2ec1be816aa7c44fb6a20a17fcefd3d07cbf7d1b5cef112277460a2fc71b.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay16/2c1e2ec1be816aa7c44fb6a20a17fcefd3d07cbf7d1b5cef112277460a2fc71b.v4.gz",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 08:14:42",
    "proof_sha256": "2c1e2ec1be816aa7c44fb6a20a17fcefd3d07cbf7d1b5cef112277460a2fc71b",
    "position_sha256": "738a540205f2c90a6ffb00b1eab047926c0018dd7c69e137f67f191a44be9620",
    "input_sha256": "ca4142c23e6740ad60b1f0511981209e18233cee9556706fd91c65be020950b1",
@@ -77,7 +77,7 @@
    "release_tag": "alt817-proofs-replay16",
    "asset": "ca0afe906e5d47e5bdbd9705a818a05e58f9f826c398e76d01184b0c89c60f1e.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay16/ca0afe906e5d47e5bdbd9705a818a05e58f9f826c398e76d01184b0c89c60f1e.v4.gz",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 08:14:42",
    "proof_sha256": "ca0afe906e5d47e5bdbd9705a818a05e58f9f826c398e76d01184b0c89c60f1e",
    "position_sha256": "eaddf95fe3ba08be94ed8efd729c6d4b472dc7ff799aa07a8c08185216d5b943",
    "input_sha256": "c443462ea05624c134c67911af94b3528b6639c372459b3f23ab1a4647d51f0d",
@@ -97,7 +97,7 @@
    "release_tag": "alt817-proofs-replay16",
    "asset": "61b5557381f076e68085ed6637dbb71fedee5a10740b69a38b8a08531e5fb8da.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay16/61b5557381f076e68085ed6637dbb71fedee5a10740b69a38b8a08531e5fb8da.v4.gz",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 08:14:42",
    "proof_sha256": "61b5557381f076e68085ed6637dbb71fedee5a10740b69a38b8a08531e5fb8da",
    "position_sha256": "98d48453404f956dc6cc2433752bfbdbc32a7a0f3871b59333db0a9b8530fd40",
    "input_sha256": "34d7f23ba07140902e7547746cc7369cc8deebf75eec4982473a3c162a36ba43",
@@ -117,7 +117,7 @@
    "release_tag": "alt817-proofs-replay16",
    "asset": "f75a4d43619e6da8afb3a2e9f220f090e9be28bd8062df085161645cfabeafd8.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay16/f75a4d43619e6da8afb3a2e9f220f090e9be28bd8062df085161645cfabeafd8.v4.gz",
-   "uploaded_verified": false,
+   "uploaded_verified": "2026-11-14 08:14:42",
    "proof_sha256": "f75a4d43619e6da8afb3a2e9f220f090e9be28bd8062df085161645cfabeafd8",
    "position_sha256": "8f2b404a75ce9dd232ca3f886834ced7f8241b928d8b9e0dee700c8c1985d996",
    "input_sha256": "d278cc28874807db0a73dc5cca454c75d81074b360d2c3a376d217a5882626bf",
@@ -143,12 +143,13 @@
    "release_tag": "alt817-proofs-replay16",
    "asset": "3539259d18d88b129e5de316b8d04418802bee1a16579ee7d86b90fcb0f34081.v4.gz",
    "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay16/3539259d18d88b129e5de316b8d04418802bee1a16579ee7d86b90fcb0f34081.v4.gz",
-   "uploaded_verified": false
+   "uploaded_verified": "2026-11-14 08:14:42"
   }
  ],
  "release": {
   "tag": "alt817-proofs-replay16",
   "url": "https://github.com/baekjw2435/AI-/releases/tag/alt817-proofs-replay16",
-  "status": "staged: the files are not attached to the release yet"
+  "status": "uploaded, every file downloaded again and its SHA-256 compared",
+  "checked": "2026-11-14 08:14:42"
  }
 }
