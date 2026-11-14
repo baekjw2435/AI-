@@ -415,6 +415,26 @@
    },
    "position_sha256": "1b13a673277d2bbcc845b6aa52ff4596c56813f20e0796a0752a5cb6ba0f59f3",
    "input_sha256": "fdb26a42f852e71f2caa25a36d52772884ea4846c93625f2c2d4fa09b6a29ebc"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14b",
+   "asset": "e84644d23ee745aa421d688a6f02ca245cfd2b272296945cb8557f35e759ed4e.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14b/e84644d23ee745aa421d688a6f02ca245cfd2b272296945cb8557f35e759ed4e.tt.gz",
+   "gz_sha256": "e84644d23ee745aa421d688a6f02ca245cfd2b272296945cb8557f35e759ed4e",
+   "gz_bytes": 48217529,
+   "state_sha256": "681361c5927bd5994cd9c3ccafbd55c53342aa3b621d65edd942d32b5cc41ade",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 3600.0,
+   "work_path": "sources/격/state.tt",
+   "note": "2026-11-14 격 원본: 새로 60분 탐색, 한도에 닿아 미완성. 이 상태에서 이어 풀 수 있음",
+   "staged": "2026-11-14 06:19:53",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "격",
+    "history": []
+   },
+   "position_sha256": "581f56e72ac369e29782f4ce3579e955a57cff3f07fa3e22a1d0db4daef1fade",
+   "input_sha256": "24e963cb4b0b25005311eee6edfaa30b19944fccd4f198686fbe6a952b52e594"
   }
  ]
 }
