@@ -2,8 +2,9 @@
 """Prepare source certificates for several syllables, a few at a time (replay_prep.py for each).
 
 usage: replay_sources.py WORKDIR SECONDS TT_MB JOBS SYLLABLE [SYLLABLE ...]
-Each syllable is 'T received, no word used'. A syllable that is not solved within SECONDS keeps its saved search
-state; calling again with a larger SECONDS continues it. Prints one line per syllable when it is done.
+Each syllable is 'T received, no word used'. SECONDS is the search limit of THIS call (the solver's --seconds);
+the search time already in a saved state is not counted against it. A syllable that is not solved within SECONDS
+keeps its saved search state; calling again continues it for another SECONDS. Prints one line per syllable when it is done.
 """
 from concurrent.futures import ThreadPoolExecutor
 import json

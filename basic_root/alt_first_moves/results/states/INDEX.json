@@ -1,0 +1,420 @@
+{
+ "format": "state-backup-1",
+ "note": "saved search states (state.tt) kept as gzip release attachments",
+ "states": [
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "09042fb8d5a39fcb0f0586da2a97ace1a6ad56c7324e17f44defbc24cac20769.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/09042fb8d5a39fcb0f0586da2a97ace1a6ad56c7324e17f44defbc24cac20769.tt.gz",
+   "gz_sha256": "09042fb8d5a39fcb0f0586da2a97ace1a6ad56c7324e17f44defbc24cac20769",
+   "gz_bytes": 47893429,
+   "state_sha256": "9c2f5af522ad9da1c09e3e98af4aaf98f1fac5919ca3d8482e9fef5078210b87",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 1800.0,
+   "work_path": "sources/맹/state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:22:52",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "맹",
+    "history": []
+   },
+   "position_sha256": "accfca306f34c3447baee1e5916b3ddfba7654e3f7867ca5621d1cdc36e6c41b",
+   "input_sha256": "0ca3477ea1f3bbd183203c3b57ca3bf9f4b0c6363993dfe8d4de69c990a4b50f"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "e1e6fd2ab664ae53f0cfb4f4c111bc4b581ea46674b6966122a4e3d4afd810bc.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/e1e6fd2ab664ae53f0cfb4f4c111bc4b581ea46674b6966122a4e3d4afd810bc.tt.gz",
+   "gz_sha256": "e1e6fd2ab664ae53f0cfb4f4c111bc4b581ea46674b6966122a4e3d4afd810bc",
+   "gz_bytes": 46869534,
+   "state_sha256": "e360572959bce42c4f1a940e919707fb0fe19628b270a8e3650a7d3261818e0b",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 300.0,
+   "work_path": "sources/껑/state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:22:56",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "껑",
+    "history": []
+   },
+   "position_sha256": "b90c87e3e2d28f9f4c1bc2b0f5759feb0e92fd925a601a5b6bc6aae19348ac8a",
+   "input_sha256": "207008d8e536003b7e54e56fc0f7fef98a80ecbdd89010798b11d2270dc76011"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "a630f6baf5ad36042d514ca23559c18a9dd14cdd0e6ce8f50be3967c8d0225ad.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/a630f6baf5ad36042d514ca23559c18a9dd14cdd0e6ce8f50be3967c8d0225ad.tt.gz",
+   "gz_sha256": "a630f6baf5ad36042d514ca23559c18a9dd14cdd0e6ce8f50be3967c8d0225ad",
+   "gz_bytes": 47075177,
+   "state_sha256": "c3fdec34dfcb4554fe4ec6c15fa0fa545a49054eef9736d0df9e5ab786467959",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "replay5/run/m06/replay.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:23:02",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "탄",
+    "history": [
+     "탄핵"
+    ]
+   },
+   "position_sha256": "2484e75fff06fb5bfaa71c1a301fbf614f0270d4a254cff4acf7906dc20d0476",
+   "input_sha256": "86071d54de386cfa0f00b6ee7afb3921e6acff5c390bb151661252fdedfd24ef"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "67e18798bed2f15fd347bcf5652415d8f641177f71404cdd848afa72bbc17c4e.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/67e18798bed2f15fd347bcf5652415d8f641177f71404cdd848afa72bbc17c4e.tt.gz",
+   "gz_sha256": "67e18798bed2f15fd347bcf5652415d8f641177f71404cdd848afa72bbc17c4e",
+   "gz_bytes": 47135539,
+   "state_sha256": "fd8fc5426a6759d8ef8b6d9f65d98516492a75ca950b58b041d8c7d5ae21cdc8",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "direct1/run/d03/direct.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:23:08",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "탄",
+    "history": [
+     "탄핵"
+    ]
+   },
+   "position_sha256": "2484e75fff06fb5bfaa71c1a301fbf614f0270d4a254cff4acf7906dc20d0476",
+   "input_sha256": "86071d54de386cfa0f00b6ee7afb3921e6acff5c390bb151661252fdedfd24ef"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "4a19e3ac651a45a52c70ba7b5db9c4b645fb73b4cffab2a65a07938e0b02eef0.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/4a19e3ac651a45a52c70ba7b5db9c4b645fb73b4cffab2a65a07938e0b02eef0.tt.gz",
+   "gz_sha256": "4a19e3ac651a45a52c70ba7b5db9c4b645fb73b4cffab2a65a07938e0b02eef0",
+   "gz_bytes": 46989765,
+   "state_sha256": "734d76c6d4028f65c6ad96073725f8d3754e0c25a28d22094a3f5c90edfdced4",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "replay6/run/n24/replay.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:23:14",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "격",
+    "history": [
+     "격돌"
+    ]
+   },
+   "position_sha256": "d52280ecfc43f33b1764bef2e20ef6dd4f32f44e329516c637f8ac23e096d76a",
+   "input_sha256": "301f7a2e4796f0784fe83119e8b511330f127c3c95b1362fae7810feee231d82"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "aa382020d18eb64e9785c1dd51639b14fc09b2e48a6cc8d9a8aa3ab8ccef8f79.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/aa382020d18eb64e9785c1dd51639b14fc09b2e48a6cc8d9a8aa3ab8ccef8f79.tt.gz",
+   "gz_sha256": "aa382020d18eb64e9785c1dd51639b14fc09b2e48a6cc8d9a8aa3ab8ccef8f79",
+   "gz_bytes": 47137632,
+   "state_sha256": "0ff8e6bbb6dfb4fed1b34e3aa167e362ac7950fa3656b86e1c3866f6aaeb23eb",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "direct1/run/d07/direct.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:23:20",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "격",
+    "history": [
+     "격돌"
+    ]
+   },
+   "position_sha256": "d52280ecfc43f33b1764bef2e20ef6dd4f32f44e329516c637f8ac23e096d76a",
+   "input_sha256": "301f7a2e4796f0784fe83119e8b511330f127c3c95b1362fae7810feee231d82"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "3642d26ff6e7bba92a37567886ce96951f10e2d1a36ed73c51f6e815a3dc21cd.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/3642d26ff6e7bba92a37567886ce96951f10e2d1a36ed73c51f6e815a3dc21cd.tt.gz",
+   "gz_sha256": "3642d26ff6e7bba92a37567886ce96951f10e2d1a36ed73c51f6e815a3dc21cd",
+   "gz_bytes": 46884964,
+   "state_sha256": "2de36c3271751e98fb31bfe1c7ab81a2a1c93646af78ca26436d796c57668236",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "replay7/run/q03/replay.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:23:26",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "순",
+    "history": [
+     "순풍"
+    ]
+   },
+   "position_sha256": "ea09d92127d798ee1c422660e0dab6d3fbc351c8691509cb36c117ff0f345a41",
+   "input_sha256": "6ed4260c91406225dc9e8f793d5265e145e3a55d3338416ae640177b62e4e8f5"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "9310d0cb82ac16576dd3637e15858408a21d3204abd8e5d0354e7b00531e3dba.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/9310d0cb82ac16576dd3637e15858408a21d3204abd8e5d0354e7b00531e3dba.tt.gz",
+   "gz_sha256": "9310d0cb82ac16576dd3637e15858408a21d3204abd8e5d0354e7b00531e3dba",
+   "gz_bytes": 46942108,
+   "state_sha256": "2be8e1131e4dcadff636044eeaaa8e56d66b1da3036ea1d5db5aa5096be7607f",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "direct1/run/d06/direct.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:23:32",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "순",
+    "history": [
+     "순풍"
+    ]
+   },
+   "position_sha256": "ea09d92127d798ee1c422660e0dab6d3fbc351c8691509cb36c117ff0f345a41",
+   "input_sha256": "6ed4260c91406225dc9e8f793d5265e145e3a55d3338416ae640177b62e4e8f5"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "3b700c146d99914ccc3739a2c961a8b927f36bda1731fa5fbb2c4f9b43529576.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/3b700c146d99914ccc3739a2c961a8b927f36bda1731fa5fbb2c4f9b43529576.tt.gz",
+   "gz_sha256": "3b700c146d99914ccc3739a2c961a8b927f36bda1731fa5fbb2c4f9b43529576",
+   "gz_bytes": 46961855,
+   "state_sha256": "1e384a34c16183d989199180748dd2a7c808fe649479262399203e15830f30fa",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "replay7/run/q14/replay.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:23:38",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "돌",
+    "history": [
+     "돌솥"
+    ]
+   },
+   "position_sha256": "c955412bd3bb5978b490378f6d1e790dc02a86c9751fcb2b09e09cc77355f4ab",
+   "input_sha256": "c57ac876d3f6d50aceff467f92e74b93d400e78d6082e4088d9b9ada5d93ae86"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "dffe4ef5d1bc9410afc16bef7482a37ad9b1febc6e211ab04d94e95272b429eb.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/dffe4ef5d1bc9410afc16bef7482a37ad9b1febc6e211ab04d94e95272b429eb.tt.gz",
+   "gz_sha256": "dffe4ef5d1bc9410afc16bef7482a37ad9b1febc6e211ab04d94e95272b429eb",
+   "gz_bytes": 47089866,
+   "state_sha256": "c43ccc4449cb5ede1af260c1b2cb73c7b66d11c372398127e2f07d1f5db87ef3",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "direct1/run/d09/direct.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:23:43",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "돌",
+    "history": [
+     "돌솥"
+    ]
+   },
+   "position_sha256": "c955412bd3bb5978b490378f6d1e790dc02a86c9751fcb2b09e09cc77355f4ab",
+   "input_sha256": "c57ac876d3f6d50aceff467f92e74b93d400e78d6082e4088d9b9ada5d93ae86"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "54c82b6494d46a5e216486b9810bbc7fa8ef6af93d595a3f05a1ebe821088742.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/54c82b6494d46a5e216486b9810bbc7fa8ef6af93d595a3f05a1ebe821088742.tt.gz",
+   "gz_sha256": "54c82b6494d46a5e216486b9810bbc7fa8ef6af93d595a3f05a1ebe821088742",
+   "gz_bytes": 46883331,
+   "state_sha256": "7bc17c509d84f9c3ab2701b404b5a494741533d7fcb831aae3718a86b46a7d5f",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "replay8/run/s09/replay.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:23:49",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "야",
+    "history": [
+     "야식"
+    ]
+   },
+   "position_sha256": "e9ab96b24a073761b8638e492f0a0081288276704096310fb3c8c4083fb420df",
+   "input_sha256": "e3678d576e86baceae4a133e36579eda3b1308844da52db781cacb4eafc1b8f9"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "a73e0ffcf5ae9763633e4afc7d9dab9071880ec232c9fe514e41b7637c5f66c7.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/a73e0ffcf5ae9763633e4afc7d9dab9071880ec232c9fe514e41b7637c5f66c7.tt.gz",
+   "gz_sha256": "a73e0ffcf5ae9763633e4afc7d9dab9071880ec232c9fe514e41b7637c5f66c7",
+   "gz_bytes": 46964503,
+   "state_sha256": "be5a5a17d9a64d4360b578f605873ec7784a622f9d6b29db7f93b4298c549c89",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "direct1/run/d04/direct.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:23:54",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "야",
+    "history": [
+     "야식"
+    ]
+   },
+   "position_sha256": "e9ab96b24a073761b8638e492f0a0081288276704096310fb3c8c4083fb420df",
+   "input_sha256": "e3678d576e86baceae4a133e36579eda3b1308844da52db781cacb4eafc1b8f9"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "9130ed52e20fb6940f010464cb2d5b8a378e9aa38fd68781332b89521ef0e16a.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/9130ed52e20fb6940f010464cb2d5b8a378e9aa38fd68781332b89521ef0e16a.tt.gz",
+   "gz_sha256": "9130ed52e20fb6940f010464cb2d5b8a378e9aa38fd68781332b89521ef0e16a",
+   "gz_bytes": 46845250,
+   "state_sha256": "0966a785cf3b263a130db9d8863574205371734cf15c31b704bc13593b37d9a7",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "replay9/run/t03/replay.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:24:00",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식곤증"
+    ]
+   },
+   "position_sha256": "cd5ab6d535f3264912438754e2dcf14f45adf17761eff5c5554beb6a8e916aca",
+   "input_sha256": "70fcb982408bbc63c94522979393de8bdd038d52cf02665d05891afcc008fcb5"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "e9dff0d79edb2cefaa8d0e91c8b6287927900c3d516e11291e8295eff1779778.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/e9dff0d79edb2cefaa8d0e91c8b6287927900c3d516e11291e8295eff1779778.tt.gz",
+   "gz_sha256": "e9dff0d79edb2cefaa8d0e91c8b6287927900c3d516e11291e8295eff1779778",
+   "gz_bytes": 47032033,
+   "state_sha256": "d14b7374e83e6f0ddd5a8341e4764baaade5b01715326b65e24f4e96f2d9bc9d",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "direct1/run/d02/direct.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:24:06",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식곤증"
+    ]
+   },
+   "position_sha256": "cd5ab6d535f3264912438754e2dcf14f45adf17761eff5c5554beb6a8e916aca",
+   "input_sha256": "70fcb982408bbc63c94522979393de8bdd038d52cf02665d05891afcc008fcb5"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "6cfdf7a96534db14838d25caaae8beaeca07df0b72020be01ebf3d592797ab47.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/6cfdf7a96534db14838d25caaae8beaeca07df0b72020be01ebf3d592797ab47.tt.gz",
+   "gz_sha256": "6cfdf7a96534db14838d25caaae8beaeca07df0b72020be01ebf3d592797ab47",
+   "gz_bytes": 46925403,
+   "state_sha256": "055ee9d63eb0a4b0cf45bef56f976f38ff56b2be2026609493d9168640fec8b5",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "replay10/run/u07/replay.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:24:12",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "극",
+    "history": [
+     "극언"
+    ]
+   },
+   "position_sha256": "941cc6bfe2139fea6cb1b81dbbfc8fd159a84b3afdc47bf19274a2a91519e42c",
+   "input_sha256": "87c03ad30c6386cfd82496cd9f57063591ecf5900e78a258551dfda30ad3c760"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "3c25fb8f49d9f1776fade1f3d5528b57bd32cfff2eec6be687428e74c4e50647.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/3c25fb8f49d9f1776fade1f3d5528b57bd32cfff2eec6be687428e74c4e50647.tt.gz",
+   "gz_sha256": "3c25fb8f49d9f1776fade1f3d5528b57bd32cfff2eec6be687428e74c4e50647",
+   "gz_bytes": 47024651,
+   "state_sha256": "dae3daa23443c1a963dca9ed61e991407acee75572521e2befc91a5544015cb2",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "direct1/run/d01/direct.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:24:18",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "극",
+    "history": [
+     "극언"
+    ]
+   },
+   "position_sha256": "941cc6bfe2139fea6cb1b81dbbfc8fd159a84b3afdc47bf19274a2a91519e42c",
+   "input_sha256": "87c03ad30c6386cfd82496cd9f57063591ecf5900e78a258551dfda30ad3c760"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "b98891b92b8183c84a0cc9ae8fb161685d422d8cf57177a62579ef80e318a08d.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/b98891b92b8183c84a0cc9ae8fb161685d422d8cf57177a62579ef80e318a08d.tt.gz",
+   "gz_sha256": "b98891b92b8183c84a0cc9ae8fb161685d422d8cf57177a62579ef80e318a08d",
+   "gz_bytes": 46893900,
+   "state_sha256": "a14aff9fec58a3811e9dc6031c1bb73009642b4075f4697e8936c6ebf1cf093e",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "replay13/run/x02/replay.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:24:23",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "삼",
+    "history": [
+     "삼한사온"
+    ]
+   },
+   "position_sha256": "5c00fca95f9f3596fddf89685ada2dec42d58b4f41983aabc4b2c4a64f51a1ac",
+   "input_sha256": "93caba89223e8089e58c7c2eb6091f2e31da5adcc31e67e0ffde0b568af488c0"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "9323bbe4b259ed7a3c67a3ddbc383cf916d8c2ce437d6694963120a0913e13f5.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/9323bbe4b259ed7a3c67a3ddbc383cf916d8c2ce437d6694963120a0913e13f5.tt.gz",
+   "gz_sha256": "9323bbe4b259ed7a3c67a3ddbc383cf916d8c2ce437d6694963120a0913e13f5",
+   "gz_bytes": 47102893,
+   "state_sha256": "27c25035a9c72b0fdeec51b82620e4ee731015ac9a075c0869ab407ecb512bcd",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "direct2/run/e01/direct.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:24:29",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "삼",
+    "history": [
+     "삼한사온"
+    ]
+   },
+   "position_sha256": "5c00fca95f9f3596fddf89685ada2dec42d58b4f41983aabc4b2c4a64f51a1ac",
+   "input_sha256": "93caba89223e8089e58c7c2eb6091f2e31da5adcc31e67e0ffde0b568af488c0"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-14a",
+   "asset": "4684885aa5e0b95c569a83222d8b9afa97bf96a5f75f5f8f46d3a74495958adc.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-14a/4684885aa5e0b95c569a83222d8b9afa97bf96a5f75f5f8f46d3a74495958adc.tt.gz",
+   "gz_sha256": "4684885aa5e0b95c569a83222d8b9afa97bf96a5f75f5f8f46d3a74495958adc",
+   "gz_bytes": 46966677,
+   "state_sha256": "1870807b93ebb4b32b51193af29906944e6d4361269d81a6a8bedce6377ebe6b",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "direct1/run/d05/direct.state.tt",
+   "note": "2026-11-14 계산 전 백업. 맹: 이번 30분을 더 하기 전의 상태(누적 1,800초). 껑: 원본 준비 300초. 나머지: 재생·직접 탐색 600초로 못 푼 첫 수의 상태",
+   "staged": "2026-11-14 05:24:34",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "행",
+    "history": [
+     "행정구역"
+    ]
+   },
+   "position_sha256": "1b13a673277d2bbcc845b6aa52ff4596c56813f20e0796a0752a5cb6ba0f59f3",
+   "input_sha256": "fdb26a42f852e71f2caa25a36d52772884ea4846c93625f2c2d4fa09b6a29ebc"
+  }
+ ]
+}
