@@ -1,0 +1,14 @@
+{
+ "release_tag": "alt817-states-2026-11-14b",
+ "files": {
+  "e84644d23ee745aa421d688a6f02ca245cfd2b272296945cb8557f35e759ed4e.tt.gz": {
+   "sha256": "e84644d23ee745aa421d688a6f02ca245cfd2b272296945cb8557f35e759ed4e",
+   "bytes": 48217529,
+   "state_sha256": "681361c5927bd5994cd9c3ccafbd55c53342aa3b621d65edd942d32b5cc41ade",
+   "work_path": "sources/격/state.tt",
+   "carried_search_seconds": 3600.0
+  }
+ },
+ "file_count": 1,
+ "total_bytes": 48217529
+}
