@@ -1,0 +1,21 @@
+{
+ "release_tag": "alt817-states-2026-11-15b",
+ "files": {
+  "43cd94ec99645258ce84af30d8665687af07db7d4fafc544eec82c3b5be6032f.tt.gz": {
+   "sha256": "43cd94ec99645258ce84af30d8665687af07db7d4fafc544eec82c3b5be6032f",
+   "bytes": 46230523,
+   "state_sha256": "b43aed10853159f8d012e1c3983440cd04fbb819e79ca3c2f1e984eb6db88452",
+   "work_path": "branch2/b2_023/state.tt",
+   "carried_search_seconds": 246.84
+  },
+  "0ae67c350247c79f91207509542d0f439464f8f5db03acf89d879bf6b70c94ea.tt.gz": {
+   "sha256": "0ae67c350247c79f91207509542d0f439464f8f5db03acf89d879bf6b70c94ea",
+   "bytes": 46674058,
+   "state_sha256": "3d4c218f842a1b65d951b39619adb4f2dd4e51c8e3635afc1b5037d4d63c99c5",
+   "work_path": "branch2/b2_025/state.tt",
+   "carried_search_seconds": 375.92
+  }
+ },
+ "file_count": 2,
+ "total_bytes": 92904581
+}

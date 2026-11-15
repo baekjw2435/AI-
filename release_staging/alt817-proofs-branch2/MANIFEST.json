@@ -1,0 +1,168 @@
+{
+ "release_tag": "alt817-proofs-branch2",
+ "files": {
+  "46ad04ef03359b2cd315656ec5b7e373c893aa03143e6a7095ff24ebdbbc608b.v4.gz": {
+   "sha256": "46ad04ef03359b2cd315656ec5b7e373c893aa03143e6a7095ff24ebdbbc608b",
+   "bytes": 225986,
+   "certifies": [
+    "branch2/b2_001 식생활 → 활극 → 극락 → 낙승"
+   ]
+  },
+  "6e6c771e2b418413b9b6e049aad5ef28609b06680eb77c30192da299859307e2.v4.gz": {
+   "sha256": "6e6c771e2b418413b9b6e049aad5ef28609b06680eb77c30192da299859307e2",
+   "bytes": 793553,
+   "certifies": [
+    "branch2/b2_002 식생활 → 활극 → 극락 → 낙엽"
+   ]
+  },
+  "2ce57998b9a3437020a9f56530afcce77bd8dae92bbc1b7bd6cf589242f5e1f2.v4.gz": {
+   "sha256": "2ce57998b9a3437020a9f56530afcce77bd8dae92bbc1b7bd6cf589242f5e1f2",
+   "bytes": 700490,
+   "certifies": [
+    "branch2/b2_003 식생활 → 활극 → 극락 → 낙관적"
+   ]
+  },
+  "dc93a295d4973529a131893a19ffff97252c5f7a42425961e27da69532240b6d.v4.gz": {
+   "sha256": "dc93a295d4973529a131893a19ffff97252c5f7a42425961e27da69532240b6d",
+   "bytes": 15247,
+   "certifies": [
+    "branch2/b2_004 식생활 → 활극 → 극락 → 낙향"
+   ]
+  },
+  "407a665082482dc5f3b3d746700bfd4a066f93e1616096074e711a621be56543.v4.gz": {
+   "sha256": "407a665082482dc5f3b3d746700bfd4a066f93e1616096074e711a621be56543",
+   "bytes": 686553,
+   "certifies": [
+    "branch2/b2_005 식생활 → 활극 → 극약 → 약손가락"
+   ]
+  },
+  "1afa37d1af4e5303203ddd9bf9590ba6a5d94f7174364679de44976ca97eee93.v4.gz": {
+   "sha256": "1afa37d1af4e5303203ddd9bf9590ba6a5d94f7174364679de44976ca97eee93",
+   "bytes": 2126164,
+   "certifies": [
+    "branch2/b2_006 식생활 → 활극 → 극약 → 약력"
+   ]
+  },
+  "008117256972d529bad77f97037b5cbf97e97d2aef303c0c0b1b49077ebaf4cc.v4.gz": {
+   "sha256": "008117256972d529bad77f97037b5cbf97e97d2aef303c0c0b1b49077ebaf4cc",
+   "bytes": 748585,
+   "certifies": [
+    "branch2/b2_007 식생활 → 활극 → 극약 → 약진"
+   ]
+  },
+  "05f520f3405432ffcd8adcb2398b0eb896acbda948fc94dc7bb3682103657d85.v4.gz": {
+   "sha256": "05f520f3405432ffcd8adcb2398b0eb896acbda948fc94dc7bb3682103657d85",
+   "bytes": 335287,
+   "certifies": [
+    "branch2/b2_008 식생활 → 활극 → 극약 → 약학"
+   ]
+  },
+  "85021b226cf4c3a79060fa91caa82b6ea68d293cffafcd022af498c2193f801d.v4.gz": {
+   "sha256": "85021b226cf4c3a79060fa91caa82b6ea68d293cffafcd022af498c2193f801d",
+   "bytes": 2127751,
+   "certifies": [
+    "branch2/b2_009 식생활 → 활극 → 극언 → 언어권"
+   ]
+  },
+  "586f7682c71a75f10d1312c85c1aaefdfd8f0bda8db3d5e42cf4516e26770d70.v4.gz": {
+   "sha256": "586f7682c71a75f10d1312c85c1aaefdfd8f0bda8db3d5e42cf4516e26770d70",
+   "bytes": 28277,
+   "certifies": [
+    "branch2/b2_010 식생활 → 활극 → 극언 → 언급"
+   ]
+  },
+  "34a6f7e8bece4effa82d5fdbcc2f907509f0e7e9ea33f0ef0f4d3c2ee7bfa5bf.v4.gz": {
+   "sha256": "34a6f7e8bece4effa82d5fdbcc2f907509f0e7e9ea33f0ef0f4d3c2ee7bfa5bf",
+   "bytes": 704814,
+   "certifies": [
+    "branch2/b2_011 식생활 → 활극 → 극언 → 언변"
+   ]
+  },
+  "80753067e5d1f0a3d5062d23adc1c38fd279cdedede0a467575413d91b39b675.v4.gz": {
+   "sha256": "80753067e5d1f0a3d5062d23adc1c38fd279cdedede0a467575413d91b39b675",
+   "bytes": 318587,
+   "certifies": [
+    "branch2/b2_012 식생활 → 활극 → 극언 → 언어능력"
+   ]
+  },
+  "721ba61f71f2ac43751a12db27859d5235c1e0d5a98afec5b54098b0945a7e36.v4.gz": {
+   "sha256": "721ba61f71f2ac43751a12db27859d5235c1e0d5a98afec5b54098b0945a7e36",
+   "bytes": 697005,
+   "certifies": [
+    "branch2/b2_013 식생활 → 활극 → 극언 → 언어적"
+   ]
+  },
+  "3f599a96164f346a8ac99510ee331adceff97db2c5e8d596b1ea41e07c91e8f3.v4.gz": {
+   "sha256": "3f599a96164f346a8ac99510ee331adceff97db2c5e8d596b1ea41e07c91e8f3",
+   "bytes": 336653,
+   "certifies": [
+    "branch2/b2_014 식생활 → 활극 → 극언 → 언어학"
+   ]
+  },
+  "239ed9faedcf3fe6c835123d4c201300299851881cbc04cdc5c765fbef9000cf.v4.gz": {
+   "sha256": "239ed9faedcf3fe6c835123d4c201300299851881cbc04cdc5c765fbef9000cf",
+   "bytes": 314309,
+   "certifies": [
+    "branch2/b2_015 식생활 → 활극 → 극언 → 언어수행"
+   ]
+  },
+  "81e406b8325f80bc40e4cd08ef2881c45e44f4c6bd6d5186440e764b100158f6.v4.gz": {
+   "sha256": "81e406b8325f80bc40e4cd08ef2881c45e44f4c6bd6d5186440e764b100158f6",
+   "bytes": 10226509,
+   "certifies": [
+    "branch2/b2_016 식생활 → 활극 → 극언 → 언어생활"
+   ]
+  },
+  "aa55f7da2164ddc2bc4094ed25c69f708880b78e3ed5ec7e87a07031279ca023.v4.gz": {
+   "sha256": "aa55f7da2164ddc2bc4094ed25c69f708880b78e3ed5ec7e87a07031279ca023",
+   "bytes": 3094427,
+   "certifies": [
+    "branch2/b2_017 식생활 → 활극 → 극력 → 역세권"
+   ]
+  },
+  "4fab9ed9207a6c74df01c096822efe516b36f9ef1a4dd9bf1656e5b9bf4ddfe2.v4.gz": {
+   "sha256": "4fab9ed9207a6c74df01c096822efe516b36f9ef1a4dd9bf1656e5b9bf4ddfe2",
+   "bytes": 1420712,
+   "certifies": [
+    "branch2/b2_018 식생활 → 활극 → 극력 → 역할극"
+   ]
+  },
+  "e049adc7fbf996e6387ee848c4b1abc344cdaeae080330972e371ae6f015ff41.v4.gz": {
+   "sha256": "e049adc7fbf996e6387ee848c4b1abc344cdaeae080330972e371ae6f015ff41",
+   "bytes": 1414858,
+   "certifies": [
+    "branch2/b2_019 식생활 → 활극 → 극력 → 역기능"
+   ]
+  },
+  "31e7dcfe7d2820988a75c5d5b8005beb3e04aba44b88adef71061332f7763613.v4.gz": {
+   "sha256": "31e7dcfe7d2820988a75c5d5b8005beb3e04aba44b88adef71061332f7763613",
+   "bytes": 28341,
+   "certifies": [
+    "branch2/b2_020 식생활 → 활극 → 극력 → 역병"
+   ]
+  },
+  "0907faf76e8eec9662e00832bf4cac9786d9663ba05f2d00c0655aec988e4451.v4.gz": {
+   "sha256": "0907faf76e8eec9662e00832bf4cac9786d9663ba05f2d00c0655aec988e4451",
+   "bytes": 980189,
+   "certifies": [
+    "branch2/b2_021 식생활 → 활극 → 극력 → 역순"
+   ]
+  },
+  "93f315a7be3170f3f0d55520f20dd2f1b20d9061a23089255e681fda9f4e96bc.v4.gz": {
+   "sha256": "93f315a7be3170f3f0d55520f20dd2f1b20d9061a23089255e681fda9f4e96bc",
+   "bytes": 4011695,
+   "certifies": [
+    "branch2/b2_022 식생활 → 활극 → 극력 → 역습"
+   ]
+  },
+  "ab75b73ccd912f8abd35d6dccb463f6ba4618d3faa7303945bbe7e1d7a504e4a.v4.gz": {
+   "sha256": "ab75b73ccd912f8abd35d6dccb463f6ba4618d3faa7303945bbe7e1d7a504e4a",
+   "bytes": 6733296,
+   "certifies": [
+    "branch2/b2_024 식생활 → 활극 → 극력 → 역사적"
+   ]
+  }
+ },
+ "file_count": 23,
+ "total_bytes": 38069288
+}
