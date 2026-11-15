@@ -1,0 +1,28 @@
+{
+ "release_tag": "alt817-states-2026-11-15a",
+ "files": {
+  "8ad0a6394532c36c9f6f59c419ba97e57371a0fe57a8d7f0c4a99b8fcf48e82e.tt.gz": {
+   "sha256": "8ad0a6394532c36c9f6f59c419ba97e57371a0fe57a8d7f0c4a99b8fcf48e82e",
+   "bytes": 48169324,
+   "state_sha256": "a86b63b39757b6a3b207e21354ee21e4837c94bca7737d481861af7d7dd99a4c",
+   "work_path": "sources/표/state.tt",
+   "carried_search_seconds": 3600.0
+  },
+  "7b0ef24a6aece7c85fa3e0283543ca3359528d13d94d561fcc5dfefa1a412b96.tt.gz": {
+   "sha256": "7b0ef24a6aece7c85fa3e0283543ca3359528d13d94d561fcc5dfefa1a412b96",
+   "bytes": 48166119,
+   "state_sha256": "a4e6ec59e6793814166a2caffebceddba43ccdc4d320047cdd0c5bbc3b371ef4",
+   "work_path": "sources/득/state.tt",
+   "carried_search_seconds": 3600.0
+  },
+  "c02391d876a01e582a1bc1ba80407f0bcb784f2e38eab02c6e5f88a8b51e9369.tt.gz": {
+   "sha256": "c02391d876a01e582a1bc1ba80407f0bcb784f2e38eab02c6e5f88a8b51e9369",
+   "bytes": 48153513,
+   "state_sha256": "08591c9e6b1047ac99e8abd168ac3ada395da04890a266cbc1c4a71440b6d552",
+   "work_path": "sources/할/state.tt",
+   "carried_search_seconds": 3600.0
+  }
+ },
+ "file_count": 3,
+ "total_bytes": 144488956
+}
