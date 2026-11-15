@@ -1,0 +1,717 @@
+{
+ "batch": "branch1",
+ "base_position": {
+  "initial_syllable": "식",
+  "history": [
+   "식생활",
+   "활극"
+  ]
+ },
+ "cases": [
+  {
+   "name": "b01",
+   "word": "극락",
+   "group_words": [
+    "극락"
+   ],
+   "accepted": true,
+   "search_seconds": 0.256205,
+   "proof_seconds": 0.479239,
+   "verify_seconds": 2.15,
+   "proof_nodes": 96902,
+   "proof_sha256": "0732e8d7394421119f17ce6896c8f304f0bd92432c8a69098915f11cfec03688",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 107,
+    "words": [
+     "낙농업"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "낙승"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "낙엽"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "낙관적",
+      "낙천적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "낙향"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "업적"
+     ],
+     "answer": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "how": "certificate"
+    }
+   ]
+  },
+  {
+   "name": "b02",
+   "word": "극약",
+   "group_words": [
+    "극약"
+   ],
+   "accepted": true,
+   "search_seconds": 206.56204,
+   "proof_seconds": 10.674086,
+   "verify_seconds": 40.05,
+   "proof_nodes": 1750374,
+   "proof_sha256": "3618b44f38532fd3edb2c1f3ec1592401fa0cde5883b3d3359504a501d2da268",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 331,
+    "words": [
+     "약식",
+     "약육강식",
+     "약혼식"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "약손가락"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "약력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "약진"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "약학"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "식권"
+     ],
+     "answer": [
+      "권능"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "식도락"
+     ],
+     "answer": [
+      "낙엽"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "식이요법"
+     ],
+     "answer": [
+      "법칙"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "식순"
+     ],
+     "answer": [
+      "순기능"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "식곤증"
+     ],
+     "answer": [
+      "증식"
+     ],
+     "how": "pair/loop answer"
+    },
+    {
+     "words": [
+      "식욕부진"
+     ],
+     "answer": [
+      "진갈색"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "식충"
+     ],
+     "answer": [
+      "충언"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "식탁"
+     ],
+     "answer": [
+      "탁탁"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "식단표"
+     ],
+     "answer": [
+      "표식"
+     ],
+     "how": "pair/loop answer"
+    },
+    {
+     "words": [
+      "식물학"
+     ],
+     "answer": [
+      "학식"
+     ],
+     "how": "pair/loop answer"
+    }
+   ]
+  },
+  {
+   "name": "b03",
+   "word": "극언",
+   "group_words": [
+    "극언"
+   ],
+   "accepted": true,
+   "search_seconds": 163.562337,
+   "proof_seconds": 7.513892,
+   "verify_seconds": 36.08,
+   "proof_nodes": 1284920,
+   "proof_sha256": "a512eb396c7fa90b2a31327e811ef83b2b3a1eca6c4df33ff36235b50e2da4a9",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 338,
+    "words": [
+     "언약"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "언어권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언급"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언변"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언어능력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언어적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언어학"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언어수행",
+      "언행"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언어생활"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "약손가락"
+     ],
+     "answer": [
+      "낙농업"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "약식",
+      "약육강식",
+      "약혼식"
+     ],
+     "answer": [
+      "식순"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "약력"
+     ],
+     "answer": [
+      "역습"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "약진"
+     ],
+     "answer": [
+      "진퇴유곡",
+      "진혼곡"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "약학"
+     ],
+     "answer": [
+      "학업"
+     ],
+     "how": "certificate"
+    }
+   ]
+  },
+  {
+   "name": "b04",
+   "word": "극력",
+   "group_words": [
+    "극력"
+   ],
+   "accepted": true,
+   "search_seconds": 132.321162,
+   "proof_seconds": 8.379525,
+   "verify_seconds": 33.95,
+   "proof_nodes": 1433599,
+   "proof_sha256": "3c2fd9eebac304e742a07c4df650e9ef9fe69f74c193364884fecc4659fd0158",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 355,
+    "words": [
+     "역할"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "역세권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역할극"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역기능"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역병"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역순"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역습"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역전승"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역사적",
+      "역설적",
+      "역적",
+      "역동적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역풍"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역학",
+      "역사학"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역행"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역방향"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "할인권"
+     ],
+     "answer": [
+      "권능"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "할렐루야"
+     ],
+     "answer": [
+      "야영객"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "할인율"
+     ],
+     "answer": [
+      "율격"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "할증"
+     ],
+     "answer": [
+      "증표"
+     ],
+     "how": "certificate"
+    }
+   ]
+  },
+  {
+   "name": "b05",
+   "word": "극적",
+   "group_words": [
+    "극적",
+    "극단적"
+   ],
+   "accepted": true,
+   "search_seconds": 0.274632,
+   "proof_seconds": 0.521984,
+   "verify_seconds": 2.36,
+   "proof_nodes": 99034,
+   "proof_sha256": "2ce57998b9a3437020a9f56530afcce77bd8dae92bbc1b7bd6cf589242f5e1f2",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 399,
+    "words": [
+     "적갈색",
+     "적색",
+     "적회색"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "적격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적극"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적삼"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적응력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적중률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적극적",
+      "적대적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적자생존"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적진"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적합"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "색맹"
+     ],
+     "answer": [
+      "맹활약"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "색색"
+     ],
+     "answer": [
+      "색칠"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "색칠"
+     ],
+     "answer": [
+      "칠십"
+     ],
+     "how": "certificate"
+    }
+   ]
+  },
+  {
+   "name": "b06",
+   "word": "극찬",
+   "group_words": [
+    "극찬"
+   ],
+   "accepted": true,
+   "search_seconds": 0.538213,
+   "proof_seconds": 0.883479,
+   "verify_seconds": 3.73,
+   "proof_nodes": 157064,
+   "proof_sha256": "69732565f4bbbeac99ffcaedc5acab1f6149b054ce19c4875d7dd10d3a0d3493",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 499,
+    "words": [
+     "찬성표"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "찬탄"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "찬합"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "표명"
+     ],
+     "answer": [
+      "명색"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "표주박"
+     ],
+     "answer": [
+      "박색"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "표기법",
+      "표현법"
+     ],
+     "answer": [
+      "법칙"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "표식"
+     ],
+     "answer": [
+      "식단표"
+     ],
+     "how": "pair/loop answer"
+    },
+    {
+     "words": [
+      "표현력"
+     ],
+     "answer": [
+      "역습"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "표면적",
+      "표적"
+     ],
+     "answer": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "표절"
+     ],
+     "answer": [
+      "절찬"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "표준"
+     ],
+     "answer": [
+      "준칙"
+     ],
+     "how": "certificate"
+    },
+    {
+     "words": [
+      "표징"
+     ],
+     "answer": [
+      "징표"
+     ],
+     "how": "pair/loop answer"
+    }
+   ]
+  }
+ ]
+}
