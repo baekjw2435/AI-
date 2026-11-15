@@ -659,6 +659,56 @@
    },
    "position_sha256": "59781cbaaad3c6ac040c4a869825abb831ebdadf1ded535960a7cec2e538779e",
    "input_sha256": "a17dc6a1500c2737f0a62d3c3c4557456d86d75ff891824de48182d63cae2218"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-15b",
+   "asset": "43cd94ec99645258ce84af30d8665687af07db7d4fafc544eec82c3b5be6032f.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-15b/43cd94ec99645258ce84af30d8665687af07db7d4fafc544eec82c3b5be6032f.tt.gz",
+   "gz_sha256": "43cd94ec99645258ce84af30d8665687af07db7d4fafc544eec82c3b5be6032f",
+   "gz_bytes": 46230523,
+   "state_sha256": "b43aed10853159f8d012e1c3983440cd04fbb819e79ca3c2f1e984eb6db88452",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 246.84,
+   "work_path": "branch2/b2_023/state.tt",
+   "note": "2026-11-15 후속 갈래 branch2: 배정 시간 안에 못 푼 국면의 상태. 극력→역전승(탐색 246.8초), 극력→역풍(375.9초)",
+   "staged": "2026-11-15 12:37:03",
+   "uploaded_verified": "2026-11-15 12:48:40",
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역전승"
+    ]
+   },
+   "position_sha256": "cea158379d59cbd4a83eda44a62bd6fa7866e8d8ab53f3382c0bb3cebcff3f8d",
+   "input_sha256": "94bf1582caae946d6adf85805dc0ea823d007c96b75dee97bdecb69317f9e15c"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-15b",
+   "asset": "0ae67c350247c79f91207509542d0f439464f8f5db03acf89d879bf6b70c94ea.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-15b/0ae67c350247c79f91207509542d0f439464f8f5db03acf89d879bf6b70c94ea.tt.gz",
+   "gz_sha256": "0ae67c350247c79f91207509542d0f439464f8f5db03acf89d879bf6b70c94ea",
+   "gz_bytes": 46674058,
+   "state_sha256": "3d4c218f842a1b65d951b39619adb4f2dd4e51c8e3635afc1b5037d4d63c99c5",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 375.92,
+   "work_path": "branch2/b2_025/state.tt",
+   "note": "2026-11-15 후속 갈래 branch2: 배정 시간 안에 못 푼 국면의 상태. 극력→역전승(탐색 246.8초), 극력→역풍(375.9초)",
+   "staged": "2026-11-15 12:37:08",
+   "uploaded_verified": "2026-11-15 12:48:40",
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역풍"
+    ]
+   },
+   "position_sha256": "1d6ce5757f3efb5d23e00195347b540c915d270c293946df04a2f0c9df053b08",
+   "input_sha256": "af8c8eef1a711b0de6b3f04a8c000671c86d04370180ebae876d54f2839ef4f5"
   }
  ]
 }
