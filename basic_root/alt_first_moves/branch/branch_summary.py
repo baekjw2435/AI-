@@ -89,6 +89,8 @@ def name(g, free):
 def summarize(c, d):
     run = json.loads((d / 'run.json').read_text(encoding='utf-8'))
     rec = {'name': c['name'], 'word': c['word'], 'group_words': c['group_words'], 'accepted': run.get('accepted', False),
+           'position': c['position'], 'parent': c.get('parent'), 'untried': run.get('untried', False),
+           'allotted_seconds': run.get('allotted_seconds'),
            'search_seconds': run['solver'].get('seconds'), 'proof_seconds': run['solver'].get('emit_seconds'),
            'verify_seconds': run.get('verify_wall_seconds'), 'proof_nodes': run['solver'].get('proof_nodes'),
            'proof_sha256': (run.get('verify') or {}).get('proof_sha256')}
@@ -121,13 +123,17 @@ def summarize(c, d):
                 if cmv:
                     ag, _ = cmv[0]
                     pos3 = {**pos2, 'history': pos2['history'] + [f[0]]}
-                    af = next(x for g3, x, _ in real_moves(pos3) if g3 == ag)
-                    after.append({'words': f, 'answer': af, 'how': 'certificate'})
+                    rm3 = real_moves(pos3)
+                    af = next(x for g3, x, _ in rm3 if g3 == ag)
+                    after.append({'words': f, 'answer': af, 'how': 'certificate',
+                                  'answer_alternatives': [x for g3, x, c3 in rm3 if g3 != ag and c3 != 'static_lose']})
                 else:
                     after.append({'words': f, 'answer': None, 'how': 'static (the next position is statically won)'})
             elif cls == 'cancelled':
                 pos3 = {**pos2, 'history': pos2['history'] + [f[0]]}
-                after.append({'words': f, 'answer': partner(pos3, gg), 'how': 'pair/loop answer'})
+                pw = partner(pos3, gg)
+                after.append({'words': f, 'answer': pw, 'how': 'pair/loop answer',
+                              'answer_alternatives': [x for g3, x, c3 in real_moves(pos3) if (not pw or pw[0] not in x) and c3 != 'static_lose']})
             else:
                 after.append({'words': f, 'answer': None, 'how': {'static_lose': 'static', 'static_win': 'static?'}.get(cls, cls)})
         rec['after_reply'] = after
@@ -144,12 +150,14 @@ def summarize(c, d):
                     rm = real_moves(pos2)
                     af = next(x for g3, x, _ in rm if g3 == ag)
                     others = [x for g3, x, c3 in rm if g3 != ag and c3 != 'static_lose']
-                    replies.append({'words': f, 'answer': af, 'how': 'certificate', 'answer_alternatives_unconfirmed': len(others)})
+                    replies.append({'words': f, 'answer': af, 'how': 'certificate', 'answer_alternatives': others})
                 else:
                     replies.append({'words': f, 'answer': None, 'how': 'static (the position after it is statically won)'})
             elif cls == 'cancelled':
                 pos2 = {**pos, 'history': pos['history'] + [f[0]]}
-                replies.append({'words': f, 'answer': partner(pos2, gg), 'how': 'pair/loop answer'})
+                pw = partner(pos2, gg)
+                replies.append({'words': f, 'answer': pw, 'how': 'pair/loop answer',
+                                'answer_alternatives': [x for g3, x, c3 in real_moves(pos2) if (not pw or pw[0] not in x) and c3 != 'static_lose']})
             else:
                 replies.append({'words': f, 'answer': None, 'how': {'static_lose': 'static'}.get(cls, cls)})
         rec['replies'] = replies
@@ -164,56 +172,113 @@ def main():
     (out / 'summary.json').write_text(json.dumps({'batch': cases_doc['batch'], 'base_position': cases_doc['base_position'],
                                                   'cases': recs}, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     (out / 'SUMMARY_KO.md').write_text(markdown(cases_doc, recs), encoding='utf-8')
+    opens = open_choices(recs)
+    (out / 'open.json').write_text(json.dumps(opens, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+    (out / 'OPEN_KO.md').write_text(open_markdown(cases_doc, opens), encoding='utf-8')
     print(json.dumps([{k: r.get(k) for k in ('name', 'word', 'accepted', 'verdict')} for r in recs], ensure_ascii=False))
+
+
+def side(hist):
+    """who is to move after `hist`: the player of hist[0] (the presenter of this study's position) or the other."""
+    return '제시자' if len(hist) % 2 == 0 else '받은 쪽'
+
+
+def line(hist, n0):
+    return ' → '.join(hist[n0:]) if len(hist) > n0 else ''
+
+
+def open_choices(recs):
+    """the winning side's choices the certificates did not decide, as positions with their full history"""
+    out = []
+    for r in recs:
+        if not r.get('accepted'):
+            continue
+        h = r['position']['history']
+        if r['mover_result'] == 'W':
+            out.append({'from': r['name'], 'at': h, 'who': side(h), 'choices': [x['words'] for x in r['mover_other'] if x['class'] == 'unconfirmed'],
+                        'kind': 'the winner\'s other moves where the certificate chose ' + '·'.join(r['reply']['words'])})
+            for a in r['after_reply']:
+                if a.get('answer_alternatives'):
+                    at = h + [r['reply']['words'][0], a['words'][0]]
+                    out.append({'from': r['name'], 'at': at, 'who': side(at), 'choices': a['answer_alternatives'],
+                                'kind': 'the winner\'s other answers where the certificate chose ' + '·'.join(a['answer'] or [])})
+        else:
+            for a in r['replies']:
+                if a.get('answer_alternatives'):
+                    at = h + [a['words'][0]]
+                    out.append({'from': r['name'], 'at': at, 'who': side(at), 'choices': a['answer_alternatives'],
+                                'kind': 'the winner\'s other answers where the certificate chose ' + '·'.join(a['answer'] or [])})
+    for o in out:
+        o['ply_of_choice'] = len(o['at']) + 1
+    return out
 
 
 def markdown(doc, recs):
     j = lambda ws: '·'.join(ws) if ws else '-'
     how = {'certificate': '증명서', 'pair/loop answer': '되받기(짝 단어)', 'static': '정적 판정'}
     base = doc['base_position']
-    L = [f"# 후속 갈래: {' → '.join(base['history'])} 뒤 ({doc.get('created', '')})", '',
-         f"질문: {doc['question']}", '',
-         '용어: 제시자 = 식생활을 낸 사람(지금 둘 차례), 받은 쪽 = 활극을 낸 사람. 지는 수 = 그 단어를 낸 제시자 패·받은 쪽 승.', '',
-         '## 판정', '',
-         '| 제시자의 선택 | 판정 | 받은 쪽의 승리수(증명서) | 탐색·증명서 작성·검증(초) | 증명 국면 |', '|---|---|---|---|---:|']
+    n0 = len(base['history'])
+    first = recs[0]['position']['history'] if recs else base['history']
+    L = [f"# 후속 갈래 {doc['batch']}: {' → '.join(base['history'])} 뒤 ({doc.get('created', '')})", '']
+    if doc.get('question'):
+        L += [f"질문: {doc['question']}", '']
+    L += [f"용어: 제시자 = {first[0]}을(를) 낸 사람, 받은 쪽 = 상대. '지는 수'는 그 단어를 낸 사람이 지는 수, '이기는 수'는 이기는 수입니다.", '',
+          '## 판정', '',
+          '| 수순(앞 자리 뒤) | 고른 사람 | 판정 | 이긴 쪽의 다음 수(증명서) | 탐색·증명서 작성·검증(초) | 증명 국면 |', '|---|---|---|---|---|---:|']
     for k, v in doc.get('already_known', {}).items():
-        L.append(f'| {k} | 이기는 수(제시자 승) | - | 기존 증명(묶음 17) | |')
+        L.append(f'| {k} | | 이기는 수 | - | 기존 증명 | |')
     for r in recs:
+        h = r['position']['history']
+        who = side(h[:-1])
+        seq = line(h[:-1], n0) + (' → ' if len(h) - 1 > n0 else '') + j(r['group_words'])
         if not r['accepted']:
-            L.append(f"| {j(r['group_words'])} | 미확정 | | {r['search_seconds']} · - · - | |")
+            t = '미시도(예산 소진)' if r.get('untried') else '시도 후 미확정'
+            s_ = '-' if r.get('untried') else f"{r['search_seconds'] or 0:.1f} · - · -"
+            L.append(f"| {seq} | {who} | {t} | | {s_} | |")
             continue
-        v = '지는 수(제시자 패·받은 쪽 승)' if r['verdict'] == 'lose' else '이기는 수(제시자 승·받은 쪽 패)'
-        rep = j(r['reply']['words']) if r['verdict'] == 'lose' else '(받은 쪽의 모든 수가 짐)'
-        L.append(f"| {j(r['group_words'])} | {v} | {rep} | {r['search_seconds']:.1f} · {r['proof_seconds']:.1f} · {r['verify_seconds']:.1f} | {r['proof_nodes']:,} |")
-    L += ['', '- 같은 줄의 단어(예: 극적·극단적)는 한 묶음입니다. 어느 단어를 써도 같은 국면입니다.',
-          '- 각 판정은 그 국면(앞의 단어와 그 선택까지 모두 쓴 이력)의 v4 증명서가 바꾸지 않은 verify_v4를 수락 조건 모두로 통과한 것입니다.', '']
-    done = [r for r in recs if r['accepted']]
-    nk = len(doc.get('already_known', {}))
-    unconf = sum(sum(1 for x in r.get('mover_other', []) if x['class'] != 'static_lose') for r in done if r['verdict'] == 'lose')
-    L += ['## 완료 상태(`../../TERMS_KO.md`의 네 단계)', '',
-          f"- 이 자리({' → '.join(base['history'])} 뒤, 제시자 차례): 합법적인 묶음 {len(recs) + nk}개 중 {len(done) + nk}개 분류"
-          + (' → **3단계(그 자리의 모든 선택 분류) 완료**' if len(done) == len(recs) else ' → 3단계 미완료'),
-          f"  - 이기는 수 {nk + sum(1 for r in done if r['verdict'] == 'win')}개, 지는 수 {sum(1 for r in done if r['verdict'] == 'lose')}개, 미확정 {len(recs) - len(done)}개",
-          '- 각 선택 뒤 국면: 1단계(승패 확정)·2단계(승리 전략 확보). 증명서가 끝까지의 승리 전략입니다.',
-          f"- 남는 미확인: 지는 수 뒤에서 받은 쪽(이기는 쪽)이 증명과 다르게 둘 수 있는 수 {unconf}묶음(아래 각 절). 그 뒤의 갈래도 같은 식으로 미확인이 남습니다(4단계는 범위를 정해야 함).", '']
+        v = '지는 수' if r['verdict'] == 'lose' else '이기는 수'
+        nxt = j(r['reply']['words']) + f" ({side(h)})" if r['verdict'] == 'lose' else f"({side(h)}의 모든 수가 짐)"
+        L.append(f"| {seq} | {who} | {v} | {nxt} | {r['search_seconds']:.1f} · {r['proof_seconds']:.1f} · {r['verify_seconds']:.1f} | {r['proof_nodes']:,} |")
+    L += ['', '- 같은 칸의 단어(·로 이음)는 한 묶음입니다. 어느 단어를 써도 같은 국면입니다.',
+          '- 각 판정은 그 국면(앞의 모든 단어와 그 선택까지 쓴 이력)의 v4 증명서가 바꾸지 않은 verify_v4를 수락 조건 모두로 통과한 것입니다.', '']
     for r in recs:
         if not r['accepted']:
             continue
-        L += [f"## {j(r['group_words'])}", '']
+        h = r['position']['history']
+        mover, other = side(h), side(h[:-1])
+        L += [f"## {line(h, n0) or j(r['group_words'])}", '']
         if r['verdict'] == 'lose':
-            L += [f"- 받은 쪽의 승리수: **{j(r['reply']['words'])}** (증명서)",
-                  f"- 받은 쪽의 다른 수: " + (', '.join(f"{j(x['words'])}" + (' (정적으로 짐)' if x['class'] == 'static_lose' else '') for x in r['mover_other']) or '없음')
-                  + " → **미확인**(증명이 고르지 않은 이기는 쪽의 다른 선택)",
-                  f"- {j(r['reply']['words'])} 뒤 제시자의 모든 수와 받은 쪽의 응수:", '',
-                  '| 제시자의 수 | 받은 쪽의 응수 | 근거 |', '|---|---|---|']
+            L += [f"- {mover}의 승리수: **{j(r['reply']['words'])}** (증명서)",
+                  f"- {mover}의 다른 수: " + (', '.join(j(x['words']) + (' (정적으로 짐)' if x['class'] == 'static_lose' else '') for x in r['mover_other']) or '없음')
+                  + ' → **미확인**', '',
+                  f"| {j(r['reply']['words'])} 뒤 {other}의 수 | {mover}의 응수 | 근거 | {mover}의 다른 응수(미확인) |", '|---|---|---|---|']
             for a in r['after_reply']:
-                L.append(f"| {j(a['words'])} | {j(a['answer'])} | {how.get(a['how'], a['how'])} |")
-            L += ['', '- 이 응수들도 증명이 고른 수입니다. 받은 쪽의 다른 응수는 미확인입니다.', '']
+                L.append(f"| {j(a['words'])} | {j(a['answer'])} | {how.get(a['how'], a['how'])} | {', '.join(j(x) for x in a.get('answer_alternatives', [])) or '-'} |")
         else:
-            L += ['| 받은 쪽의 수 | 제시자의 응수 | 근거 | 제시자의 다른 응수(미확인) |', '|---|---|---|---:|']
+            L += [f"- {mover}의 모든 수가 집니다(검증된 판정).", '',
+                  f"| {mover}의 수 | {other}의 응수 | 근거 | {other}의 다른 응수(미확인) |", '|---|---|---|---|']
             for a in r['replies']:
-                L.append(f"| {j(a['words'])} | {j(a['answer'])} | {how.get(a['how'], a['how'])} | {a.get('answer_alternatives_unconfirmed', '')} |")
-            L.append('')
+                L.append(f"| {j(a['words'])} | {j(a['answer'])} | {how.get(a['how'], a['how'])} | {', '.join(j(x) for x in a.get('answer_alternatives', [])) or '-'} |")
+        L.append('')
+    return '\n'.join(L) + '\n'
+
+
+def open_markdown(doc, opens):
+    j = lambda ws: '·'.join(ws) if ws else '-'
+    n0 = len(doc['base_position']['history'])
+    L = [f"# 더 깊은 미확인 선택 ({doc['batch']} 뒤에 남은 것)", '',
+         '이기는 쪽이 증명서와 다르게 둘 수 있는 수입니다. 아직 풀지 않았습니다(자동으로 내려가지 않음). 수순은 '
+         + ' → '.join(doc['base_position']['history']) + ' 뒤부터 적습니다.', '']
+    by = {}
+    for o in opens:
+        by.setdefault(o['ply_of_choice'], []).append(o)
+    total = sum(len(o['choices']) for o in opens)
+    L += [f"모두 {total}묶음, 자리 {len(opens)}곳.", '']
+    for ply in sorted(by):
+        L += [f"## {ply}번째 수의 선택 ({sum(len(o['choices']) for o in by[ply])}묶음)", '', '| 자리(앞 수순) | 고르는 사람 | 미확인 선택 |', '|---|---|---|']
+        for o in by[ply]:
+            L.append(f"| {line(o['at'], n0)} | {o['who']} | {', '.join(j(c) for c in o['choices'])} |")
+        L.append('')
     return '\n'.join(L) + '\n'
 
 

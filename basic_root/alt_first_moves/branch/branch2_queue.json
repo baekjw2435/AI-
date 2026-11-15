@@ -1,0 +1,883 @@
+{
+ "batch": "branch2",
+ "from_summary": "../results/branch1/summary.json",
+ "base_position": {
+  "initial_syllable": "식",
+  "history": [
+   "식생활",
+   "활극"
+  ]
+ },
+ "cases": [
+  {
+   "name": "b2_001",
+   "word": "낙승",
+   "group_words": [
+    "낙승"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극락",
+     "낙승"
+    ]
+   },
+   "parent": "b01",
+   "hands_over": "승",
+   "method": "replay",
+   "source": "승",
+   "source_path": "/home/user/AI-/.work/sources/승/proof.v4.gz"
+  },
+  {
+   "name": "b2_002",
+   "word": "낙엽",
+   "group_words": [
+    "낙엽"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극락",
+     "낙엽"
+    ]
+   },
+   "parent": "b01",
+   "hands_over": "엽",
+   "method": "replay",
+   "source": "엽",
+   "source_path": "/home/user/AI-/.work/sources/엽/proof.v4.gz"
+  },
+  {
+   "name": "b2_003",
+   "word": "낙관적",
+   "group_words": [
+    "낙관적",
+    "낙천적"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극락",
+     "낙관적"
+    ]
+   },
+   "parent": "b01",
+   "hands_over": "적",
+   "method": "replay",
+   "source": "적",
+   "source_path": "/home/user/AI-/.work/sources/적/proof.v4.gz"
+  },
+  {
+   "name": "b2_004",
+   "word": "낙향",
+   "group_words": [
+    "낙향"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극락",
+     "낙향"
+    ]
+   },
+   "parent": "b01",
+   "hands_over": "향",
+   "method": "replay",
+   "source": "향",
+   "source_path": "/home/user/AI-/.work/sources/향/proof.v4.gz"
+  },
+  {
+   "name": "b2_005",
+   "word": "약손가락",
+   "group_words": [
+    "약손가락"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극약",
+     "약손가락"
+    ]
+   },
+   "parent": "b02",
+   "hands_over": "낙",
+   "method": "replay",
+   "source": "낙",
+   "source_path": "/home/user/AI-/.work/sources/낙/proof.v4.gz"
+  },
+  {
+   "name": "b2_006",
+   "word": "약력",
+   "group_words": [
+    "약력"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극약",
+     "약력"
+    ]
+   },
+   "parent": "b02",
+   "hands_over": "역",
+   "method": "replay",
+   "source": "역",
+   "source_path": "/home/user/AI-/.work/sources/역/proof.v4.gz"
+  },
+  {
+   "name": "b2_007",
+   "word": "약진",
+   "group_words": [
+    "약진"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극약",
+     "약진"
+    ]
+   },
+   "parent": "b02",
+   "hands_over": "진",
+   "method": "replay",
+   "source": "진",
+   "source_path": "/home/user/AI-/.work/sources/진/proof.v4.gz"
+  },
+  {
+   "name": "b2_008",
+   "word": "약학",
+   "group_words": [
+    "약학"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극약",
+     "약학"
+    ]
+   },
+   "parent": "b02",
+   "hands_over": "학",
+   "method": "replay",
+   "source": "학",
+   "source_path": "/home/user/AI-/.work/sources/학/proof.v4.gz"
+  },
+  {
+   "name": "b2_009",
+   "word": "언어권",
+   "group_words": [
+    "언어권"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극언",
+     "언어권"
+    ]
+   },
+   "parent": "b03",
+   "hands_over": "권",
+   "method": "replay",
+   "source": "권",
+   "source_path": "/home/user/AI-/.work/sources/권/proof.v4.gz"
+  },
+  {
+   "name": "b2_010",
+   "word": "언급",
+   "group_words": [
+    "언급"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극언",
+     "언급"
+    ]
+   },
+   "parent": "b03",
+   "hands_over": "급",
+   "method": "replay",
+   "source": "급",
+   "source_path": "/home/user/AI-/.work/sources/급/proof.v4.gz"
+  },
+  {
+   "name": "b2_011",
+   "word": "언변",
+   "group_words": [
+    "언변"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극언",
+     "언변"
+    ]
+   },
+   "parent": "b03",
+   "hands_over": "변",
+   "method": "replay",
+   "source": "변",
+   "source_path": "/home/user/AI-/.work/sources/변/proof.v4.gz"
+  },
+  {
+   "name": "b2_012",
+   "word": "언어능력",
+   "group_words": [
+    "언어능력"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극언",
+     "언어능력"
+    ]
+   },
+   "parent": "b03",
+   "hands_over": "역",
+   "method": "replay",
+   "source": "역",
+   "source_path": "/home/user/AI-/.work/sources/역/proof.v4.gz"
+  },
+  {
+   "name": "b2_013",
+   "word": "언어적",
+   "group_words": [
+    "언어적"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극언",
+     "언어적"
+    ]
+   },
+   "parent": "b03",
+   "hands_over": "적",
+   "method": "replay",
+   "source": "적",
+   "source_path": "/home/user/AI-/.work/sources/적/proof.v4.gz"
+  },
+  {
+   "name": "b2_014",
+   "word": "언어학",
+   "group_words": [
+    "언어학"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극언",
+     "언어학"
+    ]
+   },
+   "parent": "b03",
+   "hands_over": "학",
+   "method": "replay",
+   "source": "학",
+   "source_path": "/home/user/AI-/.work/sources/학/proof.v4.gz"
+  },
+  {
+   "name": "b2_015",
+   "word": "언어수행",
+   "group_words": [
+    "언어수행",
+    "언행"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극언",
+     "언어수행"
+    ]
+   },
+   "parent": "b03",
+   "hands_over": "행",
+   "method": "replay",
+   "source": "행",
+   "source_path": "/home/user/AI-/.work/sources/행/proof.v4.gz"
+  },
+  {
+   "name": "b2_016",
+   "word": "언어생활",
+   "group_words": [
+    "언어생활"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극언",
+     "언어생활"
+    ]
+   },
+   "parent": "b03",
+   "hands_over": "활",
+   "method": "replay",
+   "source": "활",
+   "source_path": "/home/user/AI-/.work/sources/활/proof.v4.gz"
+  },
+  {
+   "name": "b2_017",
+   "word": "역세권",
+   "group_words": [
+    "역세권"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역세권"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "권",
+   "method": "replay",
+   "source": "권",
+   "source_path": "/home/user/AI-/.work/sources/권/proof.v4.gz"
+  },
+  {
+   "name": "b2_018",
+   "word": "역할극",
+   "group_words": [
+    "역할극"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역할극"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "극",
+   "method": "replay",
+   "source": "극",
+   "source_path": "/home/user/AI-/.work/sources/극/proof.v4.gz"
+  },
+  {
+   "name": "b2_019",
+   "word": "역기능",
+   "group_words": [
+    "역기능"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역기능"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "능",
+   "method": "replay",
+   "source": "능",
+   "source_path": "/home/user/AI-/.work/sources/능/proof.v4.gz"
+  },
+  {
+   "name": "b2_020",
+   "word": "역병",
+   "group_words": [
+    "역병"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역병"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "병",
+   "method": "replay",
+   "source": "병",
+   "source_path": "/home/user/AI-/.work/sources/병/proof.v4.gz"
+  },
+  {
+   "name": "b2_021",
+   "word": "역순",
+   "group_words": [
+    "역순"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역순"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "순",
+   "method": "replay",
+   "source": "순",
+   "source_path": "/home/user/AI-/.work/sources/순/proof.v4.gz"
+  },
+  {
+   "name": "b2_022",
+   "word": "역습",
+   "group_words": [
+    "역습"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역습"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "습",
+   "method": "replay",
+   "source": "습",
+   "source_path": "/home/user/AI-/.work/table_guide/습/proof.v4.gz"
+  },
+  {
+   "name": "b2_023",
+   "word": "역전승",
+   "group_words": [
+    "역전승"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역전승"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "승",
+   "method": "replay",
+   "source": "승",
+   "source_path": "/home/user/AI-/.work/sources/승/proof.v4.gz"
+  },
+  {
+   "name": "b2_024",
+   "word": "역사적",
+   "group_words": [
+    "역사적",
+    "역설적",
+    "역적",
+    "역동적"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역사적"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "적",
+   "method": "replay",
+   "source": "적",
+   "source_path": "/home/user/AI-/.work/sources/적/proof.v4.gz"
+  },
+  {
+   "name": "b2_025",
+   "word": "역풍",
+   "group_words": [
+    "역풍"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역풍"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "풍",
+   "method": "replay",
+   "source": "풍",
+   "source_path": "/home/user/AI-/.work/sources/풍/proof.v4.gz"
+  },
+  {
+   "name": "b2_026",
+   "word": "역학",
+   "group_words": [
+    "역학",
+    "역사학"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역학"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "학",
+   "method": "replay",
+   "source": "학",
+   "source_path": "/home/user/AI-/.work/sources/학/proof.v4.gz"
+  },
+  {
+   "name": "b2_027",
+   "word": "역행",
+   "group_words": [
+    "역행"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역행"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "행",
+   "method": "replay",
+   "source": "행",
+   "source_path": "/home/user/AI-/.work/sources/행/proof.v4.gz"
+  },
+  {
+   "name": "b2_028",
+   "word": "역방향",
+   "group_words": [
+    "역방향"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역방향"
+    ]
+   },
+   "parent": "b04",
+   "hands_over": "향",
+   "method": "replay",
+   "source": "향",
+   "source_path": "/home/user/AI-/.work/sources/향/proof.v4.gz"
+  },
+  {
+   "name": "b2_029",
+   "word": "적격",
+   "group_words": [
+    "적격"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적격"
+    ]
+   },
+   "parent": "b05",
+   "hands_over": "격",
+   "method": "replay",
+   "source": "격",
+   "source_path": "/home/user/AI-/.work/sources/격/proof.v4.gz"
+  },
+  {
+   "name": "b2_030",
+   "word": "적군",
+   "group_words": [
+    "적군"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적군"
+    ]
+   },
+   "parent": "b05",
+   "hands_over": "군",
+   "method": "replay",
+   "source": "군",
+   "source_path": "/home/user/AI-/.work/sources/군/proof.v4.gz"
+  },
+  {
+   "name": "b2_031",
+   "word": "적극",
+   "group_words": [
+    "적극"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적극"
+    ]
+   },
+   "parent": "b05",
+   "hands_over": "극",
+   "method": "replay",
+   "source": "극",
+   "source_path": "/home/user/AI-/.work/sources/극/proof.v4.gz"
+  },
+  {
+   "name": "b2_032",
+   "word": "적법",
+   "group_words": [
+    "적법"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적법"
+    ]
+   },
+   "parent": "b05",
+   "hands_over": "법",
+   "method": "replay",
+   "source": "법",
+   "source_path": "/home/user/AI-/.work/sources/법/proof.v4.gz"
+  },
+  {
+   "name": "b2_033",
+   "word": "적삼",
+   "group_words": [
+    "적삼"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적삼"
+    ]
+   },
+   "parent": "b05",
+   "hands_over": "삼",
+   "method": "replay",
+   "source": "삼",
+   "source_path": "/home/user/AI-/.work/sources/삼/proof.v4.gz"
+  },
+  {
+   "name": "b2_034",
+   "word": "적응력",
+   "group_words": [
+    "적응력"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적응력"
+    ]
+   },
+   "parent": "b05",
+   "hands_over": "역",
+   "method": "replay",
+   "source": "역",
+   "source_path": "/home/user/AI-/.work/sources/역/proof.v4.gz"
+  },
+  {
+   "name": "b2_035",
+   "word": "적중률",
+   "group_words": [
+    "적중률"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적중률"
+    ]
+   },
+   "parent": "b05",
+   "hands_over": "율",
+   "method": "replay",
+   "source": "율",
+   "source_path": "/home/user/AI-/.work/sources/율/proof.v4.gz"
+  },
+  {
+   "name": "b2_036",
+   "word": "적극적",
+   "group_words": [
+    "적극적",
+    "적대적"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적극적"
+    ]
+   },
+   "parent": "b05",
+   "hands_over": "적",
+   "method": "replay",
+   "source": "적",
+   "source_path": "/home/user/AI-/.work/sources/적/proof.v4.gz"
+  },
+  {
+   "name": "b2_037",
+   "word": "적자생존",
+   "group_words": [
+    "적자생존"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적자생존"
+    ]
+   },
+   "parent": "b05",
+   "hands_over": "존",
+   "method": "table",
+   "guide_book": "kce6dc874",
+   "guide_proof": "jon",
+   "expect": "L",
+   "guide": "/home/user/AI-/.work/table_guide/book_kce6dc874"
+  },
+  {
+   "name": "b2_038",
+   "word": "적진",
+   "group_words": [
+    "적진"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적진"
+    ]
+   },
+   "parent": "b05",
+   "hands_over": "진",
+   "method": "replay",
+   "source": "진",
+   "source_path": "/home/user/AI-/.work/sources/진/proof.v4.gz"
+  },
+  {
+   "name": "b2_039",
+   "word": "적합",
+   "group_words": [
+    "적합"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적합"
+    ]
+   },
+   "parent": "b05",
+   "hands_over": "합",
+   "method": "replay",
+   "source": "합",
+   "source_path": "/home/user/AI-/.work/sources/합/proof.v4.gz"
+  },
+  {
+   "name": "b2_040",
+   "word": "찬탄",
+   "group_words": [
+    "찬탄"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극찬",
+     "찬탄"
+    ]
+   },
+   "parent": "b06",
+   "hands_over": "탄",
+   "method": "replay",
+   "source": "탄",
+   "source_path": "/home/user/AI-/.work/sources/탄/proof.v4.gz"
+  },
+  {
+   "name": "b2_041",
+   "word": "찬합",
+   "group_words": [
+    "찬합"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극찬",
+     "찬합"
+    ]
+   },
+   "parent": "b06",
+   "hands_over": "합",
+   "method": "replay",
+   "source": "합",
+   "source_path": "/home/user/AI-/.work/sources/합/proof.v4.gz"
+  }
+ ]
+}
