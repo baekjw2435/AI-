@@ -15,6 +15,17 @@
     "극락"
    ],
    "accepted": true,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극락"
+    ]
+   },
+   "parent": null,
+   "untried": false,
+   "allotted_seconds": null,
    "search_seconds": 0.256205,
    "proof_seconds": 0.479239,
    "verify_seconds": 2.15,
@@ -65,7 +76,43 @@
       "적색",
       "적회색"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적자생존"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
     }
    ]
   },
@@ -76,6 +123,17 @@
     "극약"
    ],
    "accepted": true,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극약"
+    ]
+   },
+   "parent": null,
+   "untried": false,
+   "allotted_seconds": null,
    "search_seconds": 206.56204,
    "proof_seconds": 10.674086,
    "verify_seconds": 40.05,
@@ -125,7 +183,17 @@
      "answer": [
       "권능"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "권역",
+       "권력"
+      ],
+      [
+       "권위적",
+       "권위주의적"
+      ]
+     ]
     },
     {
      "words": [
@@ -134,7 +202,22 @@
      "answer": [
       "낙엽"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "낙승"
+      ],
+      [
+       "낙농업"
+      ],
+      [
+       "낙관적",
+       "낙천적"
+      ],
+      [
+       "낙향"
+      ]
+     ]
     },
     {
      "words": [
@@ -143,7 +226,25 @@
      "answer": [
       "법칙"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "법규"
+      ],
+      [
+       "법명"
+      ],
+      [
+       "법률"
+      ],
+      [
+       "법적",
+       "법률적"
+      ],
+      [
+       "법학"
+      ]
+     ]
     },
     {
      "words": [
@@ -152,7 +253,45 @@
      "answer": [
       "순기능"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "순교"
+      ],
+      [
+       "순위권"
+      ],
+      [
+       "순백색"
+      ],
+      [
+       "순발력"
+      ],
+      [
+       "순간적",
+       "순리적",
+       "순종적",
+       "순차적"
+      ],
+      [
+       "순직"
+      ],
+      [
+       "순진"
+      ],
+      [
+       "순풍"
+      ],
+      [
+       "순항"
+      ],
+      [
+       "순행"
+      ],
+      [
+       "순환"
+      ]
+     ]
     },
     {
      "words": [
@@ -161,7 +300,40 @@
      "answer": [
       "증식"
      ],
-     "how": "pair/loop answer"
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "증후군"
+      ],
+      [
+       "증권"
+      ],
+      [
+       "증명"
+      ],
+      [
+       "증언"
+      ],
+      [
+       "증가율"
+      ],
+      [
+       "증진",
+       "증명사진"
+      ],
+      [
+       "증축"
+      ],
+      [
+       "증편"
+      ],
+      [
+       "증폭"
+      ],
+      [
+       "증표"
+      ]
+     ]
     },
     {
      "words": [
@@ -170,7 +342,85 @@
      "answer": [
       "진갈색"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "진갑"
+      ],
+      [
+       "진격"
+      ],
+      [
+       "진퇴유곡",
+       "진혼곡"
+      ],
+      [
+       "진군"
+      ],
+      [
+       "진출권"
+      ],
+      [
+       "진급"
+      ],
+      [
+       "진맥"
+      ],
+      [
+       "진압"
+      ],
+      [
+       "진언"
+      ],
+      [
+       "진력"
+      ],
+      [
+       "진학률"
+      ],
+      [
+       "진취적",
+       "진보적"
+      ],
+      [
+       "진즉"
+      ],
+      [
+       "진폐증"
+      ],
+      [
+       "진수성찬"
+      ],
+      [
+       "진흙탕",
+       "진탕"
+      ],
+      [
+       "진퇴"
+      ],
+      [
+       "진폭"
+      ],
+      [
+       "진도표"
+      ],
+      [
+       "진학"
+      ],
+      [
+       "진행"
+      ],
+      [
+       "진분홍",
+       "진홍"
+      ],
+      [
+       "진두지휘"
+      ],
+      [
+       "진흥"
+      ]
+     ]
     },
     {
      "words": [
@@ -179,7 +429,25 @@
      "answer": [
       "충언"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "충격"
+      ],
+      [
+       "충돌"
+      ],
+      [
+       "충격적",
+       "충동적"
+      ],
+      [
+       "충절"
+      ],
+      [
+       "충혈"
+      ]
+     ]
     },
     {
      "words": [
@@ -188,7 +456,12 @@
      "answer": [
       "탁탁"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "탁발승"
+      ]
+     ]
     },
     {
      "words": [
@@ -197,7 +470,35 @@
      "answer": [
       "표식"
      ],
-     "how": "pair/loop answer"
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "표명"
+      ],
+      [
+       "표주박"
+      ],
+      [
+       "표기법",
+       "표현법"
+      ],
+      [
+       "표현력"
+      ],
+      [
+       "표면적",
+       "표적"
+      ],
+      [
+       "표절"
+      ],
+      [
+       "표준"
+      ],
+      [
+       "표징"
+      ]
+     ]
     },
     {
      "words": [
@@ -206,7 +507,49 @@
      "answer": [
       "학식"
      ],
-     "how": "pair/loop answer"
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "학교"
+      ],
+      [
+       "학군"
+      ],
+      [
+       "학급"
+      ],
+      [
+       "학맥"
+      ],
+      [
+       "학습"
+      ],
+      [
+       "학업"
+      ],
+      [
+       "학력"
+      ],
+      [
+       "학구적",
+       "학문적",
+       "학술적",
+       "학자적",
+       "학적"
+      ],
+      [
+       "학생증"
+      ],
+      [
+       "학칙"
+      ],
+      [
+       "학풍"
+      ],
+      [
+       "학교생활"
+      ]
+     ]
     }
    ]
   },
@@ -217,6 +560,17 @@
     "극언"
    ],
    "accepted": true,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극언"
+    ]
+   },
+   "parent": null,
+   "untried": false,
+   "allotted_seconds": null,
    "search_seconds": 163.562337,
    "proof_seconds": 7.513892,
    "verify_seconds": 36.08,
@@ -289,7 +643,22 @@
      "answer": [
       "낙농업"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "낙승"
+      ],
+      [
+       "낙엽"
+      ],
+      [
+       "낙관적",
+       "낙천적"
+      ],
+      [
+       "낙향"
+      ]
+     ]
     },
     {
      "words": [
@@ -300,7 +669,36 @@
      "answer": [
       "식순"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "식권"
+      ],
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식충"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ]
+     ]
     },
     {
      "words": [
@@ -309,7 +707,49 @@
      "answer": [
       "역습"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "역세권"
+      ],
+      [
+       "역할극"
+      ],
+      [
+       "역기능"
+      ],
+      [
+       "역병"
+      ],
+      [
+       "역순"
+      ],
+      [
+       "역전승"
+      ],
+      [
+       "역사적",
+       "역설적",
+       "역적",
+       "역동적"
+      ],
+      [
+       "역풍"
+      ],
+      [
+       "역학",
+       "역사학"
+      ],
+      [
+       "역할"
+      ],
+      [
+       "역행"
+      ],
+      [
+       "역방향"
+      ]
+     ]
     },
     {
      "words": [
@@ -319,7 +759,84 @@
       "진퇴유곡",
       "진혼곡"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "진갑"
+      ],
+      [
+       "진격"
+      ],
+      [
+       "진군"
+      ],
+      [
+       "진출권"
+      ],
+      [
+       "진급"
+      ],
+      [
+       "진맥"
+      ],
+      [
+       "진갈색"
+      ],
+      [
+       "진압"
+      ],
+      [
+       "진언"
+      ],
+      [
+       "진력"
+      ],
+      [
+       "진학률"
+      ],
+      [
+       "진취적",
+       "진보적"
+      ],
+      [
+       "진즉"
+      ],
+      [
+       "진폐증"
+      ],
+      [
+       "진수성찬"
+      ],
+      [
+       "진흙탕",
+       "진탕"
+      ],
+      [
+       "진퇴"
+      ],
+      [
+       "진폭"
+      ],
+      [
+       "진도표"
+      ],
+      [
+       "진학"
+      ],
+      [
+       "진행"
+      ],
+      [
+       "진분홍",
+       "진홍"
+      ],
+      [
+       "진두지휘"
+      ],
+      [
+       "진흥"
+      ]
+     ]
     },
     {
      "words": [
@@ -328,7 +845,49 @@
      "answer": [
       "학업"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "학교"
+      ],
+      [
+       "학군"
+      ],
+      [
+       "학급"
+      ],
+      [
+       "학맥"
+      ],
+      [
+       "학습"
+      ],
+      [
+       "학식"
+      ],
+      [
+       "학력"
+      ],
+      [
+       "학구적",
+       "학문적",
+       "학술적",
+       "학자적",
+       "학적"
+      ],
+      [
+       "학생증"
+      ],
+      [
+       "학칙"
+      ],
+      [
+       "학풍"
+      ],
+      [
+       "학교생활"
+      ]
+     ]
     }
    ]
   },
@@ -339,6 +898,17 @@
     "극력"
    ],
    "accepted": true,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력"
+    ]
+   },
+   "parent": null,
+   "untried": false,
+   "allotted_seconds": null,
    "search_seconds": 132.321162,
    "proof_seconds": 8.379525,
    "verify_seconds": 33.95,
@@ -438,7 +1008,17 @@
      "answer": [
       "권능"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "권역",
+       "권력"
+      ],
+      [
+       "권위적",
+       "권위주의적"
+      ]
+     ]
     },
     {
      "words": [
@@ -447,7 +1027,31 @@
      "answer": [
       "야영객"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "야간학교"
+      ],
+      [
+       "야권"
+      ],
+      [
+       "야식"
+      ],
+      [
+       "야만적",
+       "야성적"
+      ],
+      [
+       "야맹증"
+      ],
+      [
+       "야학"
+      ],
+      [
+       "야합"
+      ]
+     ]
     },
     {
      "words": [
@@ -456,7 +1060,15 @@
      "answer": [
       "율격"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "율법"
+      ],
+      [
+       "율동적"
+      ]
+     ]
     },
     {
      "words": [
@@ -465,7 +1077,40 @@
      "answer": [
       "증표"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "증후군"
+      ],
+      [
+       "증권"
+      ],
+      [
+       "증명"
+      ],
+      [
+       "증식"
+      ],
+      [
+       "증언"
+      ],
+      [
+       "증가율"
+      ],
+      [
+       "증진",
+       "증명사진"
+      ],
+      [
+       "증축"
+      ],
+      [
+       "증편"
+      ],
+      [
+       "증폭"
+      ]
+     ]
     }
    ]
   },
@@ -477,6 +1122,17 @@
     "극단적"
    ],
    "accepted": true,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적"
+    ]
+   },
+   "parent": null,
+   "untried": false,
+   "allotted_seconds": null,
    "search_seconds": 0.274632,
    "proof_seconds": 0.521984,
    "verify_seconds": 2.36,
@@ -569,7 +1225,19 @@
      "answer": [
       "맹활약"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "맹공격",
+       "맹추격"
+      ],
+      [
+       "맹목적"
+      ],
+      [
+       "맹탕"
+      ]
+     ]
     },
     {
      "words": [
@@ -578,7 +1246,12 @@
      "answer": [
       "색칠"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색맹"
+      ]
+     ]
     },
     {
      "words": [
@@ -587,7 +1260,15 @@
      "answer": [
       "칠십"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칠순"
+      ],
+      [
+       "칠흑"
+      ]
+     ]
     }
    ]
   },
@@ -598,6 +1279,17 @@
     "극찬"
    ],
    "accepted": true,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극찬"
+    ]
+   },
+   "parent": null,
+   "untried": false,
+   "allotted_seconds": null,
    "search_seconds": 0.538213,
    "proof_seconds": 0.883479,
    "verify_seconds": 3.73,
@@ -633,7 +1325,61 @@
      "answer": [
       "명색"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "명곡"
+      ],
+      [
+       "명랑"
+      ],
+      [
+       "명맥"
+      ],
+      [
+       "명멸"
+      ],
+      [
+       "명상법"
+      ],
+      [
+       "명승"
+      ],
+      [
+       "명약"
+      ],
+      [
+       "명언"
+      ],
+      [
+       "명운"
+      ],
+      [
+       "명상적",
+       "명승고적",
+       "명시적"
+      ],
+      [
+       "명절",
+       "명사절"
+      ],
+      [
+       "명란젓"
+      ],
+      [
+       "명증"
+      ],
+      [
+       "명예퇴직",
+       "명예직"
+      ],
+      [
+       "명칭"
+      ],
+      [
+       "명퇴"
+      ]
+     ]
     },
     {
      "words": [
@@ -642,7 +1388,33 @@
      "answer": [
       "박색"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "박멸"
+      ],
+      [
+       "박명"
+      ],
+      [
+       "박박"
+      ],
+      [
+       "박학다식"
+      ],
+      [
+       "박약"
+      ],
+      [
+       "박력"
+      ],
+      [
+       "박하사탕"
+      ],
+      [
+       "박학"
+      ]
+     ]
     },
     {
      "words": [
@@ -652,7 +1424,25 @@
      "answer": [
       "법칙"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "법규"
+      ],
+      [
+       "법명"
+      ],
+      [
+       "법률"
+      ],
+      [
+       "법적",
+       "법률적"
+      ],
+      [
+       "법학"
+      ]
+     ]
     },
     {
      "words": [
@@ -661,7 +1451,36 @@
      "answer": [
       "식단표"
      ],
-     "how": "pair/loop answer"
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "식권"
+      ],
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식충"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식물학"
+      ]
+     ]
     },
     {
      "words": [
@@ -670,7 +1489,49 @@
      "answer": [
       "역습"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "역세권"
+      ],
+      [
+       "역할극"
+      ],
+      [
+       "역기능"
+      ],
+      [
+       "역병"
+      ],
+      [
+       "역순"
+      ],
+      [
+       "역전승"
+      ],
+      [
+       "역사적",
+       "역설적",
+       "역적",
+       "역동적"
+      ],
+      [
+       "역풍"
+      ],
+      [
+       "역학",
+       "역사학"
+      ],
+      [
+       "역할"
+      ],
+      [
+       "역행"
+      ],
+      [
+       "역방향"
+      ]
+     ]
     },
     {
      "words": [
@@ -682,7 +1543,43 @@
       "적색",
       "적회색"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적자생존"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
     },
     {
      "words": [
@@ -691,7 +1588,46 @@
      "answer": [
       "절찬"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "절교"
+      ],
+      [
+       "절규"
+      ],
+      [
+       "절룩절룩"
+      ],
+      [
+       "절명"
+      ],
+      [
+       "절벽"
+      ],
+      [
+       "절식"
+      ],
+      [
+       "절약"
+      ],
+      [
+       "절대적",
+       "절망적"
+      ],
+      [
+       "절절"
+      ],
+      [
+       "절도죄"
+      ],
+      [
+       "절충"
+      ],
+      [
+       "절편"
+      ]
+     ]
     },
     {
      "words": [
@@ -700,7 +1636,20 @@
      "answer": [
       "준칙"
      ],
-     "how": "certificate"
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "준법"
+      ],
+      [
+       "준결승",
+       "준우승",
+       "준준결승"
+      ],
+      [
+       "준공식"
+      ]
+     ]
     },
     {
      "words": [
@@ -709,7 +1658,27 @@
      "answer": [
       "징표"
      ],
-     "how": "pair/loop answer"
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "징세권"
+      ],
+      [
+       "징검돌"
+      ],
+      [
+       "징병"
+      ],
+      [
+       "징역"
+      ],
+      [
+       "징벌적"
+      ],
+      [
+       "징징"
+      ]
+     ]
     }
    ]
   }
