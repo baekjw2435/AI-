@@ -91,7 +91,7 @@ def summarize(c, d):
     rec = {'name': c['name'], 'word': c['word'], 'group_words': c['group_words'], 'accepted': run.get('accepted', False),
            'position': c['position'], 'parent': c.get('parent'), 'untried': run.get('untried', False),
            'allotted_seconds': run.get('allotted_seconds'),
-           'search_seconds': run.get('solver', {}).get('seconds'), 'proof_seconds': run.get('solver', {}).get('emit_seconds'),
+           'search_seconds': run.get('solver', {}).get('total_search_seconds') or run.get('solver', {}).get('seconds'), 'this_run_search_seconds': run.get('solver', {}).get('seconds'), 'earlier_runs': run.get('earlier_runs', 0), 'proof_seconds': run.get('solver', {}).get('emit_seconds'),
            'verify_seconds': run.get('verify_wall_seconds'), 'proof_nodes': run.get('solver', {}).get('proof_nodes'),
            'proof_sha256': (run.get('verify') or {}).get('proof_sha256')}
     if not rec['accepted']:

@@ -28,6 +28,8 @@
    "untried": false,
    "allotted_seconds": 600.0,
    "search_seconds": 16.15047,
+   "this_run_search_seconds": 16.15047,
+   "earlier_runs": 0,
    "proof_seconds": 0.204272,
    "verify_seconds": 0.93,
    "proof_nodes": 31516,
@@ -208,6 +210,8 @@
    "untried": false,
    "allotted_seconds": 600.0,
    "search_seconds": 0.650261,
+   "this_run_search_seconds": 0.650261,
+   "earlier_runs": 0,
    "proof_seconds": 1.073218,
    "verify_seconds": 4.26,
    "proof_nodes": 111599,
@@ -285,6 +289,8 @@
    "untried": false,
    "allotted_seconds": 599.0,
    "search_seconds": 0.479207,
+   "this_run_search_seconds": 0.479207,
+   "earlier_runs": 0,
    "proof_seconds": 0.714468,
    "verify_seconds": 3.33,
    "proof_nodes": 99034,
@@ -443,6 +449,8 @@
    "untried": false,
    "allotted_seconds": 600.0,
    "search_seconds": 0.006561,
+   "this_run_search_seconds": 0.006561,
+   "earlier_runs": 0,
    "proof_seconds": 0.022405,
    "verify_seconds": 0.11,
    "proof_nodes": 2129,
@@ -550,6 +558,8 @@
    "untried": false,
    "allotted_seconds": 600.0,
    "search_seconds": 0.470103,
+   "this_run_search_seconds": 0.470103,
+   "earlier_runs": 0,
    "proof_seconds": 0.748336,
    "verify_seconds": 3.3,
    "proof_nodes": 96923,
@@ -659,6 +669,8 @@
    "untried": false,
    "allotted_seconds": 597.864,
    "search_seconds": 89.441152,
+   "this_run_search_seconds": 89.441152,
+   "earlier_runs": 0,
    "proof_seconds": 2.056391,
    "verify_seconds": 10.09,
    "proof_nodes": 293378,
@@ -1006,6 +1018,8 @@
    "untried": false,
    "allotted_seconds": 599.53,
    "search_seconds": 0.572857,
+   "this_run_search_seconds": 0.572857,
+   "earlier_runs": 0,
    "proof_seconds": 0.876963,
    "verify_seconds": 4.16,
    "proof_nodes": 105564,
@@ -1243,6 +1257,8 @@
    "untried": false,
    "allotted_seconds": 600.0,
    "search_seconds": 0.263096,
+   "this_run_search_seconds": 0.263096,
+   "earlier_runs": 0,
    "proof_seconds": 0.372214,
    "verify_seconds": 1.66,
    "proof_nodes": 46943,
@@ -1403,6 +1419,8 @@
    "untried": false,
    "allotted_seconds": 582.807,
    "search_seconds": 44.062878,
+   "this_run_search_seconds": 44.062878,
+   "earlier_runs": 0,
    "proof_seconds": 2.457343,
    "verify_seconds": 11.06,
    "proof_nodes": 293441,
@@ -1900,6 +1918,8 @@
    "untried": false,
    "allotted_seconds": 599.737,
    "search_seconds": 0.010291,
+   "this_run_search_seconds": 0.010291,
+   "earlier_runs": 0,
    "proof_seconds": 0.040475,
    "verify_seconds": 0.17,
    "proof_nodes": 3813,
@@ -2053,6 +2073,8 @@
    "untried": false,
    "allotted_seconds": 599.727,
    "search_seconds": 49.681856,
+   "this_run_search_seconds": 49.681856,
+   "earlier_runs": 0,
    "proof_seconds": 0.700212,
    "verify_seconds": 3.22,
    "proof_nodes": 99545,
@@ -2209,6 +2231,8 @@
    "untried": false,
    "allotted_seconds": 600.0,
    "search_seconds": 31.882858,
+   "this_run_search_seconds": 31.882858,
+   "earlier_runs": 0,
    "proof_seconds": 0.302586,
    "verify_seconds": 1.36,
    "proof_nodes": 44702,
@@ -2556,6 +2580,8 @@
    "untried": false,
    "allotted_seconds": 488.788,
    "search_seconds": 0.43789,
+   "this_run_search_seconds": 0.43789,
+   "earlier_runs": 0,
    "proof_seconds": 0.734704,
    "verify_seconds": 3.41,
    "proof_nodes": 98574,
@@ -2714,6 +2740,8 @@
    "untried": false,
    "allotted_seconds": 488.351,
    "search_seconds": 0.221476,
+   "this_run_search_seconds": 0.221476,
+   "earlier_runs": 0,
    "proof_seconds": 0.385863,
    "verify_seconds": 1.46,
    "proof_nodes": 47136,
@@ -2875,6 +2903,8 @@
    "untried": false,
    "allotted_seconds": 488.129,
    "search_seconds": 0.078037,
+   "this_run_search_seconds": 0.078037,
+   "earlier_runs": 0,
    "proof_seconds": 0.343616,
    "verify_seconds": 1.5,
    "proof_nodes": 44409,
@@ -3031,6 +3061,8 @@
    "untried": false,
    "allotted_seconds": 488.051,
    "search_seconds": 118.624185,
+   "this_run_search_seconds": 118.624185,
+   "earlier_runs": 0,
    "proof_seconds": 11.408066,
    "verify_seconds": 48.22,
    "proof_nodes": 1412270,
@@ -3211,6 +3243,8 @@
    "untried": false,
    "allotted_seconds": 508.423,
    "search_seconds": 239.05429,
+   "this_run_search_seconds": 239.05429,
+   "earlier_runs": 0,
    "proof_seconds": 3.359092,
    "verify_seconds": 16.06,
    "proof_nodes": 427091,
@@ -3434,6 +3468,8 @@
    "untried": false,
    "allotted_seconds": 568.117,
    "search_seconds": 12.418885,
+   "this_run_search_seconds": 12.418885,
+   "earlier_runs": 0,
    "proof_seconds": 1.57562,
    "verify_seconds": 6.15,
    "proof_nodes": 197526,
@@ -3529,6 +3565,8 @@
    "untried": false,
    "allotted_seconds": 555.698,
    "search_seconds": 59.926582,
+   "this_run_search_seconds": 59.926582,
+   "earlier_runs": 0,
    "proof_seconds": 1.257062,
    "verify_seconds": 6.35,
    "proof_nodes": 193943,
@@ -3698,6 +3736,8 @@
    "untried": false,
    "allotted_seconds": 495.772,
    "search_seconds": 0.008699,
+   "this_run_search_seconds": 0.008699,
+   "earlier_runs": 0,
    "proof_seconds": 0.039188,
    "verify_seconds": 0.1,
    "proof_nodes": 3816,
@@ -3836,6 +3876,8 @@
    "untried": false,
    "allotted_seconds": 495.763,
    "search_seconds": 18.348383,
+   "this_run_search_seconds": 18.348383,
+   "earlier_runs": 0,
    "proof_seconds": 0.891644,
    "verify_seconds": 4.67,
    "proof_nodes": 135244,
@@ -3994,6 +4036,8 @@
    "untried": false,
    "allotted_seconds": 600.0,
    "search_seconds": 224.082019,
+   "this_run_search_seconds": 224.082019,
+   "earlier_runs": 0,
    "proof_seconds": 4.405259,
    "verify_seconds": 19.18,
    "proof_nodes": 551787,
@@ -4255,8 +4299,10 @@
    },
    "parent": "b04",
    "untried": false,
-   "allotted_seconds": 246.841,
-   "search_seconds": 246.842101,
+   "allotted_seconds": 353.158,
+   "search_seconds": 599.998956,
+   "this_run_search_seconds": 353.158956,
+   "earlier_runs": 1,
    "proof_seconds": 0.0,
    "verify_seconds": null,
    "proof_nodes": 0,
@@ -4286,6 +4332,8 @@
    "untried": false,
    "allotted_seconds": 269.369,
    "search_seconds": 265.470523,
+   "this_run_search_seconds": 265.470523,
+   "earlier_runs": 0,
    "proof_seconds": 8.484198,
    "verify_seconds": 30.72,
    "proof_nodes": 937125,
@@ -4404,8 +4452,10 @@
    },
    "parent": "b04",
    "untried": false,
-   "allotted_seconds": 375.918,
-   "search_seconds": 375.919729,
+   "allotted_seconds": 224.08,
+   "search_seconds": 600.000315,
+   "this_run_search_seconds": 224.080315,
+   "earlier_runs": 1,
    "proof_seconds": 0.0,
    "verify_seconds": null,
    "proof_nodes": 0,
@@ -4419,7 +4469,7 @@
     "역학",
     "역사학"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "식",
     "history": [
@@ -4430,14 +4480,150 @@
     ]
    },
    "parent": "b04",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "untried": false,
+   "allotted_seconds": 600.0,
+   "search_seconds": 258.718225,
+   "this_run_search_seconds": 258.718225,
+   "earlier_runs": 0,
+   "proof_seconds": 3.524438,
+   "verify_seconds": 12.5,
+   "proof_nodes": 375519,
+   "proof_sha256": "c8f0a57163450c652e64e4dd596feafa66adc961a627a327c0f0978e92ee7b4f",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 618,
+    "words": [
+     "학업"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "학교"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학급"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학맥"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학습"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학식"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학구적",
+      "학문적",
+      "학술적",
+      "학자적",
+      "학적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학생증"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학칙"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학풍"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학교생활"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "업적"
+     ],
+     "answer": [
+      "적자생존"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적갈색",
+       "적색",
+       "적회색"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "b2_027",
@@ -4456,12 +4642,14 @@
     ]
    },
    "parent": "b04",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "proof_seconds": null,
+   "untried": false,
+   "allotted_seconds": 600.0,
+   "search_seconds": 600.00024,
+   "this_run_search_seconds": 600.00024,
+   "earlier_runs": 0,
+   "proof_seconds": 0.0,
    "verify_seconds": null,
-   "proof_nodes": null,
+   "proof_nodes": 0,
    "proof_sha256": null,
    "verdict": "unknown"
   },
@@ -4471,7 +4659,7 @@
    "group_words": [
     "역방향"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "식",
     "history": [
@@ -4482,14 +4670,163 @@
     ]
    },
    "parent": "b04",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "untried": false,
+   "allotted_seconds": 363.044,
+   "search_seconds": 239.668739,
+   "this_run_search_seconds": 239.668739,
+   "earlier_runs": 0,
+   "proof_seconds": 10.603908,
+   "verify_seconds": 44.41,
+   "proof_nodes": 1142863,
+   "proof_sha256": "a48a9aa94104210de94d4fd20737116d0df12dd92d652060e7a485b5856153bf",
+   "mover_result": "L",
+   "verdict": "win",
+   "replies": [
+    {
+     "words": [
+      "향락"
+     ],
+     "answer": [
+      "낙향"
+     ],
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "낙승"
+      ],
+      [
+       "낙농업"
+      ],
+      [
+       "낙엽"
+      ],
+      [
+       "낙관적",
+       "낙천적"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "향수병"
+     ],
+     "answer": [
+      "병존"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "병균",
+       "병원균"
+      ],
+      [
+       "병뚜껑"
+      ],
+      [
+       "병명"
+      ],
+      [
+       "병법"
+      ],
+      [
+       "병색",
+       "병아리색"
+      ],
+      [
+       "병역",
+       "병력"
+      ],
+      [
+       "병구완"
+      ],
+      [
+       "병적"
+      ],
+      [
+       "병졸"
+      ],
+      [
+       "병풍"
+      ],
+      [
+       "병리학"
+      ],
+      [
+       "병합"
+      ],
+      [
+       "병행"
+      ],
+      [
+       "병환"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "향토색"
+     ],
+     "answer": [
+      "색맹"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색색"
+      ],
+      [
+       "색칠"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "향락적"
+     ],
+     "answer": [
+      "적자생존"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적갈색",
+       "적색",
+       "적회색"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "b2_029",
@@ -4508,12 +4845,14 @@
     ]
    },
    "parent": "b05",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "proof_seconds": null,
+   "untried": false,
+   "allotted_seconds": 123.374,
+   "search_seconds": 123.375256,
+   "this_run_search_seconds": 123.375256,
+   "earlier_runs": 0,
+   "proof_seconds": 0.0,
    "verify_seconds": null,
-   "proof_nodes": null,
+   "proof_nodes": 0,
    "proof_sha256": null,
    "verdict": "unknown"
   },
@@ -4537,6 +4876,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,
@@ -4563,6 +4904,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,
@@ -4589,6 +4932,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,
@@ -4615,6 +4960,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,
@@ -4641,6 +4988,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,
@@ -4667,6 +5016,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,
@@ -4694,6 +5045,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,
@@ -4720,6 +5073,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,
@@ -4746,6 +5101,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,
@@ -4772,6 +5129,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,
@@ -4798,6 +5157,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,
@@ -4824,6 +5185,8 @@
    "untried": true,
    "allotted_seconds": null,
    "search_seconds": null,
+   "this_run_search_seconds": null,
+   "earlier_runs": 0,
    "proof_seconds": null,
    "verify_seconds": null,
    "proof_nodes": null,

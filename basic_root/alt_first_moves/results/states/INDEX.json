@@ -709,6 +709,106 @@
    },
    "position_sha256": "1d6ce5757f3efb5d23e00195347b540c915d270c293946df04a2f0c9df053b08",
    "input_sha256": "af8c8eef1a711b0de6b3f04a8c000671c86d04370180ebae876d54f2839ef4f5"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-15c",
+   "asset": "616b6ef3a479d45b715bf80007f6351f4f8a49e38cbf2e06e9c23fc83e6be70d.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-15c/616b6ef3a479d45b715bf80007f6351f4f8a49e38cbf2e06e9c23fc83e6be70d.tt.gz",
+   "gz_sha256": "616b6ef3a479d45b715bf80007f6351f4f8a49e38cbf2e06e9c23fc83e6be70d",
+   "gz_bytes": 46687688,
+   "state_sha256": "cc171ddc2112d3d6d45570f874c6668da147a428a4a6b0dbe35e0087e2dabe49",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "branch2/b2_023/state.tt",
+   "note": "2026-11-15 후속 갈래 branch2 남은 18개 뒤: 못 푼 국면의 상태. 극력→역전승·역풍(누적 600초, 한도 도달), 극력→역행(600초), 극적→적격(123.4초)",
+   "staged": "2026-11-15 14:33:50",
+   "uploaded_verified": "2026-11-15 14:43:41",
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역전승"
+    ]
+   },
+   "position_sha256": "cea158379d59cbd4a83eda44a62bd6fa7866e8d8ab53f3382c0bb3cebcff3f8d",
+   "input_sha256": "94bf1582caae946d6adf85805dc0ea823d007c96b75dee97bdecb69317f9e15c"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-15c",
+   "asset": "85b8fdde1c37afd1389b0cbfa39edf908faf9abf3b99ba91d8677a2e543883e0.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-15c/85b8fdde1c37afd1389b0cbfa39edf908faf9abf3b99ba91d8677a2e543883e0.tt.gz",
+   "gz_sha256": "85b8fdde1c37afd1389b0cbfa39edf908faf9abf3b99ba91d8677a2e543883e0",
+   "gz_bytes": 46851058,
+   "state_sha256": "3f4b815872f08c53288b22aff55c5678680f0d40765bef545d2fff3c4e2ec23b",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "branch2/b2_025/state.tt",
+   "note": "2026-11-15 후속 갈래 branch2 남은 18개 뒤: 못 푼 국면의 상태. 극력→역전승·역풍(누적 600초, 한도 도달), 극력→역행(600초), 극적→적격(123.4초)",
+   "staged": "2026-11-15 14:33:55",
+   "uploaded_verified": "2026-11-15 14:43:41",
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역풍"
+    ]
+   },
+   "position_sha256": "1d6ce5757f3efb5d23e00195347b540c915d270c293946df04a2f0c9df053b08",
+   "input_sha256": "af8c8eef1a711b0de6b3f04a8c000671c86d04370180ebae876d54f2839ef4f5"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-15c",
+   "asset": "71a2713ab804103a7fac8d9763cf46eb58e12abf75ccd6c80a4b527a5d01d78f.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-15c/71a2713ab804103a7fac8d9763cf46eb58e12abf75ccd6c80a4b527a5d01d78f.tt.gz",
+   "gz_sha256": "71a2713ab804103a7fac8d9763cf46eb58e12abf75ccd6c80a4b527a5d01d78f",
+   "gz_bytes": 46780958,
+   "state_sha256": "ae9a57149fc28ed4e43f1bca5c7aaa1644d0706a8437a2cf0a57e6e100de8be6",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "branch2/b2_027/state.tt",
+   "note": "2026-11-15 후속 갈래 branch2 남은 18개 뒤: 못 푼 국면의 상태. 극력→역전승·역풍(누적 600초, 한도 도달), 극력→역행(600초), 극적→적격(123.4초)",
+   "staged": "2026-11-15 14:34:00",
+   "uploaded_verified": "2026-11-15 14:43:41",
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력",
+     "역행"
+    ]
+   },
+   "position_sha256": "cd55f3f93de517f1351722dd195fe76e3666baa4027683b1144bf5341c2003eb",
+   "input_sha256": "0b31d7a9c9736f862a5b0af71a39f90a49c6b8ae7c42a1e5fe241705f2be91cb"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-15c",
+   "asset": "abbd7b51159694f14b6d44c48297dad7bf9b585ba92034aca9e85bc269ec867d.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-15c/abbd7b51159694f14b6d44c48297dad7bf9b585ba92034aca9e85bc269ec867d.tt.gz",
+   "gz_sha256": "abbd7b51159694f14b6d44c48297dad7bf9b585ba92034aca9e85bc269ec867d",
+   "gz_bytes": 45598501,
+   "state_sha256": "292745d86ce9c8d087ab02b6d9af813e8874a0d90c4483b413563ec81202df9b",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 123.38,
+   "work_path": "branch2/b2_029/state.tt",
+   "note": "2026-11-15 후속 갈래 branch2 남은 18개 뒤: 못 푼 국면의 상태. 극력→역전승·역풍(누적 600초, 한도 도달), 극력→역행(600초), 극적→적격(123.4초)",
+   "staged": "2026-11-15 14:34:06",
+   "uploaded_verified": "2026-11-15 14:43:41",
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적격"
+    ]
+   },
+   "position_sha256": "d03085e495866af1aa9358d1b7b7b936552bc13b4321b99b04ee5beef7a244d4",
+   "input_sha256": "f77e4e0279c527003c197078d749517726649f19d5494f688ffe99763f7a8c84"
   }
  ]
 }

@@ -2,7 +2,7 @@
 """Follow-up branches: prove positions with any history (e.g. 식생활 → 활극 → 극락) and verify each certificate.
 
 usage: branch_run.py CASES.json WORK [--seconds 600] [--budget 0] [--jobs 3] [--tt-mb 1024] [--stuck-nodes 200000]
-                     [--only b01,b02] [--keep-state 0|1]
+                     [--only b01,b02] [--keep-state 0|1] [--cumulative-cap 0]
   CASES.json: {"cases": [{"name", "position": {"initial_syllable", "history": [...]}, "method": "replay"|"direct"|"table",
                "source": vertex name, "source_path": certificate (replay; default sources/<source>/proof.v4.gz),
                "guide": dir, "guide_book": book id, "expect": "W"|"L" (table)}]}
@@ -14,6 +14,9 @@ The position is the case's own history, every word in it used; nothing is taken 
 --budget T (> 0): the search seconds of the whole call add up to at most T. Cases start in their order; a case gets
   min(--seconds, what is left after the finished cases' actual search and the running cases' allotments). Unused time
   of a finished case goes back to the pool. A case that cannot get at least 5 s is not started ('untried').
+--cumulative-cap C (> 0): a case that was run before (WORK/<name>/run.json, not accepted) continues from its saved state
+  and gets at most C minus the search seconds it already used (the largest of its run records' total_search_seconds and
+  the seconds carried in state.tt). The earlier run.json is kept as run.<n>.json.
 --keep-state 1: the search state is checkpointed to WORK/<name>/state.tt; it is deleted when the certificate is
   accepted and kept otherwise, so the case can be continued later.
 Certificate writing and verification have no extra limit, as everywhere in this study. A case counts only if the
@@ -76,15 +79,16 @@ class Budget:
         self.cv = threading.Condition()
         self.log = []
 
-    def take(self, name):
+    def take(self, name, cap=None):
         """seconds allotted to the next case, or None (not started)"""
+        per = self.per if cap is None else min(self.per, cap)
         with self.cv:
             while True:
                 if self.total <= 0:
-                    return self.per
+                    return per
                 avail = self.total - self.spent - self.reserved - 1.0   # 1 s margin: the solver may stop a few ms late
                 if avail >= MIN_ALLOT:
-                    a = min(self.per, avail)
+                    a = min(per, avail)
                     self.reserved += a
                     self.log.append({'case': name, 'allotted': round(a, 3), 'at': time.strftime('%H:%M:%S')})
                     return a
@@ -103,7 +107,8 @@ class Budget:
 def main():
     cases_path, work = Path(sys.argv[1]), Path(sys.argv[2])
     rest = sys.argv[3:]
-    o = {'--seconds': '600', '--budget': '0', '--jobs': '3', '--tt-mb': '1024', '--stuck-nodes': '200000', '--only': '', '--keep-state': '0'}
+    o = {'--seconds': '600', '--budget': '0', '--jobs': '3', '--tt-mb': '1024', '--stuck-nodes': '200000', '--only': '', '--keep-state': '0',
+         '--cumulative-cap': '0'}
     o.update({rest[i]: rest[i + 1] for i in range(0, len(rest), 2)})
     cases = json.loads(cases_path.read_text(encoding='utf-8'))['cases']
     if o['--only']:
@@ -125,7 +130,29 @@ def main():
     def one(c):
         d = work / c['name']
         d.mkdir(parents=True, exist_ok=True)
-        allot = budget.take(c['name'])
+        cap, prior, earlier = None, 0.0, []
+        if float(o['--cumulative-cap']) > 0 and (d / 'run.json').exists():
+            old = json.loads((d / 'run.json').read_text(encoding='utf-8'))
+            if old.get('accepted'):
+                print(time.strftime('%H:%M:%S'), json.dumps({'name': c['name'], 'already_accepted': True}, ensure_ascii=False), flush=True)
+                return
+            if not old.get('untried'):
+                k = 1
+                while (d / f'run.{k}.json').exists():
+                    k += 1
+                (d / 'run.json').rename(d / f'run.{k}.json')
+                for j in range(1, k + 1):
+                    earlier.append(json.loads((d / f'run.{j}.json').read_text(encoding='utf-8')))
+                prior = max([float(e['solver'].get('total_search_seconds') or e['solver'].get('seconds') or 0) for e in earlier]
+                            + [sc.state_carried_seconds(d / 'state.tt') if (d / 'state.tt').exists() else 0.0])
+                cap = float(o['--cumulative-cap']) - prior
+                if cap < MIN_ALLOT:
+                    rec = {'name': c['name'], 'position': c['position'], 'method': c['method'], 'accepted': False, 'untried': False,
+                           'cap_reached': True, 'prior_search_seconds': prior, 'earlier_runs': len(earlier),
+                           'note': f'not continued: its {prior:.3f} s of search already reach --cumulative-cap'}
+                    (d / 'run.json').write_text(json.dumps(rec, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+                    return
+        allot = budget.take(c['name'], cap)
         if allot is None:
             rec = {'name': c['name'], 'position': c['position'], 'method': c['method'], 'accepted': False, 'untried': True,
                    'note': 'not started: the search budget of this call was used up'}
@@ -169,6 +196,7 @@ def main():
         wall = time.time() - t0
         rec = {'name': c['name'], 'position': c['position'], 'method': c['method'], 'source': c.get('source'),
                'started': time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(t0)), 'allotted_seconds': round(allot, 3),
+               'prior_search_seconds': round(prior, 6), 'earlier_runs': len(earlier), 'resumed_from_state': '--tt-load' in cmd,
                'cmd': cmd[1:], 'solver_wall_seconds': round(wall, 2), 'solver': sol, **extra}
         if proof.exists():
             want = root_result(proof)
@@ -187,7 +215,7 @@ def main():
             rec['state_kept'] = str(state) if state.exists() else None
         (d / 'run.json').write_text(json.dumps(rec, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
         line = {'name': c['name'], 'word': c['word'], 'accepted': rec['accepted'], 'mover': rec.get('result_for_mover'),
-                'allot': round(allot, 1), 'search': sol.get('seconds'), 'proof_s': sol.get('emit_seconds'),
+                'allot': round(allot, 3), 'search': sol.get('seconds'), 'total_search': sol.get('total_search_seconds'), 'proof_s': sol.get('emit_seconds'),
                 'verify_s': rec.get('verify_wall_seconds'), 'proof_nodes': sol.get('proof_nodes')}
         print(time.strftime('%H:%M:%S'), json.dumps(line, ensure_ascii=False), flush=True)
 
