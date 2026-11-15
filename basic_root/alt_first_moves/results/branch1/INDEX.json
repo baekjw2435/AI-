@@ -1,0 +1,271 @@
+{
+ "format": "branch-archive-1",
+ "batch": "branch1",
+ "cases": [
+  {
+   "case": "b01",
+   "words": [
+    "극락"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극락"
+    ]
+   },
+   "accepted": true,
+   "result_for_mover": "W",
+   "verdict_for_player_of_word": "lose",
+   "method": "replay",
+   "source": "낙",
+   "source_proof_sha256": "e3b737228f5731e136f4d7d6a71334db09be815b1d6274445f1c530487e923df",
+   "store": "release",
+   "release_tag": "alt817-proofs-branch1",
+   "asset": "0732e8d7394421119f17ce6896c8f304f0bd92432c8a69098915f11cfec03688.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-branch1/0732e8d7394421119f17ce6896c8f304f0bd92432c8a69098915f11cfec03688.v4.gz",
+   "uploaded_verified": "2026-11-15 08:40:16",
+   "proof_sha256": "0732e8d7394421119f17ce6896c8f304f0bd92432c8a69098915f11cfec03688",
+   "proof_bytes": 686765,
+   "proof_nodes": 96902,
+   "position_sha256": "764dc64b18dfaeb4337b91fbc46c50133af125bff61b7bed7e6bd3d5a0a075e6",
+   "input_sha256": "bcbf0b9eacd981e542f3c10843b761c9ff2e13c11e5a1cdbab0423fadffc26c9",
+   "acceptance": {
+    "exit_code_0": true,
+    "verified_true": true,
+    "result": true,
+    "state_storage": true,
+    "dictionary_sha256": true,
+    "position_sha256": true,
+    "input_sha256": true,
+    "proof_sha256": true
+   },
+   "search_seconds": 0.256205,
+   "proof_seconds": 0.479239,
+   "verify_seconds": 2.146,
+   "solver_sha256": "7ac3418a7b219e5658fedc914921bc0bfc4feaef5f700033c857e68b3af5a087"
+  },
+  {
+   "case": "b02",
+   "words": [
+    "극약"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극약"
+    ]
+   },
+   "accepted": true,
+   "result_for_mover": "W",
+   "verdict_for_player_of_word": "lose",
+   "method": "replay",
+   "source": "약",
+   "source_proof_sha256": "01f7c211d1d0a31351f83610df8fbbf5faccf26a94d4b3c7e8a5402d4256499c",
+   "store": "release",
+   "release_tag": "alt817-proofs-branch1",
+   "asset": "3618b44f38532fd3edb2c1f3ec1592401fa0cde5883b3d3359504a501d2da268.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-branch1/3618b44f38532fd3edb2c1f3ec1592401fa0cde5883b3d3359504a501d2da268.v4.gz",
+   "uploaded_verified": "2026-11-15 08:40:16",
+   "proof_sha256": "3618b44f38532fd3edb2c1f3ec1592401fa0cde5883b3d3359504a501d2da268",
+   "proof_bytes": 12681753,
+   "proof_nodes": 1750374,
+   "position_sha256": "14f2705424d137efc0791fb5cfb25d6903952f79bef4dfc08906bd6e40023440",
+   "input_sha256": "09081f28c95d6e8dcbe3c452c1e8b73d286d3491d020827fe41cf157ffd5a001",
+   "acceptance": {
+    "exit_code_0": true,
+    "verified_true": true,
+    "result": true,
+    "state_storage": true,
+    "dictionary_sha256": true,
+    "position_sha256": true,
+    "input_sha256": true,
+    "proof_sha256": true
+   },
+   "search_seconds": 206.56204,
+   "proof_seconds": 10.674086,
+   "verify_seconds": 40.028,
+   "solver_sha256": "7ac3418a7b219e5658fedc914921bc0bfc4feaef5f700033c857e68b3af5a087"
+  },
+  {
+   "case": "b03",
+   "words": [
+    "극언"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극언"
+    ]
+   },
+   "accepted": true,
+   "result_for_mover": "W",
+   "verdict_for_player_of_word": "lose",
+   "method": "replay",
+   "source": "언",
+   "source_proof_sha256": "fa1dbeb5b4b487485c3a59795ac152e2041a353caede8161f605baae738ec20d",
+   "store": "release",
+   "release_tag": "alt817-proofs-branch1",
+   "asset": "a512eb396c7fa90b2a31327e811ef83b2b3a1eca6c4df33ff36235b50e2da4a9.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-branch1/a512eb396c7fa90b2a31327e811ef83b2b3a1eca6c4df33ff36235b50e2da4a9.v4.gz",
+   "uploaded_verified": "2026-11-15 08:40:17",
+   "proof_sha256": "a512eb396c7fa90b2a31327e811ef83b2b3a1eca6c4df33ff36235b50e2da4a9",
+   "proof_bytes": 9308536,
+   "proof_nodes": 1284920,
+   "position_sha256": "4cbc924acbfd7851f0e5025c4281149907435a5dd4f9318583254b4ea7586fcb",
+   "input_sha256": "3c9ee3a3323cc7133aed13febd543b24adb58f06f25fd429887ecb89fcbd4290",
+   "acceptance": {
+    "exit_code_0": true,
+    "verified_true": true,
+    "result": true,
+    "state_storage": true,
+    "dictionary_sha256": true,
+    "position_sha256": true,
+    "input_sha256": true,
+    "proof_sha256": true
+   },
+   "search_seconds": 163.562337,
+   "proof_seconds": 7.513892,
+   "verify_seconds": 29.043,
+   "solver_sha256": "7ac3418a7b219e5658fedc914921bc0bfc4feaef5f700033c857e68b3af5a087"
+  },
+  {
+   "case": "b04",
+   "words": [
+    "극력"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력"
+    ]
+   },
+   "accepted": true,
+   "result_for_mover": "W",
+   "verdict_for_player_of_word": "lose",
+   "method": "replay",
+   "source": "역",
+   "source_proof_sha256": "01d5706873c37c41f79db88ba866c5aea903b93a53fdc98f5ebc981b9149028c",
+   "store": "release",
+   "release_tag": "alt817-proofs-branch1",
+   "asset": "3c2fd9eebac304e742a07c4df650e9ef9fe69f74c193364884fecc4659fd0158.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-branch1/3c2fd9eebac304e742a07c4df650e9ef9fe69f74c193364884fecc4659fd0158.v4.gz",
+   "uploaded_verified": "2026-11-15 08:40:18",
+   "proof_sha256": "3c2fd9eebac304e742a07c4df650e9ef9fe69f74c193364884fecc4659fd0158",
+   "proof_bytes": 10442353,
+   "proof_nodes": 1433599,
+   "position_sha256": "27b43176ae1e28eea1231aa1b234082a652a320cd2edcc63fdb81e13db47bf89",
+   "input_sha256": "a1f3c9eee0cb83ac302019e85e2bc20a8b37b1782438aed0e600af9b318693ae",
+   "acceptance": {
+    "exit_code_0": true,
+    "verified_true": true,
+    "result": true,
+    "state_storage": true,
+    "dictionary_sha256": true,
+    "position_sha256": true,
+    "input_sha256": true,
+    "proof_sha256": true
+   },
+   "search_seconds": 132.321162,
+   "proof_seconds": 8.379525,
+   "verify_seconds": 33.929,
+   "solver_sha256": "7ac3418a7b219e5658fedc914921bc0bfc4feaef5f700033c857e68b3af5a087"
+  },
+  {
+   "case": "b05",
+   "words": [
+    "극적",
+    "극단적"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적"
+    ]
+   },
+   "accepted": true,
+   "result_for_mover": "W",
+   "verdict_for_player_of_word": "lose",
+   "method": "replay",
+   "source": "적",
+   "source_proof_sha256": "40b93f5f93acf03322f4f757ee1c08357f78511d5f3af4de7510572520245871",
+   "store": "release",
+   "release_tag": "alt817-proofs-branch1",
+   "asset": "2ce57998b9a3437020a9f56530afcce77bd8dae92bbc1b7bd6cf589242f5e1f2.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-branch1/2ce57998b9a3437020a9f56530afcce77bd8dae92bbc1b7bd6cf589242f5e1f2.v4.gz",
+   "uploaded_verified": "2026-11-15 08:40:18",
+   "proof_sha256": "2ce57998b9a3437020a9f56530afcce77bd8dae92bbc1b7bd6cf589242f5e1f2",
+   "proof_bytes": 700490,
+   "proof_nodes": 99034,
+   "position_sha256": "c3a9b57da5ccd57acd712e343feec476244280adf7ac1183c3498316c936158b",
+   "input_sha256": "69d44ed6c1162ad94bea37bb4f2045697650a308fd7a66afa3ee6161dd361b04",
+   "acceptance": {
+    "exit_code_0": true,
+    "verified_true": true,
+    "result": true,
+    "state_storage": true,
+    "dictionary_sha256": true,
+    "position_sha256": true,
+    "input_sha256": true,
+    "proof_sha256": true
+   },
+   "search_seconds": 0.274632,
+   "proof_seconds": 0.521984,
+   "verify_seconds": 2.357,
+   "solver_sha256": "7ac3418a7b219e5658fedc914921bc0bfc4feaef5f700033c857e68b3af5a087"
+  },
+  {
+   "case": "b06",
+   "words": [
+    "극찬"
+   ],
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극찬"
+    ]
+   },
+   "accepted": true,
+   "result_for_mover": "W",
+   "verdict_for_player_of_word": "lose",
+   "method": "replay",
+   "source": "찬",
+   "source_proof_sha256": "aba64b15f2264e7cd40b380c70fcf6acbea4e6304d8f1499f6ce06109452012d",
+   "store": "release",
+   "release_tag": "alt817-proofs-branch1",
+   "asset": "69732565f4bbbeac99ffcaedc5acab1f6149b054ce19c4875d7dd10d3a0d3493.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-branch1/69732565f4bbbeac99ffcaedc5acab1f6149b054ce19c4875d7dd10d3a0d3493.v4.gz",
+   "uploaded_verified": "2026-11-15 08:40:18",
+   "proof_sha256": "69732565f4bbbeac99ffcaedc5acab1f6149b054ce19c4875d7dd10d3a0d3493",
+   "proof_bytes": 1131065,
+   "proof_nodes": 157064,
+   "position_sha256": "f7ded2cd6f09329c123d01e386602db88a260e7471d4c7e2a15ec107eaec5d24",
+   "input_sha256": "8dd0bbf2ffbad626ed11d24dc87b1c3379825bb216826533606da0e78e6868f8",
+   "acceptance": {
+    "exit_code_0": true,
+    "verified_true": true,
+    "result": true,
+    "state_storage": true,
+    "dictionary_sha256": true,
+    "position_sha256": true,
+    "input_sha256": true,
+    "proof_sha256": true
+   },
+   "search_seconds": 0.538213,
+   "proof_seconds": 0.883479,
+   "verify_seconds": 3.723,
+   "solver_sha256": "7ac3418a7b219e5658fedc914921bc0bfc4feaef5f700033c857e68b3af5a087"
+  }
+ ]
+}
