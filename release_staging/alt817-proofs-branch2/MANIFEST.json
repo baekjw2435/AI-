@@ -161,8 +161,22 @@
    "certifies": [
     "branch2/b2_024 식생활 → 활극 → 극력 → 역사적"
    ]
+  },
+  "c8f0a57163450c652e64e4dd596feafa66adc961a627a327c0f0978e92ee7b4f.v4.gz": {
+   "sha256": "c8f0a57163450c652e64e4dd596feafa66adc961a627a327c0f0978e92ee7b4f",
+   "bytes": 2715248,
+   "certifies": [
+    "branch2/b2_026 식생활 → 활극 → 극력 → 역학"
+   ]
+  },
+  "a48a9aa94104210de94d4fd20737116d0df12dd92d652060e7a485b5856153bf.v4.gz": {
+   "sha256": "a48a9aa94104210de94d4fd20737116d0df12dd92d652060e7a485b5856153bf",
+   "bytes": 8238656,
+   "certifies": [
+    "branch2/b2_028 식생활 → 활극 → 극력 → 역방향"
+   ]
   }
  },
- "file_count": 23,
- "total_bytes": 38069288
+ "file_count": 25,
+ "total_bytes": 49023192
 }
