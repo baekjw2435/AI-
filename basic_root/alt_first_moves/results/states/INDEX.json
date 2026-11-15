@@ -599,6 +599,66 @@
    },
    "position_sha256": "59781cbaaad3c6ac040c4a869825abb831ebdadf1ded535960a7cec2e538779e",
    "input_sha256": "a17dc6a1500c2737f0a62d3c3c4557456d86d75ff891824de48182d63cae2218"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-15a",
+   "asset": "8ad0a6394532c36c9f6f59c419ba97e57371a0fe57a8d7f0c4a99b8fcf48e82e.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-15a/8ad0a6394532c36c9f6f59c419ba97e57371a0fe57a8d7f0c4a99b8fcf48e82e.tt.gz",
+   "gz_sha256": "8ad0a6394532c36c9f6f59c419ba97e57371a0fe57a8d7f0c4a99b8fcf48e82e",
+   "gz_bytes": 48169324,
+   "state_sha256": "a86b63b39757b6a3b207e21354ee21e4837c94bca7737d481861af7d7dd99a4c",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 3600.0,
+   "work_path": "sources/표/state.tt",
+   "note": "2026-11-15 여섯 번째 계산 뒤 백업. 표·득·할 원본: 저장 상태에서 1,800초 더, 한도에 닿아 미완성(각 누적 3,600초)",
+   "staged": "2026-11-15 04:32:56",
+   "uploaded_verified": "2026-11-15 04:40:48",
+   "position": {
+    "initial_syllable": "표",
+    "history": []
+   },
+   "position_sha256": "4c94f5823af7e9d5dd56f539567de0f2d39f4defc8155b1dcc9f119658a95e61",
+   "input_sha256": "4f9e630e4ac6c7c070b409296a9fbd6097316229d14ab06b2b52d7109bbf20be"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-15a",
+   "asset": "7b0ef24a6aece7c85fa3e0283543ca3359528d13d94d561fcc5dfefa1a412b96.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-15a/7b0ef24a6aece7c85fa3e0283543ca3359528d13d94d561fcc5dfefa1a412b96.tt.gz",
+   "gz_sha256": "7b0ef24a6aece7c85fa3e0283543ca3359528d13d94d561fcc5dfefa1a412b96",
+   "gz_bytes": 48166119,
+   "state_sha256": "a4e6ec59e6793814166a2caffebceddba43ccdc4d320047cdd0c5bbc3b371ef4",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 3600.0,
+   "work_path": "sources/득/state.tt",
+   "note": "2026-11-15 여섯 번째 계산 뒤 백업. 표·득·할 원본: 저장 상태에서 1,800초 더, 한도에 닿아 미완성(각 누적 3,600초)",
+   "staged": "2026-11-15 04:33:00",
+   "uploaded_verified": "2026-11-15 04:40:48",
+   "position": {
+    "initial_syllable": "득",
+    "history": []
+   },
+   "position_sha256": "19e644a696af3a45ed12a1a6687030cc85324e549835798ea3e6bec774306cad",
+   "input_sha256": "7ce0e8297dad21e8c9ebd081eb3fbfc166cd14847df4f54c12c4c3805152a438"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-15a",
+   "asset": "c02391d876a01e582a1bc1ba80407f0bcb784f2e38eab02c6e5f88a8b51e9369.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-15a/c02391d876a01e582a1bc1ba80407f0bcb784f2e38eab02c6e5f88a8b51e9369.tt.gz",
+   "gz_sha256": "c02391d876a01e582a1bc1ba80407f0bcb784f2e38eab02c6e5f88a8b51e9369",
+   "gz_bytes": 48153513,
+   "state_sha256": "08591c9e6b1047ac99e8abd168ac3ada395da04890a266cbc1c4a71440b6d552",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 3600.0,
+   "work_path": "sources/할/state.tt",
+   "note": "2026-11-15 여섯 번째 계산 뒤 백업. 표·득·할 원본: 저장 상태에서 1,800초 더, 한도에 닿아 미완성(각 누적 3,600초)",
+   "staged": "2026-11-15 04:33:04",
+   "uploaded_verified": "2026-11-15 04:40:48",
+   "position": {
+    "initial_syllable": "할",
+    "history": []
+   },
+   "position_sha256": "59781cbaaad3c6ac040c4a869825abb831ebdadf1ded535960a7cec2e538779e",
+   "input_sha256": "a17dc6a1500c2737f0a62d3c3c4557456d86d75ff891824de48182d63cae2218"
   }
  ]
 }
