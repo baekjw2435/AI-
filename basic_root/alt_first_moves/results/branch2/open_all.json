@@ -1,5 +1,5 @@
 {
- "note": "every unconfirmed choice known after branch2 (2026-11-15); none of them is being solved",
+ "note": "every unconfirmed choice known after branch2 (updated 2026-11-15 after the remaining 18); none of them is being solved. This is the list found so far, not the number of all remaining branches: deeper levels add more.",
  "queue_left": [
   {
    "name": "b2_023",
@@ -16,8 +16,7 @@
     "역전승"
    ],
    "status": "tried_unconfirmed",
-   "allotted_seconds": 246.841,
-   "search_seconds": 246.842101
+   "search_seconds_so_far": 599.998956
   },
   {
    "name": "b2_025",
@@ -34,27 +33,7 @@
     "역풍"
    ],
    "status": "tried_unconfirmed",
-   "allotted_seconds": 375.918,
-   "search_seconds": 375.919729
-  },
-  {
-   "name": "b2_026",
-   "position": {
-    "initial_syllable": "식",
-    "history": [
-     "식생활",
-     "활극",
-     "극력",
-     "역학"
-    ]
-   },
-   "words": [
-    "역학",
-    "역사학"
-   ],
-   "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": 600.000315
   },
   {
    "name": "b2_027",
@@ -70,27 +49,8 @@
    "words": [
     "역행"
    ],
-   "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
-  },
-  {
-   "name": "b2_028",
-   "position": {
-    "initial_syllable": "식",
-    "history": [
-     "식생활",
-     "활극",
-     "극력",
-     "역방향"
-    ]
-   },
-   "words": [
-    "역방향"
-   ],
-   "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "status": "tried_unconfirmed",
+   "search_seconds_so_far": 600.00024
   },
   {
    "name": "b2_029",
@@ -106,9 +66,8 @@
    "words": [
     "적격"
    ],
-   "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "status": "tried_unconfirmed",
+   "search_seconds_so_far": 123.375256
   },
   {
    "name": "b2_030",
@@ -125,8 +84,7 @@
     "적군"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   },
   {
    "name": "b2_031",
@@ -143,8 +101,7 @@
     "적극"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   },
   {
    "name": "b2_032",
@@ -161,8 +118,7 @@
     "적법"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   },
   {
    "name": "b2_033",
@@ -179,8 +135,7 @@
     "적삼"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   },
   {
    "name": "b2_034",
@@ -197,8 +152,7 @@
     "적응력"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   },
   {
    "name": "b2_035",
@@ -215,8 +169,7 @@
     "적중률"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   },
   {
    "name": "b2_036",
@@ -234,8 +187,7 @@
     "적대적"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   },
   {
    "name": "b2_037",
@@ -252,8 +204,7 @@
     "적자생존"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   },
   {
    "name": "b2_038",
@@ -270,8 +221,7 @@
     "적진"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   },
   {
    "name": "b2_039",
@@ -288,8 +238,7 @@
     "적합"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   },
   {
    "name": "b2_040",
@@ -306,8 +255,7 @@
     "찬탄"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   },
   {
    "name": "b2_041",
@@ -324,8 +272,7 @@
     "찬합"
    ],
    "status": "untried",
-   "allotted_seconds": null,
-   "search_seconds": null
+   "search_seconds_so_far": null
   }
  ],
  "deeper": [
@@ -5189,6 +5136,272 @@
    ],
    "kind": "the winner's other answers where the certificate chose 칭찬",
    "ply_of_choice": 7
+  },
+  {
+   "from": "b2_026",
+   "at": [
+    "식생활",
+    "활극",
+    "극력",
+    "역학"
+   ],
+   "who": "제시자",
+   "choices": [
+    [
+     "학교"
+    ],
+    [
+     "학군"
+    ],
+    [
+     "학급"
+    ],
+    [
+     "학맥"
+    ],
+    [
+     "학습"
+    ],
+    [
+     "학식"
+    ],
+    [
+     "학력"
+    ],
+    [
+     "학구적",
+     "학문적",
+     "학술적",
+     "학자적",
+     "학적"
+    ],
+    [
+     "학생증"
+    ],
+    [
+     "학칙"
+    ],
+    [
+     "학풍"
+    ],
+    [
+     "학교생활"
+    ]
+   ],
+   "kind": "the winner's other moves where the certificate chose 학업",
+   "ply_of_choice": 5
+  },
+  {
+   "from": "b2_026",
+   "at": [
+    "식생활",
+    "활극",
+    "극력",
+    "역학",
+    "학업",
+    "업적"
+   ],
+   "who": "제시자",
+   "choices": [
+    [
+     "적격"
+    ],
+    [
+     "적군"
+    ],
+    [
+     "적극"
+    ],
+    [
+     "적법"
+    ],
+    [
+     "적삼"
+    ],
+    [
+     "적갈색",
+     "적색",
+     "적회색"
+    ],
+    [
+     "적응력"
+    ],
+    [
+     "적중률"
+    ],
+    [
+     "적극적",
+     "적대적"
+    ],
+    [
+     "적진"
+    ],
+    [
+     "적합"
+    ]
+   ],
+   "kind": "the winner's other answers where the certificate chose 적자생존",
+   "ply_of_choice": 7
+  },
+  {
+   "from": "b2_028",
+   "at": [
+    "식생활",
+    "활극",
+    "극력",
+    "역방향",
+    "향락"
+   ],
+   "who": "받은 쪽",
+   "choices": [
+    [
+     "낙승"
+    ],
+    [
+     "낙농업"
+    ],
+    [
+     "낙엽"
+    ],
+    [
+     "낙관적",
+     "낙천적"
+    ]
+   ],
+   "kind": "the winner's other answers where the certificate chose 낙향",
+   "ply_of_choice": 6
+  },
+  {
+   "from": "b2_028",
+   "at": [
+    "식생활",
+    "활극",
+    "극력",
+    "역방향",
+    "향수병"
+   ],
+   "who": "받은 쪽",
+   "choices": [
+    [
+     "병균",
+     "병원균"
+    ],
+    [
+     "병뚜껑"
+    ],
+    [
+     "병명"
+    ],
+    [
+     "병법"
+    ],
+    [
+     "병색",
+     "병아리색"
+    ],
+    [
+     "병역",
+     "병력"
+    ],
+    [
+     "병구완"
+    ],
+    [
+     "병적"
+    ],
+    [
+     "병졸"
+    ],
+    [
+     "병풍"
+    ],
+    [
+     "병리학"
+    ],
+    [
+     "병합"
+    ],
+    [
+     "병행"
+    ],
+    [
+     "병환"
+    ]
+   ],
+   "kind": "the winner's other answers where the certificate chose 병존",
+   "ply_of_choice": 6
+  },
+  {
+   "from": "b2_028",
+   "at": [
+    "식생활",
+    "활극",
+    "극력",
+    "역방향",
+    "향토색"
+   ],
+   "who": "받은 쪽",
+   "choices": [
+    [
+     "색색"
+    ],
+    [
+     "색칠"
+    ]
+   ],
+   "kind": "the winner's other answers where the certificate chose 색맹",
+   "ply_of_choice": 6
+  },
+  {
+   "from": "b2_028",
+   "at": [
+    "식생활",
+    "활극",
+    "극력",
+    "역방향",
+    "향락적"
+   ],
+   "who": "받은 쪽",
+   "choices": [
+    [
+     "적격"
+    ],
+    [
+     "적군"
+    ],
+    [
+     "적극"
+    ],
+    [
+     "적법"
+    ],
+    [
+     "적삼"
+    ],
+    [
+     "적갈색",
+     "적색",
+     "적회색"
+    ],
+    [
+     "적응력"
+    ],
+    [
+     "적중률"
+    ],
+    [
+     "적극적",
+     "적대적"
+    ],
+    [
+     "적진"
+    ],
+    [
+     "적합"
+    ]
+   ],
+   "kind": "the winner's other answers where the certificate chose 적자생존",
+   "ply_of_choice": 6
   }
  ]
 }

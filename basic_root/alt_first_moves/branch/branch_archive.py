@@ -28,11 +28,12 @@ def main():
             idx.append({**e, 'status': 'untried'})
             continue
         (res / c['name']).mkdir(parents=True, exist_ok=True)
-        for f in ('pos.json', 'in.txt', 'run.json'):
+        for f in ['pos.json', 'in.txt', 'run.json'] + sorted(x.name for x in d.glob('run.*.json')):   # run.<n>.json: earlier runs
             if (d / f).exists():
                 shutil.copyfile(d / f, res / c['name'] / f)
         s = run['solver']
-        e.update(allotted_seconds=run.get('allotted_seconds'), search_seconds=s.get('seconds'))
+        e.update(allotted_seconds=run.get('allotted_seconds'), search_seconds=s.get('total_search_seconds') or s.get('seconds'),
+                 this_run_search_seconds=s.get('seconds'), earlier_runs=run.get('earlier_runs', 0))
         if not run['accepted']:
             idx.append({**e, 'status': 'tried_unconfirmed', 'state_kept': run.get('state_kept'), 'pn': s.get('pn'), 'dn': s.get('dn')})
             continue
