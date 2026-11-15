@@ -1,0 +1,56 @@
+{
+ "format": "tableguide-archive-1",
+ "experiment": "tableguide1",
+ "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+ "sources": [
+  {
+   "syllable": "습",
+   "position": {
+    "initial_syllable": "습",
+    "history": []
+   },
+   "result_for_receiver": "W",
+   "store": "release",
+   "release_tag": "alt817-proofs-tableguide1",
+   "asset": "6364d113478a1a9924790c228e0092a1afc42b545bb85b078c28445d436316a1.v4.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-tableguide1/6364d113478a1a9924790c228e0092a1afc42b545bb85b078c28445d436316a1.v4.gz",
+   "uploaded_verified": "2026-11-15 07:36:20",
+   "proof_sha256": "6364d113478a1a9924790c228e0092a1afc42b545bb85b078c28445d436316a1",
+   "proof_bytes": 37826999,
+   "proof_nodes": 5240859,
+   "position_sha256": "ec998fd919228783e68fca0ddf960ab3ee5e8f15baf47a6020ffa5ef0e2dbb39",
+   "input_sha256": "8c418805146bf06e44528d0dd37a5cead28f1b9dd0b0b32b921d3b2c8e76a842",
+   "verifier": "verify_v4 (C++)",
+   "acceptance": {
+    "exit_code_0": true,
+    "verified_true": true,
+    "result": true,
+    "state_storage": true,
+    "dictionary_sha256": true,
+    "position_sha256": true,
+    "input_sha256": true,
+    "proof_sha256": true
+   },
+   "search_seconds": 54.585827,
+   "proof_seconds": 30.873363,
+   "verify_seconds": 120.094,
+   "solver_sha256": "1c562d06f94d93c2ddef32eafb440367daaf8d0a044c3ad3e0bf1bf759066a44",
+   "guide": {
+    "book": "kc2b5",
+    "name": "습",
+    "files": 10,
+    "entries": 1970056,
+    "proofs": [
+     "fresh.습"
+    ],
+    "model_json_sha256": "0022b876831be8cd2c3c3a02f868171dacfb48b122a59b27f7aa1892228737e3",
+    "manifest_sha256": "4695867a4bdf8c76ff4ffb7afa8d698a2549fb9d1bb314ecc02d3bcdbf493b7c",
+    "engine_sha256": "24bc9241a20a037ad75aabfbec4f1e8d6c2b6daf18bc4d55307a33caa162d19c",
+    "model_txt_sha256": "3112d4a1e7118cfaec989255ecf5c31f12752f332c2754b9c2c3ad198ed166f8",
+    "table_bin_sha256": "3f9381db58046499760a4713572bacfb74ed29b8e2fb18da6337cb198d82dfc8",
+    "solver_vertices": 160,
+    "solver_groups": 718
+   }
+  }
+ ]
+}
