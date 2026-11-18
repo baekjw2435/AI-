@@ -7,7 +7,7 @@ usage: branch_run.py CASES.json WORK [--seconds 600] [--budget 0] [--jobs 3] [--
                "source": vertex name, "source_path": certificate (replay; default sources/<source>/proof.v4.gz),
                "guide": dir, "guide_book": book id, "expect": "W"|"L" (table)}]}
   WORK/<name>/ gets pos.json, in.txt, proof.v4.gz, run.json (and state.tt with --keep-state 1 while unsolved).
-  WORK/budget.json: the budget account (with --budget).
+  WORK/budget.json (or --budget-log NAME): the budget account of this call.
 
 The position is the case's own history, every word in it used; nothing is taken from another history.
 --seconds is the most search time one case may use (guided walk, local searches of stuck states, normal search).
@@ -108,7 +108,7 @@ def main():
     cases_path, work = Path(sys.argv[1]), Path(sys.argv[2])
     rest = sys.argv[3:]
     o = {'--seconds': '600', '--budget': '0', '--jobs': '3', '--tt-mb': '1024', '--stuck-nodes': '200000', '--only': '', '--keep-state': '0',
-         '--cumulative-cap': '0'}
+         '--cumulative-cap': '0', '--budget-log': 'budget.json'}
     o.update({rest[i]: rest[i + 1] for i in range(0, len(rest), 2)})
     cases = json.loads(cases_path.read_text(encoding='utf-8'))['cases']
     if o['--only']:
@@ -221,7 +221,7 @@ def main():
 
     with ThreadPoolExecutor(int(o['--jobs'])) as ex:
         list(ex.map(one, cases))
-    (work / 'budget.json').write_text(json.dumps({'budget': budget.total, 'per_case': budget.per, 'search_spent': round(budget.spent, 3),
+    (work / o['--budget-log']).write_text(json.dumps({'budget': budget.total, 'per_case': budget.per, 'search_spent': round(budget.spent, 3),
                                                   'allotments': budget.log}, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     print(json.dumps({'budget': budget.total, 'search_spent': round(budget.spent, 3)}))
 
