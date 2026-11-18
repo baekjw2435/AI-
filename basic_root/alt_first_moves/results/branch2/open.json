@@ -3806,5 +3806,2150 @@
   ],
   "kind": "the winner's other answers where the certificate chose 적자생존",
   "ply_of_choice": 6
+ },
+ {
+  "from": "b2_030",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적군"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "군락"
+   ],
+   [
+    "군사동맹"
+   ],
+   [
+    "군법"
+   ],
+   [
+    "군대식"
+   ],
+   [
+    "군사력"
+   ],
+   [
+    "군왕"
+   ],
+   [
+    "군율"
+   ],
+   [
+    "군사적"
+   ],
+   [
+    "군사학",
+    "군계일학"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 군청색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "b2_030",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적군",
+   "군청색",
+   "색맹"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "맹공격",
+    "맹추격"
+   ],
+   [
+    "맹목적"
+   ],
+   [
+    "맹탕"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 맹활약",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_030",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적군",
+   "군청색",
+   "색색"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "색맹"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 색칠",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_030",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적군",
+   "군청색",
+   "색칠"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "칠순"
+   ],
+   [
+    "칠흑"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 칠십",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_031",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적극"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "극락"
+   ],
+   [
+    "극약"
+   ],
+   [
+    "극언"
+   ],
+   [
+    "극력"
+   ],
+   [
+    "극단적"
+   ],
+   [
+    "극찬"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 극존칭",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "b2_031",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적극",
+   "극존칭",
+   "칭찬"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "찬탄"
+   ],
+   [
+    "찬합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 찬성표",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_032",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적법"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "법규"
+   ],
+   [
+    "법명"
+   ],
+   [
+    "법률"
+   ],
+   [
+    "법적",
+    "법률적"
+   ],
+   [
+    "법학"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 법칙",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "b2_032",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적법",
+   "법칙",
+   "칙칙폭폭"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "폭격"
+   ],
+   [
+    "폭군"
+   ],
+   [
+    "폭락"
+   ],
+   [
+    "폭식"
+   ],
+   [
+    "폭압"
+   ],
+   [
+    "폭약"
+   ],
+   [
+    "폭언",
+    "폭탄선언"
+   ],
+   [
+    "폭력",
+    "폭발력"
+   ],
+   [
+    "폭력적",
+    "폭발적"
+   ],
+   [
+    "폭행죄"
+   ],
+   [
+    "폭죽"
+   ],
+   [
+    "폭탄"
+   ],
+   [
+    "폭폭"
+   ],
+   [
+    "폭풍"
+   ],
+   [
+    "폭행"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 폭삭",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_033",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적삼"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "삼색",
+    "삼원색"
+   ],
+   [
+    "삼판양승"
+   ],
+   [
+    "삼한사온"
+   ],
+   [
+    "삼일절"
+   ],
+   [
+    "삼진"
+   ],
+   [
+    "삼인칭"
+   ],
+   [
+    "삼계탕"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 삼십",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "b2_033",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적삼",
+   "삼십",
+   "십계명"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "명곡"
+   ],
+   [
+    "명랑"
+   ],
+   [
+    "명맥"
+   ],
+   [
+    "명멸"
+   ],
+   [
+    "명상법"
+   ],
+   [
+    "명승"
+   ],
+   [
+    "명약"
+   ],
+   [
+    "명언"
+   ],
+   [
+    "명운"
+   ],
+   [
+    "명상적",
+    "명승고적",
+    "명시적"
+   ],
+   [
+    "명절",
+    "명사절"
+   ],
+   [
+    "명란젓"
+   ],
+   [
+    "명증"
+   ],
+   [
+    "명예퇴직",
+    "명예직"
+   ],
+   [
+    "명칭"
+   ],
+   [
+    "명퇴"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 명색",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_033",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적삼",
+   "삼십",
+   "십진법"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "법규"
+   ],
+   [
+    "법명"
+   ],
+   [
+    "법률"
+   ],
+   [
+    "법적",
+    "법률적"
+   ],
+   [
+    "법학"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 법칙",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_033",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적삼",
+   "삼십",
+   "십인십색"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "색맹"
+   ],
+   [
+    "색칠"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 색색",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_034",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적응력"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "역세권"
+   ],
+   [
+    "역할극"
+   ],
+   [
+    "역기능"
+   ],
+   [
+    "역병"
+   ],
+   [
+    "역순"
+   ],
+   [
+    "역습"
+   ],
+   [
+    "역전승"
+   ],
+   [
+    "역사적",
+    "역설적",
+    "역적",
+    "역동적"
+   ],
+   [
+    "역풍"
+   ],
+   [
+    "역학",
+    "역사학"
+   ],
+   [
+    "역행"
+   ],
+   [
+    "역방향"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 역할",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "b2_034",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적응력",
+   "역할",
+   "할인권"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "권역",
+    "권력"
+   ],
+   [
+    "권위적",
+    "권위주의적"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 권능",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_034",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적응력",
+   "역할",
+   "할렐루야"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "야간학교"
+   ],
+   [
+    "야권"
+   ],
+   [
+    "야식"
+   ],
+   [
+    "야만적",
+    "야성적"
+   ],
+   [
+    "야맹증"
+   ],
+   [
+    "야학"
+   ],
+   [
+    "야합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 야영객",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_034",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적응력",
+   "역할",
+   "할인율"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "율법"
+   ],
+   [
+    "율동적"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 율격",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_034",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적응력",
+   "역할",
+   "할증"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "증후군"
+   ],
+   [
+    "증권"
+   ],
+   [
+    "증명"
+   ],
+   [
+    "증식"
+   ],
+   [
+    "증언"
+   ],
+   [
+    "증가율"
+   ],
+   [
+    "증진",
+    "증명사진"
+   ],
+   [
+    "증축"
+   ],
+   [
+    "증편"
+   ],
+   [
+    "증폭"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 증표",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_035",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적중률"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "율법"
+   ],
+   [
+    "율동적"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 율격",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "b2_035",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적중률",
+   "율격",
+   "격랑"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "낭군"
+   ],
+   [
+    "낭만적"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 낭비벽",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_035",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적중률",
+   "율격",
+   "격돌"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "돌돌"
+   ],
+   [
+    "돌변"
+   ],
+   [
+    "돌림병"
+   ],
+   [
+    "돌솥"
+   ],
+   [
+    "돌파력"
+   ],
+   [
+    "돌발적"
+   ],
+   [
+    "돌진"
+   ],
+   [
+    "돌탑"
+   ],
+   [
+    "돌풍"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 돌격",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_035",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적중률",
+   "율격",
+   "격멸"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "멸균"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 멸치젓",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_035",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적중률",
+   "율격",
+   "격변"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "변주곡"
+   ],
+   [
+    "변명"
+   ],
+   [
+    "변색"
+   ],
+   [
+    "변비약"
+   ],
+   [
+    "변별력"
+   ],
+   [
+    "변칙적",
+    "변태적"
+   ],
+   [
+    "변절"
+   ],
+   [
+    "변죽"
+   ],
+   [
+    "변칙"
+   ],
+   [
+    "변혁"
+   ],
+   [
+    "변환"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 변화율",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_035",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적중률",
+   "율격",
+   "격식"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "식도락"
+   ],
+   [
+    "식이요법"
+   ],
+   [
+    "식순"
+   ],
+   [
+    "식곤증"
+   ],
+   [
+    "식욕부진"
+   ],
+   [
+    "식충"
+   ],
+   [
+    "식탁"
+   ],
+   [
+    "식단표"
+   ],
+   [
+    "식물학"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 식권",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_035",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적중률",
+   "율격",
+   "격언"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "언급"
+   ],
+   [
+    "언변"
+   ],
+   [
+    "언약"
+   ],
+   [
+    "언어능력"
+   ],
+   [
+    "언어적"
+   ],
+   [
+    "언어학"
+   ],
+   [
+    "언어수행",
+    "언행"
+   ],
+   [
+    "언어생활"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 언어권",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_035",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적중률",
+   "율격",
+   "격정적"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_035",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적중률",
+   "율격",
+   "격증"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "증후군"
+   ],
+   [
+    "증권"
+   ],
+   [
+    "증명"
+   ],
+   [
+    "증식"
+   ],
+   [
+    "증언"
+   ],
+   [
+    "증진",
+    "증명사진"
+   ],
+   [
+    "증축"
+   ],
+   [
+    "증편"
+   ],
+   [
+    "증폭"
+   ],
+   [
+    "증표"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 증가율",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_035",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적중률",
+   "율격",
+   "격찬"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "찬탄"
+   ],
+   [
+    "찬합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 찬성표",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_035",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적중률",
+   "율격",
+   "격퇴"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "퇴락"
+   ],
+   [
+    "퇴역"
+   ],
+   [
+    "퇴적",
+    "퇴폐적"
+   ],
+   [
+    "퇴직"
+   ],
+   [
+    "퇴진"
+   ],
+   [
+    "퇴학"
+   ],
+   [
+    "퇴행"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 퇴색",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_036",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적극적"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적중률"
+   ],
+   [
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "b2_036",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적극적",
+   "적갈색",
+   "색맹"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "맹공격",
+    "맹추격"
+   ],
+   [
+    "맹목적"
+   ],
+   [
+    "맹탕"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 맹활약",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_036",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적극적",
+   "적갈색",
+   "색색"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "색맹"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 색칠",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_036",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적극적",
+   "적갈색",
+   "색칠"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "칠순"
+   ],
+   [
+    "칠흑"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 칠십",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_037",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적자생존",
+   "존칭"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "칭칭"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 칭찬",
+  "ply_of_choice": 6
+ },
+ {
+  "from": "b2_038",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적진"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "진갑"
+   ],
+   [
+    "진격"
+   ],
+   [
+    "진퇴유곡",
+    "진혼곡"
+   ],
+   [
+    "진군"
+   ],
+   [
+    "진출권"
+   ],
+   [
+    "진급"
+   ],
+   [
+    "진맥"
+   ],
+   [
+    "진압"
+   ],
+   [
+    "진언"
+   ],
+   [
+    "진력"
+   ],
+   [
+    "진학률"
+   ],
+   [
+    "진취적",
+    "진보적"
+   ],
+   [
+    "진즉"
+   ],
+   [
+    "진폐증"
+   ],
+   [
+    "진수성찬"
+   ],
+   [
+    "진흙탕",
+    "진탕"
+   ],
+   [
+    "진퇴"
+   ],
+   [
+    "진폭"
+   ],
+   [
+    "진도표"
+   ],
+   [
+    "진학"
+   ],
+   [
+    "진행"
+   ],
+   [
+    "진분홍",
+    "진홍"
+   ],
+   [
+    "진두지휘"
+   ],
+   [
+    "진흥"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 진갈색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "b2_038",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적진",
+   "진갈색",
+   "색맹"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "맹공격",
+    "맹추격"
+   ],
+   [
+    "맹목적"
+   ],
+   [
+    "맹탕"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 맹활약",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_038",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적진",
+   "진갈색",
+   "색색"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "색맹"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 색칠",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_038",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적진",
+   "진갈색",
+   "색칠"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "칠순"
+   ],
+   [
+    "칠흑"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 칠십",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_039",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적합"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "합격"
+   ],
+   [
+    "합법"
+   ],
+   [
+    "합병"
+   ],
+   [
+    "합숙"
+   ],
+   [
+    "합승"
+   ],
+   [
+    "합법적",
+    "합리적"
+   ],
+   [
+    "합격증",
+    "합병증"
+   ],
+   [
+    "합집합"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 합주곡·합창곡",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "b2_039",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적합",
+   "합주곡",
+   "곡명"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "명랑"
+   ],
+   [
+    "명맥"
+   ],
+   [
+    "명멸"
+   ],
+   [
+    "명상법"
+   ],
+   [
+    "명색"
+   ],
+   [
+    "명승"
+   ],
+   [
+    "명약"
+   ],
+   [
+    "명언"
+   ],
+   [
+    "명운"
+   ],
+   [
+    "명상적",
+    "명승고적",
+    "명시적"
+   ],
+   [
+    "명절",
+    "명사절"
+   ],
+   [
+    "명란젓"
+   ],
+   [
+    "명증"
+   ],
+   [
+    "명예퇴직",
+    "명예직"
+   ],
+   [
+    "명칭"
+   ],
+   [
+    "명퇴"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 명곡",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_039",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적합",
+   "합주곡",
+   "곡식"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "식권"
+   ],
+   [
+    "식도락"
+   ],
+   [
+    "식이요법"
+   ],
+   [
+    "식곤증"
+   ],
+   [
+    "식욕부진"
+   ],
+   [
+    "식충"
+   ],
+   [
+    "식탁"
+   ],
+   [
+    "식단표"
+   ],
+   [
+    "식물학"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 식순",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_039",
+  "at": [
+   "식생활",
+   "활극",
+   "극적",
+   "적합",
+   "합주곡",
+   "곡절"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "절교"
+   ],
+   [
+    "절규"
+   ],
+   [
+    "절명"
+   ],
+   [
+    "절벽"
+   ],
+   [
+    "절식"
+   ],
+   [
+    "절약"
+   ],
+   [
+    "절대적",
+    "절망적"
+   ],
+   [
+    "절절"
+   ],
+   [
+    "절도죄"
+   ],
+   [
+    "절찬"
+   ],
+   [
+    "절충"
+   ],
+   [
+    "절편"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 절룩절룩",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_040",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬탄"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "탄압"
+   ],
+   [
+    "탄약"
+   ],
+   [
+    "탄력"
+   ],
+   [
+    "탄력적"
+   ],
+   [
+    "탄핵"
+   ],
+   [
+    "탄환"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 탄식",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "b2_040",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬탄",
+   "탄식",
+   "식권"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "권역",
+    "권력"
+   ],
+   [
+    "권위적",
+    "권위주의적"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 권능",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_040",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬탄",
+   "탄식",
+   "식도락"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "낙승"
+   ],
+   [
+    "낙엽"
+   ],
+   [
+    "낙관적",
+    "낙천적"
+   ],
+   [
+    "낙향"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 낙농업",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_040",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬탄",
+   "탄식",
+   "식이요법"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "법규"
+   ],
+   [
+    "법명"
+   ],
+   [
+    "법률"
+   ],
+   [
+    "법적",
+    "법률적"
+   ],
+   [
+    "법학"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 법칙",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_040",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬탄",
+   "탄식",
+   "식순"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "순교"
+   ],
+   [
+    "순위권"
+   ],
+   [
+    "순백색"
+   ],
+   [
+    "순발력"
+   ],
+   [
+    "순간적",
+    "순리적",
+    "순종적",
+    "순차적"
+   ],
+   [
+    "순직"
+   ],
+   [
+    "순진"
+   ],
+   [
+    "순풍"
+   ],
+   [
+    "순항"
+   ],
+   [
+    "순행"
+   ],
+   [
+    "순환"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 순기능",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_040",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬탄",
+   "탄식",
+   "식곤증"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "증후군"
+   ],
+   [
+    "증권"
+   ],
+   [
+    "증명"
+   ],
+   [
+    "증언"
+   ],
+   [
+    "증가율"
+   ],
+   [
+    "증진",
+    "증명사진"
+   ],
+   [
+    "증축"
+   ],
+   [
+    "증편"
+   ],
+   [
+    "증폭"
+   ],
+   [
+    "증표"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 증식",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_040",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬탄",
+   "탄식",
+   "식욕부진"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "진갑"
+   ],
+   [
+    "진격"
+   ],
+   [
+    "진군"
+   ],
+   [
+    "진출권"
+   ],
+   [
+    "진급"
+   ],
+   [
+    "진맥"
+   ],
+   [
+    "진갈색"
+   ],
+   [
+    "진압"
+   ],
+   [
+    "진언"
+   ],
+   [
+    "진력"
+   ],
+   [
+    "진학률"
+   ],
+   [
+    "진취적",
+    "진보적"
+   ],
+   [
+    "진즉"
+   ],
+   [
+    "진폐증"
+   ],
+   [
+    "진수성찬"
+   ],
+   [
+    "진흙탕",
+    "진탕"
+   ],
+   [
+    "진퇴"
+   ],
+   [
+    "진폭"
+   ],
+   [
+    "진도표"
+   ],
+   [
+    "진학"
+   ],
+   [
+    "진행"
+   ],
+   [
+    "진분홍",
+    "진홍"
+   ],
+   [
+    "진두지휘"
+   ],
+   [
+    "진흥"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 진퇴유곡·진혼곡",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_040",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬탄",
+   "탄식",
+   "식충"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "충격"
+   ],
+   [
+    "충돌"
+   ],
+   [
+    "충격적",
+    "충동적"
+   ],
+   [
+    "충절"
+   ],
+   [
+    "충혈"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 충언",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_040",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬탄",
+   "탄식",
+   "식탁"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "탁발승"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 탁탁",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_040",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬탄",
+   "탄식",
+   "식단표"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "표명"
+   ],
+   [
+    "표주박"
+   ],
+   [
+    "표기법",
+    "표현법"
+   ],
+   [
+    "표현력"
+   ],
+   [
+    "표면적",
+    "표적"
+   ],
+   [
+    "표절"
+   ],
+   [
+    "표준"
+   ],
+   [
+    "표징"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 표식",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_040",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬탄",
+   "탄식",
+   "식물학"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "학교"
+   ],
+   [
+    "학군"
+   ],
+   [
+    "학급"
+   ],
+   [
+    "학맥"
+   ],
+   [
+    "학습"
+   ],
+   [
+    "학업"
+   ],
+   [
+    "학력"
+   ],
+   [
+    "학구적",
+    "학문적",
+    "학술적",
+    "학자적",
+    "학적"
+   ],
+   [
+    "학생증"
+   ],
+   [
+    "학칙"
+   ],
+   [
+    "학풍"
+   ],
+   [
+    "학교생활"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 학식",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_041",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬합"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "합격"
+   ],
+   [
+    "합법"
+   ],
+   [
+    "합병"
+   ],
+   [
+    "합숙"
+   ],
+   [
+    "합승"
+   ],
+   [
+    "합법적",
+    "합리적"
+   ],
+   [
+    "합격증",
+    "합병증"
+   ],
+   [
+    "합집합"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 합주곡·합창곡",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "b2_041",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬합",
+   "합주곡",
+   "곡명"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "명랑"
+   ],
+   [
+    "명맥"
+   ],
+   [
+    "명멸"
+   ],
+   [
+    "명상법"
+   ],
+   [
+    "명색"
+   ],
+   [
+    "명승"
+   ],
+   [
+    "명약"
+   ],
+   [
+    "명언"
+   ],
+   [
+    "명운"
+   ],
+   [
+    "명상적",
+    "명승고적",
+    "명시적"
+   ],
+   [
+    "명절",
+    "명사절"
+   ],
+   [
+    "명란젓"
+   ],
+   [
+    "명증"
+   ],
+   [
+    "명예퇴직",
+    "명예직"
+   ],
+   [
+    "명칭"
+   ],
+   [
+    "명퇴"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 명곡",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_041",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬합",
+   "합주곡",
+   "곡식"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "식권"
+   ],
+   [
+    "식도락"
+   ],
+   [
+    "식이요법"
+   ],
+   [
+    "식곤증"
+   ],
+   [
+    "식욕부진"
+   ],
+   [
+    "식충"
+   ],
+   [
+    "식탁"
+   ],
+   [
+    "식단표"
+   ],
+   [
+    "식물학"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 식순",
+  "ply_of_choice": 7
+ },
+ {
+  "from": "b2_041",
+  "at": [
+   "식생활",
+   "활극",
+   "극찬",
+   "찬합",
+   "합주곡",
+   "곡절"
+  ],
+  "who": "제시자",
+  "choices": [
+   [
+    "절교"
+   ],
+   [
+    "절규"
+   ],
+   [
+    "절명"
+   ],
+   [
+    "절벽"
+   ],
+   [
+    "절식"
+   ],
+   [
+    "절약"
+   ],
+   [
+    "절대적",
+    "절망적"
+   ],
+   [
+    "절절"
+   ],
+   [
+    "절도죄"
+   ],
+   [
+    "절찬"
+   ],
+   [
+    "절충"
+   ],
+   [
+    "절편"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 절룩절룩",
+  "ply_of_choice": 7
  }
 ]

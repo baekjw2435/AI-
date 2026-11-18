@@ -809,6 +809,31 @@
    },
    "position_sha256": "d03085e495866af1aa9358d1b7b7b936552bc13b4321b99b04ee5beef7a244d4",
    "input_sha256": "f77e4e0279c527003c197078d749517726649f19d5494f688ffe99763f7a8c84"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-18a",
+   "asset": "30590a41f530b3cb76b708e947142b90970025f990296003b6486862fc4cb360.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-18a/30590a41f530b3cb76b708e947142b90970025f990296003b6486862fc4cb360.tt.gz",
+   "gz_sha256": "30590a41f530b3cb76b708e947142b90970025f990296003b6486862fc4cb360",
+   "gz_bytes": 46888684,
+   "state_sha256": "36188d198671955d2ab3441652ad40e7072935e33dcb6296a55e0f3934a13993",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "branch2/b2_029/state.tt",
+   "note": "2026-11-18 branch2: 극적→적격을 저장 상태에서 476.62초 더 풀었지만 미확정(누적 600초, 한도 도달)",
+   "staged": "2026-11-18 02:32:49",
+   "uploaded_verified": "2026-11-18 02:46:17",
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적",
+     "적격"
+    ]
+   },
+   "position_sha256": "d03085e495866af1aa9358d1b7b7b936552bc13b4321b99b04ee5beef7a244d4",
+   "input_sha256": "f77e4e0279c527003c197078d749517726649f19d5494f688ffe99763f7a8c84"
   }
  ]
 }
