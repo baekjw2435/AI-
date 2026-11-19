@@ -834,6 +834,52 @@
    },
    "position_sha256": "d03085e495866af1aa9358d1b7b7b936552bc13b4321b99b04ee5beef7a244d4",
    "input_sha256": "f77e4e0279c527003c197078d749517726649f19d5494f688ffe99763f7a8c84"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-19a",
+   "asset": "57167166aaa29e5cfbc9ee519696bfc7b1ab0203d346c37c781c1f938020f73b.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-19a/57167166aaa29e5cfbc9ee519696bfc7b1ab0203d346c37c781c1f938020f73b.tt.gz",
+   "gz_sha256": "57167166aaa29e5cfbc9ee519696bfc7b1ab0203d346c37c781c1f938020f73b",
+   "gz_bytes": 46887144,
+   "state_sha256": "749eb66850ba73da0514e05f94566674f8fcf0f470cd8b6129232c993c0822d3",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 472.18,
+   "work_path": "general1/g1_029/state.tt",
+   "note": "2026-11-19 일반 수순 general1: 배정 시간 안에 못 푼 국면. 벽→벽돌→돌솥(472.2초), 큼→큼직큼직→직할(379.8초)",
+   "staged": "2026-11-19 09:58:09",
+   "uploaded_verified": "2026-11-19 10:15:45",
+   "position": {
+    "initial_syllable": "벽",
+    "history": [
+     "벽돌",
+     "돌솥"
+    ]
+   },
+   "position_sha256": "48b1865f2a3a969d345cbd2a26d6f8ced6b1ea32a2d5d364039931c09024cbdb",
+   "input_sha256": "745646b42a0d60d494ac17be0e49576821ee17b94d193742597187770d9e2152"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-19a",
+   "asset": "fc44ab80240c0f901e6df1e597e8a6272f01d64e7af3048188a120b1dad837c1.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-19a/fc44ab80240c0f901e6df1e597e8a6272f01d64e7af3048188a120b1dad837c1.tt.gz",
+   "gz_sha256": "fc44ab80240c0f901e6df1e597e8a6272f01d64e7af3048188a120b1dad837c1",
+   "gz_bytes": 46881028,
+   "state_sha256": "f8a15b2ad172768638d79c09c81eca940413d9d3d4bf2d6e2e91ef606201b102",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 379.83,
+   "work_path": "general1/g1_100/state.tt",
+   "note": "2026-11-19 일반 수순 general1: 배정 시간 안에 못 푼 국면. 벽→벽돌→돌솥(472.2초), 큼→큼직큼직→직할(379.8초)",
+   "staged": "2026-11-19 09:58:13",
+   "uploaded_verified": "2026-11-19 10:15:45",
+   "position": {
+    "initial_syllable": "큼",
+    "history": [
+     "큼직큼직",
+     "직할"
+    ]
+   },
+   "position_sha256": "2008e116ef64cd6e383c96ec72c2c3372da8c2db1ae3624dc32bd3ea1a7b9525",
+   "input_sha256": "de17ef23bf22f9bbae25bc095fb339052d7cea2ed348949c60dbddec7e138ccc"
   }
  ]
 }

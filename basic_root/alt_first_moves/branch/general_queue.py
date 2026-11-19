@@ -65,7 +65,7 @@ def main():
                 else:
                     it.update(method='direct')
                 items.append(it)
-    doc = {'batch': batch, 'created': '2026-11-19', 'kind': 'general route map, shallowest 미확인 moves',
+    doc = {'batch': batch, 'created': '2026-11-19', 'kind': 'general route map, shallowest 미확인 moves', 'sides': ['받은 쪽', '넘긴 쪽'],
            'root': o['--root'], 'base_position': {'initial_syllable': '(각 음절)', 'history': []},
            'question': ('받으면 지는 음절에서 받은 쪽의 각 첫 수 뒤, 이기는 쪽(상대)이 지도의 증명과 다르게 둘 수 있는 2번째 수의 승패'
                         if o['--root'] == 'L' else '받으면 이기는 음절에서 증명의 첫 수와 상대의 응수 뒤, 받은 쪽의 다른 3번째 수의 승패'),
