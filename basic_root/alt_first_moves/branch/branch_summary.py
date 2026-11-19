@@ -168,6 +168,8 @@ def main():
     cases_doc = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
     work, out = Path(sys.argv[2]), Path(sys.argv[3])
     out.mkdir(parents=True, exist_ok=True)
+    global SIDES
+    SIDES = cases_doc.get('sides', SIDES)
     recs = [summarize(c, work / c['name']) for c in cases_doc['cases']]
     (out / 'summary.json').write_text(json.dumps({'batch': cases_doc['batch'], 'base_position': cases_doc['base_position'],
                                                   'cases': recs}, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
@@ -178,13 +180,20 @@ def main():
     print(json.dumps([{k: r.get(k) for k in ('name', 'word', 'accepted', 'verdict')} for r in recs], ensure_ascii=False))
 
 
+SIDES = ['제시자', '받은 쪽']     # [player of history[0], the other]; a cases file may set "sides"
+
+
 def side(hist):
-    """who is to move after `hist`: the player of hist[0] (the presenter of this study's position) or the other."""
-    return '제시자' if len(hist) % 2 == 0 else '받은 쪽'
+    """who is to move after `hist`: the player of hist[0] or the other (names: SIDES)."""
+    return SIDES[0] if len(hist) % 2 == 0 else SIDES[1]
 
 
-def line(hist, n0):
-    return ' → '.join(hist[n0:]) if len(hist) > n0 else ''
+def line(hist, n0, start=None):
+    """the moves after the base; with an empty base (general route map) the received syllable comes first"""
+    seq = hist[n0:]
+    if start and n0 == 0:
+        return ' → '.join([start + ' 받음'] + seq)
+    return ' → '.join(seq) if seq else ''
 
 
 def open_choices(recs):
@@ -195,18 +204,18 @@ def open_choices(recs):
             continue
         h = r['position']['history']
         if r['mover_result'] == 'W':
-            out.append({'from': r['name'], 'at': h, 'who': side(h), 'choices': [x['words'] for x in r['mover_other'] if x['class'] == 'unconfirmed'],
+            out.append({'from': r['name'], 'start': r['position']['initial_syllable'], 'at': h, 'who': side(h), 'choices': [x['words'] for x in r['mover_other'] if x['class'] == 'unconfirmed'],
                         'kind': 'the winner\'s other moves where the certificate chose ' + '·'.join(r['reply']['words'])})
             for a in r['after_reply']:
                 if a.get('answer_alternatives'):
                     at = h + [r['reply']['words'][0], a['words'][0]]
-                    out.append({'from': r['name'], 'at': at, 'who': side(at), 'choices': a['answer_alternatives'],
+                    out.append({'from': r['name'], 'start': r['position']['initial_syllable'], 'at': at, 'who': side(at), 'choices': a['answer_alternatives'],
                                 'kind': 'the winner\'s other answers where the certificate chose ' + '·'.join(a['answer'] or [])})
         else:
             for a in r['replies']:
                 if a.get('answer_alternatives'):
                     at = h + [a['words'][0]]
-                    out.append({'from': r['name'], 'at': at, 'who': side(at), 'choices': a['answer_alternatives'],
+                    out.append({'from': r['name'], 'start': r['position']['initial_syllable'], 'at': at, 'who': side(at), 'choices': a['answer_alternatives'],
                                 'kind': 'the winner\'s other answers where the certificate chose ' + '·'.join(a['answer'] or [])})
     for o in out:
         o['ply_of_choice'] = len(o['at']) + 1
@@ -222,7 +231,9 @@ def markdown(doc, recs):
     L = [f"# 후속 갈래 {doc['batch']}: {' → '.join(base['history'])} 뒤 ({doc.get('created', '')})", '']
     if doc.get('question'):
         L += [f"질문: {doc['question']}", '']
-    L += [f"용어: 제시자 = {first[0]}을(를) 낸 사람, 받은 쪽 = 상대. '지는 수'는 그 단어를 낸 사람이 지는 수, '이기는 수'는 이기는 수입니다.", '',
+    L += [(f"용어: 제시자 = {first[0]}을(를) 낸 사람, 받은 쪽 = 상대." if SIDES[0] == '제시자' else
+           f"용어: {SIDES[0]} = 그 음절을 받은 사람(첫 수를 낸 사람), {SIDES[1]} = 그 음절을 넘긴 사람.")
+          + " '지는 수'는 그 단어를 낸 사람이 지는 수, '이기는 수'는 이기는 수입니다.", '',
           '## 판정', '',
           '| 수순(앞 자리 뒤) | 고른 사람 | 판정 | 이긴 쪽의 다음 수(증명서) | 탐색·증명서 작성·검증(초) | 증명 국면 |', '|---|---|---|---|---|---:|']
     for k, v in doc.get('already_known', {}).items():
@@ -230,7 +241,7 @@ def markdown(doc, recs):
     for r in recs:
         h = r['position']['history']
         who = side(h[:-1])
-        seq = line(h[:-1], n0) + (' → ' if len(h) - 1 > n0 else '') + j(r['group_words'])
+        seq = line(h[:-1], n0, r['position']['initial_syllable']) + (' → ' if len(h) - 1 > n0 or n0 == 0 else '') + j(r['group_words'])
         if not r['accepted']:
             t = '미시도(예산 소진)' if r.get('untried') else '시도 후 미확정'
             s_ = '-' if r.get('untried') else f"{r['search_seconds'] or 0:.1f} · - · -"
@@ -246,7 +257,7 @@ def markdown(doc, recs):
             continue
         h = r['position']['history']
         mover, other = side(h), side(h[:-1])
-        L += [f"## {line(h, n0) or j(r['group_words'])}", '']
+        L += [f"## {line(h, n0, r['position']['initial_syllable']) or j(r['group_words'])}", '']
         if r['verdict'] == 'lose':
             L += [f"- {mover}의 승리수: **{j(r['reply']['words'])}** (증명서)",
                   f"- {mover}의 다른 수: " + (', '.join(j(x['words']) + (' (정적으로 짐)' if x['class'] == 'static_lose' else '') for x in r['mover_other']) or '없음')
@@ -277,7 +288,7 @@ def open_markdown(doc, opens):
     for ply in sorted(by):
         L += [f"## {ply}번째 수의 선택 ({sum(len(o['choices']) for o in by[ply])}묶음)", '', '| 자리(앞 수순) | 고르는 사람 | 미확인 선택 |', '|---|---|---|']
         for o in by[ply]:
-            L.append(f"| {line(o['at'], n0)} | {o['who']} | {', '.join(j(c) for c in o['choices'])} |")
+            L.append(f"| {line(o['at'], n0, o.get('start'))} | {o['who']} | {', '.join(j(c) for c in o['choices'])} |")
         L.append('')
     return '\n'.join(L) + '\n'
 
