@@ -1018,6 +1018,29 @@
    },
    "position_sha256": "2232e182b03fbf7f5389e7a80eb8a4d4b2c3111678c6e34b2ca51392e253e624",
    "input_sha256": "30592e582f916ae65a620aea80294275f0c502ca4f4af32eb8d755d3f71d581e"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-19d",
+   "asset": "3f6a4e0877dfe4f9695f59cc3e403a86d6b8808f10f6c213ad09efd06c8a64e9.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-19d/3f6a4e0877dfe4f9695f59cc3e403a86d6b8808f10f6c213ad09efd06c8a64e9.tt.gz",
+   "gz_sha256": "3f6a4e0877dfe4f9695f59cc3e403a86d6b8808f10f6c213ad09efd06c8a64e9",
+   "gz_bytes": 46833007,
+   "state_sha256": "e5590b584bffb9579f8522f09c04d6f782f0ae65f0170241856539b77341c813",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 357.42,
+   "work_path": "general1/g1_324/state.tt",
+   "note": "2026-11-19 general1 네 번째 실행: 못 푼 국면. 활→활극→극력(357.4초)",
+   "staged": "2026-11-19 14:41:27",
+   "uploaded_verified": "2026-11-19 15:19:38",
+   "position": {
+    "initial_syllable": "활",
+    "history": [
+     "활극",
+     "극력"
+    ]
+   },
+   "position_sha256": "4c4bd26983dbdb2f1afcc03f955a43e97d2a121fb0d08150444bc764403067e5",
+   "input_sha256": "ccba4b20e8838e7fc7654077e21dd330704d3c2d4ed06773d9b6b4c755ed05ce"
   }
  ]
 }
