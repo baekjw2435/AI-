@@ -949,6 +949,75 @@
    },
    "position_sha256": "fb0283a98d29dea15dfdec014399894560f0d5627d57f66a701832433f3ccb06",
    "input_sha256": "6f8a8644bacc95aa73eb72779b52a6459045c547bd0345f8b0f21d26d4c10f31"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-19c",
+   "asset": "f9119d33c102c8392ec648967ff9312f87c4e30efedac5bc0896ca17ee403c3f.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-19c/f9119d33c102c8392ec648967ff9312f87c4e30efedac5bc0896ca17ee403c3f.tt.gz",
+   "gz_sha256": "f9119d33c102c8392ec648967ff9312f87c4e30efedac5bc0896ca17ee403c3f",
+   "gz_bytes": 46859453,
+   "state_sha256": "a5e7f4f6c2d747b041cd71290220b9d71735905e339a99809b12975d92fdd83e",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "general1/g1_194/state.tt",
+   "note": "2026-11-19 general1 세 번째 실행: 못 푼 국면. 눅→눅진눅진→진도표(600초), 죄→죄의식→식곤증(114.5초), 죄→죄의식→식단표(517.0초)",
+   "staged": "2026-11-19 13:02:56",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "눅",
+    "history": [
+     "눅진눅진",
+     "진도표"
+    ]
+   },
+   "position_sha256": "7f6e2502f44969c4d40d900b3c08e87eab3c1ce7e83a140fc25b457166d4536d",
+   "input_sha256": "36e07597bad8248d85817bd8c6f0ffabed8911d78440b294fbca2a3a98821be9"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-19c",
+   "asset": "736e1607f804fc8e4c3211ac03d63bcfefd5129fdec30f51f9354d2e8c03c37e.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-19c/736e1607f804fc8e4c3211ac03d63bcfefd5129fdec30f51f9354d2e8c03c37e.tt.gz",
+   "gz_sha256": "736e1607f804fc8e4c3211ac03d63bcfefd5129fdec30f51f9354d2e8c03c37e",
+   "gz_bytes": 45547082,
+   "state_sha256": "02c7ea5401c1ab5ed47a44f8e15479f03332df83ca93e127f6c2c7f5652b285d",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 114.53,
+   "work_path": "general1/g1_256/state.tt",
+   "note": "2026-11-19 general1 세 번째 실행: 못 푼 국면. 눅→눅진눅진→진도표(600초), 죄→죄의식→식곤증(114.5초), 죄→죄의식→식단표(517.0초)",
+   "staged": "2026-11-19 13:02:59",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "죄",
+    "history": [
+     "죄의식",
+     "식곤증"
+    ]
+   },
+   "position_sha256": "9bb20228a0c4523fa271f55ce62e7056f5e3cd3d5c925ce7e7bbc2cfd50ec385",
+   "input_sha256": "12a329f6f109caf1d47cb8a4e338b115f35ee5fa961ff56dce8fc9a8b907717d"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-19c",
+   "asset": "9fdab1b88b14687f5f92be94c844a5ff6f9990664c7cca0a20b48272443ce2ee.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-19c/9fdab1b88b14687f5f92be94c844a5ff6f9990664c7cca0a20b48272443ce2ee.tt.gz",
+   "gz_sha256": "9fdab1b88b14687f5f92be94c844a5ff6f9990664c7cca0a20b48272443ce2ee",
+   "gz_bytes": 46927380,
+   "state_sha256": "68b73883be945919806d79f639264d260d4b54528211cc8bf790f1ac9fec618a",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 517.01,
+   "work_path": "general1/g1_258/state.tt",
+   "note": "2026-11-19 general1 세 번째 실행: 못 푼 국면. 눅→눅진눅진→진도표(600초), 죄→죄의식→식곤증(114.5초), 죄→죄의식→식단표(517.0초)",
+   "staged": "2026-11-19 13:03:03",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "죄",
+    "history": [
+     "죄의식",
+     "식단표"
+    ]
+   },
+   "position_sha256": "2232e182b03fbf7f5389e7a80eb8a4d4b2c3111678c6e34b2ca51392e253e624",
+   "input_sha256": "30592e582f916ae65a620aea80294275f0c502ca4f4af32eb8d755d3f71d581e"
   }
  ]
 }
