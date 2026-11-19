@@ -880,6 +880,75 @@
    },
    "position_sha256": "2008e116ef64cd6e383c96ec72c2c3372da8c2db1ae3624dc32bd3ea1a7b9525",
    "input_sha256": "de17ef23bf22f9bbae25bc095fb339052d7cea2ed348949c60dbddec7e138ccc"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-19b",
+   "asset": "55cd37838f51ca4e8ad41097dc161c7ae3bb6b8ca7380878e31f7bca9ae5e874.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-19b/55cd37838f51ca4e8ad41097dc161c7ae3bb6b8ca7380878e31f7bca9ae5e874.tt.gz",
+   "gz_sha256": "55cd37838f51ca4e8ad41097dc161c7ae3bb6b8ca7380878e31f7bca9ae5e874",
+   "gz_bytes": 47002495,
+   "state_sha256": "656d597e1d8114c15cbd1a5213973cb76542644aad1917bc013a1972bb181f2e",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "general1/g1_120/state.tt",
+   "note": "2026-11-19 general1 이어서: 못 푼 국면. 온→온돌→돌솥(600초), 객→객관식→식충(83.1초, 예산 끝), 십→십계명→명상법(48.1초, 예산 끝)",
+   "staged": "2026-11-19 11:54:30",
+   "uploaded_verified": "2026-11-19 12:12:39",
+   "position": {
+    "initial_syllable": "온",
+    "history": [
+     "온돌",
+     "돌솥"
+    ]
+   },
+   "position_sha256": "b52092b9d66c358b457783f3f792855faf8c66ca911efee3e6392fe40fa3eff3",
+   "input_sha256": "9df3d38b01e3faf51f33ae872a0144c1656123990e63b4551b85fe7cfb782bdb"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-19b",
+   "asset": "a3c09422cc611654a45a18c92692a27a469d55786153da00810e64913bb65097.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-19b/a3c09422cc611654a45a18c92692a27a469d55786153da00810e64913bb65097.tt.gz",
+   "gz_sha256": "a3c09422cc611654a45a18c92692a27a469d55786153da00810e64913bb65097",
+   "gz_bytes": 45456540,
+   "state_sha256": "b494dc867a14c1585bc1e59c3f8b09d279654658b6fd51fd74dd5bfb823cfb0d",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 83.11,
+   "work_path": "general1/g1_154/state.tt",
+   "note": "2026-11-19 general1 이어서: 못 푼 국면. 온→온돌→돌솥(600초), 객→객관식→식충(83.1초, 예산 끝), 십→십계명→명상법(48.1초, 예산 끝)",
+   "staged": "2026-11-19 11:54:34",
+   "uploaded_verified": "2026-11-19 12:12:39",
+   "position": {
+    "initial_syllable": "객",
+    "history": [
+     "객관식",
+     "식충"
+    ]
+   },
+   "position_sha256": "95be0b291b4ceb61d9406dfef75f8c674eb3a6affbfd73ff1da9db22dd6985d4",
+   "input_sha256": "15f9fac2cb52c9a1910ef782c881be9b148a91b36cfa4865d828cdc6fdfaf2e4"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-19b",
+   "asset": "8bfdd6384d118ece0f2cdfdeea34c729aa3efbcd2f7a0a42a5703fc19539bab7.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-19b/8bfdd6384d118ece0f2cdfdeea34c729aa3efbcd2f7a0a42a5703fc19539bab7.tt.gz",
+   "gz_sha256": "8bfdd6384d118ece0f2cdfdeea34c729aa3efbcd2f7a0a42a5703fc19539bab7",
+   "gz_bytes": 44889102,
+   "state_sha256": "e321b8b76e4f223713784cb85f4866bceb4087376d47482ccf55978f99736563",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 48.12,
+   "work_path": "general1/g1_171/state.tt",
+   "note": "2026-11-19 general1 이어서: 못 푼 국면. 온→온돌→돌솥(600초), 객→객관식→식충(83.1초, 예산 끝), 십→십계명→명상법(48.1초, 예산 끝)",
+   "staged": "2026-11-19 11:54:38",
+   "uploaded_verified": "2026-11-19 12:12:39",
+   "position": {
+    "initial_syllable": "십",
+    "history": [
+     "십계명",
+     "명상법"
+    ]
+   },
+   "position_sha256": "fb0283a98d29dea15dfdec014399894560f0d5627d57f66a701832433f3ccb06",
+   "input_sha256": "6f8a8644bacc95aa73eb72779b52a6459045c547bd0345f8b0f21d26d4c10f31"
   }
  ]
 }
