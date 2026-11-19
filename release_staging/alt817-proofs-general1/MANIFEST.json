@@ -656,7 +656,8 @@
    "sha256": "3d84d0cce5688bafa4076aaea7912fb9a18eb7d1422a8a463b6b13429043f5ea",
    "bytes": 1364979,
    "certifies": [
-    "general1/g1_095 큼직큼직 → 직설법"
+    "general1/g1_095 큼직큼직 → 직설법",
+    "general1/g1_107 훈련병 → 병법"
    ]
   },
   "f17640f9763a9b2634be0d7e2ef3adc0db92907100d76cf5c41eaa9d77a63069.v4.gz": {
@@ -670,7 +671,8 @@
    "sha256": "48ee88cbe9b0bd5b3ee67c7dc0ecddd90ca0f24028f79d5b0e730fe5db538b93",
    "bytes": 57353,
    "certifies": [
-    "general1/g1_097 큼직큼직 → 직업병"
+    "general1/g1_097 큼직큼직 → 직업병",
+    "general1/g1_117 온돌 → 돌림병"
    ]
   },
   "17c3573119b9f7cb4e907a66e80a1aff2c17c26944763aa2230a829b43f35552.v4.gz": {
@@ -686,8 +688,470 @@
    "certifies": [
     "general1/g1_099 큼직큼직 → 직진"
    ]
+  },
+  "ad1179b485d7d6de6d2f2602c9ce61205252fc767daa4d99ed56bcd6017a779d.v4.gz": {
+   "sha256": "ad1179b485d7d6de6d2f2602c9ce61205252fc767daa4d99ed56bcd6017a779d",
+   "bytes": 525999,
+   "certifies": [
+    "general1/g1_101 큼직큼직 → 직행"
+   ]
+  },
+  "5b462a182eefce4b23bc12d776138ea868032d3dcd24a95c6f92f3b696fbe8e6.v4.gz": {
+   "sha256": "5b462a182eefce4b23bc12d776138ea868032d3dcd24a95c6f92f3b696fbe8e6",
+   "bytes": 1339878,
+   "certifies": [
+    "general1/g1_102 훈련병 → 병구완"
+   ]
+  },
+  "8600e67a6fa8071979345af08deaf8e1bab97d10246491285e94c9e4d47485f0.v4.gz": {
+   "sha256": "8600e67a6fa8071979345af08deaf8e1bab97d10246491285e94c9e4d47485f0",
+   "bytes": 1139489,
+   "certifies": [
+    "general1/g1_103 훈련병 → 병균"
+   ]
+  },
+  "dc7c69ef93b7db0017e190225b31610fc16b99229684144f3cd7b99c2a76dec6.v4.gz": {
+   "sha256": "dc7c69ef93b7db0017e190225b31610fc16b99229684144f3cd7b99c2a76dec6",
+   "bytes": 23475342,
+   "certifies": [
+    "general1/g1_104 훈련병 → 병뚜껑"
+   ]
+  },
+  "ff98b7417f12830f61470a01b81f273e544e52c511aa42e6b84faab2106c10f8.v4.gz": {
+   "sha256": "ff98b7417f12830f61470a01b81f273e544e52c511aa42e6b84faab2106c10f8",
+   "bytes": 728087,
+   "certifies": [
+    "general1/g1_105 훈련병 → 병리학"
+   ]
+  },
+  "19df4fe7104933fdb59a730990fcd7df3e08d753959229dec14ece1e84c40495.v4.gz": {
+   "sha256": "19df4fe7104933fdb59a730990fcd7df3e08d753959229dec14ece1e84c40495",
+   "bytes": 1377492,
+   "certifies": [
+    "general1/g1_106 훈련병 → 병명"
+   ]
+  },
+  "17f1d01fa4fc4f7bbdf3f0a0010b1337543896a40640f6409e2f78cee6855ffd.v4.gz": {
+   "sha256": "17f1d01fa4fc4f7bbdf3f0a0010b1337543896a40640f6409e2f78cee6855ffd",
+   "bytes": 1333606,
+   "certifies": [
+    "general1/g1_108 훈련병 → 병색"
+   ]
+  },
+  "4ed4feaac0175017015d48d19f22813ec9d4484927c87965ad70883dab490f76.v4.gz": {
+   "sha256": "4ed4feaac0175017015d48d19f22813ec9d4484927c87965ad70883dab490f76",
+   "bytes": 6375017,
+   "certifies": [
+    "general1/g1_109 훈련병 → 병역"
+   ]
+  },
+  "aa33917f41398fd3721f64a00567e3c6d0671b31e71ef2e28088603e777872e0.v4.gz": {
+   "sha256": "aa33917f41398fd3721f64a00567e3c6d0671b31e71ef2e28088603e777872e0",
+   "bytes": 1346012,
+   "certifies": [
+    "general1/g1_110 훈련병 → 병적"
+   ]
+  },
+  "36b5005cdc360f4592eebbd042f678b5fb9cb01d4b323d56f5821534997d9219.v4.gz": {
+   "sha256": "36b5005cdc360f4592eebbd042f678b5fb9cb01d4b323d56f5821534997d9219",
+   "bytes": 645615,
+   "certifies": [
+    "general1/g1_111 훈련병 → 병졸"
+   ]
+  },
+  "8bc8f893e05fb23b4f07e5d988b576e860140182f63a2c4b22331d5e2e64fb0d.v4.gz": {
+   "sha256": "8bc8f893e05fb23b4f07e5d988b576e860140182f63a2c4b22331d5e2e64fb0d",
+   "bytes": 5394652,
+   "certifies": [
+    "general1/g1_112 훈련병 → 병풍"
+   ]
+  },
+  "4ed234c44347270ba584553386d65a154345f73b5691fd82af5a1550324784c8.v4.gz": {
+   "sha256": "4ed234c44347270ba584553386d65a154345f73b5691fd82af5a1550324784c8",
+   "bytes": 4648329,
+   "certifies": [
+    "general1/g1_113 훈련병 → 병합"
+   ]
+  },
+  "c7e0374c7d130e8f7afa26354f9baa50e3bde4dd1fcbb5af6d77e7cd2962367f.v4.gz": {
+   "sha256": "c7e0374c7d130e8f7afa26354f9baa50e3bde4dd1fcbb5af6d77e7cd2962367f",
+   "bytes": 525512,
+   "certifies": [
+    "general1/g1_114 훈련병 → 병행"
+   ]
+  },
+  "d956caf556461aa7330448b038c5d2831e37a8faf7d77a57fad494e27feefd42.v4.gz": {
+   "sha256": "d956caf556461aa7330448b038c5d2831e37a8faf7d77a57fad494e27feefd42",
+   "bytes": 1407987,
+   "certifies": [
+    "general1/g1_115 훈련병 → 병환"
+   ]
+  },
+  "666b9bed66fd99956a2cca259d9d90e7ac9661155b602dc3f2670d22a54408ff.v4.gz": {
+   "sha256": "666b9bed66fd99956a2cca259d9d90e7ac9661155b602dc3f2670d22a54408ff",
+   "bytes": 58201320,
+   "certifies": [
+    "general1/g1_116 온돌 → 돌격"
+   ]
+  },
+  "f11e27e2d92bea5bf8dbe116655051eff1b0e90394e534ca7ef8ee8c195e0160.v4.gz": {
+   "sha256": "f11e27e2d92bea5bf8dbe116655051eff1b0e90394e534ca7ef8ee8c195e0160",
+   "bytes": 1338220,
+   "certifies": [
+    "general1/g1_118 온돌 → 돌발적"
+   ]
+  },
+  "fcdb19e219b2296f3c622220b647ed9de6b283fe3e8d5c946f166ddae7a4f491.v4.gz": {
+   "sha256": "fcdb19e219b2296f3c622220b647ed9de6b283fe3e8d5c946f166ddae7a4f491",
+   "bytes": 1545440,
+   "certifies": [
+    "general1/g1_119 온돌 → 돌변"
+   ]
+  },
+  "01e267a3819697b682e9ebfb6c0cd1f627fd0ffa4b31940c5ae87c6121e57142.v4.gz": {
+   "sha256": "01e267a3819697b682e9ebfb6c0cd1f627fd0ffa4b31940c5ae87c6121e57142",
+   "bytes": 1485946,
+   "certifies": [
+    "general1/g1_121 온돌 → 돌진"
+   ]
+  },
+  "1bf11f1215cf619ef6e00ac4e4881b137ecc86d31d86e4e837e82c6fc6f89174.v4.gz": {
+   "sha256": "1bf11f1215cf619ef6e00ac4e4881b137ecc86d31d86e4e837e82c6fc6f89174",
+   "bytes": 5219901,
+   "certifies": [
+    "general1/g1_122 온돌 → 돌탑"
+   ]
+  },
+  "f6754340d0c493484a280537dfb24fa776a26c75cea9ed2a04766d485fd13daf.v4.gz": {
+   "sha256": "f6754340d0c493484a280537dfb24fa776a26c75cea9ed2a04766d485fd13daf",
+   "bytes": 8041811,
+   "certifies": [
+    "general1/g1_123 온돌 → 돌파력"
+   ]
+  },
+  "f22596ee209d367c30adb7fd605cab6a4e6b69a075e0a3409ee2a6cb0f6f1bc3.v4.gz": {
+   "sha256": "f22596ee209d367c30adb7fd605cab6a4e6b69a075e0a3409ee2a6cb0f6f1bc3",
+   "bytes": 5353424,
+   "certifies": [
+    "general1/g1_124 온돌 → 돌풍"
+   ]
+  },
+  "398d1924b96c825eedcf7bf434f9ce81515a9de76edf435b8bf60a2c6259012b.v4.gz": {
+   "sha256": "398d1924b96c825eedcf7bf434f9ce81515a9de76edf435b8bf60a2c6259012b",
+   "bytes": 1378109,
+   "certifies": [
+    "general1/g1_125 온조왕 → 왕권"
+   ]
+  },
+  "a060810d21ab653b72154558b185d2ee080f9181a4c756e0d291830bdc6bb9c6.v4.gz": {
+   "sha256": "a060810d21ab653b72154558b185d2ee080f9181a4c756e0d291830bdc6bb9c6",
+   "bytes": 1364553,
+   "certifies": [
+    "general1/g1_126 온조왕 → 왕명"
+   ]
+  },
+  "aef0f0cf353e71e28ad6865cba260f57b4aea7d2cec39fbc3409809dcbbb460a.v4.gz": {
+   "sha256": "aef0f0cf353e71e28ad6865cba260f57b4aea7d2cec39fbc3409809dcbbb460a",
+   "bytes": 4625400,
+   "certifies": [
+    "general1/g1_127 온조왕 → 왕왕"
+   ]
+  },
+  "b7bcfbf56c143f2da5bb7a076d2e87c84b26cccdbb9aaeaf4895f055a60f4dfd.v4.gz": {
+   "sha256": "b7bcfbf56c143f2da5bb7a076d2e87c84b26cccdbb9aaeaf4895f055a60f4dfd",
+   "bytes": 1492507,
+   "certifies": [
+    "general1/g1_128 온조왕 → 왕진"
+   ]
+  },
+  "4c4823c28a3b0b21719dac1301e8dac866bd7d0215ac96e0fc0daf6c238ec8e0.v4.gz": {
+   "sha256": "4c4823c28a3b0b21719dac1301e8dac866bd7d0215ac96e0fc0daf6c238ec8e0",
+   "bytes": 1495241,
+   "certifies": [
+    "general1/g1_129 온탕 → 탕진"
+   ]
+  },
+  "92208c312dc99569d28b0cd51b1541f368a802770f957c36707d04d7c0b3e515.v4.gz": {
+   "sha256": "92208c312dc99569d28b0cd51b1541f368a802770f957c36707d04d7c0b3e515",
+   "bytes": 1103622,
+   "certifies": [
+    "general1/g1_130 온탕 → 탕탕"
+   ]
+  },
+  "b3ca1102dc07312d6f29d6e866d6688a64bead5217ecb1ebe87fb52478598958.v4.gz": {
+   "sha256": "b3ca1102dc07312d6f29d6e866d6688a64bead5217ecb1ebe87fb52478598958",
+   "bytes": 10247972,
+   "certifies": [
+    "general1/g1_131 칙칙폭폭 → 폭격"
+   ]
+  },
+  "ff4d1e5a5a90cf166d300bc56218eddc69611fa3f321c3e641b0e3bd3a3883ff.v4.gz": {
+   "sha256": "ff4d1e5a5a90cf166d300bc56218eddc69611fa3f321c3e641b0e3bd3a3883ff",
+   "bytes": 205677,
+   "certifies": [
+    "general1/g1_132 칙칙폭폭 → 폭군"
+   ]
+  },
+  "f1b7b49d19a4b44250bbad4b983c2f731131a61213d6fe61d4c3b92c503855fb.v4.gz": {
+   "sha256": "f1b7b49d19a4b44250bbad4b983c2f731131a61213d6fe61d4c3b92c503855fb",
+   "bytes": 245045,
+   "certifies": [
+    "general1/g1_133 칙칙폭폭 → 폭락"
+   ]
+  },
+  "9b1103b97a9743ffbd30fe055862b24a15740f8a7b63abaa7d0e0a08adf2d023.v4.gz": {
+   "sha256": "9b1103b97a9743ffbd30fe055862b24a15740f8a7b63abaa7d0e0a08adf2d023",
+   "bytes": 1683698,
+   "certifies": [
+    "general1/g1_134 칙칙폭폭 → 폭력"
+   ]
+  },
+  "87dfb02252bbe1b0a283230f38aafd0706fcce885f93175483b0b46d897e9962.v4.gz": {
+   "sha256": "87dfb02252bbe1b0a283230f38aafd0706fcce885f93175483b0b46d897e9962",
+   "bytes": 210098,
+   "certifies": [
+    "general1/g1_135 칙칙폭폭 → 폭력적"
+   ]
+  },
+  "aa1adb63169688ce5b53666ad533c06c1ea44acc2a869386a5b6871e02649851.v4.gz": {
+   "sha256": "aa1adb63169688ce5b53666ad533c06c1ea44acc2a869386a5b6871e02649851",
+   "bytes": 2591546,
+   "certifies": [
+    "general1/g1_136 칙칙폭폭 → 폭식"
+   ]
+  },
+  "c4df5cbd8f20000414b1aca4edca84ebf90bc0db8e657116e8787f31d58701db.v4.gz": {
+   "sha256": "c4df5cbd8f20000414b1aca4edca84ebf90bc0db8e657116e8787f31d58701db",
+   "bytes": 2156371,
+   "certifies": [
+    "general1/g1_137 칙칙폭폭 → 폭압"
+   ]
+  },
+  "9cef3b6d6929aeafd17e496a8dffd0874d33b5b51887defb563abd0992edc913.v4.gz": {
+   "sha256": "9cef3b6d6929aeafd17e496a8dffd0874d33b5b51887defb563abd0992edc913",
+   "bytes": 4010460,
+   "certifies": [
+    "general1/g1_138 칙칙폭폭 → 폭약"
+   ]
+  },
+  "c755b7961eb9f15f83cba9a1233949ccb82fae28d66ca73c2b4c33aadb0a261c.v4.gz": {
+   "sha256": "c755b7961eb9f15f83cba9a1233949ccb82fae28d66ca73c2b4c33aadb0a261c",
+   "bytes": 3356260,
+   "certifies": [
+    "general1/g1_139 칙칙폭폭 → 폭언"
+   ]
+  },
+  "6f69929c0cd6d368eabcff5df429814ab0b5b4f8e8379a11917622a783c66881.v4.gz": {
+   "sha256": "6f69929c0cd6d368eabcff5df429814ab0b5b4f8e8379a11917622a783c66881",
+   "bytes": 278800,
+   "certifies": [
+    "general1/g1_140 칙칙폭폭 → 폭죽"
+   ]
+  },
+  "66acbe6421be977ab633cdbb3d3a4f957bb74e4493c480fcb9c4c4485e5fe26a.v4.gz": {
+   "sha256": "66acbe6421be977ab633cdbb3d3a4f957bb74e4493c480fcb9c4c4485e5fe26a",
+   "bytes": 4025106,
+   "certifies": [
+    "general1/g1_141 칙칙폭폭 → 폭탄"
+   ]
+  },
+  "a30d73094da23f4fd2b33b3152c83745584e247528a36db5e8d9440c81d1149d.v4.gz": {
+   "sha256": "a30d73094da23f4fd2b33b3152c83745584e247528a36db5e8d9440c81d1149d",
+   "bytes": 1641322,
+   "certifies": [
+    "general1/g1_142 칙칙폭폭 → 폭폭"
+   ]
+  },
+  "3030c2514c50a6e178d373edcef078abc9a23a36f7dee5a7a0ad9892c59ed3ca.v4.gz": {
+   "sha256": "3030c2514c50a6e178d373edcef078abc9a23a36f7dee5a7a0ad9892c59ed3ca",
+   "bytes": 1596890,
+   "certifies": [
+    "general1/g1_143 칙칙폭폭 → 폭풍"
+   ]
+  },
+  "7d72d2f82d02f43411bee961891f12247d8696d46f5ea6f4087660d92abd18be.v4.gz": {
+   "sha256": "7d72d2f82d02f43411bee961891f12247d8696d46f5ea6f4087660d92abd18be",
+   "bytes": 99757,
+   "certifies": [
+    "general1/g1_144 칙칙폭폭 → 폭행"
+   ]
+  },
+  "48ddf8036d8d9e64c8f354e944ff4e3f3f51b09f41d08f621969831b1c35af09.v4.gz": {
+   "sha256": "48ddf8036d8d9e64c8f354e944ff4e3f3f51b09f41d08f621969831b1c35af09",
+   "bytes": 2678367,
+   "certifies": [
+    "general1/g1_145 칙칙폭폭 → 폭행죄"
+   ]
+  },
+  "e4d2ba70252bc3a2ec05623213ebe960d856292f8c31c5aca2044ac6f01679af.v4.gz": {
+   "sha256": "e4d2ba70252bc3a2ec05623213ebe960d856292f8c31c5aca2044ac6f01679af",
+   "bytes": 387884,
+   "certifies": [
+    "general1/g1_146 객관식 → 식곤증"
+   ]
+  },
+  "5588b757a25ab64c9d8459b89134bc7f3ea668bfb610546e7e01c1c73d8b569e.v4.gz": {
+   "sha256": "5588b757a25ab64c9d8459b89134bc7f3ea668bfb610546e7e01c1c73d8b569e",
+   "bytes": 1125898,
+   "certifies": [
+    "general1/g1_147 객관식 → 식권"
+   ]
+  },
+  "859178908c31b0b462fcc685273c7b320317f30aac9f14efae02d5a1f9936ddc.v4.gz": {
+   "sha256": "859178908c31b0b462fcc685273c7b320317f30aac9f14efae02d5a1f9936ddc",
+   "bytes": 10434641,
+   "certifies": [
+    "general1/g1_148 객관식 → 식단표"
+   ]
+  },
+  "f2b338bcaecce7e54da6fec7114dc5562283f49421b96cb8f7a781ac9be9019c.v4.gz": {
+   "sha256": "f2b338bcaecce7e54da6fec7114dc5562283f49421b96cb8f7a781ac9be9019c",
+   "bytes": 368095,
+   "certifies": [
+    "general1/g1_149 객관식 → 식도락"
+   ]
+  },
+  "9da19587f52dac758c6f6b5831fdf5307d2425ef7fb40909ce68ee86ee0261bf.v4.gz": {
+   "sha256": "9da19587f52dac758c6f6b5831fdf5307d2425ef7fb40909ce68ee86ee0261bf",
+   "bytes": 105159,
+   "certifies": [
+    "general1/g1_150 객관식 → 식물학"
+   ]
+  },
+  "f445e22c3a0a2b26d45e160035fc5f6ea5bc2d98743b657de6861201fb70ab20.v4.gz": {
+   "sha256": "f445e22c3a0a2b26d45e160035fc5f6ea5bc2d98743b657de6861201fb70ab20",
+   "bytes": 680658,
+   "certifies": [
+    "general1/g1_151 객관식 → 식순"
+   ]
+  },
+  "fd9d7738760312c1cafa1fbe458681595ed9136c123d11d08e79436f01f64357.v4.gz": {
+   "sha256": "fd9d7738760312c1cafa1fbe458681595ed9136c123d11d08e79436f01f64357",
+   "bytes": 257358,
+   "certifies": [
+    "general1/g1_152 객관식 → 식욕부진"
+   ]
+  },
+  "3d09a243f72a855a8b5193ecd3c3b1035eb62bfaa64b2f6ffaf0cbdea57b3747.v4.gz": {
+   "sha256": "3d09a243f72a855a8b5193ecd3c3b1035eb62bfaa64b2f6ffaf0cbdea57b3747",
+   "bytes": 466082,
+   "certifies": [
+    "general1/g1_153 객관식 → 식이요법"
+   ]
+  },
+  "7ca27a132076c30b776d342af97d9b08c317c1c9720a6eb95960605184fe37b9.v4.gz": {
+   "sha256": "7ca27a132076c30b776d342af97d9b08c317c1c9720a6eb95960605184fe37b9",
+   "bytes": 233824,
+   "certifies": [
+    "general1/g1_155 객관식 → 식탁"
+   ]
+  },
+  "1f1a896aeb11a53c323bbcf9412f6d18ab75b1bd33af95734c7ed897eed5a969.v4.gz": {
+   "sha256": "1f1a896aeb11a53c323bbcf9412f6d18ab75b1bd33af95734c7ed897eed5a969",
+   "bytes": 31467841,
+   "certifies": [
+    "general1/g1_156 객관적 → 적격"
+   ]
+  },
+  "3f7bc25c9bdf1be820110fe06a85a02de000dd1107e6a07947b5979dc7331061.v4.gz": {
+   "sha256": "3f7bc25c9bdf1be820110fe06a85a02de000dd1107e6a07947b5979dc7331061",
+   "bytes": 1348740,
+   "certifies": [
+    "general1/g1_157 객관적 → 적군"
+   ]
+  },
+  "c13bc0605121d369b230d35f8472cfe10bbe9c7e5f972a76dd6298393014f90c.v4.gz": {
+   "sha256": "c13bc0605121d369b230d35f8472cfe10bbe9c7e5f972a76dd6298393014f90c",
+   "bytes": 2663719,
+   "certifies": [
+    "general1/g1_158 객관적 → 적극"
+   ]
+  },
+  "616789180b3c52e353f0f4eead18aa339fb315170cbc52bacd1ea45f7b40988d.v4.gz": {
+   "sha256": "616789180b3c52e353f0f4eead18aa339fb315170cbc52bacd1ea45f7b40988d",
+   "bytes": 436194,
+   "certifies": [
+    "general1/g1_159 객관적 → 적극적"
+   ]
+  },
+  "97c29e9f39bb7125fa5be04e2895b00213b998fcea2e61e9bcd24cf5854eba63.v4.gz": {
+   "sha256": "97c29e9f39bb7125fa5be04e2895b00213b998fcea2e61e9bcd24cf5854eba63",
+   "bytes": 114546,
+   "certifies": [
+    "general1/g1_160 객관적 → 적법"
+   ]
+  },
+  "f7c76d2519647563db9539df574c271479eb51640d9417ab3c09fbeacebae5a8.v4.gz": {
+   "sha256": "f7c76d2519647563db9539df574c271479eb51640d9417ab3c09fbeacebae5a8",
+   "bytes": 806871,
+   "certifies": [
+    "general1/g1_161 객관적 → 적삼"
+   ]
+  },
+  "db08e28f780f4d51e327a1662756010a005b3f407559f6e968fced78d303da8b.v4.gz": {
+   "sha256": "db08e28f780f4d51e327a1662756010a005b3f407559f6e968fced78d303da8b",
+   "bytes": 4634314,
+   "certifies": [
+    "general1/g1_162 객관적 → 적응력"
+   ]
+  },
+  "7bed0d379bc0f28e197ad4bdb774b980242aa14d996a534a7a5716cf93d506cc.v4.gz": {
+   "sha256": "7bed0d379bc0f28e197ad4bdb774b980242aa14d996a534a7a5716cf93d506cc",
+   "bytes": 3868501,
+   "certifies": [
+    "general1/g1_163 객관적 → 적자생존"
+   ]
+  },
+  "2799581b6f01cbd77b50e03f180e3fa147eb17ddb9563ef07b08a1506c2a26e6.v4.gz": {
+   "sha256": "2799581b6f01cbd77b50e03f180e3fa147eb17ddb9563ef07b08a1506c2a26e6",
+   "bytes": 1692482,
+   "certifies": [
+    "general1/g1_164 객관적 → 적중률"
+   ]
+  },
+  "8751f03435639e52bde0479d88207d4e4bba1e0ed9bef5ca9206a5c3e6f9e426.v4.gz": {
+   "sha256": "8751f03435639e52bde0479d88207d4e4bba1e0ed9bef5ca9206a5c3e6f9e426",
+   "bytes": 1295753,
+   "certifies": [
+    "general1/g1_165 객관적 → 적진"
+   ]
+  },
+  "fb4d6177245c9f22279476cc1f4da7dad864a6c84ad5ac1bfaeedb8044eda487.v4.gz": {
+   "sha256": "fb4d6177245c9f22279476cc1f4da7dad864a6c84ad5ac1bfaeedb8044eda487",
+   "bytes": 4235826,
+   "certifies": [
+    "general1/g1_166 객관적 → 적합"
+   ]
+  },
+  "6c22045001d3c8a496ca0b98d1b6df7ef94d42a635ec980a113fc5c84e962ef2.v4.gz": {
+   "sha256": "6c22045001d3c8a496ca0b98d1b6df7ef94d42a635ec980a113fc5c84e962ef2",
+   "bytes": 9017373,
+   "certifies": [
+    "general1/g1_167 십계명 → 명곡"
+   ]
+  },
+  "36c860087282906db9f4ffde897add1e161d05dc6b4247a5baba5e3c04e3aa0d.v4.gz": {
+   "sha256": "36c860087282906db9f4ffde897add1e161d05dc6b4247a5baba5e3c04e3aa0d",
+   "bytes": 175885,
+   "certifies": [
+    "general1/g1_168 십계명 → 명랑"
+   ]
+  },
+  "e10c8ed1e8ede9424eedd5312c7ef941ae6ce57ca19bd7c673c75dff3ddb2a72.v4.gz": {
+   "sha256": "e10c8ed1e8ede9424eedd5312c7ef941ae6ce57ca19bd7c673c75dff3ddb2a72",
+   "bytes": 2946392,
+   "certifies": [
+    "general1/g1_169 십계명 → 명맥"
+   ]
+  },
+  "ee59850df0c3c713345188933095c01d5eae2899d4d894da80b00e76fd7d1246.v4.gz": {
+   "sha256": "ee59850df0c3c713345188933095c01d5eae2899d4d894da80b00e76fd7d1246",
+   "bytes": 768765,
+   "certifies": [
+    "general1/g1_170 십계명 → 명멸"
+   ]
   }
  },
- "file_count": 98,
- "total_bytes": 390430700
+ "file_count": 164,
+ "total_bytes": 647899381
 }
