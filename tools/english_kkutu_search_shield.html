@@ -110,6 +110,17 @@
   .seq .sh{color:var(--a2)} .seq .me{color:var(--good)} .seq .op{color:var(--bad)}
   .seq .pend{color:var(--muted);font-style:italic}
   .usedwrap{margin-top:8px;font-size:12.5px;color:var(--muted)}
+  .playrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+  #play{flex:1 1 180px;min-width:0;background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--text);
+    font-family:var(--mono);font-size:14px;padding:7px 10px}
+  #play:focus{outline:none;border-color:#4a5266}
+  .playrow button{padding:7px 12px;font-size:12.5px}
+  .sel{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+  .sel select{max-width:100%;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;
+    font-family:var(--sans);font-size:12px;padding:6px 8px}
+  .playmsg{font-size:12px;color:var(--bad);min-height:0;margin-top:4px}
+  .playmsg:empty{display:none}
+  .bh{flex-wrap:wrap} .bh .lab{white-space:nowrap}
   .usedwrap summary{cursor:pointer}
   .usedwrap textarea{width:100%;min-height:54px;background:var(--bg);color:var(--text);border:1px solid var(--line);
     border-radius:8px;font-family:var(--mono);font-size:13px;padding:8px;margin:8px 0;resize:vertical}
@@ -141,7 +152,7 @@
     <input type="text" id="q" placeholder="상대가 낸 단어… (예: potato)" autocomplete="off" spellcheck="false">
   </div>
   <div class="qhint" id="qhintBasic">상대가 낸 단어나 그 끝을 입력해. 그 단어의 <b>끝3글자</b> 또는 <b>끝2글자</b>로 시작하는 내 단어들을 보여줌. · 단어 클릭 = 한 수 앞(상대 응수) 미리보기<br><b>·N</b> = 그 단어 뒤에 상대가 이을 수 있는 단어 수 (그 단어 자신은 뺌). 작을수록 킬각.</div>
-  <div class="qhint" id="qhintShield" hidden>상대가 낸 단어를 입력하고 <b>지금 내 보호막</b>을 골라. <b>·N</b>이 보호막보다 작은 단어는 낼 수 없어서 소거돼.<br><b>상대 k/m</b> = 그 단어를 내면 상대가 이을 수 있는 m개 중 상대 보호막(지금-1)을 지키며 실제로 낼 수 있는 k개. k=0이면 💀 승리수.<br>단어 클릭 = 그 단어를 내고 상대 차례로 (보호막 -1, 낸 단어는 다시 못 씀). 상대가 실제로 낸 단어는 검색창에 입력하고 <b>Enter</b>로 기록.</div>
+  <div class="qhint" id="qhintShield" hidden>상대가 낸 단어를 입력하고 <b>지금 내 보호막</b>을 골라. <b>·N</b>이 보호막보다 작은 단어는 낼 수 없어서 소거돼.<br><b>상대 k/m</b> = 그 단어를 내면 상대가 이을 수 있는 m개 중 상대 보호막(지금-1)을 지키며 실제로 낼 수 있는 k개. k=0이면 💀 승리수.<br>단어 클릭 = 그 단어를 내고 상대 차례로 (보호막 -1, 낸 단어는 다시 못 씀). 상대가 실제로 낸 단어는 검색창에 입력하고 <b>Enter</b>로 기록. 목록에 안 보이는 단어는 아래 <b>직접 두기</b>.</div>
 
   <div id="basicPanel">
     <div class="controls">
@@ -180,10 +191,21 @@
         <button type="button" id="resetBtn" disabled>⟲ 처음으로</button>
       </div>
       <div id="seq" class="seq"></div>
+      <div class="playrow">
+        <input type="text" id="play" placeholder="직접 두기: 낼 단어 입력 후 Enter" autocomplete="off" spellcheck="false" aria-label="직접 두기">
+        <button type="button" id="playBtn">두기</button>
+        <label class="sel">시작 단어
+          <select id="qUsedMode">
+            <option value="auto" selected>자동: 2글자·4글자 이상 단어면 이미 낸 단어로</option>
+            <option value="always">항상 이미 낸 단어로</option>
+            <option value="never">끝 글자로만 보기</option>
+          </select>
+        </label>
+      </div>
+      <div id="playMsg" class="playmsg" aria-live="polite"></div>
       <details class="usedwrap">
         <summary>이미 사용한 단어 직접 입력</summary>
         <textarea id="used" placeholder="띄어쓰기나 줄바꿈으로 구분 (예: seven ventilate)" spellcheck="false"></textarea>
-        <label class="toggle" id="qUsedToggle"><input type="checkbox" id="qUsed"> 시작할 때 검색창에 입력한 단어도 이미 낸 단어로 치기 (끝 글자만 입력했으면 끄기)</label>
       </details>
     </div>
   </div>
@@ -99714,15 +99736,24 @@ function moveProblem(prev, w, sh, used){
 //   onseq   : 검색창 단어 = 수순의 마지막 단어.
 //   preview : 수순 중간에 검색창에 직접 입력한 단어가 이어지는 수 → 그 수를 둔 것으로 놓고 보여 줌 (Enter = 기록).
 //   fresh   : 수순 중간에 입력한 단어가 수순과 이어지지 않음 → 새 시작으로 보여 줌.
+// 시작 단어(검색창 첫 단어)를 이미 낸 단어로 칠지.
+//   자동: 2글자 단어(그 2글자 자리는 그 단어를 내야만 생김)나 4글자 이상 단어면 낸 단어로 치고,
+//         3글자 이하 입력(ing, ate, ess 같은 끝 글자)은 끝 글자로만 본다.
+function startCounts(word){
+  if(!SET.has(word)) return false;
+  const mode=$("qUsedMode").value;
+  if(mode==="always") return true;
+  if(mode==="never") return false;
+  return word.length===2||word.length>=4;
+}
 function shieldState(raw){
-  const qUsed=$("qUsed").checked;
   if(!SEQ.length){
-    const used=textareaUsed(); if(qUsed&&SET.has(raw)) used.add(raw);
+    const used=textareaUsed(); if(startCounts(raw)) used.add(raw);
     return {kind:"start", sh:SH, used, moves:0};
   }
   const seqUsed=textareaUsed();
   for(const m of SEQ) seqUsed.add(m.w);
-  if(qUsed){ const st=cleanInput(HIST[0].q); if(SET.has(st)) seqUsed.add(st); }
+  { const st=cleanInput(HIST[0].q); if(startCounts(st)) seqUsed.add(st); }
   const last=lastWord();
   if(raw===last) return {kind:"onseq", sh:SH, used:seqUsed, moves:SEQ.length};
   const why=moveProblem(last, raw, SH, seqUsed);
@@ -99730,7 +99761,7 @@ function shieldState(raw){
     const used=new Set(seqUsed); used.add(raw);
     return {kind:"preview", sh:Math.max(0,SH-1), used, moves:SEQ.length+1, pending:raw};
   }
-  const used=textareaUsed(); if(qUsed&&SET.has(raw)) used.add(raw);
+  const used=textareaUsed(); if(startCounts(raw)) used.add(raw);
   return {kind:"fresh", sh:SH, used, moves:0, why};
 }
 
@@ -99772,7 +99803,7 @@ function renderShieldBranch(container, br, evals, skipped, opt){
   let moreTxt='';
   if(parts.length){
     moreTxt+='<div class="more">'+parts.join(' · ')+' 숨김 · '+(opt.more
-      ?'표시 한도 초과 — 낼 단어를 검색창에 직접 입력하면 볼 수 있어'
+      ?'표시 한도 초과 — 수순 칸의 “직접 두기”에 입력하면 둘 수 있어'
       :'"👎 불리·무 더 보기" 켜면 더 표시')+'</div>';
   }
   const notes=[];
@@ -99795,7 +99826,7 @@ function renderShieldBranch(container, br, evals, skipped, opt){
 
 function runShield(raw, res, sum){
   const S=shieldState(raw); CUR=S;
-  renderSeq(S); syncShieldButtons();
+  renderSeq(S); syncShieldButtons(S);
   const sh=S.sh, h2=Math.max(0,sh-1);
   const ctx=makeCtx(S.used);
   const opt={sh, h2, hideIll:$("hideIll").checked, winOnly:$("winOnly").checked, more:$("showMore").checked};
@@ -99814,7 +99845,7 @@ function runShield(raw, res, sum){
   let banner='';
   if(S.kind==="preview"){
     banner='<div class="banner">✏️ <b>'+raw+'</b> — 수순에 아직 없는 수야. '+(SEQ.length%2===0?'나':'상대')+
-      '(보호막 '+SH+')의 수로 놓고 본 결과야. <b>Enter</b> = 수순에 기록 · 아래 단어를 누르면 함께 기록</div>';
+      '(보호막 '+SH+')의 수로 놓고 본 결과야. <b>Enter</b> = 수순에 기록 · 아래 단어를 누르거나 보호막을 바꾸면 함께 기록</div>';
   } else if(S.kind==="fresh"){
     banner='<div class="banner">✏️ <b>'+raw+'</b> — 지금 수순('+lastWord()+') 뒤에 둘 수 없는 단어야 ('+S.why+
       '). 새 시작으로 보고 있어 · 아래 단어를 누르면 지금 수순은 지워지고 여기서 새로 시작해</div>';
@@ -99864,9 +99895,10 @@ function renderSeq(S){
   $("resetBtn").disabled=!HIST.length;
 }
 
-function syncShieldButtons(){
+function syncShieldButtons(S){
+  const shown=S?S.sh:SH;
   for(const b of document.querySelectorAll("#sbtns .sb")){
-    const on=Number(b.dataset.h)===SH;
+    const on=Number(b.dataset.h)===shown;
     b.classList.toggle("on",on); b.setAttribute("aria-pressed",on?"true":"false");
   }
 }
@@ -99887,7 +99919,7 @@ function runSearch(){
   if(!ready){ sum.textContent="사전을 불러오면 검색이 활성화돼."; return; }
   const raw=cleanInput($("q").value);
   if(!raw){
-    if(TAB==="shield"){ renderSeq(null); syncShieldButtons(); }
+    if(TAB==="shield"){ renderSeq(null); syncShieldButtons(null); }
     sum.innerHTML='<span class="none">상대가 낸 단어를 입력해.</span>'; return;
   }
   if(TAB==="shield") runShield(raw, res, sum);
@@ -99907,10 +99939,21 @@ function runSearch(){
   }
   box.addEventListener("click",e=>{
     const b=e.target.closest(".sb"); if(!b) return;
+    if(CUR&&CUR.kind==="preview") recordPending(CUR);   // 보고 있던 미기록 수를 기록하고 다음 사람 보호막을 바꾼다
     SH=Number(b.dataset.h); runSearch();
   });
 })();
 
+// 보호막전: 지금 화면 상태(CUR)에서 단어 w 를 둔다.
+function commitMove(w){
+  const S=CUR;
+  if(S&&S.kind==="preview") recordPending(S);
+  else if(S&&S.kind==="fresh"){ HIST=[]; SEQ=[]; }
+  HIST.push({q:$("q").value, sh:SH});
+  SEQ.push({w, sh:SH});
+  SH=Math.max(0,SH-1);
+  $("q").value=w;
+}
 // 단어 선택 → 기본: 그 단어로 재검색 / 보호막전: 그 단어를 내고 상대 차례(보호막 -1)로
 function onChip(r, byKey){
   if(TAB==="shield"){
@@ -99918,14 +99961,9 @@ function onChip(r, byKey){
       r.classList.remove("shake"); void r.offsetWidth; r.classList.add("shake");
       return;
     }
-    const S=CUR;
-    if(S&&S.kind==="preview") recordPending(S);
-    else if(S&&S.kind==="fresh"){ HIST=[]; SEQ=[]; }
-    HIST.push({q:$("q").value, sh:SH});
-    SEQ.push({w:r.dataset.w, sh:SH});
-    SH=Math.max(0,SH-1);
-  }
-  $("q").value=r.dataset.w; runSearch();
+    commitMove(r.dataset.w);
+  } else $("q").value=r.dataset.w;
+  runSearch();
   if(byKey){ const first=$("results").querySelector(".r"); if(first) first.focus({preventScroll:true}); }
   window.scrollTo({top:0,behavior:"smooth"});
 }
@@ -99935,6 +99973,24 @@ $("results").addEventListener("keydown",e=>{
   const r=e.target.closest(".r"); if(!r) return;
   e.preventDefault(); onChip(r,true);
 });
+
+// 직접 두기: 목록에 안 보이는 단어(표시 한도 초과 등)도 지금 상태에서 둘 수 있다.
+function playTyped(){
+  const msg=$("playMsg");
+  if(!ready) return;
+  const w=cleanInput($("play").value);
+  if(!w){ msg.textContent=""; return; }
+  const raw=cleanInput($("q").value);
+  if(!raw){ msg.textContent="먼저 검색창에 시작 단어를 입력해."; return; }
+  const S=shieldState(raw); CUR=S;
+  const why=moveProblem(raw, w, S.sh, S.used);
+  if(why){ msg.textContent=w+" — "+why; return; }
+  msg.textContent=""; $("play").value="";
+  commitMove(w); runSearch();
+}
+$("playBtn").addEventListener("click",playTyped);
+$("play").addEventListener("keydown",e=>{ if(e.key==="Enter") playTyped(); });
+$("play").addEventListener("input",()=>{ $("playMsg").textContent=""; });
 
 $("q").addEventListener("keydown",e=>{
   if(e.key!=="Enter"||TAB!=="shield"||!ready) return;
@@ -99958,10 +100014,11 @@ $("tabShield").addEventListener("click",()=>{ TAB="shield"; syncTab(); runSearch
 
 $("q").addEventListener("input",runSearch);
 for(const [box,label] of [["killOnly","killToggle"],["showBad","badToggle"],["hideIll","hideIllToggle"],
-                          ["winOnly","winOnlyToggle"],["showMore","moreToggle"],["qUsed","qUsedToggle"]]){
+                          ["winOnly","winOnlyToggle"],["showMore","moreToggle"]]){
   $(box).addEventListener("change",()=>{ $(label).classList.toggle("on",$(box).checked); runSearch(); });
 }
 $("used").addEventListener("input",runSearch);
+$("qUsedMode").addEventListener("change",runSearch);
 
 // 역검색
 function runRev(){
@@ -99992,6 +100049,7 @@ $("fileInput").addEventListener("change",e=>{
   const r=new FileReader();
   r.onload=()=>{ setTimeout(()=>{ const words=parse(r.result);
     if(!words.length){ ready=WORDS.length>0; $("status").textContent="영단어(2글자+)를 못 찾음."; return; }
+    if(HIST.length){ $("q").value=HIST[0].q; SH=HIST[0].sh; }
     HIST=[]; SEQ=[];
     build(words);
   },10); };
