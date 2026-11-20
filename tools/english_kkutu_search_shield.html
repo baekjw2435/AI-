@@ -92,6 +92,11 @@
   .r.ill{opacity:.45;cursor:not-allowed} .r.ill .b{color:var(--muted);background:#262a36}
   .r .opp{font-size:11px;color:var(--a2)} .r .opp.z{color:var(--kill);font-weight:700}
   .r.shake{animation:shake .25s}
+  .rows .r{max-width:100%;flex-wrap:wrap;overflow-wrap:anywhere}
+  .r:focus-visible{outline:2px solid var(--a2);outline-offset:1px}
+  .summary .banner{font-family:var(--sans);font-size:12.5px;color:var(--text);background:rgba(75,208,232,.08);
+    border:1px solid rgba(75,208,232,.35);border-radius:8px;padding:7px 10px;margin-bottom:8px}
+  .summary .info{font-family:var(--sans);font-size:12px;color:var(--muted)}
   @keyframes shake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
   .summary .turn{color:var(--muted)} .summary .turn b{color:var(--text)}
   .summary .sub2{color:var(--muted)}
@@ -102,7 +107,8 @@
   button:disabled{opacity:.4;cursor:default}
   .seq{font-family:var(--mono);font-size:13px;margin-top:6px;line-height:1.9;overflow-wrap:anywhere}
   .seq .none{color:var(--muted);font-family:var(--sans);font-size:12.5px}
-  .seq .mv{white-space:nowrap} .seq .sh{color:var(--a2)} .seq .me{color:var(--good)} .seq .op{color:var(--bad)}
+  .seq .sh{color:var(--a2)} .seq .me{color:var(--good)} .seq .op{color:var(--bad)}
+  .seq .pend{color:var(--muted);font-style:italic}
   .usedwrap{margin-top:8px;font-size:12.5px;color:var(--muted)}
   .usedwrap summary{cursor:pointer}
   .usedwrap textarea{width:100%;min-height:54px;background:var(--bg);color:var(--text);border:1px solid var(--line);
@@ -134,8 +140,8 @@
   <div class="searchwrap">
     <input type="text" id="q" placeholder="상대가 낸 단어… (예: potato)" autocomplete="off" spellcheck="false">
   </div>
-  <div class="qhint" id="qhintBasic">상대가 낸 단어나 그 끝을 입력해. 그 단어의 <b>끝3글자</b> 또는 <b>끝2글자</b>로 시작하는 내 단어들을 보여줌. · 단어 클릭 = 한 수 앞(상대 응수) 미리보기<br><b>·N</b> = 그 단어 뒤에 상대가 이을 수 있는 단어 수(돌림단어 수). 작을수록 킬각.</div>
-  <div class="qhint" id="qhintShield" hidden>상대가 낸 단어를 입력하고 <b>지금 내 보호막</b>을 골라. <b>·N</b>이 보호막보다 작은 단어는 낼 수 없어서 소거돼.<br><b>상대 k/m</b> = 그 단어를 내면 상대가 이을 수 있는 m개 중 상대 보호막(지금-1)을 지키며 실제로 낼 수 있는 k개. k=0이면 💀 승리수.<br>단어 클릭 = 그 단어를 내고 상대 차례로 (보호막 -1, 낸 단어는 다시 못 씀).</div>
+  <div class="qhint" id="qhintBasic">상대가 낸 단어나 그 끝을 입력해. 그 단어의 <b>끝3글자</b> 또는 <b>끝2글자</b>로 시작하는 내 단어들을 보여줌. · 단어 클릭 = 한 수 앞(상대 응수) 미리보기<br><b>·N</b> = 그 단어 뒤에 상대가 이을 수 있는 단어 수 (그 단어 자신은 뺌). 작을수록 킬각.</div>
+  <div class="qhint" id="qhintShield" hidden>상대가 낸 단어를 입력하고 <b>지금 내 보호막</b>을 골라. <b>·N</b>이 보호막보다 작은 단어는 낼 수 없어서 소거돼.<br><b>상대 k/m</b> = 그 단어를 내면 상대가 이을 수 있는 m개 중 상대 보호막(지금-1)을 지키며 실제로 낼 수 있는 k개. k=0이면 💀 승리수.<br>단어 클릭 = 그 단어를 내고 상대 차례로 (보호막 -1, 낸 단어는 다시 못 씀). 상대가 실제로 낸 단어는 검색창에 입력하고 <b>Enter</b>로 기록.</div>
 
   <div id="basicPanel">
     <div class="controls">
@@ -171,13 +177,13 @@
       <div class="seqhead">
         <span class="seqlab">수순</span>
         <button type="button" id="undoBtn" disabled>↶ 되돌리기</button>
-        <button type="button" id="clearBtn" disabled>수순 지우기</button>
+        <button type="button" id="resetBtn" disabled>⟲ 처음으로</button>
       </div>
       <div id="seq" class="seq"></div>
       <details class="usedwrap">
         <summary>이미 사용한 단어 직접 입력</summary>
         <textarea id="used" placeholder="띄어쓰기나 줄바꿈으로 구분 (예: seven ventilate)" spellcheck="false"></textarea>
-        <label class="toggle on" id="qUsedToggle"><input type="checkbox" id="qUsed" checked> 검색창에 입력한 단어도 사용한 단어로 치기</label>
+        <label class="toggle" id="qUsedToggle"><input type="checkbox" id="qUsed"> 시작할 때 검색창에 입력한 단어도 이미 낸 단어로 치기 (끝 글자만 입력했으면 끄기)</label>
       </details>
     </div>
   </div>
@@ -201,6 +207,7 @@
     <b>돌림단어(루프) 보정</b>도 적용돼서 — 겉보기엔 무승부지만 상대가 루프 단어로 tempo를 뒤집는 함정 자리(예: less→ess)는 👎로 표시돼.
     나머지 👍유리·무승부·👎불리는 재사용 금지를 무시한 그래프 값이라 실전에선 달라질 수 있어 (즉사부터 노려).
     2글자 단어(예: en, ft)도 사전에 포함돼. 2글자 단어 뒤에는 그 2글자로만 이어.
+    이을 단어가 그 단어 자신밖에 없는 단어(예: ii, ft)도 💀 즉사로 쳐 (자기 자신은 이미 썼으니까).
   </div>
   <div class="note" id="shieldNote" hidden>
     🛡 <b>보호막전 규칙</b>: 보호막이 H인 사람은 <b>·N ≥ H</b>인 단어만 낼 수 있어. ·N은 그 단어 뒤에 이을 수 있는 단어 수인데,
@@ -208,6 +215,7 @@
     💀 즉사와 <b>상대 k/m</b>은 수순·사용한 단어까지 반영한 정확한 값이야 (k=0이면 상대가 낼 단어가 없어서 바로 승리).<br>
     👍유리·무승부·👎불리는 상대 보호막(H-1) 자리의 승패를 <b>사전 전체 기준</b>으로 끝까지 계산한 값이야.
     재사용 금지는 반영하지 않고 양쪽이 완벽하게 둔다고 가정한 추정이라 실전과 다를 수 있어.
+    이 사전에서는 보호막 7 이상이면 이 승패가 차례 순서만으로 갈려서 모든 수가 👍(짝수) 또는 👎(홀수)로 같게 나와. 그때는 상대 k가 작은 수를 봐.
   </div>
 </div>
 
@@ -99402,10 +99410,10 @@ const CAP=300;         // 역검색에서 한 번에 보여 줄 단어 수
 //   3글자 이상 단어 뒤에는 끝 3글자 또는 끝 2글자로, 2글자 단어 뒤에는 그 2글자로만 잇는다.
 // ---------------------------------------------------------------------
 let WORDS=[], SET=new Set(), byH2=new Map(), byH3=new Map(), byT3=new Map();
-let dead=new Set(), ready=false, OUT=new Map();
-let POS=[], PIDX=new Map(), DEG=new Int32Array(0), REPL=[], SUFFIX2=new Map();
-let WIDX=new Map(), TAIL=new Int32Array(0), LOOP=new Uint8Array(0);
-let ST0=new Int8Array(0);   // 보호막 0 기준 승패 (기존 계산): 1 WIN, -1 LOSS, 0 무승부
+let dead=new Set(), ready=false;
+let POS=[], PIDX=new Map(), DEG=new Int32Array(0), REPL=[], AREPL=[], SUFFIX2=new Map();
+let WIDX=new Map(), TAIL=new Int32Array(0), LOOP=new Uint8Array(0), DEST=new Int32Array(0), VDEAD=0;
+let ST0=new Int8Array(0);   // 보호막 0 기준 승패: 1 WIN, -1 LOSS, 0 무승부 (그 위치에서 둘 사람 기준)
 let SV=[];                  // SV[h][위치] = 그 위치에서 보호막 h로 둘 사람 기준 승패
 
 function pushMap(m,k,v){let a=m.get(k);if(!a){a=[];m.set(k,a);}a.push(v);}
@@ -99418,6 +99426,10 @@ function replyWords(pos){
   const a=byH3.get(pos)||[], b=byH2.get(pos.slice(1))||[];
   // aaa 처럼 세 글자가 같으면 aaa… 단어는 aa… 안에 이미 들어 있다.
   return (pos[0]===pos[1]&&pos[1]===pos[2]) ? b : a.concat(b);
+}
+// 단어 prev 뒤에 w 를 이을 수 있는지
+function connects(prev, w){
+  return prev.length===2 ? w.startsWith(prev) : (w.startsWith(prev.slice(-3))||w.startsWith(prev.slice(-2)));
 }
 
 // 단어 u 가 '이을 수 있는 단어'로 들어가는 위치들 (u ∈ replyWords(p) 인 p)
@@ -99458,16 +99470,29 @@ function build(words){
     const w=words[i], t=POS[TAIL[i]];
     LOOP[i]=(t.length===2 ? w.startsWith(t) : (w.startsWith(t)||w.startsWith(t.slice(1))))?1:0;
   }
+  // 분석용 수 목록: 2글자 위치에는 그 2글자 단어를 내야만 도착하므로 그 단어 자신은 이미 사용된 것으로 뺀다.
+  AREPL=new Array(P);
+  for(let p=0;p<P;p++){
+    const t=POS[p];
+    if(t.length===2){ const self=WIDX.get(t); AREPL[p]=REPL[p].filter(wi=>wi!==self); }
+    else AREPL[p]=REPL[p];
+  }
+  // 그 위치의 유일한 다음 단어가 방금 낸 단어 자신이면(예: awl) 상대는 바로 막힌다 → 가상 '막힘' 위치로 보낸다.
+  VDEAD=P;
+  DEST=new Int32Array(words.length);
+  for(let i=0;i<words.length;i++){ const d=TAIL[i]; DEST[i]=(DEG[d]===1&&LOOP[i]===1)?VDEAD:d; }
 
   // ① 보호막 0: 기존 HTML의 역방향 승패 계산 + 돌림(루프) 홀짝 보정
-  dead=new Set(); OUT=new Map();
-  const ST=new Int8Array(P), remaining=new Int32Array(P), loops=new Int32Array(P), rev=new Array(P), q=[];
-  for(let p=0;p<P;p++) rev[p]=[];
+  dead=new Set();
+  const N1=P+1;
+  const ST=new Int8Array(N1), remaining=new Int32Array(N1), loops=new Int32Array(N1), rev=new Array(N1), q=[];
+  for(let p=0;p<N1;p++) rev[p]=[];
   for(let p=0;p<P;p++){
-    const R=REPL[p]; remaining[p]=R.length; OUT.set(POS[p],R.length);
-    for(let j=0;j<R.length;j++){ const d=TAIL[R[j]]; rev[d].push(p); if(d===p) loops[p]++; }
+    const R=AREPL[p]; remaining[p]=R.length;
+    for(let j=0;j<R.length;j++){ const d=DEST[R[j]]; rev[d].push(p); if(d===p) loops[p]++; }
     if(R.length===0){ dead.add(POS[p]); ST[p]=-1; q.push(p); }
   }
+  ST[VDEAD]=-1; q.push(VDEAD);
   while(q.length){
     const d=q.pop(), preds=rev[d];
     if(ST[d]===-1){ for(const t of preds) if(!ST[t]){ ST[t]=1; q.push(t); } }
@@ -99478,14 +99503,14 @@ function build(words){
     changed=false;
     for(let t=0;t<P;t++){
       if(ST[t]) continue;
-      const R=REPL[t];
+      const R=AREPL[t];
       let anyLoss=false, allWin=R.length>0;
-      for(let j=0;j<R.length;j++){ const s=ST[TAIL[R[j]]]; if(s===-1) anyLoss=true; if(s!==1) allWin=false; }
+      for(let j=0;j<R.length;j++){ const s=ST[DEST[R[j]]]; if(s===-1) anyLoss=true; if(s!==1) allWin=false; }
       if(anyLoss){ ST[t]=1; changed=true; continue; }
       if(allWin){ ST[t]=-1; changed=true; continue; }
       if(loops[t]>0){
         let hasExit=false, exitAllWin=true;
-        for(let j=0;j<R.length;j++){ const d=TAIL[R[j]]; if(d===t) continue; hasExit=true; if(ST[d]!==1){ exitAllWin=false; break; } }
+        for(let j=0;j<R.length;j++){ const d=DEST[R[j]]; if(d===t) continue; hasExit=true; if(ST[d]!==1){ exitAllWin=false; break; } }
         if(hasExit&&exitAllWin){ ST[t]=loops[t]%2===1?1:-1; loopFix++; changed=true; }
       }
     }
@@ -99496,16 +99521,16 @@ function build(words){
   //    ·N = 그 단어 뒤에 이을 수 있는 단어 수 (그 단어 자신은 뺌). 사전 전체 기준.
   const ED=new Array(P), EN=new Array(P);
   for(let p=0;p<P;p++){
-    const best=new Map(), R=REPL[p];
+    const best=new Map(), R=AREPL[p];
     for(let j=0;j<R.length;j++){
-      const wi=R[j], d=TAIL[wi], n=DEG[d]-LOOP[wi], b=best.get(d);
+      const wi=R[j], d=DEST[wi], n=DEG[TAIL[wi]]-LOOP[wi], b=best.get(d);
       if(b===undefined||n>b) best.set(d,n);
     }
     ED[p]=Int32Array.from(best.keys()); EN[p]=Int32Array.from(best.values());
   }
   SV=[ST];
   for(let h=1;h<=MAX_SHIELD;h++){
-    const prev=SV[h-1], cur=new Int8Array(P);
+    const prev=SV[h-1], cur=new Int8Array(N1);
     for(let p=0;p<P;p++){
       const D=ED[p], Nn=EN[p]; let win=false, allWin=true;
       for(let j=0;j<D.length;j++){
@@ -99516,6 +99541,7 @@ function build(words){
       }
       cur[p]=win?1:(allWin?-1:0);
     }
+    cur[VDEAD]=-1;
     SV.push(cur);
   }
 
@@ -99527,6 +99553,9 @@ function build(words){
   syncTab();
   runSearch();
 }
+
+// ·N: 단어 w 뒤에 상대가 이을 수 있는 단어 수 (사전 전체, 그 단어 자신은 뺌)
+function nOf(wi){ return DEG[TAIL[wi]]-LOOP[wi]; }
 
 // 검색어로 이을 수 있는 갈래
 function branchesFor(raw){
@@ -99547,10 +99576,10 @@ function branchesFor(raw){
 // ---------------------------------------------------------------------
 // 후보 등급: 0 KILL, 1 GOOD(상대 LOSS), 2 DRAW, 3 BAD(상대 WIN)
 function tierOf(word){
-  const p=PIDX.get(word.slice(-3));
-  if(p===undefined) return 2;
-  if(DEG[p]===0) return 0;
-  const s=ST0[p];
+  const wi=WIDX.get(word);
+  if(wi===undefined) return 2;
+  if(nOf(wi)===0) return 0;
+  const s=ST0[TAIL[wi]];
   return s===-1?1:(s===1?3:2);
 }
 const TIER=[
@@ -99571,9 +99600,9 @@ function rankAndRender(container, key, words, branchLabel, cls, killOnly, showBa
   for(const o of list){ if(taken[o.t]<caps[o.t]){ shown.push(o); taken[o.t]++; } }
   const div=document.createElement("div"); div.className="branch";
   let rows=shown.map(o=>{
-    const T=TIER[o.t]; const e=o.w.slice(-3);
-    return '<span class="r '+T.cls+'" data-w="'+o.w+'"><span class="b">'+T.b+'</span>'+o.w+
-      '<span class="end">→'+e+' ·'+(OUT.get(e)||0)+'</span></span>';
+    const T=TIER[o.t], wi=WIDX.get(o.w);
+    return '<span class="r '+T.cls+'" data-w="'+o.w+'" tabindex="0" role="button"><span class="b">'+T.b+'</span>'+o.w+
+      '<span class="end">→'+POS[TAIL[wi]]+' ·'+nOf(wi)+'</span></span>';
   }).join("");
   if(shown.length===0) rows='<div class="empty">'+(killOnly?"이 갈래엔 즉사 없음":"이을 수 있는 단어 없음")+'</div>';
   const hidBad=cnt[3]-taken[3], hidDraw=cnt[2]-taken[2];
@@ -99582,7 +99611,7 @@ function rankAndRender(container, key, words, branchLabel, cls, killOnly, showBa
     const parts=[];
     if(hidBad>0) parts.push('👎 불리 '+hidBad+'개');
     if(hidDraw>0) parts.push('무승부 '+hidDraw+'개');
-    moreTxt='<div class="more">'+parts.join(' · ')+' 숨김 · "👎 불리한 수도 보기" 켜면 표시</div>';
+    moreTxt='<div class="more">'+parts.join(' · ')+' 숨김'+(showBad?' (표시 한도 초과)':' · "👎 불리한 수도 보기" 켜면 표시')+'</div>';
   }
   const hdr='<span class="cnt">'+list.length+'개'+
     (cnt[0]?' · <b style="color:var(--kill)">💀'+cnt[0]+'</b>':'')+
@@ -99617,23 +99646,20 @@ function runBasic(raw, res, sum){
 // ---------------------------------------------------------------------
 let TAB="basic";
 let SH=MAX_SHIELD;   // 지금 둘 사람의 보호막
-let HIST=[];         // 클릭 전 상태 [{q, sh}]
+let HIST=[];         // 각 수를 두기 전 상태 [{q, sh}]  (HIST[0].q = 시작 단어)
 let SEQ=[];          // 낸 단어 [{w, sh}] (sh = 그 단어를 낼 때의 보호막)
+let CUR=null;        // 지금 화면에 보이는 상태 (shieldState 결과)
 
 const STIER=[
   {cls:"kill",b:"💀"},{cls:"good",b:"👍"},{cls:"draw",b:"무"},{cls:"bad",b:"👎"},{cls:"ill",b:"🚫"}
 ];
-const SCAP_DEFAULT=[Infinity, Infinity, 20, 8, 40];
-const SCAP_MORE   =[Infinity, Infinity, 250, 400, 400];
+const SCAP_DEFAULT=[Infinity, 60, 20, 8, 40];
+const SCAP_MORE   =[Infinity, 400, 250, 400, 400];
 
-function usedSet(raw){
+function lastWord(){ return SEQ.length ? SEQ[SEQ.length-1].w : null; }
+function textareaUsed(){
   const s=new Set();
-  for(const m of SEQ) s.add(m.w);
   for(const w of parse($("used").value)) if(SET.has(w)) s.add(w);
-  if($("qUsed").checked){
-    if(SET.has(raw)) s.add(raw);
-    if(HIST.length){ const st=cleanInput(HIST[0].q); if(SET.has(st)) s.add(st); }
-  }
   return s;
 }
 
@@ -99673,41 +99699,87 @@ function evalMove(w, sh, ctx){
   return {w, t, mine, legal:true, tier, k, tot:mine};
 }
 
+// 수순의 마지막 단어 prev 뒤에 w 를 보호막 sh 로 낼 수 없는 이유 (낼 수 있으면 "")
+function moveProblem(prev, w, sh, used){
+  if(!SET.has(w)) return "사전에 없는 단어";
+  if(used.has(w)) return "이미 사용한 단어";
+  if(!connects(prev, w)) return "끝 글자가 이어지지 않음";
+  const e=evalMove(w, sh, makeCtx(used));
+  if(!e.legal) return "보호막 "+sh+"에서 낼 수 없음 (·"+e.mine+")";
+  return "";
+}
+
+// 화면이 보여 줄 상태
+//   start   : 수순 없음. 검색창 단어가 시작 단어.
+//   onseq   : 검색창 단어 = 수순의 마지막 단어.
+//   preview : 수순 중간에 검색창에 직접 입력한 단어가 이어지는 수 → 그 수를 둔 것으로 놓고 보여 줌 (Enter = 기록).
+//   fresh   : 수순 중간에 입력한 단어가 수순과 이어지지 않음 → 새 시작으로 보여 줌.
+function shieldState(raw){
+  const qUsed=$("qUsed").checked;
+  if(!SEQ.length){
+    const used=textareaUsed(); if(qUsed&&SET.has(raw)) used.add(raw);
+    return {kind:"start", sh:SH, used, moves:0};
+  }
+  const seqUsed=textareaUsed();
+  for(const m of SEQ) seqUsed.add(m.w);
+  if(qUsed){ const st=cleanInput(HIST[0].q); if(SET.has(st)) seqUsed.add(st); }
+  const last=lastWord();
+  if(raw===last) return {kind:"onseq", sh:SH, used:seqUsed, moves:SEQ.length};
+  const why=moveProblem(last, raw, SH, seqUsed);
+  if(!why){
+    const used=new Set(seqUsed); used.add(raw);
+    return {kind:"preview", sh:Math.max(0,SH-1), used, moves:SEQ.length+1, pending:raw};
+  }
+  const used=textareaUsed(); if(qUsed&&SET.has(raw)) used.add(raw);
+  return {kind:"fresh", sh:SH, used, moves:0, why};
+}
+
+function recordPending(S){
+  HIST.push({q:lastWord(), sh:SH});
+  SEQ.push({w:S.pending, sh:SH});
+  SH=Math.max(0,SH-1);
+}
+
 function renderShieldBranch(container, br, evals, skipped, opt){
   const cnt=[0,0,0,0,0];
   for(const e of evals) cnt[e.tier]++;
   const list=evals.filter(e=>!(opt.hideIll&&e.tier===4) && !(opt.winOnly&&e.tier>1));
   list.sort((a,b)=> a.tier-b.tier || (a.tier<4 ? a.k-b.k : b.mine-a.mine) ||
                     a.w.length-b.w.length || (a.w<b.w?-1:1));
-  const caps=opt.more?SCAP_MORE:SCAP_DEFAULT, taken=[0,0,0,0,0], shown=[];
-  for(const e of list){ if(taken[e.tier]<caps[e.tier]){ shown.push(e); taken[e.tier]++; } }
+  const caps=opt.more?SCAP_MORE:SCAP_DEFAULT, taken=[0,0,0,0,0], inList=[0,0,0,0,0], shown=[];
+  for(const e of list){ inList[e.tier]++; if(taken[e.tier]<caps[e.tier]){ shown.push(e); taken[e.tier]++; } }
   let rows=shown.map(e=>{
     const T=STIER[e.tier];
-    const opp=e.legal
-      ? '<span class="opp'+(e.k===0?' z':'')+'">상대 '+e.k+'/'+e.tot+'</span>'
-      : '<span class="opp">·'+e.mine+' &lt; '+opt.sh+'</span>';
-    return '<span class="r '+T.cls+'" data-w="'+e.w+'"'+(e.legal?'':' data-ill="1"')+
-      ' title="'+(e.legal?('상대 보호막 '+opt.h2+'에서 낼 수 있는 단어 '+e.k+'개 / 이을 수 있는 단어 '+e.tot+'개')
-                         :('·'+e.mine+'개라 보호막 '+opt.sh+'에서는 낼 수 없음'))+'">'+
-      '<span class="b">'+T.b+'</span>'+e.w+'<span class="end">→'+POS[e.t]+' ·'+e.mine+'</span>'+opp+'</span>';
+    const tail=e.legal
+      ? '<span class="end">→'+POS[e.t]+' ·'+e.mine+'</span><span class="opp'+(e.k===0?' z':'')+'">상대 '+e.k+'/'+e.tot+'</span>'
+      : '<span class="end">→'+POS[e.t]+' ·'+e.mine+'</span><span class="opp">&lt; '+opt.sh+'</span>';
+    const title=e.legal
+      ? '상대 보호막 '+opt.h2+'에서 낼 수 있는 단어 '+e.k+'개 / 이을 수 있는 단어 '+e.tot+'개'
+      : '·'+e.mine+' — 보호막 '+opt.sh+'에서는 낼 수 없음';
+    return '<span class="r '+T.cls+'" data-w="'+e.w+'"'+(e.legal?'':' data-ill="1" aria-disabled="true"')+
+      ' tabindex="0" role="button" title="'+title+'"><span class="b">'+T.b+'</span>'+e.w+tail+'</span>';
   }).join("");
+  const legal=cnt[0]+cnt[1]+cnt[2]+cnt[3];
   if(shown.length===0){
-    const legalN=cnt[0]+cnt[1]+cnt[2]+cnt[3];
     rows='<div class="empty">'+(evals.length===0?"이을 수 있는 단어 없음"
-      :(legalN===0?"보호막 "+opt.sh+"을 만족하는 단어 없음":"조건에 맞는 단어 없음"))+'</div>';
+      :(legal===0?"보호막 "+opt.sh+"에서 낼 수 있는 단어 없음":"조건에 맞는 단어 없음"))+'</div>';
   }
   const parts=[];
-  const hidBad=cnt[3]-taken[3], hidDraw=cnt[2]-taken[2];
-  if(hidBad>0) parts.push('👎 불리 '+hidBad+'개');
-  if(hidDraw>0) parts.push('무승부 '+hidDraw+'개');
+  if(inList[1]-taken[1]>0) parts.push('👍 유리 '+(inList[1]-taken[1])+'개');
+  if(inList[2]-taken[2]>0) parts.push('무승부 '+(inList[2]-taken[2])+'개');
+  if(inList[3]-taken[3]>0) parts.push('👎 불리 '+(inList[3]-taken[3])+'개');
+  if(inList[4]-taken[4]>0) parts.push('🚫 미달 '+(inList[4]-taken[4])+'개');
   let moreTxt='';
-  if(parts.length && !opt.winOnly) moreTxt+='<div class="more">'+parts.join(' · ')+' 숨김 · "👎 불리·무 더 보기" 켜면 표시</div>';
+  if(parts.length){
+    moreTxt+='<div class="more">'+parts.join(' · ')+' 숨김 · '+(opt.more
+      ?'표시 한도 초과 — 낼 단어를 검색창에 직접 입력하면 볼 수 있어'
+      :'"👎 불리·무 더 보기" 켜면 더 표시')+'</div>';
+  }
   const notes=[];
   if(cnt[4]&&opt.hideIll) notes.push('🚫 보호막 미달 '+cnt[4]+'개 소거');
-  else if(cnt[4]-taken[4]>0) notes.push('🚫 미달 '+(cnt[4]-taken[4])+'개 더 있음');
+  else if(cnt[4]&&opt.winOnly) notes.push('🚫 보호막 미달 '+cnt[4]+'개 (승리수만 보기라 숨김)');
   if(skipped) notes.push('사용한 단어 '+skipped+'개 제외');
   if(notes.length) moreTxt+='<div class="more">'+notes.join(' · ')+'</div>';
-  const legal=cnt[0]+cnt[1]+cnt[2]+cnt[3];
   const hdr='<span class="cnt">낼 수 있음 '+legal+'개'+
     (cnt[0]?' · <b style="color:var(--kill)">💀'+cnt[0]+'</b>':'')+
     (cnt[1]?' · <b style="color:var(--good)">👍'+cnt[1]+'</b>':'')+
@@ -99722,8 +99794,10 @@ function renderShieldBranch(container, br, evals, skipped, opt){
 }
 
 function runShield(raw, res, sum){
-  const sh=SH, h2=Math.max(0,sh-1);
-  const ctx=makeCtx(usedSet(raw));
+  const S=shieldState(raw); CUR=S;
+  renderSeq(S); syncShieldButtons();
+  const sh=S.sh, h2=Math.max(0,sh-1);
+  const ctx=makeCtx(S.used);
   const opt={sh, h2, hideIll:$("hideIll").checked, winOnly:$("winOnly").checked, more:$("showMore").checked};
   const tot=[0,0,0,0,0];
   for(const br of branchesFor(raw)){
@@ -99736,28 +99810,46 @@ function runShield(raw, res, sum){
     for(let i=0;i<5;i++) tot[i]+=c[i];
   }
   const legal=tot[0]+tot[1]+tot[2]+tot[3];
-  const who=SEQ.length%2===0?'나':'상대';
+  const who=S.moves%2===0?'나':'상대';
+  let banner='';
+  if(S.kind==="preview"){
+    banner='<div class="banner">✏️ <b>'+raw+'</b> — 수순에 아직 없는 수야. '+(SEQ.length%2===0?'나':'상대')+
+      '(보호막 '+SH+')의 수로 놓고 본 결과야. <b>Enter</b> = 수순에 기록 · 아래 단어를 누르면 함께 기록</div>';
+  } else if(S.kind==="fresh"){
+    banner='<div class="banner">✏️ <b>'+raw+'</b> — 지금 수순('+lastWord()+') 뒤에 둘 수 없는 단어야 ('+S.why+
+      '). 새 시작으로 보고 있어 · 아래 단어를 누르면 지금 수순은 지워지고 여기서 새로 시작해</div>';
+  }
   const head='<span class="turn">지금 둘 사람: <b>'+who+'</b> · 보호막 <b>'+sh+'</b> → 다음 사람 '+h2+'</span><br>';
   const ill=tot[4]?' · 🚫 보호막 미달 '+tot[4]+'개':'';
   let msg;
   if(legal===0 && tot[4]>0){
-    msg='<span class="k">보호막 '+sh+'을 만족하는 단어가 없음</span> — 지금 둘 사람('+who+')의 패배. 이 자리로 보낸 수가 보호막 공격이야.';
+    msg='<span class="k">보호막 '+sh+'에서 낼 수 있는 단어가 없음</span> — 지금 둘 사람('+who+')의 패배. 이 자리로 보낸 수가 보호막 공격이야.';
   } else if(legal===0){
     msg='<span class="none">낼 수 있는 단어가 없음 — 지금 둘 사람('+who+')의 패배.</span>';
   } else if(tot[0]>0){
-    msg='최선: <span class="k">💀 즉사 '+tot[0]+'개</span> — 상대가 보호막 '+h2+'을 지키며 낼 단어가 0개 → 승리.';
+    msg='최선: <span class="k">💀 즉사 '+tot[0]+'개</span> — 상대가 보호막 '+h2+'에서 낼 수 있는 단어가 0개 → 승리.';
   } else if(tot[1]>0){
     msg='즉사는 없지만 <span class="g">👍 유리 '+tot[1]+'개</span> (상대를 보호막 '+h2+' 패배 자리로 보냄 · 사전 기준 추정).';
   } else {
     msg='<span class="none">즉사·유리 없음. 무승부/불리만 가능 — 신중히.</span>';
   }
-  sum.innerHTML=head+msg+'<span class="sub2"> · 낼 수 있음 '+legal+'개'+ill+'</span>';
+  let info='';
+  const nonKill=legal-tot[0];
+  if(nonKill>=5 && (tot[1]===nonKill || tot[3]===nonKill)){
+    info='<br><span class="info">ℹ️ 이 보호막에서는 사전 기준 승패가 차례 순서만으로 갈려서 낼 수 있는 수가 전부 같은 등급이야. '+
+      '상대 k가 작은 단어(상대 선택지가 적은 수)부터 정렬돼 있어.</span>';
+  }
+  sum.innerHTML=banner+head+msg+'<span class="sub2"> · 낼 수 있음 '+legal+'개'+ill+'</span>'+info;
 }
 
-function renderSeq(){
+function renderSeq(S){
   const box=$("seq");
+  const pending=(S&&S.kind==="preview")
+    ? '<span class="mv pend"><span class="'+(SEQ.length%2?'op':'me')+'">'+(SEQ.length%2?'상대':'나')+'</span> '+
+      '<span class="sh">'+SH+'</span> '+S.pending+' (미기록)</span>' : '';
   if(!SEQ.length){
-    box.innerHTML='<span class="none">단어를 누르면 그 단어를 낸 것으로 보고, 보호막이 1 줄어든 상대 차례로 넘어가.</span>';
+    box.innerHTML='<span class="none">단어를 누르면 그 단어를 낸 것으로 보고, 보호막이 1 줄어든 상대 차례로 넘어가. '+
+      '상대가 실제로 낸 단어는 검색창에 입력하고 Enter.</span>';
   } else {
     const start=cleanInput(HIST[0].q);
     let html=start?'<span class="mv">시작 <b>'+start+'</b></span>':'';
@@ -99765,10 +99857,11 @@ function renderSeq(){
       html+=(html?' → ':'')+'<span class="mv"><span class="'+(i%2?'op':'me')+'">'+(i%2?'상대':'나')+'</span> '+
         '<span class="sh">'+m.sh+'</span> '+m.w+'</span>';
     });
+    if(pending) html+=' → '+pending;
     box.innerHTML=html;
   }
-  $("undoBtn").disabled=!SEQ.length;
-  $("clearBtn").disabled=!SEQ.length;
+  $("undoBtn").disabled=!HIST.length;
+  $("resetBtn").disabled=!HIST.length;
 }
 
 function syncShieldButtons(){
@@ -99790,10 +99883,13 @@ function syncTab(){
 function runSearch(){
   const res=$("results"); res.innerHTML="";
   const sum=$("summary");
-  if(TAB==="shield"){ renderSeq(); syncShieldButtons(); }
+  CUR=null;
   if(!ready){ sum.textContent="사전을 불러오면 검색이 활성화돼."; return; }
   const raw=cleanInput($("q").value);
-  if(!raw){ sum.innerHTML='<span class="none">상대가 낸 단어를 입력해.</span>'; return; }
+  if(!raw){
+    if(TAB==="shield"){ renderSeq(null); syncShieldButtons(); }
+    sum.innerHTML='<span class="none">상대가 낸 단어를 입력해.</span>'; return;
+  }
   if(TAB==="shield") runShield(raw, res, sum);
   else runBasic(raw, res, sum);
 }
@@ -99815,19 +99911,35 @@ function runSearch(){
   });
 })();
 
-// 클릭 → 기본: 그 단어로 재검색 / 보호막전: 그 단어를 내고 상대 차례(보호막 -1)로
-$("results").addEventListener("click",e=>{
-  const r=e.target.closest(".r"); if(!r) return;
+// 단어 선택 → 기본: 그 단어로 재검색 / 보호막전: 그 단어를 내고 상대 차례(보호막 -1)로
+function onChip(r, byKey){
   if(TAB==="shield"){
     if(r.dataset.ill){
       r.classList.remove("shake"); void r.offsetWidth; r.classList.add("shake");
       return;
     }
+    const S=CUR;
+    if(S&&S.kind==="preview") recordPending(S);
+    else if(S&&S.kind==="fresh"){ HIST=[]; SEQ=[]; }
     HIST.push({q:$("q").value, sh:SH});
     SEQ.push({w:r.dataset.w, sh:SH});
     SH=Math.max(0,SH-1);
   }
-  $("q").value=r.dataset.w; runSearch(); window.scrollTo({top:0,behavior:"smooth"});
+  $("q").value=r.dataset.w; runSearch();
+  if(byKey){ const first=$("results").querySelector(".r"); if(first) first.focus({preventScroll:true}); }
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+$("results").addEventListener("click",e=>{ const r=e.target.closest(".r"); if(r) onChip(r,false); });
+$("results").addEventListener("keydown",e=>{
+  if(e.key!=="Enter"&&e.key!==" ") return;
+  const r=e.target.closest(".r"); if(!r) return;
+  e.preventDefault(); onChip(r,true);
+});
+
+$("q").addEventListener("keydown",e=>{
+  if(e.key!=="Enter"||TAB!=="shield"||!ready) return;
+  const S=shieldState(cleanInput($("q").value));
+  if(S.kind==="preview"){ recordPending(S); runSearch(); }
 });
 
 $("undoBtn").addEventListener("click",()=>{
@@ -99835,7 +99947,11 @@ $("undoBtn").addEventListener("click",()=>{
   const s=HIST.pop(); SEQ.pop();
   $("q").value=s.q; SH=s.sh; runSearch();
 });
-$("clearBtn").addEventListener("click",()=>{ HIST=[]; SEQ=[]; runSearch(); });
+$("resetBtn").addEventListener("click",()=>{
+  if(!HIST.length) return;
+  const s=HIST[0]; HIST=[]; SEQ=[];
+  $("q").value=s.q; SH=s.sh; runSearch();
+});
 
 $("tabBasic").addEventListener("click",()=>{ TAB="basic"; syncTab(); runSearch(); });
 $("tabShield").addEventListener("click",()=>{ TAB="shield"; syncTab(); runSearch(); });
@@ -99875,7 +99991,7 @@ $("fileInput").addEventListener("change",e=>{
   ready=false; $("status").textContent="읽는 중: "+f.name+" …";
   const r=new FileReader();
   r.onload=()=>{ setTimeout(()=>{ const words=parse(r.result);
-    if(!words.length){ $("status").textContent="영단어(2글자+)를 못 찾음."; return; }
+    if(!words.length){ ready=WORDS.length>0; $("status").textContent="영단어(2글자+)를 못 찾음."; return; }
     HIST=[]; SEQ=[];
     build(words);
   },10); };
@@ -99895,7 +100011,8 @@ window.__kkutu={
     return branchesFor(raw).map(br=>({key:br.key, moves:br.words.filter(w=>!ctx.usedW[WIDX.get(w)]).map(w=>{
       const e=evalMove(w,sh,ctx); return {w:e.w, legal:e.legal, mine:e.mine, k:e.k, tot:e.tot, tier:e.tier};
     })}));
-  }
+  },
+  state:()=>({SH, SEQ:SEQ.map(m=>({...m})), HIST:HIST.map(h=>({...h})), kind:CUR&&CUR.kind})
 };
 
 // 열자마자 임베드된 99k 사전으로 빌드
