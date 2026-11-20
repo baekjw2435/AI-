@@ -1041,6 +1041,75 @@
    },
    "position_sha256": "4c4bd26983dbdb2f1afcc03f955a43e97d2a121fb0d08150444bc764403067e5",
    "input_sha256": "ccba4b20e8838e7fc7654077e21dd330704d3c2d4ed06773d9b6b4c755ed05ce"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-20a",
+   "asset": "73de83e26e75666dd7497501fc00c1f760f0a44b0bd850b7b774e365351d4646.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-20a/73de83e26e75666dd7497501fc00c1f760f0a44b0bd850b7b774e365351d4646.tt.gz",
+   "gz_sha256": "73de83e26e75666dd7497501fc00c1f760f0a44b0bd850b7b774e365351d4646",
+   "gz_bytes": 46871686,
+   "state_sha256": "ba2b39203818a6408a7f08f675ba8681ecf0c9b6a15f43d0db51ac8871fd7e92",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "general1/g1_329/state.tt",
+   "note": "2026-11-20 general1 다섯 번째 실행: 못 푼 국면. 활→활동력→역기능(600초), 역습(440.4초), 역전승(423.6초)",
+   "staged": "2026-11-20 05:40:12",
+   "uploaded_verified": "2026-11-20 06:06:46",
+   "position": {
+    "initial_syllable": "활",
+    "history": [
+     "활동력",
+     "역기능"
+    ]
+   },
+   "position_sha256": "f9caa714c7e4aef773b8774caaa822d269b51d8771f5197457ca31c11102d434",
+   "input_sha256": "cc19967a7bf8b77c6deb9e33b2da2d1d5ea5d47b0fd5ba622987a33687044e74"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-20a",
+   "asset": "0beba0ad3c667fa1b70ef317546d69ead1005d063d52cb610dfe4b051e213190.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-20a/0beba0ad3c667fa1b70ef317546d69ead1005d063d52cb610dfe4b051e213190.tt.gz",
+   "gz_sha256": "0beba0ad3c667fa1b70ef317546d69ead1005d063d52cb610dfe4b051e213190",
+   "gz_bytes": 46566233,
+   "state_sha256": "08f9c9a9c881e4f9819d1302e43802eea811fa83b899ae6dee3d0829661da9b0",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 440.35,
+   "work_path": "general1/g1_335/state.tt",
+   "note": "2026-11-20 general1 다섯 번째 실행: 못 푼 국면. 활→활동력→역기능(600초), 역습(440.4초), 역전승(423.6초)",
+   "staged": "2026-11-20 05:40:16",
+   "uploaded_verified": "2026-11-20 06:06:46",
+   "position": {
+    "initial_syllable": "활",
+    "history": [
+     "활동력",
+     "역습"
+    ]
+   },
+   "position_sha256": "6a5932a7ae5b088bb0e399ab1904753d71a226e4f266fe019096a87cb0ad4984",
+   "input_sha256": "dca117978887d6f763515d75c000758a1fe231cedf8b28b3986b53c8678c7b04"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-20a",
+   "asset": "c2295628380e83a94cfc9578d1ee62f97e55170ad8a3f739c82e7875c72a284a.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-20a/c2295628380e83a94cfc9578d1ee62f97e55170ad8a3f739c82e7875c72a284a.tt.gz",
+   "gz_sha256": "c2295628380e83a94cfc9578d1ee62f97e55170ad8a3f739c82e7875c72a284a",
+   "gz_bytes": 46630884,
+   "state_sha256": "4c4715b055056175a74e5c65e1661f427015cd4196853b3b1814dfd7469af985",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 423.58,
+   "work_path": "general1/g1_336/state.tt",
+   "note": "2026-11-20 general1 다섯 번째 실행: 못 푼 국면. 활→활동력→역기능(600초), 역습(440.4초), 역전승(423.6초)",
+   "staged": "2026-11-20 05:40:20",
+   "uploaded_verified": "2026-11-20 06:06:46",
+   "position": {
+    "initial_syllable": "활",
+    "history": [
+     "활동력",
+     "역전승"
+    ]
+   },
+   "position_sha256": "6ac448782371e4933da2d4dcc983d69b15552e2027bd5bf8a22dd4d6bb0d1c4e",
+   "input_sha256": "7270dfe43b22776ba16b6ba4ce78b2db2820a36a1d10f20999628ce05dfef27c"
   }
  ]
 }
