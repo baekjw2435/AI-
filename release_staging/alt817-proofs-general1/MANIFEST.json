@@ -2091,8 +2091,71 @@
    "certifies": [
     "general1/g1_323 활극 → 극락"
    ]
+  },
+  "ffa3f79b9fdd382da9505d65939ed62fe42426d175b418d95431bbcaed933b32.v4.gz": {
+   "sha256": "ffa3f79b9fdd382da9505d65939ed62fe42426d175b418d95431bbcaed933b32",
+   "bytes": 14752576,
+   "certifies": [
+    "general1/g1_325 활극 → 극약"
+   ]
+  },
+  "1175180ec423dc599d1d7c3739a082df2d479d54e2559c5c9eb6c8a15c6a9aa6.v4.gz": {
+   "sha256": "1175180ec423dc599d1d7c3739a082df2d479d54e2559c5c9eb6c8a15c6a9aa6",
+   "bytes": 12776614,
+   "certifies": [
+    "general1/g1_326 활극 → 극언"
+   ]
+  },
+  "f7daebb6372720fd3b4dbc9e895436fbc4d3a6f09399a2942f9614bbe69eb006.v4.gz": {
+   "sha256": "f7daebb6372720fd3b4dbc9e895436fbc4d3a6f09399a2942f9614bbe69eb006",
+   "bytes": 1246287,
+   "certifies": [
+    "general1/g1_327 활극 → 극적"
+   ]
+  },
+  "37123387f3b3fa5c47227dc72da67c84950032831906452da3abed41260787e8.v4.gz": {
+   "sha256": "37123387f3b3fa5c47227dc72da67c84950032831906452da3abed41260787e8",
+   "bytes": 2614026,
+   "certifies": [
+    "general1/g1_328 활극 → 극찬"
+   ]
+  },
+  "d8cef73d23cc84da9d6c9541a1b1c9fe49898075344bdb0a98a119f5825f959b.v4.gz": {
+   "sha256": "d8cef73d23cc84da9d6c9541a1b1c9fe49898075344bdb0a98a119f5825f959b",
+   "bytes": 4581780,
+   "certifies": [
+    "general1/g1_330 활동력 → 역방향"
+   ]
+  },
+  "63e9234024838881b6ec30f925c51a9ec6e732b79fde8e94111d4d02d7ecaf82.v4.gz": {
+   "sha256": "63e9234024838881b6ec30f925c51a9ec6e732b79fde8e94111d4d02d7ecaf82",
+   "bytes": 67037,
+   "certifies": [
+    "general1/g1_331 활동력 → 역병"
+   ]
+  },
+  "b1dc26f888d251a77bcf8f354ff828423029fd8b5f48e102ab4a98a032031826.v4.gz": {
+   "sha256": "b1dc26f888d251a77bcf8f354ff828423029fd8b5f48e102ab4a98a032031826",
+   "bytes": 1372080,
+   "certifies": [
+    "general1/g1_332 활동력 → 역사적"
+   ]
+  },
+  "c746a16f1bf778a18a9225b4032972420cba5d22e57d0f2cd78936902766bf9b.v4.gz": {
+   "sha256": "c746a16f1bf778a18a9225b4032972420cba5d22e57d0f2cd78936902766bf9b",
+   "bytes": 1240953,
+   "certifies": [
+    "general1/g1_333 활동력 → 역세권"
+   ]
+  },
+  "def95b359630ac853c4abb1f07319c3ea043e197ac11167195b17e4361dcd8a8.v4.gz": {
+   "sha256": "def95b359630ac853c4abb1f07319c3ea043e197ac11167195b17e4361dcd8a8",
+   "bytes": 1199010,
+   "certifies": [
+    "general1/g1_334 활동력 → 역순"
+   ]
   }
  },
- "file_count": 296,
- "total_bytes": 1446779406
+ "file_count": 305,
+ "total_bytes": 1486629769
 }
