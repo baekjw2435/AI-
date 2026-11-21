@@ -16,7 +16,8 @@ The position is the case's own history, every word in it used; nothing is taken 
   of a finished case goes back to the pool. A case that cannot get at least 5 s is not started ('untried').
 --cumulative-cap C (> 0): a case that was run before (WORK/<name>/run.json, not accepted) continues from its saved state
   and gets at most C minus the search seconds it already used (the largest of its run records' total_search_seconds and
-  the seconds carried in state.tt). The earlier run.json is kept as run.<n>.json.
+  the seconds carried in state.tt). The earlier run.json is kept as run.<n>.json. A case already at the cap, or not
+  reached because the call's budget ran out, is not touched: its last real record stays run.json (still 'tried').
 --keep-state 1: the search state is checkpointed to WORK/<name>/state.tt; it is deleted when the certificate is
   accepted and kept otherwise, so the case can be continued later.
 Certificate writing and verification have no extra limit, as everywhere in this study. A case counts only if the
@@ -130,7 +131,7 @@ def main():
     def one(c):
         d = work / c['name']
         d.mkdir(parents=True, exist_ok=True)
-        cap, prior, earlier = None, 0.0, []
+        cap, prior, earlier, moved = None, 0.0, [], None
         if float(o['--cumulative-cap']) > 0 and (d / 'run.json').exists():
             old = json.loads((d / 'run.json').read_text(encoding='utf-8'))
             if old.get('accepted'):
@@ -140,20 +141,26 @@ def main():
                 k = 1
                 while (d / f'run.{k}.json').exists():
                     k += 1
-                (d / 'run.json').rename(d / f'run.{k}.json')
+                moved = d / f'run.{k}.json'
+                (d / 'run.json').rename(moved)
                 for j in range(1, k + 1):
                     earlier.append(json.loads((d / f'run.{j}.json').read_text(encoding='utf-8')))
                 prior = max([float(e['solver'].get('total_search_seconds') or e['solver'].get('seconds') or 0) for e in earlier]
                             + [sc.state_carried_seconds(d / 'state.tt') if (d / 'state.tt').exists() else 0.0])
                 cap = float(o['--cumulative-cap']) - prior
                 if cap < MIN_ALLOT:
-                    rec = {'name': c['name'], 'position': c['position'], 'method': c['method'], 'accepted': False, 'untried': False,
-                           'cap_reached': True, 'prior_search_seconds': prior, 'earlier_runs': len(earlier),
-                           'note': f'not continued: its {prior:.3f} s of search already reach --cumulative-cap'}
-                    (d / 'run.json').write_text(json.dumps(rec, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+                    # held at the cap: its last real record stays run.json (nothing is written over it)
+                    moved.rename(d / 'run.json')
+                    print(time.strftime('%H:%M:%S'), json.dumps({'name': c['name'], 'held_at_cap': True, 'prior_search_seconds': prior},
+                                                                ensure_ascii=False), flush=True)
                     return
         allot = budget.take(c['name'], cap)
         if allot is None:
+            if moved is not None:
+                # tried before, not reached this call: put its last real record back (it stays 'tried, unconfirmed')
+                moved.rename(d / 'run.json')
+                print(time.strftime('%H:%M:%S'), json.dumps({'name': c['name'], 'not_reached_this_call': True}, ensure_ascii=False), flush=True)
+                return
             rec = {'name': c['name'], 'position': c['position'], 'method': c['method'], 'accepted': False, 'untried': True,
                    'note': 'not started: the search budget of this call was used up'}
             (d / 'run.json').write_text(json.dumps(rec, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
