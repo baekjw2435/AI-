@@ -4,14 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>영어 끄투 검색 엔진</title>
+<script>try{if(localStorage.getItem("kkutu-theme")==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}</script>
 <style>
+  /* 밝은 화면이 기본, 🌙 버튼으로 어두운 화면 */
   :root{
-    --bg:#14161d; --panel:#1a1d27; --panel2:#20232f; --line:#2a2f3d;
-    --text:#e7e9f0; --muted:#8b91a4;
-    --a2:#4bd0e8; --a3:#b18cff;
-    --kill:#ffcf5c; --good:#57d98a; --draw:#8b91a4; --bad:#ff6b6b;
+    color-scheme:light;
+    --bg:#f4f6fa; --panel:#ffffff; --panel2:#eef1f6; --line:#d5dae4; --hover:#aab3c2; --focus:#6b7a92;
+    --text:#161a23; --muted:#59606f; --ph:#9aa2b1;
+    --a2:#087a99; --a3:#7445d6; --onaccent:#ffffff;
+    --kill:#a35f00; --good:#16824a; --draw:#646b78; --bad:#c93838;
+    --kill-bd:rgba(163,95,0,.45); --kill-bg:rgba(230,160,30,.16);
+    --good-bd:rgba(22,130,74,.45); --good-bg:rgba(22,130,74,.11);
+    --bad-bg:rgba(201,56,56,.09); --chip2:#e5e8ef;
+    --a2-bg:rgba(8,122,153,.07); --a2-bd:rgba(8,122,153,.35);
+    --shadow:0 1px 2px rgba(16,24,40,.05);
+    --taboff:#e8ebf1; --tabon:#ffffff;
     --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
     --sans:ui-sans-serif,-apple-system,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  }
+  :root[data-theme="dark"]{
+    color-scheme:dark;
+    --bg:#14161d; --panel:#1a1d27; --panel2:#20232f; --line:#2a2f3d; --hover:#3a4152; --focus:#4a5266;
+    --text:#e7e9f0; --muted:#8b91a4; --ph:#4b5162;
+    --a2:#4bd0e8; --a3:#b18cff; --onaccent:#0b0d12;
+    --kill:#ffcf5c; --good:#57d98a; --draw:#8b91a4; --bad:#ff6b6b;
+    --kill-bd:rgba(255,207,92,.55); --kill-bg:rgba(255,207,92,.12);
+    --good-bd:rgba(87,217,138,.5); --good-bg:rgba(87,217,138,.12);
+    --bad-bg:rgba(255,107,107,.1); --chip2:#262a36;
+    --a2-bg:rgba(75,208,232,.08); --a2-bd:rgba(75,208,232,.35);
+    --shadow:none;
+    --taboff:#1a1d27; --tabon:#20232f;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.5;padding:24px 18px 80px}
@@ -26,15 +48,15 @@
   .fileload input{display:none}
   button{font-family:var(--sans);font-size:13px;font-weight:600;cursor:pointer;background:var(--panel2);
     color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 13px}
-  button:hover{border-color:#3a4152}
+  button:hover{border-color:var(--hover)}
   #status{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
   #status .rdy{color:var(--good)}
 
   .searchwrap{position:relative;margin-bottom:6px}
   #q{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--text);
     font-family:var(--mono);font-size:22px;padding:16px 18px;letter-spacing:.02em}
-  #q:focus{outline:none;border-color:#4a5266}
-  #q::placeholder{color:#4b5162}
+  #q:focus{outline:none;border-color:var(--focus)}
+  #q::placeholder{color:var(--ph)}
   .qhint{font-size:12px;color:var(--muted);margin:8px 2px 4px}
   .qhint b{color:var(--text)}
 
@@ -48,7 +70,7 @@
   .summary .k{color:var(--kill);font-weight:700} .summary .g{color:var(--good);font-weight:700}
   .summary .none{color:var(--muted)}
 
-  .branch{margin-bottom:16px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+  .branch{margin-bottom:16px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);box-shadow:var(--shadow)}
   .bh{display:flex;align-items:baseline;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line);background:var(--panel2)}
   .bh .lab{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
   .bh .key{font-family:var(--mono);font-size:19px;font-weight:700}
@@ -58,13 +80,13 @@
   .rows{display:flex;flex-wrap:wrap;gap:6px;padding:12px 14px}
   .r{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:13.5px;
     padding:5px 9px;border-radius:8px;border:1px solid var(--line);background:var(--bg);cursor:pointer;transition:border-color .1s}
-  .r:hover{border-color:#4a5266}
+  .r:hover{border-color:var(--focus)}
   .r .end{opacity:.55;font-size:11px}
   .r .b{font-size:11px;font-weight:700;padding:0 5px;border-radius:5px}
-  .r.kill{border-color:rgba(255,207,92,.55)} .r.kill .b{color:var(--kill);background:rgba(255,207,92,.12)}
-  .r.good{border-color:rgba(87,217,138,.5)}  .r.good .b{color:var(--good);background:rgba(87,217,138,.12)}
-  .r.draw .b{color:var(--draw);background:#262a36}
-  .r.bad{opacity:.72} .r.bad .b{color:var(--bad);background:rgba(255,107,107,.1)}
+  .r.kill{border-color:var(--kill-bd)} .r.kill .b{color:var(--kill);background:var(--kill-bg)}
+  .r.good{border-color:var(--good-bd)}  .r.good .b{color:var(--good);background:var(--good-bg)}
+  .r.draw .b{color:var(--draw);background:var(--chip2)}
+  .r.bad{opacity:.72} .r.bad .b{color:var(--bad);background:var(--bad-bg)}
   .more{color:var(--muted);font-size:12px;padding:0 14px 12px}
   .empty{color:var(--muted);font-size:13px;padding:12px 14px}
 
@@ -73,7 +95,7 @@
   .rev .row2{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
   #rq{background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--text);
     font-family:var(--mono);font-size:15px;padding:9px 12px;width:140px}
-  #rq:focus{outline:none;border-color:#4a5266}
+  #rq:focus{outline:none;border-color:var(--focus)}
   #revResult{margin-top:12px}
   .note{font-size:12px;color:var(--muted);line-height:1.6;border-left:2px solid var(--line);padding-left:12px;margin-top:14px}
   code{font-family:var(--mono);background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12px}
@@ -81,21 +103,21 @@
   .legend span b{font-weight:700}
   [hidden]{display:none!important}
   .tabs{display:flex;gap:6px;margin:4px 0 12px;border-bottom:1px solid var(--line)}
-  .tab{border:1px solid var(--line);border-bottom:none;border-radius:10px 10px 0 0;background:var(--panel);
+  .tab{border:1px solid var(--line);border-bottom:none;border-radius:10px 10px 0 0;background:var(--taboff);
     color:var(--muted);padding:9px 16px;margin-bottom:-1px}
-  .tab.on{background:var(--panel2);color:var(--text);border-color:#3a4152}
+  .tab.on{background:var(--tabon);color:var(--text);border-color:var(--hover);font-weight:700}
   .shieldbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
   .sblab{font-size:12.5px;color:var(--muted)}
   .sbtns{display:flex;gap:5px;flex-wrap:wrap}
   .sb{font-family:var(--mono);min-width:38px;padding:7px 0;text-align:center}
-  .sb.on{background:var(--a2);color:#0b0d12;border-color:var(--a2)}
-  .r.ill{opacity:.45;cursor:not-allowed} .r.ill .b{color:var(--muted);background:#262a36}
+  .sb.on{background:var(--a2);color:var(--onaccent);border-color:var(--a2)}
+  .r.ill{opacity:.45;cursor:not-allowed} .r.ill .b{color:var(--muted);background:var(--chip2)}
   .r .opp{font-size:11px;color:var(--a2)} .r .opp.z{color:var(--kill);font-weight:700}
   .r.shake{animation:shake .25s}
   .rows .r{max-width:100%;flex-wrap:wrap;overflow-wrap:anywhere}
   .r:focus-visible{outline:2px solid var(--a2);outline-offset:1px}
-  .summary .banner{font-family:var(--sans);font-size:12.5px;color:var(--text);background:rgba(75,208,232,.08);
-    border:1px solid rgba(75,208,232,.35);border-radius:8px;padding:7px 10px;margin-bottom:8px;overflow-wrap:anywhere}
+  .summary .banner{font-family:var(--sans);font-size:12.5px;color:var(--text);background:var(--a2-bg);
+    border:1px solid var(--a2-bd);border-radius:8px;padding:7px 10px;margin-bottom:8px;overflow-wrap:anywhere}
   .summary .info{font-family:var(--sans);font-size:12px;color:var(--muted)}
   @keyframes shake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
   .summary .turn{color:var(--muted)} .summary .turn b{color:var(--text)}
@@ -113,7 +135,7 @@
   .playrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
   #play{flex:1 1 180px;min-width:0;background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--text);
     font-family:var(--mono);font-size:14px;padding:7px 10px}
-  #play:focus{outline:none;border-color:#4a5266}
+  #play:focus{outline:none;border-color:var(--focus)}
   .playrow button{padding:7px 12px;font-size:12.5px}
   .sel{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);flex-wrap:wrap;min-width:0;max-width:100%}
   .sel select{min-width:0;max-width:100%;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;
@@ -129,13 +151,27 @@
     #q{font-size:18px;padding:13px 14px}
     .sb{min-width:34px}
   }
+  header{display:flex;align-items:flex-start;gap:10px}
+  header .htxt{flex:1 1 auto;min-width:0}
+  .themebtn{flex:0 0 auto;padding:7px 11px;font-size:12.5px}
+  .seqbox,.summary,#q{box-shadow:var(--shadow)}
+  .suggest{margin:6px 0 2px}
+  .sglab{display:block;font-size:11.5px;color:var(--muted);margin:0 2px 5px}
+  .sgrow{display:flex;gap:6px;overflow-x:auto;padding:1px 1px 6px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .sg{flex:0 0 auto;font-family:var(--mono);font-weight:500;font-size:14px;padding:8px 12px;border-radius:999px;
+    background:var(--panel);border:1px solid var(--line);color:var(--text)}
+  .sg b{color:var(--a2);font-weight:700}
+  .sg:focus-visible{outline:2px solid var(--a2);outline-offset:1px}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>영어 끄투 검색 엔진 <span style="color:var(--muted);font-weight:400;font-size:14px">· 끝 2/3글자 · 보호막전</span></h1>
-    <div class="sub">상대 단어 입력 → 내가 낼 수 있는 단어를 전략 등급순으로</div>
+    <div class="htxt">
+      <h1>영어 끄투 검색 엔진 <span style="color:var(--muted);font-weight:400;font-size:14px">· 끝 2/3글자 · 보호막전</span></h1>
+      <div class="sub">상대 단어 입력 → 내가 낼 수 있는 단어를 전략 등급순으로</div>
+    </div>
+    <button type="button" class="themebtn" id="themeBtn" aria-pressed="false">🌙 어둡게</button>
   </header>
 
   <div class="loadbar">
@@ -149,10 +185,11 @@
   </div>
 
   <div class="searchwrap">
-    <input type="text" id="q" placeholder="상대가 낸 단어… (예: potato)" autocomplete="off" spellcheck="false">
+    <input type="text" id="q" placeholder="상대가 낸 단어… (앞 글자만 쳐도 추천이 떠요. 예: ta)" autocomplete="off" autocapitalize="off" spellcheck="false">
   </div>
-  <div class="qhint" id="qhintBasic">상대가 낸 단어나 그 끝을 입력해. 그 단어의 <b>끝3글자</b> 또는 <b>끝2글자</b>로 시작하는 내 단어들을 보여줌. · 단어 클릭 = 한 수 앞(상대 응수) 미리보기<br><b>·N</b> = 그 단어 뒤에 상대가 이을 수 있는 단어 수 (그 단어 자신은 뺌). 작을수록 킬각.</div>
-  <div class="qhint" id="qhintShield" hidden>상대가 낸 단어를 입력하고 <b>지금 내 보호막</b>을 골라. <b>·N</b>이 보호막보다 작은 단어는 낼 수 없어서 소거돼.<br><b>상대 k/m</b> = 그 단어를 내면 상대가 이을 수 있는 m개 중 상대 보호막(지금-1)을 지키며 실제로 낼 수 있는 k개. k=0이면 💀 승리수.<br>단어 클릭 = 그 단어를 내고 상대 차례로 (보호막 -1, 낸 단어는 다시 못 씀). 상대가 실제로 낸 단어는 검색창에 입력하고 <b>Enter</b>로 기록. 목록에 안 보이는 단어는 아래 <b>직접 두기</b>.</div>
+  <div class="suggest" id="suggest" hidden></div>
+  <div class="qhint" id="qhintBasic"><b>앞 글자만</b> 쳐도(예: ta) 위에 단어 추천이 떠. 눌러서 상대가 낸 단어를 고르면 돼. 상대가 낸 단어나 그 끝을 직접 입력해도 돼. 그 단어의 <b>끝3글자</b> 또는 <b>끝2글자</b>로 시작하는 내 단어들을 보여줌. · 단어 클릭 = 한 수 앞(상대 응수) 미리보기<br><b>·N</b> = 그 단어 뒤에 상대가 이을 수 있는 단어 수 (그 단어 자신은 뺌). 작을수록 킬각.</div>
+  <div class="qhint" id="qhintShield" hidden>상대가 낸 단어의 <b>앞 글자만</b> 쳐도(예: ta) 위에 추천이 떠. 눌러서 고르고 <b>지금 내 보호막</b>을 골라. 수순 중간이면 추천을 누르는 순간 그 단어가 수순에 기록돼.<br> <b>·N</b>이 보호막보다 작은 단어는 낼 수 없어서 소거돼.<br><b>상대 k/m</b> = 그 단어를 내면 상대가 이을 수 있는 m개 중 상대 보호막(지금-1)을 지키며 실제로 낼 수 있는 k개. k=0이면 💀 승리수.<br>단어 클릭 = 그 단어를 내고 상대 차례로 (보호막 -1, 낸 단어는 다시 못 씀). 상대가 실제로 낸 단어는 검색창에 입력하고 <b>Enter</b>로 기록. 목록에 안 보이는 단어는 아래 <b>직접 두기</b>.</div>
 
   <div id="basicPanel">
     <div class="controls">
@@ -99746,21 +99783,31 @@ function startCounts(word){
   if(mode==="never") return false;
   return word.length===2||word.length>=4;
 }
+// 수순이 있을 때의 사용한 단어: 수순 + 직접 입력 + (설정에 따라) 시작 단어
+function seqUsedSet(){
+  const s=textareaUsed();
+  for(const m of SEQ) s.add(m.w);
+  if(HIST.length){ const st=cleanInput(HIST[0].q); if(startCounts(st)) s.add(st); }
+  return s;
+}
 function shieldState(raw){
   if(!SEQ.length){
     const used=textareaUsed(); if(startCounts(raw)) used.add(raw);
     return {kind:"start", sh:SH, used, moves:0};
   }
-  const seqUsed=textareaUsed();
-  for(const m of SEQ) seqUsed.add(m.w);
-  { const st=cleanInput(HIST[0].q); if(startCounts(st)) seqUsed.add(st); }
+  const seqUsed=seqUsedSet();
   const last=lastWord();
   if(raw===last) return {kind:"onseq", sh:SH, used:seqUsed, moves:SEQ.length};
   const why=moveProblem(last, raw, SH, seqUsed);
-  if(!why){
+  const brs=branchesFor(last);
+  const ext=brs.some(br=>br.words.some(w=>w!==raw&&w.startsWith(raw)));   // 더 긴 후보로 이어질 수 있는 입력인지
+  if(!why&&!ext){
     const used=new Set(seqUsed); used.add(raw);
     return {kind:"preview", sh:Math.max(0,SH-1), used, moves:SEQ.length+1, pending:raw};
   }
+  // 아직 치는 중(지금 둘 수 있는 단어의 앞부분) → 지금 자리에서 그 글자로 시작하는 단어만 보여 준다
+  if(!why||ext||brs.some(br=>br.words.includes(raw)))
+    return {kind:"filter", sh:SH, used:seqUsed, moves:SEQ.length, prefix:raw, exact:!why};
   const used=textareaUsed(); if(startCounts(raw)) used.add(raw);
   return {kind:"fresh", sh:SH, used, moves:0, why};
 }
@@ -99831,7 +99878,10 @@ function runShield(raw, res, sum){
   const ctx=makeCtx(S.used);
   const opt={sh, h2, hideIll:$("hideIll").checked, winOnly:$("winOnly").checked, more:$("showMore").checked};
   const tot=[0,0,0,0,0];
-  for(const br of branchesFor(raw)){
+  const brs=S.kind==="filter"
+    ? branchesFor(lastWord()).map(br=>({...br, words:br.words.filter(w=>w.startsWith(S.prefix))}))
+    : branchesFor(raw);
+  for(const br of brs){
     const evals=[]; let skipped=0;
     for(const w of br.words){
       if(ctx.usedW[WIDX.get(w)]){ skipped++; continue; }
@@ -99846,6 +99896,9 @@ function runShield(raw, res, sum){
   if(S.kind==="preview"){
     banner='<div class="banner">✏️ <b>'+raw+'</b> — 수순에 아직 없는 수야. '+(SEQ.length%2===0?'나':'상대')+
       '(보호막 '+SH+')의 수로 놓고 본 결과야. <b>Enter</b> = 수순에 기록 · 아래 단어를 누르거나 보호막을 바꾸면 함께 기록</div>';
+  } else if(S.kind==="filter"){
+    banner='<div class="banner">🔎 수순('+lastWord()+') 다음에 둘 단어 중 <b>'+raw+'…</b> 로 시작하는 것만 보는 중 · 단어나 위 추천을 누르면 기록돼'+
+      (S.exact?' · <b>Enter</b> = '+raw+' 그대로 기록':'')+'</div>';
   } else if(S.kind==="fresh"){
     banner='<div class="banner">✏️ <b>'+raw+'</b> — 지금 수순('+lastWord()+') 뒤에 둘 수 없는 단어야 ('+S.why+
       '). 새 시작으로 보고 있어 · 아래 단어를 누르면 지금 수순은 지워지고 여기서 새로 시작해</div>';
@@ -99912,7 +99965,8 @@ function syncTab(){
   $("footNote").hidden=!ready||s; $("shieldNote").hidden=!ready||!s;
 }
 
-function runSearch(){
+function runSearch(){ searchCore(); renderSuggest(); }
+function searchCore(){
   const res=$("results"); res.innerHTML="";
   $("playMsg").textContent="";
   const sum=$("summary");
@@ -99950,7 +100004,7 @@ function commitMove(w){
   const S=CUR;
   if(S&&S.kind==="preview") recordPending(S);
   else if(S&&S.kind==="fresh"){ HIST=[]; SEQ=[]; }
-  HIST.push({q:$("q").value, sh:SH});
+  HIST.push({q:SEQ.length?lastWord():$("q").value, sh:SH});
   SEQ.push({w, sh:SH});
   SH=Math.max(0,SH-1);
   $("q").value=w;
@@ -99964,7 +100018,7 @@ function onChip(r, byKey){
     }
     commitMove(r.dataset.w);
   } else $("q").value=r.dataset.w;
-  runSearch();
+  SUG_OFF=true; runSearch();
   if(byKey){ const first=$("results").querySelector(".r"); if(first) first.focus({preventScroll:true}); }
   window.scrollTo({top:0,behavior:"smooth"});
 }
@@ -99974,6 +100028,62 @@ $("results").addEventListener("keydown",e=>{
   const r=e.target.closest(".r"); if(!r) return;
   e.preventDefault(); onChip(r,true);
 });
+
+// ---------------------------------------------------------------------
+// 단어 추천: 앞 글자만 쳐도 고를 수 있게
+//   시작(수순 없음) · 기본 탭 : 그 글자로 시작하는 사전 단어 → 누르면 검색창 단어(상대가 낸 단어)로
+//   수순 중간 : 지금 둘 사람이 보호막을 지키며 둘 수 있는 단어 중 그 글자로 시작하는 것 → 누르면 수순에 기록
+// ---------------------------------------------------------------------
+const SUG_MAX=40;
+let SUG=null, SUG_OFF=true;   // SUG_OFF: 직접 타이핑할 때만 추천을 띄운다
+function byLen(a,b){ return a.length-b.length || (a<b?-1:1); }
+function prefixWords(raw){
+  if(raw.length===1) return WORDS.filter(w=>w[0]===raw);
+  if(raw.length===2) return (byH2.get(raw)||[]).slice();
+  return (byH3.get(raw.slice(0,3))||[]).filter(w=>w.startsWith(raw));
+}
+function computeSuggest(raw){
+  if(!ready||!raw||SUG_OFF) return null;
+  if(TAB==="shield"&&SEQ.length){
+    const last=lastWord();
+    if(raw===last) return null;
+    const ctx=makeCtx(seqUsedSet()), out=[];
+    for(const br of branchesFor(last)) for(const w of br.words){
+      if(!w.startsWith(raw)) continue;
+      const wi=WIDX.get(w), t=TAIL[wi];
+      if(ctx.usedW[wi]||DEG[t]-ctx.uc[t]-LOOP[wi]<SH) continue;
+      out.push(w);
+    }
+    if(out.length){
+      out.sort(byLen);
+      return {mode:"move", items:out.slice(0,SUG_MAX), total:out.length,
+        label:'지금 둘 사람('+(SEQ.length%2===0?'나':'상대')+') · 보호막 '+SH+'에서 둘 수 있는 단어 — 누르면 수순에 기록'};
+    }
+  }
+  const ws=prefixWords(raw);
+  if(!ws.length) return null;
+  ws.sort(byLen);
+  const mid=TAB==="shield"&&SEQ.length>0;
+  return {mode:"start", items:ws.slice(0,SUG_MAX), total:ws.length,
+    label:mid?'수순과 이어지지 않음 · 새로 시작할 상대 단어 고르기 (누르면 지금 수순은 지워짐)':'상대가 낸 단어 고르기'};
+}
+function renderSuggest(){
+  const box=$("suggest"), raw=cleanInput($("q").value);
+  SUG=computeSuggest(raw);
+  if(!SUG){ box.hidden=true; box.innerHTML=""; return; }
+  box.hidden=false;
+  box.innerHTML='<span class="sglab">'+SUG.label+(SUG.total>SUG.items.length?' · '+SUG.total.toLocaleString()+'개 중 짧은 순 '+SUG.items.length+'개':'')+'</span>'+
+    '<div class="sgrow">'+SUG.items.map(w=>'<button type="button" class="sg" data-w="'+w+'"><b>'+raw+'</b>'+w.slice(raw.length)+'</button>').join("")+'</div>';
+}
+function pickSuggest(w){
+  if(!SUG) return;
+  if(TAB==="shield"&&SEQ.length){
+    if(SUG.mode==="move"){ HIST.push({q:lastWord(), sh:SH}); SEQ.push({w, sh:SH}); SH=Math.max(0,SH-1); }
+    else { HIST=[]; SEQ=[]; }
+  }
+  $("q").value=w; SUG_OFF=true; runSearch();
+}
+$("suggest").addEventListener("click",e=>{ const b=e.target.closest(".sg"); if(b) pickSuggest(b.dataset.w); });
 
 // 직접 두기: 목록에 안 보이는 단어(표시 한도 초과 등)도 지금 상태에서 둘 수 있다.
 function playTyped(){
@@ -99988,33 +100098,42 @@ function playTyped(){
   const why=moveProblem(raw, w, S.sh, S.used);
   if(why){ msg.textContent=w+" — "+why; return; }
   msg.textContent=""; $("play").value="";
-  commitMove(w); runSearch();
+  commitMove(w); SUG_OFF=true; runSearch();
 }
 $("playBtn").addEventListener("click",playTyped);
 $("play").addEventListener("keydown",e=>{ if(e.key==="Enter") playTyped(); });
 $("play").addEventListener("input",()=>{ $("playMsg").textContent=""; });
 
 $("q").addEventListener("keydown",e=>{
-  if(e.key!=="Enter"||TAB!=="shield"||!ready) return;
-  const S=shieldState(cleanInput($("q").value));
-  if(S.kind==="preview"){ recordPending(S); runSearch(); }
+  if(e.key==="Escape"){ SUG_OFF=true; renderSuggest(); return; }
+  if(e.key!=="Enter"||!ready) return;
+  const raw=cleanInput($("q").value);
+  if(TAB==="shield"&&SEQ.length){
+    const S=shieldState(raw);
+    // 입력한 단어 그대로 둘 수 있으면 그 단어를 기록, 아니면 추천이 하나뿐일 때만 그 추천을 기록
+    if(S.kind==="preview"||(S.kind==="filter"&&S.exact)){ recordPending({pending:raw}); SUG_OFF=true; runSearch(); return; }
+    if(SUG&&SUG.mode==="move"&&SUG.total===1) pickSuggest(SUG.items[0]);
+    return;
+  }
+  // 시작 단어 고르기: 사전에 없는 앞 글자만 쳤으면 맨 앞 추천
+  if(SUG&&SUG.items.length&&!SET.has(raw)) pickSuggest(SUG.items[0]);
 });
 
 $("undoBtn").addEventListener("click",()=>{
   if(!HIST.length) return;
   const s=HIST.pop(); SEQ.pop();
-  $("q").value=s.q; SH=s.sh; runSearch();
+  $("q").value=s.q; SH=s.sh; SUG_OFF=true; runSearch();
 });
 $("resetBtn").addEventListener("click",()=>{
   if(!HIST.length) return;
   const s=HIST[0]; HIST=[]; SEQ=[];
-  $("q").value=s.q; SH=s.sh; runSearch();
+  $("q").value=s.q; SH=s.sh; SUG_OFF=true; runSearch();
 });
 
 $("tabBasic").addEventListener("click",()=>{ TAB="basic"; syncTab(); runSearch(); });
 $("tabShield").addEventListener("click",()=>{ TAB="shield"; syncTab(); runSearch(); });
 
-$("q").addEventListener("input",runSearch);
+$("q").addEventListener("input",()=>{ SUG_OFF=false; runSearch(); });
 for(const [box,label] of [["killOnly","killToggle"],["showBad","badToggle"],["hideIll","hideIllToggle"],
                           ["winOnly","winOnlyToggle"],["showMore","moreToggle"]]){
   $(box).addEventListener("change",()=>{ $(label).classList.toggle("on",$(box).checked); runSearch(); });
@@ -100059,6 +100178,22 @@ $("fileInput").addEventListener("change",e=>{
   r.readAsText(f);
 });
 
+// 화면 밝기: 밝은 화면이 기본. 고른 값은 이 브라우저에만 저장.
+let THEME="light";
+try{ if(localStorage.getItem("kkutu-theme")==="dark") THEME="dark"; }catch(e){}
+function applyTheme(){
+  const dark=THEME==="dark";
+  if(dark) document.documentElement.setAttribute("data-theme","dark");
+  else document.documentElement.removeAttribute("data-theme");
+  $("themeBtn").textContent=dark?"☀️ 밝게":"🌙 어둡게";
+  $("themeBtn").setAttribute("aria-pressed",dark?"true":"false");
+}
+applyTheme();
+$("themeBtn").addEventListener("click",()=>{
+  THEME=THEME==="dark"?"light":"dark"; applyTheme();
+  try{ localStorage.setItem("kkutu-theme",THEME); }catch(e){}
+});
+
 // 검증용: 브라우저 콘솔에서 window.__kkutu 로 계산 결과를 꺼내 볼 수 있다.
 window.__kkutu={
   get ready(){ return ready; },
@@ -100073,7 +100208,8 @@ window.__kkutu={
       const e=evalMove(w,sh,ctx); return {w:e.w, legal:e.legal, mine:e.mine, k:e.k, tot:e.tot, tier:e.tier};
     })}));
   },
-  state:()=>({SH, SEQ:SEQ.map(m=>({...m})), HIST:HIST.map(h=>({...h})), kind:CUR&&CUR.kind})
+  state:()=>({SH, SEQ:SEQ.map(m=>({...m})), HIST:HIST.map(h=>({...h})), kind:CUR&&CUR.kind}),
+  suggest:()=>SUG&&{mode:SUG.mode, items:SUG.items.slice(), total:SUG.total}
 };
 
 // 열자마자 임베드된 99k 사전으로 빌드
