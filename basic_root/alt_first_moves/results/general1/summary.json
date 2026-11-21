@@ -20537,10 +20537,10 @@
    },
    "parent": "큼:큼직큼직",
    "untried": false,
-   "allotted_seconds": 120.0,
-   "search_seconds": 499.830927,
-   "this_run_search_seconds": 120.000927,
-   "earlier_runs": 1,
+   "allotted_seconds": 100.169,
+   "search_seconds": 599.999289,
+   "this_run_search_seconds": 100.169289,
+   "earlier_runs": 2,
    "proof_seconds": 0.0,
    "verify_seconds": null,
    "proof_nodes": 0,
@@ -50386,9 +50386,9 @@
    "parent": "죄:죄의식",
    "untried": false,
    "allotted_seconds": 120.0,
-   "search_seconds": 234.531086,
-   "this_run_search_seconds": 120.001086,
-   "earlier_runs": 1,
+   "search_seconds": 354.53127,
+   "this_run_search_seconds": 120.00127,
+   "earlier_runs": 2,
    "proof_seconds": 0.0,
    "verify_seconds": null,
    "proof_nodes": 0,
@@ -66092,7 +66092,7 @@
    "group_words": [
     "역습"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "활",
     "history": [
@@ -66102,15 +66102,255 @@
    },
    "parent": "활:활동력",
    "untried": false,
-   "allotted_seconds": 10.494,
-   "search_seconds": 450.846052,
-   "this_run_search_seconds": 10.496052,
-   "earlier_runs": 1,
-   "proof_seconds": 0.0,
-   "verify_seconds": null,
-   "proof_nodes": 0,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "allotted_seconds": 120.0,
+   "search_seconds": 473.742162,
+   "this_run_search_seconds": 22.892162,
+   "earlier_runs": 2,
+   "proof_seconds": 12.835142,
+   "verify_seconds": 67.58,
+   "proof_nodes": 1356186,
+   "proof_sha256": "e59fec46f5f47a74f69937925e30a2b5eafc35f2f2cd18f1df26a88c58b15201",
+   "mover_result": "L",
+   "verdict": "win",
+   "replies": [
+    {
+     "words": [
+      "습격"
+     ],
+     "answer": [
+      "격식"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "격랑"
+      ],
+      [
+       "격돌"
+      ],
+      [
+       "격멸"
+      ],
+      [
+       "격변"
+      ],
+      [
+       "격언"
+      ],
+      [
+       "격정적",
+       "격식적"
+      ],
+      [
+       "격증"
+      ],
+      [
+       "격찬"
+      ],
+      [
+       "격퇴"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "습득"
+     ],
+     "answer": [
+      "득표율"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "득득"
+      ],
+      [
+       "득점력"
+      ],
+      [
+       "득점왕"
+      ],
+      [
+       "득표"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "습식"
+     ],
+     "answer": [
+      "식권"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식충"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "습관적"
+     ],
+     "answer": [
+      "적자생존"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적갈색",
+       "적색",
+       "적회색"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "습진"
+     ],
+     "answer": [
+      "진학률"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "진갑"
+      ],
+      [
+       "진격"
+      ],
+      [
+       "진퇴유곡",
+       "진혼곡"
+      ],
+      [
+       "진군"
+      ],
+      [
+       "진출권"
+      ],
+      [
+       "진급"
+      ],
+      [
+       "진맥"
+      ],
+      [
+       "진갈색"
+      ],
+      [
+       "진압"
+      ],
+      [
+       "진언"
+      ],
+      [
+       "진력"
+      ],
+      [
+       "진취적",
+       "진보적"
+      ],
+      [
+       "진즉"
+      ],
+      [
+       "진폐증"
+      ],
+      [
+       "진수성찬"
+      ],
+      [
+       "진흙탕",
+       "진탕"
+      ],
+      [
+       "진퇴"
+      ],
+      [
+       "진폭"
+      ],
+      [
+       "진도표"
+      ],
+      [
+       "진학"
+      ],
+      [
+       "진행"
+      ],
+      [
+       "진분홍",
+       "진홍"
+      ],
+      [
+       "진두지휘"
+      ],
+      [
+       "진흥"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_336",
@@ -66118,7 +66358,7 @@
    "group_words": [
     "역전승"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "활",
     "history": [
@@ -66128,15 +66368,150 @@
    },
    "parent": "활:활동력",
    "untried": false,
-   "allotted_seconds": 64.878,
-   "search_seconds": 488.459061,
-   "this_run_search_seconds": 64.879061,
-   "earlier_runs": 1,
-   "proof_seconds": 0.0,
-   "verify_seconds": null,
-   "proof_nodes": 0,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "allotted_seconds": 111.54,
+   "search_seconds": 558.864135,
+   "this_run_search_seconds": 70.404135,
+   "earlier_runs": 2,
+   "proof_seconds": 27.679186,
+   "verify_seconds": 69.38,
+   "proof_nodes": 2444117,
+   "proof_sha256": "78621b2e7c5928dfac91e4fa6c069dfdb9bf2e07f5e4358d44ffe90a173b5325",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 287,
+    "words": [
+     "승객"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "승격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승차권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승급"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승낙"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승진"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "객관식"
+     ],
+     "answer": [
+      "식충"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "식권"
+      ],
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "객관적"
+     ],
+     "answer": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적자생존"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_337",
@@ -66155,9 +66530,9 @@
    "parent": "활:활동력",
    "untried": false,
    "allotted_seconds": 120.0,
-   "search_seconds": 120.000281,
-   "this_run_search_seconds": 120.000281,
-   "earlier_runs": 0,
+   "search_seconds": 240.000197,
+   "this_run_search_seconds": 120.000197,
+   "earlier_runs": 1,
    "proof_seconds": 0.0,
    "verify_seconds": null,
    "proof_nodes": 0,
@@ -67391,7 +67766,7 @@
     "적극적",
     "적대적"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "활",
     "history": [
@@ -67400,16 +67775,109 @@
     ]
    },
    "parent": "활:활동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 18.871436,
+   "this_run_search_seconds": 18.871436,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.530131,
+   "verify_seconds": 2.08,
+   "proof_nodes": 81129,
+   "proof_sha256": "3b957e22969bb3475cf8d39f0f484d11426944c61b6043c4390bbfe8691fa124",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 403,
+    "words": [
+     "적자생존"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "적격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적극"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적삼"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적응력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적중률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적대적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적진"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적합"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "존칭"
+     ],
+     "answer": [
+      "칭칭"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칭찬"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_345",
@@ -67417,7 +67885,7 @@
    "group_words": [
     "적법"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "활",
     "history": [
@@ -67426,16 +67894,117 @@
     ]
    },
    "parent": "활:활동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 6.012595,
+   "this_run_search_seconds": 6.012595,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.127354,
+   "verify_seconds": 0.56,
+   "proof_nodes": 15464,
+   "proof_sha256": "c2acd1fb4ba9c6d10f9fbb2b5f65e20252625e802acb22b68f0de48a94724f74",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 206,
+    "words": [
+     "법칙"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "법규"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법명"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법적",
+      "법률적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법학"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "칙칙폭폭"
+     ],
+     "answer": [
+      "폭삭"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "폭격"
+      ],
+      [
+       "폭군"
+      ],
+      [
+       "폭락"
+      ],
+      [
+       "폭식"
+      ],
+      [
+       "폭압"
+      ],
+      [
+       "폭약"
+      ],
+      [
+       "폭언",
+       "폭탄선언"
+      ],
+      [
+       "폭력",
+       "폭발력"
+      ],
+      [
+       "폭력적",
+       "폭발적"
+      ],
+      [
+       "폭행죄"
+      ],
+      [
+       "폭죽"
+      ],
+      [
+       "폭탄"
+      ],
+      [
+       "폭폭"
+      ],
+      [
+       "폭풍"
+      ],
+      [
+       "폭행"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_346",
@@ -67443,7 +68012,7 @@
    "group_words": [
     "적삼"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "활",
     "history": [
@@ -67452,16 +68021,177 @@
     ]
    },
    "parent": "활:활동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.232966,
+   "this_run_search_seconds": 0.232966,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 1.215521,
+   "verify_seconds": 4.02,
+   "proof_nodes": 143603,
+   "proof_sha256": "e848631343320899412eab8430926363c9a576aaa027e47c147c6ba19bf3fbf4",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 248,
+    "words": [
+     "삼십"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "삼색",
+      "삼원색"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼판양승"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼한사온"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼일절"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼진"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼인칭"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼계탕"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "십계명"
+     ],
+     "answer": [
+      "명색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "명곡"
+      ],
+      [
+       "명랑"
+      ],
+      [
+       "명맥"
+      ],
+      [
+       "명멸"
+      ],
+      [
+       "명상법"
+      ],
+      [
+       "명승"
+      ],
+      [
+       "명약"
+      ],
+      [
+       "명언"
+      ],
+      [
+       "명운"
+      ],
+      [
+       "명상적",
+       "명승고적",
+       "명시적"
+      ],
+      [
+       "명절",
+       "명사절"
+      ],
+      [
+       "명란젓"
+      ],
+      [
+       "명증"
+      ],
+      [
+       "명예퇴직",
+       "명예직"
+      ],
+      [
+       "명칭"
+      ],
+      [
+       "명퇴"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "십진법"
+     ],
+     "answer": [
+      "법칙"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "법규"
+      ],
+      [
+       "법명"
+      ],
+      [
+       "법률"
+      ],
+      [
+       "법적",
+       "법률적"
+      ],
+      [
+       "법학"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "십인십색"
+     ],
+     "answer": [
+      "색색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색맹"
+      ],
+      [
+       "색칠"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_347",
@@ -67469,7 +68199,7 @@
    "group_words": [
     "적응력"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "활",
     "history": [
@@ -67478,16 +68208,214 @@
     ]
    },
    "parent": "활:활동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 1.697075,
+   "this_run_search_seconds": 1.697075,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 6.062147,
+   "verify_seconds": 152.12,
+   "proof_nodes": 889678,
+   "proof_sha256": "66761b612993636ae198d2102499b0d5b677c5ba7314a77fca171ff79e45dede",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 355,
+    "words": [
+     "역할"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "역세권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역할극"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역기능"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역병"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역순"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역습"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역전승"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역사적",
+      "역설적",
+      "역적",
+      "역동적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역풍"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역학",
+      "역사학"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역행"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역방향"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "할인권"
+     ],
+     "answer": [
+      "권능"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "권역",
+       "권력"
+      ],
+      [
+       "권위적",
+       "권위주의적"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "할렐루야"
+     ],
+     "answer": [
+      "야영객"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "야간학교"
+      ],
+      [
+       "야권"
+      ],
+      [
+       "야식"
+      ],
+      [
+       "야만적",
+       "야성적"
+      ],
+      [
+       "야맹증"
+      ],
+      [
+       "야학"
+      ],
+      [
+       "야합"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "할인율"
+     ],
+     "answer": [
+      "율격"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "율법"
+      ],
+      [
+       "율동적"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "할증"
+     ],
+     "answer": [
+      "증표"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "증후군"
+      ],
+      [
+       "증권"
+      ],
+      [
+       "증명"
+      ],
+      [
+       "증식"
+      ],
+      [
+       "증언"
+      ],
+      [
+       "증가율"
+      ],
+      [
+       "증진",
+       "증명사진"
+      ],
+      [
+       "증축"
+      ],
+      [
+       "증편"
+      ],
+      [
+       "증폭"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_348",
@@ -67495,7 +68423,7 @@
    "group_words": [
     "적자생존"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "활",
     "history": [
@@ -67504,16 +68432,33 @@
     ]
    },
    "parent": "활:활동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 113.002413,
+   "this_run_search_seconds": 113.002413,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 5.098373,
+   "verify_seconds": 42.83,
+   "proof_nodes": 701761,
+   "proof_sha256": "ffa3a2ab3528336d7ee1831b72202e9f0ce81c0c3d0510d72f7e35ea8c582034",
+   "mover_result": "L",
+   "verdict": "win",
+   "replies": [
+    {
+     "words": [
+      "존칭"
+     ],
+     "answer": [
+      "칭찬"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칭칭"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_349",
@@ -67521,7 +68466,7 @@
    "group_words": [
     "적중률"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "활",
     "history": [
@@ -67530,16 +68475,367 @@
     ]
    },
    "parent": "활:활동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 3.082426,
+   "this_run_search_seconds": 3.082426,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 1.803616,
+   "verify_seconds": 7.62,
+   "proof_nodes": 278657,
+   "proof_sha256": "e4fa21d0e2d9cfef351a4c8cf78adacdd3f195b62a7d777523bfe48d3d23503e",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 390,
+    "words": [
+     "율격"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "율법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "율동적"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "격랑"
+     ],
+     "answer": [
+      "낭비벽"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "낭군"
+      ],
+      [
+       "낭만적"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격돌"
+     ],
+     "answer": [
+      "돌격"
+     ],
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "돌돌"
+      ],
+      [
+       "돌변"
+      ],
+      [
+       "돌림병"
+      ],
+      [
+       "돌솥"
+      ],
+      [
+       "돌파력"
+      ],
+      [
+       "돌발적"
+      ],
+      [
+       "돌진"
+      ],
+      [
+       "돌탑"
+      ],
+      [
+       "돌풍"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격멸"
+     ],
+     "answer": [
+      "멸치젓"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "멸균"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격변"
+     ],
+     "answer": [
+      "변화율"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "변주곡"
+      ],
+      [
+       "변명"
+      ],
+      [
+       "변색"
+      ],
+      [
+       "변비약"
+      ],
+      [
+       "변별력"
+      ],
+      [
+       "변칙적",
+       "변태적"
+      ],
+      [
+       "변절"
+      ],
+      [
+       "변죽"
+      ],
+      [
+       "변칙"
+      ],
+      [
+       "변혁"
+      ],
+      [
+       "변환"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격식"
+     ],
+     "answer": [
+      "식권"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식충"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격언"
+     ],
+     "answer": [
+      "언어권"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "언급"
+      ],
+      [
+       "언변"
+      ],
+      [
+       "언약"
+      ],
+      [
+       "언어능력"
+      ],
+      [
+       "언어적"
+      ],
+      [
+       "언어학"
+      ],
+      [
+       "언어수행",
+       "언행"
+      ],
+      [
+       "언어생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격정적",
+      "격식적"
+     ],
+     "answer": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적자생존"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격증"
+     ],
+     "answer": [
+      "증가율"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "증후군"
+      ],
+      [
+       "증권"
+      ],
+      [
+       "증명"
+      ],
+      [
+       "증식"
+      ],
+      [
+       "증언"
+      ],
+      [
+       "증진",
+       "증명사진"
+      ],
+      [
+       "증축"
+      ],
+      [
+       "증편"
+      ],
+      [
+       "증폭"
+      ],
+      [
+       "증표"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격찬"
+     ],
+     "answer": [
+      "찬성표"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "찬탄"
+      ],
+      [
+       "찬합"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격퇴"
+     ],
+     "answer": [
+      "퇴색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "퇴락"
+      ],
+      [
+       "퇴역"
+      ],
+      [
+       "퇴적",
+       "퇴폐적"
+      ],
+      [
+       "퇴직"
+      ],
+      [
+       "퇴진"
+      ],
+      [
+       "퇴학"
+      ],
+      [
+       "퇴행"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_350",
@@ -67547,7 +68843,7 @@
    "group_words": [
     "적진"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "활",
     "history": [
@@ -67556,16 +68852,227 @@
     ]
    },
    "parent": "활:활동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.488582,
+   "this_run_search_seconds": 0.488582,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 1.346675,
+   "verify_seconds": 41.56,
+   "proof_nodes": 209552,
+   "proof_sha256": "47b31130d9eb99dc460524f0e3e09097ca61868416990b8731bed0ea2785277f",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 471,
+    "words": [
+     "진갈색"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "진갑"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진퇴유곡",
+      "진혼곡"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진출권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진급"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진맥"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진압"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진언"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진학률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진취적",
+      "진보적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진즉"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진폐증"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진수성찬"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진흙탕",
+      "진탕"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진퇴"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진폭"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진도표"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진학"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진행"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진분홍",
+      "진홍"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진두지휘"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진흥"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "색맹"
+     ],
+     "answer": [
+      "맹활약"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "맹공격",
+       "맹추격"
+      ],
+      [
+       "맹목적"
+      ],
+      [
+       "맹탕"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색색"
+     ],
+     "answer": [
+      "색칠"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색맹"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색칠"
+     ],
+     "answer": [
+      "칠십"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칠순"
+      ],
+      [
+       "칠흑"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_351",
@@ -67573,7 +69080,7 @@
    "group_words": [
     "적합"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "활",
     "history": [
@@ -67582,16 +69089,230 @@
     ]
    },
    "parent": "활:활동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 82.635,
+   "search_seconds": 1.219616,
+   "this_run_search_seconds": 1.219616,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 3.867747,
+   "verify_seconds": 60.96,
+   "proof_nodes": 640934,
+   "proof_sha256": "02c1e94fd80236011615e4603bfae36d8cb75b9504b696b23c9f9e73fed3f68d",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 630,
+    "words": [
+     "합주곡",
+     "합창곡"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "합격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합병"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합숙"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합승"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합법적",
+      "합리적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합격증",
+      "합병증"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합집합"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "곡명"
+     ],
+     "answer": [
+      "명곡"
+     ],
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "명랑"
+      ],
+      [
+       "명맥"
+      ],
+      [
+       "명멸"
+      ],
+      [
+       "명상법"
+      ],
+      [
+       "명색"
+      ],
+      [
+       "명승"
+      ],
+      [
+       "명약"
+      ],
+      [
+       "명언"
+      ],
+      [
+       "명운"
+      ],
+      [
+       "명상적",
+       "명승고적",
+       "명시적"
+      ],
+      [
+       "명절",
+       "명사절"
+      ],
+      [
+       "명란젓"
+      ],
+      [
+       "명증"
+      ],
+      [
+       "명예퇴직",
+       "명예직"
+      ],
+      [
+       "명칭"
+      ],
+      [
+       "명퇴"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "곡식"
+     ],
+     "answer": [
+      "식충"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "식권"
+      ],
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "곡절"
+     ],
+     "answer": [
+      "절룩절룩"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "절교"
+      ],
+      [
+       "절규"
+      ],
+      [
+       "절명"
+      ],
+      [
+       "절벽"
+      ],
+      [
+       "절식"
+      ],
+      [
+       "절약"
+      ],
+      [
+       "절대적",
+       "절망적"
+      ],
+      [
+       "절절"
+      ],
+      [
+       "절도죄"
+      ],
+      [
+       "절찬"
+      ],
+      [
+       "절충"
+      ],
+      [
+       "절편"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_352",
@@ -69251,14 +70972,14 @@
     ]
    },
    "parent": "능:능동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 120.001221,
+   "this_run_search_seconds": 120.001221,
    "earlier_runs": 0,
-   "proof_seconds": null,
+   "proof_seconds": 0.0,
    "verify_seconds": null,
-   "proof_nodes": null,
+   "proof_nodes": 0,
    "proof_sha256": null,
    "verdict": "unknown"
   },
@@ -69268,7 +70989,7 @@
    "group_words": [
     "적중률"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "능",
     "history": [
@@ -69277,16 +70998,367 @@
     ]
    },
    "parent": "능:능동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 4.006929,
+   "this_run_search_seconds": 4.006929,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 2.308897,
+   "verify_seconds": 8.99,
+   "proof_nodes": 278184,
+   "proof_sha256": "94227477dfb061db19230adc7ff1d67ca018cc19a5af7c3ab7465891e0203cd0",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 390,
+    "words": [
+     "율격"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "율법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "율동적"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "격랑"
+     ],
+     "answer": [
+      "낭비벽"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "낭군"
+      ],
+      [
+       "낭만적"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격돌"
+     ],
+     "answer": [
+      "돌격"
+     ],
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "돌돌"
+      ],
+      [
+       "돌변"
+      ],
+      [
+       "돌림병"
+      ],
+      [
+       "돌솥"
+      ],
+      [
+       "돌파력"
+      ],
+      [
+       "돌발적"
+      ],
+      [
+       "돌진"
+      ],
+      [
+       "돌탑"
+      ],
+      [
+       "돌풍"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격멸"
+     ],
+     "answer": [
+      "멸치젓"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "멸균"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격변"
+     ],
+     "answer": [
+      "변화율"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "변주곡"
+      ],
+      [
+       "변명"
+      ],
+      [
+       "변색"
+      ],
+      [
+       "변비약"
+      ],
+      [
+       "변별력"
+      ],
+      [
+       "변칙적",
+       "변태적"
+      ],
+      [
+       "변절"
+      ],
+      [
+       "변죽"
+      ],
+      [
+       "변칙"
+      ],
+      [
+       "변혁"
+      ],
+      [
+       "변환"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격식"
+     ],
+     "answer": [
+      "식권"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식충"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격언"
+     ],
+     "answer": [
+      "언어권"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "언급"
+      ],
+      [
+       "언변"
+      ],
+      [
+       "언약"
+      ],
+      [
+       "언어능력"
+      ],
+      [
+       "언어적"
+      ],
+      [
+       "언어학"
+      ],
+      [
+       "언어수행",
+       "언행"
+      ],
+      [
+       "언어생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격정적",
+      "격식적"
+     ],
+     "answer": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적자생존"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격증"
+     ],
+     "answer": [
+      "증가율"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "증후군"
+      ],
+      [
+       "증권"
+      ],
+      [
+       "증명"
+      ],
+      [
+       "증식"
+      ],
+      [
+       "증언"
+      ],
+      [
+       "증진",
+       "증명사진"
+      ],
+      [
+       "증축"
+      ],
+      [
+       "증편"
+      ],
+      [
+       "증폭"
+      ],
+      [
+       "증표"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격찬"
+     ],
+     "answer": [
+      "찬성표"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "찬탄"
+      ],
+      [
+       "찬합"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "격퇴"
+     ],
+     "answer": [
+      "퇴색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "퇴락"
+      ],
+      [
+       "퇴역"
+      ],
+      [
+       "퇴적",
+       "퇴폐적"
+      ],
+      [
+       "퇴직"
+      ],
+      [
+       "퇴진"
+      ],
+      [
+       "퇴학"
+      ],
+      [
+       "퇴행"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_368",
@@ -69294,7 +71366,7 @@
    "group_words": [
     "적진"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "능",
     "history": [
@@ -69303,16 +71375,227 @@
     ]
    },
    "parent": "능:능동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.380156,
+   "this_run_search_seconds": 0.380156,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 1.510309,
+   "verify_seconds": 6.69,
+   "proof_nodes": 210876,
+   "proof_sha256": "3beba7b0aa40da1936a3ca4724dfef6a1f2bfd633f7db4894d9900c0c1ba4b42",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 471,
+    "words": [
+     "진갈색"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "진갑"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진퇴유곡",
+      "진혼곡"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진출권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진급"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진맥"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진압"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진언"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진학률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진취적",
+      "진보적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진즉"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진폐증"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진수성찬"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진흙탕",
+      "진탕"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진퇴"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진폭"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진도표"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진학"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진행"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진분홍",
+      "진홍"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진두지휘"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "진흥"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "색맹"
+     ],
+     "answer": [
+      "맹활약"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "맹공격",
+       "맹추격"
+      ],
+      [
+       "맹목적"
+      ],
+      [
+       "맹탕"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색색"
+     ],
+     "answer": [
+      "색칠"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색맹"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색칠"
+     ],
+     "answer": [
+      "칠십"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칠순"
+      ],
+      [
+       "칠흑"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_369",
@@ -69320,7 +71603,7 @@
    "group_words": [
     "적합"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "능",
     "history": [
@@ -69329,16 +71612,230 @@
     ]
    },
    "parent": "능:능동적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 1.310994,
+   "this_run_search_seconds": 1.310994,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 3.896042,
+   "verify_seconds": 133.0,
+   "proof_nodes": 634425,
+   "proof_sha256": "a8497b6bb1f7c4b5d12c9b4eb052a56cafab0bb6ae21a6318e3ee701152e7157",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 630,
+    "words": [
+     "합주곡",
+     "합창곡"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "합격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합병"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합숙"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합승"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합법적",
+      "합리적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합격증",
+      "합병증"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "합집합"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "곡명"
+     ],
+     "answer": [
+      "명곡"
+     ],
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "명랑"
+      ],
+      [
+       "명맥"
+      ],
+      [
+       "명멸"
+      ],
+      [
+       "명상법"
+      ],
+      [
+       "명색"
+      ],
+      [
+       "명승"
+      ],
+      [
+       "명약"
+      ],
+      [
+       "명언"
+      ],
+      [
+       "명운"
+      ],
+      [
+       "명상적",
+       "명승고적",
+       "명시적"
+      ],
+      [
+       "명절",
+       "명사절"
+      ],
+      [
+       "명란젓"
+      ],
+      [
+       "명증"
+      ],
+      [
+       "명예퇴직",
+       "명예직"
+      ],
+      [
+       "명칭"
+      ],
+      [
+       "명퇴"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "곡식"
+     ],
+     "answer": [
+      "식충"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "식권"
+      ],
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "곡절"
+     ],
+     "answer": [
+      "절룩절룩"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "절교"
+      ],
+      [
+       "절규"
+      ],
+      [
+       "절명"
+      ],
+      [
+       "절벽"
+      ],
+      [
+       "절식"
+      ],
+      [
+       "절약"
+      ],
+      [
+       "절대적",
+       "절망적"
+      ],
+      [
+       "절절"
+      ],
+      [
+       "절도죄"
+      ],
+      [
+       "절찬"
+      ],
+      [
+       "절충"
+      ],
+      [
+       "절편"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_370",
@@ -69346,7 +71843,7 @@
    "group_words": [
     "역방향"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "능",
     "history": [
@@ -69355,16 +71852,97 @@
     ]
    },
    "parent": "능:능력",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 1.017312,
+   "this_run_search_seconds": 1.017312,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.178584,
+   "verify_seconds": 0.81,
+   "proof_nodes": 28130,
+   "proof_sha256": "ffd0f3eafbd541c950988dcf0a6191e30f0dd9098343fe6d6c9b6cddbca55e90",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 660,
+    "words": [
+     "향토색"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "향락"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "향수병"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "향락적"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "색맹"
+     ],
+     "answer": [
+      "맹활약"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "맹공격",
+       "맹추격"
+      ],
+      [
+       "맹목적"
+      ],
+      [
+       "맹탕"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색색"
+     ],
+     "answer": [
+      "색칠"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색맹"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색칠"
+     ],
+     "answer": [
+      "칠십"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칠순"
+      ],
+      [
+       "칠흑"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_371",
@@ -69372,7 +71950,7 @@
    "group_words": [
     "역병"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "능",
     "history": [
@@ -69381,16 +71959,128 @@
     ]
    },
    "parent": "능:능력",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.019189,
+   "this_run_search_seconds": 0.019189,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.07635,
+   "verify_seconds": 0.19,
+   "proof_nodes": 8582,
+   "proof_sha256": "5a82a6d8e8d84ffd827b9b981cef21960a7a35f36af46d58536531f7271341fe",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 232,
+    "words": [
+     "병존"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "병균",
+      "병원균"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병뚜껑"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병명"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병색",
+      "병아리색"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병역",
+      "병력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병구완"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병졸"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병풍"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병리학"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병합"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병행"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "병환"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "존칭"
+     ],
+     "answer": [
+      "칭칭"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칭찬"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_372",
@@ -69401,7 +72091,7 @@
     "역적",
     "역동적"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "능",
     "history": [
@@ -69410,16 +72100,148 @@
     ]
    },
    "parent": "능:능력",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 7.102874,
+   "this_run_search_seconds": 7.102874,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.247111,
+   "verify_seconds": 1.23,
+   "proof_nodes": 45969,
+   "proof_sha256": "f7c2446bb4d60e421624d036506dc18bb0df8f8c6dcee87fc42721680c938ea9",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 399,
+    "words": [
+     "적갈색",
+     "적색",
+     "적회색"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "적격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적극"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적삼"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적응력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적중률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적극적",
+      "적대적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적자생존"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적진"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적합"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "색맹"
+     ],
+     "answer": [
+      "맹활약"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "맹공격",
+       "맹추격"
+      ],
+      [
+       "맹목적"
+      ],
+      [
+       "맹탕"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색색"
+     ],
+     "answer": [
+      "색칠"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색맹"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색칠"
+     ],
+     "answer": [
+      "칠십"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칠순"
+      ],
+      [
+       "칠흑"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_373",
@@ -69436,14 +72258,14 @@
     ]
    },
    "parent": "능:능력",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 81.416,
+   "search_seconds": 81.416931,
+   "this_run_search_seconds": 81.416931,
    "earlier_runs": 0,
-   "proof_seconds": null,
+   "proof_seconds": 0.0,
    "verify_seconds": null,
-   "proof_nodes": null,
+   "proof_nodes": 0,
    "proof_sha256": null,
    "verdict": "unknown"
   },
@@ -70746,7 +73568,7 @@
    "group_words": [
     "명승"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "곡",
     "history": [
@@ -70755,16 +73577,151 @@
     ]
    },
    "parent": "곡:곡명",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 3.581217,
+   "this_run_search_seconds": 3.581217,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 12.473261,
+   "verify_seconds": 51.08,
+   "proof_nodes": 1880944,
+   "proof_sha256": "1bf9b860405eaea4ea3a80a352ecefb8437e376c501330b62c4b6e62169b1156",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 287,
+    "words": [
+     "승객"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "승격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승차권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승급"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승낙"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승진"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "객관식"
+     ],
+     "answer": [
+      "식충"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "식권"
+      ],
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "객관적"
+     ],
+     "answer": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적자생존"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_404",
@@ -70772,7 +73729,7 @@
    "group_words": [
     "명약"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "곡",
     "history": [
@@ -70781,16 +73738,275 @@
     ]
    },
    "parent": "곡:곡명",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 4.818637,
+   "this_run_search_seconds": 4.818637,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 16.734406,
+   "verify_seconds": 64.09,
+   "proof_nodes": 2298561,
+   "proof_sha256": "00a79b5a7982505dbaaccdd1f8c2bc5b4cd37752288b6c1124941579106824da",
+   "mover_result": "L",
+   "verdict": "win",
+   "replies": [
+    {
+     "words": [
+      "약손가락"
+     ],
+     "answer": [
+      "낙엽"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "낙승"
+      ],
+      [
+       "낙농업"
+      ],
+      [
+       "낙관적",
+       "낙천적"
+      ],
+      [
+       "낙향"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "약식",
+      "약육강식",
+      "약혼식"
+     ],
+     "answer": [
+      "식충"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "식권"
+      ],
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "약력"
+     ],
+     "answer": [
+      "역습"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "역세권"
+      ],
+      [
+       "역할극"
+      ],
+      [
+       "역기능"
+      ],
+      [
+       "역병"
+      ],
+      [
+       "역순"
+      ],
+      [
+       "역전승"
+      ],
+      [
+       "역사적",
+       "역설적",
+       "역적",
+       "역동적"
+      ],
+      [
+       "역풍"
+      ],
+      [
+       "역학",
+       "역사학"
+      ],
+      [
+       "역할"
+      ],
+      [
+       "역행"
+      ],
+      [
+       "역방향"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "약진"
+     ],
+     "answer": [
+      "진갈색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "진갑"
+      ],
+      [
+       "진격"
+      ],
+      [
+       "진퇴유곡",
+       "진혼곡"
+      ],
+      [
+       "진군"
+      ],
+      [
+       "진출권"
+      ],
+      [
+       "진급"
+      ],
+      [
+       "진맥"
+      ],
+      [
+       "진압"
+      ],
+      [
+       "진언"
+      ],
+      [
+       "진력"
+      ],
+      [
+       "진학률"
+      ],
+      [
+       "진취적",
+       "진보적"
+      ],
+      [
+       "진즉"
+      ],
+      [
+       "진폐증"
+      ],
+      [
+       "진수성찬"
+      ],
+      [
+       "진흙탕",
+       "진탕"
+      ],
+      [
+       "진퇴"
+      ],
+      [
+       "진폭"
+      ],
+      [
+       "진도표"
+      ],
+      [
+       "진학"
+      ],
+      [
+       "진행"
+      ],
+      [
+       "진분홍",
+       "진홍"
+      ],
+      [
+       "진두지휘"
+      ],
+      [
+       "진흥"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "약학"
+     ],
+     "answer": [
+      "학업"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "학교"
+      ],
+      [
+       "학군"
+      ],
+      [
+       "학급"
+      ],
+      [
+       "학맥"
+      ],
+      [
+       "학습"
+      ],
+      [
+       "학식"
+      ],
+      [
+       "학력"
+      ],
+      [
+       "학구적",
+       "학문적",
+       "학술적",
+       "학자적",
+       "학적"
+      ],
+      [
+       "학생증"
+      ],
+      [
+       "학칙"
+      ],
+      [
+       "학풍"
+      ],
+      [
+       "학교생활"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_405",
@@ -70798,7 +74014,7 @@
    "group_words": [
     "명언"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "곡",
     "history": [
@@ -70807,16 +74023,332 @@
     ]
    },
    "parent": "곡:곡명",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 4.499787,
+   "this_run_search_seconds": 4.499787,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 16.232074,
+   "verify_seconds": 66.03,
+   "proof_nodes": 2309198,
+   "proof_sha256": "eba983262da1277fa2fa93b22d75b6d2a5da82fba8aa272d15244abd1a6dea3e",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 338,
+    "words": [
+     "언약"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "언어권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언급"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언변"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언어능력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언어적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언어학"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언어수행",
+      "언행"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "언어생활"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "약손가락"
+     ],
+     "answer": [
+      "낙엽"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "낙승"
+      ],
+      [
+       "낙농업"
+      ],
+      [
+       "낙관적",
+       "낙천적"
+      ],
+      [
+       "낙향"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "약식",
+      "약육강식",
+      "약혼식"
+     ],
+     "answer": [
+      "식순"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "식권"
+      ],
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식충"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "약력"
+     ],
+     "answer": [
+      "역습"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "역세권"
+      ],
+      [
+       "역할극"
+      ],
+      [
+       "역기능"
+      ],
+      [
+       "역병"
+      ],
+      [
+       "역순"
+      ],
+      [
+       "역전승"
+      ],
+      [
+       "역사적",
+       "역설적",
+       "역적",
+       "역동적"
+      ],
+      [
+       "역풍"
+      ],
+      [
+       "역학",
+       "역사학"
+      ],
+      [
+       "역할"
+      ],
+      [
+       "역행"
+      ],
+      [
+       "역방향"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "약진"
+     ],
+     "answer": [
+      "진갈색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "진갑"
+      ],
+      [
+       "진격"
+      ],
+      [
+       "진퇴유곡",
+       "진혼곡"
+      ],
+      [
+       "진군"
+      ],
+      [
+       "진출권"
+      ],
+      [
+       "진급"
+      ],
+      [
+       "진맥"
+      ],
+      [
+       "진압"
+      ],
+      [
+       "진언"
+      ],
+      [
+       "진력"
+      ],
+      [
+       "진학률"
+      ],
+      [
+       "진취적",
+       "진보적"
+      ],
+      [
+       "진즉"
+      ],
+      [
+       "진폐증"
+      ],
+      [
+       "진수성찬"
+      ],
+      [
+       "진흙탕",
+       "진탕"
+      ],
+      [
+       "진퇴"
+      ],
+      [
+       "진폭"
+      ],
+      [
+       "진도표"
+      ],
+      [
+       "진학"
+      ],
+      [
+       "진행"
+      ],
+      [
+       "진분홍",
+       "진홍"
+      ],
+      [
+       "진두지휘"
+      ],
+      [
+       "진흥"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "약학"
+     ],
+     "answer": [
+      "학업"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "학교"
+      ],
+      [
+       "학군"
+      ],
+      [
+       "학급"
+      ],
+      [
+       "학맥"
+      ],
+      [
+       "학습"
+      ],
+      [
+       "학식"
+      ],
+      [
+       "학력"
+      ],
+      [
+       "학구적",
+       "학문적",
+       "학술적",
+       "학자적",
+       "학적"
+      ],
+      [
+       "학생증"
+      ],
+      [
+       "학칙"
+      ],
+      [
+       "학풍"
+      ],
+      [
+       "학교생활"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_406",
@@ -70825,7 +74357,7 @@
     "명예퇴직",
     "명예직"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "곡",
     "history": [
@@ -70834,16 +74366,166 @@
     ]
    },
    "parent": "곡:곡명",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.141478,
+   "this_run_search_seconds": 0.141478,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.648741,
+   "verify_seconds": 2.75,
+   "proof_nodes": 107833,
+   "proof_sha256": "26e9210eb58f10f0230daf0a7076d58826091809d68202bbd579b81440c4fd5e",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 457,
+    "words": [
+     "직업"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "직권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직급"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직능"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직명"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직설법",
+      "직접화법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직업병"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직업의식"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직언"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직관력",
+      "직역"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직간접적",
+      "직감적",
+      "직관적",
+      "직선적",
+      "직설적",
+      "직업적",
+      "직접적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직진"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직격탄"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직할"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "직행"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "업적"
+     ],
+     "answer": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적자생존"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_407",
@@ -70851,7 +74533,7 @@
    "group_words": [
     "명운"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "곡",
     "history": [
@@ -70860,16 +74542,130 @@
     ]
    },
    "parent": "곡:곡명",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.141322,
+   "this_run_search_seconds": 0.141322,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.548367,
+   "verify_seconds": 2.18,
+   "proof_nodes": 92808,
+   "proof_sha256": "b4daf49751171ca3a97b266eb6f8d36607f8378b3661749348fa2270e468b240",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 380,
+    "words": [
+     "운송업",
+     "운수업"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "운동권",
+      "운영권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "운명"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "운전병"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "운운"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "운율"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "운명적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "운전면허증"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "운항"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "운행"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "업적"
+     ],
+     "answer": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적자생존"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_408",
@@ -70878,7 +74674,7 @@
     "명절",
     "명사절"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "곡",
     "history": [
@@ -70887,16 +74683,187 @@
     ]
    },
    "parent": "곡:곡명",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.450302,
+   "this_run_search_seconds": 0.450302,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 1.640172,
+   "verify_seconds": 8.05,
+   "proof_nodes": 273722,
+   "proof_sha256": "9aff9eefb4eed813456edec6a12825758dfd1b46e4109f5f32137438c81dac5e",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 408,
+    "words": [
+     "절룩절룩"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "절교"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "절규"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "절명"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "절벽"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "절식"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "절약"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "절대적",
+      "절망적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "절절"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "절도죄"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "절찬"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "절충"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "절편"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "눅진눅진"
+     ],
+     "answer": [
+      "진갈색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "진갑"
+      ],
+      [
+       "진격"
+      ],
+      [
+       "진퇴유곡",
+       "진혼곡"
+      ],
+      [
+       "진군"
+      ],
+      [
+       "진출권"
+      ],
+      [
+       "진급"
+      ],
+      [
+       "진맥"
+      ],
+      [
+       "진압"
+      ],
+      [
+       "진언"
+      ],
+      [
+       "진력"
+      ],
+      [
+       "진학률"
+      ],
+      [
+       "진취적",
+       "진보적"
+      ],
+      [
+       "진즉"
+      ],
+      [
+       "진폐증"
+      ],
+      [
+       "진수성찬"
+      ],
+      [
+       "진흙탕",
+       "진탕"
+      ],
+      [
+       "진퇴"
+      ],
+      [
+       "진폭"
+      ],
+      [
+       "진도표"
+      ],
+      [
+       "진학"
+      ],
+      [
+       "진행"
+      ],
+      [
+       "진분홍",
+       "진홍"
+      ],
+      [
+       "진두지휘"
+      ],
+      [
+       "진흥"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_409",
@@ -70904,7 +74871,7 @@
    "group_words": [
     "명증"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "곡",
     "history": [
@@ -70913,16 +74880,450 @@
     ]
    },
    "parent": "곡:곡명",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 4.134425,
+   "this_run_search_seconds": 4.134425,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 14.01665,
+   "verify_seconds": 56.41,
+   "proof_nodes": 1966516,
+   "proof_sha256": "dbf94c6a28606ab685143f4da073638115853fe96c44ce8d3428af839f0e4f47",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 448,
+    "words": [
+     "증표"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "증후군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "증권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "증명"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "증식"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "증언"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "증가율"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "증진",
+      "증명사진"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "증축"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "증편"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "증폭"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "표명"
+     ],
+     "answer": [
+      "명란젓"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "명곡"
+      ],
+      [
+       "명랑"
+      ],
+      [
+       "명맥"
+      ],
+      [
+       "명멸"
+      ],
+      [
+       "명상법"
+      ],
+      [
+       "명색"
+      ],
+      [
+       "명승"
+      ],
+      [
+       "명약"
+      ],
+      [
+       "명언"
+      ],
+      [
+       "명운"
+      ],
+      [
+       "명상적",
+       "명승고적",
+       "명시적"
+      ],
+      [
+       "명절",
+       "명사절"
+      ],
+      [
+       "명예퇴직",
+       "명예직"
+      ],
+      [
+       "명칭"
+      ],
+      [
+       "명퇴"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "표주박"
+     ],
+     "answer": [
+      "박색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "박멸"
+      ],
+      [
+       "박명"
+      ],
+      [
+       "박박"
+      ],
+      [
+       "박학다식"
+      ],
+      [
+       "박약"
+      ],
+      [
+       "박력"
+      ],
+      [
+       "박하사탕"
+      ],
+      [
+       "박학"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "표기법",
+      "표현법"
+     ],
+     "answer": [
+      "법칙"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "법규"
+      ],
+      [
+       "법명"
+      ],
+      [
+       "법률"
+      ],
+      [
+       "법적",
+       "법률적"
+      ],
+      [
+       "법학"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "표식"
+     ],
+     "answer": [
+      "식단표"
+     ],
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "식권"
+      ],
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식충"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "표현력"
+     ],
+     "answer": [
+      "역방향"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "역세권"
+      ],
+      [
+       "역할극"
+      ],
+      [
+       "역기능"
+      ],
+      [
+       "역병"
+      ],
+      [
+       "역순"
+      ],
+      [
+       "역습"
+      ],
+      [
+       "역전승"
+      ],
+      [
+       "역사적",
+       "역설적",
+       "역적",
+       "역동적"
+      ],
+      [
+       "역풍"
+      ],
+      [
+       "역학",
+       "역사학"
+      ],
+      [
+       "역할"
+      ],
+      [
+       "역행"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "표면적",
+      "표적"
+     ],
+     "answer": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적자생존"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "표절"
+     ],
+     "answer": [
+      "절룩절룩"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "절교"
+      ],
+      [
+       "절규"
+      ],
+      [
+       "절명"
+      ],
+      [
+       "절벽"
+      ],
+      [
+       "절식"
+      ],
+      [
+       "절약"
+      ],
+      [
+       "절대적",
+       "절망적"
+      ],
+      [
+       "절절"
+      ],
+      [
+       "절도죄"
+      ],
+      [
+       "절찬"
+      ],
+      [
+       "절충"
+      ],
+      [
+       "절편"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "표준"
+     ],
+     "answer": [
+      "준칙"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "준법"
+      ],
+      [
+       "준결승",
+       "준우승",
+       "준준결승"
+      ],
+      [
+       "준공식"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "표징"
+     ],
+     "answer": [
+      "징표"
+     ],
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "징세권"
+      ],
+      [
+       "징검돌"
+      ],
+      [
+       "징병"
+      ],
+      [
+       "징역"
+      ],
+      [
+       "징벌적"
+      ],
+      [
+       "징징"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_410",
@@ -71566,9 +75967,9 @@
    "parent": "충:충격",
    "untried": false,
    "allotted_seconds": 120.0,
-   "search_seconds": 120.000182,
-   "this_run_search_seconds": 120.000182,
-   "earlier_runs": 0,
+   "search_seconds": 240.001709,
+   "this_run_search_seconds": 120.001709,
+   "earlier_runs": 1,
    "proof_seconds": 0.0,
    "verify_seconds": null,
    "proof_nodes": 0,
@@ -72019,14 +76420,14 @@
     ]
    },
    "parent": "충:충격",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 120.000276,
+   "this_run_search_seconds": 120.000276,
    "earlier_runs": 0,
-   "proof_seconds": null,
+   "proof_seconds": 0.0,
    "verify_seconds": null,
-   "proof_nodes": null,
+   "proof_nodes": 0,
    "proof_sha256": null,
    "verdict": "unknown"
   },
@@ -72045,14 +76446,14 @@
     ]
    },
    "parent": "충:충격",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 120.001087,
+   "this_run_search_seconds": 120.001087,
    "earlier_runs": 0,
-   "proof_seconds": null,
+   "proof_seconds": 0.0,
    "verify_seconds": null,
-   "proof_nodes": null,
+   "proof_nodes": 0,
    "proof_sha256": null,
    "verdict": "unknown"
   },
@@ -72062,7 +76463,7 @@
    "group_words": [
     "적격"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "충",
     "history": [
@@ -72071,16 +76472,547 @@
     ]
    },
    "parent": "충:충격적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 11.59473,
+   "this_run_search_seconds": 11.59473,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 40.77067,
+   "verify_seconds": 183.43,
+   "proof_nodes": 5777470,
+   "proof_sha256": "babcf0c7949004d6400c15e79817ef34a80ddfce7145204a254b04b158041ca6",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 15,
+    "words": [
+     "격증"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "격랑"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "격돌"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "격멸"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "격변"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "격식"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "격언"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "격정적",
+      "격식적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "격찬"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "격퇴"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "증후군"
+     ],
+     "answer": [
+      "군청색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "군락"
+      ],
+      [
+       "군사동맹"
+      ],
+      [
+       "군법"
+      ],
+      [
+       "군대식"
+      ],
+      [
+       "군사력"
+      ],
+      [
+       "군왕"
+      ],
+      [
+       "군율"
+      ],
+      [
+       "군사적"
+      ],
+      [
+       "군사학",
+       "군계일학"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "증권"
+     ],
+     "answer": [
+      "권능"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "권역",
+       "권력"
+      ],
+      [
+       "권위적",
+       "권위주의적"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "증명"
+     ],
+     "answer": [
+      "명증"
+     ],
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "명곡"
+      ],
+      [
+       "명랑"
+      ],
+      [
+       "명맥"
+      ],
+      [
+       "명멸"
+      ],
+      [
+       "명상법"
+      ],
+      [
+       "명색"
+      ],
+      [
+       "명승"
+      ],
+      [
+       "명약"
+      ],
+      [
+       "명언"
+      ],
+      [
+       "명운"
+      ],
+      [
+       "명상적",
+       "명승고적",
+       "명시적"
+      ],
+      [
+       "명절",
+       "명사절"
+      ],
+      [
+       "명란젓"
+      ],
+      [
+       "명예퇴직",
+       "명예직"
+      ],
+      [
+       "명칭"
+      ],
+      [
+       "명퇴"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "증식"
+     ],
+     "answer": [
+      "식곤증"
+     ],
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "식권"
+      ],
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식충"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "증언"
+     ],
+     "answer": [
+      "언약"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "언어권"
+      ],
+      [
+       "언급"
+      ],
+      [
+       "언변"
+      ],
+      [
+       "언어능력"
+      ],
+      [
+       "언어적"
+      ],
+      [
+       "언어학"
+      ],
+      [
+       "언어수행",
+       "언행"
+      ],
+      [
+       "언어생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "증가율"
+     ],
+     "answer": [
+      "율격"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "율법"
+      ],
+      [
+       "율동적"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "증진",
+      "증명사진"
+     ],
+     "answer": [
+      "진갈색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "진갑"
+      ],
+      [
+       "진격"
+      ],
+      [
+       "진퇴유곡",
+       "진혼곡"
+      ],
+      [
+       "진군"
+      ],
+      [
+       "진출권"
+      ],
+      [
+       "진급"
+      ],
+      [
+       "진맥"
+      ],
+      [
+       "진압"
+      ],
+      [
+       "진언"
+      ],
+      [
+       "진력"
+      ],
+      [
+       "진학률"
+      ],
+      [
+       "진취적",
+       "진보적"
+      ],
+      [
+       "진즉"
+      ],
+      [
+       "진폐증"
+      ],
+      [
+       "진수성찬"
+      ],
+      [
+       "진흙탕",
+       "진탕"
+      ],
+      [
+       "진퇴"
+      ],
+      [
+       "진폭"
+      ],
+      [
+       "진도표"
+      ],
+      [
+       "진학"
+      ],
+      [
+       "진행"
+      ],
+      [
+       "진분홍",
+       "진홍"
+      ],
+      [
+       "진두지휘"
+      ],
+      [
+       "진흥"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "증축"
+     ],
+     "answer": [
+      "축농증"
+     ],
+     "how": "pair/loop answer",
+     "answer_alternatives": [
+      [
+       "축하객"
+      ],
+      [
+       "축지법"
+      ],
+      [
+       "축산업"
+      ],
+      [
+       "축적"
+      ],
+      [
+       "축축"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "증편"
+     ],
+     "answer": [
+      "편곡"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "편법"
+      ],
+      [
+       "편승"
+      ],
+      [
+       "편식"
+      ],
+      [
+       "편력"
+      ],
+      [
+       "편싸움"
+      ],
+      [
+       "편파적",
+       "편향적"
+      ],
+      [
+       "편찬"
+      ],
+      [
+       "편동풍",
+       "편서풍"
+      ],
+      [
+       "편향"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "증폭"
+     ],
+     "answer": [
+      "폭삭"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "폭격"
+      ],
+      [
+       "폭군"
+      ],
+      [
+       "폭락"
+      ],
+      [
+       "폭식"
+      ],
+      [
+       "폭압"
+      ],
+      [
+       "폭약"
+      ],
+      [
+       "폭언",
+       "폭탄선언"
+      ],
+      [
+       "폭력",
+       "폭발력"
+      ],
+      [
+       "폭력적",
+       "폭발적"
+      ],
+      [
+       "폭행죄"
+      ],
+      [
+       "폭죽"
+      ],
+      [
+       "폭탄"
+      ],
+      [
+       "폭폭"
+      ],
+      [
+       "폭풍"
+      ],
+      [
+       "폭행"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "증표"
+     ],
+     "answer": [
+      "표현력"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "표명"
+      ],
+      [
+       "표주박"
+      ],
+      [
+       "표기법",
+       "표현법"
+      ],
+      [
+       "표식"
+      ],
+      [
+       "표면적",
+       "표적"
+      ],
+      [
+       "표절"
+      ],
+      [
+       "표준"
+      ],
+      [
+       "표징"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_444",
@@ -72088,7 +77020,7 @@
    "group_words": [
     "적군"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "충",
     "history": [
@@ -72097,16 +77029,134 @@
     ]
    },
    "parent": "충:충격적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.400563,
+   "this_run_search_seconds": 0.400563,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 1.338297,
+   "verify_seconds": 5.28,
+   "proof_nodes": 198229,
+   "proof_sha256": "69a70dd2eafe8bdffad1ae2f8cb1f72f131ab80aea87ed5717122473255d913d",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 52,
+    "words": [
+     "군청색"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "군락"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군사동맹"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군대식"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군사력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군왕"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군율"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군사적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군사학",
+      "군계일학"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "색맹"
+     ],
+     "answer": [
+      "맹활약"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "맹공격",
+       "맹추격"
+      ],
+      [
+       "맹목적"
+      ],
+      [
+       "맹탕"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색색"
+     ],
+     "answer": [
+      "색칠"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색맹"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색칠"
+     ],
+     "answer": [
+      "칠십"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칠순"
+      ],
+      [
+       "칠흑"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_445",
@@ -72114,7 +77164,7 @@
    "group_words": [
     "적극"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "충",
     "history": [
@@ -72123,16 +77173,91 @@
     ]
    },
    "parent": "충:충격적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.642809,
+   "this_run_search_seconds": 0.642809,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 2.518223,
+   "verify_seconds": 10.07,
+   "proof_nodes": 389269,
+   "proof_sha256": "b922681875833b11a7986c7f31adb2149aebd9e0193fa0fa122effb38f93a523",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 83,
+    "words": [
+     "극존칭"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "극락"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "극약"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "극언"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "극력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "극적",
+      "극단적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "극찬"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "칭찬"
+     ],
+     "answer": [
+      "찬성표"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "찬탄"
+      ],
+      [
+       "찬합"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "칭칭"
+     ],
+     "answer": [
+      "칭찬"
+     ],
+     "how": "certificate",
+     "answer_alternatives": []
+    }
+   ]
   },
   {
    "name": "g1_446",
@@ -72141,7 +77266,7 @@
     "적극적",
     "적대적"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "충",
     "history": [
@@ -72150,16 +77275,109 @@
     ]
    },
    "parent": "충:충격적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 20.138892,
+   "this_run_search_seconds": 20.138892,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.734413,
+   "verify_seconds": 2.13,
+   "proof_nodes": 78583,
+   "proof_sha256": "b412012ec3621941e24e2e2c5bfa9aba8d24d347eae9bf7dd4bd17d5be12a629",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 403,
+    "words": [
+     "적자생존"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "적격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적극"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적삼"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적응력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적중률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적대적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적진"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적합"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "존칭"
+     ],
+     "answer": [
+      "칭칭"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칭찬"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_447",
@@ -72167,7 +77385,7 @@
    "group_words": [
     "적법"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "충",
     "history": [
@@ -72176,16 +77394,117 @@
     ]
    },
    "parent": "충:충격적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 93.028,
+   "search_seconds": 6.135207,
+   "this_run_search_seconds": 6.135207,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.106788,
+   "verify_seconds": 0.34,
+   "proof_nodes": 15149,
+   "proof_sha256": "fbda3848f145dde0215ea01982ab8822025e6a213ee1b24f15cdf63a2a835b66",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 206,
+    "words": [
+     "법칙"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "법규"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법명"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법적",
+      "법률적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법학"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "칙칙폭폭"
+     ],
+     "answer": [
+      "폭삭"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "폭격"
+      ],
+      [
+       "폭군"
+      ],
+      [
+       "폭락"
+      ],
+      [
+       "폭식"
+      ],
+      [
+       "폭압"
+      ],
+      [
+       "폭약"
+      ],
+      [
+       "폭언",
+       "폭탄선언"
+      ],
+      [
+       "폭력",
+       "폭발력"
+      ],
+      [
+       "폭력적",
+       "폭발적"
+      ],
+      [
+       "폭행죄"
+      ],
+      [
+       "폭죽"
+      ],
+      [
+       "폭탄"
+      ],
+      [
+       "폭폭"
+      ],
+      [
+       "폭풍"
+      ],
+      [
+       "폭행"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_448",
@@ -73245,10 +78564,10 @@
    },
    "parent": "약:약력",
    "untried": false,
-   "allotted_seconds": 120.0,
-   "search_seconds": 120.0004,
-   "this_run_search_seconds": 120.0004,
-   "earlier_runs": 0,
+   "allotted_seconds": 45.533,
+   "search_seconds": 165.53347,
+   "this_run_search_seconds": 45.53347,
+   "earlier_runs": 1,
    "proof_seconds": 0.0,
    "verify_seconds": null,
    "proof_nodes": 0,
@@ -74083,14 +79402,14 @@
     ]
    },
    "parent": "약:약력",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 120.000651,
+   "this_run_search_seconds": 120.000651,
    "earlier_runs": 0,
-   "proof_seconds": null,
+   "proof_seconds": 0.0,
    "verify_seconds": null,
-   "proof_nodes": null,
+   "proof_nodes": 0,
    "proof_sha256": null,
    "verdict": "unknown"
   },
@@ -74101,7 +79420,7 @@
     "역학",
     "역사학"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "약",
     "history": [
@@ -74110,16 +79429,150 @@
     ]
    },
    "parent": "약:약력",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.107344,
+   "this_run_search_seconds": 0.107344,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.502976,
+   "verify_seconds": 1.61,
+   "proof_nodes": 65815,
+   "proof_sha256": "64dae5b6f42390241a00310e8350de8ec2c4c399876cd5a57e7e034542f0e116",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 618,
+    "words": [
+     "학업"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "학교"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학급"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학맥"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학습"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학식"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학구적",
+      "학문적",
+      "학술적",
+      "학자적",
+      "학적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학생증"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학칙"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학풍"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "학교생활"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "업적"
+     ],
+     "answer": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적자생존"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_497",
@@ -74136,14 +79589,14 @@
     ]
    },
    "parent": "약:약력",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 120.001237,
+   "this_run_search_seconds": 120.001237,
    "earlier_runs": 0,
-   "proof_seconds": null,
+   "proof_seconds": 0.0,
    "verify_seconds": null,
-   "proof_nodes": null,
+   "proof_nodes": 0,
    "proof_sha256": null,
    "verdict": "unknown"
   },
@@ -74162,14 +79615,14 @@
     ]
    },
    "parent": "약:약력",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 120.001169,
+   "this_run_search_seconds": 120.001169,
    "earlier_runs": 0,
-   "proof_seconds": null,
+   "proof_seconds": 0.0,
    "verify_seconds": null,
-   "proof_nodes": null,
+   "proof_nodes": 0,
    "proof_sha256": null,
    "verdict": "unknown"
   },
@@ -74179,7 +79632,7 @@
    "group_words": [
     "역행"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "약",
     "history": [
@@ -74188,16 +79641,146 @@
     ]
    },
    "parent": "약:약력",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 32.982168,
+   "this_run_search_seconds": 32.982168,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.849304,
+   "verify_seconds": 4.32,
+   "proof_nodes": 156857,
+   "proof_sha256": "07f1879bbbb124fe92cd8b6ee1cb1039446074407d65ce045e9143f9d9a9f444",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 653,
+    "words": [
+     "행색"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "행락객"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "행진곡"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "행군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "행정권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "행락"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "행랑"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "행방불명"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "행정구역"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "행운"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "행적",
+      "행정적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "행진"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "색맹"
+     ],
+     "answer": [
+      "맹활약"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "맹공격",
+       "맹추격"
+      ],
+      [
+       "맹목적"
+      ],
+      [
+       "맹탕"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색색"
+     ],
+     "answer": [
+      "색칠"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색맹"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색칠"
+     ],
+     "answer": [
+      "칠십"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칠순"
+      ],
+      [
+       "칠흑"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_500",
@@ -74206,7 +79789,7 @@
     "낙관적",
     "낙천적"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "약",
     "history": [
@@ -74215,16 +79798,148 @@
     ]
    },
    "parent": "약:약손가락",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 116.432,
+   "search_seconds": 0.4368,
+   "this_run_search_seconds": 0.4368,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 1.167537,
+   "verify_seconds": 5.5,
+   "proof_nodes": 186362,
+   "proof_sha256": "3175786c1bcd7432bbc26f132f3eddc9a0865bd551e8d36e12da631441ab70d2",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 399,
+    "words": [
+     "적갈색",
+     "적색",
+     "적회색"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "적격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적극"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적삼"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적응력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적중률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적극적",
+      "적대적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적자생존"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적진"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적합"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "색맹"
+     ],
+     "answer": [
+      "맹활약"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "맹공격",
+       "맹추격"
+      ],
+      [
+       "맹목적"
+      ],
+      [
+       "맹탕"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색색"
+     ],
+     "answer": [
+      "색칠"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색맹"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색칠"
+     ],
+     "answer": [
+      "칠십"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칠순"
+      ],
+      [
+       "칠흑"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_501",
@@ -74232,7 +79947,7 @@
    "group_words": [
     "낙승"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "약",
     "history": [
@@ -74241,16 +79956,151 @@
     ]
    },
    "parent": "약:약손가락",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 86.893,
+   "search_seconds": 4.257228,
+   "this_run_search_seconds": 4.257228,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 13.513662,
+   "verify_seconds": 92.52,
+   "proof_nodes": 1923230,
+   "proof_sha256": "4bde8ec30224f95f661057a6afc0d00cbb08cb78e6245eab2a530a6e08c17192",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 287,
+    "words": [
+     "승객"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "승격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승차권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승급"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승낙"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "승진"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "객관식"
+     ],
+     "answer": [
+      "식충"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "식권"
+      ],
+      [
+       "식도락"
+      ],
+      [
+       "식이요법"
+      ],
+      [
+       "식순"
+      ],
+      [
+       "식곤증"
+      ],
+      [
+       "식욕부진"
+      ],
+      [
+       "식탁"
+      ],
+      [
+       "식단표"
+      ],
+      [
+       "식물학"
+      ],
+      [
+       "식생활"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "객관적"
+     ],
+     "answer": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "적격"
+      ],
+      [
+       "적군"
+      ],
+      [
+       "적극"
+      ],
+      [
+       "적법"
+      ],
+      [
+       "적삼"
+      ],
+      [
+       "적응력"
+      ],
+      [
+       "적중률"
+      ],
+      [
+       "적극적",
+       "적대적"
+      ],
+      [
+       "적자생존"
+      ],
+      [
+       "적진"
+      ],
+      [
+       "적합"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_502",
@@ -77097,7 +82947,7 @@
    "group_words": [
     "적군"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "표",
     "history": [
@@ -77106,16 +82956,134 @@
     ]
    },
    "parent": "표:표면적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.33329,
+   "this_run_search_seconds": 0.33329,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 1.386617,
+   "verify_seconds": 5.55,
+   "proof_nodes": 198229,
+   "proof_sha256": "69a70dd2eafe8bdffad1ae2f8cb1f72f131ab80aea87ed5717122473255d913d",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 52,
+    "words": [
+     "군청색"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "군락"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군사동맹"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군대식"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군사력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군왕"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군율"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군사적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "군사학",
+      "군계일학"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "색맹"
+     ],
+     "answer": [
+      "맹활약"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "맹공격",
+       "맹추격"
+      ],
+      [
+       "맹목적"
+      ],
+      [
+       "맹탕"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색색"
+     ],
+     "answer": [
+      "색칠"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색맹"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "색칠"
+     ],
+     "answer": [
+      "칠십"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칠순"
+      ],
+      [
+       "칠흑"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_557",
@@ -77123,7 +83091,7 @@
    "group_words": [
     "적극"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "표",
     "history": [
@@ -77132,16 +83100,91 @@
     ]
    },
    "parent": "표:표면적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.704107,
+   "this_run_search_seconds": 0.704107,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 2.803707,
+   "verify_seconds": 44.87,
+   "proof_nodes": 389269,
+   "proof_sha256": "b922681875833b11a7986c7f31adb2149aebd9e0193fa0fa122effb38f93a523",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 83,
+    "words": [
+     "극존칭"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "극락"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "극약"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "극언"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "극력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "극적",
+      "극단적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "극찬"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "칭찬"
+     ],
+     "answer": [
+      "찬성표"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "찬탄"
+      ],
+      [
+       "찬합"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "칭칭"
+     ],
+     "answer": [
+      "칭찬"
+     ],
+     "how": "certificate",
+     "answer_alternatives": []
+    }
+   ]
   },
   {
    "name": "g1_558",
@@ -77150,7 +83193,7 @@
     "적극적",
     "적대적"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "표",
     "history": [
@@ -77159,16 +83202,109 @@
     ]
    },
    "parent": "표:표면적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 19.492281,
+   "this_run_search_seconds": 19.492281,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.518591,
+   "verify_seconds": 1.81,
+   "proof_nodes": 81900,
+   "proof_sha256": "299976d4d6683819c6133b4baa27cbf9dd3cd7a9b8ab2797590050642ddcd407",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 403,
+    "words": [
+     "적자생존"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "적격"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적군"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적극"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적법"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적삼"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적갈색",
+      "적색",
+      "적회색"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적응력"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적중률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적대적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적진"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "적합"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "존칭"
+     ],
+     "answer": [
+      "칭칭"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "칭찬"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_559",
@@ -77176,7 +83312,7 @@
    "group_words": [
     "적법"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "표",
     "history": [
@@ -77185,16 +83321,117 @@
     ]
    },
    "parent": "표:표면적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 6.800133,
+   "this_run_search_seconds": 6.800133,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 0.103828,
+   "verify_seconds": 0.42,
+   "proof_nodes": 16635,
+   "proof_sha256": "b3dd2c9412120431bf9bf7024911eee5929b74a5571953642dd4cc5a45834fb8",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 206,
+    "words": [
+     "법칙"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "법규"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법명"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법률"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법적",
+      "법률적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "법학"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "칙칙폭폭"
+     ],
+     "answer": [
+      "폭삭"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "폭격"
+      ],
+      [
+       "폭군"
+      ],
+      [
+       "폭락"
+      ],
+      [
+       "폭식"
+      ],
+      [
+       "폭압"
+      ],
+      [
+       "폭약"
+      ],
+      [
+       "폭언",
+       "폭탄선언"
+      ],
+      [
+       "폭력",
+       "폭발력"
+      ],
+      [
+       "폭력적",
+       "폭발적"
+      ],
+      [
+       "폭행죄"
+      ],
+      [
+       "폭죽"
+      ],
+      [
+       "폭탄"
+      ],
+      [
+       "폭폭"
+      ],
+      [
+       "폭풍"
+      ],
+      [
+       "폭행"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_560",
@@ -77202,7 +83439,7 @@
    "group_words": [
     "적삼"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "표",
     "history": [
@@ -77211,16 +83448,177 @@
     ]
    },
    "parent": "표:표면적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 120.0,
+   "search_seconds": 0.239233,
+   "this_run_search_seconds": 0.239233,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 1.092837,
+   "verify_seconds": 4.04,
+   "proof_nodes": 144915,
+   "proof_sha256": "21cd461c3d135928e45ece31f0e0a6d58dc3bb8bd35694436ef9996424ee939c",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 248,
+    "words": [
+     "삼십"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "삼색",
+      "삼원색"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼판양승"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼한사온"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼일절"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼진"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼인칭"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "삼계탕"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "십계명"
+     ],
+     "answer": [
+      "명색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "명곡"
+      ],
+      [
+       "명랑"
+      ],
+      [
+       "명맥"
+      ],
+      [
+       "명멸"
+      ],
+      [
+       "명상법"
+      ],
+      [
+       "명승"
+      ],
+      [
+       "명약"
+      ],
+      [
+       "명언"
+      ],
+      [
+       "명운"
+      ],
+      [
+       "명상적",
+       "명승고적",
+       "명시적"
+      ],
+      [
+       "명절",
+       "명사절"
+      ],
+      [
+       "명란젓"
+      ],
+      [
+       "명증"
+      ],
+      [
+       "명예퇴직",
+       "명예직"
+      ],
+      [
+       "명칭"
+      ],
+      [
+       "명퇴"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "십진법"
+     ],
+     "answer": [
+      "법칙"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "법규"
+      ],
+      [
+       "법명"
+      ],
+      [
+       "법률"
+      ],
+      [
+       "법적",
+       "법률적"
+      ],
+      [
+       "법학"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "십인십색"
+     ],
+     "answer": [
+      "색색"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "색맹"
+      ],
+      [
+       "색칠"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_561",
@@ -77228,7 +83626,7 @@
    "group_words": [
     "적응력"
    ],
-   "accepted": false,
+   "accepted": true,
    "position": {
     "initial_syllable": "표",
     "history": [
@@ -77237,16 +83635,214 @@
     ]
    },
    "parent": "표:표면적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 115.995,
+   "search_seconds": 2.234397,
+   "this_run_search_seconds": 2.234397,
    "earlier_runs": 0,
-   "proof_seconds": null,
-   "verify_seconds": null,
-   "proof_nodes": null,
-   "proof_sha256": null,
-   "verdict": "unknown"
+   "proof_seconds": 6.521698,
+   "verify_seconds": 25.88,
+   "proof_nodes": 892441,
+   "proof_sha256": "b5b8370646a66351ec9858326c16cc5d756bbbfe749ccf24bf6e6a1d53d4fa8e",
+   "mover_result": "W",
+   "verdict": "lose",
+   "reply": {
+    "group": 355,
+    "words": [
+     "역할"
+    ]
+   },
+   "mover_other": [
+    {
+     "words": [
+      "역세권"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역할극"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역기능"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역병"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역순"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역습"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역전승"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역사적",
+      "역설적",
+      "역적",
+      "역동적"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역풍"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역학",
+      "역사학"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역행"
+     ],
+     "class": "unconfirmed"
+    },
+    {
+     "words": [
+      "역방향"
+     ],
+     "class": "unconfirmed"
+    }
+   ],
+   "after_reply": [
+    {
+     "words": [
+      "할인권"
+     ],
+     "answer": [
+      "권능"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "권역",
+       "권력"
+      ],
+      [
+       "권위적",
+       "권위주의적"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "할렐루야"
+     ],
+     "answer": [
+      "야영객"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "야간학교"
+      ],
+      [
+       "야권"
+      ],
+      [
+       "야식"
+      ],
+      [
+       "야만적",
+       "야성적"
+      ],
+      [
+       "야맹증"
+      ],
+      [
+       "야학"
+      ],
+      [
+       "야합"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "할인율"
+     ],
+     "answer": [
+      "율격"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "율법"
+      ],
+      [
+       "율동적"
+      ]
+     ]
+    },
+    {
+     "words": [
+      "할증"
+     ],
+     "answer": [
+      "증표"
+     ],
+     "how": "certificate",
+     "answer_alternatives": [
+      [
+       "증후군"
+      ],
+      [
+       "증권"
+      ],
+      [
+       "증명"
+      ],
+      [
+       "증식"
+      ],
+      [
+       "증언"
+      ],
+      [
+       "증가율"
+      ],
+      [
+       "증진",
+       "증명사진"
+      ],
+      [
+       "증축"
+      ],
+      [
+       "증편"
+      ],
+      [
+       "증폭"
+      ]
+     ]
+    }
+   ]
   },
   {
    "name": "g1_562",
@@ -77263,14 +83859,14 @@
     ]
    },
    "parent": "표:표면적",
-   "untried": true,
-   "allotted_seconds": null,
-   "search_seconds": null,
-   "this_run_search_seconds": null,
+   "untried": false,
+   "allotted_seconds": 115.866,
+   "search_seconds": 115.866974,
+   "this_run_search_seconds": 115.866974,
    "earlier_runs": 0,
-   "proof_seconds": null,
+   "proof_seconds": 0.0,
    "verify_seconds": null,
-   "proof_nodes": null,
+   "proof_nodes": 0,
    "proof_sha256": null,
    "verdict": "unknown"
   },

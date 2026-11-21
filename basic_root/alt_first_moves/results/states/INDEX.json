@@ -1386,6 +1386,305 @@
    },
    "position_sha256": "3f5bf0a9543f8347031293b65f39d9448ce6334391af9bc1d7031d4906b5ef3b",
    "input_sha256": "750ad7ff0721d83f09eb35907d632136ac1f806a3493141041415b1f282d8411"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "2089b1a3ecb8090f0a31eeb18c0d173deb13216fd2e7ab55d5463c808c524eb6.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/2089b1a3ecb8090f0a31eeb18c0d173deb13216fd2e7ab55d5463c808c524eb6.tt.gz",
+   "gz_sha256": "2089b1a3ecb8090f0a31eeb18c0d173deb13216fd2e7ab55d5463c808c524eb6",
+   "gz_bytes": 47048598,
+   "state_sha256": "a02fd07d1d4229ccbb6a39e86a724b72b0822a8d156a00ddc2668bbd7f701971",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "general1/g1_100/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:55:19",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "큼",
+    "history": [
+     "큼직큼직",
+     "직할"
+    ]
+   },
+   "position_sha256": "2008e116ef64cd6e383c96ec72c2c3372da8c2db1ae3624dc32bd3ea1a7b9525",
+   "input_sha256": "de17ef23bf22f9bbae25bc095fb339052d7cea2ed348949c60dbddec7e138ccc"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "aadc11b5d048ae11f23ce7820d691440c32174182f6835f4c6b4c1c0980ef0a7.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/aadc11b5d048ae11f23ce7820d691440c32174182f6835f4c6b4c1c0980ef0a7.tt.gz",
+   "gz_sha256": "aadc11b5d048ae11f23ce7820d691440c32174182f6835f4c6b4c1c0980ef0a7",
+   "gz_bytes": 46515807,
+   "state_sha256": "9e40cc84a4eb01ba4439175589a770c83f694c1db26c1fc0a2752228334aa841",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 354.53,
+   "work_path": "general1/g1_256/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:55:26",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "죄",
+    "history": [
+     "죄의식",
+     "식곤증"
+    ]
+   },
+   "position_sha256": "9bb20228a0c4523fa271f55ce62e7056f5e3cd3d5c925ce7e7bbc2cfd50ec385",
+   "input_sha256": "12a329f6f109caf1d47cb8a4e338b115f35ee5fa961ff56dce8fc9a8b907717d"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "e61844fe984adbc9564748ca5f51411c8202d5dcbcdba2e5f3372eed9d36cbe3.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/e61844fe984adbc9564748ca5f51411c8202d5dcbcdba2e5f3372eed9d36cbe3.tt.gz",
+   "gz_sha256": "e61844fe984adbc9564748ca5f51411c8202d5dcbcdba2e5f3372eed9d36cbe3",
+   "gz_bytes": 46280137,
+   "state_sha256": "56d605043308628d04b823e015abe1bdda2b296acfb3bcd8a719bd2b3dac05ce",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 240.0,
+   "work_path": "general1/g1_337/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:55:32",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "활",
+    "history": [
+     "활동력",
+     "역풍"
+    ]
+   },
+   "position_sha256": "2d61f8ad48329a9dd2cda65d8ddbfe8b75c0bc3a6e266233c00adbf54e9bbed2",
+   "input_sha256": "a2036d6cf5f10667ff05b7eab600da0c3beab7090babdd2985d54174fae2279a"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "59f00554f819f729bbd7b2844bb927bd1145c3dbbd223e2eeba1d58962e3c6a1.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/59f00554f819f729bbd7b2844bb927bd1145c3dbbd223e2eeba1d58962e3c6a1.tt.gz",
+   "gz_sha256": "59f00554f819f729bbd7b2844bb927bd1145c3dbbd223e2eeba1d58962e3c6a1",
+   "gz_bytes": 46409420,
+   "state_sha256": "1094ea7df793bce5eed4dac3279caeedc251e74edb16e0aa252b419eb6df052c",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 240.0,
+   "work_path": "general1/g1_434/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:55:39",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "충",
+    "history": [
+     "충격",
+     "격돌"
+    ]
+   },
+   "position_sha256": "1a9dc91494a448e177a3f4f58b7ffe6ff3828c5f02b58dbd35deddb83fdfe2c0",
+   "input_sha256": "b9977da95db4cd22046fc9ab5eaf59b28cc3f4377b2f34409860fdf21e6ed53e"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "459ca208baa9b6d4e3ef7eae3ef05c2f85ab04af594d23116e4a0903e3912aca.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/459ca208baa9b6d4e3ef7eae3ef05c2f85ab04af594d23116e4a0903e3912aca.tt.gz",
+   "gz_sha256": "459ca208baa9b6d4e3ef7eae3ef05c2f85ab04af594d23116e4a0903e3912aca",
+   "gz_bytes": 46102774,
+   "state_sha256": "86c2429cea429232fbeadfca4090f27b5791be8531d0364727685aedf66c6285",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 165.53,
+   "work_path": "general1/g1_488/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:55:46",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "약",
+    "history": [
+     "약력",
+     "역기능"
+    ]
+   },
+   "position_sha256": "2974ea2a703adb89f0fb7008835066c0bd96b98920d31ce3d38db317eddce23c",
+   "input_sha256": "db5192f755208931035f5bdc1ac5c4ae7b0950f00288fb7717084d00a5ea19d2"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "4d7721fd4cf03047ef1502d276036a306b256f71533333746a444f3b01e55f65.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/4d7721fd4cf03047ef1502d276036a306b256f71533333746a444f3b01e55f65.tt.gz",
+   "gz_sha256": "4d7721fd4cf03047ef1502d276036a306b256f71533333746a444f3b01e55f65",
+   "gz_bytes": 45688247,
+   "state_sha256": "8c4a8ecc3515477f5f09f0f190855748c8a7c0d83f374fb6572e564dab30a71e",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 120.0,
+   "work_path": "general1/g1_366/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:55:52",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "능",
+    "history": [
+     "능동적",
+     "적자생존"
+    ]
+   },
+   "position_sha256": "ebfe040cec9ab5cc3a51575cd4192569b452cb4b2f85ee56ef9f129f86b635cb",
+   "input_sha256": "a1260e28642e2b14ccfae82875bbb582604df3cf9c92544e2b28aa243128b83c"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "693e4c4c24b6665385a1e88c29ae5e41b66d87d9430c354ea3f6da12e05b062a.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/693e4c4c24b6665385a1e88c29ae5e41b66d87d9430c354ea3f6da12e05b062a.tt.gz",
+   "gz_sha256": "693e4c4c24b6665385a1e88c29ae5e41b66d87d9430c354ea3f6da12e05b062a",
+   "gz_bytes": 45155242,
+   "state_sha256": "84bc640f7a8cd4191c9b152865a133cf6f331a6d5a669f884e3411ebfe883207",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 81.42,
+   "work_path": "general1/g1_373/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:55:59",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "능",
+    "history": [
+     "능력",
+     "역세권"
+    ]
+   },
+   "position_sha256": "0b37022f8e42829f431386b50ee51c8238dad13a03ae381c259631122b4bdeb2",
+   "input_sha256": "241c27687d2c1b085320fb4ea0fbe9ddfb7aeaf42abbc914c5e2e68463e44b85"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "7fee19b778dfc97780ccf3af9a6aefe09719ffdca83f7f3f65bff5e6e64b190b.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/7fee19b778dfc97780ccf3af9a6aefe09719ffdca83f7f3f65bff5e6e64b190b.tt.gz",
+   "gz_sha256": "7fee19b778dfc97780ccf3af9a6aefe09719ffdca83f7f3f65bff5e6e64b190b",
+   "gz_bytes": 45768200,
+   "state_sha256": "5f32c42ef56e99dea54a7abb9f91670ef9fa34756c31714f0d0f7d439f6cc4bc",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 120.0,
+   "work_path": "general1/g1_441/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:56:05",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "충",
+    "history": [
+     "충격",
+     "격증"
+    ]
+   },
+   "position_sha256": "6d1c62a14ec51d6bb4a28d3be0712a113e76f982131426b5f87b1afbc5a33238",
+   "input_sha256": "cbbe05af1aef1d7ee40019ebe9258349042cc125d9f9d6a3590f6948ed74dd8e"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "d07b2a3d1cf5c81f9763292881f585d9aa2834cb5907152e06228e96a446ccbe.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/d07b2a3d1cf5c81f9763292881f585d9aa2834cb5907152e06228e96a446ccbe.tt.gz",
+   "gz_sha256": "d07b2a3d1cf5c81f9763292881f585d9aa2834cb5907152e06228e96a446ccbe",
+   "gz_bytes": 45822421,
+   "state_sha256": "3213f11b4b2cba612095f91f8136120e9065a806a2a8de3b76b9561a32c986b9",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 120.0,
+   "work_path": "general1/g1_442/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:56:11",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "충",
+    "history": [
+     "충격",
+     "격찬"
+    ]
+   },
+   "position_sha256": "fdbb8df3d266f390cf67987b669ec5ff45c0c30dcb75650e3f63a325c07fc722",
+   "input_sha256": "6df98c91000da7cfd8485af8008d0bafd0e224c5b3c42b5d836ae30fd1ddb339"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "c03571d8af7e01907bafac1e658f6dbda0713eb76df653383086fd5179aa0305.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/c03571d8af7e01907bafac1e658f6dbda0713eb76df653383086fd5179aa0305.tt.gz",
+   "gz_sha256": "c03571d8af7e01907bafac1e658f6dbda0713eb76df653383086fd5179aa0305",
+   "gz_bytes": 45933085,
+   "state_sha256": "243a11f41607c5cf312cb177b7e24d10c40237249fc10725ae76d70157cd4e9f",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 120.0,
+   "work_path": "general1/g1_495/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:56:18",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "약",
+    "history": [
+     "약력",
+     "역풍"
+    ]
+   },
+   "position_sha256": "95d602547f4984f28c885bdf8c5f185a6b9ee8712734c97b30660767fb5f7a41",
+   "input_sha256": "b07f4fddd31fb78539e9ddd58d2394a9a3dee619c65e92ac4d4ec5bc90a47021"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "c35b96cbd3ed041a4e8ac0eee6c172aad86a48b521181d5797b8beb1e202b51b.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/c35b96cbd3ed041a4e8ac0eee6c172aad86a48b521181d5797b8beb1e202b51b.tt.gz",
+   "gz_sha256": "c35b96cbd3ed041a4e8ac0eee6c172aad86a48b521181d5797b8beb1e202b51b",
+   "gz_bytes": 45956768,
+   "state_sha256": "23a5abed25eff250590b83327e572b2b244723baa67aee416ed57ac430ce79f5",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 120.0,
+   "work_path": "general1/g1_497/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:56:26",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "약",
+    "history": [
+     "약력",
+     "역할"
+    ]
+   },
+   "position_sha256": "4af3a411d197d6bcce4d0740112da542e13916ff767a3f087a8ded2f2f7ed3f9",
+   "input_sha256": "35f7e4db02759b8e8226b5643310d7bd16788540f589e1741c3fd5223318906f"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "c160666db9bffd85d6446eb95b6868d56d33eae923646f30dce25c5740b13c93.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/c160666db9bffd85d6446eb95b6868d56d33eae923646f30dce25c5740b13c93.tt.gz",
+   "gz_sha256": "c160666db9bffd85d6446eb95b6868d56d33eae923646f30dce25c5740b13c93",
+   "gz_bytes": 45963025,
+   "state_sha256": "41bdf59021fed94508c7a2fbf071949d04729445856df419863d397474d47d91",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 120.0,
+   "work_path": "general1/g1_498/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:56:33",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "약",
+    "history": [
+     "약력",
+     "역할극"
+    ]
+   },
+   "position_sha256": "5b73bf7d8ee918e8926051e643b2577b14381b51b11a2f94d0e79353484e8b85",
+   "input_sha256": "9e81410284b36e4110e1bdb0347a82c30989850ae0c192a3ae25a79683085446"
+  },
+  {
+   "release_tag": "alt817-states-2026-11-21b",
+   "asset": "aa0cce089e0f3b0602087bb84e67ce0c74328bdafda20bf99727da4e39403ebd.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/alt817-states-2026-11-21b/aa0cce089e0f3b0602087bb84e67ce0c74328bdafda20bf99727da4e39403ebd.tt.gz",
+   "gz_sha256": "aa0cce089e0f3b0602087bb84e67ce0c74328bdafda20bf99727da4e39403ebd",
+   "gz_bytes": 45701285,
+   "state_sha256": "e32cbe32a0db0cd9d27110c10b0b63992dc2c1b54f9ff1c38a20188872caa13b",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 115.87,
+   "work_path": "general1/g1_562/state.tt",
+   "note": "2026-11-21 general1 실행 7 뒤 못 푼 국면의 상태(이번에 바뀐 것만): 이어 풀었지만 미확정 5, 첫 시도 120초로 미확정 8",
+   "staged": "2026-11-21 20:56:39",
+   "uploaded_verified": "2026-11-21 21:03:57",
+   "position": {
+    "initial_syllable": "표",
+    "history": [
+     "표면적",
+     "적자생존"
+    ]
+   },
+   "position_sha256": "646b3266ee23ee066c91268fc7d282deba2d2b8b4e6a7566a35032402a0fbcee",
+   "input_sha256": "fc91fd533ba2aa625f80bf31d61706f36ca01b4e346c4797bc2de5021f724a80"
   }
  ]
 }
