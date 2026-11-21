@@ -100024,6 +100024,7 @@ function syncShieldButtons(S){
 function syncTab(){
   const s=TAB==="shield";
   $("promptBar").hidden=!s;
+  if(typeof Q_PH!=="undefined") syncPlaceholder();
   $("tabBasic").classList.toggle("on",!s); $("tabBasic").setAttribute("aria-selected",s?"false":"true");
   $("tabShield").classList.toggle("on",s); $("tabShield").setAttribute("aria-selected",s?"true":"false");
   $("basicPanel").hidden=s; $("shieldPanel").hidden=!s;
@@ -100249,7 +100250,10 @@ function setPrompt(p){
   PROMPT=p||null;
   $("promptIn").value=PROMPT||"";
   $("promptClear").hidden=PROMPT===null;
-  $("q").placeholder=PROMPT!==null?"첫 단어 앞 글자 (비우면 "+PROMPT+"… 전체)":Q_PH;
+  syncPlaceholder();
+}
+function syncPlaceholder(){
+  $("q").placeholder=TAB==="shield"&&PROMPT!==null?"첫 단어 앞 글자 (비우면 "+PROMPT+"… 전체)":Q_PH;
 }
 function startPrompt(){
   const p=cleanInput($("promptIn").value);
@@ -100258,7 +100262,10 @@ function startPrompt(){
 }
 $("promptBtn").addEventListener("click",startPrompt);
 $("promptIn").addEventListener("keydown",e=>{ if(e.key==="Enter") startPrompt(); });
-$("promptClear").addEventListener("click",()=>{ HIST=[]; SEQ=[]; setPrompt(null); SUG_OFF=true; runSearch(); });
+$("promptClear").addEventListener("click",()=>{   // 제시어를 끄면 라운드 처음 보호막, 빈 검색창으로
+  if(HIST.length) SH=HIST[0].sh;
+  HIST=[]; SEQ=[]; setPrompt(null); $("q").value=""; SUG_OFF=true; runSearch();
+});
 $("firstMover").addEventListener("change",runSearch);
 
 // 화면 밝기: 밝은 화면이 기본. 고른 값은 이 브라우저에만 저장.
