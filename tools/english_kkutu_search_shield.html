@@ -25,9 +25,9 @@
   :root[data-theme="dark"]{
     color-scheme:dark;
     --bg:#14161d; --panel:#1a1d27; --panel2:#20232f; --line:#2a2f3d; --hover:#3a4152; --focus:#7f8aa3;
-    --text:#e7e9f0; --muted:#8b91a4; --ph:#7a8194; --inbd:#646d85;
+    --text:#e7e9f0; --muted:#8b91a4; --ph:#8b91a4; --inbd:#646d85;
     --a2:#4bd0e8; --a3:#b18cff; --onaccent:#0b0d12;
-    --kill:#ffcf5c; --good:#57d98a; --draw:#8b91a4; --bad:#ff6b6b; --bad-op:.72;
+    --kill:#ffcf5c; --good:#57d98a; --draw:#8b91a4; --bad:#ff6b6b; --bad-op:1;
     --kill-bd:rgba(255,207,92,.55); --kill-bg:rgba(255,207,92,.12);
     --good-bd:rgba(87,217,138,.5); --good-bg:rgba(87,217,138,.12);
     --bad-bg:rgba(255,107,107,.1); --chip2:#262a36;
@@ -166,6 +166,14 @@
   .summary .turn.opp-turn b{color:var(--bad)}
   input::placeholder,textarea::placeholder{color:var(--ph)}
   .usedwrap textarea:focus{outline:none;border-color:var(--focus)}
+  .promptbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:2px 0 10px;padding:10px 12px;
+    border:1px solid var(--a2-bd);background:var(--a2-bg);border-radius:10px}
+  .promptbar .plab{font-size:13px;font-weight:700;color:var(--text)}
+  #promptIn{width:96px;min-width:0;background:var(--panel);border:1px solid var(--inbd);border-radius:8px;color:var(--text);
+    font-family:var(--mono);font-size:16px;padding:7px 10px}
+  #promptIn:focus{outline:none;border-color:var(--focus)}
+  .promptbar button{padding:7px 11px;font-size:12.5px}
+  .howto{margin-top:4px} .howto summary{cursor:pointer;color:var(--a2);font-weight:600}
 </style>
 </head>
 <body>
@@ -189,12 +197,22 @@
     <button type="button" class="tab" id="tabShield" role="tab" aria-selected="false">🛡 보호막전</button>
   </div>
 
+  <div class="promptbar" id="promptBar" hidden>
+    <label class="plab" for="promptIn">🎯 판에 뜬 제시어</label>
+    <input type="text" id="promptIn" placeholder="예: sa" maxlength="8" autocomplete="off" autocapitalize="off" spellcheck="false">
+    <button type="button" id="promptBtn">시작 (보호막 12)</button>
+    <label class="sel">먼저 두는 사람
+      <select id="firstMover"><option value="me">나</option><option value="opp">상대</option></select>
+    </label>
+    <button type="button" id="promptClear" hidden>× 제시어 끄기</button>
+  </div>
+
   <div class="searchwrap">
     <input type="text" id="q" placeholder="상대가 낸 단어… (앞 글자만 쳐도 추천이 떠요. 예: ta)" autocomplete="off" autocapitalize="off" spellcheck="false">
   </div>
   <div class="suggest" id="suggest" hidden></div>
   <div class="qhint" id="qhintBasic"><b>앞 글자만</b> 쳐도(예: ta) 위에 단어 추천이 떠. 눌러서 상대가 낸 단어를 고르면 돼. 상대가 낸 단어나 그 끝을 직접 입력해도 돼. 그 단어의 <b>끝3글자</b> 또는 <b>끝2글자</b>로 시작하는 내 단어들을 보여줌. · 단어 클릭 = 한 수 앞(상대 응수) 미리보기<br><b>·N</b> = 그 단어 뒤에 상대가 이을 수 있는 단어 수 (그 단어 자신은 뺌). 작을수록 킬각.</div>
-  <div class="qhint" id="qhintShield" hidden>상대가 낸 단어의 <b>앞 글자만</b> 쳐도(예: ta) 위에 추천이 떠. 눌러서 고르고 <b>지금 내 보호막</b>을 골라. 수순 중간이면 추천을 누르는 순간 그 단어가 수순에 기록돼.<br> <b>·N</b>이 보호막보다 작은 단어는 낼 수 없어서 소거돼.<br><b>상대 k/m</b> = 그 단어를 내면 상대가 이을 수 있는 m개 중 상대 보호막(지금-1)을 지키며 실제로 낼 수 있는 k개. k=0이면 💀 승리수. 상대 차례에는 <b>나 k/m</b>으로 바뀌고 💀·👍는 상대의 공격 수야.<br>단어 클릭 = 그 단어를 내고 상대 차례로 (보호막 -1, 낸 단어는 다시 못 씀). 상대가 실제로 낸 단어는 검색창에 입력하고 <b>Enter</b>로 기록. 목록에 안 보이는 단어는 아래 <b>직접 두기</b>.</div>
+  <div class="qhint" id="qhintShield" hidden>🎯 라운드 시작이면 판에 뜬 <b>제시어</b>(예: sa)를 위 칸에 넣고 시작 → 보호막 12에서 sa…로 시작하는 첫 단어부터 볼 수 있어. 먼저 두는 사람도 골라.<details class="howto"><summary>사용법 더 보기</summary>상대가 낸 단어의 <b>앞 글자만</b> 쳐도(예: ta) 위에 추천이 떠. 눌러서 고르고 <b>지금 내 보호막</b>을 골라. 수순 중간이면 추천을 누르는 순간 그 단어가 수순에 기록돼.<br> <b>·N</b>이 보호막보다 작은 단어는 낼 수 없어서 소거돼.<br><b>상대 k/m</b> = 그 단어를 내면 상대가 이을 수 있는 m개 중 상대 보호막(지금-1)을 지키며 실제로 낼 수 있는 k개. k=0이면 💀 승리수. 상대 차례에는 <b>나 k/m</b>으로 바뀌고 💀·👍는 상대의 공격 수야.<br>단어 클릭 = 그 단어를 내고 상대 차례로 (보호막 -1, 낸 단어는 다시 못 씀). 상대가 실제로 낸 단어는 검색창에 입력하고 <b>Enter</b>로 기록. 목록에 안 보이는 단어는 아래 <b>직접 두기</b>.</details></div>
 
   <div id="basicPanel">
     <div class="controls">
@@ -277,10 +295,11 @@
   <div class="note" id="shieldNote" hidden>
     🛡 <b>보호막전 규칙</b>: 보호막이 H인 사람은 <b>·N ≥ H</b>인 단어만 낼 수 있어. ·N은 그 단어 뒤에 이을 수 있는 단어 수인데,
     <b>이미 사용한 단어와 그 단어 자신은 빼고</b> 세. 한 수마다 보호막이 1씩 줄고 0이 되면 계속 0. 그래서 한방(·0)은 보호막 0에서만 낼 수 있어.<br>
-    💀 즉사와 <b>상대 k/m</b>은 수순·사용한 단어까지 반영한 정확한 값이야 (k=0이면 상대가 낼 단어가 없어서 바로 승리).<br>
+    💀 즉사와 <b>상대 k/m</b>은 수순·사용한 단어까지 반영한 정확한 값이야 (k=0이면 다음 사람이 낼 단어가 없어서 바로 승리). 상대 차례에는 <b>나 k/m</b>으로 바뀌고 💀·👍는 상대의 공격 수야.<br>
+    🎯 라운드는 판에 뜬 제시어(예: sa)로 시작해서 먼저 두는 사람이 보호막 12, 다음 사람이 11…로 둬. 제시어는 낸 단어가 아니라서 사용한 단어로 치지 않아.<br>
     👍유리·무승부·👎불리는 상대 보호막(H-1) 자리의 승패를 <b>사전 전체 기준</b>으로 끝까지 계산한 값이야.
     재사용 금지는 반영하지 않고 양쪽이 완벽하게 둔다고 가정한 추정이라 실전과 다를 수 있어.
-    이 사전에서는 보호막 7 이상이면 이 승패가 차례 순서만으로 갈려서 모든 수가 👍(짝수) 또는 👎(홀수)로 같게 나와. 그때는 상대 k가 작은 수를 봐.
+    이 사전에서는 보호막 7 이상이면 이 승패가 차례 순서만으로 갈려서 모든 수가 👍(짝수) 또는 👎(홀수)로 같게 나와. 그때는 k(다음 사람 선택지)가 작은 수를 봐. 라운드가 12에서 시작하니 짝수 쪽 = 먼저 두는 사람이야.
   </div>
 </div>
 
@@ -99722,6 +99741,23 @@ const SCAP_DEFAULT=[Infinity, 60, 20, 8, 40];
 const SCAP_MORE   =[Infinity, 400, 250, 400, 400];
 
 function lastWord(){ return SEQ.length ? SEQ[SEQ.length-1].w : null; }
+
+// 제시어: 판에 뜬 라운드 시작 글자(예: sa). 아무도 낸 단어가 아니라서 사용한 단어로 치지 않고,
+// 첫 수는 그 글자 그대로로 시작하는 단어(sa…)를 보호막 12에서 낸다.
+let PROMPT=null;
+function prefixWords(raw){
+  if(raw.length===1) return WORDS.filter(w=>w[0]===raw);
+  if(raw.length===2) return (byH2.get(raw)||[]).slice();
+  return (byH3.get(raw.slice(0,3))||[]).filter(w=>w.startsWith(raw));
+}
+function promptBranches(p){ return [{key:p, words:prefixWords(p), label:"제시어로 시작", cls:"b3"}]; }
+function prevIsPrompt(){ return !SEQ.length&&PROMPT!==null; }
+function hasPrev(){ return SEQ.length>0||PROMPT!==null; }
+function prevWord(){ return SEQ.length?lastWord():PROMPT; }
+function branchesFrom(prev, isPrompt){ return isPrompt?promptBranches(prev):branchesFor(prev); }
+// 먼저 두는 사람: 상대가 낸 단어에서 시작하면 나, 제시어에서 시작하면 고른 사람
+function firstMover(){ return PROMPT!==null&&$("firstMover").value==="opp"?"상대":"나"; }
+function whoAt(moves){ const f=firstMover(); return moves%2===0?f:(f==="나"?"상대":"나"); }
 function textareaUsed(){
   const s=new Set();
   for(const w of parse($("used").value)) if(SET.has(w)) s.add(w);
@@ -99764,11 +99800,11 @@ function evalMove(w, sh, ctx){
   return {w, t, mine, legal:true, tier, k, tot:mine};
 }
 
-// 수순의 마지막 단어 prev 뒤에 w 를 보호막 sh 로 낼 수 없는 이유 (낼 수 있으면 "")
-function moveProblem(prev, w, sh, used){
+// 수순의 마지막 단어(또는 제시어) prev 뒤에 w 를 보호막 sh 로 낼 수 없는 이유 (낼 수 있으면 "")
+function moveProblem(prev, w, sh, used, isPrompt){
   if(!SET.has(w)) return "사전에 없는 단어";
   if(used.has(w)) return "이미 사용한 단어";
-  if(!connects(prev, w)) return "끝 글자가 이어지지 않음";
+  if(isPrompt?!w.startsWith(prev):!connects(prev, w)) return isPrompt?"제시어 "+prev+"로 시작하지 않음":"끝 글자가 이어지지 않음";
   const e=evalMove(w, sh, makeCtx(used));
   if(!e.legal) return "보호막 "+sh+"에서 낼 수 없음 (·"+e.mine+")";
   return "";
@@ -99796,30 +99832,34 @@ function seqUsedSet(){
   if(HIST.length){ const st=cleanInput(HIST[0].q); if(startCounts(st)) s.add(st); }
   return s;
 }
+//   from/fromPrompt : 후보를 뽑는 자리 (검색창 단어, 수순의 마지막 단어, 또는 제시어)
 function shieldState(raw){
-  if(!SEQ.length){
+  if(!hasPrev()){
     const used=textareaUsed(); if(startCounts(raw)) used.add(raw);
-    return {kind:"start", sh:SH, used, moves:0};
+    return {kind:"start", sh:SH, used, moves:0, who:"나", from:raw, fromPrompt:false};
   }
+  const isP=prevIsPrompt(), prev=prevWord();
   const seqUsed=seqUsedSet();
-  const last=lastWord();
-  if(raw===last) return {kind:"onseq", sh:SH, used:seqUsed, moves:SEQ.length};
-  const why=moveProblem(last, raw, SH, seqUsed);
-  const brs=branchesFor(last);
+  if(isP?(!raw||raw===prev):raw===prev)
+    return {kind:"onseq", sh:SH, used:seqUsed, moves:SEQ.length, who:whoAt(SEQ.length), from:prev, fromPrompt:isP};
+  const why=moveProblem(prev, raw, SH, seqUsed, isP);
+  const brs=branchesFrom(prev, isP);
   const ext=brs.some(br=>br.words.some(w=>w!==raw&&w.startsWith(raw)));   // 더 긴 후보로 이어질 수 있는 입력인지
   if(!why&&!ext){
     const used=new Set(seqUsed); used.add(raw);
-    return {kind:"preview", sh:Math.max(0,SH-1), used, moves:SEQ.length+1, pending:raw};
+    return {kind:"preview", sh:Math.max(0,SH-1), used, moves:SEQ.length+1, who:whoAt(SEQ.length+1),
+            pending:raw, from:raw, fromPrompt:false};
   }
   // 아직 치는 중(지금 둘 수 있는 단어의 앞부분) → 지금 자리에서 그 글자로 시작하는 단어만 보여 준다
   if(!why||ext||brs.some(br=>br.words.includes(raw)))
-    return {kind:"filter", sh:SH, used:seqUsed, moves:SEQ.length, prefix:raw, exact:!why};
+    return {kind:"filter", sh:SH, used:seqUsed, moves:SEQ.length, who:whoAt(SEQ.length), prefix:raw, exact:!why,
+            from:prev, fromPrompt:isP};
   const used=textareaUsed(); if(startCounts(raw)) used.add(raw);
-  return {kind:"fresh", sh:SH, used, moves:0, why};
+  return {kind:"fresh", sh:SH, used, moves:0, who:"나", why, from:raw, fromPrompt:false};
 }
 
 function recordPending(S){
-  HIST.push({q:lastWord(), sh:SH});
+  HIST.push({q:SEQ.length?lastWord():"", sh:SH});
   SEQ.push({w:S.pending, sh:SH});
   SH=Math.max(0,SH-1);
 }
@@ -99838,7 +99878,7 @@ function renderShieldBranch(container, br, evals, skipped, opt){
       ? '<span class="end">→'+POS[e.t]+' ·'+e.mine+'</span><span class="opp'+(e.k===0?' z':'')+'">'+opt.next+' '+e.k+'/'+e.tot+'</span>'
       : '<span class="end">→'+POS[e.t]+' ·'+e.mine+'</span><span class="opp">&lt; '+opt.sh+'</span>';
     const title=e.legal
-      ? '이 단어를 내면 '+opt.next+'(보호막 '+opt.h2+')가 낼 수 있는 단어 '+e.k+'개 / 이을 수 있는 단어 '+e.tot+'개'
+      ? '이 단어를 내면 '+(opt.next==='나'?'내가':'상대가')+' 보호막 '+opt.h2+'에서 낼 수 있는 단어 '+e.k+'개 / 이을 수 있는 단어 '+e.tot+'개'
       : '·'+e.mine+' — 보호막 '+opt.sh+'에서는 낼 수 없음';
     return '<span class="r '+T.cls+'" data-w="'+e.w+'"'+(e.legal?'':' data-ill="1" aria-disabled="true"')+
       ' tabindex="0" role="button" title="'+title+'"><span class="b">'+T.b+'</span>'+e.w+tail+'</span>';
@@ -99882,11 +99922,11 @@ function runShield(raw, res, sum){
   renderSeq(S); syncShieldButtons(S);
   const sh=S.sh, h2=Math.max(0,sh-1);
   const ctx=makeCtx(S.used);
-  const who=S.moves%2===0?'나':'상대', next=who==='나'?'상대':'나';   // 지금 둘 사람 / 그다음 사람
+  const who=S.who, next=who==='나'?'상대':'나';   // 지금 둘 사람 / 그다음 사람
   const opt={sh, h2, next, hideIll:$("hideIll").checked, winOnly:$("winOnly").checked, more:$("showMore").checked};
   const tot=[0,0,0,0,0];
   const filt=S.kind==="filter";
-  const brs=filt?branchesFor(lastWord()):branchesFor(raw);
+  const brs=branchesFrom(S.from, S.fromPrompt);
   for(const br of brs){
     const evals=[]; let skipped=0;
     for(const w of br.words){
@@ -99905,13 +99945,14 @@ function runShield(raw, res, sum){
   const legal=tot[0]+tot[1]+tot[2]+tot[3];
   let banner='';
   if(S.kind==="preview"){
-    banner='<div class="banner">✏️ <b>'+raw+'</b> — 수순에 아직 없는 수야. '+(SEQ.length%2===0?'나':'상대')+
+    banner='<div class="banner">✏️ <b>'+raw+'</b> — 수순에 아직 없는 수야. '+whoAt(SEQ.length)+
       '(보호막 '+SH+')의 수로 놓고 본 결과야. <b>Enter</b> = 수순에 기록 · 아래 단어를 누르거나 보호막을 바꾸면 함께 기록</div>';
   } else if(S.kind==="filter"){
-    banner='<div class="banner">🔎 수순('+lastWord()+') 다음에 둘 단어 중 <b>'+raw+'…</b> 로 시작하는 것만 보는 중 · 단어나 위 추천을 누르면 기록돼'+
-      (S.exact?' · <b>Enter</b> = '+raw+' 그대로 기록':'')+'</div>';
+    banner='<div class="banner">🔎 '+(S.fromPrompt?'제시어('+S.from+')로 시작하는 첫 단어':'수순('+S.from+') 다음에 둘 단어')+
+      ' 중 <b>'+raw+'…</b> 로 시작하는 것만 보는 중 · 단어나 위 추천을 누르면 기록돼'+
+      (S.exact?' · <b>Enter</b>나 보호막 버튼 = '+raw+' 그대로 기록':'')+'</div>';
   } else if(S.kind==="fresh"){
-    banner='<div class="banner">✏️ <b>'+raw+'</b> — 지금 수순('+lastWord()+') 뒤에 둘 수 없는 단어야 ('+S.why+
+    banner='<div class="banner">✏️ <b>'+raw+'</b> — 지금 '+(prevIsPrompt()?'제시어('+PROMPT+')':'수순('+lastWord()+')')+' 뒤에 둘 수 없는 단어야 ('+S.why+
       '). 새 시작으로 보고 있어 · 아래 단어를 누르면 지금 수순은 지워지고 여기서 새로 시작해</div>';
   }
   const head='<span class="turn'+(who==='상대'?' opp-turn':'')+'">'+(who==='상대'?'🔴 ':'🟢 ')+'지금 둘 사람: <b>'+who+'</b> · 보호막 <b>'+sh+'</b> → 다음 사람 '+h2+'</span><br>';
@@ -99940,24 +99981,29 @@ function runShield(raw, res, sum){
   const nonKill=legal-tot[0];
   if(nonKill>=5 && (tot[1]===nonKill || tot[3]===nonKill)){
     info='<br><span class="info">ℹ️ 이 보호막에서는 사전 기준 승패가 차례 순서만으로 갈려서 낼 수 있는 수가 전부 같은 등급이야. '+
-      '상대 k가 작은 단어(상대 선택지가 적은 수)부터 정렬돼 있어.</span>';
+      next+' k가 작은 단어('+(next==='나'?'내':'상대')+' 선택지가 적은 수)부터 정렬돼 있어.</span>';
   }
   sum.innerHTML=banner+head+msg+'<span class="sub2"> · 낼 수 있음 '+legal+'개'+ill+'</span>'+info;
 }
 
 function renderSeq(S){
   const box=$("seq");
+  const pw=whoAt(SEQ.length);
   const pending=(S&&S.kind==="preview")
-    ? '<span class="mv pend"><span class="'+(SEQ.length%2?'op':'me')+'">'+(SEQ.length%2?'상대':'나')+'</span> '+
+    ? '<span class="mv pend"><span class="'+(pw==='상대'?'op':'me')+'">'+pw+'</span> '+
       '<span class="sh">'+SH+'</span> '+S.pending+' (미기록)</span>' : '';
-  if(!SEQ.length){
+  if(!SEQ.length&&PROMPT!==null){
+    box.innerHTML='<span class="mv">제시어 <b>'+PROMPT+'</b></span>'+(pending?' → '+pending:
+      ' <span class="none">· 먼저 두는 사람: '+firstMover()+' — 첫 단어를 누르거나 검색창에 앞 글자를 쳐서 고르면 수순이 시작돼.</span>');
+  } else if(!SEQ.length){
     box.innerHTML='<span class="none">단어를 누르면 그 단어를 낸 것으로 보고, 보호막이 1 줄어든 상대 차례로 넘어가. '+
       '상대가 실제로 낸 단어는 검색창에 입력하고 Enter.</span>';
   } else {
     const start=cleanInput(HIST[0].q);
-    let html=start?'<span class="mv">시작 <b>'+start+'</b></span>':'';
+    let html=PROMPT!==null?'<span class="mv">제시어 <b>'+PROMPT+'</b></span>':(start?'<span class="mv">시작 <b>'+start+'</b></span>':'');
     SEQ.forEach((m,i)=>{
-      html+=(html?' → ':'')+'<span class="mv"><span class="'+(i%2?'op':'me')+'">'+(i%2?'상대':'나')+'</span> '+
+      const wh=whoAt(i);
+      html+=(html?' → ':'')+'<span class="mv"><span class="'+(wh==='상대'?'op':'me')+'">'+wh+'</span> '+
         '<span class="sh">'+m.sh+'</span> '+m.w+'</span>';
     });
     if(pending) html+=' → '+pending;
@@ -99977,6 +100023,7 @@ function syncShieldButtons(S){
 
 function syncTab(){
   const s=TAB==="shield";
+  $("promptBar").hidden=!s;
   $("tabBasic").classList.toggle("on",!s); $("tabBasic").setAttribute("aria-selected",s?"false":"true");
   $("tabShield").classList.toggle("on",s); $("tabShield").setAttribute("aria-selected",s?"true":"false");
   $("basicPanel").hidden=s; $("shieldPanel").hidden=!s;
@@ -99992,7 +100039,7 @@ function searchCore(){
   CUR=null;
   if(!ready){ sum.textContent="사전을 불러오면 검색이 활성화돼."; return; }
   const raw=cleanInput($("q").value);
-  if(!raw){
+  if(!raw&&!(TAB==="shield"&&prevIsPrompt())){
     if(TAB==="shield"){ renderSeq(null); syncShieldButtons(null); }
     sum.innerHTML='<span class="none">상대가 낸 단어를 입력해.</span>'; return;
   }
@@ -100023,8 +100070,8 @@ function searchCore(){
 function commitMove(w){
   const S=CUR;
   if(S&&S.kind==="preview") recordPending(S);
-  else if(S&&S.kind==="fresh"){ HIST=[]; SEQ=[]; }
-  HIST.push({q:SEQ.length?lastWord():$("q").value, sh:SH});
+  else if(S&&S.kind==="fresh"){ HIST=[]; SEQ=[]; setPrompt(null); }
+  HIST.push({q:SEQ.length?lastWord():(PROMPT!==null?"":$("q").value), sh:SH});
   SEQ.push({w, sh:SH});
   SH=Math.max(0,SH-1);
   $("q").value=w;
@@ -100057,18 +100104,13 @@ $("results").addEventListener("keydown",e=>{
 const SUG_MAX=40;
 let SUG=null, SUG_OFF=true;   // SUG_OFF: 직접 타이핑할 때만 추천을 띄운다
 function byLen(a,b){ return a.length-b.length || (a<b?-1:1); }
-function prefixWords(raw){
-  if(raw.length===1) return WORDS.filter(w=>w[0]===raw);
-  if(raw.length===2) return (byH2.get(raw)||[]).slice();
-  return (byH3.get(raw.slice(0,3))||[]).filter(w=>w.startsWith(raw));
-}
 function computeSuggest(raw){
   if(!ready||!raw||SUG_OFF) return null;
-  if(TAB==="shield"&&SEQ.length){
-    const last=lastWord();
-    if(raw===last) return null;
+  if(TAB==="shield"&&hasPrev()){
+    const isP=prevIsPrompt(), last=prevWord();
+    if(!isP&&raw===last) return null;
     const ctx=makeCtx(seqUsedSet()), out=[];
-    for(const br of branchesFor(last)) for(const w of br.words){
+    for(const br of branchesFrom(last, isP)) for(const w of br.words){
       if(!w.startsWith(raw)) continue;
       const wi=WIDX.get(w), t=TAIL[wi];
       if(ctx.usedW[wi]||DEG[t]-ctx.uc[t]-LOOP[wi]<SH) continue;
@@ -100077,18 +100119,19 @@ function computeSuggest(raw){
     if(out.length){
       out.sort(byLen);
       return {mode:"move", items:out.slice(0,SUG_MAX), total:out.length,
-        label:'지금 둘 사람('+(SEQ.length%2===0?'나':'상대')+') · 보호막 '+SH+'에서 둘 수 있는 단어 — 누르면 수순에 기록'};
+        label:'지금 둘 사람('+whoAt(SEQ.length)+') · 보호막 '+SH+'에서 둘 수 있는 단어 — 누르면 수순에 기록'};
     }
-    if(branchesFor(last).some(br=>br.words.some(w=>w.startsWith(raw))))
+    if(branchesFrom(last, isP).some(br=>br.words.some(w=>w.startsWith(raw))))
       return {mode:"none", items:[], total:0,
         label:raw+'… 로 시작하는 후보는 있지만 보호막 '+SH+'에서 둘 수 있는 건 없어 (미달이거나 이미 쓴 단어)'};
   }
   const ws=prefixWords(raw);
   if(!ws.length) return null;
   ws.sort(byLen);
-  const mid=TAB==="shield"&&SEQ.length>0;
+  const mid=TAB==="shield"&&hasPrev();
   return {mode:"start", items:ws.slice(0,SUG_MAX), total:ws.length,
-    label:mid?'수순('+lastWord()+') 뒤에 이어지지 않음 · 새로 시작할 단어 고르기 (고른 뒤 수를 두면 지금 수순은 지워짐)':'상대가 낸 단어 고르기'};
+    label:mid?(prevIsPrompt()?'제시어('+PROMPT+')로 시작하지 않음':'수순('+lastWord()+') 뒤에 이어지지 않음')+
+      ' · 새로 시작할 단어 고르기 (고른 뒤 수를 두면 지금 수순은 지워짐)':'상대가 낸 단어 고르기'};
 }
 function renderSuggest(){
   const box=$("suggest"), raw=cleanInput($("q").value);
@@ -100101,7 +100144,7 @@ function renderSuggest(){
 }
 function pickSuggest(w){
   if(!SUG) return;
-  if(TAB==="shield"&&SEQ.length&&SUG.mode==="move"){ HIST.push({q:lastWord(), sh:SH}); SEQ.push({w, sh:SH}); SH=Math.max(0,SH-1); }
+  if(TAB==="shield"&&hasPrev()&&SUG.mode==="move"){ HIST.push({q:SEQ.length?lastWord():"", sh:SH}); SEQ.push({w, sh:SH}); SH=Math.max(0,SH-1); }
   $("q").value=w; SUG_OFF=true; runSearch();
 }
 $("suggest").addEventListener("click",e=>{ const b=e.target.closest(".sg"); if(b) pickSuggest(b.dataset.w); });
@@ -100114,11 +100157,10 @@ function playTyped(){
   if(!w){ msg.textContent=""; return; }
   let raw=cleanInput($("q").value);
   if(!raw&&SEQ.length){ raw=lastWord(); $("q").value=raw; SUG_OFF=true; runSearch(); }   // 검색창을 비웠으면 수순의 마지막 단어에서 둔다
-  if(!raw){ msg.textContent="먼저 검색창에 시작 단어를 입력해."; return; }
+  if(!raw&&!prevIsPrompt()){ msg.textContent="먼저 검색창에 시작 단어를 입력하거나 제시어를 넣어 줘."; return; }
   const S=shieldState(raw); CUR=S;
-  // 걸러 보는 중(앞 글자만 친 상태)이면 검색창 글자가 아니라 수순의 마지막 단어 뒤에 두는 것
-  const prev=S.kind==="filter"?lastWord():raw;
-  const why=moveProblem(prev, w, S.sh, S.used);
+  // 후보를 뽑는 자리(S.from): 걸러 보는 중이면 수순의 마지막 단어나 제시어, 아니면 검색창 단어
+  const why=moveProblem(S.from, w, S.sh, S.used, S.fromPrompt);
   if(why){ msg.textContent=w+" — "+why; return; }
   msg.textContent=""; $("play").value="";
   commitMove(w); SUG_OFF=true; runSearch();
@@ -100131,7 +100173,7 @@ $("q").addEventListener("keydown",e=>{
   if(e.key==="Escape"){ SUG_OFF=true; renderSuggest(); return; }
   if(e.key!=="Enter"||!ready) return;
   const raw=cleanInput($("q").value);
-  if(TAB==="shield"&&SEQ.length){
+  if(TAB==="shield"&&hasPrev()){
     const S=shieldState(raw);
     // 입력한 단어 그대로 둘 수 있으면 그 단어를 기록, 아니면 추천이 하나뿐일 때만 그 추천을 기록
     if(S.kind==="preview"||(S.kind==="filter"&&S.exact)){ recordPending({pending:raw}); SUG_OFF=true; runSearch(); return; }
@@ -100201,6 +100243,24 @@ $("fileInput").addEventListener("change",e=>{
   r.readAsText(f);
 });
 
+// 제시어 칸
+const Q_PH=$("q").placeholder;
+function setPrompt(p){
+  PROMPT=p||null;
+  $("promptIn").value=PROMPT||"";
+  $("promptClear").hidden=PROMPT===null;
+  $("q").placeholder=PROMPT!==null?"첫 단어 앞 글자 (비우면 "+PROMPT+"… 전체)":Q_PH;
+}
+function startPrompt(){
+  const p=cleanInput($("promptIn").value);
+  if(!p) return;
+  HIST=[]; SEQ=[]; setPrompt(p); SH=MAX_SHIELD; $("q").value=""; SUG_OFF=true; runSearch();
+}
+$("promptBtn").addEventListener("click",startPrompt);
+$("promptIn").addEventListener("keydown",e=>{ if(e.key==="Enter") startPrompt(); });
+$("promptClear").addEventListener("click",()=>{ HIST=[]; SEQ=[]; setPrompt(null); SUG_OFF=true; runSearch(); });
+$("firstMover").addEventListener("change",runSearch);
+
 // 화면 밝기: 밝은 화면이 기본. 고른 값은 이 브라우저에만 저장.
 let THEME="light";
 try{ if(localStorage.getItem("kkutu-theme")==="dark") THEME="dark"; }catch(e){}
@@ -100230,7 +100290,7 @@ window.__kkutu={
       const e=evalMove(w,sh,ctx); return {w:e.w, legal:e.legal, mine:e.mine, k:e.k, tot:e.tot, tier:e.tier};
     })}));
   },
-  state:()=>({SH, SEQ:SEQ.map(m=>({...m})), HIST:HIST.map(h=>({...h})), kind:CUR&&CUR.kind}),
+  state:()=>({SH, SEQ:SEQ.map(m=>({...m})), HIST:HIST.map(h=>({...h})), kind:CUR&&CUR.kind, prompt:PROMPT, first:firstMover()}),
   suggest:()=>SUG&&{mode:SUG.mode, items:SUG.items.slice(), total:SUG.total}
 };
 
