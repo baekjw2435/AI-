@@ -24,7 +24,7 @@ sys.path.insert(0, str(BASIC.parent / 'guopsaem_root' / 'verifier_v3'))
 from verify_v3 import ModelV3  # noqa: E402
 
 WORK = Path('/home/user/AI-/.work')
-MAIN_DIR = '/tmp/claude-0/-home-user-AI-/2401d150-dd76-525a-a003-834c39d611b3/scratchpad/artifact-files/8b42c88b-1088-4496-9137-10f8866f75de'
+MAIN_DIR = '/home/user/AI-/.work/main_map'   # the existing route map's files (model.json, manifest.json, t/...)
 
 
 def main():
