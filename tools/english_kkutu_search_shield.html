@@ -10,9 +10,9 @@
   :root{
     color-scheme:light;
     --bg:#f4f6fa; --panel:#ffffff; --panel2:#eef1f6; --line:#d5dae4; --hover:#aab3c2; --focus:#6b7a92;
-    --text:#161a23; --muted:#59606f; --ph:#9aa2b1;
+    --text:#161a23; --muted:#59606f; --ph:#5f6673; --inbd:#7f8898;
     --a2:#087a99; --a3:#7445d6; --onaccent:#ffffff;
-    --kill:#a35f00; --good:#16824a; --draw:#646b78; --bad:#c93838;
+    --kill:#8f5200; --good:#127540; --draw:#585e6a; --bad:#b83232; --bad-op:1;
     --kill-bd:rgba(163,95,0,.45); --kill-bg:rgba(230,160,30,.16);
     --good-bd:rgba(22,130,74,.45); --good-bg:rgba(22,130,74,.11);
     --bad-bg:rgba(201,56,56,.09); --chip2:#e5e8ef;
@@ -24,10 +24,10 @@
   }
   :root[data-theme="dark"]{
     color-scheme:dark;
-    --bg:#14161d; --panel:#1a1d27; --panel2:#20232f; --line:#2a2f3d; --hover:#3a4152; --focus:#4a5266;
-    --text:#e7e9f0; --muted:#8b91a4; --ph:#4b5162;
+    --bg:#14161d; --panel:#1a1d27; --panel2:#20232f; --line:#2a2f3d; --hover:#3a4152; --focus:#7f8aa3;
+    --text:#e7e9f0; --muted:#8b91a4; --ph:#7a8194; --inbd:#646d85;
     --a2:#4bd0e8; --a3:#b18cff; --onaccent:#0b0d12;
-    --kill:#ffcf5c; --good:#57d98a; --draw:#8b91a4; --bad:#ff6b6b;
+    --kill:#ffcf5c; --good:#57d98a; --draw:#8b91a4; --bad:#ff6b6b; --bad-op:.72;
     --kill-bd:rgba(255,207,92,.55); --kill-bg:rgba(255,207,92,.12);
     --good-bd:rgba(87,217,138,.5); --good-bg:rgba(87,217,138,.12);
     --bad-bg:rgba(255,107,107,.1); --chip2:#262a36;
@@ -53,7 +53,7 @@
   #status .rdy{color:var(--good)}
 
   .searchwrap{position:relative;margin-bottom:6px}
-  #q{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--text);
+  #q{width:100%;background:var(--panel);border:1px solid var(--inbd);border-radius:12px;color:var(--text);
     font-family:var(--mono);font-size:22px;padding:16px 18px;letter-spacing:.02em}
   #q:focus{outline:none;border-color:var(--focus)}
   #q::placeholder{color:var(--ph)}
@@ -81,19 +81,19 @@
   .r{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:13.5px;
     padding:5px 9px;border-radius:8px;border:1px solid var(--line);background:var(--bg);cursor:pointer;transition:border-color .1s}
   .r:hover{border-color:var(--focus)}
-  .r .end{opacity:.55;font-size:11px}
+  .r .end{color:var(--muted);font-size:11px}
   .r .b{font-size:11px;font-weight:700;padding:0 5px;border-radius:5px}
   .r.kill{border-color:var(--kill-bd)} .r.kill .b{color:var(--kill);background:var(--kill-bg)}
   .r.good{border-color:var(--good-bd)}  .r.good .b{color:var(--good);background:var(--good-bg)}
   .r.draw .b{color:var(--draw);background:var(--chip2)}
-  .r.bad{opacity:.72} .r.bad .b{color:var(--bad);background:var(--bad-bg)}
+  .r.bad{opacity:var(--bad-op)} .r.bad .b{color:var(--bad);background:var(--bad-bg)}
   .more{color:var(--muted);font-size:12px;padding:0 14px 12px}
   .empty{color:var(--muted);font-size:13px;padding:12px 14px}
 
   .rev{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
   .rev h2{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
   .rev .row2{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-  #rq{background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--text);
+  #rq{background:var(--panel);border:1px solid var(--inbd);border-radius:8px;color:var(--text);
     font-family:var(--mono);font-size:15px;padding:9px 12px;width:140px}
   #rq:focus{outline:none;border-color:var(--focus)}
   #revResult{margin-top:12px}
@@ -133,18 +133,18 @@
   .seq .pend{color:var(--muted);font-style:italic}
   .usedwrap{margin-top:8px;font-size:12.5px;color:var(--muted)}
   .playrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
-  #play{flex:1 1 180px;min-width:0;background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--text);
+  #play{flex:1 1 180px;min-width:0;background:var(--bg);border:1px solid var(--inbd);border-radius:8px;color:var(--text);
     font-family:var(--mono);font-size:14px;padding:7px 10px}
   #play:focus{outline:none;border-color:var(--focus)}
   .playrow button{padding:7px 12px;font-size:12.5px}
   .sel{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);flex-wrap:wrap;min-width:0;max-width:100%}
-  .sel select{min-width:0;max-width:100%;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;
+  .sel select{min-width:0;max-width:100%;background:var(--panel2);color:var(--text);border:1px solid var(--inbd);border-radius:8px;
     font-family:var(--sans);font-size:12px;padding:6px 8px}
   .playmsg{font-size:12px;color:var(--bad);min-height:0;margin-top:4px}
   .playmsg:empty{display:none}
   .bh{flex-wrap:wrap} .bh .lab{white-space:nowrap}
   .usedwrap summary{cursor:pointer}
-  .usedwrap textarea{width:100%;min-height:54px;background:var(--bg);color:var(--text);border:1px solid var(--line);
+  .usedwrap textarea{width:100%;min-height:54px;background:var(--bg);color:var(--text);border:1px solid var(--inbd);
     border-radius:8px;font-family:var(--mono);font-size:13px;padding:8px;margin:8px 0;resize:vertical}
   @media (max-width:560px){
     body{padding:16px 12px 60px}
@@ -162,6 +162,10 @@
     background:var(--panel);border:1px solid var(--line);color:var(--text)}
   .sg b{color:var(--a2);font-weight:700}
   .sg:focus-visible{outline:2px solid var(--a2);outline-offset:1px}
+  .summary .warn{color:var(--bad);font-weight:700}
+  .summary .turn.opp-turn b{color:var(--bad)}
+  input::placeholder,textarea::placeholder{color:var(--ph)}
+  .usedwrap textarea:focus{outline:none;border-color:var(--focus)}
 </style>
 </head>
 <body>
@@ -171,7 +175,8 @@
       <h1>영어 끄투 검색 엔진 <span style="color:var(--muted);font-weight:400;font-size:14px">· 끝 2/3글자 · 보호막전</span></h1>
       <div class="sub">상대 단어 입력 → 내가 낼 수 있는 단어를 전략 등급순으로</div>
     </div>
-    <button type="button" class="themebtn" id="themeBtn" aria-pressed="false">🌙 어둡게</button>
+    <button type="button" class="themebtn" id="themeBtn">🌙 어둡게</button>
+    <script>try{if(document.documentElement.getAttribute("data-theme")==="dark")document.getElementById("themeBtn").textContent="☀️ 밝게";}catch(e){}</script>
   </header>
 
   <div class="loadbar">
@@ -189,7 +194,7 @@
   </div>
   <div class="suggest" id="suggest" hidden></div>
   <div class="qhint" id="qhintBasic"><b>앞 글자만</b> 쳐도(예: ta) 위에 단어 추천이 떠. 눌러서 상대가 낸 단어를 고르면 돼. 상대가 낸 단어나 그 끝을 직접 입력해도 돼. 그 단어의 <b>끝3글자</b> 또는 <b>끝2글자</b>로 시작하는 내 단어들을 보여줌. · 단어 클릭 = 한 수 앞(상대 응수) 미리보기<br><b>·N</b> = 그 단어 뒤에 상대가 이을 수 있는 단어 수 (그 단어 자신은 뺌). 작을수록 킬각.</div>
-  <div class="qhint" id="qhintShield" hidden>상대가 낸 단어의 <b>앞 글자만</b> 쳐도(예: ta) 위에 추천이 떠. 눌러서 고르고 <b>지금 내 보호막</b>을 골라. 수순 중간이면 추천을 누르는 순간 그 단어가 수순에 기록돼.<br> <b>·N</b>이 보호막보다 작은 단어는 낼 수 없어서 소거돼.<br><b>상대 k/m</b> = 그 단어를 내면 상대가 이을 수 있는 m개 중 상대 보호막(지금-1)을 지키며 실제로 낼 수 있는 k개. k=0이면 💀 승리수.<br>단어 클릭 = 그 단어를 내고 상대 차례로 (보호막 -1, 낸 단어는 다시 못 씀). 상대가 실제로 낸 단어는 검색창에 입력하고 <b>Enter</b>로 기록. 목록에 안 보이는 단어는 아래 <b>직접 두기</b>.</div>
+  <div class="qhint" id="qhintShield" hidden>상대가 낸 단어의 <b>앞 글자만</b> 쳐도(예: ta) 위에 추천이 떠. 눌러서 고르고 <b>지금 내 보호막</b>을 골라. 수순 중간이면 추천을 누르는 순간 그 단어가 수순에 기록돼.<br> <b>·N</b>이 보호막보다 작은 단어는 낼 수 없어서 소거돼.<br><b>상대 k/m</b> = 그 단어를 내면 상대가 이을 수 있는 m개 중 상대 보호막(지금-1)을 지키며 실제로 낼 수 있는 k개. k=0이면 💀 승리수. 상대 차례에는 <b>나 k/m</b>으로 바뀌고 💀·👍는 상대의 공격 수야.<br>단어 클릭 = 그 단어를 내고 상대 차례로 (보호막 -1, 낸 단어는 다시 못 씀). 상대가 실제로 낸 단어는 검색창에 입력하고 <b>Enter</b>로 기록. 목록에 안 보이는 단어는 아래 <b>직접 두기</b>.</div>
 
   <div id="basicPanel">
     <div class="controls">
@@ -215,10 +220,11 @@
       <label class="toggle" id="moreToggle"><input type="checkbox" id="showMore"> 👎 불리·무 더 보기</label>
     </div>
     <div class="legend">
-      <span><b style="color:var(--kill)">💀 즉사</b> 상대가 보호막을 지키며 낼 단어 0개</span>
-      <span><b style="color:var(--good)">👍 유리</b> 상대 패 위치</span>
+      <span><b style="color:var(--kill)">💀 즉사</b> 다음 사람이 보호막을 지키며 낼 단어 0개</span>
+      <span><b style="color:var(--good)">👍 유리</b> 다음 사람 패 위치</span>
       <span><b style="color:var(--draw)">무</b> 무승부</span>
-      <span><b style="color:var(--bad)">👎 불리</b> 상대 승 위치</span>
+      <span><b style="color:var(--bad)">👎 불리</b> 다음 사람 승 위치</span>
+      <span>(상대 차례에는 💀·👍가 상대의 공격 수)</span>
       <span><b>🚫 미달</b> ·N &lt; 보호막</span>
     </div>
     <div class="seqbox">
@@ -232,10 +238,10 @@
         <input type="text" id="play" placeholder="직접 두기: 낼 단어 입력 후 Enter" autocomplete="off" spellcheck="false" aria-label="직접 두기">
         <button type="button" id="playBtn">두기</button>
         <label class="sel">시작 단어
-          <select id="qUsedMode">
-            <option value="auto" selected>자동: 2글자·4글자 이상 단어면 이미 낸 단어로</option>
-            <option value="always">항상 이미 낸 단어로</option>
-            <option value="never">끝 글자로만 보기</option>
+          <select id="qUsedMode" title="자동: 시작 단어가 2글자 단어이거나 4글자 이상 사전 단어면 상대가 이미 낸 단어로 치고, 3글자 이하 입력(ing·ate 같은 끝 글자)은 끝 글자로만 봐">
+            <option value="auto" selected>자동: 2글자·4글자↑ 단어면 낸 단어</option>
+            <option value="always">항상 낸 단어로</option>
+            <option value="never">끝 글자로만</option>
           </select>
         </label>
       </div>
@@ -99829,10 +99835,10 @@ function renderShieldBranch(container, br, evals, skipped, opt){
   let rows=shown.map(e=>{
     const T=STIER[e.tier];
     const tail=e.legal
-      ? '<span class="end">→'+POS[e.t]+' ·'+e.mine+'</span><span class="opp'+(e.k===0?' z':'')+'">상대 '+e.k+'/'+e.tot+'</span>'
+      ? '<span class="end">→'+POS[e.t]+' ·'+e.mine+'</span><span class="opp'+(e.k===0?' z':'')+'">'+opt.next+' '+e.k+'/'+e.tot+'</span>'
       : '<span class="end">→'+POS[e.t]+' ·'+e.mine+'</span><span class="opp">&lt; '+opt.sh+'</span>';
     const title=e.legal
-      ? '상대 보호막 '+opt.h2+'에서 낼 수 있는 단어 '+e.k+'개 / 이을 수 있는 단어 '+e.tot+'개'
+      ? '이 단어를 내면 '+opt.next+'(보호막 '+opt.h2+')가 낼 수 있는 단어 '+e.k+'개 / 이을 수 있는 단어 '+e.tot+'개'
       : '·'+e.mine+' — 보호막 '+opt.sh+'에서는 낼 수 없음';
     return '<span class="r '+T.cls+'" data-w="'+e.w+'"'+(e.legal?'':' data-ill="1" aria-disabled="true"')+
       ' tabindex="0" role="button" title="'+title+'"><span class="b">'+T.b+'</span>'+e.w+tail+'</span>';
@@ -99876,22 +99882,27 @@ function runShield(raw, res, sum){
   renderSeq(S); syncShieldButtons(S);
   const sh=S.sh, h2=Math.max(0,sh-1);
   const ctx=makeCtx(S.used);
-  const opt={sh, h2, hideIll:$("hideIll").checked, winOnly:$("winOnly").checked, more:$("showMore").checked};
+  const who=S.moves%2===0?'나':'상대', next=who==='나'?'상대':'나';   // 지금 둘 사람 / 그다음 사람
+  const opt={sh, h2, next, hideIll:$("hideIll").checked, winOnly:$("winOnly").checked, more:$("showMore").checked};
   const tot=[0,0,0,0,0];
-  const brs=S.kind==="filter"
-    ? branchesFor(lastWord()).map(br=>({...br, words:br.words.filter(w=>w.startsWith(S.prefix))}))
-    : branchesFor(raw);
+  const filt=S.kind==="filter";
+  const brs=filt?branchesFor(lastWord()):branchesFor(raw);
   for(const br of brs){
     const evals=[]; let skipped=0;
     for(const w of br.words){
       if(ctx.usedW[WIDX.get(w)]){ skipped++; continue; }
       evals.push(evalMove(w, sh, ctx));
     }
-    const c=renderShieldBranch(res, br, evals, skipped, opt);
-    for(let i=0;i<5;i++) tot[i]+=c[i];
+    for(const e of evals) tot[e.tier]++;   // 요약은 걸러 보기와 상관없이 지금 자리 전체로
+    if(filt){
+      const fe=evals.filter(e=>e.w.startsWith(S.prefix));
+      if(!fe.length) continue;             // 그 글자로 시작하는 단어가 없는 갈래는 숨김
+      renderShieldBranch(res, br, fe, 0, opt);
+    } else renderShieldBranch(res, br, evals, skipped, opt);
   }
+  if(filt&&!res.children.length)
+    res.innerHTML='<div class="branch"><div class="empty">'+S.prefix+'… 로 시작하는 후보가 없어 (이미 쓴 단어뿐)</div></div>';
   const legal=tot[0]+tot[1]+tot[2]+tot[3];
-  const who=S.moves%2===0?'나':'상대';
   let banner='';
   if(S.kind==="preview"){
     banner='<div class="banner">✏️ <b>'+raw+'</b> — 수순에 아직 없는 수야. '+(SEQ.length%2===0?'나':'상대')+
@@ -99903,19 +99914,27 @@ function runShield(raw, res, sum){
     banner='<div class="banner">✏️ <b>'+raw+'</b> — 지금 수순('+lastWord()+') 뒤에 둘 수 없는 단어야 ('+S.why+
       '). 새 시작으로 보고 있어 · 아래 단어를 누르면 지금 수순은 지워지고 여기서 새로 시작해</div>';
   }
-  const head='<span class="turn">지금 둘 사람: <b>'+who+'</b> · 보호막 <b>'+sh+'</b> → 다음 사람 '+h2+'</span><br>';
+  const head='<span class="turn'+(who==='상대'?' opp-turn':'')+'">'+(who==='상대'?'🔴 ':'🟢 ')+'지금 둘 사람: <b>'+who+'</b> · 보호막 <b>'+sh+'</b> → 다음 사람 '+h2+'</span><br>';
   const ill=tot[4]?' · 🚫 보호막 미달 '+tot[4]+'개':'';
   let msg;
   if(legal===0 && tot[4]>0){
-    msg='<span class="k">보호막 '+sh+'에서 낼 수 있는 단어가 없음</span> — 지금 둘 사람('+who+')의 패배. 이 자리로 보낸 수가 보호막 공격이야.';
+    msg=who==='나'
+      ? '<span class="k">보호막 '+sh+'에서 낼 수 있는 단어가 없음</span> — 내 패배. 상대의 보호막 공격에 걸린 자리야.'
+      : '<span class="g">상대는 보호막 '+sh+'에서 낼 수 있는 단어가 없음</span> — 내 승리. 방금 둔 수가 보호막 공격이야.';
   } else if(legal===0){
-    msg='<span class="none">낼 수 있는 단어가 없음 — 지금 둘 사람('+who+')의 패배.</span>';
+    msg=who==='나'?'<span class="none">낼 수 있는 단어가 없음 — 내 패배.</span>'
+                  :'<span class="g">상대는 낼 수 있는 단어가 없음 — 내 승리.</span>';
   } else if(tot[0]>0){
-    msg='최선: <span class="k">💀 즉사 '+tot[0]+'개</span> — 상대가 보호막 '+h2+'에서 낼 수 있는 단어가 0개 → 승리.';
+    msg=who==='나'
+      ? '최선: <span class="k">💀 즉사 '+tot[0]+'개</span> — 내가 이 중 하나를 내면 상대가 보호막 '+h2+'에서 낼 단어가 0개 → 내 승리.'
+      : '<span class="warn">⚠️ 상대의 공격</span>: <span class="k">💀 즉사 '+tot[0]+'개</span> — 상대가 이 중 하나를 내면 내가 보호막 '+h2+'에서 낼 단어가 0개 → 내 패배.';
   } else if(tot[1]>0){
-    msg='즉사는 없지만 <span class="g">👍 유리 '+tot[1]+'개</span> (상대를 보호막 '+h2+' 패배 자리로 보냄 · 사전 기준 추정).';
+    msg=who==='나'
+      ? '즉사는 없지만 <span class="g">👍 유리 '+tot[1]+'개</span> (상대를 보호막 '+h2+' 패배 자리로 보냄 · 사전 기준 추정).'
+      : '<span class="warn">⚠️ 상대의 공격</span>: <span class="g">👍 유리 '+tot[1]+'개</span> (나를 보호막 '+h2+' 패배 자리로 보냄 · 사전 기준 추정).';
   } else {
-    msg='<span class="none">즉사·유리 없음. 무승부/불리만 가능 — 신중히.</span>';
+    msg=who==='나'?'<span class="none">즉사·유리 없음. 무승부/불리만 가능 — 신중히.</span>'
+                  :'<span class="g">상대는 즉사·유리 수가 없음</span> (무승부/불리만 가능 · 나에게 유리 · 사전 기준 추정).';
   }
   let info='';
   const nonKill=legal-tot[0];
@@ -99994,7 +100013,8 @@ function searchCore(){
   }
   box.addEventListener("click",e=>{
     const b=e.target.closest(".sb"); if(!b) return;
-    if(CUR&&CUR.kind==="preview") recordPending(CUR);   // 보고 있던 미기록 수를 기록하고 다음 사람 보호막을 바꾼다
+    if(CUR&&(CUR.kind==="preview"||(CUR.kind==="filter"&&CUR.exact)))   // 입력해 둔 수를 기록하고 다음 사람 보호막을 바꾼다
+      recordPending(CUR.kind==="preview"?CUR:{pending:CUR.prefix});
     SH=Number(b.dataset.h); runSearch();
   });
 })();
@@ -100059,28 +100079,29 @@ function computeSuggest(raw){
       return {mode:"move", items:out.slice(0,SUG_MAX), total:out.length,
         label:'지금 둘 사람('+(SEQ.length%2===0?'나':'상대')+') · 보호막 '+SH+'에서 둘 수 있는 단어 — 누르면 수순에 기록'};
     }
+    if(branchesFor(last).some(br=>br.words.some(w=>w.startsWith(raw))))
+      return {mode:"none", items:[], total:0,
+        label:raw+'… 로 시작하는 후보는 있지만 보호막 '+SH+'에서 둘 수 있는 건 없어 (미달이거나 이미 쓴 단어)'};
   }
   const ws=prefixWords(raw);
   if(!ws.length) return null;
   ws.sort(byLen);
   const mid=TAB==="shield"&&SEQ.length>0;
   return {mode:"start", items:ws.slice(0,SUG_MAX), total:ws.length,
-    label:mid?'수순과 이어지지 않음 · 새로 시작할 상대 단어 고르기 (누르면 지금 수순은 지워짐)':'상대가 낸 단어 고르기'};
+    label:mid?'수순('+lastWord()+') 뒤에 이어지지 않음 · 새로 시작할 단어 고르기 (고른 뒤 수를 두면 지금 수순은 지워짐)':'상대가 낸 단어 고르기'};
 }
 function renderSuggest(){
   const box=$("suggest"), raw=cleanInput($("q").value);
   SUG=computeSuggest(raw);
   if(!SUG){ box.hidden=true; box.innerHTML=""; return; }
   box.hidden=false;
+  if(!SUG.items.length){ box.innerHTML='<span class="sglab">'+SUG.label+'</span>'; return; }
   box.innerHTML='<span class="sglab">'+SUG.label+(SUG.total>SUG.items.length?' · '+SUG.total.toLocaleString()+'개 중 짧은 순 '+SUG.items.length+'개':'')+'</span>'+
     '<div class="sgrow">'+SUG.items.map(w=>'<button type="button" class="sg" data-w="'+w+'"><b>'+raw+'</b>'+w.slice(raw.length)+'</button>').join("")+'</div>';
 }
 function pickSuggest(w){
   if(!SUG) return;
-  if(TAB==="shield"&&SEQ.length){
-    if(SUG.mode==="move"){ HIST.push({q:lastWord(), sh:SH}); SEQ.push({w, sh:SH}); SH=Math.max(0,SH-1); }
-    else { HIST=[]; SEQ=[]; }
-  }
+  if(TAB==="shield"&&SEQ.length&&SUG.mode==="move"){ HIST.push({q:lastWord(), sh:SH}); SEQ.push({w, sh:SH}); SH=Math.max(0,SH-1); }
   $("q").value=w; SUG_OFF=true; runSearch();
 }
 $("suggest").addEventListener("click",e=>{ const b=e.target.closest(".sg"); if(b) pickSuggest(b.dataset.w); });
@@ -100092,10 +100113,12 @@ function playTyped(){
   const w=cleanInput($("play").value);
   if(!w){ msg.textContent=""; return; }
   let raw=cleanInput($("q").value);
-  if(!raw&&SEQ.length){ raw=lastWord(); $("q").value=raw; }   // 검색창을 비웠으면 수순의 마지막 단어에서 둔다
+  if(!raw&&SEQ.length){ raw=lastWord(); $("q").value=raw; SUG_OFF=true; runSearch(); }   // 검색창을 비웠으면 수순의 마지막 단어에서 둔다
   if(!raw){ msg.textContent="먼저 검색창에 시작 단어를 입력해."; return; }
   const S=shieldState(raw); CUR=S;
-  const why=moveProblem(raw, w, S.sh, S.used);
+  // 걸러 보는 중(앞 글자만 친 상태)이면 검색창 글자가 아니라 수순의 마지막 단어 뒤에 두는 것
+  const prev=S.kind==="filter"?lastWord():raw;
+  const why=moveProblem(prev, w, S.sh, S.used);
   if(why){ msg.textContent=w+" — "+why; return; }
   msg.textContent=""; $("play").value="";
   commitMove(w); SUG_OFF=true; runSearch();
@@ -100186,7 +100209,6 @@ function applyTheme(){
   if(dark) document.documentElement.setAttribute("data-theme","dark");
   else document.documentElement.removeAttribute("data-theme");
   $("themeBtn").textContent=dark?"☀️ 밝게":"🌙 어둡게";
-  $("themeBtn").setAttribute("aria-pressed",dark?"true":"false");
 }
 applyTheme();
 $("themeBtn").addEventListener("click",()=>{
