@@ -7,6 +7,9 @@ name: upload-proof-releases
 #
 # It uploads ONLY when it is started by hand (workflow_dispatch) with upload = yes.
 # A push that changes this file only checks the staged files; no release is touched.
+# Both jobs fetch only release_staging/<tag> of the tags given (2026-11-21): the branch keeps every staged file in its
+# history, and checking out all of them took 10-14 minutes per job. Each run puts its new files under a new tag, so the
+# upload and the download check below only see the new files.
 
 on:
   workflow_dispatch:
@@ -35,19 +38,33 @@ jobs:
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      TAGS: ${{ inputs.tags || 'all' }}
     steps:
+      - id: paths
+        name: Folders to fetch
+        run: |
+          if [ "$TAGS" = "all" ]; then list="release_staging"; else list=$(for t in $TAGS; do echo "release_staging/$t"; done); fi
+          { echo "list<<PATHS_END"; echo "$list"; echo "PATHS_END"; } >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v4
         with:
-          sparse-checkout: release_staging
+          sparse-checkout: ${{ steps.paths.outputs.list }}
           fetch-depth: 1
+          filter: blob:none
       - name: Check the staged files against MANIFEST.json
         run: |
           python3 - <<'EOF'
-          import hashlib, json, sys
+          import hashlib, json, os, sys
           from pathlib import Path
           bad = 0
           total = 0
-          for d in sorted(p for p in Path('release_staging').iterdir() if p.is_dir()):
+          tags = os.environ['TAGS'].split()
+          dirs = sorted(p for p in Path('release_staging').iterdir() if p.is_dir()) if tags == ['all'] else [Path('release_staging') / t for t in tags]
+          for d in dirs:
+              if not (d / 'MANIFEST.json').exists():
+                  print('no staged folder:', d.name)
+                  bad += 1
+                  continue
               m = json.loads((d / 'MANIFEST.json').read_text(encoding='utf-8'))
               assert m['release_tag'] == d.name, d.name
               on_disk = {p.name for p in d.iterdir() if p.is_file() and p.name != 'MANIFEST.json'}
@@ -79,10 +96,16 @@ jobs:
       TAGS: ${{ inputs.tags }}
       TARGET: ${{ inputs.target }}
     steps:
+      - id: paths
+        name: Folders to fetch
+        run: |
+          if [ "$TAGS" = "all" ]; then list="release_staging"; else list=$(for t in $TAGS; do echo "release_staging/$t"; done); fi
+          { echo "list<<PATHS_END"; echo "$list"; echo "PATHS_END"; } >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v4
         with:
-          sparse-checkout: release_staging
+          sparse-checkout: ${{ steps.paths.outputs.list }}
           fetch-depth: 1
+          filter: blob:none
       - name: Create the releases and attach the files
         run: |
           set -euo pipefail
