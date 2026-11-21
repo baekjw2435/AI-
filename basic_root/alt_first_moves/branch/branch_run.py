@@ -2,7 +2,7 @@
 """Follow-up branches: prove positions with any history (e.g. 식생활 → 활극 → 극락) and verify each certificate.
 
 usage: branch_run.py CASES.json WORK [--seconds 600] [--budget 0] [--jobs 3] [--tt-mb 1024] [--stuck-nodes 200000]
-                     [--only b01,b02] [--keep-state 0|1] [--cumulative-cap 0]
+                     [--only b01,b02 (these cases, in this order)] [--keep-state 0|1] [--cumulative-cap 0]
   CASES.json: {"cases": [{"name", "position": {"initial_syllable", "history": [...]}, "method": "replay"|"direct"|"table",
                "source": vertex name, "source_path": certificate (replay; default sources/<source>/proof.v4.gz),
                "guide": dir, "guide_book": book id, "expect": "W"|"L" (table)}]}
@@ -45,8 +45,7 @@ DICT = BASIC / 'words_817.txt'
 SOURCES = Path(os.environ.get('SOURCES', '/home/user/AI-/.work/sources'))
 REPLAY = os.environ.get('REPLAY_SOLVER', '/home/user/AI-/.work/measure/solver_v5_replay')
 TABLE = os.environ.get('TABLE_SOLVER', '/home/user/AI-/.work/measure/solver_v5_table')
-MAIN_DIR = os.environ.get('MAIN_DIR', '/tmp/claude-0/-home-user-AI-/2401d150-dd76-525a-a003-834c39d611b3/scratchpad/artifact-files/'
-                                      '8b42c88b-1088-4496-9137-10f8866f75de')
+MAIN_DIR = os.environ.get('MAIN_DIR', '/home/user/AI-/.work/main_map')   # the existing route map's files
 MIN_ALLOT = 5.0
 KEEP = 2000000
 
@@ -111,8 +110,9 @@ def main():
          '--cumulative-cap': '0', '--budget-log': 'budget.json'}
     o.update({rest[i]: rest[i + 1] for i in range(0, len(rest), 2)})
     cases = json.loads(cases_path.read_text(encoding='utf-8'))['cases']
-    if o['--only']:
-        cases = [c for c in cases if c['name'] in o['--only'].split(',')]
+    if o['--only']:                                   # exactly these cases, in the order given
+        by = {c['name']: c for c in cases}
+        cases = [by[n] for n in o['--only'].split(',') if n]
     m = ModelV3(DICT.read_bytes(), 817)
     budget = Budget(float(o['--budget']), float(o['--seconds']))
     keep = o['--keep-state'] == '1'
