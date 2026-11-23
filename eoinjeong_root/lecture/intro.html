@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>SPQR 오프닝</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&family=Noto+Sans+KR:wght@400;700&display=block">
+<style>
+:root { --ink:#18202C; --ink-soft:#4A5566; --bronze:#7A5A22; --gold:#C9A14E; --red:#8E1C1C;
+  --display:'Nanum Myeongjo','AppleMyungjo','Batang',Georgia,serif; --body:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',Arial,sans-serif; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:1920px; height:1080px; overflow:hidden; }
+body { background:#FFFFFF; font-family:var(--body); }
+.stage { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background: radial-gradient(ellipse 70% 75% at 50% 46%, #FFFFFF 0%, #FCFBF8 55%, #F1EEE7 100%);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.light { position:absolute; inset:0; background: radial-gradient(ellipse 38% 34% at 50% 34%, rgba(232,206,140,.20), rgba(232,206,140,0) 70%);
+  animation: fade 1600ms ease-out 600ms both; }
+@keyframes fade { from { opacity:0; } to { opacity:1; } }
+
+.crest { position:relative; width:720px; height:405px; }
+.wreath { position:absolute; inset:0; width:720px; height:405px; overflow:visible; filter: drop-shadow(0 6px 8px rgba(90,62,20,.16)); }
+.stem { fill:none; stroke:#8C6A2C; stroke-width:3; stroke-linecap:round; stroke-dasharray:1; stroke-dashoffset:0;
+  animation: draw 1450ms cubic-bezier(.45,.05,.35,1) 250ms both; }
+@keyframes draw { from { stroke-dashoffset:1; } to { stroke-dashoffset:0; } }
+.leaf { fill:url(#lf); stroke:#5E4419; stroke-width:1; transform-box:fill-box; transform-origin:0% 50%;
+  animation: leafIn 620ms cubic-bezier(.2,.9,.3,1.35) both; animation-delay:var(--d); }
+@keyframes leafIn { from { transform:scale(0) rotate(-28deg); opacity:0; } 40% { opacity:1; } to { transform:scale(1) rotate(0deg); opacity:1; } }
+.berry { fill:#A9802F; transform-box:fill-box; transform-origin:50% 50%; animation: pop 420ms cubic-bezier(.2,.9,.3,1.6) both; animation-delay:var(--d); }
+@keyframes pop { from { transform:scale(0); opacity:0; } to { transform:scale(1); opacity:1; } }
+.ribbon { transform-box:fill-box; transform-origin:50% 0%; animation: unfurl 700ms cubic-bezier(.2,.8,.2,1) 150ms both; }
+@keyframes unfurl { from { transform:scaleY(0); opacity:0; } to { transform:scaleY(1); opacity:1; } }
+.knot { fill:#B32A2A; stroke:#9A7330; stroke-width:1.5; transform-box:fill-box; transform-origin:50% 50%; animation: pop 500ms cubic-bezier(.2,.9,.3,1.6) 100ms both; }
+
+.spqr { position:absolute; left:0; top:150px; width:720px; text-align:center; padding-left:36px;
+  font-family:var(--display); font-weight:800; font-size:84px; line-height:1.1; letter-spacing:36px;
+  background: linear-gradient(100deg, #6E4E1A 0%, #9C7A35 30%, #B08A3C 44%, #F3E1A8 50%, #B08A3C 56%, #9C7A35 70%, #6E4E1A 100%);
+  background-size:300% 100%; background-position:0% 0%; -webkit-background-clip:text; background-clip:text; color:transparent;
+  filter: drop-shadow(0 2px 3px rgba(110,78,26,.22));
+  animation: spqrIn 1100ms cubic-bezier(.2,.7,.2,1) 1300ms both, shine 1500ms ease-in-out 2300ms both; }
+@keyframes spqrIn { from { opacity:0; letter-spacing:72px; filter: blur(14px) drop-shadow(0 2px 3px rgba(110,78,26,0)); }
+  to { opacity:1; letter-spacing:36px; filter: blur(0px) drop-shadow(0 2px 3px rgba(110,78,26,.22)); } }
+@keyframes shine { from { background-position:100% 0%; } to { background-position:0% 0%; } }
+
+.rule { width:460px; height:2px; margin:26px 0 42px; background: linear-gradient(90deg, rgba(154,115,48,0), #9A7330 18%, #C9A14E 50%, #9A7330 82%, rgba(154,115,48,0));
+  animation: grow 1000ms cubic-bezier(.3,.7,.2,1) 2000ms both; }
+@keyframes grow { from { transform:scaleX(0); opacity:0; } to { transform:scaleX(1); opacity:1; } }
+
+.title { position:relative; display:flex; align-items:center; gap:40px; }
+.word { display:flex; gap:6px; }
+.ch { font-family:var(--display); font-weight:800; font-size:128px; line-height:1.1; color:var(--ink);
+  text-shadow: 0 4px 14px rgba(24,32,44,.12);
+  animation: chIn 900ms cubic-bezier(.16,.84,.24,1) both; animation-delay: calc(2450ms + var(--i) * 105ms); }
+@keyframes chIn { from { opacity:0; transform: translateY(56px) rotate(-7deg) scale(.82); filter: blur(12px); }
+  to { opacity:1; transform: translateY(0) rotate(0deg) scale(1); filter: blur(0px); } }
+.ch.tail { animation: chIn 900ms cubic-bezier(.16,.84,.24,1) both, ember 800ms ease-out both; animation-delay: calc(2450ms + var(--i) * 105ms), 3950ms; color:var(--red);
+  text-shadow: 0 4px 18px rgba(142,28,28,.22); }
+@keyframes ember { from { color:var(--ink); text-shadow: 0 4px 14px rgba(24,32,44,.12); } to { color:var(--red); text-shadow: 0 4px 18px rgba(142,28,28,.22); } }
+.dia { width:18px; height:18px; background:#9A7330; transform: rotate(45deg); animation: diaIn 600ms ease-out 3100ms both; }
+@keyframes diaIn { from { opacity:0; transform: rotate(45deg) scale(0); } to { opacity:1; transform: rotate(45deg) scale(1); } }
+/* gold sheen through the dark letters only: lighten keeps the white page white */
+.sheen { position:absolute; top:-10px; bottom:-10px; left:-200px; width:240px; mix-blend-mode:lighten; pointer-events:none;
+  background: linear-gradient(100deg, rgba(214,178,98,0) 0%, rgba(214,178,98,.95) 50%, rgba(214,178,98,0) 100%);
+  opacity:0; animation: sweep 1100ms ease-in-out 3650ms both; }
+@keyframes sweep { 0% { opacity:0; transform: translateX(0px) skewX(-16deg); } 12% { opacity:1; } 88% { opacity:1; }
+  100% { opacity:0; transform: translateX(1720px) skewX(-16deg); } }
+
+.sub { margin-top:44px; font-size:34px; letter-spacing:14px; padding-left:14px; color:var(--ink-soft); animation: rise 900ms ease-out 4250ms both; }
+@keyframes rise { from { opacity:0; transform: translateY(16px); } to { opacity:1; transform: translateY(0); } }
+
+.spark { position:absolute; width:40px; height:40px; margin:-20px 0 0 -20px; }
+.spark svg { width:40px; height:40px; overflow:visible; animation: twinkle 900ms ease-in-out both; animation-delay: var(--d); }
+.spark path { fill:#E3C27A; }
+@keyframes twinkle { 0% { transform: scale(0) rotate(0deg); opacity:0; } 40% { transform: scale(var(--s)) rotate(45deg); opacity:1; }
+  100% { transform: scale(0) rotate(90deg); opacity:0; } }
+
+/* thumbnail: the finished picture, a bit higher, with the episode label under the title */
+body.thumb * { animation: none !important; }
+body.thumb .sheen, body.thumb .spark, body.thumb .sub { display:none; }
+body.thumb .stage { justify-content:flex-start; padding-top:96px; }
+body.thumb .crest { transform: scale(.86); margin:-28px 0 -28px; }
+body.thumb .rule { margin:18px 0 34px; }
+body.thumb .ep { display:block; }
+.ep { display:none; margin-top:56px; padding:18px 64px 24px; border-radius:20px; background:var(--red); color:#FBF3E4;
+  font-family:var(--body); font-weight:700; font-size:104px; line-height:1.15; letter-spacing:4px; box-shadow: 0 10px 30px rgba(142,28,28,.25); }
+</style></head>
+<body><div class="stage"><div class="light"></div>
+<div class="crest"><svg class="wreath" viewBox="0 0 640 360" aria-label="청동빛 월계관"><defs><linearGradient id="lf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DDBB6A"/><stop offset="1" stop-color="#7A5520"/></linearGradient></defs><g class="ribbon"><path d="M314 322L290 352L301 355L318 327Z" fill="#9E2323"/><path d="M326 322L350 352L339 355L322 327Z" fill="#9E2323"/></g><path class="stem" pathLength="1" d="M303.9 325.7 L290.4 325.1 L276.9 324.0 L263.5 322.6 L250.2 320.8 L237.2 318.7 L224.3 316.1 L211.7 313.2 L199.4 310.0 L187.4 306.4 L175.8 302.4 L164.5 298.2 L153.6 293.6 L143.1 288.7 L133.1 283.5 L123.6 278.1 L114.6 272.3 L106.1 266.4 L98.2 260.2 L90.8 253.8 L84.1 247.1 L77.9 240.3 L72.4 233.4 L67.5 226.3 L63.3 219.0 L59.7 211.7 L56.8 204.2 L54.6 196.7 L53.0 189.1 L52.2 181.5 L52.0 173.9 L52.6 166.3 L53.8 158.7 L55.7 151.1 L58.3 143.6 L61.6 136.2 L65.5 128.9 L70.1 121.8 L75.4 114.7 L81.3 107.8 L87.8 101.1 L94.9 94.6 L102.5 88.3 L110.8 82.3 L119.6 76.4 L128.9 70.9 L138.6 65.6 L148.9 60.5 L159.6 55.8"/><g transform="translate(235.7 318.4) rotate(-131.5)"><path class="leaf" style="--d:0.405s" d="M0 0Q24.0 -14.4 48.0 0Q24.0 14.4 0 0Z"/></g><g transform="translate(235.7 318.4) rotate(-207.5)"><path class="leaf" style="--d:0.465s" d="M0 0Q24.0 -14.4 48.0 0Q24.0 14.4 0 0Z"/></g><g transform="translate(180.2 304.0) rotate(-123.1)"><path class="leaf" style="--d:0.541s" d="M0 0Q23.1 -13.9 46.2 0Q23.1 13.9 0 0Z"/></g><g transform="translate(180.2 304.0) rotate(-199.1)"><path class="leaf" style="--d:0.601s" d="M0 0Q23.1 -13.9 46.2 0Q23.1 13.9 0 0Z"/></g><g transform="translate(131.9 282.9) rotate(-113.1)"><path class="leaf" style="--d:0.677s" d="M0 0Q22.2 -13.3 44.4 0Q22.2 13.3 0 0Z"/></g><g transform="translate(131.9 282.9) rotate(-189.1)"><path class="leaf" style="--d:0.737s" d="M0 0Q22.2 -13.3 44.4 0Q22.2 13.3 0 0Z"/></g><circle class="berry" style="--d:0.857s" cx="123.5" cy="291.4" r="5.5"/><g transform="translate(93.5 256.2) rotate(-100.5)"><path class="leaf" style="--d:0.813s" d="M0 0Q21.3 -12.8 42.6 0Q21.3 12.8 0 0Z"/></g><g transform="translate(93.5 256.2) rotate(-176.5)"><path class="leaf" style="--d:0.873s" d="M0 0Q21.3 -12.8 42.6 0Q21.3 12.8 0 0Z"/></g><g transform="translate(66.9 225.3) rotate(-83.9)"><path class="leaf" style="--d:0.949s" d="M0 0Q20.4 -12.2 40.8 0Q20.4 12.2 0 0Z"/></g><g transform="translate(66.9 225.3) rotate(-159.9)"><path class="leaf" style="--d:1.009s" d="M0 0Q20.4 -12.2 40.8 0Q20.4 12.2 0 0Z"/></g><g transform="translate(53.5 191.9) rotate(-62.8)"><path class="leaf" style="--d:1.085s" d="M0 0Q19.5 -11.7 39.0 0Q19.5 11.7 0 0Z"/></g><g transform="translate(53.5 191.9) rotate(-138.8)"><path class="leaf" style="--d:1.145s" d="M0 0Q19.5 -11.7 39.0 0Q19.5 11.7 0 0Z"/></g><circle class="berry" style="--d:1.265s" cx="41.6" cy="193.2" r="5.5"/><g transform="translate(54.0 157.7) rotate(-39.6)"><path class="leaf" style="--d:1.221s" d="M0 0Q18.6 -11.2 37.2 0Q18.6 11.2 0 0Z"/></g><g transform="translate(54.0 157.7) rotate(-115.6)"><path class="leaf" style="--d:1.281s" d="M0 0Q18.6 -11.2 37.2 0Q18.6 11.2 0 0Z"/></g><g transform="translate(68.4 124.4) rotate(-18.8)"><path class="leaf" style="--d:1.357s" d="M0 0Q17.7 -10.6 35.4 0Q17.7 10.6 0 0Z"/></g><g transform="translate(68.4 124.4) rotate(-94.8)"><path class="leaf" style="--d:1.417s" d="M0 0Q17.7 -10.6 35.4 0Q17.7 10.6 0 0Z"/></g><g transform="translate(95.9 93.8) rotate(-2.5)"><path class="leaf" style="--d:1.493s" d="M0 0Q16.8 -10.1 33.6 0Q16.8 10.1 0 0Z"/></g><g transform="translate(95.9 93.8) rotate(-78.5)"><path class="leaf" style="--d:1.553s" d="M0 0Q16.8 -10.1 33.6 0Q16.8 10.1 0 0Z"/></g><circle class="berry" style="--d:1.673s" cx="85.8" cy="87.2" r="5.5"/><g transform="translate(135.1 67.4) rotate(9.9)"><path class="leaf" style="--d:1.629s" d="M0 0Q15.9 -9.5 31.8 0Q15.9 9.5 0 0Z"/></g><g transform="translate(135.1 67.4) rotate(-66.1)"><path class="leaf" style="--d:1.689s" d="M0 0Q15.9 -9.5 31.8 0Q15.9 9.5 0 0Z"/></g><g transform="translate(159.6 55.8) rotate(-22.7)"><path class="leaf" style="--d:1.700s" d="M0 0Q15 -9 30 0Q15 9 0 0Z"/></g><path class="stem" pathLength="1" d="M336.1 325.7 L349.6 325.1 L363.1 324.0 L376.5 322.6 L389.8 320.8 L402.8 318.7 L415.7 316.1 L428.3 313.2 L440.6 310.0 L452.6 306.4 L464.2 302.4 L475.5 298.2 L486.4 293.6 L496.9 288.7 L506.9 283.5 L516.4 278.1 L525.4 272.3 L533.9 266.4 L541.8 260.2 L549.2 253.8 L555.9 247.1 L562.1 240.3 L567.6 233.4 L572.5 226.3 L576.7 219.0 L580.3 211.7 L583.2 204.2 L585.4 196.7 L587.0 189.1 L587.8 181.5 L588.0 173.9 L587.4 166.3 L586.2 158.7 L584.3 151.1 L581.7 143.6 L578.4 136.2 L574.5 128.9 L569.9 121.8 L564.6 114.7 L558.7 107.8 L552.2 101.1 L545.1 94.6 L537.5 88.3 L529.2 82.3 L520.4 76.4 L511.1 70.9 L501.4 65.6 L491.1 60.5 L480.4 55.8"/><g transform="translate(404.3 318.4) rotate(27.5)"><path class="leaf" style="--d:0.405s" d="M0 0Q24.0 -14.4 48.0 0Q24.0 14.4 0 0Z"/></g><g transform="translate(404.3 318.4) rotate(-48.5)"><path class="leaf" style="--d:0.465s" d="M0 0Q24.0 -14.4 48.0 0Q24.0 14.4 0 0Z"/></g><g transform="translate(459.8 304.0) rotate(19.1)"><path class="leaf" style="--d:0.541s" d="M0 0Q23.1 -13.9 46.2 0Q23.1 13.9 0 0Z"/></g><g transform="translate(459.8 304.0) rotate(-56.9)"><path class="leaf" style="--d:0.601s" d="M0 0Q23.1 -13.9 46.2 0Q23.1 13.9 0 0Z"/></g><g transform="translate(508.1 282.9) rotate(9.1)"><path class="leaf" style="--d:0.677s" d="M0 0Q22.2 -13.3 44.4 0Q22.2 13.3 0 0Z"/></g><g transform="translate(508.1 282.9) rotate(-66.9)"><path class="leaf" style="--d:0.737s" d="M0 0Q22.2 -13.3 44.4 0Q22.2 13.3 0 0Z"/></g><circle class="berry" style="--d:0.857s" cx="516.5" cy="291.4" r="5.5"/><g transform="translate(546.5 256.2) rotate(-3.5)"><path class="leaf" style="--d:0.813s" d="M0 0Q21.3 -12.8 42.6 0Q21.3 12.8 0 0Z"/></g><g transform="translate(546.5 256.2) rotate(-79.5)"><path class="leaf" style="--d:0.873s" d="M0 0Q21.3 -12.8 42.6 0Q21.3 12.8 0 0Z"/></g><g transform="translate(573.1 225.3) rotate(-20.1)"><path class="leaf" style="--d:0.949s" d="M0 0Q20.4 -12.2 40.8 0Q20.4 12.2 0 0Z"/></g><g transform="translate(573.1 225.3) rotate(-96.1)"><path class="leaf" style="--d:1.009s" d="M0 0Q20.4 -12.2 40.8 0Q20.4 12.2 0 0Z"/></g><g transform="translate(586.5 191.9) rotate(-41.2)"><path class="leaf" style="--d:1.085s" d="M0 0Q19.5 -11.7 39.0 0Q19.5 11.7 0 0Z"/></g><g transform="translate(586.5 191.9) rotate(-117.2)"><path class="leaf" style="--d:1.145s" d="M0 0Q19.5 -11.7 39.0 0Q19.5 11.7 0 0Z"/></g><circle class="berry" style="--d:1.265s" cx="598.4" cy="193.2" r="5.5"/><g transform="translate(586.0 157.7) rotate(-64.4)"><path class="leaf" style="--d:1.221s" d="M0 0Q18.6 -11.2 37.2 0Q18.6 11.2 0 0Z"/></g><g transform="translate(586.0 157.7) rotate(-140.4)"><path class="leaf" style="--d:1.281s" d="M0 0Q18.6 -11.2 37.2 0Q18.6 11.2 0 0Z"/></g><g transform="translate(571.6 124.4) rotate(-85.2)"><path class="leaf" style="--d:1.357s" d="M0 0Q17.7 -10.6 35.4 0Q17.7 10.6 0 0Z"/></g><g transform="translate(571.6 124.4) rotate(-161.2)"><path class="leaf" style="--d:1.417s" d="M0 0Q17.7 -10.6 35.4 0Q17.7 10.6 0 0Z"/></g><g transform="translate(544.1 93.8) rotate(-101.5)"><path class="leaf" style="--d:1.493s" d="M0 0Q16.8 -10.1 33.6 0Q16.8 10.1 0 0Z"/></g><g transform="translate(544.1 93.8) rotate(-177.5)"><path class="leaf" style="--d:1.553s" d="M0 0Q16.8 -10.1 33.6 0Q16.8 10.1 0 0Z"/></g><circle class="berry" style="--d:1.673s" cx="554.2" cy="87.2" r="5.5"/><g transform="translate(504.9 67.4) rotate(-113.9)"><path class="leaf" style="--d:1.629s" d="M0 0Q15.9 -9.5 31.8 0Q15.9 9.5 0 0Z"/></g><g transform="translate(504.9 67.4) rotate(-189.9)"><path class="leaf" style="--d:1.689s" d="M0 0Q15.9 -9.5 31.8 0Q15.9 9.5 0 0Z"/></g><g transform="translate(480.4 55.8) rotate(-157.3)"><path class="leaf" style="--d:1.700s" d="M0 0Q15 -9 30 0Q15 9 0 0Z"/></g><circle class="knot" cx="320" cy="323" r="9"/></svg><div class="spqr">SPQR</div></div>
+<div class="rule"></div>
+<div class="title"><div class="word"><span class="ch" style="--i:0">표</span><span class="ch" style="--i:1">준</span><span class="ch" style="--i:2">사</span><span class="ch" style="--i:3">전</span></div><span class="dia"></span><div class="word"><span class="ch" style="--i:4">어</span><span class="ch" style="--i:5">인</span><span class="ch" style="--i:6">정</span></div><span class="dia"></span><div class="word"><span class="ch" style="--i:7">루</span><span class="ch" style="--i:8">트</span><span class="ch tail" style="--i:9">전</span></div><div class="sheen"></div></div>
+<div class="sub">끝말잇기 강의</div>
+<div class="ep" id="ep">0강 · OT</div>
+<div class="spark" style="left:780px;top:249px;--d:4.55s;--s:1.0"><svg viewBox="-20 -20 40 40"><path d="M0 -20 C2 -6 6 -2 20 0 C6 2 2 6 0 20 C-2 6 -6 2 -20 0 C-6 -2 -2 -6 0 -20Z"/></svg></div><div class="spark" style="left:1140px;top:249px;--d:4.75s;--s:0.9"><svg viewBox="-20 -20 40 40"><path d="M0 -20 C2 -6 6 -2 20 0 C6 2 2 6 0 20 C-2 6 -6 2 -20 0 C-6 -2 -2 -6 0 -20Z"/></svg></div><div class="spark" style="left:1702px;top:672px;--d:4.35s;--s:0.8"><svg viewBox="-20 -20 40 40"><path d="M0 -20 C2 -6 6 -2 20 0 C6 2 2 6 0 20 C-2 6 -6 2 -20 0 C-6 -2 -2 -6 0 -20Z"/></svg></div><div class="spark" style="left:688px;top:520px;--d:4.9s;--s:0.6"><svg viewBox="-20 -20 40 40"><path d="M0 -20 C2 -6 6 -2 20 0 C6 2 2 6 0 20 C-2 6 -6 2 -20 0 C-6 -2 -2 -6 0 -20Z"/></svg></div><div class="spark" style="left:1236px;top:470px;--d:5.05s;--s:0.7"><svg viewBox="-20 -20 40 40"><path d="M0 -20 C2 -6 6 -2 20 0 C6 2 2 6 0 20 C-2 6 -6 2 -20 0 C-6 -2 -2 -6 0 -20Z"/></svg></div>
+</div>
+<script>
+const q = new URLSearchParams(location.search);
+if (q.get('mode') === 'thumb') document.body.classList.add('thumb');
+if (q.get('ep')) document.getElementById('ep').textContent = q.get('ep');
+</script></body></html>
