@@ -11,7 +11,8 @@ Only ACCEPTED positions (every verify_v4 acceptance condition) are written.
 
 data.json:
   words      the 621 words in dictionary order (index = word id)
-  syllables  [{"s": syllable, "r": "W"|"L"}] in source order (index = syllable id); r is the receiver's result
+  syllables  [{"s": syllable, "r": "W"|"L", "v": vertex}] in source order (index = syllable id); r is the receiver's result
+  model      ModelV3 of the dictionary for the browser solver: vertices, groups [[source, target, words]], word_group
   tags       release tags; certs [[tag index, sha256]] the certificate files
   nodes      one string per confirmed position: "<syllable id>[.<word id>]... <W|L><cert index>"
              W/L is the result for the player to move after that history.
@@ -21,9 +22,12 @@ exactly when some child is L.
 import gzip
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(HERE.parent / 'guopsaem_root' / 'verifier_v3'))
+from verify_v3 import ModelV3  # noqa: E402
 
 
 def main():
@@ -85,14 +89,18 @@ def main():
         if len(ks) == len(legal):
             assert (val == 'W') == any(nodes[c][0] == 'L' for c in ks), k
             checked += 1
-    syl_out = [{'s': s, 'r': nodes[(i,)][0]} for i, s in enumerate(syls)]
+    m = ModelV3((HERE / 'words_621.txt').read_bytes(), 621)
+    assert m.words == words and not any(m.shared)
+    model = {'vertices': len(m.keys), 'groups': [[s[0], t, c] for (s, t), c in zip(m.edges, m.full_counts)],
+             'word_group': [m.word_group(w) for w in words]}
+    syl_out = [{'s': s, 'r': nodes[(i,)][0], 'v': m.vertex_of(s)} for i, s in enumerate(syls)]
     lines = sorted(nodes.items())
     data = {
         'format': 'eoin621-site-1',
         'dictionary': 'eoinjeong_root/words_621.txt',
         'dictionary_sha256': hashlib.sha256((HERE / 'words_621.txt').read_bytes()).hexdigest(),
         'release_base': 'https://github.com/baekjw2435/AI-/releases/download/',
-        'words': words, 'syllables': syl_out, 'tags': tags, 'certs': certs,
+        'words': words, 'syllables': syl_out, 'model': model, 'tags': tags, 'certs': certs,
         'nodes': ['.'.join(map(str, k)) + ' ' + v + str(c) for k, (v, c) in lines],
     }
     out = HERE / 'site' / 'data.json'
