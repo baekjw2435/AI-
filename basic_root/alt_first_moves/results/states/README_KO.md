@@ -96,3 +96,15 @@
 | `alt817-states-2026-11-23a` | 약 받음, 약식 | `general1/g1_505/state.tt` | 120 | 46 | 2026-11-23 00:25:15 | ? |
 | `alt817-states-2026-11-23a` | 약 받음, 약식 | `general1/g1_506/state.tt` | 120 | 46 | 2026-11-23 00:25:15 | ? |
 | `alt817-states-2026-11-23a` | 표 받음, 표명 | `general1/g1_566/state.tt` | 120 | 46 | 2026-11-23 00:25:15 | ? |
+| `alt817-states-2026-11-23b` | 활 받음, 활동력 | `general1/g1_337/state.tt` | 360 | 47 | 아직 | ? |
+| `alt817-states-2026-11-23b` | 능 받음, 능력 | `general1/g1_379/state.tt` | 120 | 46 | 아직 | ? |
+| `alt817-states-2026-11-23b` | 충 받음, 충격 | `general1/g1_434/state.tt` | 360 | 47 | 아직 | ? |
+| `alt817-states-2026-11-23b` | 충 받음, 충격 | `general1/g1_441/state.tt` | 239 | 46 | 아직 | ? |
+| `alt817-states-2026-11-23b` | 충 받음, 충돌 | `general1/g1_454/state.tt` | 120 | 46 | 아직 | ? |
+| `alt817-states-2026-11-23b` | 충 받음, 충돌 | `general1/g1_455/state.tt` | 120 | 46 | 아직 | ? |
+| `alt817-states-2026-11-23b` | 약 받음, 약력 | `general1/g1_488/state.tt` | 286 | 47 | 아직 | ? |
+| `alt817-states-2026-11-23b` | 약 받음, 약력 | `general1/g1_495/state.tt` | 240 | 46 | 아직 | ? |
+| `alt817-states-2026-11-23b` | 약 받음, 약식 | `general1/g1_509/state.tt` | 120 | 46 | 아직 | ? |
+| `alt817-states-2026-11-23b` | 약 받음, 약식 | `general1/g1_513/state.tt` | 120 | 46 | 아직 | ? |
+| `alt817-states-2026-11-23b` | 약 받음, 약진 | `general1/g1_518/state.tt` | 96 | 46 | 아직 | ? |
+| `alt817-states-2026-11-23b` | 표 받음, 표명 | `general1/g1_571/state.tt` | 120 | 46 | 아직 | ? |
