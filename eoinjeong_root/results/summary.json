@@ -1,0 +1,56 @@
+{
+ "stages": {
+  "roots": {
+   "positions_planned": 173,
+   "confirmed": 173,
+   "tried_unconfirmed": 0,
+   "not_tried": 0,
+   "search_seconds": 3.32,
+   "proof_writing_seconds": 2.49,
+   "verify_wall_seconds": 3.81,
+   "verifier_reported_seconds": 2.98,
+   "solver_process_wall_seconds": 128.62,
+   "stage_wall_clock_seconds_4_jobs": 33.5,
+   "max_search_seconds": 1.540729,
+   "max_certificate_nodes": 26839,
+   "certificate_bytes": 1029454
+  },
+  "first": {
+   "positions_planned": 621,
+   "confirmed": 621,
+   "tried_unconfirmed": 0,
+   "not_tried": 0,
+   "search_seconds": 7.73,
+   "proof_writing_seconds": 7.62,
+   "verify_wall_seconds": 12.3,
+   "verifier_reported_seconds": 9.65,
+   "solver_process_wall_seconds": 127.79,
+   "stage_wall_clock_seconds_4_jobs": 35.4,
+   "max_search_seconds": 1.141586,
+   "max_certificate_nodes": 29035,
+   "certificate_bytes": 3199801
+  },
+  "second": {
+   "positions_planned": 1957,
+   "confirmed": 1957,
+   "tried_unconfirmed": 0,
+   "not_tried": 0,
+   "search_seconds": 25.2,
+   "proof_writing_seconds": 21.7,
+   "verify_wall_seconds": 34.41,
+   "verifier_reported_seconds": 26.58,
+   "solver_process_wall_seconds": 402.61,
+   "stage_wall_clock_seconds_4_jobs": 110.5,
+   "max_search_seconds": 1.295684,
+   "max_certificate_nodes": 29035,
+   "certificate_bytes": 9488070
+  }
+ },
+ "roots_W": 97,
+ "roots_L": 76,
+ "roots_unconfirmed": 0,
+ "places_all_first_moves_classified": 173,
+ "places_all_second_moves_classified": 165,
+ "deeper_W_presenter_replies_after_winning_first_move": 591,
+ "deeper_L_receiver_third_moves_after_winning_second_move": 2205
+}

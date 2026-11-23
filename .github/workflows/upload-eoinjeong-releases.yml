@@ -1,0 +1,151 @@
+name: upload-eoinjeong-releases
+
+# 어인정 표준사전 루트단어(621단어) 연구의 증명서(<sha256>.v4.gz)와 저장 상태(<sha256>.tt.gz)를
+# GitHub 릴리스에 보관합니다. 파일은 이 브랜치의 eoinjeong_root/release_staging/<tag>/ 에서 기다립니다.
+# 첨부한 뒤 모든 파일을 다시 내려받아 SHA-256을 eoinjeong_root/release_staging/<tag>/MANIFEST.json과 비교합니다.
+#
+# 손으로 실행(workflow_dispatch)하고 upload = yes일 때만 올립니다.
+# 이 파일을 바꾸는 push는 모아 둔 파일만 검사하고 릴리스는 건드리지 않습니다.
+# (guopsaem/817 연구의 upload-proof-releases.yml과 같은 방식이고, 태그는 eoin621-* 만 받습니다.)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: "Release tags to upload, space separated, or 'all' for every folder of eoinjeong_root/release_staging/"
+        default: "all"
+      target:
+        description: "Branch or commit the release tags are put on"
+        default: "ccr-f69ebb18-kv98jq"
+      upload:
+        description: "yes = create the releases and attach the files; anything else = only check the staged files"
+        default: "no"
+  push:
+    branches: [ccr-f69ebb18-kv98jq]
+    paths: [".github/workflows/upload-eoinjeong-releases.yml"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: upload-eoinjeong-releases
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TAGS: ${{ inputs.tags || 'all' }}
+    steps:
+      - id: paths
+        name: Folders to fetch
+        run: |
+          if [ "$TAGS" = "all" ]; then list="eoinjeong_root/release_staging"; else list=$(for t in $TAGS; do echo "eoinjeong_root/release_staging/$t"; done); fi
+          { echo "list<<PATHS_END"; echo "$list"; echo "PATHS_END"; } >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: ${{ steps.paths.outputs.list }}
+          fetch-depth: 1
+          filter: blob:none
+      - name: Check the staged files against MANIFEST.json
+        run: |
+          python3 - <<'EOF'
+          import hashlib, json, os, sys
+          from pathlib import Path
+          base = Path('eoinjeong_root/release_staging')
+          bad = 0
+          total = 0
+          tags = os.environ['TAGS'].split()
+          if not base.exists():
+              print('nothing staged'); sys.exit(0)
+          dirs = sorted(p for p in base.iterdir() if p.is_dir()) if tags == ['all'] else [base / t for t in tags]
+          for d in dirs:
+              if not (d / 'MANIFEST.json').exists():
+                  print('no staged folder:', d.name)
+                  bad += 1
+                  continue
+              m = json.loads((d / 'MANIFEST.json').read_text(encoding='utf-8'))
+              assert m['release_tag'] == d.name, d.name
+              on_disk = {p.name for p in d.iterdir() if p.is_file() and p.name != 'MANIFEST.json'}
+              if on_disk != set(m['files']):
+                  print('file list differs from MANIFEST:', d.name)
+                  bad += 1
+              for name, e in m['files'].items():
+                  f = d / name
+                  h = hashlib.sha256(f.read_bytes()).hexdigest() if f.exists() else None
+                  if h != e['sha256'] or name not in (e['sha256'] + '.v4.gz', e['sha256'] + '.tt.gz') or f.stat().st_size != e['bytes']:
+                      print('differs:', d.name, name)
+                      bad += 1
+                  total += 1
+              print(d.name, len(m['files']), 'files', m['total_bytes'], 'bytes')
+          print('staged files checked:', total, 'problems:', bad)
+          sys.exit(1 if bad else 0)
+          EOF
+
+  upload:
+    needs: check
+    if: github.event_name == 'workflow_dispatch' && inputs.upload == 'yes'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      TAGS: ${{ inputs.tags }}
+      TARGET: ${{ inputs.target }}
+    steps:
+      - id: paths
+        name: Folders to fetch
+        run: |
+          if [ "$TAGS" = "all" ]; then list="eoinjeong_root/release_staging"; else list=$(for t in $TAGS; do echo "eoinjeong_root/release_staging/$t"; done); fi
+          { echo "list<<PATHS_END"; echo "$list"; echo "PATHS_END"; } >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: ${{ steps.paths.outputs.list }}
+          fetch-depth: 1
+          filter: blob:none
+      - name: Create the releases and attach the files
+        run: |
+          set -euo pipefail
+          cd eoinjeong_root/release_staging
+          if [ "$TAGS" = "all" ]; then TAGS=$(ls -d */ | tr -d / | tr '\n' ' '); fi
+          echo "$TAGS" > "$RUNNER_TEMP/tags.txt"
+          for tag in $TAGS; do
+            case "$tag" in eoin621-proofs-*|eoin621-states-*) ;; *) echo "unexpected tag: $tag"; exit 1 ;; esac
+            [ -f "$tag/MANIFEST.json" ] || { echo "no staged folder for $tag"; exit 1; }
+            if ! gh release view "$tag" >/dev/null 2>&1; then
+              {
+                echo "어인정 표준사전 루트단어(621단어, 사전 sha256 98f81ea532c8a45a…) 연구의 증명서(route-proof-v4) 파일입니다."
+                echo "817단어(한기사)·3,683단어(구없샘) 연구와는 다른 사전입니다. 판정은 이 사전에서만 유효합니다."
+                echo
+                echo "- 파일 이름은 그 파일의 SHA-256입니다."
+                echo "- 어떤 국면의 증명서인지는 첨부한 MANIFEST.json과 저장소의 eoinjeong_root/results/archive_index.json에 있습니다."
+                echo "- 검증기: guopsaem_root/verifier_v4/verify_v4.cpp"
+              } > "$RUNNER_TEMP/notes.md"
+              gh release create "$tag" --target "$TARGET" --title "$tag" --notes-file "$RUNNER_TEMP/notes.md" --latest=false
+            fi
+            ls "$tag"/* | xargs -n 10 gh release upload "$tag" --clobber
+            echo "uploaded: $tag"
+          done
+      - name: Download every attached file again and compare SHA-256
+        run: |
+          set -euo pipefail
+          for tag in $(cat "$RUNNER_TEMP/tags.txt"); do
+            rm -rf "$RUNNER_TEMP/dl" && mkdir "$RUNNER_TEMP/dl"
+            gh release download "$tag" --dir "$RUNNER_TEMP/dl"
+            TAG="$tag" DL="$RUNNER_TEMP/dl" python3 - <<'EOF'
+          import hashlib, json, os, sys
+          from pathlib import Path
+          tag, dl = os.environ['TAG'], Path(os.environ['DL'])
+          m = json.loads((Path('eoinjeong_root/release_staging') / tag / 'MANIFEST.json').read_text(encoding='utf-8'))
+          got = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in dl.iterdir() if p.name != 'MANIFEST.json'}
+          bad = [n for n, e in m['files'].items() if got.get(n) != e['sha256']] + [n for n in got if n not in m['files']]
+          line = f'{tag}: {len(m["files"])} files in MANIFEST, {len(got)} downloaded again, {len(bad)} differ'
+          print(line)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
+              f.write('- ' + line + '\n')
+          sys.exit(1 if bad or len(got) != len(m['files']) else 0)
+          EOF
+          done

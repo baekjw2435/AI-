@@ -1,0 +1,5 @@
+# 증명서와 저장 상태는 저장소에 넣지 않고 릴리스에 보관합니다.
+results/*/proof/
+results/*/tt/
+results/archive_download/
+results/verify.lock
