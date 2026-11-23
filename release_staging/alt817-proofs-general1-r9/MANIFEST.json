@@ -1,0 +1,350 @@
+{
+ "release_tag": "alt817-proofs-general1-r9",
+ "files": {
+  "0b939d1ce04a2d8f57378f974da5bb8e6e2289ec2471195a2f34778990c0e25f.v4.gz": {
+   "sha256": "0b939d1ce04a2d8f57378f974da5bb8e6e2289ec2471195a2f34778990c0e25f",
+   "bytes": 1307704,
+   "certifies": [
+    "general1/g1_358 활활 → 활동적"
+   ]
+  },
+  "0b6e02cd7d1a9f5697ac2ebde6bb2052c0c108c0bd5350ce53821e3accbba3dd.v4.gz": {
+   "sha256": "0b6e02cd7d1a9f5697ac2ebde6bb2052c0c108c0bd5350ce53821e3accbba3dd",
+   "bytes": 5131452,
+   "certifies": [
+    "general1/g1_366 능동적 → 적자생존"
+   ]
+  },
+  "2d66909d2a313366877da0d66400e0f826089abdcf07b282707fda1abb1feaa3.v4.gz": {
+   "sha256": "2d66909d2a313366877da0d66400e0f826089abdcf07b282707fda1abb1feaa3",
+   "bytes": 2753299,
+   "certifies": [
+    "general1/g1_380 능력 → 역할극"
+   ]
+  },
+  "e3e9756e0f769c88750b90b34d103cd214926eb0dea5f584906c428f548dabd7.v4.gz": {
+   "sha256": "e3e9756e0f769c88750b90b34d103cd214926eb0dea5f584906c428f548dabd7",
+   "bytes": 462383,
+   "certifies": [
+    "general1/g1_381 능력 → 역행"
+   ]
+  },
+  "7200f44c7e56b4c8fbcc698368512e5e1574c0e23255652365445572c040f589.v4.gz": {
+   "sha256": "7200f44c7e56b4c8fbcc698368512e5e1574c0e23255652365445572c040f589",
+   "bytes": 799575,
+   "certifies": [
+    "general1/g1_382 능률 → 율동적"
+   ]
+  },
+  "87018e4b74d53e638c541890b7bf830b369091deb881c45bcffaabdef97b1c3f.v4.gz": {
+   "sha256": "87018e4b74d53e638c541890b7bf830b369091deb881c45bcffaabdef97b1c3f",
+   "bytes": 995011,
+   "certifies": [
+    "general1/g1_383 능률 → 율법"
+   ]
+  },
+  "3bedc0ef98b07b32ec0e24bb1142a090571367e8f1ad1941323c183ea43197f8.v4.gz": {
+   "sha256": "3bedc0ef98b07b32ec0e24bb1142a090571367e8f1ad1941323c183ea43197f8",
+   "bytes": 1206790,
+   "certifies": [
+    "general1/g1_384 능멸 → 멸균"
+   ]
+  },
+  "82513cc55e4cef70629b4d95b94f808c64dcd0851d7e742a8750e7a810b17ed3.v4.gz": {
+   "sha256": "82513cc55e4cef70629b4d95b94f808c64dcd0851d7e742a8750e7a810b17ed3",
+   "bytes": 1379579,
+   "certifies": [
+    "general1/g1_385 능변 → 변명"
+   ]
+  },
+  "23386be427da79c0cfd929a20181574ea3f778b92e3ed802bd0ee50ba5670a81.v4.gz": {
+   "sha256": "23386be427da79c0cfd929a20181574ea3f778b92e3ed802bd0ee50ba5670a81",
+   "bytes": 6339801,
+   "certifies": [
+    "general1/g1_386 능변 → 변별력"
+   ]
+  },
+  "c39edda69f57de548e096fe9de55a7991ebbc7e464a89389ff85b37d8faff25b.v4.gz": {
+   "sha256": "c39edda69f57de548e096fe9de55a7991ebbc7e464a89389ff85b37d8faff25b",
+   "bytes": 17234405,
+   "certifies": [
+    "general1/g1_387 능변 → 변비약"
+   ]
+  },
+  "48ad24b6f0f6eea0afd66b6e35f19c8e1387bf885c7594d21f620cd23a52eccf.v4.gz": {
+   "sha256": "48ad24b6f0f6eea0afd66b6e35f19c8e1387bf885c7594d21f620cd23a52eccf",
+   "bytes": 1960540,
+   "certifies": [
+    "general1/g1_388 능변 → 변절"
+   ]
+  },
+  "c91dc3a9f3bf232e555ce9a2fc0afa7f98cb93cefd530fa78a74563b8d219d9a.v4.gz": {
+   "sha256": "c91dc3a9f3bf232e555ce9a2fc0afa7f98cb93cefd530fa78a74563b8d219d9a",
+   "bytes": 4832461,
+   "certifies": [
+    "general1/g1_389 능변 → 변주곡"
+   ]
+  },
+  "73dcf6dea1c14dd7e3ab03dcbc3d058bfe3c6cfbdafc4967769872c0ef42d77f.v4.gz": {
+   "sha256": "73dcf6dea1c14dd7e3ab03dcbc3d058bfe3c6cfbdafc4967769872c0ef42d77f",
+   "bytes": 793612,
+   "certifies": [
+    "general1/g1_415 곡식 → 식도락"
+   ]
+  },
+  "8179b50e3b27f30b9cdc703322bede0d4511e0e78b491cc3c5283bc6965ffc2e.v4.gz": {
+   "sha256": "8179b50e3b27f30b9cdc703322bede0d4511e0e78b491cc3c5283bc6965ffc2e",
+   "bytes": 517369,
+   "certifies": [
+    "general1/g1_416 곡식 → 식물학"
+   ]
+  },
+  "bda6d7b6a8541ab24fa1d6833ec3b5e90c6e91919afee2d72a4b6bf516de4bb1.v4.gz": {
+   "sha256": "bda6d7b6a8541ab24fa1d6833ec3b5e90c6e91919afee2d72a4b6bf516de4bb1",
+   "bytes": 2087080,
+   "certifies": [
+    "general1/g1_417 곡식 → 식생활"
+   ]
+  },
+  "c18e3d7c3f8f0251142c0fee06312d2c0980c4fc4d9fc383048e5a84dceb98a0.v4.gz": {
+   "sha256": "c18e3d7c3f8f0251142c0fee06312d2c0980c4fc4d9fc383048e5a84dceb98a0",
+   "bytes": 341790,
+   "certifies": [
+    "general1/g1_418 곡식 → 식순"
+   ]
+  },
+  "84c4eb7587440ba85ffd9f835d3de3456b21fea38139cf6eaac171a05a430aba.v4.gz": {
+   "sha256": "84c4eb7587440ba85ffd9f835d3de3456b21fea38139cf6eaac171a05a430aba",
+   "bytes": 999624,
+   "certifies": [
+    "general1/g1_419 곡식 → 식욕부진"
+   ]
+  },
+  "7bed37ca3e3e07890d6a2a0e86d7fb4a1324dabd6ea92fac2284b2bb1b128689.v4.gz": {
+   "sha256": "7bed37ca3e3e07890d6a2a0e86d7fb4a1324dabd6ea92fac2284b2bb1b128689",
+   "bytes": 152393,
+   "certifies": [
+    "general1/g1_420 곡식 → 식이요법"
+   ]
+  },
+  "4b4ffeb70d9cf4588b45e4a86bfedb94f86de05f402222a74a1e6ad8296eba07.v4.gz": {
+   "sha256": "4b4ffeb70d9cf4588b45e4a86bfedb94f86de05f402222a74a1e6ad8296eba07",
+   "bytes": 3129842,
+   "certifies": [
+    "general1/g1_421 곡식 → 식탁"
+   ]
+  },
+  "854ac7596855be5220c30ddee1bdf4c3235490bab285600677182cc6ccc87fa2.v4.gz": {
+   "sha256": "854ac7596855be5220c30ddee1bdf4c3235490bab285600677182cc6ccc87fa2",
+   "bytes": 54883,
+   "certifies": [
+    "general1/g1_422 곡절 → 절교"
+   ]
+  },
+  "38071a10a7608c081578ada39491c2fbf82059d911e92d2ec4615c4c9dc16cf6.v4.gz": {
+   "sha256": "38071a10a7608c081578ada39491c2fbf82059d911e92d2ec4615c4c9dc16cf6",
+   "bytes": 1437625,
+   "certifies": [
+    "general1/g1_423 곡절 → 절규"
+   ]
+  },
+  "5c8d7f1210a3f017b22306496900dcef78af3395cf75b27daca1351465dbe0b6.v4.gz": {
+   "sha256": "5c8d7f1210a3f017b22306496900dcef78af3395cf75b27daca1351465dbe0b6",
+   "bytes": 1337359,
+   "certifies": [
+    "general1/g1_424 곡절 → 절대적"
+   ]
+  },
+  "c41c15d60576a5e18e6de9a28f9387063755db93267f8235298603e6ad2a8a0e.v4.gz": {
+   "sha256": "c41c15d60576a5e18e6de9a28f9387063755db93267f8235298603e6ad2a8a0e",
+   "bytes": 8054082,
+   "certifies": [
+    "general1/g1_425 곡절 → 절도죄"
+   ]
+  },
+  "ccb7ac564e2e4ae76b1d854090f1d403161be3635781873c728894e7c78b3ec7.v4.gz": {
+   "sha256": "ccb7ac564e2e4ae76b1d854090f1d403161be3635781873c728894e7c78b3ec7",
+   "bytes": 1368621,
+   "certifies": [
+    "general1/g1_426 곡절 → 절명"
+   ]
+  },
+  "b4a00e412d104ee96bf45602ba50912fa6c4c0454a57956ead06121167e7b588.v4.gz": {
+   "sha256": "b4a00e412d104ee96bf45602ba50912fa6c4c0454a57956ead06121167e7b588",
+   "bytes": 43632,
+   "certifies": [
+    "general1/g1_456 충돌 → 돌림병"
+   ]
+  },
+  "1784617020a7039ebed863645921edeedb222bb2a4feffdf1b2e64858d9b5a2c.v4.gz": {
+   "sha256": "1784617020a7039ebed863645921edeedb222bb2a4feffdf1b2e64858d9b5a2c",
+   "bytes": 758333,
+   "certifies": [
+    "general1/g1_457 충돌 → 돌발적"
+   ]
+  },
+  "b8ad0c3cf605212b7098e9362d67032215ac72e53ee8fab3aa62b5c4f945e3ba.v4.gz": {
+   "sha256": "b8ad0c3cf605212b7098e9362d67032215ac72e53ee8fab3aa62b5c4f945e3ba",
+   "bytes": 823830,
+   "certifies": [
+    "general1/g1_458 충돌 → 돌변"
+   ]
+  },
+  "7a41f33615f5331dcc843f71667e59f798194a0e1a55352e86d59630cf37c8ca.v4.gz": {
+   "sha256": "7a41f33615f5331dcc843f71667e59f798194a0e1a55352e86d59630cf37c8ca",
+   "bytes": 834752,
+   "certifies": [
+    "general1/g1_459 충돌 → 돌진"
+   ]
+  },
+  "874648798d63e3cd995e9d0968edf7b2893ff4c6ace1f2ac987844df37fc7e63.v4.gz": {
+   "sha256": "874648798d63e3cd995e9d0968edf7b2893ff4c6ace1f2ac987844df37fc7e63",
+   "bytes": 4186372,
+   "certifies": [
+    "general1/g1_460 충돌 → 돌탑"
+   ]
+  },
+  "e21fd388cff7d28bece709a90cd8c1e373c9e9b2b13f1523db86b46b02da24c9.v4.gz": {
+   "sha256": "e21fd388cff7d28bece709a90cd8c1e373c9e9b2b13f1523db86b46b02da24c9",
+   "bytes": 5120083,
+   "certifies": [
+    "general1/g1_461 충돌 → 돌파력"
+   ]
+  },
+  "7fec7e4bfe9748de9418ef1c45ed795728ce44ec825d6231c96b85edb7ebd4ad.v4.gz": {
+   "sha256": "7fec7e4bfe9748de9418ef1c45ed795728ce44ec825d6231c96b85edb7ebd4ad",
+   "bytes": 2923557,
+   "certifies": [
+    "general1/g1_462 충돌 → 돌풍"
+   ]
+  },
+  "c6e49a53f2486879dc39120bec88738efb884dc55c10b7c384c63419ccf19771.v4.gz": {
+   "sha256": "c6e49a53f2486879dc39120bec88738efb884dc55c10b7c384c63419ccf19771",
+   "bytes": 56961,
+   "certifies": [
+    "general1/g1_463 충언 → 언급"
+   ]
+  },
+  "44015b24efa01fdb1cd2e85f042b5e18c6feafb54f2909a5379f002d623d4811.v4.gz": {
+   "sha256": "44015b24efa01fdb1cd2e85f042b5e18c6feafb54f2909a5379f002d623d4811",
+   "bytes": 800110,
+   "certifies": [
+    "general1/g1_464 충언 → 언변"
+   ]
+  },
+  "2d3ec341e68a600abd97f4e0d88d9c6517aa974db8150a55504d4d406f5c9db0.v4.gz": {
+   "sha256": "2d3ec341e68a600abd97f4e0d88d9c6517aa974db8150a55504d4d406f5c9db0",
+   "bytes": 1159030,
+   "certifies": [
+    "general1/g1_507 약식 → 식도락"
+   ]
+  },
+  "f25d02a6b540fe7525b976db442f2a21706fb02e84942a116d76e8faf39b5c13.v4.gz": {
+   "sha256": "f25d02a6b540fe7525b976db442f2a21706fb02e84942a116d76e8faf39b5c13",
+   "bytes": 692634,
+   "certifies": [
+    "general1/g1_508 약식 → 식물학"
+   ]
+  },
+  "ac0e272b149f271dbab6463e1299d37b0fe8601099db2a34defe0b321ebc5115.v4.gz": {
+   "sha256": "ac0e272b149f271dbab6463e1299d37b0fe8601099db2a34defe0b321ebc5115",
+   "bytes": 1043648,
+   "certifies": [
+    "general1/g1_510 약식 → 식순"
+   ]
+  },
+  "7148a42d1308d9cb1c6d56890eb5c609bac97c39499a0dbfe9d56d41fb4d6632.v4.gz": {
+   "sha256": "7148a42d1308d9cb1c6d56890eb5c609bac97c39499a0dbfe9d56d41fb4d6632",
+   "bytes": 1382390,
+   "certifies": [
+    "general1/g1_511 약식 → 식욕부진"
+   ]
+  },
+  "ad5c1d9e03a39666617d126c6a93f2235abbd10ea00b8c9cd8b38667224221f7.v4.gz": {
+   "sha256": "ad5c1d9e03a39666617d126c6a93f2235abbd10ea00b8c9cd8b38667224221f7",
+   "bytes": 1512007,
+   "certifies": [
+    "general1/g1_512 약식 → 식이요법"
+   ]
+  },
+  "a7af1e46cd2d1ba2d0df3f934f4d304429f73a4787aeef58144413041cbda057.v4.gz": {
+   "sha256": "a7af1e46cd2d1ba2d0df3f934f4d304429f73a4787aeef58144413041cbda057",
+   "bytes": 17877650,
+   "certifies": [
+    "general1/g1_514 약진 → 진갑"
+   ]
+  },
+  "30f8542c579f54d718c52a48a32cfe3fb515bd7d3599d30d651d66a18dd70208.v4.gz": {
+   "sha256": "30f8542c579f54d718c52a48a32cfe3fb515bd7d3599d30d651d66a18dd70208",
+   "bytes": 38742071,
+   "certifies": [
+    "general1/g1_515 약진 → 진격"
+   ]
+  },
+  "87a2ce3c5cf660ebb772cea8e54d897a01e085609795b223b77d3765558ca315.v4.gz": {
+   "sha256": "87a2ce3c5cf660ebb772cea8e54d897a01e085609795b223b77d3765558ca315",
+   "bytes": 1400316,
+   "certifies": [
+    "general1/g1_516 약진 → 진군"
+   ]
+  },
+  "fa78a6d9d496fa3b238b05ce7ab401cf93ff7537347b2156d93dd6216180944e.v4.gz": {
+   "sha256": "fa78a6d9d496fa3b238b05ce7ab401cf93ff7537347b2156d93dd6216180944e",
+   "bytes": 60441,
+   "certifies": [
+    "general1/g1_517 약진 → 진급"
+   ]
+  },
+  "71e8490337e909225545f89372cb9958615202d4737e1ff3ad2f1c0b3b3c8a36.v4.gz": {
+   "sha256": "71e8490337e909225545f89372cb9958615202d4737e1ff3ad2f1c0b3b3c8a36",
+   "bytes": 253429,
+   "certifies": [
+    "general1/g1_568 표명 → 명랑"
+   ]
+  },
+  "5dcfc045515c1e845e7b10be2deecd683cb83545b92f37bf2a7dd11b87a83e43.v4.gz": {
+   "sha256": "5dcfc045515c1e845e7b10be2deecd683cb83545b92f37bf2a7dd11b87a83e43",
+   "bytes": 3992100,
+   "certifies": [
+    "general1/g1_569 표명 → 명맥"
+   ]
+  },
+  "d737b7748f5a0bdacb953edb604585e52124032105595ff3177cf76d74285307.v4.gz": {
+   "sha256": "d737b7748f5a0bdacb953edb604585e52124032105595ff3177cf76d74285307",
+   "bytes": 1340105,
+   "certifies": [
+    "general1/g1_572 표명 → 명상적"
+   ]
+  },
+  "e1b3186f005bcbcaa6f2f03c948b10d73bf217c72e1316680e61fd26fc55fc29.v4.gz": {
+   "sha256": "e1b3186f005bcbcaa6f2f03c948b10d73bf217c72e1316680e61fd26fc55fc29",
+   "bytes": 13828794,
+   "certifies": [
+    "general1/g1_573 표명 → 명승"
+   ]
+  },
+  "82c37c0cf7390b6c38adb577f419712701175db95994a3adab2c57624cc1b811.v4.gz": {
+   "sha256": "82c37c0cf7390b6c38adb577f419712701175db95994a3adab2c57624cc1b811",
+   "bytes": 17253783,
+   "certifies": [
+    "general1/g1_574 표명 → 명약"
+   ]
+  },
+  "7d5562e46939b3af4581bad80515010fa93a86f85f11223f167d6b181278d331.v4.gz": {
+   "sha256": "7d5562e46939b3af4581bad80515010fa93a86f85f11223f167d6b181278d331",
+   "bytes": 17242698,
+   "certifies": [
+    "general1/g1_575 표명 → 명언"
+   ]
+  },
+  "ff4fc45badccd24a828edbe8767247231ca8a3b6c6dc4381db355f74d5d249e1.v4.gz": {
+   "sha256": "ff4fc45badccd24a828edbe8767247231ca8a3b6c6dc4381db355f74d5d249e1",
+   "bytes": 1953522,
+   "certifies": [
+    "general1/g1_578 표명 → 명절"
+   ]
+  }
+ },
+ "file_count": 49,
+ "total_bytes": 199959528
+}

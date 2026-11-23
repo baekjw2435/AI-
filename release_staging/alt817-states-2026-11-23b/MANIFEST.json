@@ -1,0 +1,91 @@
+{
+ "release_tag": "alt817-states-2026-11-23b",
+ "files": {
+  "c0e0de99df04f1fb65c3f2ceec0db1f66c50ccf78d9590d89397a4c6f9df5b51.tt.gz": {
+   "sha256": "c0e0de99df04f1fb65c3f2ceec0db1f66c50ccf78d9590d89397a4c6f9df5b51",
+   "bytes": 46579667,
+   "state_sha256": "88adac054c9811f2522dec2bf1eab30352ea7a0fc4e77bada4744bd13dfb3bd3",
+   "work_path": "general1/g1_337/state.tt",
+   "carried_search_seconds": 360.0
+  },
+  "e4a39335959a6709c8a4fa8da41eb886155f4936baf29aad7d33d477e1d12ad7.tt.gz": {
+   "sha256": "e4a39335959a6709c8a4fa8da41eb886155f4936baf29aad7d33d477e1d12ad7",
+   "bytes": 46526771,
+   "state_sha256": "429c47d4489d1a6c6305a97b6137aea7840d50136b21bd13e9a435c4d153eeb3",
+   "work_path": "general1/g1_488/state.tt",
+   "carried_search_seconds": 285.53
+  },
+  "66a4bf3b17e0b790500e4c43bfd030a2eced52f6ef3b63f0ce0ca37778f6f3fa.tt.gz": {
+   "sha256": "66a4bf3b17e0b790500e4c43bfd030a2eced52f6ef3b63f0ce0ca37778f6f3fa",
+   "bytes": 46742825,
+   "state_sha256": "0c556e491ad4cac13f3f3ecee5150ab1bf1e3b926325463c6e3be0fa80e649ac",
+   "work_path": "general1/g1_434/state.tt",
+   "carried_search_seconds": 360.0
+  },
+  "1a97188674be2d6aff0f2ec981ae6658949a01a9bf90977e82509c25a2e4dbc1.tt.gz": {
+   "sha256": "1a97188674be2d6aff0f2ec981ae6658949a01a9bf90977e82509c25a2e4dbc1",
+   "bytes": 46267677,
+   "state_sha256": "dcf22876fd1e9f6c07803a32d1a0eed48f8695508b106ab6e331895fb3843506",
+   "work_path": "general1/g1_441/state.tt",
+   "carried_search_seconds": 239.0
+  },
+  "80c1790a68a98f059820d28549f969d6abb89deda9f39ce025674a310c601dae.tt.gz": {
+   "sha256": "80c1790a68a98f059820d28549f969d6abb89deda9f39ce025674a310c601dae",
+   "bytes": 46489999,
+   "state_sha256": "fa4e948050165d704ebff877507ef522688c88696c534eaef0d1c94cd7fa079b",
+   "work_path": "general1/g1_495/state.tt",
+   "carried_search_seconds": 239.61
+  },
+  "863a992785635987329c7000540ff100ea4c847e5b69423da5a04ada8507c201.tt.gz": {
+   "sha256": "863a992785635987329c7000540ff100ea4c847e5b69423da5a04ada8507c201",
+   "bytes": 45914181,
+   "state_sha256": "a072f3ba1b586bc07cc74d399c32d864c25c4150538a5212a0d883b83943e63b",
+   "work_path": "general1/g1_379/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "13ced51ab14d2efc30136c809e7e49046628b9fa4d51e163fa9cbc8448b57784.tt.gz": {
+   "sha256": "13ced51ab14d2efc30136c809e7e49046628b9fa4d51e163fa9cbc8448b57784",
+   "bytes": 45682962,
+   "state_sha256": "ee7ee0a3be9d19c49316798c0dfb7a641011ae985c14fd54239e76dc6501964f",
+   "work_path": "general1/g1_454/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "2e8dbc24121cfca803f1861689d23da311d71d635d5038dd85fa959ff1d1ba26.tt.gz": {
+   "sha256": "2e8dbc24121cfca803f1861689d23da311d71d635d5038dd85fa959ff1d1ba26",
+   "bytes": 45959220,
+   "state_sha256": "42d92de53870b56e4679089444b136a8554ab2b07b774304c35ff8e2e066ab90",
+   "work_path": "general1/g1_455/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "ef6c49df871af30837c3064846979ebb18a752d0b7370af7e211950a74e5876c.tt.gz": {
+   "sha256": "ef6c49df871af30837c3064846979ebb18a752d0b7370af7e211950a74e5876c",
+   "bytes": 45716341,
+   "state_sha256": "2508ba60b81731bd4ca8d9e9996b3edbccd2ff77db61b77df9829b6983b68e83",
+   "work_path": "general1/g1_509/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "b5fe984bd04b1fd0b2b9ee85c6cd5a7dbd831bae4b1f1b7261bd282407eb1531.tt.gz": {
+   "sha256": "b5fe984bd04b1fd0b2b9ee85c6cd5a7dbd831bae4b1f1b7261bd282407eb1531",
+   "bytes": 45693064,
+   "state_sha256": "2e2a26aefc90142a2b9ace61ec078a7d10c050f4a88d11e52502ccc2fdf29958",
+   "work_path": "general1/g1_571/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "f172aaf2fbe67212319b64ab702337cdb68ead909c1b10234d0b648631f130b7.tt.gz": {
+   "sha256": "f172aaf2fbe67212319b64ab702337cdb68ead909c1b10234d0b648631f130b7",
+   "bytes": 45853158,
+   "state_sha256": "a265f492a29be45b718be23d0447fb06a9b0cfa4745298077c4eef21cd632bc6",
+   "work_path": "general1/g1_513/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "4409fdd7d60003f9415cd1fdb9b80fad690babdbcf0679a1811e6d06f30563bf.tt.gz": {
+   "sha256": "4409fdd7d60003f9415cd1fdb9b80fad690babdbcf0679a1811e6d06f30563bf",
+   "bytes": 45843916,
+   "state_sha256": "76b29f725dee97404bc8c2a9ad8dc761ca68292ec3917eef5b4fecd167862d16",
+   "work_path": "general1/g1_518/state.tt",
+   "carried_search_seconds": 95.84
+  }
+ },
+ "file_count": 12,
+ "total_bytes": 553269781
+}
