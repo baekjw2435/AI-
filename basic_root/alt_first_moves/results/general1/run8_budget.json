@@ -1,0 +1,19 @@
+{
+ "stage_A_resume": {
+  "budget": 600.0,
+  "spent": 599.005,
+  "left_to_B": 0.995
+ },
+ "stage_B_untried": {
+  "budget": 1200.0,
+  "from_A": 0.995,
+  "spent": 1199.998,
+  "left": 0.997
+ },
+ "stage_C_resume_left": {
+  "items": "g1_337,g1_488,g1_434,g1_366,g1_441,g1_495,g1_442,g1_497,g1_498,g1_562,g1_373",
+  "budget": 0.997,
+  "spent": 0
+ },
+ "total_spent": 1799.0030000000002
+}

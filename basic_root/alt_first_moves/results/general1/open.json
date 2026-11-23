@@ -56494,6 +56494,389 @@
   "ply_of_choice": 5
  },
  {
+  "from": "g1_353",
+  "start": "활",
+  "at": [
+   "활약",
+   "약손가락"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "낙승"
+   ],
+   [
+    "낙엽"
+   ],
+   [
+    "낙관적",
+    "낙천적"
+   ],
+   [
+    "낙향"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 낙농업",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_353",
+  "start": "활",
+  "at": [
+   "활약",
+   "약손가락",
+   "낙농업",
+   "업적"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적중률"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_354",
+  "start": "활",
+  "at": [
+   "활약",
+   "약진"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "진갑"
+   ],
+   [
+    "진격"
+   ],
+   [
+    "진퇴유곡",
+    "진혼곡"
+   ],
+   [
+    "진군"
+   ],
+   [
+    "진출권"
+   ],
+   [
+    "진급"
+   ],
+   [
+    "진맥"
+   ],
+   [
+    "진압"
+   ],
+   [
+    "진언"
+   ],
+   [
+    "진력"
+   ],
+   [
+    "진학률"
+   ],
+   [
+    "진취적",
+    "진보적"
+   ],
+   [
+    "진즉"
+   ],
+   [
+    "진폐증"
+   ],
+   [
+    "진수성찬"
+   ],
+   [
+    "진흙탕",
+    "진탕"
+   ],
+   [
+    "진퇴"
+   ],
+   [
+    "진폭"
+   ],
+   [
+    "진도표"
+   ],
+   [
+    "진학"
+   ],
+   [
+    "진행"
+   ],
+   [
+    "진분홍",
+    "진홍"
+   ],
+   [
+    "진두지휘"
+   ],
+   [
+    "진흥"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 진갈색",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_354",
+  "start": "활",
+  "at": [
+   "활약",
+   "약진",
+   "진갈색",
+   "색맹"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "맹공격",
+    "맹추격"
+   ],
+   [
+    "맹목적"
+   ],
+   [
+    "맹탕"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 맹활약",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_354",
+  "start": "활",
+  "at": [
+   "활약",
+   "약진",
+   "진갈색",
+   "색색"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "색맹"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 색칠",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_354",
+  "start": "활",
+  "at": [
+   "활약",
+   "약진",
+   "진갈색",
+   "색칠"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "칠순"
+   ],
+   [
+    "칠흑"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 칠십",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_355",
+  "start": "활",
+  "at": [
+   "활약",
+   "약학"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "학교"
+   ],
+   [
+    "학군"
+   ],
+   [
+    "학급"
+   ],
+   [
+    "학맥"
+   ],
+   [
+    "학습"
+   ],
+   [
+    "학식"
+   ],
+   [
+    "학력"
+   ],
+   [
+    "학구적",
+    "학문적",
+    "학술적",
+    "학자적",
+    "학적"
+   ],
+   [
+    "학생증"
+   ],
+   [
+    "학칙"
+   ],
+   [
+    "학풍"
+   ],
+   [
+    "학교생활"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 학업",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_355",
+  "start": "활",
+  "at": [
+   "활약",
+   "약학",
+   "학업",
+   "업적"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적중률"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_356",
+  "start": "활",
+  "at": [
+   "활활",
+   "활극"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "극락"
+   ],
+   [
+    "극약"
+   ],
+   [
+    "극언"
+   ],
+   [
+    "극력"
+   ],
+   [
+    "극적",
+    "극단적"
+   ],
+   [
+    "극찬"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 극존칭",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_356",
+  "start": "활",
+  "at": [
+   "활활",
+   "활극",
+   "극존칭",
+   "칭찬"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "찬탄"
+   ],
+   [
+    "찬합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 찬성표",
+  "ply_of_choice": 5
+ },
+ {
   "from": "g1_359",
   "start": "능",
   "at": [
@@ -58706,6 +59089,729 @@
   "ply_of_choice": 5
  },
  {
+  "from": "g1_374",
+  "start": "능",
+  "at": [
+   "능력",
+   "역순"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "순교"
+   ],
+   [
+    "순위권"
+   ],
+   [
+    "순기능"
+   ],
+   [
+    "순발력"
+   ],
+   [
+    "순간적",
+    "순리적",
+    "순종적",
+    "순차적"
+   ],
+   [
+    "순직"
+   ],
+   [
+    "순진"
+   ],
+   [
+    "순풍"
+   ],
+   [
+    "순항"
+   ],
+   [
+    "순행"
+   ],
+   [
+    "순환"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 순백색",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_374",
+  "start": "능",
+  "at": [
+   "능력",
+   "역순",
+   "순백색",
+   "색맹"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "맹공격",
+    "맹추격"
+   ],
+   [
+    "맹목적"
+   ],
+   [
+    "맹탕"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 맹활약",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_374",
+  "start": "능",
+  "at": [
+   "능력",
+   "역순",
+   "순백색",
+   "색색"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "색맹"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 색칠",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_374",
+  "start": "능",
+  "at": [
+   "능력",
+   "역순",
+   "순백색",
+   "색칠"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "칠순"
+   ],
+   [
+    "칠흑"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 칠십",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_375",
+  "start": "능",
+  "at": [
+   "능력",
+   "역습",
+   "습격"
+  ],
+  "who": "넘긴 쪽",
+  "choices": [
+   [
+    "격랑"
+   ],
+   [
+    "격돌"
+   ],
+   [
+    "격멸"
+   ],
+   [
+    "격변"
+   ],
+   [
+    "격식"
+   ],
+   [
+    "격언"
+   ],
+   [
+    "격정적",
+    "격식적"
+   ],
+   [
+    "격증"
+   ],
+   [
+    "격찬"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 격퇴",
+  "ply_of_choice": 4
+ },
+ {
+  "from": "g1_375",
+  "start": "능",
+  "at": [
+   "능력",
+   "역습",
+   "습득"
+  ],
+  "who": "넘긴 쪽",
+  "choices": [
+   [
+    "득득"
+   ],
+   [
+    "득점력"
+   ],
+   [
+    "득점왕"
+   ],
+   [
+    "득표"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 득표율",
+  "ply_of_choice": 4
+ },
+ {
+  "from": "g1_375",
+  "start": "능",
+  "at": [
+   "능력",
+   "역습",
+   "습식"
+  ],
+  "who": "넘긴 쪽",
+  "choices": [
+   [
+    "식도락"
+   ],
+   [
+    "식이요법"
+   ],
+   [
+    "식순"
+   ],
+   [
+    "식곤증"
+   ],
+   [
+    "식욕부진"
+   ],
+   [
+    "식충"
+   ],
+   [
+    "식탁"
+   ],
+   [
+    "식단표"
+   ],
+   [
+    "식물학"
+   ],
+   [
+    "식생활"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 식권",
+  "ply_of_choice": 4
+ },
+ {
+  "from": "g1_375",
+  "start": "능",
+  "at": [
+   "능력",
+   "역습",
+   "습관적"
+  ],
+  "who": "넘긴 쪽",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적갈색",
+    "적색",
+    "적회색"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적중률"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적자생존",
+  "ply_of_choice": 4
+ },
+ {
+  "from": "g1_375",
+  "start": "능",
+  "at": [
+   "능력",
+   "역습",
+   "습진"
+  ],
+  "who": "넘긴 쪽",
+  "choices": [
+   [
+    "진갑"
+   ],
+   [
+    "진격"
+   ],
+   [
+    "진퇴유곡",
+    "진혼곡"
+   ],
+   [
+    "진군"
+   ],
+   [
+    "진출권"
+   ],
+   [
+    "진급"
+   ],
+   [
+    "진맥"
+   ],
+   [
+    "진갈색"
+   ],
+   [
+    "진압"
+   ],
+   [
+    "진언"
+   ],
+   [
+    "진력"
+   ],
+   [
+    "진취적",
+    "진보적"
+   ],
+   [
+    "진즉"
+   ],
+   [
+    "진폐증"
+   ],
+   [
+    "진수성찬"
+   ],
+   [
+    "진흙탕",
+    "진탕"
+   ],
+   [
+    "진퇴"
+   ],
+   [
+    "진폭"
+   ],
+   [
+    "진도표"
+   ],
+   [
+    "진학"
+   ],
+   [
+    "진행"
+   ],
+   [
+    "진분홍",
+    "진홍"
+   ],
+   [
+    "진두지휘"
+   ],
+   [
+    "진흥"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 진학률",
+  "ply_of_choice": 4
+ },
+ {
+  "from": "g1_376",
+  "start": "능",
+  "at": [
+   "능력",
+   "역전승"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "승격"
+   ],
+   [
+    "승차권"
+   ],
+   [
+    "승급"
+   ],
+   [
+    "승낙"
+   ],
+   [
+    "승률"
+   ],
+   [
+    "승진"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 승객",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_376",
+  "start": "능",
+  "at": [
+   "능력",
+   "역전승",
+   "승객",
+   "객관식"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "식권"
+   ],
+   [
+    "식도락"
+   ],
+   [
+    "식이요법"
+   ],
+   [
+    "식순"
+   ],
+   [
+    "식곤증"
+   ],
+   [
+    "식욕부진"
+   ],
+   [
+    "식탁"
+   ],
+   [
+    "식단표"
+   ],
+   [
+    "식물학"
+   ],
+   [
+    "식생활"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 식충",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_376",
+  "start": "능",
+  "at": [
+   "능력",
+   "역전승",
+   "승객",
+   "객관적"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적중률"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_377",
+  "start": "능",
+  "at": [
+   "능력",
+   "역풍"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "풍랑"
+   ],
+   [
+    "풍토병"
+   ],
+   [
+    "풍습"
+   ],
+   [
+    "풍력"
+   ],
+   [
+    "풍운"
+   ],
+   [
+    "풍자적"
+   ],
+   [
+    "풍진"
+   ],
+   [
+    "풍향"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 풍류객",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_377",
+  "start": "능",
+  "at": [
+   "능력",
+   "역풍",
+   "풍류객",
+   "객관식"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "식권"
+   ],
+   [
+    "식도락"
+   ],
+   [
+    "식이요법"
+   ],
+   [
+    "식순"
+   ],
+   [
+    "식곤증"
+   ],
+   [
+    "식욕부진"
+   ],
+   [
+    "식탁"
+   ],
+   [
+    "식단표"
+   ],
+   [
+    "식물학"
+   ],
+   [
+    "식생활"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 식충",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_377",
+  "start": "능",
+  "at": [
+   "능력",
+   "역풍",
+   "풍류객",
+   "객관적"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적중률"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_378",
+  "start": "능",
+  "at": [
+   "능력",
+   "역학"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "학교"
+   ],
+   [
+    "학군"
+   ],
+   [
+    "학급"
+   ],
+   [
+    "학맥"
+   ],
+   [
+    "학습"
+   ],
+   [
+    "학식"
+   ],
+   [
+    "학력"
+   ],
+   [
+    "학구적",
+    "학문적",
+    "학술적",
+    "학자적",
+    "학적"
+   ],
+   [
+    "학생증"
+   ],
+   [
+    "학칙"
+   ],
+   [
+    "학풍"
+   ],
+   [
+    "학교생활"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 학업",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_378",
+  "start": "능",
+  "at": [
+   "능력",
+   "역학",
+   "학업",
+   "업적"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적중률"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 5
+ },
+ {
   "from": "g1_396",
   "start": "곡",
   "at": [
@@ -60713,6 +61819,776 @@
   "ply_of_choice": 5
  },
  {
+  "from": "g1_410",
+  "start": "곡",
+  "at": [
+   "곡명",
+   "명칭",
+   "칭찬"
+  ],
+  "who": "넘긴 쪽",
+  "choices": [
+   [
+    "찬탄"
+   ],
+   [
+    "찬합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 찬성표",
+  "ply_of_choice": 4
+ },
+ {
+  "from": "g1_411",
+  "start": "곡",
+  "at": [
+   "곡명",
+   "명퇴"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "퇴락"
+   ],
+   [
+    "퇴역"
+   ],
+   [
+    "퇴적",
+    "퇴폐적"
+   ],
+   [
+    "퇴직"
+   ],
+   [
+    "퇴진"
+   ],
+   [
+    "퇴학"
+   ],
+   [
+    "퇴행"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 퇴색",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_411",
+  "start": "곡",
+  "at": [
+   "곡명",
+   "명퇴",
+   "퇴색",
+   "색맹"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "맹공격",
+    "맹추격"
+   ],
+   [
+    "맹목적"
+   ],
+   [
+    "맹탕"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 맹활약",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_411",
+  "start": "곡",
+  "at": [
+   "곡명",
+   "명퇴",
+   "퇴색",
+   "색색"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "색맹"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 색칠",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_411",
+  "start": "곡",
+  "at": [
+   "곡명",
+   "명퇴",
+   "퇴색",
+   "색칠"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "칠순"
+   ],
+   [
+    "칠흑"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 칠십",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_412",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식곤증"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "증후군"
+   ],
+   [
+    "증권"
+   ],
+   [
+    "증명"
+   ],
+   [
+    "증식"
+   ],
+   [
+    "증언"
+   ],
+   [
+    "증가율"
+   ],
+   [
+    "증진",
+    "증명사진"
+   ],
+   [
+    "증축"
+   ],
+   [
+    "증편"
+   ],
+   [
+    "증폭"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 증표",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_412",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식곤증",
+   "증표",
+   "표명"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "명곡"
+   ],
+   [
+    "명랑"
+   ],
+   [
+    "명맥"
+   ],
+   [
+    "명멸"
+   ],
+   [
+    "명상법"
+   ],
+   [
+    "명색"
+   ],
+   [
+    "명승"
+   ],
+   [
+    "명약"
+   ],
+   [
+    "명언"
+   ],
+   [
+    "명운"
+   ],
+   [
+    "명상적",
+    "명승고적",
+    "명시적"
+   ],
+   [
+    "명절",
+    "명사절"
+   ],
+   [
+    "명증"
+   ],
+   [
+    "명예퇴직",
+    "명예직"
+   ],
+   [
+    "명칭"
+   ],
+   [
+    "명퇴"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 명란젓",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_412",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식곤증",
+   "증표",
+   "표주박"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "박멸"
+   ],
+   [
+    "박명"
+   ],
+   [
+    "박박"
+   ],
+   [
+    "박학다식"
+   ],
+   [
+    "박약"
+   ],
+   [
+    "박력"
+   ],
+   [
+    "박하사탕"
+   ],
+   [
+    "박학"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 박색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_412",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식곤증",
+   "증표",
+   "표기법"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "법규"
+   ],
+   [
+    "법명"
+   ],
+   [
+    "법률"
+   ],
+   [
+    "법적",
+    "법률적"
+   ],
+   [
+    "법학"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 법칙",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_412",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식곤증",
+   "증표",
+   "표식"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "식권"
+   ],
+   [
+    "식도락"
+   ],
+   [
+    "식이요법"
+   ],
+   [
+    "식순"
+   ],
+   [
+    "식욕부진"
+   ],
+   [
+    "식충"
+   ],
+   [
+    "식탁"
+   ],
+   [
+    "식물학"
+   ],
+   [
+    "식생활"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 식단표",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_412",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식곤증",
+   "증표",
+   "표현력"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "역세권"
+   ],
+   [
+    "역할극"
+   ],
+   [
+    "역기능"
+   ],
+   [
+    "역병"
+   ],
+   [
+    "역순"
+   ],
+   [
+    "역전승"
+   ],
+   [
+    "역사적",
+    "역설적",
+    "역적",
+    "역동적"
+   ],
+   [
+    "역풍"
+   ],
+   [
+    "역학",
+    "역사학"
+   ],
+   [
+    "역할"
+   ],
+   [
+    "역행"
+   ],
+   [
+    "역방향"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 역습",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_412",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식곤증",
+   "증표",
+   "표면적"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적중률"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_412",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식곤증",
+   "증표",
+   "표절"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "절교"
+   ],
+   [
+    "절규"
+   ],
+   [
+    "절명"
+   ],
+   [
+    "절벽"
+   ],
+   [
+    "절식"
+   ],
+   [
+    "절약"
+   ],
+   [
+    "절대적",
+    "절망적"
+   ],
+   [
+    "절절"
+   ],
+   [
+    "절도죄"
+   ],
+   [
+    "절찬"
+   ],
+   [
+    "절충"
+   ],
+   [
+    "절편"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 절룩절룩",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_412",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식곤증",
+   "증표",
+   "표준"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "준법"
+   ],
+   [
+    "준결승",
+    "준우승",
+    "준준결승"
+   ],
+   [
+    "준공식"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 준칙",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_412",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식곤증",
+   "증표",
+   "표징"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "징세권"
+   ],
+   [
+    "징검돌"
+   ],
+   [
+    "징병"
+   ],
+   [
+    "징역"
+   ],
+   [
+    "징벌적"
+   ],
+   [
+    "징징"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 징표",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_413",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식권"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "권역",
+    "권력"
+   ],
+   [
+    "권위적",
+    "권위주의적"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 권능",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_413",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식권",
+   "권능",
+   "능멸"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "멸균"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 멸치젓",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_413",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식권",
+   "권능",
+   "능변"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "변명"
+   ],
+   [
+    "변색"
+   ],
+   [
+    "변비약"
+   ],
+   [
+    "변별력"
+   ],
+   [
+    "변화율"
+   ],
+   [
+    "변칙적",
+    "변태적"
+   ],
+   [
+    "변절"
+   ],
+   [
+    "변죽"
+   ],
+   [
+    "변칙"
+   ],
+   [
+    "변혁"
+   ],
+   [
+    "변환"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 변주곡",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_413",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식권",
+   "권능",
+   "능력"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "역세권"
+   ],
+   [
+    "역할극"
+   ],
+   [
+    "역병"
+   ],
+   [
+    "역순"
+   ],
+   [
+    "역습"
+   ],
+   [
+    "역전승"
+   ],
+   [
+    "역사적",
+    "역설적",
+    "역적",
+    "역동적"
+   ],
+   [
+    "역풍"
+   ],
+   [
+    "역학",
+    "역사학"
+   ],
+   [
+    "역할"
+   ],
+   [
+    "역행"
+   ],
+   [
+    "역방향"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 역기능",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_413",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식권",
+   "권능",
+   "능률"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "율법"
+   ],
+   [
+    "율동적"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 율격",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_413",
+  "start": "곡",
+  "at": [
+   "곡식",
+   "식권",
+   "권능",
+   "능동적"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적중률"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 5
+ },
+ {
   "from": "g1_436",
   "start": "충",
   "at": [
@@ -61799,6 +63675,894 @@
   "ply_of_choice": 5
  },
  {
+  "from": "g1_448",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적삼"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "삼색",
+    "삼원색"
+   ],
+   [
+    "삼판양승"
+   ],
+   [
+    "삼한사온"
+   ],
+   [
+    "삼일절"
+   ],
+   [
+    "삼진"
+   ],
+   [
+    "삼인칭"
+   ],
+   [
+    "삼계탕"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 삼십",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_448",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적삼",
+   "삼십",
+   "십계명"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "명곡"
+   ],
+   [
+    "명랑"
+   ],
+   [
+    "명맥"
+   ],
+   [
+    "명멸"
+   ],
+   [
+    "명상법"
+   ],
+   [
+    "명승"
+   ],
+   [
+    "명약"
+   ],
+   [
+    "명언"
+   ],
+   [
+    "명운"
+   ],
+   [
+    "명상적",
+    "명승고적",
+    "명시적"
+   ],
+   [
+    "명절",
+    "명사절"
+   ],
+   [
+    "명란젓"
+   ],
+   [
+    "명증"
+   ],
+   [
+    "명예퇴직",
+    "명예직"
+   ],
+   [
+    "명칭"
+   ],
+   [
+    "명퇴"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 명색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_448",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적삼",
+   "삼십",
+   "십진법"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "법규"
+   ],
+   [
+    "법명"
+   ],
+   [
+    "법률"
+   ],
+   [
+    "법적",
+    "법률적"
+   ],
+   [
+    "법학"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 법칙",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_448",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적삼",
+   "삼십",
+   "십인십색"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "색맹"
+   ],
+   [
+    "색칠"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 색색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_449",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적응력"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "역세권"
+   ],
+   [
+    "역할극"
+   ],
+   [
+    "역기능"
+   ],
+   [
+    "역병"
+   ],
+   [
+    "역순"
+   ],
+   [
+    "역습"
+   ],
+   [
+    "역전승"
+   ],
+   [
+    "역사적",
+    "역설적",
+    "역적",
+    "역동적"
+   ],
+   [
+    "역풍"
+   ],
+   [
+    "역학",
+    "역사학"
+   ],
+   [
+    "역행"
+   ],
+   [
+    "역방향"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 역할",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_449",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적응력",
+   "역할",
+   "할인권"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "권역",
+    "권력"
+   ],
+   [
+    "권위적",
+    "권위주의적"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 권능",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_449",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적응력",
+   "역할",
+   "할렐루야"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "야간학교"
+   ],
+   [
+    "야권"
+   ],
+   [
+    "야식"
+   ],
+   [
+    "야만적",
+    "야성적"
+   ],
+   [
+    "야맹증"
+   ],
+   [
+    "야학"
+   ],
+   [
+    "야합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 야영객",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_449",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적응력",
+   "역할",
+   "할인율"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "율법"
+   ],
+   [
+    "율동적"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 율격",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_449",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적응력",
+   "역할",
+   "할증"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "증후군"
+   ],
+   [
+    "증권"
+   ],
+   [
+    "증명"
+   ],
+   [
+    "증식"
+   ],
+   [
+    "증언"
+   ],
+   [
+    "증가율"
+   ],
+   [
+    "증진",
+    "증명사진"
+   ],
+   [
+    "증축"
+   ],
+   [
+    "증편"
+   ],
+   [
+    "증폭"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 증표",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_450",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적자생존",
+   "존칭"
+  ],
+  "who": "넘긴 쪽",
+  "choices": [
+   [
+    "칭칭"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 칭찬",
+  "ply_of_choice": 4
+ },
+ {
+  "from": "g1_451",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적중률"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "율법"
+   ],
+   [
+    "율동적"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 율격",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_451",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적중률",
+   "율격",
+   "격랑"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "낭군"
+   ],
+   [
+    "낭만적"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 낭비벽",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_451",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적중률",
+   "율격",
+   "격돌"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "돌돌"
+   ],
+   [
+    "돌변"
+   ],
+   [
+    "돌림병"
+   ],
+   [
+    "돌솥"
+   ],
+   [
+    "돌파력"
+   ],
+   [
+    "돌발적"
+   ],
+   [
+    "돌진"
+   ],
+   [
+    "돌탑"
+   ],
+   [
+    "돌풍"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 돌격",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_451",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적중률",
+   "율격",
+   "격멸"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "멸균"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 멸치젓",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_451",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적중률",
+   "율격",
+   "격변"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "변주곡"
+   ],
+   [
+    "변명"
+   ],
+   [
+    "변색"
+   ],
+   [
+    "변비약"
+   ],
+   [
+    "변별력"
+   ],
+   [
+    "변칙적",
+    "변태적"
+   ],
+   [
+    "변절"
+   ],
+   [
+    "변죽"
+   ],
+   [
+    "변칙"
+   ],
+   [
+    "변혁"
+   ],
+   [
+    "변환"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 변화율",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_451",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적중률",
+   "율격",
+   "격식"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "식도락"
+   ],
+   [
+    "식이요법"
+   ],
+   [
+    "식순"
+   ],
+   [
+    "식곤증"
+   ],
+   [
+    "식욕부진"
+   ],
+   [
+    "식충"
+   ],
+   [
+    "식탁"
+   ],
+   [
+    "식단표"
+   ],
+   [
+    "식물학"
+   ],
+   [
+    "식생활"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 식권",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_451",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적중률",
+   "율격",
+   "격언"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "언급"
+   ],
+   [
+    "언변"
+   ],
+   [
+    "언약"
+   ],
+   [
+    "언어능력"
+   ],
+   [
+    "언어적"
+   ],
+   [
+    "언어학"
+   ],
+   [
+    "언어수행",
+    "언행"
+   ],
+   [
+    "언어생활"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 언어권",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_451",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적중률",
+   "율격",
+   "격정적"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_451",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적중률",
+   "율격",
+   "격증"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "증후군"
+   ],
+   [
+    "증권"
+   ],
+   [
+    "증명"
+   ],
+   [
+    "증식"
+   ],
+   [
+    "증언"
+   ],
+   [
+    "증진",
+    "증명사진"
+   ],
+   [
+    "증축"
+   ],
+   [
+    "증편"
+   ],
+   [
+    "증폭"
+   ],
+   [
+    "증표"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 증가율",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_451",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적중률",
+   "율격",
+   "격찬"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "찬탄"
+   ],
+   [
+    "찬합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 찬성표",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_451",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적중률",
+   "율격",
+   "격퇴"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "퇴락"
+   ],
+   [
+    "퇴역"
+   ],
+   [
+    "퇴적",
+    "퇴폐적"
+   ],
+   [
+    "퇴직"
+   ],
+   [
+    "퇴진"
+   ],
+   [
+    "퇴학"
+   ],
+   [
+    "퇴행"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 퇴색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_452",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적진"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "진갑"
+   ],
+   [
+    "진격"
+   ],
+   [
+    "진퇴유곡",
+    "진혼곡"
+   ],
+   [
+    "진군"
+   ],
+   [
+    "진출권"
+   ],
+   [
+    "진급"
+   ],
+   [
+    "진맥"
+   ],
+   [
+    "진압"
+   ],
+   [
+    "진언"
+   ],
+   [
+    "진력"
+   ],
+   [
+    "진학률"
+   ],
+   [
+    "진취적",
+    "진보적"
+   ],
+   [
+    "진즉"
+   ],
+   [
+    "진폐증"
+   ],
+   [
+    "진수성찬"
+   ],
+   [
+    "진흙탕",
+    "진탕"
+   ],
+   [
+    "진퇴"
+   ],
+   [
+    "진폭"
+   ],
+   [
+    "진도표"
+   ],
+   [
+    "진학"
+   ],
+   [
+    "진행"
+   ],
+   [
+    "진분홍",
+    "진홍"
+   ],
+   [
+    "진두지휘"
+   ],
+   [
+    "진흥"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 진갈색",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_452",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적진",
+   "진갈색",
+   "색맹"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "맹공격",
+    "맹추격"
+   ],
+   [
+    "맹목적"
+   ],
+   [
+    "맹탕"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 맹활약",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_452",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적진",
+   "진갈색",
+   "색색"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "색맹"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 색칠",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_452",
+  "start": "충",
+  "at": [
+   "충격적",
+   "적진",
+   "진갈색",
+   "색칠"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "칠순"
+   ],
+   [
+    "칠흑"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 칠십",
+  "ply_of_choice": 5
+ },
+ {
   "from": "g1_489",
   "start": "약",
   "at": [
@@ -62841,6 +65605,140 @@
    ]
   ],
   "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_502",
+  "start": "약",
+  "at": [
+   "약손가락",
+   "낙엽",
+   "엽기적"
+  ],
+  "who": "넘긴 쪽",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적중률"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 4
+ },
+ {
+  "from": "g1_503",
+  "start": "약",
+  "at": [
+   "약손가락",
+   "낙향"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "향락"
+   ],
+   [
+    "향수병"
+   ],
+   [
+    "향락적"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 향토색",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_503",
+  "start": "약",
+  "at": [
+   "약손가락",
+   "낙향",
+   "향토색",
+   "색맹"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "맹공격",
+    "맹추격"
+   ],
+   [
+    "맹목적"
+   ],
+   [
+    "맹탕"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 맹활약",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_503",
+  "start": "약",
+  "at": [
+   "약손가락",
+   "낙향",
+   "향토색",
+   "색색"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "색맹"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 색칠",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_503",
+  "start": "약",
+  "at": [
+   "약손가락",
+   "낙향",
+   "향토색",
+   "색칠"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "칠순"
+   ],
+   [
+    "칠흑"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 칠십",
   "ply_of_choice": 5
  },
  {
@@ -64867,5 +67765,772 @@
   ],
   "kind": "the winner's other answers where the certificate chose 증표",
   "ply_of_choice": 5
+ },
+ {
+  "from": "g1_563",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적중률"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "율법"
+   ],
+   [
+    "율동적"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 율격",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_563",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적중률",
+   "율격",
+   "격랑"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "낭군"
+   ],
+   [
+    "낭만적"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 낭비벽",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_563",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적중률",
+   "율격",
+   "격돌"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "돌돌"
+   ],
+   [
+    "돌변"
+   ],
+   [
+    "돌림병"
+   ],
+   [
+    "돌솥"
+   ],
+   [
+    "돌파력"
+   ],
+   [
+    "돌발적"
+   ],
+   [
+    "돌진"
+   ],
+   [
+    "돌탑"
+   ],
+   [
+    "돌풍"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 돌격",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_563",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적중률",
+   "율격",
+   "격멸"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "멸균"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 멸치젓",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_563",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적중률",
+   "율격",
+   "격변"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "변주곡"
+   ],
+   [
+    "변명"
+   ],
+   [
+    "변색"
+   ],
+   [
+    "변비약"
+   ],
+   [
+    "변별력"
+   ],
+   [
+    "변칙적",
+    "변태적"
+   ],
+   [
+    "변절"
+   ],
+   [
+    "변죽"
+   ],
+   [
+    "변칙"
+   ],
+   [
+    "변혁"
+   ],
+   [
+    "변환"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 변화율",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_563",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적중률",
+   "율격",
+   "격식"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "식도락"
+   ],
+   [
+    "식이요법"
+   ],
+   [
+    "식순"
+   ],
+   [
+    "식곤증"
+   ],
+   [
+    "식욕부진"
+   ],
+   [
+    "식충"
+   ],
+   [
+    "식탁"
+   ],
+   [
+    "식단표"
+   ],
+   [
+    "식물학"
+   ],
+   [
+    "식생활"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 식권",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_563",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적중률",
+   "율격",
+   "격언"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "언급"
+   ],
+   [
+    "언변"
+   ],
+   [
+    "언약"
+   ],
+   [
+    "언어능력"
+   ],
+   [
+    "언어적"
+   ],
+   [
+    "언어학"
+   ],
+   [
+    "언어수행",
+    "언행"
+   ],
+   [
+    "언어생활"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 언어권",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_563",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적중률",
+   "율격",
+   "격정적"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "적격"
+   ],
+   [
+    "적군"
+   ],
+   [
+    "적극"
+   ],
+   [
+    "적법"
+   ],
+   [
+    "적삼"
+   ],
+   [
+    "적응력"
+   ],
+   [
+    "적극적",
+    "적대적"
+   ],
+   [
+    "적자생존"
+   ],
+   [
+    "적진"
+   ],
+   [
+    "적합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 적갈색·적색·적회색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_563",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적중률",
+   "율격",
+   "격증"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "증후군"
+   ],
+   [
+    "증권"
+   ],
+   [
+    "증명"
+   ],
+   [
+    "증식"
+   ],
+   [
+    "증언"
+   ],
+   [
+    "증진",
+    "증명사진"
+   ],
+   [
+    "증축"
+   ],
+   [
+    "증편"
+   ],
+   [
+    "증폭"
+   ],
+   [
+    "증표"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 증가율",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_563",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적중률",
+   "율격",
+   "격찬"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "찬탄"
+   ],
+   [
+    "찬합"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 찬성표",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_563",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적중률",
+   "율격",
+   "격퇴"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "퇴락"
+   ],
+   [
+    "퇴역"
+   ],
+   [
+    "퇴적",
+    "퇴폐적"
+   ],
+   [
+    "퇴직"
+   ],
+   [
+    "퇴진"
+   ],
+   [
+    "퇴학"
+   ],
+   [
+    "퇴행"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 퇴색",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_564",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적진"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "진갑"
+   ],
+   [
+    "진격"
+   ],
+   [
+    "진퇴유곡",
+    "진혼곡"
+   ],
+   [
+    "진군"
+   ],
+   [
+    "진출권"
+   ],
+   [
+    "진급"
+   ],
+   [
+    "진맥"
+   ],
+   [
+    "진압"
+   ],
+   [
+    "진언"
+   ],
+   [
+    "진력"
+   ],
+   [
+    "진학률"
+   ],
+   [
+    "진취적",
+    "진보적"
+   ],
+   [
+    "진즉"
+   ],
+   [
+    "진폐증"
+   ],
+   [
+    "진수성찬"
+   ],
+   [
+    "진흙탕",
+    "진탕"
+   ],
+   [
+    "진퇴"
+   ],
+   [
+    "진폭"
+   ],
+   [
+    "진도표"
+   ],
+   [
+    "진학"
+   ],
+   [
+    "진행"
+   ],
+   [
+    "진분홍",
+    "진홍"
+   ],
+   [
+    "진두지휘"
+   ],
+   [
+    "진흥"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 진갈색",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_564",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적진",
+   "진갈색",
+   "색맹"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "맹공격",
+    "맹추격"
+   ],
+   [
+    "맹목적"
+   ],
+   [
+    "맹탕"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 맹활약",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_564",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적진",
+   "진갈색",
+   "색색"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "색맹"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 색칠",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_564",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적진",
+   "진갈색",
+   "색칠"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "칠순"
+   ],
+   [
+    "칠흑"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 칠십",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_565",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적합"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "합격"
+   ],
+   [
+    "합법"
+   ],
+   [
+    "합병"
+   ],
+   [
+    "합숙"
+   ],
+   [
+    "합승"
+   ],
+   [
+    "합법적",
+    "합리적"
+   ],
+   [
+    "합격증",
+    "합병증"
+   ],
+   [
+    "합집합"
+   ]
+  ],
+  "kind": "the winner's other moves where the certificate chose 합주곡·합창곡",
+  "ply_of_choice": 3
+ },
+ {
+  "from": "g1_565",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적합",
+   "합주곡",
+   "곡명"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "명랑"
+   ],
+   [
+    "명맥"
+   ],
+   [
+    "명멸"
+   ],
+   [
+    "명상법"
+   ],
+   [
+    "명색"
+   ],
+   [
+    "명승"
+   ],
+   [
+    "명약"
+   ],
+   [
+    "명언"
+   ],
+   [
+    "명운"
+   ],
+   [
+    "명상적",
+    "명승고적",
+    "명시적"
+   ],
+   [
+    "명절",
+    "명사절"
+   ],
+   [
+    "명란젓"
+   ],
+   [
+    "명증"
+   ],
+   [
+    "명예퇴직",
+    "명예직"
+   ],
+   [
+    "명칭"
+   ],
+   [
+    "명퇴"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 명곡",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_565",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적합",
+   "합주곡",
+   "곡식"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "식권"
+   ],
+   [
+    "식도락"
+   ],
+   [
+    "식이요법"
+   ],
+   [
+    "식순"
+   ],
+   [
+    "식곤증"
+   ],
+   [
+    "식욕부진"
+   ],
+   [
+    "식탁"
+   ],
+   [
+    "식단표"
+   ],
+   [
+    "식물학"
+   ],
+   [
+    "식생활"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 식충",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_565",
+  "start": "표",
+  "at": [
+   "표면적",
+   "적합",
+   "합주곡",
+   "곡절"
+  ],
+  "who": "받은 쪽",
+  "choices": [
+   [
+    "절교"
+   ],
+   [
+    "절규"
+   ],
+   [
+    "절명"
+   ],
+   [
+    "절벽"
+   ],
+   [
+    "절식"
+   ],
+   [
+    "절약"
+   ],
+   [
+    "절대적",
+    "절망적"
+   ],
+   [
+    "절절"
+   ],
+   [
+    "절도죄"
+   ],
+   [
+    "절찬"
+   ],
+   [
+    "절충"
+   ],
+   [
+    "절편"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 절룩절룩",
+  "ply_of_choice": 5
+ },
+ {
+  "from": "g1_567",
+  "start": "표",
+  "at": [
+   "표명",
+   "명란젓",
+   "젓가락"
+  ],
+  "who": "넘긴 쪽",
+  "choices": [
+   [
+    "낙승"
+   ],
+   [
+    "낙엽"
+   ],
+   [
+    "낙관적",
+    "낙천적"
+   ],
+   [
+    "낙향"
+   ]
+  ],
+  "kind": "the winner's other answers where the certificate chose 낙농업",
+  "ply_of_choice": 4
  }
 ]
