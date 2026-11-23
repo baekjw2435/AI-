@@ -8,9 +8,33 @@
  "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714",
  "verifier_sha256": "292670d48e0b30d2e2581181e7e7adec58984678f38374fdd9003e687fc813d1",
  "limits": {
-  "roots":  {"search_seconds_per_position": 600, "tt_mb": 1024, "parallel_jobs": 4},
-  "first":  {"search_seconds_per_position": 300, "tt_mb": 256,  "parallel_jobs": 4},
-  "second": {"search_seconds_per_position": 300, "tt_mb": 256,  "parallel_jobs": 4}
+  "roots": {
+   "search_seconds_per_position": 600,
+   "tt_mb": 1024,
+   "parallel_jobs": 4
+  },
+  "first": {
+   "search_seconds_per_position": 300,
+   "tt_mb": 256,
+   "parallel_jobs": 4
+  },
+  "second": {
+   "search_seconds_per_position": 300,
+   "tt_mb": 256,
+   "parallel_jobs": 4
+  },
+  "winner_next_w": {
+   "search_seconds_per_position": 300,
+   "tt_mb": 256,
+   "parallel_jobs": 4,
+   "fixed_before_running": "2026-11-23 (2차 요청)"
+  },
+  "winner_next_l": {
+   "search_seconds_per_position": 300,
+   "tt_mb": 256,
+   "parallel_jobs": 4,
+   "fixed_before_running": "2026-11-23 (2차 요청)"
+  }
  },
  "rule": "한도는 탐색 시간입니다. 한도에 닿으면 미확정으로 두고 한도를 늘려 다시 풀지 않습니다.",
  "threads_per_job": 1,

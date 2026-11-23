@@ -75,6 +75,22 @@ def main():
                             for w3 in legal(m, s, [w1, w2]):
                                 rows.append({'id': f'NL{len(rows) + 1:05d}', 'initial_syllable': s,
                                              'history': [w1, w2, w3]})
+    elif kind in ('winner_w', 'winner_l'):
+        # The winner's next choice: every place of plans/next_w_replies.jsonl (W syllables: after the loser's reply)
+        # or plans/next_l_third.jsonl (L syllables: after the loser's 3rd move), where the winner is to move, and
+        # every legal move of the winner there.  ids: WW0000001.. / WL0000001..; "kind" is "place" or "move".
+        src = HERE / 'plans' / ('next_w_replies.jsonl' if kind == 'winner_w' else 'next_l_third.jsonl')
+        pre = 'WW' if kind == 'winner_w' else 'WL'
+        seen = set()
+        for line in src.read_text(encoding='utf-8').splitlines():
+            p = json.loads(line)
+            s, h = p['initial_syllable'], p['history']
+            key = (s, tuple(h))
+            assert key not in seen
+            seen.add(key)
+            rows.append({'id': f'{pre}{len(rows) + 1:07d}', 'kind': 'place', 'initial_syllable': s, 'history': h})
+            for w in legal(m, s, h):
+                rows.append({'id': f'{pre}{len(rows) + 1:07d}', 'kind': 'move', 'initial_syllable': s, 'history': h + [w]})
     else:
         raise SystemExit(__doc__)
     out.write_text(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in rows), encoding='utf-8')

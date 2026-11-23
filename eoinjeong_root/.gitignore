@@ -3,3 +3,7 @@ results/*/proof/
 results/*/tt/
 results/archive_download/
 results/verify.lock
+results/winner_*/pos/
+results/winner_*/in/
+results/winner_*/res/
+results/winner_*/log/
