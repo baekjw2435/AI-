@@ -1,0 +1,19 @@
+{
+ "stage_A_resume": {
+  "budget": 600.0,
+  "spent": 599.001,
+  "left_to_B": 0.999
+ },
+ "stage_B_untried": {
+  "budget": 1200.0,
+  "from_A": 0.999,
+  "spent": 1200.001,
+  "left": 0.998
+ },
+ "stage_C_resume_left": {
+  "items": "g1_439,g1_256,g1_494,g1_352,g1_504,g1_505,g1_566,g1_357,g1_414,g1_506,g1_337,g1_434,g1_488,g1_441,g1_495,g1_379,g1_454,g1_455,g1_509,g1_571,g1_513,g1_518",
+  "budget": 0.998,
+  "spent": 0
+ },
+ "total_spent": 1799.002
+}
