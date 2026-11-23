@@ -1,0 +1,12 @@
+{
+ "release_tag": "eoin621-proofs-r1",
+ "checked_at": "2026-11-23 06:12:39 UTC",
+ "files_in_manifest": 481,
+ "files_downloaded_same_sha256": 481,
+ "files_differ_or_missing": [],
+ "positions_reverified_from_download": 2751,
+ "positions_reverify_failed": [],
+ "download_wall_seconds": 16.2,
+ "reverify_wall_seconds": 10.4,
+ "reverify_verifier_seconds_sum": 34.6
+}

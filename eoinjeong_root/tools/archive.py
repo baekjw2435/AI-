@@ -16,9 +16,9 @@ import hashlib
 import json
 import os
 import shutil
+import subprocess
 import sys
 import time
-import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -76,14 +76,14 @@ def check(tag, jobs=4):
 
     def fetch(name):
         dest = dl / name
+        err = ''
         for attempt in range(4):
-            try:
-                with urllib.request.urlopen(URL.format(tag=tag, name=name), timeout=60) as resp, open(dest, 'wb') as f:
-                    shutil.copyfileobj(resp, f)
+            r = subprocess.run(['curl', '-sSL', '--fail', '-o', str(dest), URL.format(tag=tag, name=name)],
+                               capture_output=True, text=True)
+            if r.returncode == 0:
                 return name, sha(dest)
-            except OSError as exc:
-                err = str(exc)
-                time.sleep(2 ** attempt)
+            err = r.stderr[-200:]
+            time.sleep(2 ** attempt)
         return name, 'download failed: ' + err
 
     with ThreadPoolExecutor(8) as ex:
