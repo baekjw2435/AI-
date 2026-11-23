@@ -1,0 +1,91 @@
+{
+ "release_tag": "alt817-states-2026-11-23a",
+ "files": {
+  "3d4f5ce932203268f6c4eeafc56dcb87a2990cc63f24fe831ff2691c3ca53ec7.tt.gz": {
+   "sha256": "3d4f5ce932203268f6c4eeafc56dcb87a2990cc63f24fe831ff2691c3ca53ec7",
+   "bytes": 46425549,
+   "state_sha256": "1789b54bc8205d9b211aa3230914d3881e83b7ee37139c0d8a1a1116e44e0f6e",
+   "work_path": "general1/g1_435/state.tt",
+   "carried_search_seconds": 240.0
+  },
+  "4219b9a96e8a3d115de80633330430d2090fb0159c96f0a71a380ec632787864.tt.gz": {
+   "sha256": "4219b9a96e8a3d115de80633330430d2090fb0159c96f0a71a380ec632787864",
+   "bytes": 46260441,
+   "state_sha256": "794646f4c9c22b29fad205d6cfc578b71845e8509aa136afdc29205730c72d5f",
+   "work_path": "general1/g1_438/state.tt",
+   "carried_search_seconds": 240.0
+  },
+  "66d187c605ed510f6636c4f13641e0d4bf83e53b0609c9d42b52bcaa3bb09339.tt.gz": {
+   "sha256": "66d187c605ed510f6636c4f13641e0d4bf83e53b0609c9d42b52bcaa3bb09339",
+   "bytes": 46347111,
+   "state_sha256": "a4422fbc88af0cbaa163f126059f4142600bff74c1918cd2628b66d62a704995",
+   "work_path": "general1/g1_439/state.tt",
+   "carried_search_seconds": 240.0
+  },
+  "ee1e2076e60d97bf1b9f53e5184325e3dd17314aaeab1fbb1e255858fae22221.tt.gz": {
+   "sha256": "ee1e2076e60d97bf1b9f53e5184325e3dd17314aaeab1fbb1e255858fae22221",
+   "bytes": 46343766,
+   "state_sha256": "df10c11ff954c79c9f694c28b1237faa20aae9e853d9ae041586b20e8955f9cf",
+   "work_path": "general1/g1_494/state.tt",
+   "carried_search_seconds": 218.41
+  },
+  "cb5de1ad77cb931b8d3ddeb504442302cba75e70c0153dd9f3bbd63227f150bb.tt.gz": {
+   "sha256": "cb5de1ad77cb931b8d3ddeb504442302cba75e70c0153dd9f3bbd63227f150bb",
+   "bytes": 46574432,
+   "state_sha256": "ed8ca34c90898aa532df5da1aef4685a5f113ddc8e13ca868258ad9fa00d56ed",
+   "work_path": "general1/g1_256/state.tt",
+   "carried_search_seconds": 473.53
+  },
+  "df1dd0581716bdedc236047eda06b0d7e15088d8b0c85e7e0779156b208317e7.tt.gz": {
+   "sha256": "df1dd0581716bdedc236047eda06b0d7e15088d8b0c85e7e0779156b208317e7",
+   "bytes": 45910407,
+   "state_sha256": "afdd3c8aafe21abd9d6f62007154ca1b1f0a4f5f14ef6b3ed65ca844b3d59cf3",
+   "work_path": "general1/g1_352/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "716b0721ec6aa862ec51d5b3a65a4f3075db787b2c5f2cb24d198a30d51b2342.tt.gz": {
+   "sha256": "716b0721ec6aa862ec51d5b3a65a4f3075db787b2c5f2cb24d198a30d51b2342",
+   "bytes": 45098305,
+   "state_sha256": "77b1e3497575315f2139dd05d1c89b2c361102c96af7b882736892131574fe9c",
+   "work_path": "general1/g1_504/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "a8508979215602b45c880f529ddd2d1dfa5247d3433345df6f42788d3ce6ea4e.tt.gz": {
+   "sha256": "a8508979215602b45c880f529ddd2d1dfa5247d3433345df6f42788d3ce6ea4e",
+   "bytes": 45969654,
+   "state_sha256": "ad4be69c3506de040e15c4c0ac5e2312587aebbe29d04c0b58dbe23494954ddf",
+   "work_path": "general1/g1_505/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "21147e6362e9e68cd3f5b1c594b2b3f992a9a2eca8872056413d8ac032da77fb.tt.gz": {
+   "sha256": "21147e6362e9e68cd3f5b1c594b2b3f992a9a2eca8872056413d8ac032da77fb",
+   "bytes": 45969401,
+   "state_sha256": "5d8be795115836942acbd28cde1889931293a523f0ff9e55e3d7a14300e4a0a7",
+   "work_path": "general1/g1_566/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "5cec2782fedaee421376f3cc38ce1ef5f8fa9a7ee7e48ae9e326e28663511ad7.tt.gz": {
+   "sha256": "5cec2782fedaee421376f3cc38ce1ef5f8fa9a7ee7e48ae9e326e28663511ad7",
+   "bytes": 45795359,
+   "state_sha256": "dcefa0197a03b5260e57e6f1ead8e4c9cdd7f170de3fa62d5ea5b651d7440016",
+   "work_path": "general1/g1_414/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "64a97340590bb383ca31b06cdf60bf98d93edb0a82eb84012535cb902e99cd09.tt.gz": {
+   "sha256": "64a97340590bb383ca31b06cdf60bf98d93edb0a82eb84012535cb902e99cd09",
+   "bytes": 46048053,
+   "state_sha256": "4d6cbf8a098577dd805f53dfb69aca5073b168b856d96334dad2a71150bcc44b",
+   "work_path": "general1/g1_506/state.tt",
+   "carried_search_seconds": 120.0
+  },
+  "6a76fd56f26039d1f4c9a6a1127cad5ebabb6fb8d23454b062508a0dab7c9848.tt.gz": {
+   "sha256": "6a76fd56f26039d1f4c9a6a1127cad5ebabb6fb8d23454b062508a0dab7c9848",
+   "bytes": 44555777,
+   "state_sha256": "d99527514b67566a402d722d8196c2dd280f2bb932216dd8bc1a058256e5776f",
+   "work_path": "general1/g1_357/state.tt",
+   "carried_search_seconds": 46.28
+  }
+ },
+ "file_count": 12,
+ "total_bytes": 551298255
+}

@@ -1,0 +1,133 @@
+{
+ "release_tag": "alt817-proofs-general1-r8",
+ "files": {
+  "ec9bba99630abeeb06721b00792afe2f9986d041a6a21e96ccd8b12613325503.v4.gz": {
+   "sha256": "ec9bba99630abeeb06721b00792afe2f9986d041a6a21e96ccd8b12613325503",
+   "bytes": 1247983,
+   "certifies": [
+    "general1/g1_353 활약 → 약손가락"
+   ]
+  },
+  "cf8a519bbca2d0a6c43be2a25ee0ce56cb961c01d9505928d596fc3c2a26ccd9.v4.gz": {
+   "sha256": "cf8a519bbca2d0a6c43be2a25ee0ce56cb961c01d9505928d596fc3c2a26ccd9",
+   "bytes": 1418357,
+   "certifies": [
+    "general1/g1_354 활약 → 약진"
+   ]
+  },
+  "b0da2f2cd5303d8091808032c9a2877f555fa35d3225f3567407320ac3f06c74.v4.gz": {
+   "sha256": "b0da2f2cd5303d8091808032c9a2877f555fa35d3225f3567407320ac3f06c74",
+   "bytes": 707068,
+   "certifies": [
+    "general1/g1_355 활약 → 약학"
+   ]
+  },
+  "892c384928698544d0e903d0b64222494be6ea5491209b01fe3a21816b2af742.v4.gz": {
+   "sha256": "892c384928698544d0e903d0b64222494be6ea5491209b01fe3a21816b2af742",
+   "bytes": 2045555,
+   "certifies": [
+    "general1/g1_356 활활 → 활극"
+   ]
+  },
+  "b955efd0b4af98ffcaf4e4699cfc6a225c1015088de624a24710952e0be0450f.v4.gz": {
+   "sha256": "b955efd0b4af98ffcaf4e4699cfc6a225c1015088de624a24710952e0be0450f",
+   "bytes": 592045,
+   "certifies": [
+    "general1/g1_374 능력 → 역순"
+   ]
+  },
+  "87127c897a1b26890d0520f0ef7460d8b2ed379863bd79504ebf6201d59497ea.v4.gz": {
+   "sha256": "87127c897a1b26890d0520f0ef7460d8b2ed379863bd79504ebf6201d59497ea",
+   "bytes": 1210321,
+   "certifies": [
+    "general1/g1_375 능력 → 역습"
+   ]
+  },
+  "16bda0e28ee418c8feb9380bb893b8e74d51021134893ee772a6e8ab11c18b2f.v4.gz": {
+   "sha256": "16bda0e28ee418c8feb9380bb893b8e74d51021134893ee772a6e8ab11c18b2f",
+   "bytes": 2667790,
+   "certifies": [
+    "general1/g1_376 능력 → 역전승"
+   ]
+  },
+  "db3d6ed0157ce96c7763720538e72e95c488b2d67870c7ee35aaad21365c67d2.v4.gz": {
+   "sha256": "db3d6ed0157ce96c7763720538e72e95c488b2d67870c7ee35aaad21365c67d2",
+   "bytes": 5845752,
+   "certifies": [
+    "general1/g1_377 능력 → 역풍"
+   ]
+  },
+  "65505cb222a15614944b3a366dd1ed953bf7527d76d86e4c04bb71ac019e3bdc.v4.gz": {
+   "sha256": "65505cb222a15614944b3a366dd1ed953bf7527d76d86e4c04bb71ac019e3bdc",
+   "bytes": 540862,
+   "certifies": [
+    "general1/g1_378 능력 → 역학"
+   ]
+  },
+  "2683c3862ecbc8ab39ce82d4e15a9e61ec2e8069d4c2524f5b9bcdca782f40dd.v4.gz": {
+   "sha256": "2683c3862ecbc8ab39ce82d4e15a9e61ec2e8069d4c2524f5b9bcdca782f40dd",
+   "bytes": 2158667,
+   "certifies": [
+    "general1/g1_410 곡명 → 명칭"
+   ]
+  },
+  "9bba1e89b6920c7244970fa8242ca3ab0c237735bb30c67458d68496a9f375dc.v4.gz": {
+   "sha256": "9bba1e89b6920c7244970fa8242ca3ab0c237735bb30c67458d68496a9f375dc",
+   "bytes": 263023,
+   "certifies": [
+    "general1/g1_411 곡명 → 명퇴"
+   ]
+  },
+  "1bc604fa3d72c18050bf0867118b02d98d0fc082efccd1eabd636d276471b1e5.v4.gz": {
+   "sha256": "1bc604fa3d72c18050bf0867118b02d98d0fc082efccd1eabd636d276471b1e5",
+   "bytes": 3523879,
+   "certifies": [
+    "general1/g1_412 곡식 → 식곤증"
+   ]
+  },
+  "d7a1153e48d7bfcc57b2ff3f1b880964d056ac6e8acb09381f5c7bd8f0594c06.v4.gz": {
+   "sha256": "d7a1153e48d7bfcc57b2ff3f1b880964d056ac6e8acb09381f5c7bd8f0594c06",
+   "bytes": 1181952,
+   "certifies": [
+    "general1/g1_413 곡식 → 식권"
+   ]
+  },
+  "c11e823d55995f72a05a82d31440a93468936a8a6a87674f773d61d47ec366a0.v4.gz": {
+   "sha256": "c11e823d55995f72a05a82d31440a93468936a8a6a87674f773d61d47ec366a0",
+   "bytes": 5080640,
+   "certifies": [
+    "general1/g1_450 충격적 → 적자생존"
+   ]
+  },
+  "e0f1e210cc1f4b5110515af215b6ba0f2ca8c4de55e736924922ceffee412ed5.v4.gz": {
+   "sha256": "e0f1e210cc1f4b5110515af215b6ba0f2ca8c4de55e736924922ceffee412ed5",
+   "bytes": 1577995,
+   "certifies": [
+    "general1/g1_502 약손가락 → 낙엽"
+   ]
+  },
+  "c6c3fdbeb658f923713817b9332461cee4c2478ccc8730504f20567b05d28410.v4.gz": {
+   "sha256": "c6c3fdbeb658f923713817b9332461cee4c2478ccc8730504f20567b05d28410",
+   "bytes": 38977,
+   "certifies": [
+    "general1/g1_503 약손가락 → 낙향"
+   ]
+  },
+  "dd2f6386164691f5e5cf6725f7f5a9ede061bcb2950172dc5f505c90f15b1aac.v4.gz": {
+   "sha256": "dd2f6386164691f5e5cf6725f7f5a9ede061bcb2950172dc5f505c90f15b1aac",
+   "bytes": 4651715,
+   "certifies": [
+    "general1/g1_565 표면적 → 적합"
+   ]
+  },
+  "413b74ea1b1d36c56c2e8de470f351c123ff89f3258f11ecd8ef7cdbb5dfce6a.v4.gz": {
+   "sha256": "413b74ea1b1d36c56c2e8de470f351c123ff89f3258f11ecd8ef7cdbb5dfce6a",
+   "bytes": 1756107,
+   "certifies": [
+    "general1/g1_567 표명 → 명란젓"
+   ]
+  }
+ },
+ "file_count": 18,
+ "total_bytes": 36508688
+}
