@@ -1,0 +1,19 @@
+{
+ "stages": [
+  "yul_without_wins"
+ ],
+ "checked_at": "2026-11-23 11:43:54 UTC",
+ "tags": [
+  "eoin621-proofs-r1",
+  "eoin621-proofs-r2-01"
+ ],
+ "files_needed": 2,
+ "files_downloaded_same_sha256": 2,
+ "files_differ_or_missing": [],
+ "positions": 4,
+ "positions_reverified_from_download": 4,
+ "positions_reverify_failed": [],
+ "download_wall_seconds": 0.7,
+ "reverify_wall_seconds": 0.0,
+ "reverify_verifier_seconds_sum": 0.0
+}

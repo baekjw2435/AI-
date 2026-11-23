@@ -66,6 +66,8 @@ def main():
     def run(it):
         pid = it['id']
         position = {'initial_syllable': it['initial_syllable'], 'history': it['history']}
+        if it.get('initial_used_words'):      # words already gone before this position (ModelV3 / verify_v4 field)
+            position['initial_used_words'] = it['initial_used_words']
         posf, inf = work / 'pos' / f'{pid}.json', work / 'in' / f'{pid}.txt'
         proof, tt, log = work / 'proof' / f'{pid}.v4.gz', work / 'tt' / f'{pid}.tt', work / 'log' / f'{pid}.out'
         posf.write_text(json.dumps(position, ensure_ascii=False), encoding='utf-8')
