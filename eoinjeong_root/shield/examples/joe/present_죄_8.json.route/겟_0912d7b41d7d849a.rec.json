@@ -1,0 +1,26 @@
+{
+ "id": "겟_0912d7b41d7d849a",
+ "syllable": "겟",
+ "used_route_words": [
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005789,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "40cef6df53c1d420f7ee6335bd5354240aec228006dab16a4778b43f7cd40b5f",
+ "position_sha256": "0912d7b41d7d849a3ccb5de61ecd0420dd82ddff96fbc6b45ca6b9819b47bd7d",
+ "input_sha256": "8443b3262e659404a358eb869b720142a18fca0d150758da5b4a5fd6eb47a3a7",
+ "proof_bytes": 5292
+}

@@ -1,0 +1,26 @@
+{
+ "id": "걱_94a460e8ecc84eb6",
+ "syllable": "걱",
+ "used_route_words": [
+  "댁대굴댁대굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00108,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "94a460e8ecc84eb618942a354cefe5f552a97bae504c0d145b9d9bd873495543",
+ "input_sha256": "4dd94f8d5b202b391a6287006523ddaf499f977acd0ea8a134fb61dbda5d5ac4",
+ "proof_bytes": 1271
+}

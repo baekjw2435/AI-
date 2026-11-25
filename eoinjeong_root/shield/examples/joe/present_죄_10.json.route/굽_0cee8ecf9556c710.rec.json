@@ -1,0 +1,29 @@
+{
+ "id": "굽_0cee8ecf9556c710",
+ "syllable": "굽",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "율현마을",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000632,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fb72ce40b2b693d1d7211b086df8b1e7fa910fc83bbca2d9d3aa954e7e707cfa",
+ "position_sha256": "0cee8ecf9556c7108f39d3f421d2fb4b522bfb9843e76cca9390655d2ebb1f8a",
+ "input_sha256": "70b1963177708a62f4e7e7e9953480444b2719e35f7f4ebf823a7fd01ed6a235",
+ "proof_bytes": 980
+}

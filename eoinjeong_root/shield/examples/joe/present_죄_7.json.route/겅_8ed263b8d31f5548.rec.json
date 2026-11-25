@@ -1,0 +1,26 @@
+{
+ "id": "겅_8ed263b8d31f5548",
+ "syllable": "겅",
+ "used_route_words": [
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000519,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "65c3ced6d1080d271326961ba56bf9fe2ff6297a96a28e9c30b08950050026af",
+ "position_sha256": "8ed263b8d31f5548c58083926a52a8a29672362831a6f20b80e9e80f10bf9c6e",
+ "input_sha256": "16da4f891e8170a4286a0e797ebb3c85fe491bc880fdc70360667db46b1cb3ae",
+ "proof_bytes": 523
+}

@@ -1,0 +1,29 @@
+{
+ "id": "냐_2a23795a5a84f32b",
+ "syllable": "냐",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "율현마을",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.0003,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c08e243154c708073c2daa79263ad5e353fe85c77d1f2b6f06508ef87e77cc4d",
+ "position_sha256": "2a23795a5a84f32b60a7bda400f82d7252943122049f055273ec7c2b31605995",
+ "input_sha256": "4193bbd07428dc75c65cb3dfefe04e0bdd52b474e7288668edf24c72176492fe",
+ "proof_bytes": 278
+}

@@ -1,0 +1,26 @@
+{
+ "id": "겅_5cfd0d61ac188d29",
+ "syllable": "겅",
+ "used_route_words": [
+  "냅킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001516,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fd997b6e685322be4c530756b53051727ba31db2632645293ccdbb4290b7c865",
+ "position_sha256": "5cfd0d61ac188d29f794cbd0a8a53865c5c433281ea1edb68a41144caffc70ba",
+ "input_sha256": "4a38971f115899418950d13e9b78dcdf2d37b9975db1e8f8dfa99341349ad1cf",
+ "proof_bytes": 784
+}

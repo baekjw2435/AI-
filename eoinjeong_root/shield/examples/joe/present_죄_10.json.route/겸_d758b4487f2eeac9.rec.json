@@ -1,0 +1,26 @@
+{
+ "id": "겸_d758b4487f2eeac9",
+ "syllable": "겸",
+ "used_route_words": [
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.014012,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5845111cd0b2dbbec2e7c1bcd142bc6eae4f7fa9f6147de6bb0e9ed4a18bbba9",
+ "position_sha256": "d758b4487f2eeac9ad2171c43b241dcc637ebf0b6965d97734dcf1ded4840c5f",
+ "input_sha256": "6f77effe1a069bf35763f59bc55bf6bf95a7d84b0bb4c580050872ea9d628d55",
+ "proof_bytes": 10015
+}

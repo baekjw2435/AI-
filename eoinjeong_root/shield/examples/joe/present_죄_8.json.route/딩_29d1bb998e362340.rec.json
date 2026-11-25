@@ -1,0 +1,27 @@
+{
+ "id": "딩_29d1bb998e362340",
+ "syllable": "딩",
+ "used_route_words": [
+  "톤세법",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.015908,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8d3e8510d28dd03dda511fa3dcaae15520c8f577dabb18290eac2df76e245fbf",
+ "position_sha256": "29d1bb998e362340f9d7b8816350f7697c3bc98126888c835557037f37ce7d5b",
+ "input_sha256": "930a9b0bcb8d1c6b66bcd2fea1f370daa9058e8884e3640eb2931bd3ec625ccf",
+ "proof_bytes": 9434
+}

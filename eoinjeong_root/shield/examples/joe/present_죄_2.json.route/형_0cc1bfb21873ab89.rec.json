@@ -1,0 +1,26 @@
+{
+ "id": "형_0cc1bfb21873ab89",
+ "syllable": "형",
+ "used_route_words": [
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.004261,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "52ed9c984936bb0e6e00b2edbffb9ff8dd355bf624fc0f82b290557a9000d410",
+ "position_sha256": "0cc1bfb21873ab891c12369b6a994b6f715f97d5651ae74b666d200a38903126",
+ "input_sha256": "968965a0a1804ba77526f9fda84df68e725371d32644b3fe0c5498d46d764962",
+ "proof_bytes": 2767
+}

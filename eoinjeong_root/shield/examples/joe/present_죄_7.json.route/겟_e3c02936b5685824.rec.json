@@ -1,0 +1,26 @@
+{
+ "id": "겟_e3c02936b5685824",
+ "syllable": "겟",
+ "used_route_words": [
+  "죄죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.686128,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4bc1d3b9190bc747f79f833be5981369883650094a25f49b8b37f9934c0bd121",
+ "position_sha256": "e3c02936b5685824fa3518bbfa1e417d40609f3649fb949f202d2edba92b02fe",
+ "input_sha256": "30a6fdd3be9334fe38b8e6b2d8e7fabc69fb525f91841a0137242a01e6dc36f5",
+ "proof_bytes": 164460
+}

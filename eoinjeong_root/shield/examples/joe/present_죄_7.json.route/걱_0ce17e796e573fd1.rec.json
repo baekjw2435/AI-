@@ -1,0 +1,27 @@
+{
+ "id": "걱_0ce17e796e573fd1",
+ "syllable": "걱",
+ "used_route_words": [
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.0003,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b8b3e7810fda0c1a8183d4e8666d0209f61b3b76659d63a45fc923b3f0d151fe",
+ "position_sha256": "0ce17e796e573fd16cf2902514d0a051c89d3dd9bf5478da0afc6a7e63af6df7",
+ "input_sha256": "aea6207ff22a9eba62945fbfd8314ec4f4a5249c20d170d9576db55b21c6d55a",
+ "proof_bytes": 430
+}

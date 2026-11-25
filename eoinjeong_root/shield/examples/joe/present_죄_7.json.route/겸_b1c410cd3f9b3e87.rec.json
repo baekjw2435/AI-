@@ -1,0 +1,28 @@
+{
+ "id": "겸_b1c410cd3f9b3e87",
+ "syllable": "겸",
+ "used_route_words": [
+  "죄첩",
+  "첩첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002167,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "dc14d279aa4c4cc2de555c731ce8ab1538f8f1622d97f2969ada8d847e6d2a36",
+ "position_sha256": "b1c410cd3f9b3e87a60ead65ac047178c715dc61642d856bfa078b144dbc8ab4",
+ "input_sha256": "71d9e04c45b93fcadf5c4169c83d824d904276f0d1c05706e9dd1050e5b91e90",
+ "proof_bytes": 1185
+}

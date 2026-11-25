@@ -1,0 +1,29 @@
+{
+ "id": "겟_f6340072c40679c0",
+ "syllable": "겟",
+ "used_route_words": [
+  "냐짱",
+  "멸치저냐",
+  "죄멸",
+  "짱짱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003994,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "dc128d247a294963215391d8683a956fcb4315eb0c7669e1845fdb00d9d3d772",
+ "position_sha256": "f6340072c40679c0d1e5fcef4a09a0188226657d24ece065850721207f8960c6",
+ "input_sha256": "0c75071be06bd47ce212a55abe49ddb30ab1731f2015013c3e92aa6b9367c835",
+ "proof_bytes": 4199
+}

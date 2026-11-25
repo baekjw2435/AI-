@@ -1,0 +1,27 @@
+{
+ "id": "틱_c1cecffd212f28b6",
+ "syllable": "틱",
+ "used_route_words": [
+  "갱도시험",
+  "폼플라스틱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.031454,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "bd2d83ac3f0caf3ea9f2e6e4cb35fd6ae3a2eb7840a08829de1dabf4f9b673d8",
+ "position_sha256": "c1cecffd212f28b65abaf32ed6ba36dbd49ea8e1f899ec1117c6a42da58f648f",
+ "input_sha256": "db117704042547a8517cb604537504708a081e8a71c77d3e1df4d9a98ad00ed3",
+ "proof_bytes": 15796
+}

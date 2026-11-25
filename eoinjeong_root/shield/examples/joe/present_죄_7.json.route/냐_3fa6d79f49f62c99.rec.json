@@ -1,0 +1,28 @@
+{
+ "id": "냐_3fa6d79f49f62c99",
+ "syllable": "냐",
+ "used_route_words": [
+  "냐냐",
+  "냐냐냐냐냐냐냐",
+  "죄상첨죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001329,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fc081836352a1dd3e6c78927393b2b274808f8c299b52aa8e35d433832f9c116",
+ "position_sha256": "3fa6d79f49f62c99b09cdb6ffdbc38fa0184171715e88bc1b4c1fd61a519bcde",
+ "input_sha256": "b8ab5718f8645d26908893f085179cc6bc530d49ac1a28d91ee11b18d5888fd9",
+ "proof_bytes": 1445
+}

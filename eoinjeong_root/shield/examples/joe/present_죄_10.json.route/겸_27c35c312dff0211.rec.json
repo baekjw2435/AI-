@@ -1,0 +1,27 @@
+{
+ "id": "겸_27c35c312dff0211",
+ "syllable": "겸",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.016649,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5845111cd0b2dbbec2e7c1bcd142bc6eae4f7fa9f6147de6bb0e9ed4a18bbba9",
+ "position_sha256": "27c35c312dff02116547cc56e09bb2fee27fbbe2fc7382965c822d8727088514",
+ "input_sha256": "e100304b24cd54944d1feed6f5d6a4c04526ce14b81547c5934e006af72ca6a7",
+ "proof_bytes": 10015
+}

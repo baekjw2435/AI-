@@ -1,0 +1,26 @@
+{
+ "id": "곧_a9f5a3ad04c1f7d4",
+ "syllable": "곧",
+ "used_route_words": [
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.008027,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9a12a1b3d0b54030d5b209b6bd448dabe803b85efe6f9d21a027bb1b4a02c6c0",
+ "position_sha256": "a9f5a3ad04c1f7d4a443fb7cce3784aae8ad2f8a5f69d6583bdb5d03b1ff1143",
+ "input_sha256": "17b4d5af38d40cf096a0c1dcfb3f7cc44336de05769561a90d89561ef48e23f0",
+ "proof_bytes": 5260
+}

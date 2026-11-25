@@ -1,0 +1,26 @@
+{
+ "id": "겟_7d9b3b9dd91afe5c",
+ "syllable": "겟",
+ "used_route_words": [
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00905,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "40cef6df53c1d420f7ee6335bd5354240aec228006dab16a4778b43f7cd40b5f",
+ "position_sha256": "7d9b3b9dd91afe5ca848aac9b98963dd7a04e5ab97b886832b1e7854bbd72794",
+ "input_sha256": "90731f4baf25ce437bcd475c885a28ff9de4538a1afe3d5c071f9ea9ef2383fc",
+ "proof_bytes": 5292
+}

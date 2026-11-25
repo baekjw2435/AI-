@@ -1,0 +1,26 @@
+{
+ "id": "겸_1c7232a3868843bc",
+ "syllable": "겸",
+ "used_route_words": [
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009908,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9b5d77a9d2014179fd582fb65248a3d848f6f5bfd5c54fc24eca81414b9fbc5e",
+ "position_sha256": "1c7232a3868843bc6f9cd7993ee7338237a61124e523907c810f9374623886f9",
+ "input_sha256": "c62d75bbe59a93dd978610169bbe8555398c6d18b5064e0cfd0c6e0379ec5bf6",
+ "proof_bytes": 5610
+}

@@ -1,0 +1,27 @@
+{
+ "id": "렌_894aaaae7c5c9b61",
+ "syllable": "렌",
+ "used_route_words": [
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003454,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ec2addb998d6f475d8f3ebd2ab1a809e5a4115a5b5e5f36d780b5e80b4dd4f59",
+ "position_sha256": "894aaaae7c5c9b61ed4e90fc0bf6e932cbff1c39a5ae984481fc1ba406aa4782",
+ "input_sha256": "8e6a4ab3f69183d45e7032b683ab7d062b7ab25a3f4eebe1c188201ede3cbaf7",
+ "proof_bytes": 4028
+}

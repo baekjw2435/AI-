@@ -1,0 +1,30 @@
+{
+ "id": "름_7404c382283c7ca5",
+ "syllable": "름",
+ "used_route_words": [
+  "냅킨",
+  "늠름",
+  "샅바씨름",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003886,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "88dff48f2430726c8e8cae640517fc7b04ff728062ce28da4f62561ba23d5e08",
+ "position_sha256": "7404c382283c7ca5d9029272602f3d02222de24b17b1af1f10426817ca352bee",
+ "input_sha256": "06cd1417092c10ce3eee043d02b65230ba8888ffd467e49036c623d8ad2251dc",
+ "proof_bytes": 3314
+}

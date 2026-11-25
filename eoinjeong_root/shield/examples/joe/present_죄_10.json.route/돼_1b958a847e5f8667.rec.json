@@ -1,0 +1,28 @@
+{
+ "id": "돼_1b958a847e5f8667",
+ "syllable": "돼",
+ "used_route_words": [
+  "즈브스킨",
+  "톤데모원더즈",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.021744,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5c715e931911ce7a627303e4583a8440aff0486b01a54738d1ea5c0329081ceb",
+ "position_sha256": "1b958a847e5f8667e20d0f5cfdd28bbac1983d0ce5048701e0b64a983aa41ba2",
+ "input_sha256": "1c90c7288bd478a2d4fdb539b85ff4717ec7a8263e0739db286b2f42a6633fa9",
+ "proof_bytes": 11051
+}

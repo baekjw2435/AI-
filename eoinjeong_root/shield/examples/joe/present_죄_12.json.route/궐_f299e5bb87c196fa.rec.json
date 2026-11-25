@@ -1,0 +1,26 @@
+{
+ "id": "궐_f299e5bb87c196fa",
+ "syllable": "궐",
+ "used_route_words": [
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.012991,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9965a30b813ac98d77c5df71370bdb124ebf14b2bffbaba5871039ea6f17e1ed",
+ "position_sha256": "f299e5bb87c196fa2bf90b0d95e3f2619a76214a7836339d9fea51b28cf5f79d",
+ "input_sha256": "27ac114b2dae020168573aaa2d7e297a0f391acd5642a61c07c0aa192255ee4c",
+ "proof_bytes": 8677
+}

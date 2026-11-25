@@ -1,0 +1,27 @@
+{
+ "id": "땀_441840de339dc359",
+ "syllable": "땀",
+ "used_route_words": [
+  "댁대굴댁대굴",
+  "밑땀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006925,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "047fb87f50bb3381a5af02042c4f622fa06425cedba1062fbc6243daa66817e6",
+ "position_sha256": "441840de339dc3598eaa9aca8d9a18b0ed42d653b7d76c436ac53f2092310a3d",
+ "input_sha256": "c788ef29eefa7c59d8a1c71b7f36ec55754d1dd07ddd22393ab86a7456480684",
+ "proof_bytes": 8403
+}

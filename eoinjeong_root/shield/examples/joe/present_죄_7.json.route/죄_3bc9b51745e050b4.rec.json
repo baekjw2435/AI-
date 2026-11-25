@@ -1,0 +1,27 @@
+{
+ "id": "죄_3bc9b51745e050b4",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.016389,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2889779e27be46cf3a973ac5d3ed73f29fa2052132ab8ab320cd62cb1c395948",
+ "position_sha256": "3bc9b51745e050b4aecfa4c5fc24538f78163d42d7778367ad3567751f12e374",
+ "input_sha256": "ccf9d628f8ff8b54a298c2e9f5b6b616dbf92b3fc1dc3efddd5ffe602f47fbe6",
+ "proof_bytes": 7331
+}

@@ -1,0 +1,27 @@
+{
+ "id": "딩_2867d454905bffcb",
+ "syllable": "딩",
+ "used_route_words": [
+  "딩가딩",
+  "딩딩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.016207,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8d3e8510d28dd03dda511fa3dcaae15520c8f577dabb18290eac2df76e245fbf",
+ "position_sha256": "2867d454905bffcb755f1cfdd650bfeb1615466bad913604aa423bca7b4ab7fc",
+ "input_sha256": "784e6e21eccef647d3e5f24dd7c2340c3fe55854f6eb9175aa448940a28464bb",
+ "proof_bytes": 9434
+}

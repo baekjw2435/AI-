@@ -1,0 +1,26 @@
+{
+ "id": "멸_84f0bfa6693f4819",
+ "syllable": "멸",
+ "used_route_words": [
+  "죄멸"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00123,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5f79659e8f10c39025e1c586843b7dedd53cf6e61d9e726a6fabcb066981f160",
+ "position_sha256": "84f0bfa6693f481915e3cea85a342e203a0c25f42ce23fc2f7fb7ef39f560b2a",
+ "input_sha256": "0cdda15b58f08dcc9e3a7ca15298b680ace00fe0573c49647cd00b24af65653e",
+ "proof_bytes": 807
+}

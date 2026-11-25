@@ -1,0 +1,26 @@
+{
+ "id": "걱_121374051c4ced40",
+ "syllable": "걱",
+ "used_route_words": [
+  "갱도시험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001104,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "121374051c4ced407e459c6f6c21d4606e30cd43dc7a085cb7225464a669c0fc",
+ "input_sha256": "ed584182e31389fa76364756e5fddf829c3766718eb63a3d75bf9589d28370dc",
+ "proof_bytes": 1271
+}

@@ -1,0 +1,29 @@
+{
+ "id": "권_5e263cf9abb82dfe",
+ "syllable": "권",
+ "used_route_words": [
+  "굴대두겁",
+  "댁대굴",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.304515,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b6f7443be0b114d675e2abb8751e2d350eab41db9a5ac08d7cce3961feb7e506",
+ "position_sha256": "5e263cf9abb82dfe5bb3feb42a5b74b185d8d997e1558964ab03b142249b8ecd",
+ "input_sha256": "61d9ecbc2da7cb5448e4aea7c22afca51279cc050af6e226d84eea2e5e763129",
+ "proof_bytes": 184422
+}

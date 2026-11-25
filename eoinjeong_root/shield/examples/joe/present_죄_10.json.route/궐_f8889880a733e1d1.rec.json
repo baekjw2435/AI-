@@ -1,0 +1,30 @@
+{
+ "id": "궐_f8889880a733e1d1",
+ "syllable": "궐",
+ "used_route_words": [
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿",
+  "톤데모원더즈",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001113,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9eb8b5cb8cdcecd675347fca3fc5fe8083e7a464227c9a10ba724bce71cff8db",
+ "position_sha256": "f8889880a733e1d192e094e6445f69e2067a088385ce5252e3779902b43be948",
+ "input_sha256": "3573a171c5fa57bd07f9e9ea084e4b1b9ef67619641841877786f9cbf926c446",
+ "proof_bytes": 1537
+}

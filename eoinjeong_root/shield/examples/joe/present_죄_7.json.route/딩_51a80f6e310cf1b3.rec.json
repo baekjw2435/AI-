@@ -1,0 +1,27 @@
+{
+ "id": "딩_51a80f6e310cf1b3",
+ "syllable": "딩",
+ "used_route_words": [
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002263,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "dc616f12c4e0451100852ebe9d375153fe9efa5e5bd57709d1e089a6f4154b18",
+ "position_sha256": "51a80f6e310cf1b3615b69d980df1cbf6b4983ee803281f384aef0c6d9c17bf2",
+ "input_sha256": "2b2b800096a699211aa24dc18f27297490c0433fdff61c32348be2e2d43dc1f8",
+ "proof_bytes": 2287
+}

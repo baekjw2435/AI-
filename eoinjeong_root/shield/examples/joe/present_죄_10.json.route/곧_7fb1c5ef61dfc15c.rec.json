@@ -1,0 +1,26 @@
+{
+ "id": "곧_7fb1c5ef61dfc15c",
+ "syllable": "곧",
+ "used_route_words": [
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.027129,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "bc60e9dff0de18ebc2b78aa8b761032eb8e37769a4f411c4fca1a1371ce7834e",
+ "position_sha256": "7fb1c5ef61dfc15c0e637f667dac635922110ea9af4fcf6eeb1eed008d1e7ef5",
+ "input_sha256": "99869d29524ba929937c5b9cca7beeaec4e6f6239585cea71d81ae0041e3a946",
+ "proof_bytes": 11065
+}

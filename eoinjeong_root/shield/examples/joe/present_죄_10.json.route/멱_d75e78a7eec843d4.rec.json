@@ -1,0 +1,26 @@
+{
+ "id": "멱_d75e78a7eec843d4",
+ "syllable": "멱",
+ "used_route_words": [
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.055254,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e605222221d8c72c05059611fc74f678caf23f542ae6c990e9ddb2e3f5823933",
+ "position_sha256": "d75e78a7eec843d4104c8cf0daaed892d2d67bebcc362b1b6d034d5826d16379",
+ "input_sha256": "4374b6f047e8e2af76d64ba8a5c78bdd2954551707851766ddd991bb7ffc2a77",
+ "proof_bytes": 20833
+}

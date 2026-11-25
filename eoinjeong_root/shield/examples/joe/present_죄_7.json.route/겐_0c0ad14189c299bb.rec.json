@@ -1,0 +1,26 @@
+{
+ "id": "겐_0c0ad14189c299bb",
+ "syllable": "겐",
+ "used_route_words": [
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001135,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4c55c0297dd1a9c64f0f5b818bb4577d6520979a2519011020b09f203adee2f0",
+ "position_sha256": "0c0ad14189c299bb570334d40446d7db4b3ee244ed318daab6b915c8c2f32653",
+ "input_sha256": "8275449dd3b6bc2496613a66246a49b490f39ada33f8ed8849f74160d504a6fe",
+ "proof_bytes": 784
+}

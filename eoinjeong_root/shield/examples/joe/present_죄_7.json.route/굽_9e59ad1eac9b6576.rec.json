@@ -1,0 +1,29 @@
+{
+ "id": "굽_9e59ad1eac9b6576",
+ "syllable": "굽",
+ "used_route_words": [
+  "늠름",
+  "밑틀",
+  "죄밑",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000542,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "19ab23c97f1f095db9fc1dd7727ab7a180d33dba86a3e949f4fd7236cb7d80fb",
+ "position_sha256": "9e59ad1eac9b657636da25a4684ef2b942fd75e3f4cd08af0721f1d2f83894fd",
+ "input_sha256": "967eb7d25e69081a41ece9cd9ac14c25fba8180f125f61e39c32808fdf945b91",
+ "proof_bytes": 1168
+}

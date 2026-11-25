@@ -1,0 +1,28 @@
+{
+ "id": "냐_a912cdb9b894ffa0",
+ "syllable": "냐",
+ "used_route_words": [
+  "쇄석포도법",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000518,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cfa6c51d815abd16f5f784c90375f15c5253a03dd20eb16243ae316fa2d87269",
+ "position_sha256": "a912cdb9b894ffa077a2a6d1da9e7c687995bb0013fc85b3625cacca59e31dd5",
+ "input_sha256": "dc04ab58ebb288d44c32ef4b3e5ce27321a9a135c911a140371a0dd4954aa675",
+ "proof_bytes": 522
+}

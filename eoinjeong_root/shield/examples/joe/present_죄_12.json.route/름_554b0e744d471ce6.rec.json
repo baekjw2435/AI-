@@ -1,0 +1,27 @@
+{
+ "id": "름_554b0e744d471ce6",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "샅바씨름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013481,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "35d7f027ba23443b24a8f08ac0baf422d345f3477b20f0075aa66fc982b75808",
+ "position_sha256": "554b0e744d471ce681b4a3b77f26a60442962ad29b5b5d56f9a6bea83048c83d",
+ "input_sha256": "68591e9d67f6a3fdf7ae58618c1cbd85767424273389116c11cce1083b6bde6c",
+ "proof_bytes": 8347
+}

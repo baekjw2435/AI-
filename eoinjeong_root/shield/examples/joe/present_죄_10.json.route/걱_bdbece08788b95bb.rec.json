@@ -1,0 +1,26 @@
+{
+ "id": "걱_bdbece08788b95bb",
+ "syllable": "걱",
+ "used_route_words": [
+  "갱신청구권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000744,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "bdbece08788b95bbb9f40e6eba890742ea34a189f090e726e50100f84189d302",
+ "input_sha256": "2ecaf02c5e8807f3c0fbc70904d79d42bf5101f3dc471c16aa5fee805bc4854a",
+ "proof_bytes": 1271
+}

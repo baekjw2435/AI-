@@ -1,0 +1,27 @@
+{
+ "id": "궐_dbc10469b36f7114",
+ "syllable": "궐",
+ "used_route_words": [
+  "늠름",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000447,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6681290f62e9c3e404e8f90d5cc46c9db2e8a2507bf580a16e9b45a6d2efc1d7",
+ "position_sha256": "dbc10469b36f7114f2ccd6b7fcfeb199eb8b864285da2aedc37f310b265b717d",
+ "input_sha256": "8dd3eaff542d004891df4347e7dd380edfeae74c6e6b0f3b4699b11fec6c9c15",
+ "proof_bytes": 511
+}

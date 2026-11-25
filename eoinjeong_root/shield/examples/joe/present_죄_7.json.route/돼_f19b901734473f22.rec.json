@@ -1,0 +1,27 @@
+{
+ "id": "돼_f19b901734473f22",
+ "syllable": "돼",
+ "used_route_words": [
+  "밑틀",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.008065,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "23f02761c20237bb1d16abdadba74f64abf24a5be6d995442cf88ea70c85a1ed",
+ "position_sha256": "f19b901734473f222b1b1b53bb7d75d26e9b0c114e9d6e247923f33443d60bd1",
+ "input_sha256": "fa54335ba8662b86b92d8e955cfccc737575076a31004c658ee91d2a29e0083d",
+ "proof_bytes": 7750
+}

@@ -1,0 +1,26 @@
+{
+ "id": "겐_cbdb21d1affad195",
+ "syllable": "겐",
+ "used_route_words": [
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001377,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4c55c0297dd1a9c64f0f5b818bb4577d6520979a2519011020b09f203adee2f0",
+ "position_sha256": "cbdb21d1affad1951a8fb8d1411503c285398296730305a1aeabbd1a918d03a5",
+ "input_sha256": "e8b85cba289cdb4809ee1a38a0d60061f517d31dd449d1fe4ed0aa44113ec598",
+ "proof_bytes": 784
+}

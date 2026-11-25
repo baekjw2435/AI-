@@ -1,0 +1,26 @@
+{
+ "id": "겸_2a2fed988e55e57c",
+ "syllable": "겸",
+ "used_route_words": [
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013045,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "682a5414e887a79b591ab418abdd0dd91fa2d3c427f183f3ebf379c91004df4d",
+ "position_sha256": "2a2fed988e55e57cbfddaab465ced9fed42c20e55d62e725377eb5cc18b99782",
+ "input_sha256": "dc8a968974513ca96b4df90b174de5f9b03ff37e9da90f1193b65df8a426d8b0",
+ "proof_bytes": 9979
+}

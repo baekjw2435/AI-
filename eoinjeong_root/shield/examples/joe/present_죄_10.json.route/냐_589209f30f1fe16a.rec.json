@@ -1,0 +1,26 @@
+{
+ "id": "냐_589209f30f1fe16a",
+ "syllable": "냐",
+ "used_route_words": [
+  "갱생보호법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001012,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "589209f30f1fe16a90953040400b5775bbae03b2bd2ce19e34211ea529a7288d",
+ "input_sha256": "f461b8435fdaba7986929436a3039244de01865394ee89e9d72b7acf171b0ba9",
+ "proof_bytes": 799
+}

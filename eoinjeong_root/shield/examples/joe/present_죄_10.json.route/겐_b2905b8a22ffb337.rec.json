@@ -1,0 +1,28 @@
+{
+ "id": "겐_b2905b8a22ffb337",
+ "syllable": "겐",
+ "used_route_words": [
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000218,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "eb60c6394d8373916d913704ed24bf6a3881b462646ec73660f1f73878b99c04",
+ "position_sha256": "b2905b8a22ffb3376f1fe7961553c4a9b58d88a1a384d6c31a7a684c21aa9eb0",
+ "input_sha256": "5849975d77c5d17331c4d174e82ffe9614b0ef97a82c2efc326ca1a5c162cbd9",
+ "proof_bytes": 311
+}

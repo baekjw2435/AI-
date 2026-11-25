@@ -1,0 +1,28 @@
+{
+ "id": "읍_29dc692990c8b090",
+ "syllable": "읍",
+ "used_route_words": [
+  "읍읍",
+  "읍할읍",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010754,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1301e73d79785df128f228e32465fad6c5b4226afffe9d55570f4a9489ebd936",
+ "position_sha256": "29dc692990c8b090b42865b97a2e7bf2f36b1b1306531e0911b8fc2dff413f1f",
+ "input_sha256": "f9db251776d16a65a34799a2ef04066e831d20c74604a2e05f196e52a71af4e3",
+ "proof_bytes": 5744
+}

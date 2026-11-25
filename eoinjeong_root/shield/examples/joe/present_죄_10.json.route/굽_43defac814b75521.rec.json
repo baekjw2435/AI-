@@ -1,0 +1,27 @@
+{
+ "id": "굽_43defac814b75521",
+ "syllable": "굽",
+ "used_route_words": [
+  "잇샅",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.0003,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7cda58dd0743da83c102d399c70afe9248f8c125a7dd6450a619a387770fa954",
+ "position_sha256": "43defac814b75521f97c2771e4ff5376e3e8aa90f8bcb08fa2d52d45432513de",
+ "input_sha256": "1a13eff0cc5a6f41a17163941a1079111bec084cb9c460774f8911105d55eb2a",
+ "proof_bytes": 340
+}

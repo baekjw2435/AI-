@@ -1,0 +1,28 @@
+{
+ "id": "걱_ae9a4fb769bb461f",
+ "syllable": "걱",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001213,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "ae9a4fb769bb461f4aa986c2999712e966ee96a5a3b21a71c151d7e7c965c4c7",
+ "input_sha256": "eef8de8227046c34165d451abfe400ec1c79018969820c9926a3764c8f145386",
+ "proof_bytes": 1271
+}

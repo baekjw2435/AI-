@@ -1,0 +1,26 @@
+{
+ "id": "겐_45888f3679a35ca7",
+ "syllable": "겐",
+ "used_route_words": [
+  "즈브스킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000291,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e6e25f32ff090bd546c3dc3ad7927530467ceb4700899390bbdb5604414afe9b",
+ "position_sha256": "45888f3679a35ca71f6025b04f8163ad1c2397db53a990b09adfb90a49a199ce",
+ "input_sha256": "cd630f705f3b0126d4bbccbaf5553c6a048da094ad629c59d5aa8125ec16dffa",
+ "proof_bytes": 430
+}

@@ -1,0 +1,26 @@
+{
+ "id": "겐_6a2d86a00fa75382",
+ "syllable": "겐",
+ "used_route_words": [
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001179,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "70fa46125a5ed8866224e81f389740d66974580a5ad3d70b8bacc9900d0f2885",
+ "position_sha256": "6a2d86a00fa753828a39d0f46bc545b3b35d8d3456e49b08f92c000535e7ebd0",
+ "input_sha256": "538308c70033bcb84bc743fd63ed5e9268ac5d5563995f91226f231a467beff2",
+ "proof_bytes": 779
+}

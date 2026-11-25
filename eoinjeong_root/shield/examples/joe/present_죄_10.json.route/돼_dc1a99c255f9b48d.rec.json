@@ -1,0 +1,26 @@
+{
+ "id": "돼_dc1a99c255f9b48d",
+ "syllable": "돼",
+ "used_route_words": [
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.02268,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d45b150858e00a85fb774dca8fe661808e9d6b12761f96b07417d2ceadc12112",
+ "position_sha256": "dc1a99c255f9b48d8272ba2ce1eaefe040cc1fc5ab3b7f3590076364b7eca695",
+ "input_sha256": "e3b426430f8942a3fc496bf74590f45a954d45f366d09ec66a8e96d871926dd3",
+ "proof_bytes": 12089
+}

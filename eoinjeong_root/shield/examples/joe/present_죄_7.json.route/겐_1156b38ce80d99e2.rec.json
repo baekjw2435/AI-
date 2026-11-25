@@ -1,0 +1,26 @@
+{
+ "id": "겐_1156b38ce80d99e2",
+ "syllable": "겐",
+ "used_route_words": [
+  "죄기죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001246,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3905b605a67959612fbcf7560499b20b347a3592fc612eeae2c60c1e09576f13",
+ "position_sha256": "1156b38ce80d99e218a1b61e3b8637ec9f8616af443e3f4a9ea9e38c07e5bb7b",
+ "input_sha256": "63ae3daf45621065067c1bc1a3c186d739739ce4b1740ca551a00b6f01236cfd",
+ "proof_bytes": 1445
+}

@@ -1,0 +1,27 @@
+{
+ "id": "겸_6fd734d7dcce9978",
+ "syllable": "겸",
+ "used_route_words": [
+  "밑틀",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.008573,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "dcd81e1844e015bc827e75561a21671f1b94606b8ad28e1706500206a1e10b7b",
+ "position_sha256": "6fd734d7dcce997840aec0e73e3176b02b502222a1c0aabffbbb700243f77395",
+ "input_sha256": "61f7a24c86f766568c29343e48adc005f53b3639349cdd6a25e95f996ad8a2e5",
+ "proof_bytes": 4102
+}

@@ -31,8 +31,18 @@ sys.path.insert(0, str(HERE))
 import route_proof  # noqa: E402  (verify_v4 실행과 수락 조건 확인만 씀)
 
 
+ROUTE_DIR = None
+
+
 def main():
-    cert = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
+    cert_path = sys.argv[1]
+    if cert_path.endswith('.gz'):   # 큰 증명서는 gzip으로 보관(examples/joe)
+        import gzip
+        cert = json.loads(gzip.decompress(Path(cert_path).read_bytes()).decode('utf-8'))
+    else:
+        cert = json.loads(Path(cert_path).read_text(encoding='utf-8'))
+    global ROUTE_DIR
+    ROUTE_DIR = Path((cert_path[:-3] if cert_path.endswith('.gz') else cert_path) + '.route')
     q = cert['query']
     qused = frozenset(w.strip() for w in q['used'].split(',') if w.strip())
     words = [w.strip() for w in (HERE / 'source' / '표준사전_어인정_전체단어.txt').read_text(encoding='utf-8-sig').splitlines() if w.strip()]
@@ -120,7 +130,7 @@ def main():
         ru = frozenset(used & route_words)
         k = (x, ru)
         if k not in rmemo:
-            d = Path(sys.argv[1] + '.route')
+            d = ROUTE_DIR
             rec = route_proof.prove(x, ru, d)
             ok = rec.get('result') in ('W', 'L') and route_proof.check(x, ru, rec['result'], d)[0]
             rmemo[k] = rec['result'] if ok else None
@@ -235,7 +245,7 @@ def main():
             continue
         if x in route and n['why'].startswith('루트'):
             if used & route_words:
-                ok, msg = route_proof.check(x, used & route_words, n['v'], Path(sys.argv[1] + '.route'))
+                ok, msg = route_proof.check(x, used & route_words, n['v'], ROUTE_DIR)
                 leaves['루트(쓴 루트 단어 있음): solver_v5 증명서 verify_v4 수락' if ok else '루트(쓴 루트 단어 있음): 대조 안 됨'] += 1
                 if not ok:
                     unchecked.append(f'{k} ({msg})')

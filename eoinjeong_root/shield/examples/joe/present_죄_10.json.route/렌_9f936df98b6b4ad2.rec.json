@@ -1,0 +1,26 @@
+{
+ "id": "렌_9f936df98b6b4ad2",
+ "syllable": "렌",
+ "used_route_words": [
+  "갱도시험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.02456,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "9f936df98b6b4ad25260a9175db56d1355844540264204acf1f1d7bb99b10b9d",
+ "input_sha256": "e21acb2577afc7ff95c58ecf11ac23542d1c6dd1c49d0b2b1bc94bb59af2a4fc",
+ "proof_bytes": 15781
+}

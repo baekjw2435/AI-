@@ -1,0 +1,26 @@
+{
+ "id": "걱_d09829b5bc905ed3",
+ "syllable": "걱",
+ "used_route_words": [
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000816,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "d09829b5bc905ed317b45ccdcb124a4d0e6ea1ef5884fcd8129d205d8e927bbe",
+ "input_sha256": "65421ba38d60c8822fdae3574a6b9459bea7aba3bec20d7f3953be4117da0e7e",
+ "proof_bytes": 1271
+}

@@ -1,0 +1,26 @@
+{
+ "id": "겸_8df08505f9b624d4",
+ "syllable": "겸",
+ "used_route_words": [
+  "갱생보호법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013111,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5845111cd0b2dbbec2e7c1bcd142bc6eae4f7fa9f6147de6bb0e9ed4a18bbba9",
+ "position_sha256": "8df08505f9b624d4aed15beb866e5c9b98111c291ea91b2b18347a832d86671e",
+ "input_sha256": "9f5871c737fc297dcd5bf21e07824bf1685a833f8d68af14b470ca2ec19685e7",
+ "proof_bytes": 10015
+}

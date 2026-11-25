@@ -1,0 +1,28 @@
+{
+ "id": "겟_29a3a8611964fc81",
+ "syllable": "겟",
+ "used_route_words": [
+  "쇄석포도법",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001015,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4b9cd2c77ee29303d730f67525d4a6730d0d49a1d46c26b7e8c35b49f1085a9e",
+ "position_sha256": "29a3a8611964fc8165af7502b88c198c363994d2726e4426336b33993311d0ab",
+ "input_sha256": "06ed1af23776ba99ac480a5ae53b44947bd3f45ef766ffdc0d159079d57f0f42",
+ "proof_bytes": 1309
+}

@@ -1,0 +1,26 @@
+{
+ "id": "겸_1d718ef7121bf9d2",
+ "syllable": "겸",
+ "used_route_words": [
+  "갱신청구권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.019886,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5845111cd0b2dbbec2e7c1bcd142bc6eae4f7fa9f6147de6bb0e9ed4a18bbba9",
+ "position_sha256": "1d718ef7121bf9d2efa9ed572489486e05eacbef7374b08e79d4bb9607f808a5",
+ "input_sha256": "547bd5d6e5a01991b515cf72b74bf9c3009a8528c57e40e61be2b4f681569024",
+ "proof_bytes": 10015
+}

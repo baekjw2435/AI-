@@ -1,0 +1,26 @@
+{
+ "id": "뽕_847a17163063c640",
+ "syllable": "뽕",
+ "used_route_words": [
+  "뽕뽕"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010819,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1df450344ca502b8c74a62f64a25938e2209cc88d35d653b186ec98efdd5042d",
+ "position_sha256": "847a17163063c640d7ca6fa0fa931294e08bd884c779b52d795c475da51d6ffd",
+ "input_sha256": "0e3280219fdb5cfa63a34a79e9ad404e652c6765e7f5054edb2c5fa92d438594",
+ "proof_bytes": 8401
+}

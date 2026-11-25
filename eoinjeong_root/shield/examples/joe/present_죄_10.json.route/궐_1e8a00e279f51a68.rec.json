@@ -1,0 +1,28 @@
+{
+ "id": "궐_1e8a00e279f51a68",
+ "syllable": "궐",
+ "used_route_words": [
+  "냅킨",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001108,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e9da1cf1b5dc64b00df6e604dc10716077a9155cb14fc6f2cd6820e9e481764a",
+ "position_sha256": "1e8a00e279f51a68dd4258e1ab57f5ddf01a15583e1496fa385b7a263d3e99e6",
+ "input_sha256": "2b49b4f6ee430de83e080771757e0e485fd5fa69ac3b36622ea36974d747879a",
+ "proof_bytes": 1360
+}

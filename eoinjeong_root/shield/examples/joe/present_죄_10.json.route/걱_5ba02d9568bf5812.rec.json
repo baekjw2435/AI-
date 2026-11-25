@@ -1,0 +1,29 @@
+{
+ "id": "걱_5ba02d9568bf5812",
+ "syllable": "걱",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "율현마을",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000248,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b528ee498e9984255e93d30d60d85d78b60a629ed0982776aee40f090da24812",
+ "position_sha256": "5ba02d9568bf58120310a0b7360248f592f235d0889c8ff74e74f7454e20fa85",
+ "input_sha256": "0740adcac4d0c50a4d9c1fa5a74809379c0ef6b64234b017783d91ada223771c",
+ "proof_bytes": 308
+}

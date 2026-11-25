@@ -1,0 +1,26 @@
+{
+ "id": "궐_9120399de9a86ed5",
+ "syllable": "궐",
+ "used_route_words": [
+  "갱생보호법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.014703,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "86671fec3125da25b61cd6143a77fb114abfd7d13edd03b7c54061a5a5f1944b",
+ "position_sha256": "9120399de9a86ed50ddb74e1668214137c22a90bb837390b5f6e4b5a2bb71335",
+ "input_sha256": "b10c1a6d50981998175b0b52263cbb7f0f2b8fafdfb0d73b49fd5a0aff338f2c",
+ "proof_bytes": 7169
+}

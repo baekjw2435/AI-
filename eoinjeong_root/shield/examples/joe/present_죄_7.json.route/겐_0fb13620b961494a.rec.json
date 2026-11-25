@@ -1,0 +1,28 @@
+{
+ "id": "겐_0fb13620b961494a",
+ "syllable": "겐",
+ "used_route_words": [
+  "죄첩",
+  "첩음법",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000151,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9fbbf4b465aa2c502e8f5ee436c2c18abab0db1b573e08e45a68f62d083be8b1",
+ "position_sha256": "0fb13620b961494a8ce2a0bbfe7975c0a48548b6c1e6ec947c17016446147327",
+ "input_sha256": "f77637fa63068ce396205e758e8ef35fe95ac44a5871995fde62a9837b3062ef",
+ "proof_bytes": 194
+}

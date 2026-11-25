@@ -1,0 +1,26 @@
+{
+ "id": "갱_94a9994b92124310",
+ "syllable": "갱",
+ "used_route_words": [
+  "갱도시험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.024093,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7c7074d2a200be70af8115932a704549dcfb1bc84c36b441d1221e322a6a7f4a",
+ "position_sha256": "94a9994b92124310357e868e12e9d53bae5c9becab3b600e5ea5378bb3951f71",
+ "input_sha256": "89674240ae98728af22698089fa5361a6a746d196fbc111377a8e5af0942d32b",
+ "proof_bytes": 9539
+}

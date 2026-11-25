@@ -1,0 +1,28 @@
+{
+ "id": "을_88aa82a80b02620d",
+ "syllable": "을",
+ "used_route_words": [
+  "굴대두겁",
+  "법원검찰청복사골문화센터반달마을",
+  "쇄석포도법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007691,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "89b7a5921d71dc41901b4e254f46df6bf5325e69fb65c3c03b55692dbc8d4a03",
+ "position_sha256": "88aa82a80b02620d08d09e8479fb6441527b9a62000e79c4c34205c1da68945d",
+ "input_sha256": "86fa772ab9f17df6f82e640b2dff5cdb0a003a77ffa38b7719dd4d4ee28b9027",
+ "proof_bytes": 5740
+}

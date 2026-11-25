@@ -1,0 +1,28 @@
+{
+ "id": "겐_284f9c5efd6100b3",
+ "syllable": "겐",
+ "used_route_words": [
+  "즈브스킨",
+  "톤데모원더즈",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000393,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e6e25f32ff090bd546c3dc3ad7927530467ceb4700899390bbdb5604414afe9b",
+ "position_sha256": "284f9c5efd6100b38b87d80c61dc9a5351789ee32756e4c112fa2a914f66e639",
+ "input_sha256": "b1dc79aa2c3d3e21b2eb93632d6318d58f3449e4fb46dd98a451d78a38ea0240",
+ "proof_bytes": 430
+}

@@ -1,0 +1,27 @@
+{
+ "id": "겟_2a8ea5603c46f9fb",
+ "syllable": "겟",
+ "used_route_words": [
+  "톤세법",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005908,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "40cef6df53c1d420f7ee6335bd5354240aec228006dab16a4778b43f7cd40b5f",
+ "position_sha256": "2a8ea5603c46f9fb7773832065473a512d96d89809dba6e8f3b04ca738e6c0fd",
+ "input_sha256": "e068c34a92879717c9da9dc9456ce5f739787b701e4bbfc7300bc320790a8e17",
+ "proof_bytes": 5292
+}

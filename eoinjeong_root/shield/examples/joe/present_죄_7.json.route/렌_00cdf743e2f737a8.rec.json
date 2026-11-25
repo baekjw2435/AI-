@@ -1,0 +1,29 @@
+{
+ "id": "렌_00cdf743e2f737a8",
+ "syllable": "렌",
+ "used_route_words": [
+  "렛츠인조이더무비카가미네렌",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003337,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0c09b9ce9e79d720dceb8606a238453d349826c826db02b625ddd053560e6b95",
+ "position_sha256": "00cdf743e2f737a816522891e8dbcbf822ee59e41898a945fc0c8f7b9125a2b3",
+ "input_sha256": "45b66401c8f41b46d843ca6985ad3dfc29d79f983ea788f5384ec3af4e9ce55f",
+ "proof_bytes": 3632
+}

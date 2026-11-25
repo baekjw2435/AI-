@@ -1,0 +1,27 @@
+{
+ "id": "을_21931199e5b40161",
+ "syllable": "을",
+ "used_route_words": [
+  "굴대두겁",
+  "넨장맞을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.011166,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d47728872cbf0f94689ae497e4097a4eb3a4cfb4f8d1aeca5c18ed36f575d211",
+ "position_sha256": "21931199e5b401615361e0e1adbf0acb81ea87eae41c5118feb446d4d68d760d",
+ "input_sha256": "557a8f93a2fdc10cc49fb801dd8719219bbff03f50326c23bb5bc84adda80f5f",
+ "proof_bytes": 5436
+}

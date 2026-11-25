@@ -1,0 +1,27 @@
+{
+ "id": "겐_a44dddd95c880b2c",
+ "syllable": "겐",
+ "used_route_words": [
+  "밑틀",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00048,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6aca0b8b3b879e7881f4f81fea5029e5eb7e214b7021bd546d6db6ec450823a5",
+ "position_sha256": "a44dddd95c880b2ca9069dfbe614536fe7b0095689197f7db7f3b71663c44aee",
+ "input_sha256": "2f6f6d9d2195cfbddf697904698a18ea15f493a76790c106898309f143d26a9a",
+ "proof_bytes": 441
+}

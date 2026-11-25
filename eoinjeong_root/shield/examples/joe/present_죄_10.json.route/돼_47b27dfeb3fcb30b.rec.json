@@ -1,0 +1,27 @@
+{
+ "id": "돼_47b27dfeb3fcb30b",
+ "syllable": "돼",
+ "used_route_words": [
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002528,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "dd38f6a41560bd0a0a31f6c8037b7cc6b36e09b343ece788efa0f7dde1fea583",
+ "position_sha256": "47b27dfeb3fcb30b293e3e984c2fb0ccf0b0ef2f9b1ed5e149c792cc3bcd48a6",
+ "input_sha256": "6c652709a99f65e4d289f578b68fb27c17083fd641212696565579c8d0080efb",
+ "proof_bytes": 3440
+}

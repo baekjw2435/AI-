@@ -1,0 +1,28 @@
+{
+ "id": "겐_8e31fdc1a293fafe",
+ "syllable": "겐",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001127,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4c55c0297dd1a9c64f0f5b818bb4577d6520979a2519011020b09f203adee2f0",
+ "position_sha256": "8e31fdc1a293fafe0ff522b81c4a2247f1422725872fcca1da28819027f331b7",
+ "input_sha256": "946838ba4f3707a258b05162a89077d243a0fc3a5e4308106957103ed7114cf7",
+ "proof_bytes": 784
+}

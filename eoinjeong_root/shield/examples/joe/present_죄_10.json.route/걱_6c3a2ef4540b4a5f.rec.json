@@ -1,0 +1,29 @@
+{
+ "id": "걱_6c3a2ef4540b4a5f",
+ "syllable": "걱",
+ "used_route_words": [
+  "샅굴",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000338,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "25c3f7b335ec3b70aee8599d53ba7dc67d245bf1b60ccfda123c4e9ba31d6bfb",
+ "position_sha256": "6c3a2ef4540b4a5f511418a46773b3396ae259ac7ab069345ab9b413e97c05e2",
+ "input_sha256": "d70f405450cd7f054647c7eb5a82c6d1f93e8efb27cd00dc82335427918afc32",
+ "proof_bytes": 429
+}

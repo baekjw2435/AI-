@@ -1,0 +1,27 @@
+{
+ "id": "렌_42f82b1852c3ca94",
+ "syllable": "렌",
+ "used_route_words": [
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.031992,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "42f82b1852c3ca94a617a800d7aba56bea1a97a813e371ec248fd7d29f39678d",
+ "input_sha256": "32aca008322f4255cc5fc86ef69f29b13fc5cf267053934e853211b377c8f389",
+ "proof_bytes": 15781
+}

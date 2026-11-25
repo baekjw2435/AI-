@@ -1,0 +1,27 @@
+{
+ "id": "냐_419db4ee59499a54",
+ "syllable": "냐",
+ "used_route_words": [
+  "굴대두겁",
+  "댁대굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001044,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "419db4ee59499a54a80a25dcde991ed612a4b794ba155d633a234b18a4b54e3e",
+ "input_sha256": "ce44fa5dd078713863f8252e690e2f591da4ad38b0c5d0a4d029f32c51a82fb7",
+ "proof_bytes": 799
+}

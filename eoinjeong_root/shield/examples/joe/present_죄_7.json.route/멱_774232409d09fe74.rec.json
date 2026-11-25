@@ -1,0 +1,26 @@
+{
+ "id": "멱_774232409d09fe74",
+ "syllable": "멱",
+ "used_route_words": [
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.02011,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cae8a1308b9fe392cf4ccc3d2a8e570281a581654dd1d7028bc4ef01a3d846d8",
+ "position_sha256": "774232409d09fe743ed704ac3bbc1a0fedc193c23353825d4a8c9afe6e4e6686",
+ "input_sha256": "005b01c2ac7747d8071618002d7b3c8a5dc1e840998896823538a893a53a78b0",
+ "proof_bytes": 12093
+}

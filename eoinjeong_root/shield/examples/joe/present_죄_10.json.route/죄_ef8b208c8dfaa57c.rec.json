@@ -1,0 +1,27 @@
+{
+ "id": "죄_ef8b208c8dfaa57c",
+ "syllable": "죄",
+ "used_route_words": [
+  "촉탁살인죄",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.004814,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "36719b46e99cd39b12ee3a1d6d51a330d3a47fc7f084ae822f797e210f781128",
+ "position_sha256": "ef8b208c8dfaa57ca2db8d7893030a0f869513c88d58727902797aff8f7399d1",
+ "input_sha256": "eb53c35ce41c4e70570968fe6b79990dd52f12ef57c220c2ad20bc2488d1095a",
+ "proof_bytes": 4395
+}

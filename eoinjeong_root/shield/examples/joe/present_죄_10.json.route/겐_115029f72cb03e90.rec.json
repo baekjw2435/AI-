@@ -1,0 +1,27 @@
+{
+ "id": "겐_115029f72cb03e90",
+ "syllable": "겐",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001061,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4c55c0297dd1a9c64f0f5b818bb4577d6520979a2519011020b09f203adee2f0",
+ "position_sha256": "115029f72cb03e90bd7d108cf5d46c8f4e66b4d76fb7f427adfdf91d2a11044e",
+ "input_sha256": "bf8bff2f1920f5516c7a827e3c4fc27e9f402c65d15548d5e0c3eb89a4601175",
+ "proof_bytes": 784
+}

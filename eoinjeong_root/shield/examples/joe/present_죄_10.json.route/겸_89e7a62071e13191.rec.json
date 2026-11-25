@@ -1,0 +1,26 @@
+{
+ "id": "겸_89e7a62071e13191",
+ "syllable": "겸",
+ "used_route_words": [
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.01912,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5845111cd0b2dbbec2e7c1bcd142bc6eae4f7fa9f6147de6bb0e9ed4a18bbba9",
+ "position_sha256": "89e7a62071e1319173ca03598d46dee448e31db170dbd038c553d0cf89e5d82a",
+ "input_sha256": "bbf36eb19e5615271404b784dfae02c4cb18945255cebd0b242d01e8b987911c",
+ "proof_bytes": 10015
+}

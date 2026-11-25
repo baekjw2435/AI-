@@ -1,0 +1,30 @@
+{
+ "id": "겸_85aefd38e70967dd",
+ "syllable": "겸",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000713,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6f4b3d4cfafabd70e75ff79f14923aee57e3bf42f02c4f0a0a7d320fdf56d114",
+ "position_sha256": "85aefd38e70967ddbc64025c555690081ddaebdc654595e877b0ffc4689bac69",
+ "input_sha256": "d4c358353b65070c1f172d51d81f4e41a0c138630360a2667b07b6105de66b06",
+ "proof_bytes": 1009
+}

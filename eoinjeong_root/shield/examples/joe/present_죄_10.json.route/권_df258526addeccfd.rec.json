@@ -1,0 +1,28 @@
+{
+ "id": "권_df258526addeccfd",
+ "syllable": "권",
+ "used_route_words": [
+  "굴대두겁",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.219306,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b6f7443be0b114d675e2abb8751e2d350eab41db9a5ac08d7cce3961feb7e506",
+ "position_sha256": "df258526addeccfd8c0b7fe104179a0d465851039314c4730e067093904d3607",
+ "input_sha256": "098f207cdad337aa119c2487b01ff6e383d3e3cddc7c1ecc82e28f665a67d114",
+ "proof_bytes": 184422
+}

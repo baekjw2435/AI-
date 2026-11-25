@@ -1,0 +1,26 @@
+{
+ "id": "겸_289cc2a50a3dd2bc",
+ "syllable": "겸",
+ "used_route_words": [
+  "갱도시험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.023285,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5845111cd0b2dbbec2e7c1bcd142bc6eae4f7fa9f6147de6bb0e9ed4a18bbba9",
+ "position_sha256": "289cc2a50a3dd2bc2c8de210ce730016fc8798bb805fba424425d69183c3c5a6",
+ "input_sha256": "557443a284bd5e0ecd9a57be6de9d7cd8ffb61b77ab18c959e8eebef9f90136f",
+ "proof_bytes": 10015
+}

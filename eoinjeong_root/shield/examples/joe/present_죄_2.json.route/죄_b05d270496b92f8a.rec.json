@@ -1,0 +1,26 @@
+{
+ "id": "죄_b05d270496b92f8a",
+ "syllable": "죄",
+ "used_route_words": [
+  "죄기죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.009748,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6280e31f0662801362401d4eb7d07b713e0b494d93a4491816f03427bd5d73c6",
+ "position_sha256": "b05d270496b92f8a6c43ccb58c38ec843807def7a3cb813ee01097635da5d3a4",
+ "input_sha256": "c17ad82302922f829504d51fb8029cb0ecaf77de2bebc8a114bab63d48c97a6b",
+ "proof_bytes": 6711
+}

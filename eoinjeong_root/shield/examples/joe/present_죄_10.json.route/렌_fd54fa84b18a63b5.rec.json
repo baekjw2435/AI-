@@ -1,0 +1,26 @@
+{
+ "id": "렌_fd54fa84b18a63b5",
+ "syllable": "렌",
+ "used_route_words": [
+  "즈브스킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.027687,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "42db34416ff1b3fc912a4be18335ef7a7560ae6f3f96672d248c29c76c164838",
+ "position_sha256": "fd54fa84b18a63b5b32e4fceb34c1a3ae44f37dc53a5a0ff1a8f317006828cf2",
+ "input_sha256": "8886a4fc9c9588f1a668bdbcd9ec58c15544cb25b78b16d3632dd0f21aad74bb",
+ "proof_bytes": 16048
+}

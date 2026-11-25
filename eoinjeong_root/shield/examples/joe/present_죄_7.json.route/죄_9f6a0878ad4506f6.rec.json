@@ -1,0 +1,28 @@
+{
+ "id": "죄_9f6a0878ad4506f6",
+ "syllable": "죄",
+ "used_route_words": [
+  "죄첩",
+  "첩첩",
+  "촉탁살인죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001133,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "303ae8c73dd0f76b316db6b06fadd2568814e2258c67d81c55810859d313579d",
+ "position_sha256": "9f6a0878ad4506f6a45f26dde41553b4a40e28e18663fde44a13c9e1cdfb8047",
+ "input_sha256": "1fe206fd68b960c894acd4f09e3cefe00f1768234d6f4576e1319cf6c48925a8",
+ "proof_bytes": 1424
+}

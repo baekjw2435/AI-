@@ -1,0 +1,27 @@
+{
+ "id": "펠_d7e6af06b8bb1c47",
+ "syllable": "펠",
+ "used_route_words": [
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001719,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c8c3c7ad02f4773344a20c883ec611289ddb2c648d13b411d9c7a4555bf0f6c2",
+ "position_sha256": "d7e6af06b8bb1c47e6e9c076ebc0538d0a8e715de3a639ef7ed7d096837f227e",
+ "input_sha256": "15ddc6a71f3ae4e8eb08f22fe9e604c3844b0a28dff559d7197c2c3ef855abe6",
+ "proof_bytes": 1360
+}

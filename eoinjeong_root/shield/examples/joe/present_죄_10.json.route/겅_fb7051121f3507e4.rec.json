@@ -1,0 +1,27 @@
+{
+ "id": "겅_fb7051121f3507e4",
+ "syllable": "겅",
+ "used_route_words": [
+  "딩가딩",
+  "딩딩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001168,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fd997b6e685322be4c530756b53051727ba31db2632645293ccdbb4290b7c865",
+ "position_sha256": "fb7051121f3507e417f0deab27b38191209b254813a93fbd421f84b4d749ceab",
+ "input_sha256": "24ae70783e0a5b733f2c06f2eac52bad78f71ac20b15c0853e8c96480c5c8472",
+ "proof_bytes": 784
+}

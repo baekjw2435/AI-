@@ -1,0 +1,28 @@
+{
+ "id": "을_fe5c075ca1f53383",
+ "syllable": "을",
+ "used_route_words": [
+  "굴대두겁",
+  "넨장맞을",
+  "댁대굴댁대굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.014843,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d47728872cbf0f94689ae497e4097a4eb3a4cfb4f8d1aeca5c18ed36f575d211",
+ "position_sha256": "fe5c075ca1f5338367a35dab96dc22fd9b55d24636641963a67011e4eb89423f",
+ "input_sha256": "d593cbc8d887b0113619194cf6cc875aed5fe3bd1707c2e57f3f6928e6648eb5",
+ "proof_bytes": 5436
+}

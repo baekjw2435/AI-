@@ -1,0 +1,26 @@
+{
+ "id": "험_b9fc6ddea91fa900",
+ "syllable": "험",
+ "used_route_words": [
+  "갱도시험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000805,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2937e3e974300769c6309dc5aa1a33afccbe4f1c1601f39f99178ff8e557a7d3",
+ "position_sha256": "b9fc6ddea91fa9007fa367eca18e06378efcd9bee275eb21a5b5d31c7ea616ed",
+ "input_sha256": "c8b6e233fe28ec15fa8c1e89d23dd3cc4525c854fdd9baaf6120541dbe26889d",
+ "proof_bytes": 1256
+}

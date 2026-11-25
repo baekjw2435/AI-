@@ -1,0 +1,26 @@
+{
+ "id": "겟_8006636360f30ea9",
+ "syllable": "겟",
+ "used_route_words": [
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003595,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8850f98bd8363cf4af9074e2afe56a8fdcfa4c207807841eb65442299ca78264",
+ "position_sha256": "8006636360f30ea973b0bf4c5c4fc7e374d87699b37a3ecf289d2d85425204c7",
+ "input_sha256": "a7b06412ebaaa1daeba95fb7f8bc7a935b13f4da1c4bd2d484075bf621a10741",
+ "proof_bytes": 2819
+}

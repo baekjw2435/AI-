@@ -1,0 +1,29 @@
+{
+ "id": "몬_f5739299294b315d",
+ "syllable": "몬",
+ "used_route_words": [
+  "갑상샘자극호르몬",
+  "굴대두겁",
+  "댁대굴댁대굴",
+  "쇄자갑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002893,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6cc8d86bdb2495f423eab7f9b35b5160db954dc0d98282600e1e1e715031f693",
+ "position_sha256": "f5739299294b315df752c9bc80c29a06311193228ea3887c6cdd82f9eb7609bf",
+ "input_sha256": "2a02350fa9445f45d497ec6721630ea07d68012a6c8f9b84bd9747039d24a332",
+ "proof_bytes": 1272
+}

@@ -1,0 +1,26 @@
+{
+ "id": "걱_6b79e4b0c89764f0",
+ "syllable": "걱",
+ "used_route_words": [
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000833,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "6b79e4b0c89764f05b99559bbe1c527e91b5560aa150b18228b6a62de65aa92b",
+ "input_sha256": "5b42618f474e45a7bccf0fcc1a13977339b61c53554205e5916a9a0f4dc955a3",
+ "proof_bytes": 1271
+}

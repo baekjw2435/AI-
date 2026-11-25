@@ -1,0 +1,26 @@
+{
+ "id": "겸_ab2b8fc7c13ca251",
+ "syllable": "겸",
+ "used_route_words": [
+  "죄기죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.055511,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4b88bbb26f66ecd9acef88a92af8dd44c57ac4d6c7ce0d5ba577fdd9320fb919",
+ "position_sha256": "ab2b8fc7c13ca2514a95378725293238dc68ea1cc29a092d01ff52f1d8b61ff0",
+ "input_sha256": "b90084586470ce88b3cb8b72249f46b682f9fe99de6989ec2ea5602fdf401765",
+ "proof_bytes": 29576
+}

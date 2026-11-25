@@ -1,0 +1,26 @@
+{
+ "id": "걱_8ec796fafc052912",
+ "syllable": "걱",
+ "used_route_words": [
+  "갱내채굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000755,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "8ec796fafc052912ca4184ab9384e803d7286f2578c17d12a45c72039c812d3e",
+ "input_sha256": "d3c9471c8c3e3252d57025d72fe3051bb7ff04fe956a382bc4185249190c4b3b",
+ "proof_bytes": 1271
+}

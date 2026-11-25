@@ -1,0 +1,26 @@
+{
+ "id": "겸_1b957190642fe7aa",
+ "syllable": "겸",
+ "used_route_words": [
+  "냅킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.017877,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5845111cd0b2dbbec2e7c1bcd142bc6eae4f7fa9f6147de6bb0e9ed4a18bbba9",
+ "position_sha256": "1b957190642fe7aa95f6ccee2485df9b434176001483b4b32331e2513b99a4aa",
+ "input_sha256": "1e567acb0d46106df1c311ab411dfff3bea917c2725ebde5ad8ab5e954c8d865",
+ "proof_bytes": 10015
+}

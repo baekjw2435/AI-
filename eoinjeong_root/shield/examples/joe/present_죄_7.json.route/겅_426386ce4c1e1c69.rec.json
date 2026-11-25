@@ -1,0 +1,28 @@
+{
+ "id": "겅_426386ce4c1e1c69",
+ "syllable": "겅",
+ "used_route_words": [
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000758,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5a70d0777421bd6eaf13b1ac8af63655c5bd8d001db6109f85bd372af51d601e",
+ "position_sha256": "426386ce4c1e1c6902756022595a5b9d28b9fb69bcd1c1f4807effe806227812",
+ "input_sha256": "eb9aa080af569fa90c23be9b07bb00c48a2803da07bfca1fc0542a84915c0398",
+ "proof_bytes": 507
+}

@@ -1,0 +1,26 @@
+{
+ "id": "겸_beaec45c7b795e91",
+ "syllable": "겸",
+ "used_route_words": [
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.016552,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6ba09e17a1ab0ff9a415dfe99c4df98a90e63e8007b1d80a25533185e71ec3f8",
+ "position_sha256": "beaec45c7b795e91c4e5dc8397484c6058a3065551a4b68486f5ba3d21124387",
+ "input_sha256": "7634461fad75affee2e18c4e7bc4a047c58f95116fba35fa6191609ade6cb13f",
+ "proof_bytes": 10055
+}

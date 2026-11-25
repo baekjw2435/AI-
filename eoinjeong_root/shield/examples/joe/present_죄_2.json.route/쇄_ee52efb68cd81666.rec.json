@@ -1,0 +1,26 @@
+{
+ "id": "쇄_ee52efb68cd81666",
+ "syllable": "쇄",
+ "used_route_words": [
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.004917,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5049563d061b11a1eba663e97dd3d2865504ac7240e9abbfd5e0158a2c254897",
+ "position_sha256": "ee52efb68cd816666bc298f504de4005bf177564d899fb0d00599b9651a6ea4e",
+ "input_sha256": "05648ec61ba7b61cacb4d099f120718b3b35fd3995f0bf1e0eebd0261ad8e6c8",
+ "proof_bytes": 4421
+}

@@ -1,0 +1,29 @@
+{
+ "id": "굉_16f56ebedd562474",
+ "syllable": "굉",
+ "used_route_words": [
+  "굉굉",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000387,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "48458c61890f6043d3d32ce0b60e258109b1020502ced0e3ec4623e77af90c7d",
+ "position_sha256": "16f56ebedd5624747d08536ba14fe2e586fb9495e9ec7239384bd63f9a8c8cb2",
+ "input_sha256": "1cfbe5961eebf2866a2bc045a88758336ebe25d00fe1a8c3a41a1f4ee84ef4b2",
+ "proof_bytes": 520
+}

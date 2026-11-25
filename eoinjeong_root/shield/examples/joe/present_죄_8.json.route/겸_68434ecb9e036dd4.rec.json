@@ -1,0 +1,27 @@
+{
+ "id": "겸_68434ecb9e036dd4",
+ "syllable": "겸",
+ "used_route_words": [
+  "톤세법",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013673,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5845111cd0b2dbbec2e7c1bcd142bc6eae4f7fa9f6147de6bb0e9ed4a18bbba9",
+ "position_sha256": "68434ecb9e036dd4b270e799e1a17b15a660d2b4b56ba27ee759f2888a547d16",
+ "input_sha256": "13b2eca0b2bbefc3d5d6cb45f8568f8e35205211deb7e5921e6cab5d6190e337",
+ "proof_bytes": 10015
+}

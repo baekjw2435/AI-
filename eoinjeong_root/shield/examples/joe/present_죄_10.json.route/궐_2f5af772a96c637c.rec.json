@@ -1,0 +1,27 @@
+{
+ "id": "궐_2f5af772a96c637c",
+ "syllable": "궐",
+ "used_route_words": [
+  "굴대두겁",
+  "댁대굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013261,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "86671fec3125da25b61cd6143a77fb114abfd7d13edd03b7c54061a5a5f1944b",
+ "position_sha256": "2f5af772a96c637c020c50272fbe5443859d16f75d1e13e5b960af38aa38987c",
+ "input_sha256": "891a5c7d991373ef5c763b10890e6584cfab47d9233727b699b389c077e3b4ba",
+ "proof_bytes": 7169
+}

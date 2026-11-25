@@ -1,0 +1,27 @@
+{
+ "id": "겅_277fffd34f1109c4",
+ "syllable": "겅",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001175,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fd997b6e685322be4c530756b53051727ba31db2632645293ccdbb4290b7c865",
+ "position_sha256": "277fffd34f1109c453a6d862977a7abaa2eb0756eeb355af840f02f4ebba16aa",
+ "input_sha256": "b67c9e7bdc393df091c4391554aef787b340998bb3aa4f934966a3796083a43a",
+ "proof_bytes": 784
+}

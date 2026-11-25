@@ -1,0 +1,26 @@
+{
+ "id": "겐_aef1f93fade9d0fe",
+ "syllable": "겐",
+ "used_route_words": [
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000809,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d489da72534420381883135f22e5164d8cad9845e34c4428830271750712ed1c",
+ "position_sha256": "aef1f93fade9d0feffb6e608da74739f0dc4cd4abb45155da7fa034e54748549",
+ "input_sha256": "ebfc962b3cdf6c926b2e257295fb2c6ddb5791afec7377bb420501ce7ee06a57",
+ "proof_bytes": 522
+}

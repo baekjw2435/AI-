@@ -1,0 +1,27 @@
+{
+ "id": "돼_5609351bec4b1764",
+ "syllable": "돼",
+ "used_route_words": [
+  "굴대두겁",
+  "댁대굴댁대굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.017871,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d45b150858e00a85fb774dca8fe661808e9d6b12761f96b07417d2ceadc12112",
+ "position_sha256": "5609351bec4b1764844c6222ea38c4e92c94782a2af86f53650891bcee75073a",
+ "input_sha256": "3601e62e794f26060823e98ba36445da0fa773aeef3bcbcdd8d7da1e3a12f58a",
+ "proof_bytes": 12089
+}

@@ -1,0 +1,30 @@
+{
+ "id": "을_b0bd10dfd0a4ea9b",
+ "syllable": "을",
+ "used_route_words": [
+  "냅킨",
+  "샅흰검은말율",
+  "율현마을",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000475,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f2785dcce6c70e218fbd8e488dcb05da51a52004627779573278e9781ea01ab",
+ "position_sha256": "b0bd10dfd0a4ea9b661c2f1376fe176c864980faf48384b76a158d0cade66655",
+ "input_sha256": "ff577da689697fcc8611837715e37e0cc736c80f88c4a99da0ed7dc08a754fbe",
+ "proof_bytes": 812
+}
