@@ -1,0 +1,29 @@
+{
+ "id": "을_fbed533014c05ba4",
+ "syllable": "을",
+ "used_route_words": [
+  "법원검찰청복사골문화센터반달마을",
+  "쇄석포도법",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000409,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "38e011850c0476a1a364824d232d7783e29ca62428446e1bf22ae5517ab16e09",
+ "position_sha256": "fbed533014c05ba4a22fcade099e98347856bec496e93000ad6503ac06a38b35",
+ "input_sha256": "c22d507359042ff8fdafb1cb897f2195343327637362776751575ff864112757",
+ "proof_bytes": 528
+}

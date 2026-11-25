@@ -1,0 +1,30 @@
+{
+ "id": "법_b4af1bb6db076a96",
+ "syllable": "법",
+ "used_route_words": [
+  "겸손법",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000134,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "b4af1bb6db076a965c8275dddcc6ea49a93cfe0ec7dc104e950d2eee8f2990c1",
+ "input_sha256": "11631d9e29d57137976ad01c647114a339454ca36cdc5d3a37479e8dd5e22e4b",
+ "proof_bytes": 124
+}

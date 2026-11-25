@@ -1,0 +1,29 @@
+{
+ "id": "척_5dcecf1f51598526",
+ "syllable": "척",
+ "used_route_words": [
+  "권척",
+  "죄죄",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001809,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f6feecd42441fb672d20a0ac14b636e194305516289965652075301d1467309b",
+ "position_sha256": "5dcecf1f51598526b7e71d6379fe13a1e88ff214804f75af61379a1bd7402b66",
+ "input_sha256": "e3abf6d5dcacd1d995b7e76b406d2b04503458d938ad2ff152ef11bf61b609e4",
+ "proof_bytes": 1679
+}

@@ -1,0 +1,33 @@
+{
+ "id": "첩_51e8d856048f95ae",
+ "syllable": "첩",
+ "used_route_words": [
+  "득득",
+  "득첩",
+  "섭도마을",
+  "을종근로소득",
+  "죄상가죄",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000138,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "51e8d856048f95aee5031d59c95ac2d3e702debd685ae21baeeebd7f1f685103",
+ "input_sha256": "ae59064d16bfea8816a6d210c9dc604b157df14532a7e77f9bc7d6e007ec8b0f",
+ "proof_bytes": 124
+}

@@ -1,0 +1,29 @@
+{
+ "id": "냐_1556857c21bea953",
+ "syllable": "냐",
+ "used_route_words": [
+  "권준",
+  "쇄쇄",
+  "쇄심권",
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000871,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7ecd4d670ba380d600bb6587b37eedce7281030b8a5ca613aa29123f936f9079",
+ "position_sha256": "1556857c21bea953e8d45ca9398ecd0f6f4d9d3f9f34fb7804094a82d35e5a6f",
+ "input_sha256": "6481747e1324b121e6ffb29be06c4bb067b6f90f40557b7bd5873aee2eab1508",
+ "proof_bytes": 732
+}

@@ -1,0 +1,28 @@
+{
+ "id": "톤_26ccb53b26df013f",
+ "syllable": "톤",
+ "used_route_words": [
+  "톤톤",
+  "펠레톤",
+  "헴펠"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002847,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3193875be4d7efa048eceb567b13f8a5c218c926c0a0fa55cda9b3847b76476d",
+ "position_sha256": "26ccb53b26df013f08f6c51e46407455a5915d839415125ea6f637d0b5b349e4",
+ "input_sha256": "883e493a706cfcec9e4bb1dbbf3fdfa30992f0769c4142699d09e80da5815367",
+ "proof_bytes": 1889
+}

@@ -1,0 +1,29 @@
+{
+ "id": "촉_904f59a46a63b1bd",
+ "syllable": "촉",
+ "used_route_words": [
+  "죄기죄",
+  "죄첩",
+  "촉촉",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00021,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6c2e27514e901f6fa5313ae6e95a57b9061812158030d54894f3dcac0dfaebec",
+ "position_sha256": "904f59a46a63b1bd06ceb6938139f7106964a12a355527deb7a436c19deacea6",
+ "input_sha256": "c0c969282bd055f032acac9c8a38c4ab5bb613e28534b677709d258f5a6e9034",
+ "proof_bytes": 141
+}

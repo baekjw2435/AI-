@@ -1,0 +1,29 @@
+{
+ "id": "댁_9f723d8cf3f1f34a",
+ "syllable": "댁",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000194,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "9f723d8cf3f1f34a22f35fa467c8624907b109ec2761744e5fd52b0d74133410",
+ "input_sha256": "8e82bf3659e531e2ccfeeae958239e1f3dc4aa10755fe19bbd0e00be1cd9013f",
+ "proof_bytes": 124
+}

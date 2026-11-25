@@ -1,0 +1,29 @@
+{
+ "id": "냐_4e3b71a6c8fa8f8f",
+ "syllable": "냐",
+ "used_route_words": [
+  "굴저냐",
+  "샅굴",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000739,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cfa6c51d815abd16f5f784c90375f15c5253a03dd20eb16243ae316fa2d87269",
+ "position_sha256": "4e3b71a6c8fa8f8fcc6686c116c4d05979a6e6c9deaf6863396188f5dc8c58df",
+ "input_sha256": "587ebc08ebd4d9b180bcd422a78368e9f309308a9cb6d8a3e20fe288728088d0",
+ "proof_bytes": 522
+}

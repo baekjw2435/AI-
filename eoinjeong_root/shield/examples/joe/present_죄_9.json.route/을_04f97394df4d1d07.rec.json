@@ -1,0 +1,28 @@
+{
+ "id": "을_04f97394df4d1d07",
+ "syllable": "을",
+ "used_route_words": [
+  "죄상첨죄",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00054,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f1fb4446acdc4cdc526f3c4754f9a9d96c57b28add675deaa1b1e36d998977d5",
+ "position_sha256": "04f97394df4d1d07fc69918ed470b873c456546f1953fd3d5c60fb6031b68fab",
+ "input_sha256": "2098831d876332886c1662295645a0eaedcfe5638f9be0bfd5e5e15a7cb02e37",
+ "proof_bytes": 473
+}

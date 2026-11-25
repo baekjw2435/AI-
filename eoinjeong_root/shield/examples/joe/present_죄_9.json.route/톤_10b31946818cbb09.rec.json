@@ -1,0 +1,29 @@
+{
+ "id": "톤_10b31946818cbb09",
+ "syllable": "톤",
+ "used_route_words": [
+  "쇄쇄",
+  "죄인의벗을수없는족쇄",
+  "톤톤",
+  "펠레톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000765,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "261adaae0b9e54f0e8b0321496c2280a437782510ef49b468445a08381b0d2e0",
+ "position_sha256": "10b31946818cbb09a58c7316bba881e9213a8b89ee390849cdcb2add6df4c4cd",
+ "input_sha256": "471e22f2d8d01a263a095c70d0406ff673e8fb98f84045544e2bd3f7809f8b3a",
+ "proof_bytes": 648
+}

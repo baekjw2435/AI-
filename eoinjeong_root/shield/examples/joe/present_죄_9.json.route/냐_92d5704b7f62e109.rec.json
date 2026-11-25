@@ -1,0 +1,31 @@
+{
+ "id": "냐_92d5704b7f62e109",
+ "syllable": "냐",
+ "used_route_words": [
+  "섭도마을",
+  "죄상가죄",
+  "죄첩",
+  "준치저냐",
+  "첩섭",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001297,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fc081836352a1dd3e6c78927393b2b274808f8c299b52aa8e35d433832f9c116",
+ "position_sha256": "92d5704b7f62e1093152ba3bda9f50d4bfeeab1dc347a3a80745c97688feea4d",
+ "input_sha256": "5a9e14bedbf5e20a6ec0cdd0a73f865de838487f67eb8d5c013aa6e94275d9be",
+ "proof_bytes": 1445
+}

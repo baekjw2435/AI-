@@ -1,0 +1,26 @@
+{
+ "id": "멱_b3943e4e9f05fd44",
+ "syllable": "멱",
+ "used_route_words": [
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.050786,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ca6e2b508979d55fe3e1ab577c3ceeb50fa1b60fa41e8c3979a591abc84d5a17",
+ "position_sha256": "b3943e4e9f05fd448a14f4018fcd8d66f272c57f26cb3f8d0da796150c8594dd",
+ "input_sha256": "32ff8270b821add5e217a5cd7e93da3a3f6bf36b7b72e25c075d44a3604eff87",
+ "proof_bytes": 20642
+}

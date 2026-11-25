@@ -1,0 +1,33 @@
+{
+ "id": "을_69267faee6060713",
+ "syllable": "을",
+ "used_route_words": [
+  "득득",
+  "득표율",
+  "섭도마을",
+  "율현마을",
+  "을종근로소득",
+  "죄상가죄",
+  "죄첩",
+  "첩섭"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001093,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fa955b78f3bae76ed5e3573f9ae37fc86f5f2845edc76101af0d2c0a921099c5",
+ "position_sha256": "69267faee60607135c81c67d3f561d41810256cd9cf1cf9434bb308afc8f8092",
+ "input_sha256": "9a4ad7b6aff236c59c5774bbb40debe0922a1721d1eac5a59ec5f901040e205d",
+ "proof_bytes": 736
+}

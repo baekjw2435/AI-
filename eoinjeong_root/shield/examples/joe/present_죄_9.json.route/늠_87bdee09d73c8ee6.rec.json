@@ -1,0 +1,29 @@
+{
+ "id": "늠_87bdee09d73c8ee6",
+ "syllable": "늠",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000139,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "87bdee09d73c8ee663fcf32e273b78cf15cf657fe08f47da0586fe7279f1f4e9",
+ "input_sha256": "554e4c36a4ccd5cc37bbf051051025c5c151b30f4634edb8bd9b01c644f6aabe",
+ "proof_bytes": 124
+}

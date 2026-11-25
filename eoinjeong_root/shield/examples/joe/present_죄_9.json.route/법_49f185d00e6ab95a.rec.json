@@ -1,0 +1,31 @@
+{
+ "id": "법_49f185d00e6ab95a",
+ "syllable": "법",
+ "used_route_words": [
+  "법관징계법",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩음법",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000135,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "49f185d00e6ab95a15f2fa5b821670163343de3da7bcb65047d13b0286b14e6d",
+ "input_sha256": "4489329ab668fb04b479874298e64e2f570d74dbc929408d7e3c3a0fd63d75d5",
+ "proof_bytes": 124
+}

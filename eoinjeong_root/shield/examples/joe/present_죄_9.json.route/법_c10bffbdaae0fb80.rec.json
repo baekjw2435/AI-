@@ -1,0 +1,31 @@
+{
+ "id": "법_c10bffbdaae0fb80",
+ "syllable": "법",
+ "used_route_words": [
+  "뭄바톤",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩",
+  "톤세법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00016,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "c10bffbdaae0fb809d313d74e3992bfd3e399131cf15b92e609890f6a637f525",
+ "input_sha256": "6161b402c269f759418b62bd68a2297c374f714567cfb3c85c75d367459c0825",
+ "proof_bytes": 124
+}

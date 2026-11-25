@@ -1,0 +1,28 @@
+{
+ "id": "몬_3f7529c04bdb6c9a",
+ "syllable": "몬",
+ "used_route_words": [
+  "껍질몬",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000417,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c187aa48b5c54ea21e765cfe7ab3ffe95d36cb1057f93b7cb56f910237816421",
+ "position_sha256": "3f7529c04bdb6c9aa0a4eed4023e88201f1049c9e1d0a9a9000a7609e44f2ec1",
+ "input_sha256": "43f5faff6404185c080f58971bbc953a4a469871d77b6391d8777103e102a76e",
+ "proof_bytes": 431
+}

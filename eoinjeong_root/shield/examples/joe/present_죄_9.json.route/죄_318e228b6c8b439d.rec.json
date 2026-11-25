@@ -1,0 +1,33 @@
+{
+ "id": "죄_318e228b6c8b439d",
+ "syllable": "죄",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "득죄",
+  "밑틀",
+  "율현마을",
+  "을종근로소득",
+  "죄밑",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000187,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e63ce4c5a75fe698f00de00454aa3a82458394d15e2d868bd615f0531030b9e7",
+ "position_sha256": "318e228b6c8b439dd580455f64f7048afdfeefd6bcfaf3ce1a8a6791c1287821",
+ "input_sha256": "065dce3275e02397a2b6dd53ab95656c62263904c1b5097c5225b5f14627c3e0",
+ "proof_bytes": 280
+}

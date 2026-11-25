@@ -1,0 +1,31 @@
+{
+ "id": "샅_6c18078fdafb9704",
+ "syllable": "샅",
+ "used_route_words": [
+  "렌즈터릿",
+  "렛츠인조이더무비카가미네렌",
+  "잇샅",
+  "죄상가죄",
+  "죄첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.884822,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8b7af2b314e3fa051de357649bc0c273eaa94fc42e7ab23585253e04e4be645b",
+ "position_sha256": "6c18078fdafb97042479f7c25a2aee74bfcc360b1239e0e696480015f23aadbd",
+ "input_sha256": "1f39c99015c67303f0560da3e749f000273768fba5a9adafedf3c05233a52629",
+ "proof_bytes": 192285
+}

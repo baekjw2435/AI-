@@ -1,0 +1,29 @@
+{
+ "id": "짝_160045fac528fe32",
+ "syllable": "짝",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000156,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "160045fac528fe32279e94b4c2d6ec8777f4ceb3e31da224f94fe8982819dbab",
+ "input_sha256": "c37cccf6d502d019f8f18a2d31a118655949402d9ee46180dbeb6be1e7779048",
+ "proof_bytes": 124
+}

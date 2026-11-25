@@ -1,0 +1,29 @@
+{
+ "id": "죄_29fc5dcbb734c172",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "죄첩",
+  "첩첩",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000625,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "856ef69ef6765dee5ee7a7ffe4c31dbabb541009c1636cf8307c4e1003d1d16c",
+ "position_sha256": "29fc5dcbb734c172cb109b20fa2599135f2c05152fce52e9afc0b436ec905af9",
+ "input_sha256": "01344196e98fb534e8db6079eb6d0058f3c9879628cf2ffaca535f18e3d95697",
+ "proof_bytes": 663
+}

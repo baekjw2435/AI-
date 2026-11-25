@@ -1,0 +1,29 @@
+{
+ "id": "굉_377b833355a60d78",
+ "syllable": "굉",
+ "used_route_words": [
+  "굉굉",
+  "죄첩",
+  "첩첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000259,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d94405cd2e3c3f3dbb598ae7fa81eb051df29a9f557aea4b931f5e64cd47188b",
+ "position_sha256": "377b833355a60d7808b69effc0c89630ec1ae2accb61e43ae7a2d435a47d7c64",
+ "input_sha256": "921f6477091ea714a6d92caece14968c4f27477237e80c151999680dc34588d7",
+ "proof_bytes": 277
+}

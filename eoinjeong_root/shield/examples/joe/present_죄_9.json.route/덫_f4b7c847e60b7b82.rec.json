@@ -1,0 +1,29 @@
+{
+ "id": "덫_f4b7c847e60b7b82",
+ "syllable": "덫",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000152,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f4b7c847e60b7b829bddf5ebf36e11881ebb008bc9827b6882eb3dd3ab998b34",
+ "input_sha256": "09dbb6c4d9baa09073584c99ea23640aa1d6e47fdaf5f055fe3207023def76d4",
+ "proof_bytes": 124
+}

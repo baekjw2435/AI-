@@ -1,0 +1,30 @@
+{
+ "id": "멸_5aaeb2744b4e50a1",
+ "syllable": "멸",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000163,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "5aaeb2744b4e50a1cc7879ad082422bbd3a0f8f894eb2929a8224bd89c98cfec",
+ "input_sha256": "4bdb935c8e3ebcb6c0b5095c62bed47bf135733e1b17376af97700779aae9f52",
+ "proof_bytes": 124
+}

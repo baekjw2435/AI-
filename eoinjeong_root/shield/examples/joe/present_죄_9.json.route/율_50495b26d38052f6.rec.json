@@ -1,0 +1,30 @@
+{
+ "id": "율_50495b26d38052f6",
+ "syllable": "율",
+ "used_route_words": [
+  "샅흰검은말율",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000212,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "50495b26d38052f622f09dc0716642eef8391020d8affb6efcc413da28fb1bd0",
+ "input_sha256": "b26c886b3d766ce4cec12eea967e2841ae12fa96c720f10aa5529a5074135e93",
+ "proof_bytes": 124
+}

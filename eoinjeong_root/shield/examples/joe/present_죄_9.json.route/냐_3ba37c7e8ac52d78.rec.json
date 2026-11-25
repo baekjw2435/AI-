@@ -1,0 +1,27 @@
+{
+ "id": "냐_3ba37c7e8ac52d78",
+ "syllable": "냐",
+ "used_route_words": [
+  "죄율",
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000535,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "804e386826ee825f853bdde642cdefb6c3646b5903bf78ab46ac4ac5532e0e51",
+ "position_sha256": "3ba37c7e8ac52d7858a9e3863b875d0a1702745b9f6d742bd18a397919f8f90c",
+ "input_sha256": "9b34851038243c7bcc7cf2ca00c35affe26e3b240394fae5bce29d769e3d186d",
+ "proof_bytes": 529
+}

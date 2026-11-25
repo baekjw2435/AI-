@@ -1,0 +1,32 @@
+{
+ "id": "권_8d82d5b48511c03a",
+ "syllable": "권",
+ "used_route_words": [
+  "균질권",
+  "늠균",
+  "늠름",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000213,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "8d82d5b48511c03a5b7b96e0b011bc698a412fd5d982ae3bb0f122d98b3b8a57",
+ "input_sha256": "e8438ad1874cc9104fc889d6501252678dd881bf0ae773393d6df5d9ec523246",
+ "proof_bytes": 124
+}

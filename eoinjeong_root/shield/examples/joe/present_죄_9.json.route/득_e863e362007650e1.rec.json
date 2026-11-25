@@ -1,0 +1,29 @@
+{
+ "id": "득_e863e362007650e1",
+ "syllable": "득",
+ "used_route_words": [
+  "득득",
+  "죄기죄",
+  "죄첩",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00198,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d066437b5100241d3406cc69bab77e245ba92b78bd6a3c33005db57158a28bac",
+ "position_sha256": "e863e362007650e1c93acffbec1ef5422ab8bcd19e0570a8e41273121084296e",
+ "input_sha256": "b7d1d9577d54b3ee56706e0b6cb636490e49715f5f3df398454d4a4c6b7eb4f8",
+ "proof_bytes": 3256
+}

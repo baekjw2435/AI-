@@ -1,0 +1,28 @@
+{
+ "id": "권_7042a640b48066d1",
+ "syllable": "권",
+ "used_route_words": [
+  "쇄심권",
+  "죄기죄",
+  "죄첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.7301,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ead10d4fc0825c8446d4b1fb4bed08d26d67d1d35a99759481ca964153f2f1b0",
+ "position_sha256": "7042a640b48066d1bbc562df2ca0bf0379eef68ac7ef3f2bab6ad738ef29f7d3",
+ "input_sha256": "0846f9607dac2459e63ab93c64e48f093913d297c39a8fd2cf091c9b06bbb3b3",
+ "proof_bytes": 240267
+}

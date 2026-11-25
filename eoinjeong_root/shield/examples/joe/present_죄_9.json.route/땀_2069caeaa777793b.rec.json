@@ -1,0 +1,29 @@
+{
+ "id": "땀_2069caeaa777793b",
+ "syllable": "땀",
+ "used_route_words": [
+  "늠균",
+  "늠름",
+  "밑땀",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000198,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f1b17443799cc377adf8321689407ad5d85e3296a564a67ece322544a06a20e4",
+ "position_sha256": "2069caeaa777793b20f5512aec51228f80e2837f4f51f8cf9cf9f4374e24d5cc",
+ "input_sha256": "02b47aee6f87be4aeb1861d1b2d03db756d7cd670e0878619e05044e1cfa9f2a",
+ "proof_bytes": 265
+}

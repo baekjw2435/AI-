@@ -1,0 +1,30 @@
+{
+ "id": "촉_23b29d5787b2db84",
+ "syllable": "촉",
+ "used_route_words": [
+  "죄기죄",
+  "죄첩",
+  "척촉",
+  "첩첩",
+  "촉촉"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001598,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "91228db5ceb7b17930e5e30eaa0227009f0f868b96fe732b6898031706b18d22",
+ "position_sha256": "23b29d5787b2db84dbbf19a85dec0ba96ce62184087d9b8d92fc88491349f882",
+ "input_sha256": "9e927c3ca2d9e0ff6c09f51da78115bb59515a12c1db95ecd88854d981360a79",
+ "proof_bytes": 1581
+}

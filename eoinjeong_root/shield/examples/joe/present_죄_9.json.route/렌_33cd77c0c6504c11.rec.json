@@ -1,0 +1,28 @@
+{
+ "id": "렌_33cd77c0c6504c11",
+ "syllable": "렌",
+ "used_route_words": [
+  "렛츠인조이더무비카가미네렌",
+  "읍권",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00329,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2fe64b86ad40ed84e875b979e302c191dff87f5a035c4903923121f0e25ce4c7",
+ "position_sha256": "33cd77c0c6504c1122b1725d52881b3c5c335b9e2b29f789117d19b31068d392",
+ "input_sha256": "60a5b9ab279d54b5fa79f5d7ba941bdb41007049e45a1497c6c104ea6098d4f1",
+ "proof_bytes": 4155
+}

@@ -1,0 +1,30 @@
+{
+ "id": "획_7a6cfb4c2e2a6d95",
+ "syllable": "획",
+ "used_route_words": [
+  "궐획",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000128,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "7a6cfb4c2e2a6d955d6b0f67b15c40e6a813e6559b10a384dcc6102ad2fb25d2",
+ "input_sha256": "f6006d42a055a309f7c11fa317b3c6c83392f39abf62e160efd0c7d598f2c39a",
+ "proof_bytes": 124
+}

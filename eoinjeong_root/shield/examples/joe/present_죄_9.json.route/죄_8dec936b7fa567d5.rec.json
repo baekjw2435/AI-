@@ -1,0 +1,31 @@
+{
+ "id": "죄_8dec936b7fa567d5",
+ "syllable": "죄",
+ "used_route_words": [
+  "득죄",
+  "섭험",
+  "을종근로소득",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000169,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "8dec936b7fa567d5142b1bc4a1f2f9a9f61d1f3cd3f92a9b784c685ba9216c41",
+ "input_sha256": "5fa78e4abc3ec33cc557c98ce8cee139ab28674f530eaf79c77ed1d3550d2e86",
+ "proof_bytes": 124
+}

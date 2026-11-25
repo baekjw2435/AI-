@@ -1,0 +1,29 @@
+{
+ "id": "멱_99957701f0c8062c",
+ "syllable": "멱",
+ "used_route_words": [
+  "갑자기쪽지시험",
+  "쇄쇄",
+  "쇄자갑",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013731,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "24e805e109e57661c45f0ea94a7b6dbba62e9f7d0100ec7f17816bbd90866fc7",
+ "position_sha256": "99957701f0c8062c8509c12b411da91a806157a2926ae5bd0cfc028119b7624a",
+ "input_sha256": "1d281ebfcc6db4bfee1b4a03c2178637ad9a8c2567126536931fa23f46cb2014",
+ "proof_bytes": 3996
+}

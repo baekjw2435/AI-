@@ -1,0 +1,32 @@
+{
+ "id": "험_e7bc6e1fe68c49b0",
+ "syllable": "험",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000133,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "e7bc6e1fe68c49b02b690399661f6c949a7285bb6e4303e84cb7d7ebdc3211f0",
+ "input_sha256": "7b3ad663b3ab70cac38e9ca66d5abb8214ff4a38294fec698868eddcefecdd85",
+ "proof_bytes": 124
+}

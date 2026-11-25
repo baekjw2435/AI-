@@ -1,0 +1,31 @@
+{
+ "id": "권_46452fc051ea0ca5",
+ "syllable": "권",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000129,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "46452fc051ea0ca5dda3a2b9a6b8296a03cd1e03c1f5c9b15b0990101b547170",
+ "input_sha256": "5eaf186881d7eb6550d6e2a9500ecf040c7dc134f28fd23bbbda9a35b691288f",
+ "proof_bytes": 124
+}

@@ -1,0 +1,29 @@
+{
+ "id": "읍_00ff703860985512",
+ "syllable": "읍",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000162,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "00ff70386098551257b285412693239a672f270545e2bc06e6aae410f89b30ff",
+ "input_sha256": "94a662292c5839a91386cae2c0ad070a86c96e63da002a1226a4c9a35cefbb12",
+ "proof_bytes": 124
+}

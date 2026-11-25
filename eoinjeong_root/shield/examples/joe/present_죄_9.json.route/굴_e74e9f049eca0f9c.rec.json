@@ -1,0 +1,30 @@
+{
+ "id": "굴_e74e9f049eca0f9c",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "늠름",
+  "밑틀",
+  "죄밑",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000138,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "e74e9f049eca0f9cb60a53fe0dd8fce8b859c4243dd4821121e2c66505d5aa17",
+ "input_sha256": "782b14002a2ff328c16299c8859693fca8053f856dbbcf6d3766282d9b9e73ac",
+ "proof_bytes": 124
+}

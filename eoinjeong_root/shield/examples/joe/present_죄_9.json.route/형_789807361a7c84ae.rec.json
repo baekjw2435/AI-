@@ -1,0 +1,29 @@
+{
+ "id": "형_789807361a7c84ae",
+ "syllable": "형",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000173,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "789807361a7c84aed92049bd53b53a690a4a8891aac56067ace490d15bf20691",
+ "input_sha256": "4ad7f106ade2f32893a499b946788b9b6caa709b53870780177082d30f4c6d17",
+ "proof_bytes": 124
+}

@@ -1,0 +1,30 @@
+{
+ "id": "쇄_a0236321ef7a772c",
+ "syllable": "쇄",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000166,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "a0236321ef7a772c841e33d86b7a14e7ef7b6ff10f009674be1a497972da06d3",
+ "input_sha256": "e83a1bad44cfeb153caf89e594cc5ed92233148c405e938d5d29e3a8ec4d577c",
+ "proof_bytes": 124
+}

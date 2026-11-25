@@ -1,0 +1,29 @@
+{
+ "id": "숭_c96e1876a0cb0457",
+ "syllable": "숭",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000147,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "c96e1876a0cb0457ce18363c1d3dd1684ab2b6c350bc37d10b138052fe9d5a01",
+ "input_sha256": "ccd3e4a4a982b6eaef5404d6f012ca1f3ea8116538ce06c9c8aa330498fbf429",
+ "proof_bytes": 124
+}

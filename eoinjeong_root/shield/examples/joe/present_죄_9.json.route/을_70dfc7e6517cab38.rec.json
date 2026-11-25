@@ -1,0 +1,28 @@
+{
+ "id": "을_70dfc7e6517cab38",
+ "syllable": "을",
+ "used_route_words": [
+  "법원검찰청복사골문화센터반달마을",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000406,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "38e011850c0476a1a364824d232d7783e29ca62428446e1bf22ae5517ab16e09",
+ "position_sha256": "70dfc7e6517cab3847b525f44d9c7bb1ac932d54f541def216c7dd13fb1ebada",
+ "input_sha256": "1d20a2575f43476d877bebe5de7df441391262fbc3f33fd2611748042106869e",
+ "proof_bytes": 528
+}

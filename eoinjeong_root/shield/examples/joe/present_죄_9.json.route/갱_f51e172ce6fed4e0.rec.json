@@ -1,0 +1,31 @@
+{
+ "id": "갱_f51e172ce6fed4e0",
+ "syllable": "갱",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000134,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f51e172ce6fed4e06f82769c0da99bc03a8cac86c5c5360c6aa3508b05dbbc4a",
+ "input_sha256": "ca0e4ddf1e26f39f9e60dc38cd773913921e44128ae1e3a48393bad59b6c841a",
+ "proof_bytes": 124
+}

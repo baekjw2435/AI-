@@ -1,0 +1,28 @@
+{
+ "id": "굴_f81599d247d51ab9",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "죠죠의기묘한모험",
+  "폼플라스틱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000134,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f81599d247d51ab9d4e68de466a528d67a0161ec4e08bdf514a3294d87b1dab5",
+ "input_sha256": "44c09c915e3e9bb467d4f4fa138547367c63ca6a145fa98205cfac9375c25dba",
+ "proof_bytes": 124
+}

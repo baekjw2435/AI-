@@ -1,0 +1,31 @@
+{
+ "id": "법_6e29a1afd168e085",
+ "syllable": "법",
+ "used_route_words": [
+  "법과헌법",
+  "섭험",
+  "죄첩",
+  "척추마취법",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000169,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "6e29a1afd168e08503025f17cb3de3e32cd071e03a41d9bb0f823e507588a8d7",
+ "input_sha256": "e7f6bb00d15b8854a07d1e5f75ca1005f003e21576cc057ff0716596e2861f7c",
+ "proof_bytes": 124
+}

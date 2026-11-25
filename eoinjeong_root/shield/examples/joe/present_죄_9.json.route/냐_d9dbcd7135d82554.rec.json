@@ -1,0 +1,31 @@
+{
+ "id": "냐_d9dbcd7135d82554",
+ "syllable": "냐",
+ "used_route_words": [
+  "갱도시험",
+  "죄상가죄",
+  "죄첩",
+  "준치저냐",
+  "첩첩",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000233,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "962d8b172716df895dce7ed4bec2dfafbabaeaf131b5a34ad73189c1ad83b3f3",
+ "position_sha256": "d9dbcd7135d82554eb16d815e7d31c60f32ee2df2bef951283da8558b124e974",
+ "input_sha256": "adc21e8a3c923b6f210788fe9eb9191704276cbe682b6a92d781fa6cbb48f967",
+ "proof_bytes": 209
+}

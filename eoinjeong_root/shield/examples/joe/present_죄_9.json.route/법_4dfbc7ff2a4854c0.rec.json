@@ -1,0 +1,31 @@
+{
+ "id": "법_4dfbc7ff2a4854c0",
+ "syllable": "법",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "척주지압요법",
+  "척하면척",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000132,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "4dfbc7ff2a4854c0339c247ce97d3a7293fad19f12c75947eb7e8b019f7875be",
+ "input_sha256": "bbee10f1d74f865ca0722002d087296c7366c8a9e1b02d657d57d6a811aabe5b",
+ "proof_bytes": 124
+}

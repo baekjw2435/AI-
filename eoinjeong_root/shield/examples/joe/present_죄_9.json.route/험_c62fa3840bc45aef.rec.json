@@ -1,0 +1,28 @@
+{
+ "id": "험_c62fa3840bc45aef",
+ "syllable": "험",
+ "used_route_words": [
+  "죠죠의기묘한모험",
+  "험할험",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001297,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2937e3e974300769c6309dc5aa1a33afccbe4f1c1601f39f99178ff8e557a7d3",
+ "position_sha256": "c62fa3840bc45aefbd7b693059eda44e8b574119839fdc42e011bbd65fd0ab93",
+ "input_sha256": "49662673d1ae75af663904a89c9636db290bc7551b101de925b283dbcbc5305b",
+ "proof_bytes": 1256
+}

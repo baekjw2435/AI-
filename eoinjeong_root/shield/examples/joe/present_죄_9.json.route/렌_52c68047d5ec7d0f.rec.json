@@ -1,0 +1,29 @@
+{
+ "id": "렌_52c68047d5ec7d0f",
+ "syllable": "렌",
+ "used_route_words": [
+  "죠죠의기묘한모험",
+  "톡톡파워풀카가미네렌",
+  "틱톡",
+  "폼플라스틱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.034993,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "52c68047d5ec7d0f6a700566254f9e4a2f1a04c9ef63b35421f1cfb1c7b7bb9f",
+ "input_sha256": "c64d62bc6c062552534a4ecc7247e97caa4d4834aa5cac15f6eb735956e43078",
+ "proof_bytes": 15781
+}

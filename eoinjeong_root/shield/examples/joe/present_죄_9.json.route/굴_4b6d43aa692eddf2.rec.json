@@ -1,0 +1,29 @@
+{
+ "id": "굴_4b6d43aa692eddf2",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "죠죠의기묘한모험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00013,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "4b6d43aa692eddf22bc23838a7fe2fa91c1f6f1a1babcaf4e95bd4d21d9371ce",
+ "input_sha256": "2ba68eec58274a51aa1f9a55d6b93e88b45fb5f1f768665d4f4b951407e9e335",
+ "proof_bytes": 124
+}

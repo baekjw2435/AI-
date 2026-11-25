@@ -1,0 +1,28 @@
+{
+ "id": "룻_44c68127352159e2",
+ "syllable": "룻",
+ "used_route_words": [
+  "갱도시험",
+  "죄상첨죄",
+  "죄첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001311,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3a9ab78b88e1910b8c7d540ed0db9fa21251fb51f92914afab533ffde41c1ea1",
+ "position_sha256": "44c68127352159e25180e56e15aeba20d18799c45e6b05a46d498cf7ee28325f",
+ "input_sha256": "8bafb3672173db32b6f594cf15042f38d13ae1a04045a3f42c4815d77777a052",
+ "proof_bytes": 1445
+}

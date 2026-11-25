@@ -1,0 +1,27 @@
+{
+ "id": "멱_d84c30071093ae78",
+ "syllable": "멱",
+ "used_route_words": [
+  "죄기죄",
+  "죄첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.754714,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "251b7c210fdeb815e90c977e2d5a59896446e7a7c6abf7c8d1276d91ba188694",
+ "position_sha256": "d84c30071093ae78c0581c5a8e2ecc930cc752d3737564bbadfffaaffa32569d",
+ "input_sha256": "d38686bd554e6b962969bdaaecd9ce6deebe6ac23d6fb132ed9e39e2d5005ce5",
+ "proof_bytes": 333766
+}

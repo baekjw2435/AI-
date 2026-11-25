@@ -1,0 +1,27 @@
+{
+ "id": "죄_4fe5ca7a5dc100bb",
+ "syllable": "죄",
+ "used_route_words": [
+  "죄율",
+  "촉탁살인죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002698,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7579e51d04b41293147cea79bb8a6d0325af77521bf2f49a36792a03b8c0206f",
+ "position_sha256": "4fe5ca7a5dc100bbcf055fe2fc3fbcdb61df1a1ee244a887117ae47256395663",
+ "input_sha256": "c1f4bf06ef3fa9ab504ed518fa9993408032451848dacb33ea567cc0cbf81ce4",
+ "proof_bytes": 2630
+}

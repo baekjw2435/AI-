@@ -1,0 +1,29 @@
+{
+ "id": "빔_580c452e60c0faec",
+ "syllable": "빔",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000127,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "580c452e60c0faec6f1df06647b3276cfdcbeaf8d05bd6df3948e4f5e6965d00",
+ "input_sha256": "1318999eb2a37150cc4f4381c3c7dc246d0deec72a30109820cf8612609dfa74",
+ "proof_bytes": 124
+}

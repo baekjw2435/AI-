@@ -1,0 +1,30 @@
+{
+ "id": "냐_81aed7af722fb3f7",
+ "syllable": "냐",
+ "used_route_words": [
+  "늠름",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000215,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "81aed7af722fb3f7e51c6c248d612c3d39430ed5ee54617ac9ffe8fe3594962f",
+ "input_sha256": "5b112b0f9665c5b91d77a90262d75e34d170526b4bb8814a419283cdc83f5ca5",
+ "proof_bytes": 124
+}

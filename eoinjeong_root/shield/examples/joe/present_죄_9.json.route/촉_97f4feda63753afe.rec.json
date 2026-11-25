@@ -1,0 +1,33 @@
+{
+ "id": "촉_97f4feda63753afe",
+ "syllable": "촉",
+ "used_route_words": [
+  "득득",
+  "득롱망촉",
+  "섭도마을",
+  "을종근로소득",
+  "죄상첨죄",
+  "죄첩",
+  "첩섭",
+  "촉촉"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003318,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6d963796810d3b8e59634639f1f0d67cb21150f5763bde100a51d02e07acfce0",
+ "position_sha256": "97f4feda63753afe83fbd9d9a305cdcd5b29d19ad70f0245dc3c338052ec5a35",
+ "input_sha256": "41ffb24dafd8ea4674ad0787f7fb8c6f89ebc260aedf03dea836bb665806db6e",
+ "proof_bytes": 2489
+}

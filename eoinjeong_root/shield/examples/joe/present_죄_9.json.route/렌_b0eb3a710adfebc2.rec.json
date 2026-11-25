@@ -1,0 +1,29 @@
+{
+ "id": "렌_b0eb3a710adfebc2",
+ "syllable": "렌",
+ "used_route_words": [
+  "쇄소건즐",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄",
+  "즐거움가득보물상자카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005616,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7194911bab13c32598ce1ea820a7ffb8626695c1b17246dae3a0c37440f3e5f8",
+ "position_sha256": "b0eb3a710adfebc241777817901185bf0b17005616baaa8c6b5c5d610595c6e8",
+ "input_sha256": "bc1065eff7908d3d1acda857af8be154644a2f118cce298f5e59028c95061c60",
+ "proof_bytes": 3639
+}

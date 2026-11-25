@@ -1,0 +1,28 @@
+{
+ "id": "잎_7671f0285db04c82",
+ "syllable": "잎",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "뽕잎"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.02157,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ad1256627e2f4414ed004fcad27b4a0495a2a4a657ef0b87d6100e1b665b6d71",
+ "position_sha256": "7671f0285db04c82ff6452c6c787d1de882d07ce87d49910c9ce708fa0f0eb86",
+ "input_sha256": "9493fb200c1c3d4d7b2c9b33b16d9cff8536eeee13bf63e247761e1ad0f5d1c3",
+ "proof_bytes": 11044
+}

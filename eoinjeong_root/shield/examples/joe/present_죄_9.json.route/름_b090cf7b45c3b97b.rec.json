@@ -1,0 +1,31 @@
+{
+ "id": "름_b090cf7b45c3b97b",
+ "syllable": "름",
+ "used_route_words": [
+  "뼈거름",
+  "섭험",
+  "죄첩",
+  "척추뼈",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000132,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "b090cf7b45c3b97bed799352efce30fb7231040d68ff0f3fe21a10e3f35cfc6e",
+ "input_sha256": "6bae8afeb516c9fea9e051b590250925bd6c9a565999796a6e27990f2525ac2f",
+ "proof_bytes": 124
+}

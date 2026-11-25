@@ -1,0 +1,29 @@
+{
+ "id": "멱_1fadb7157b1113b5",
+ "syllable": "멱",
+ "used_route_words": [
+  "권폄",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003413,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e0e01bc6a659d893ce2a288d5c540547cbdcb3c7a2dbfe5b695ab8f35d7b78d2",
+ "position_sha256": "1fadb7157b1113b5b14ffa0bddb010d7a7b00ab689d716994762dc781cf51bc6",
+ "input_sha256": "69c2cd969a4225bb56bb1b07ab1b21f91fa40b486a2642c40b706b7a7441bade",
+ "proof_bytes": 3461
+}

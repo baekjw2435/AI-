@@ -1,0 +1,30 @@
+{
+ "id": "쇄_f1e56f1513823b31",
+ "syllable": "쇄",
+ "used_route_words": [
+  "늠름",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00017,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f1e56f1513823b314999c6a4bcd15f6bea3f06e461024be1c10cc05d36ddc8fa",
+ "input_sha256": "252fab5f273e9e73cbff507ebb60bd5cb8287544c75d78bbf1e19831c47c65ec",
+ "proof_bytes": 124
+}

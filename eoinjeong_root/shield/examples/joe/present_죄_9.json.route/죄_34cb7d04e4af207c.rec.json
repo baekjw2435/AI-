@@ -1,0 +1,27 @@
+{
+ "id": "죄_34cb7d04e4af207c",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005471,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a307dec54f3a27765528ab45a96bb2faad29394896866c469c45cec5ac8911a9",
+ "position_sha256": "34cb7d04e4af207ced7adc9a8b7afd1e53b815f8ba404d6f335a890b77e21a80",
+ "input_sha256": "83e6cb3621a11116b40579a2dfe14b7557133263932caa83a27409672fb587a0",
+ "proof_bytes": 4555
+}

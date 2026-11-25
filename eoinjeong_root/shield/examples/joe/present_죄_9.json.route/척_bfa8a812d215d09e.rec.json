@@ -1,0 +1,30 @@
+{
+ "id": "척_bfa8a812d215d09e",
+ "syllable": "척",
+ "used_route_words": [
+  "뼈바를척",
+  "죄기죄",
+  "죄첩",
+  "척추뼈",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002446,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8569c1a8b4debdfebca2fd1dcd11332faecfc47124293d6f041223b83444b05a",
+ "position_sha256": "bfa8a812d215d09e17b5762c611212a6ae620ac946861478cc1a4d64a06fbc31",
+ "input_sha256": "8f2fdcc8811fd7f8f8573808edce2494e570fa4a61373d942ed02be53f2a02a4",
+ "proof_bytes": 1654
+}

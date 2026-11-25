@@ -1,0 +1,29 @@
+{
+ "id": "죄_48c322d904a6e3d4",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "밑틀",
+  "읍권",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001094,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1375c5df0a9fa3da11eedaa74400a32b24915212798a87baa3ff3bcfd10d4a1c",
+ "position_sha256": "48c322d904a6e3d446eb11f36edc773ee62df53261b9d32f1a04b7571b74242c",
+ "input_sha256": "6f806a8e331e09ecc9af547cba83d2d9651b3784770cdf4906cbe70e8d9bec89",
+ "proof_bytes": 1258
+}

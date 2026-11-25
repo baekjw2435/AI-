@@ -1,0 +1,30 @@
+{
+ "id": "숭_b04419a57fa46919",
+ "syllable": "숭",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000179,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "b04419a57fa46919090cef394dfd9892b6a37f86b7c271b70ce514a9b03f7b7c",
+ "input_sha256": "63642033884fbadee23fbef541b840c650534845be03de7d2340c0b743d22171",
+ "proof_bytes": 124
+}

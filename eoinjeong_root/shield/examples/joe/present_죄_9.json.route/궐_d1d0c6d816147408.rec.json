@@ -1,0 +1,29 @@
+{
+ "id": "궐_d1d0c6d816147408",
+ "syllable": "궐",
+ "used_route_words": [
+  "권폄",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000894,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4d5262bb62971244d08016cacc0c1deb7fa4745556ffc8daf10aa5d807c580f0",
+ "position_sha256": "d1d0c6d816147408c661cb75d9a4fa78c489445f22841123e73d7f7a02e9b487",
+ "input_sha256": "083e19f92087248b22068ece49086737af4ef74532ac6eb2235c020495345729",
+ "proof_bytes": 925
+}

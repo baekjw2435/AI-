@@ -1,0 +1,31 @@
+{
+ "id": "을_bda014cbf5ad0405",
+ "syllable": "을",
+ "used_route_words": [
+  "갱재첩",
+  "법원검찰청복사골문화센터반달마을",
+  "죄상첨죄",
+  "죄첩",
+  "첩음법",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000397,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f1fb4446acdc4cdc526f3c4754f9a9d96c57b28add675deaa1b1e36d998977d5",
+ "position_sha256": "bda014cbf5ad0405ede931fbbba1837c5f3ffbef67b5d5816f748612e563ded4",
+ "input_sha256": "38b3083270e4876e3402b59828dab1cb0907e9f4fcdfa899513ff4122b542e1d",
+ "proof_bytes": 473
+}

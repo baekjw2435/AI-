@@ -1,0 +1,30 @@
+{
+ "id": "땀_25ebe15ed661bb9e",
+ "syllable": "땀",
+ "used_route_words": [
+  "밑땀",
+  "섭도마을",
+  "죄상첨죄",
+  "죄첩",
+  "첩섭"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.177997,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "68a3c0d0c05d76e03e8d4deace709b7c724ad1d076df7ce86dd47e84df5e4661",
+ "position_sha256": "25ebe15ed661bb9e5216d435d8f05ef4ce78e0c8b67f3c62473e1ce786a05828",
+ "input_sha256": "68e61e8ec0a6f7de4e1160194166843d7c7bfb5d3459f65f9b06e0083b8963a3",
+ "proof_bytes": 79561
+}

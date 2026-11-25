@@ -1,0 +1,30 @@
+{
+ "id": "짝_176c090ecd4c7525",
+ "syllable": "짝",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000172,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "176c090ecd4c75251276519aaa35c68b69e8aa113ea5815cdad4eef25b6213e1",
+ "input_sha256": "021c429d0ec5d9f41da847b2612e957bbcb737c0b5d60a24129b8060e3541261",
+ "proof_bytes": 124
+}

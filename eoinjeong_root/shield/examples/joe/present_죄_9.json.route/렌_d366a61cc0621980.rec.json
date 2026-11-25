@@ -1,0 +1,28 @@
+{
+ "id": "렌_d366a61cc0621980",
+ "syllable": "렌",
+ "used_route_words": [
+  "렛츠인조이더무비카가미네렌",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001164,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2357cf0014894dd1c23bd050f8bc7fb10fb4aa30bbb5ed6a6b7804abf43d93b4",
+ "position_sha256": "d366a61cc06219804ee08b96003ab752da8318d56a5bc2c74d9a928d09d38597",
+ "input_sha256": "f30260c5b7887a7ab75dc90ec77cd5678fd1000a85518ab352694fffdaacf27d",
+ "proof_bytes": 1987
+}

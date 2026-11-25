@@ -1,0 +1,26 @@
+{
+ "id": "룻_dfaae0ad869304dc",
+ "syllable": "룻",
+ "used_route_words": [
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001136,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b40f4df6e10341c7bb0432e8c26e6eb5c1c93b331179fc2e4af76506ac08f193",
+ "position_sha256": "dfaae0ad869304dc04e9e9a3498fb100e9c9a9ede5b896482de6d74feb7284fd",
+ "input_sha256": "01cd8c70534ced5f8ef934ffc597617aa9a5b40ef99e4ca2f4568afb48ae7734",
+ "proof_bytes": 785
+}

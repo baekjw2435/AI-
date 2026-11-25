@@ -1,0 +1,29 @@
+{
+ "id": "렌_38bf7357a9daa99f",
+ "syllable": "렌",
+ "used_route_words": [
+  "갱신청구권",
+  "렛츠인조이더무비카가미네렌",
+  "죄상가죄",
+  "죄첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 2.558316,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b299d6e283e759dc0df171fe69d2ad4abdd05e25509d5062dd705a1b9d6b838b",
+ "position_sha256": "38bf7357a9daa99fd7a5be6b74bdefc563e50da5f25be9917d7f32e2adcc0138",
+ "input_sha256": "568484a65646a8d609fb62d26eb64379844fd26f8348f04e5f1ea2945be3fdc3",
+ "proof_bytes": 474084
+}

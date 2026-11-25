@@ -1,0 +1,32 @@
+{
+ "id": "굴_6b933a1fdda0d1c3",
+ "syllable": "굴",
+ "used_route_words": [
+  "갑자기쪽지시험",
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "쇄쇄",
+  "쇄자갑",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000199,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "6b933a1fdda0d1c3ad689a2b3e4d86eb096f7d595475425f28114308976417bd",
+ "input_sha256": "4062ae14446464236d5d7a6d2af6cefe8901067402ef8885a287e49415a78a9d",
+ "proof_bytes": 124
+}

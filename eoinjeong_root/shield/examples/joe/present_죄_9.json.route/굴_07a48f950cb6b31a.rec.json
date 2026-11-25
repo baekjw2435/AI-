@@ -1,0 +1,29 @@
+{
+ "id": "굴_07a48f950cb6b31a",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱도시험",
+  "겁나는얼굴",
+  "죄상가죄",
+  "죄첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000127,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "07a48f950cb6b31a3096fc57598a16bf437af0140eeed48f89dcea346a7c41d2",
+ "input_sha256": "f8a330fdd80c66f00cee0f198911e2fcc3c6aaed75007816f13083c3df6fe47b",
+ "proof_bytes": 124
+}

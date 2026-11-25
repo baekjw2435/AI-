@@ -1,0 +1,31 @@
+{
+ "id": "험_9a1e636a2c149645",
+ "syllable": "험",
+ "used_route_words": [
+  "섭도마을",
+  "죄기죄",
+  "죄첩",
+  "첩섭",
+  "험할험",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001044,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "843075f42cd6a340d19a24db4e61357cbd8480da5474970d37f9a20e59335ca5",
+ "position_sha256": "9a1e636a2c149645377b11d47cb84554f254de8b377534eea8a89ab9604df82b",
+ "input_sha256": "5843dbe375b1f03cfddbd08d21d1162a86c18aac5e9bed4ca13f049e25ccedc0",
+ "proof_bytes": 1590
+}

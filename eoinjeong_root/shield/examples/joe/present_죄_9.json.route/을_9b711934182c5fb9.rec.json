@@ -1,0 +1,31 @@
+{
+ "id": "을_9b711934182c5fb9",
+ "syllable": "을",
+ "used_route_words": [
+  "갑과을",
+  "궐련갑",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000125,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "9b711934182c5fb97b72521cb6ae8faa8f2934727a5886b29c63c2000d7a0928",
+ "input_sha256": "3ab18b5ca2228b7b101ebdf3b4531132856b946186313cde71d139965e295081",
+ "proof_bytes": 124
+}

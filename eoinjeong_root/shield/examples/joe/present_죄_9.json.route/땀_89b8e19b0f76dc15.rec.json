@@ -1,0 +1,29 @@
+{
+ "id": "땀_89b8e19b0f76dc15",
+ "syllable": "땀",
+ "used_route_words": [
+  "밑땀",
+  "쇄석포도법",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001263,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3b6a4aad94525ec53090ff4b8f552189f6d5f21aff36dd052eabfcec648ee2cf",
+ "position_sha256": "89b8e19b0f76dc15b244d4c0cab96cfd7fffaecab1b335c0f78c53b821c1f006",
+ "input_sha256": "d539e4becd18574fc9bcbe9b4e38c97db37aff125d37d3c45b57688a4cf8929a",
+ "proof_bytes": 1837
+}

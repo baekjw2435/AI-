@@ -1,0 +1,30 @@
+{
+ "id": "읍_5911f59e5f6be327",
+ "syllable": "읍",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00017,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "5911f59e5f6be327ad00e5a7ad8638646a2330a5b5daa4905c292b320740a25d",
+ "input_sha256": "2cd47348c218b6f3c73f1dfb83b2baeb805380fda89aaee8c303025e6716983e",
+ "proof_bytes": 124
+}

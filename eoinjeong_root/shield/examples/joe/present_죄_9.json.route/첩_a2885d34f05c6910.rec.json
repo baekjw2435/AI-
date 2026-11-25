@@ -1,0 +1,29 @@
+{
+ "id": "첩_a2885d34f05c6910",
+ "syllable": "첩",
+ "used_route_words": [
+  "갱도시험",
+  "죄죄",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000143,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a2648bf489eb81cebefae73204b167f0a4246d268994628da110b2fed67cf832",
+ "position_sha256": "a2885d34f05c69101637e949abbecf879b3377dbd9b3d8b0b0c05654f612e833",
+ "input_sha256": "571fec2c8962d5fb01bec0389339e91712f6c39d08bfba25639667efbcf80494",
+ "proof_bytes": 141
+}

@@ -1,0 +1,29 @@
+{
+ "id": "렌_e830ae0c3041501e",
+ "syllable": "렌",
+ "used_route_words": [
+  "권폄",
+  "쇄소건즐",
+  "죄율",
+  "즐거움가득보물상자카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00747,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5208deb00b9556dcf3876ff110e016eabd625cead895f1f60bd58958e80ea5e0",
+ "position_sha256": "e830ae0c3041501e1387aae3b7efb7b032bfdc7934a1298c1aa14f7f95f0e6e6",
+ "input_sha256": "771ca99726f2a67c6fc54e9a40618f6aae06cc9949f9a145cd370b5f2ccd35db",
+ "proof_bytes": 6091
+}

@@ -1,0 +1,27 @@
+{
+ "id": "펠_5836c92e59eeca58",
+ "syllable": "펠",
+ "used_route_words": [
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000845,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4238933bcf8eaf1054b2d0d0727f17b6ec2ed03830b4d798834f90cecf99151c",
+ "position_sha256": "5836c92e59eeca58b1fe23c50e5985be8434c47aab484f8789db1b984c134e67",
+ "input_sha256": "b0332c57ef39e45e6fc304af713f9c2a578dec53b4a24bcdff2d2f5184b34e1f",
+ "proof_bytes": 1118
+}

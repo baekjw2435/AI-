@@ -1,0 +1,29 @@
+{
+ "id": "혐_e57f8aa90ca2f52f",
+ "syllable": "혐",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000128,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "e57f8aa90ca2f52f77e1e62e30456ce0cb0412edc173146b9037da1686ac20b1",
+ "input_sha256": "9dc247c458a1096dae557af511d3b55283dec65803ea4d83bfde25fc1383de8d",
+ "proof_bytes": 124
+}

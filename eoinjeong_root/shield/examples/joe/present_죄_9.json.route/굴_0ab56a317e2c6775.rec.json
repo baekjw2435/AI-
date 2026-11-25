@@ -1,0 +1,30 @@
+{
+ "id": "굴_0ab56a317e2c6775",
+ "syllable": "굴",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000129,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "0ab56a317e2c677510d8a6ae651fe1f680ce320f0c25fa0955e7e36675281386",
+ "input_sha256": "07074442080076ce745b5a81be635507b004b57b6ff9bd7da1caaa82670d4ef2",
+ "proof_bytes": 124
+}

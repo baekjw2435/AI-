@@ -1,0 +1,29 @@
+{
+ "id": "읍_498f1022b8e3fe5d",
+ "syllable": "읍",
+ "used_route_words": [
+  "쇄쇄",
+  "읍읍",
+  "읍할읍",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000642,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "94da256a05d6020fde33cbd5e0b0c99ffebe7398c3acb5601a3490546e80fac5",
+ "position_sha256": "498f1022b8e3fe5d14e6591f18d7244e7034dc1da001be2383a003e0a90dbcff",
+ "input_sha256": "d392efdd7268f7e797be0dc1175e7634e022018565e12f120838ee29d929804a",
+ "proof_bytes": 549
+}

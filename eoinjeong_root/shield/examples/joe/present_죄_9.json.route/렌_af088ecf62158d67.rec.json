@@ -1,0 +1,28 @@
+{
+ "id": "렌_af088ecf62158d67",
+ "syllable": "렌",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "형태로만들어선물하고싶은마음카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.02193,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ce0a9964f9f2c1f4b68f0a307ad6c276a4156ea41fd3ad0e67b48a128b0197ad",
+ "position_sha256": "af088ecf62158d6777ab63ed154f1c9daec2309cf1f7b8e3a05dab651bdfe7f4",
+ "input_sha256": "b8a150c8d6572a62dfcd37d481205d07d346f0b6acb4962ee87d70296647f3bf",
+ "proof_bytes": 15764
+}

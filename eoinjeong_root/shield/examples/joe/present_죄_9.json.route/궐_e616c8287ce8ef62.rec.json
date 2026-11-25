@@ -1,0 +1,29 @@
+{
+ "id": "궐_e616c8287ce8ef62",
+ "syllable": "궐",
+ "used_route_words": [
+  "갱도시험",
+  "죄상가죄",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00318,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "38b300e8ccb9d29a69ea66aabe5e7c973ceaa00be0a5e7bd4605ab4e903b1ab3",
+ "position_sha256": "e616c8287ce8ef628c84121b42aba4888a825c3f733986d4f278d268a7dacefd",
+ "input_sha256": "0d6ad706af4ac4fcbb5d0561af1bb328a03401fea4b0b893d7321e098c800259",
+ "proof_bytes": 3747
+}

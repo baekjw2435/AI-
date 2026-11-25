@@ -1,0 +1,27 @@
+{
+ "id": "렌_d46c1518d9ec723c",
+ "syllable": "렌",
+ "used_route_words": [
+  "쇄소건즐",
+  "즐거움가득보물상자카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.020879,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "136b6d3469d6e29d8924bcaca677bdced7178dca386a049bff31622bbe3e5845",
+ "position_sha256": "d46c1518d9ec723cf244a50c7f4ed7b7dbcccdea166c7e7d9bf1f492965ac444",
+ "input_sha256": "d8bc097ae307ef2ce20ffce4ad3521f3e0c0becc11e5b8f7ae8c6e1f567fde91",
+ "proof_bytes": 11922
+}

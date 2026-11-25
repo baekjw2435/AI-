@@ -1,0 +1,32 @@
+{
+ "id": "굴_7dc2523978987143",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "득득",
+  "섭도마을",
+  "을종근로소득",
+  "죄죄",
+  "죄첩",
+  "첩섭"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000133,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "7dc2523978987143e0f3b463abeae1b87a85a7cd390f13781df5c67d716c6dcd",
+ "input_sha256": "05096cce2e3b837f030b6fec20bfaccfc2b7684ffb8cca48b0b18264a148c6ca",
+ "proof_bytes": 124
+}

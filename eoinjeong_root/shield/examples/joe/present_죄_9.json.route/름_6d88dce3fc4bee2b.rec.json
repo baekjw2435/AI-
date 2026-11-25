@@ -1,0 +1,29 @@
+{
+ "id": "름_6d88dce3fc4bee2b",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "멸치저냐",
+  "샅바씨름",
+  "죄멸"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.022255,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "84a6cc52cdf2b42201c85ae062051996c47463546740884032ee4379b46e1241",
+ "position_sha256": "6d88dce3fc4bee2b5a3421723c1abb0ea9a95656a1d02d84b23184e380e152f9",
+ "input_sha256": "d308d6ddbb8def47aa30db47e90ec2f991121a67ee01a061e6b3e8862fb19c90",
+ "proof_bytes": 8980
+}

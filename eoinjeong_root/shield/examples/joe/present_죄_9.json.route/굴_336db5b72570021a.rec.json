@@ -1,0 +1,32 @@
+{
+ "id": "굴_336db5b72570021a",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "렛츠인조이더무비카가미네렌",
+  "죄상가죄",
+  "죄첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000136,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "336db5b72570021a5d142e6a82b611d4eecbd44561a269ff8131d6d539a2f0ed",
+ "input_sha256": "8aac4e206eea0066143ec22a21202fae2296f831e2caa9dfa7fde8ddd7171928",
+ "proof_bytes": 124
+}

@@ -1,0 +1,28 @@
+{
+ "id": "읍_8d1ac3fc1118692d",
+ "syllable": "읍",
+ "used_route_words": [
+  "읍읍",
+  "읍할읍",
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.012084,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "765b460323d37627b8cc532f6429dffa25a41b7c771d72d14ddf821a3532aca0",
+ "position_sha256": "8d1ac3fc1118692dd6b2025a47ca5f168386c22bdf2f559196f5b2c138d316f0",
+ "input_sha256": "d14aac0be059c9879e30342642109b8c236a5a18acb714ee06a70dc479df8877",
+ "proof_bytes": 4895
+}

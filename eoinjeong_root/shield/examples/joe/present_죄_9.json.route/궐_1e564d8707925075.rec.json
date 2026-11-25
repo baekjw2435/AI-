@@ -1,0 +1,27 @@
+{
+ "id": "궐_1e564d8707925075",
+ "syllable": "궐",
+ "used_route_words": [
+  "권폄",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005153,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b5d4d3ba65cece0cd83d571411f2ffd412323bde5dc0da8a5d6969367eaa3cda",
+ "position_sha256": "1e564d87079250759b56556cd542222a8f08e1c2b22438a6f1b024b71b668f8d",
+ "input_sha256": "852ef9b291f9ca8d8f2cde44c29d74aec60e77f1957277fd4c80c46fb9f61967",
+ "proof_bytes": 3386
+}

@@ -1,0 +1,29 @@
+{
+ "id": "죄_b6eadc242b9885e2",
+ "syllable": "죄",
+ "used_route_words": [
+  "권폄",
+  "득죄",
+  "죄율",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005361,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "55e6a9daf903cd1e6d68afaf85ef0d55e570a2b588b92720e37b37e7a4a53aa6",
+ "position_sha256": "b6eadc242b9885e2b9168965cea6be9139c20956dd0300f97740010d817189e9",
+ "input_sha256": "5817882cbbbc9fcccca0fd40e14d7a9b060876025a58f7803237abbd4ee3e636",
+ "proof_bytes": 4014
+}

@@ -1,0 +1,31 @@
+{
+ "id": "즐_c94c4e2268f48227",
+ "syllable": "즐",
+ "used_route_words": [
+  "섭험",
+  "쇄소건즐",
+  "죄인의벗을수없는족쇄",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000859,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "c94c4e2268f48227e83f50709b605969c2f9178586b085cee2e274b289f1bbaa",
+ "input_sha256": "0fdc94b9feaa73ad5e2823662dc1c30a2bc1a17d06484ca93d39700fa34fcee8",
+ "proof_bytes": 124
+}

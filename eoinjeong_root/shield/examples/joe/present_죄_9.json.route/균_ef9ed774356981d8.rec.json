@@ -1,0 +1,30 @@
+{
+ "id": "균_ef9ed774356981d8",
+ "syllable": "균",
+ "used_route_words": [
+  "늠균",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000146,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "ef9ed774356981d8df5e2b02e6484c43f8611166299092b6f16bc1b4783b9e13",
+ "input_sha256": "5c68d415898bca2958e21b1d601a9c9bcf06e55b0d376db301a875c57f94a0ff",
+ "proof_bytes": 124
+}

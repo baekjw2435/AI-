@@ -1,0 +1,28 @@
+{
+ "id": "굉_9c3f31222c71dcfc",
+ "syllable": "굉",
+ "used_route_words": [
+  "굉굉",
+  "권폄",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001175,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ec63f35628b3c3fd190a93efc3fe2e8fabedf11125330a93a3f2fda2dc9f9b3d",
+ "position_sha256": "9c3f31222c71dcfc19fd6d2ff1439b8ced1a946152d326b30646ba94aca7d7c9",
+ "input_sha256": "96247718455399b7af583297317d5fbfd4a636855744fb4928d9f8f4bfa229cc",
+ "proof_bytes": 822
+}

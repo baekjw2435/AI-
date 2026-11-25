@@ -1,0 +1,27 @@
+{
+ "id": "멱_3869250b7d514654",
+ "syllable": "멱",
+ "used_route_words": [
+  "밑틀",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.019077,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "18482e5897d703fc651d610367bd9502efb4785e14ae674a0355168e19b04602",
+ "position_sha256": "3869250b7d5146544b594ca55e908e8ceca9af6b657d832a68e0879b220b018e",
+ "input_sha256": "a4722854c9debffca3f6bfcfb952156d1857439e2ff9693bfdb18544a3932261",
+ "proof_bytes": 9175
+}

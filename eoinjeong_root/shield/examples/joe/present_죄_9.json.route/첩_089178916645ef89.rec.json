@@ -1,0 +1,29 @@
+{
+ "id": "첩_089178916645ef89",
+ "syllable": "첩",
+ "used_route_words": [
+  "득첩",
+  "죄상첨죄",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001718,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1eb5d5eeda1b47140ad9b5b5c9259ad92bf6160eb0649326a90c76c6591044e6",
+ "position_sha256": "089178916645ef896ed35efbaaca6e7922fe0e304ec510724abf4b633817cf15",
+ "input_sha256": "5cca72039df0b61eec83daf25430e01c70f331fc09aa9389a50dc2c30fef47fb",
+ "proof_bytes": 1971
+}

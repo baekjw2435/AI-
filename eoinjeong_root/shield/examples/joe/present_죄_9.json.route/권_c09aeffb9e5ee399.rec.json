@@ -1,0 +1,31 @@
+{
+ "id": "권_c09aeffb9e5ee399",
+ "syllable": "권",
+ "used_route_words": [
+  "뼈바를척",
+  "섭험",
+  "죄첩",
+  "척수공권",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000196,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "c09aeffb9e5ee3996c6f25b494574c1406c62e7ec722edc551e3eeb49310a01c",
+ "input_sha256": "06853f071be65e152bf92a240d10a6d3a840b72409a0f7090c50c1daadec8f17",
+ "proof_bytes": 124
+}

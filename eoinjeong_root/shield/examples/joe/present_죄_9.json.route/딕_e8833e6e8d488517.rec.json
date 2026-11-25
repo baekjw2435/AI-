@@ -1,0 +1,29 @@
+{
+ "id": "딕_e8833e6e8d488517",
+ "syllable": "딕",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000164,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "e8833e6e8d4885174780350db47c2bccf34d20d271e2922a502a27c203b450dd",
+ "input_sha256": "ba2b73f87595b64c288059906aa45526f8a3305dd85aac32cfc1191e487917be",
+ "proof_bytes": 124
+}

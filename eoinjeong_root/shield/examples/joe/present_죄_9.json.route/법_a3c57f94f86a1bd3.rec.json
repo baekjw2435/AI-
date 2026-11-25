@@ -1,0 +1,31 @@
+{
+ "id": "법_a3c57f94f86a1bd3",
+ "syllable": "법",
+ "used_route_words": [
+  "섭험",
+  "쇄석포도법",
+  "죄인의벗을수없는족쇄",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000158,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "a3c57f94f86a1bd3f6911bccae60c3b0b764d845d250fb12a38157888b8cf0d6",
+ "input_sha256": "63dae3cb644818efce4131544ef1499489b3a48fb1a126c07b96caafe5f1077c",
+ "proof_bytes": 124
+}

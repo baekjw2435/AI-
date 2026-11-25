@@ -1,0 +1,31 @@
+{
+ "id": "겸_b6bb9bc6282e3a6f",
+ "syllable": "겸",
+ "used_route_words": [
+  "겸겸",
+  "겸지우겸",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000163,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "b6bb9bc6282e3a6fdb12e05b644e67031f49dc51b7c2d7ac22700c21a66313af",
+ "input_sha256": "5ea97157332840fa56e503bc5eac1a6d575628530b761dd575d4a3cca0310b90",
+ "proof_bytes": 124
+}

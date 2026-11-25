@@ -1,0 +1,31 @@
+{
+ "id": "갑_5bc68d582eee9c37",
+ "syllable": "갑",
+ "used_route_words": [
+  "권갑",
+  "섭험",
+  "죄첩",
+  "척수공권",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000156,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "5bc68d582eee9c373bc2789ee8e067ecda7d79f18e3ddc1da2f1fecf3d434110",
+ "input_sha256": "f55ad6a4097fdbc69c3867857848d99f9e423de5f74988dccb92b414cf356ef7",
+ "proof_bytes": 124
+}

@@ -1,0 +1,30 @@
+{
+ "id": "촉_089c1dbed0a5fee5",
+ "syllable": "촉",
+ "used_route_words": [
+  "뼈살촉",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000168,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "089c1dbed0a5fee51460be5cd5b51cd37a8fc6b6e689dae006698a410444be7d",
+ "input_sha256": "c96ccd96ec37a0cc96310e05beeed939d9993f6134591cc907170e85a0a2309d",
+ "proof_bytes": 124
+}

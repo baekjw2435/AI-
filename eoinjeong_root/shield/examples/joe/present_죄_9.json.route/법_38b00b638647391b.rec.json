@@ -1,0 +1,32 @@
+{
+ "id": "법_38b00b638647391b",
+ "syllable": "법",
+ "used_route_words": [
+  "득법",
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩",
+  "험득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000155,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "38b00b638647391b3e973675a8a45049673eabbbd92f8b32ef14c82209d9defa",
+ "input_sha256": "54cfaa53ca9afb9da6af882cf8b5771d921bf2fd66d784eb4bf7aeba7e363b66",
+ "proof_bytes": 124
+}

@@ -1,0 +1,30 @@
+{
+ "id": "냐_8c77e63b8651c9e0",
+ "syllable": "냐",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000137,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "8c77e63b8651c9e08a23d78fcda1ccdef0df2423d302ef90377be0fae1213ab1",
+ "input_sha256": "faae78b6736888b937e21d60e15dce32d25589a28f9af4c00c0e7cd2b52f150c",
+ "proof_bytes": 124
+}

@@ -1,0 +1,29 @@
+{
+ "id": "죄_bf9714e88e00fd87",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "권폄",
+  "죄율",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001496,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "502abfa9d458cf5da6f5024cbae25bf6b5c6d79cfc6a81f6a7050753d074c54e",
+ "position_sha256": "bf9714e88e00fd879d906e87ca11c1438c12068abe05d42ba11ee12f42c59d10",
+ "input_sha256": "6995d34405259992e876c62559c5cf53a06fad491a1aac5349c2a1c719877a9a",
+ "proof_bytes": 1679
+}

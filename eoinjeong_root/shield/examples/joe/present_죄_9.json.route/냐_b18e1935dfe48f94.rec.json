@@ -1,0 +1,31 @@
+{
+ "id": "냐_b18e1935dfe48f94",
+ "syllable": "냐",
+ "used_route_words": [
+  "권폄",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄",
+  "준치저냐",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000533,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cfa6c51d815abd16f5f784c90375f15c5253a03dd20eb16243ae316fa2d87269",
+ "position_sha256": "b18e1935dfe48f94871ac7bbecf936e45a1e7f8d57f57d569e2216996bf98240",
+ "input_sha256": "cdaf44f41502c934f1e482485ef25b3966c3fd875587526c5b6f3eea48de0c81",
+ "proof_bytes": 522
+}

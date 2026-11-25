@@ -1,0 +1,30 @@
+{
+ "id": "균_119d4c47c9080a59",
+ "syllable": "균",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00013,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "119d4c47c9080a59bc7c46ccb9cf5bbe94623baeded5635e100165d45265c344",
+ "input_sha256": "2a6bd8d4cc77964c4618c89601183cc5b8e174b0304515c361094a6405424d73",
+ "proof_bytes": 124
+}

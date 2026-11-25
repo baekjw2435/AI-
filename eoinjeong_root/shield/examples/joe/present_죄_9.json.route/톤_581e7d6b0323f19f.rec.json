@@ -1,0 +1,31 @@
+{
+ "id": "톤_581e7d6b0323f19f",
+ "syllable": "톤",
+ "used_route_words": [
+  "뭄바톤",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000155,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "581e7d6b0323f19fad61d4ee145f2aa9e937584f6053d21f20487004d5b1a437",
+ "input_sha256": "78e6df35699a85e78cf716f95a3bd963741224fc212088b00ab003dfb38b8829",
+ "proof_bytes": 124
+}

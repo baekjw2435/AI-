@@ -1,0 +1,31 @@
+{
+ "id": "겸_e21af831a05641be",
+ "syllable": "겸",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000136,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "e21af831a05641be920986b386f4a360f20e003d247a833195440282fc3ab8d9",
+ "input_sha256": "ddc4eeb5a01a9062d8bf180f1a591bd60faac9e015f38d1a9d05acca0741d616",
+ "proof_bytes": 124
+}

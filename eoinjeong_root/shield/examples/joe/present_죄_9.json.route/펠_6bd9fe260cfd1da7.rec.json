@@ -1,0 +1,27 @@
+{
+ "id": "펠_6bd9fe260cfd1da7",
+ "syllable": "펠",
+ "used_route_words": [
+  "밑틀",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007797,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d69fc4ae95257db012ec96fbe0be57015e64a57f9784b1d4f6c1568b99c6d23a",
+ "position_sha256": "6bd9fe260cfd1da72a27beae000e19aef5076b77c4cb10904bc7b44e661d5766",
+ "input_sha256": "a70b94abd120941300a86f7e0d4ca1b47340867ba3c89f058ff85431993353a3",
+ "proof_bytes": 5286
+}

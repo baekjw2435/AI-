@@ -1,0 +1,27 @@
+{
+ "id": "땀_6bc99abc4ddf6b2f",
+ "syllable": "땀",
+ "used_route_words": [
+  "밑땀",
+  "죠죠의기묘한모험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010408,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "047fb87f50bb3381a5af02042c4f622fa06425cedba1062fbc6243daa66817e6",
+ "position_sha256": "6bc99abc4ddf6b2fddd3b2d05efed0eaf736d859d3f959fbefc10b6375054aad",
+ "input_sha256": "5da4d1393bb0e731509a5f437b7c310a7b0f178f62493a782d03fcdd40151d68",
+ "proof_bytes": 8403
+}

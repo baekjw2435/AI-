@@ -1,0 +1,30 @@
+{
+ "id": "척_d3c5025f720985ff",
+ "syllable": "척",
+ "used_route_words": [
+  "뼈바를척",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000144,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "d3c5025f720985ffff38b36331893626035857981909c5c1d88987359242e318",
+ "input_sha256": "5443120bc0384d9d13478c1b83382e5590f7d3df0a77c2eb3b24083aab1d8e1a",
+ "proof_bytes": 124
+}

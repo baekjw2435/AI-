@@ -1,0 +1,31 @@
+{
+ "id": "몬_54f8506102d51cc3",
+ "syllable": "몬",
+ "used_route_words": [
+  "렌즈",
+  "렛츠인조이더무비카가미네렌",
+  "죄기죄",
+  "죄첩",
+  "즈보우몬",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001252,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "92d0ac0d3839fb8d7ef46f8a1c83a73bf8a35750057070ca2c17f08c6184c398",
+ "position_sha256": "54f8506102d51cc33b33b65e4ceb5f4c8ca0decf3dd51f6c1bf4985de33ced4d",
+ "input_sha256": "6e46c2d4bc18379d8bfbac94f48708e108a6613a1577f3f052ccbe88f4fe943c",
+ "proof_bytes": 1342
+}

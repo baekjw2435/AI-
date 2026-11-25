@@ -1,0 +1,30 @@
+{
+ "id": "굴_483aa823f2e7e65a",
+ "syllable": "굴",
+ "used_route_words": [
+  "댁대굴",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000132,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "483aa823f2e7e65a4c0b0462e1b8c1f2d8cf1111b31ab265af753872e58aad6b",
+ "input_sha256": "2700ecbb9bfd5971f30f28597b3e48b0a67a73f86c5a1c5995325fcf3e70f832",
+ "proof_bytes": 124
+}

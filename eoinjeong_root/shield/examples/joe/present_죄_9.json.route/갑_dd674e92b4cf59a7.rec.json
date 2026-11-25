@@ -1,0 +1,31 @@
+{
+ "id": "갑_dd674e92b4cf59a7",
+ "syllable": "갑",
+ "used_route_words": [
+  "갑갑",
+  "궐련갑",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000157,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "dd674e92b4cf59a72223df5bf2c76ef78ae1bc86153f2d40eb9c2f1730832bff",
+ "input_sha256": "5ea45310945d43275fd08f9694316db35860c4900b8dc3047840fd5bc1cee026",
+ "proof_bytes": 124
+}

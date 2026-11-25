@@ -1,0 +1,28 @@
+{
+ "id": "험_3e70b2cc66ba184d",
+ "syllable": "험",
+ "used_route_words": [
+  "갱도시험",
+  "밑틀",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000396,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cd4f0d8ef788c35c394d24ad73be2de6cb5e71e881bf688c5498b2f5a083cb06",
+ "position_sha256": "3e70b2cc66ba184d453f8666ec560759295672df6ac1b1c71e76ab1ef5513b79",
+ "input_sha256": "ec768b880666788f14f8742cf75ef35ee75e2a865cf4d561113ad9c6cffadb89",
+ "proof_bytes": 424
+}

@@ -1,0 +1,31 @@
+{
+ "id": "읍_a28509d93f5978b6",
+ "syllable": "읍",
+ "used_route_words": [
+  "득득",
+  "섭도마을",
+  "을종근로소득",
+  "죄죄",
+  "죄첩",
+  "첩섭"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001512,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "837516da64b883332382c9fcd811c97caac80d46051a864b12bb70a5abe96bf3",
+ "position_sha256": "a28509d93f5978b67561cd43ec3c7cac2ca9afe57c2ab6156bc18754082addad",
+ "input_sha256": "d2129639c43d38a3d66a8eb2787d0f2d095efc13bafc65952f9d481437fc5a41",
+ "proof_bytes": 1619
+}

@@ -1,0 +1,32 @@
+{
+ "id": "득_87587a7077c57e68",
+ "syllable": "득",
+ "used_route_words": [
+  "득득",
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩",
+  "험득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00017,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "87587a7077c57e687ac38f7d7cbec46d0e36d6b8e90a9848234dbf37937931e5",
+ "input_sha256": "90d98c65b36ac14d69af86aa7a4d61e29c14f5fc4f6a2e183718f6bb656facf9",
+ "proof_bytes": 124
+}

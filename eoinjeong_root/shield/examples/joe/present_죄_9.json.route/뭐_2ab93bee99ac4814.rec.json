@@ -1,0 +1,29 @@
+{
+ "id": "뭐_2ab93bee99ac4814",
+ "syllable": "뭐",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000172,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "2ab93bee99ac4814b815e97ca3a3165bf61670358b8b60ace87377814da2afdf",
+ "input_sha256": "c06febe59c855d467ecb67ccab127e5efe2f61143dbd78ef52b2e2ec81e7ec69",
+ "proof_bytes": 124
+}

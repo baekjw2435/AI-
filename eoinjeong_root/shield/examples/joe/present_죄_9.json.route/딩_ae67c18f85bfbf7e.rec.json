@@ -1,0 +1,30 @@
+{
+ "id": "딩_ae67c18f85bfbf7e",
+ "syllable": "딩",
+ "used_route_words": [
+  "딩가딩",
+  "딩딩",
+  "죄기죄",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001042,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8a41a781ec5a74b9ee63dece22af6880c031b8af3770df5a06cf3a041b2c950a",
+ "position_sha256": "ae67c18f85bfbf7ef0d94231072e674aebb8c774c3ffc7c9b6302c821c24615a",
+ "input_sha256": "e6a282efc37ebbb1547a0356474828c01855788c5a6503ef153740f33dd11b3c",
+ "proof_bytes": 1344
+}

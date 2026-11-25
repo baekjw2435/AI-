@@ -1,0 +1,31 @@
+{
+ "id": "을_1fe88a6a215c5b69",
+ "syllable": "을",
+ "used_route_words": [
+  "벅스킨",
+  "샅흰검은말율",
+  "슴벅",
+  "율현마을",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000514,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f2785dcce6c70e218fbd8e488dcb05da51a52004627779573278e9781ea01ab",
+ "position_sha256": "1fe88a6a215c5b6950da19e355776ab9b69129b5ee7a79eb89806de927fdfae7",
+ "input_sha256": "43bf0dfeeeab0f7283d0a4824ec8827b71a11da1335034b902668d45c0499112",
+ "proof_bytes": 812
+}

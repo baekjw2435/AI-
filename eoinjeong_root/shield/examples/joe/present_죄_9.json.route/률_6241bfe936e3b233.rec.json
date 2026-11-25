@@ -1,0 +1,32 @@
+{
+ "id": "률_6241bfe936e3b233",
+ "syllable": "률",
+ "used_route_words": [
+  "득률",
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩",
+  "험득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000136,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "6241bfe936e3b233b0d074797529427c293c7731442d0e10d1e152a621b31606",
+ "input_sha256": "4840486c53dd9397b37b85a49b3bc68741bbdf9ad6b1f4e696d14f72af79f258",
+ "proof_bytes": 124
+}

@@ -1,0 +1,29 @@
+{
+ "id": "냐_a179bf67fe0adca4",
+ "syllable": "냐",
+ "used_route_words": [
+  "굴저냐",
+  "죄상첨죄",
+  "죄첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002123,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1f633743fda1fd6066b43ba82e8e00847dcd628ca7796e54ed67e05c0d4df08c",
+ "position_sha256": "a179bf67fe0adca44b160b2c3499f35b6a3f818b09968d75cdcc56f3494cbc5d",
+ "input_sha256": "d2758d67bd5799d7f3bae8685d84e03a008035389d6d6646d63f46d31b6d9892",
+ "proof_bytes": 1630
+}

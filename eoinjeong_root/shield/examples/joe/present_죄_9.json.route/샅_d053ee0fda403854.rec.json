@@ -1,0 +1,31 @@
+{
+ "id": "샅_d053ee0fda403854",
+ "syllable": "샅",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000138,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "d053ee0fda40385472e06cd087fe995c5dbadfc5689deaa31966332a7db44d0b",
+ "input_sha256": "50ea2d03a55588e23fb4dd66e3c55fb344f8d75930fb1be23b40de559b6d548a",
+ "proof_bytes": 124
+}

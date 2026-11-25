@@ -1,0 +1,31 @@
+{
+ "id": "준_eee6c9dbfa8713c6",
+ "syllable": "준",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000163,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "eee6c9dbfa8713c680aa3ba9d09fb49e0acf99770b5c89ee8c8d68a37fccb45b",
+ "input_sha256": "2ef77984166398a5e41c94c2da7e076329699c9e4584126b19167a70ff717825",
+ "proof_bytes": 124
+}

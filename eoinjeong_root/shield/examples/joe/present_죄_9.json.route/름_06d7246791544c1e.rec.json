@@ -1,0 +1,29 @@
+{
+ "id": "름_06d7246791544c1e",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "죄죄",
+  "죄첩",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.030753,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2e36e4a72558e1da604b07a334191f09c84fde2590b5cc0979520d3144b00d8a",
+ "position_sha256": "06d7246791544c1ef119fe9fb27ea9b243b7ad4020ab6b977959946ff0f7869f",
+ "input_sha256": "805685876066408f0d5faafb2e1568ddf3a0d9decff61a38745fa5f11b3b1220",
+ "proof_bytes": 14187
+}

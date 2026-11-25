@@ -1,0 +1,29 @@
+{
+ "id": "렌_3835babbab44fa95",
+ "syllable": "렌",
+ "used_route_words": [
+  "쇄쇄",
+  "죄인의벗을수없는족쇄",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003841,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ec2addb998d6f475d8f3ebd2ab1a809e5a4115a5b5e5f36d780b5e80b4dd4f59",
+ "position_sha256": "3835babbab44fa95c4353a916de56ab3c338d4bd1190a8877d1abf6e7058aa0c",
+ "input_sha256": "21b1c88cb49e4d0c76daba3d5f202a86c95016ded04530b0cbe233dbd4c4cddf",
+ "proof_bytes": 4028
+}

@@ -1,0 +1,29 @@
+{
+ "id": "권_b1f8d1e38811f624",
+ "syllable": "권",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00017,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "b1f8d1e38811f624aaf3116d9c793b5694927a60f3f9250a5f4af9bf85d49cc8",
+ "input_sha256": "649b0dc467b5d2e80dd36be2c5d92d0491aac8334002b554619e389e6893c221",
+ "proof_bytes": 124
+}

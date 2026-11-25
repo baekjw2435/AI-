@@ -1,0 +1,30 @@
+{
+ "id": "톡_6b7c525bd3498982",
+ "syllable": "톡",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000165,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "6b7c525bd3498982f06f8a3bad32009ae7e2a94e67afd22071eeae9948fc0f25",
+ "input_sha256": "a1a64c066bffbb41c7620be0949318856af9425792eeb770bdb2beb40296aa49",
+ "proof_bytes": 124
+}

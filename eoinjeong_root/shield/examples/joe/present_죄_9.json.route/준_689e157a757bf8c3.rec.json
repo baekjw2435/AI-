@@ -1,0 +1,31 @@
+{
+ "id": "준_689e157a757bf8c3",
+ "syllable": "준",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000127,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "689e157a757bf8c39c3e28e19d9cd5610832bb40c3992028695ddde26c6947e1",
+ "input_sha256": "d5fbf1a6d1483de0b86d2babaac1bdf50574265b2275fce9ffa445e437a8462c",
+ "proof_bytes": 124
+}

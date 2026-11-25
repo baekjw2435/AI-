@@ -1,0 +1,27 @@
+{
+ "id": "냐_5a76d920845f0a1e",
+ "syllable": "냐",
+ "used_route_words": [
+  "준치저냐",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001013,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "5a76d920845f0a1ea8def89b68f2a8c86b7f4ff44ae1f26860934c3c0cde2cdd",
+ "input_sha256": "fc630c8dfaa7d3cadcb625011e0cbe099123ebce228e8e1e792c203cdbebe057",
+ "proof_bytes": 799
+}

@@ -1,0 +1,31 @@
+{
+ "id": "척_9324daa7039a7dcb",
+ "syllable": "척",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩",
+  "첩쾌",
+  "쾌척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000168,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "9324daa7039a7dcb68f6e30f9044dbad4601e42be832be218530fcea6c9cf75f",
+ "input_sha256": "fea9ff074d163cd02445b43ef17f8d85ef2cef6c8596bc10be3d4082fdaa6ed0",
+ "proof_bytes": 124
+}

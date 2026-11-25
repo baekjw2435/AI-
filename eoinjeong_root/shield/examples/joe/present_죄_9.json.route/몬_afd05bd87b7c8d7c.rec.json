@@ -1,0 +1,30 @@
+{
+ "id": "몬_afd05bd87b7c8d7c",
+ "syllable": "몬",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000138,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "afd05bd87b7c8d7c2d7e538a3ce7de349dbcbd851578c89cc55ecd167f340d18",
+ "input_sha256": "e773c014260a834312ed3235379bb99f960a81ef90dc6267b38d44c0f2e5ad17",
+ "proof_bytes": 124
+}

@@ -1,0 +1,30 @@
+{
+ "id": "법_aab758a472172369",
+ "syllable": "법",
+ "used_route_words": [
+  "림베의민속장가연주기예순환호흡법",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000172,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "aab758a4721723692d0153112b3253aae683398c34bf324b1f049331f4790db0",
+ "input_sha256": "d22a4a1e286e0e21bb830c3695cb743af6cd15b259a0d5e9f419cf1002ddfce6",
+ "proof_bytes": 124
+}

@@ -1,0 +1,29 @@
+{
+ "id": "멱_6a00f4cbe73e6c28",
+ "syllable": "멱",
+ "used_route_words": [
+  "섭도마을",
+  "죄죄",
+  "죄첩",
+  "첩섭"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.564232,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c8cfcba76e38b3ebdfa46b2566d16d2bdeba5dc6ff479604974e84656c3d4524",
+ "position_sha256": "6a00f4cbe73e6c28468d03c45464cd9286106a6c56f63629d6d5d9ed1d683e4f",
+ "input_sha256": "eede64e836ca33553b63024c7fdaaffae4ce03c26a41191d2b0b610cec10abef",
+ "proof_bytes": 153562
+}

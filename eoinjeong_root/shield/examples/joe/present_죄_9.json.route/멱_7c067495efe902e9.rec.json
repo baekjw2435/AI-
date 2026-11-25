@@ -1,0 +1,27 @@
+{
+ "id": "멱_7c067495efe902e9",
+ "syllable": "멱",
+ "used_route_words": [
+  "권폄",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.027043,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7711a695c94b2d57dac86dfb51edd7a4dc260ed30891c3c1e2cbbb95992c7348",
+ "position_sha256": "7c067495efe902e9be5893b1222047f4d15649629234dd65c5c2cfe6584051c7",
+ "input_sha256": "6d2dcab238dc345f6b731df82423d4442d255e577338617bd300860617f92c43",
+ "proof_bytes": 11929
+}

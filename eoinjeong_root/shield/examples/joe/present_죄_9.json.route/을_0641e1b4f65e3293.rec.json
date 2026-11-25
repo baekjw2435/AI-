@@ -1,0 +1,31 @@
+{
+ "id": "을_0641e1b4f65e3293",
+ "syllable": "을",
+ "used_route_words": [
+  "득첩",
+  "법원검찰청복사골문화센터반달마을",
+  "죄기죄",
+  "죄첩",
+  "첩음법",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007675,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "59d575dc19a835183beb4090c8f386cc54c2a9b3cd642f95cc6a92ffb347577f",
+ "position_sha256": "0641e1b4f65e3293c7f165a6299087f9bde2c7e24d0866a3125df060164305e1",
+ "input_sha256": "c95bca2f45619d89844ff72a437868fda7e9285f1d92142ce009ee2d27ae2dd0",
+ "proof_bytes": 4822
+}

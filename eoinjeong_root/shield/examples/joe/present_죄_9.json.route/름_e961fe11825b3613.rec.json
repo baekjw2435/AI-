@@ -1,0 +1,29 @@
+{
+ "id": "름_e961fe11825b3613",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "밑틀",
+  "샅바씨름",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.004887,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8df8511ffdca5e4219a18311db0045b5338c7404249e19f5297e26bc36f6cffe",
+ "position_sha256": "e961fe11825b3613d194851fce011286e75d7f0c06630a2b784df1fc27aae196",
+ "input_sha256": "11e76b6f58d413f8b6cb180e60c29a8db84586c37d6ad20a5b63a2f0f991f4ed",
+ "proof_bytes": 3968
+}

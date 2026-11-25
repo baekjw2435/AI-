@@ -1,0 +1,28 @@
+{
+ "id": "궐_dbb563b8f1abe75b",
+ "syllable": "궐",
+ "used_route_words": [
+  "죄기죄",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003279,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "38b300e8ccb9d29a69ea66aabe5e7c973ceaa00be0a5e7bd4605ab4e903b1ab3",
+ "position_sha256": "dbb563b8f1abe75bc1fb0a93b3973a26d8d96dafbf4fae5d7a8d277ca99e8341",
+ "input_sha256": "9938c2c3681aa2f0863cf1282ee2323e69aa055146a97a9b09c924e1a527ce60",
+ "proof_bytes": 3747
+}

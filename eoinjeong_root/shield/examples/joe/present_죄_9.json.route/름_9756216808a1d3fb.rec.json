@@ -1,0 +1,29 @@
+{
+ "id": "름_9756216808a1d3fb",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "샅바씨름",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002053,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "08a3fa18a2c510c8a0662f4b6c6cac6a09cc1fb0d2c1361f44244c753e07c0da",
+ "position_sha256": "9756216808a1d3fbb09f508e0a47c6be36f3b36b12de61424fd1f04fdbe1f84f",
+ "input_sha256": "4e54633e4ee85749d2444cdd430b7ae0f6f30d3ffaf6ae2860ac177bbc549a0f",
+ "proof_bytes": 1925
+}

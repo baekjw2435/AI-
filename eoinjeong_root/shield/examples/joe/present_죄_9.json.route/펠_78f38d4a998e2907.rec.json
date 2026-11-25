@@ -1,0 +1,27 @@
+{
+ "id": "펠_78f38d4a998e2907",
+ "syllable": "펠",
+ "used_route_words": [
+  "멸치저냐",
+  "죄멸"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010676,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "474d88d702e16b28f903bebed5a61703e5be9e3ca26cbd6916d5daee48da0c6c",
+ "position_sha256": "78f38d4a998e290758d3831e25d6d62904e7d189b1202e0ac5d4903391e7a762",
+ "input_sha256": "665ba3fcb34c234fce4a49c03383a4b0af8c22a4294dbdd950a5edde15a89092",
+ "proof_bytes": 6750
+}
