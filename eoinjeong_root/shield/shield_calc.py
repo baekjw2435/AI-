@@ -303,6 +303,19 @@ def main():
     x, s = a.syllable, a.shield
     q = {'mode': a.mode, 'syllable': x, 'shield': s, 'used': a.used}
     t = max(0, s - 1) if a.mode == 'present' else s
+    if a.mode == 'present' and c.cont(x) < s:
+        # 규칙: ~X는 보호막이 (X로 이을 수 있는 단어 수) 이하일 때만 낼 수 있다. 낼 수 없으면 승패를 따지지 않는다.
+        msg = (f'보호막 {s}에서 ~{josa(x, "을", "를")} 제시 → 제시할 수 없음\n'
+               f'  {josa(x, "으로", "로")} 시작하는 단어가 {c.cont(x)}개라서 ~{josa(x, "은", "는")} 보호막 {c.cont(x)} 이하에서만 낼 수 있습니다.')
+        if a.json:
+            print(json.dumps(dict(q, legal=False, cont=c.cont(x)), ensure_ascii=False, indent=1))
+        else:
+            print(msg)
+        if a.cert:
+            Path(a.cert).write_text(json.dumps({'format': 'shield-cert-2', 'query': q, 'illegal': True, 'cont': c.cont(x),
+                                                'used': sorted(c.base_used), 'nodes': {}}, ensure_ascii=False),
+                                    encoding='utf-8')
+        return
     v, why, win = c.value(x, t)
     # 패(모든 수가 짐)는 이미 모든 수를 본 결과라 분류가 공짜. 승은 이기는 수 하나로 확정되므로 --all일 때만 나머지를 본다.
     partial = v == 'W' and win is not None and not a.all
@@ -314,10 +327,7 @@ def main():
         print(json.dumps(dict(q, value_for_mover=v, why=why, moves=rows, blocked=blocked), ensure_ascii=False, indent=1))
         return
     if a.mode == 'present':
-        cx = c.cont(x)
         print(f'보호막 {s}에서 ~{josa(x, "을", "를")} 제시')
-        if cx < s:
-            print(f'  ※ ~{josa(x, "은", "는")} 보호막 {cx} 이하에서만 낼 수 있어서, 보호막 {s}에서는 제시할 수 없습니다.')
         print(f'  상대는 보호막 {t}에서 {josa(x, "을", "를")} 받습니다.')
         print(f'  판정: 제시한 쪽 {({"L": "승", "W": "패"}).get(v, "미정")}  ({why})')
         wins = [r for r in rows if r['result_for_mover'] == '이기는 수']

@@ -162,6 +162,16 @@ def main():
         return cyc_memo[k]
 
     nodes = cert['nodes']
+    if q['mode'] == 'present' and cont(q['syllable']) < q['shield']:
+        # ~X는 보호막 cont(X) 이하에서만 낼 수 있다: 이 질문의 답은 '제시할 수 없음'이어야 한다
+        ok = cert.get('illegal') is True and not nodes
+        print(json.dumps({'query': q, 'result': '제시할 수 없음', 'cont': cont(q['syllable']), 'verified': ok,
+                          'problem_count': 0 if ok else 1,
+                          'problems': [] if ok else ['제시할 수 없는 자리인데 승패가 적혀 있음']}, ensure_ascii=False, indent=1))
+        sys.exit(0 if ok else 1)
+    if cert.get('illegal'):
+        print(json.dumps({'query': q, 'verified': False, 'problems': ['낼 수 있는 자리인데 제시 불가로 적혀 있음']}, ensure_ascii=False))
+        sys.exit(1)
 
     def ckey(y, t, u):
         return f"{y}|{t}|{','.join(sorted(u))}"
