@@ -272,8 +272,9 @@ int main(int argc, char **argv) {
   int start, want, n;
   while (fscanf(fp, "%d %d %d", &start, &want, &n) == 3) {
     memcpy(rawc, full, G);
-    int cur = start;
-    for (i = 0; i < n; i++) { int w; if (fscanf(fp, "%d", &w) != 1) return 2; rawc[wg[w]]--; cur = tgt[wg[w]]; }
+    int cur = start, unordered = n < 0;   /* n < 0: the |n| words are only removed (already used), the mover stays at start */
+    if (unordered) n = -n;
+    for (i = 0; i < n; i++) { int w; if (fscanf(fp, "%d", &w) != 1) return 2; rawc[wg[w]]--; if (!unordered) cur = tgt[wg[w]]; }
     rawcur = cur;
     int r;
     do r = position_value(1u << 30); while (r < 0);
