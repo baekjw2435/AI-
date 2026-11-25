@@ -1,0 +1,28 @@
+{
+ "id": "릿_50edb3e351f33b59",
+ "syllable": "릿",
+ "used_route_words": [
+  "렌즈터릿",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.016101,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a6d8ec47fc2aed91f8aa7f5f3eda2227c1bad9189817e6d44a8d5207f20348ca",
+ "position_sha256": "50edb3e351f33b5979e5bc6630ac51c0a635692b5a9807ee53108045b4fb0b1d",
+ "input_sha256": "cbb05cca9edc4f0cdcbd81669493a7fffa8edb8767a96bc237759ae883ee5316",
+ "proof_bytes": 4957
+}

@@ -1,0 +1,27 @@
+{
+ "id": "죄_a49051a263a55c9c",
+ "syllable": "죄",
+ "used_route_words": [
+  "촉탁살인죄",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005555,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "36719b46e99cd39b12ee3a1d6d51a330d3a47fc7f084ae822f797e210f781128",
+ "position_sha256": "a49051a263a55c9cca5e1df96be4f3ec1c445bb495ad4cafd97378f6724f6b35",
+ "input_sha256": "2ef39f4cfa24c39db483648d254ff155ead92dea01889e1feea4c374765bd7b1",
+ "proof_bytes": 4395
+}

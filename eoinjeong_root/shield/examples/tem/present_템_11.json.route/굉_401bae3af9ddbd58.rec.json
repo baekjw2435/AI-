@@ -1,0 +1,29 @@
+{
+ "id": "굉_401bae3af9ddbd58",
+ "syllable": "굉",
+ "used_route_words": [
+  "굉굉",
+  "득첩",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000547,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4ae68b92ec86d1a5edb18f5fa3ae7c6949f56afa8be1b3d635069e27e863cafa",
+ "position_sha256": "401bae3af9ddbd5829b14ba6d17b954903f1eaf92ddf0b9089c9bd285b79c038",
+ "input_sha256": "4ad7be059a6662530c41b3f13bf9614e8e90e40b8fd7c03752a6240a884f8667",
+ "proof_bytes": 812
+}

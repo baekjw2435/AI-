@@ -1,0 +1,28 @@
+{
+ "id": "냐_6a0539c55425005e",
+ "syllable": "냐",
+ "used_route_words": [
+  "냐냐",
+  "냐냐냐냐냐냐냐",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000994,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "6a0539c55425005e3467f8a1bc7fa0668b8438a67ddbc93f90bd22796c31e96c",
+ "input_sha256": "7cbf9b1fbc977e52abc210908c07f8872fdc9868366fb18c377813241c8ebae3",
+ "proof_bytes": 799
+}

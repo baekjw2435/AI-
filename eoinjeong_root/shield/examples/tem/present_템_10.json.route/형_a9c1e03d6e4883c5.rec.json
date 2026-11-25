@@ -1,0 +1,30 @@
+{
+ "id": "형_a9c1e03d6e4883c5",
+ "syllable": "형",
+ "used_route_words": [
+  "권삼득",
+  "득표율",
+  "율현마을",
+  "을지형",
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000941,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "266cd951dad293b047963cae237968c3673469013a2d5606d8eb36534a05ef4a",
+ "position_sha256": "a9c1e03d6e4883c5e011572f401ddddfdea04965fa0cfb1cf59ea3f5f6709219",
+ "input_sha256": "0dd0364b3e7b2d60c4f38492b4c446a3f51493db5289051df91d010835b35ce2",
+ "proof_bytes": 1004
+}

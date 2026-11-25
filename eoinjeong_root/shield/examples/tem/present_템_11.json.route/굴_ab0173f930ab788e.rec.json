@@ -1,0 +1,30 @@
+{
+ "id": "굴_ab0173f930ab788e",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱도시험",
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "폼플라스틱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000168,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "ab0173f930ab788ea16dc4a5bb0d0138aef016ec6786fc4216b13e771757d6ce",
+ "input_sha256": "caad0a8b3194bea2ccc7afe770600080b619653d9cbb93558df98a365184c0b1",
+ "proof_bytes": 124
+}

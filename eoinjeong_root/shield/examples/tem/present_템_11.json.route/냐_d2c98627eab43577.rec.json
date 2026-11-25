@@ -1,0 +1,28 @@
+{
+ "id": "냐_d2c98627eab43577",
+ "syllable": "냐",
+ "used_route_words": [
+  "갱생보호법",
+  "굴저냐",
+  "샅굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001503,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "d2c98627eab435778f2c0141c5e0c3f634086ab35187c4ad01d81a3c419c898e",
+ "input_sha256": "58124fe2d9510b166666adea89d2f28d87a8b84a1db02c534afceb706e30a1a0",
+ "proof_bytes": 799
+}

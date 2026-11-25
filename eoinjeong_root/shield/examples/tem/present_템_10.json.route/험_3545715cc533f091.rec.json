@@ -1,0 +1,28 @@
+{
+ "id": "험_3545715cc533f091",
+ "syllable": "험",
+ "used_route_words": [
+  "득득",
+  "험험",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000856,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0f62063a740b1a2346dc6b4c7f2ce0ea83a9f85402ea033bc1f743308ca4222a",
+ "position_sha256": "3545715cc533f091b2126517c4d124f4667e9f1cbdec6f777333473b8bab605c",
+ "input_sha256": "61047cd0e26ab34adf5215bac15af4414975f9b080f0ab7ef3a10d3ec6ed7891",
+ "proof_bytes": 1029
+}

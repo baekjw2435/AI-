@@ -1,0 +1,28 @@
+{
+ "id": "굴_e1132846c35d4562",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "득득",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000136,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "e1132846c35d4562f61fd33be371b678e2c35156b9c0b0b620e93163c3db571c",
+ "input_sha256": "1ad2136830573d8ac4ed461afe972cb23c88a09d4459f2ed71a019409da26b44",
+ "proof_bytes": 124
+}

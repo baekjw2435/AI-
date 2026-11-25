@@ -1,0 +1,26 @@
+{
+ "id": "멱_1ef035fbc8d99ec3",
+ "syllable": "멱",
+ "used_route_words": [
+  "획죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.050189,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e605222221d8c72c05059611fc74f678caf23f542ae6c990e9ddb2e3f5823933",
+ "position_sha256": "1ef035fbc8d99ec395b4b442bef2ff612a752bd0c2af467f2b2137bc195365dd",
+ "input_sha256": "a7380ba0a1c7b037c9f9fb64bca2b8088fc03cc16368b07dba644acfc2de760f",
+ "proof_bytes": 20833
+}

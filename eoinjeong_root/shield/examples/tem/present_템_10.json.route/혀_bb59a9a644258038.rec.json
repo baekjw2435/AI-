@@ -1,0 +1,27 @@
+{
+ "id": "혀_bb59a9a644258038",
+ "syllable": "혀",
+ "used_route_words": [
+  "샅흰검은말율",
+  "잎혀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.006552,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "354f3b2d0c4fa68c940ef9ccc3bb063eb961b192ab4f2e6db1cb5977f5c0c6b7",
+ "position_sha256": "bb59a9a644258038faeef3b6e938799c5f35109292a11bedcba833a1855b2cc8",
+ "input_sha256": "6e20842a6736bf36eddbf4b4c212ef82dbb52c2237f9a0a6c6893a90d077ad69",
+ "proof_bytes": 801
+}

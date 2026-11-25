@@ -1,0 +1,29 @@
+{
+ "id": "험_c4e1120a269a6d4c",
+ "syllable": "험",
+ "used_route_words": [
+  "갱신청구권",
+  "권폄",
+  "험할험",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001251,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "01f1ae38e689ee16373f8df4a24e1e6cd39e42e077deb39f162f92ce64880e85",
+ "position_sha256": "c4e1120a269a6d4c5a2dedf5c7e3bfe1d4ae0abd706384ec1decf885422c4333",
+ "input_sha256": "9fe8e2c823c24a99a8294b3ff15f546d41026516f5c46dc0cd783dad9d044cde",
+ "proof_bytes": 1307
+}

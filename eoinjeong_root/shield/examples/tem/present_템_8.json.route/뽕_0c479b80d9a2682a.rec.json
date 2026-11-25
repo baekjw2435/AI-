@@ -1,0 +1,27 @@
+{
+ "id": "뽕_0c479b80d9a2682a",
+ "syllable": "뽕",
+ "used_route_words": [
+  "잎뽕",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.004335,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0bb61453dc069867d901e28d5a996572ea539f05e3dd51915a29737bcc1c2ad2",
+ "position_sha256": "0c479b80d9a2682a18663e8b1e10434a670890c2a70a5a50c109b2c3c753bb5f",
+ "input_sha256": "56e0e4f5c409f6ce4c9220b519e79c2ea2858568e75ca953b6e52eb500627deb",
+ "proof_bytes": 4234
+}

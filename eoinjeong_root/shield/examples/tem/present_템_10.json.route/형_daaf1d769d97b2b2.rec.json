@@ -1,0 +1,30 @@
+{
+ "id": "형_daaf1d769d97b2b2",
+ "syllable": "형",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "샅바씨름",
+  "율현마을",
+  "을지형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000326,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "af72b8c636dfa136f7463d5a0cbb68a668e4e3bc2930b39dddcfb84eec40c60b",
+ "position_sha256": "daaf1d769d97b2b2752107e3aba230aa65a4c45898c1776ad99cca576de45feb",
+ "input_sha256": "618cb29f09c3dbd6bc221d9867c4c6fc4a67691e9443a71f8116d3a02378c428",
+ "proof_bytes": 479
+}

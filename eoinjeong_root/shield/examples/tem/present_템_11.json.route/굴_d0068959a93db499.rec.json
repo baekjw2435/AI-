@@ -1,0 +1,28 @@
+{
+ "id": "굴_d0068959a93db499",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "권폄",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000137,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "d0068959a93db49949f3540fe15e9fa1c1ef0fb798e517e7a01001ecdf5eff75",
+ "input_sha256": "ec1ea159267bc62658692365b5993cb55cbee644e7d358f74de8ad44f88ec611",
+ "proof_bytes": 124
+}

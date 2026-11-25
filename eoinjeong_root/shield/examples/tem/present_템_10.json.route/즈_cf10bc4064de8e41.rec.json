@@ -1,0 +1,28 @@
+{
+ "id": "즈_cf10bc4064de8e41",
+ "syllable": "즈",
+ "used_route_words": [
+  "겐키드럭스토어즈",
+  "겔렌데슈프링겐",
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00111,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f3d42ef39943ae48e626182081e3d36686053a665621fcc4c03440739add2fc1",
+ "position_sha256": "cf10bc4064de8e41ef95ab167a1181f246dd700926b6977fdc2efb051be91aa3",
+ "input_sha256": "4e9992714efc680815bc01e93652ce5bccd2d519730dcc751e3c451c73492c16",
+ "proof_bytes": 773
+}

@@ -1,0 +1,27 @@
+{
+ "id": "즈_b1db92c554961ec8",
+ "syllable": "즈",
+ "used_route_words": [
+  "룻스키즈",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001056,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8961e0b6272d895c2ef556af960c0683c69b50c818401b58bd961d416fbd6647",
+ "position_sha256": "b1db92c554961ec8cf2bfd7d330de9fcd33edd6b67eaccd98197e783c705387e",
+ "input_sha256": "3c71c026ddabc4e20374ce94bb2f98adc60b9f0696805ddfb9fb12b0e7841369",
+ "proof_bytes": 778
+}

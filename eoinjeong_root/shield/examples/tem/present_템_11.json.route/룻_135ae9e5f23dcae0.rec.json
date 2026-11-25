@@ -1,0 +1,28 @@
+{
+ "id": "룻_135ae9e5f23dcae0",
+ "syllable": "룻",
+ "used_route_words": [
+  "갱도시험",
+  "득첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001087,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b40f4df6e10341c7bb0432e8c26e6eb5c1c93b331179fc2e4af76506ac08f193",
+ "position_sha256": "135ae9e5f23dcae0e876fa70b4ec7cb93632d9b309dedcfdca8d42093fac4bac",
+ "input_sha256": "e62ed9bed0f7519f3baf8249ab3914a442786d2017002d4490e497f3ff38294f",
+ "proof_bytes": 785
+}

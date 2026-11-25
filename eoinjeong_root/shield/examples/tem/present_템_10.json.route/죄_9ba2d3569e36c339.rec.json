@@ -1,0 +1,30 @@
+{
+ "id": "죄_9ba2d3569e36c339",
+ "syllable": "죄",
+ "used_route_words": [
+  "권삼득",
+  "득득",
+  "득죄",
+  "읍권",
+  "죄죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.006863,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "493cfef487bbdf4a3ddfbb049a28a9419a622b7b8ea0cd99cf3404794099dbf7",
+ "position_sha256": "9ba2d3569e36c33976f977039b354464405c6c0eb3c85881aa408ad3501024aa",
+ "input_sha256": "e764d2c981534613b286d362ff9473cdf910f785c2f7d74b96eddf0c25fe16e5",
+ "proof_bytes": 2756
+}

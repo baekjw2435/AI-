@@ -1,0 +1,30 @@
+{
+ "id": "형_cb60f2ef20c23029",
+ "syllable": "형",
+ "used_route_words": [
+  "권리행사방해죄",
+  "읍권",
+  "읍읍",
+  "읍할읍",
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.006565,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "79710a75368e5e7207ae772fdbf09148d52adb70b3fefa573cf4a569455dff7e",
+ "position_sha256": "cb60f2ef20c2302977e2a2e3391f9e97f0bcd424efb1e1d528374e13607ad641",
+ "input_sha256": "8a1a347f4d4f5deb82557f12bbc2d8439700f04a3b7900171fdbdfa370bc583f",
+ "proof_bytes": 2889
+}

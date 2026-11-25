@@ -1,0 +1,29 @@
+{
+ "id": "권_88b0728a4c838f82",
+ "syllable": "권",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.549324,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b6f7443be0b114d675e2abb8751e2d350eab41db9a5ac08d7cce3961feb7e506",
+ "position_sha256": "88b0728a4c838f8290a64d6f10371caaacca2e1bfbc40b56ff6c01a7d598a19f",
+ "input_sha256": "87f1a00a96bb322d215820ebb4dcec87cf64528a7bed5f4eb1e2b3f4ceaac871",
+ "proof_bytes": 184422
+}

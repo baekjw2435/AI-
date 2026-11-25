@@ -1,0 +1,29 @@
+{
+ "id": "잎_63b4b726c598b780",
+ "syllable": "잎",
+ "used_route_words": [
+  "득첩",
+  "뽕잎",
+  "첩쾌",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.014298,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "33a37775e8b59304e2a550c3740d3054d781e5688699e6d7bb4143ab7f999ebc",
+ "position_sha256": "63b4b726c598b7809ccb19ba4ecffbba634f81f9bcabfc4e93715d5efe4faf49",
+ "input_sha256": "1894a274f27fcb3a60449d4d95e5a310a9ce9d9021e922c5ef89c3c75a478fba",
+ "proof_bytes": 11321
+}

@@ -1,0 +1,30 @@
+{
+ "id": "냐_8e9687be552d5a4b",
+ "syllable": "냐",
+ "used_route_words": [
+  "득첩",
+  "준치저냐",
+  "첩섭",
+  "험준",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001005,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "8e9687be552d5a4b48e26d58bb921a240037fbcd823eb011d026088173eb54b8",
+ "input_sha256": "55b76dc7c3d4391746572ac529d1f5bbacd6e806633055d12f50678ffd02847b",
+ "proof_bytes": 799
+}

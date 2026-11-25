@@ -1,0 +1,28 @@
+{
+ "id": "펠_1cb1965fcc230a4e",
+ "syllable": "펠",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "딩동댕지난여름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002817,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8323b68b3899edcdbada878e525fe9348ccead6897d7d1b0685dac9c1c121b1d",
+ "position_sha256": "1cb1965fcc230a4e25e1154e8831ce240d3094e48f05a6eb284ff8484822d1e0",
+ "input_sha256": "014d3fca1b87dc96faa66b0e23a6baab62006118dc043b4b093b55122cb0d6d7",
+ "proof_bytes": 2736
+}

@@ -1,0 +1,28 @@
+{
+ "id": "렌_d0a0fbae3ececed8",
+ "syllable": "렌",
+ "used_route_words": [
+  "권폄",
+  "렛츠인조이더무비카가미네렌",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.017427,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ef17e1f731a0807cccd075b1f33839427269d9d97d4a4a5c5b99f71aa70513bd",
+ "position_sha256": "d0a0fbae3ececed859a1aa61d59fae168395326256e27337b91295d12ecca7ad",
+ "input_sha256": "b6e8eb2b3eefd7f354ed31343b8ec7549ba69ec5f43202182c6aedd2fcb8d1de",
+ "proof_bytes": 14194
+}

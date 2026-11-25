@@ -1,0 +1,29 @@
+{
+ "id": "렌_b99f36c91a2de632",
+ "syllable": "렌",
+ "used_route_words": [
+  "읍읍",
+  "읍할읍",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.03508,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "b99f36c91a2de6324b4ceaf6bddaa2617a23760a5ba29ebb89d4030d65e355a1",
+ "input_sha256": "439de74820b85eddf898602932557b0393b9a077735ed23dee2a6d7c2b2e6631",
+ "proof_bytes": 15781
+}

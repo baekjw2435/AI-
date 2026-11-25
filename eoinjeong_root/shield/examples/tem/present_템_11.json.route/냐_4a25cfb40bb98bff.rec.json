@@ -1,0 +1,28 @@
+{
+ "id": "냐_4a25cfb40bb98bff",
+ "syllable": "냐",
+ "used_route_words": [
+  "준치저냐",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001054,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "4a25cfb40bb98bff014023a10cd2c9f36e42e3ed471d9cf415171232a9d7aec0",
+ "input_sha256": "4392ff7a20ed9f1ffc800cb1011116a47f08217c8cd7edb9574c5c8ece73fd9d",
+ "proof_bytes": 799
+}

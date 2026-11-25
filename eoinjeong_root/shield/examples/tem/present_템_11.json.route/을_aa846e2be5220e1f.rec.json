@@ -1,0 +1,27 @@
+{
+ "id": "을_aa846e2be5220e1f",
+ "syllable": "을",
+ "used_route_words": [
+  "법원검찰청복사골문화센터반달마을",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006238,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d00da83bcc68aa1f57f976454f6f9949f3337fc4f76fc04d0a27d8e417add6df",
+ "position_sha256": "aa846e2be5220e1f87ba80dd462dc04b8fd05ee6d218ab132f651402db530651",
+ "input_sha256": "29dd487d1bb4d5d627b67842807e8801afa4c767b5882e018bf9ddd0f98f75f2",
+ "proof_bytes": 5324
+}

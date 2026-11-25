@@ -1,0 +1,28 @@
+{
+ "id": "렌_2e9eedad816ec44f",
+ "syllable": "렌",
+ "used_route_words": [
+  "렛츠인조이더무비카가미네렌",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.263181,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4aecf202b9b2cc57039d03fda7fc47cf77332714b7d113d1ee8b96e6c0fcff72",
+ "position_sha256": "2e9eedad816ec44f94000461305a5a16ca592858383891ecfce3e3df07ec0e3e",
+ "input_sha256": "41b9c6851a53e45b588cad0e19d943250dd0ace43739610198fbeef665b6e81d",
+ "proof_bytes": 163009
+}

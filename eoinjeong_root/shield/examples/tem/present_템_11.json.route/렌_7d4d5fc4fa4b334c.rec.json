@@ -1,0 +1,29 @@
+{
+ "id": "렌_7d4d5fc4fa4b334c",
+ "syllable": "렌",
+ "used_route_words": [
+  "득첩",
+  "톡톡파워풀카가미네렌",
+  "틱톡",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.023078,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fee8dcca942ec3a16f3ccf37e8657307fcb3b6dc231f45aa3bb8ad08ab3daa2f",
+ "position_sha256": "7d4d5fc4fa4b334ca9fddb47a2d6fce973ab63b7241a0bb99a2acb0d2d889a38",
+ "input_sha256": "dc758686c5dabb7a197012c793afbd03735e9c596fd6a02531de585dcd1a50b4",
+ "proof_bytes": 15809
+}

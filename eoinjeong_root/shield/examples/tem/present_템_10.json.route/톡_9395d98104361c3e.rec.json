@@ -1,0 +1,26 @@
+{
+ "id": "톡_9395d98104361c3e",
+ "syllable": "톡",
+ "used_route_words": [
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.047488,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ac2553586fb79d27fdb8fe859053c9294fd4ba71ccecdbb00fc1635103296d8c",
+ "position_sha256": "9395d98104361c3e57b141220ab51d1b62c6f18cfb07848b2b3eb6e7f9216127",
+ "input_sha256": "ee2c7371efb1f77a05c372acb83eff2e28b6bb4616e635ee5b4c4f31aa7fe48c",
+ "proof_bytes": 15788
+}

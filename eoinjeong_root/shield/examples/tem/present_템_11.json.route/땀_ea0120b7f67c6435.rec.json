@@ -1,0 +1,29 @@
+{
+ "id": "땀_ea0120b7f67c6435",
+ "syllable": "땀",
+ "used_route_words": [
+  "득첩",
+  "밑땀",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001242,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d27708b6b1d320eb616a66f7bd40ec100b3f34a4b919314c4768df136197700c",
+ "position_sha256": "ea0120b7f67c6435af84111df661453401ea511c29ca51aaf5630fbd1799c9fb",
+ "input_sha256": "171929adad318e3fb14e91ef7543182faa74d92414e13154601c2371a225ee4b",
+ "proof_bytes": 2265
+}

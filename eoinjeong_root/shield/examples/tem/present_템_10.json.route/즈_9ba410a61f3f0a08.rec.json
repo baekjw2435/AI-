@@ -1,0 +1,27 @@
+{
+ "id": "즈_9ba410a61f3f0a08",
+ "syllable": "즈",
+ "used_route_words": [
+  "룻스키즈",
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001315,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f3d42ef39943ae48e626182081e3d36686053a665621fcc4c03440739add2fc1",
+ "position_sha256": "9ba410a61f3f0a08fafda3a78f69f2f672819806f743c61454a4aad808053a3a",
+ "input_sha256": "bd9851c4f0c703c3cf29a6b9cdd9cf814881c6ef2b37ceae098eaa78d8c19956",
+ "proof_bytes": 773
+}

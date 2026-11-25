@@ -1,0 +1,30 @@
+{
+ "id": "득_8025f9d8cc74d316",
+ "syllable": "득",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "샅바씨름",
+  "율현마을",
+  "을종근로소득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000921,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1162bb8609e1484f3fcf2c9589e24334b140eaa1439f4d0196f80b916814f1b2",
+ "position_sha256": "8025f9d8cc74d316d377d5f38488032a6c1bfa19fc6a8b47a5591400b4add826",
+ "input_sha256": "b6f5442cc4478e4d46135392dfedd8e42118b6482dc8787917cea07fdc2c9e11",
+ "proof_bytes": 903
+}

@@ -1,0 +1,29 @@
+{
+ "id": "냐_8524f2da475cd7bf",
+ "syllable": "냐",
+ "used_route_words": [
+  "권폄",
+  "읍권",
+  "준치저냐",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000139,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "8524f2da475cd7bf9e095b71ba9505254fcecff0c9dc8765a70a02a4c1c9623f",
+ "input_sha256": "fc45970a91d22cfd5db644ae91de36f5f7d52d710e08b55f5a920860ab2c2491",
+ "proof_bytes": 124
+}

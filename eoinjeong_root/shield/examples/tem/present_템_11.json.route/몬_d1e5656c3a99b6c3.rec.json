@@ -1,0 +1,30 @@
+{
+ "id": "몬_d1e5656c3a99b6c3",
+ "syllable": "몬",
+ "used_route_words": [
+  "득첩",
+  "룻스키즈",
+  "즈보우몬",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000219,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "304d6bdd06f2cf9d78bf385151a9485ab82fa1cfbcf6fe9f42a74758fd95d20e",
+ "position_sha256": "d1e5656c3a99b6c358fb67a0dcc2cf35b02131d6912ec2349659cc31607b20ce",
+ "input_sha256": "1a4b60f8c6ff552cea3224e1cc67e58729113f61f1342be381c6f76a8a0b3209",
+ "proof_bytes": 194
+}

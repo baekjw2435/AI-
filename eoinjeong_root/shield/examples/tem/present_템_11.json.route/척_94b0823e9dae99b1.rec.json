@@ -1,0 +1,31 @@
+{
+ "id": "척_94b0823e9dae99b1",
+ "syllable": "척",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "권세권",
+  "권척",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.633282,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0960fc790afd15c24f509073c6cd923fbc60d775e5f3995c7e75d06908499172",
+ "position_sha256": "94b0823e9dae99b1d920f601cec4ae9c5aa5e7ca1c26eddf5cbc609cd5e21631",
+ "input_sha256": "8bcf1b94579dff33df04831a7438a257852e33d87bd369d2fc1900e1d023fc40",
+ "proof_bytes": 188461
+}

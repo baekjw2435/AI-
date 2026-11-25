@@ -1,0 +1,26 @@
+{
+ "id": "름_0ab10a7dd41ae19c",
+ "syllable": "름",
+ "used_route_words": [
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.008358,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5977758041fcfcd483b61ad21ea6bab4dbe699847cebf925d1132786da76e06b",
+ "position_sha256": "0ab10a7dd41ae19cab27351f9a6ce4c8ab101d92e0da2e6a6df6271386e475bb",
+ "input_sha256": "24edfe30bb2b85e5cedc9b8a42237dccb56ef7a27825ed41cb251dd8ffad89ad",
+ "proof_bytes": 1239
+}

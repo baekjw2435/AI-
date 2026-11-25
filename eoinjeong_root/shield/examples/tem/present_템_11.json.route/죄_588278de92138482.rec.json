@@ -1,0 +1,29 @@
+{
+ "id": "죄_588278de92138482",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "쇄심권",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013295,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2889779e27be46cf3a973ac5d3ed73f29fa2052132ab8ab320cd62cb1c395948",
+ "position_sha256": "588278de92138482d0a02ce4094be537849e396d7f7e85269d1471aa3b687ebe",
+ "input_sha256": "ae05453e2629f2adb1a4116fa0bb7aca97a606f094516a9a519dc3d8fb7524d3",
+ "proof_bytes": 7331
+}

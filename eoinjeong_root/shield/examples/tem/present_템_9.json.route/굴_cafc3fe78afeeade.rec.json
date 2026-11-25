@@ -1,0 +1,29 @@
+{
+ "id": "굴_cafc3fe78afeeade",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱생보호법",
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000132,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "cafc3fe78afeeade8bcaa008ebc763380f7b0f2a6df7babce0e62175be96f97b",
+ "input_sha256": "bf1bf34148c2eeb35871d4a7cb9e17ce873e9b222fa7888fdec7cc00fec43018",
+ "proof_bytes": 124
+}

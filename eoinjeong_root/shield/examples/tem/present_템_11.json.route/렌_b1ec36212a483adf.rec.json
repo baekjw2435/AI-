@@ -1,0 +1,29 @@
+{
+ "id": "렌_b1ec36212a483adf",
+ "syllable": "렌",
+ "used_route_words": [
+  "갱신청구권",
+  "겁겁",
+  "겁낼겁",
+  "렛츠인조이더무비카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.030167,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "b1ec36212a483adf1af93262f31dafd40dedb62be3a2e0ca7e1132afad526658",
+ "input_sha256": "f7e4af9c8239daff2189e879cb5d0c79957f6d9c29edf333e1e11eb1f3757895",
+ "proof_bytes": 15781
+}

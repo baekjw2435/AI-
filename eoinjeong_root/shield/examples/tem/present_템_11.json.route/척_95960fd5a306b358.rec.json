@@ -1,0 +1,30 @@
+{
+ "id": "척_95960fd5a306b358",
+ "syllable": "척",
+ "used_route_words": [
+  "권척",
+  "득첩",
+  "척수공권",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000328,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "312e65d23f2c912aab23ac78dd1449cc2dab06c9d5bd5d2d08daac7b68fcf05f",
+ "position_sha256": "95960fd5a306b358708aeb9ef0c0f094e565579fe0090ed1c68b86160a4e63a6",
+ "input_sha256": "1f4d32ea3b4742274b76c39768baa241316a99037f2504140b519bcdb29b4836",
+ "proof_bytes": 300
+}

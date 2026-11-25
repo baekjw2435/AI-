@@ -1,0 +1,28 @@
+{
+ "id": "즈_c4e25ab845fdde58",
+ "syllable": "즈",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "딩동댕지난여름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000434,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0fb4d8b8946b629a8ef9f326ec93c47684119e482b15dbac376494388a82e553",
+ "position_sha256": "c4e25ab845fdde5886f77c1e2114cb3d06136821a25d3b996dd801ee58b3fe6e",
+ "input_sha256": "2dd9e6202538781dca8ed39ad243c78e4324c4dba4e8d7d2220be1dc511e02b2",
+ "proof_bytes": 376
+}

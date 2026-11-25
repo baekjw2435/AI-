@@ -1,0 +1,29 @@
+{
+ "id": "을_a352c8a8be8daf7b",
+ "syllable": "을",
+ "used_route_words": [
+  "득첩",
+  "샅흰검은말율",
+  "율현마을",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002886,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "faadc45605314bdfae7825fa45dd1a24ba7faef4e2db35941f3e8751b29bbdcc",
+ "position_sha256": "a352c8a8be8daf7b7367cf1ce8985d6d535f3365614f6f74c0c5cd2edddcd9c7",
+ "input_sha256": "4b0fc82c9b538674d9143ae0529fecfee485066fd0a01c4aa41bd310905a3f43",
+ "proof_bytes": 2626
+}

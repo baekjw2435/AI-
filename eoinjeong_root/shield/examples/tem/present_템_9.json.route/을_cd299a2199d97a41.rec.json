@@ -1,0 +1,27 @@
+{
+ "id": "을_cd299a2199d97a41",
+ "syllable": "을",
+ "used_route_words": [
+  "첩첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000294,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7d46f327d65d072d463e84898f542097d2509b84f4c9f6db78c3f5536af1797d",
+ "position_sha256": "cd299a2199d97a41697fa27489135b066ad30fabd15fa245e2a291653015ce42",
+ "input_sha256": "5a568748759534296bd7905f1f7fa409fccd3c4e7272bc46e4af2e95cc6e85fb",
+ "proof_bytes": 207
+}

@@ -1,0 +1,27 @@
+{
+ "id": "몬_5baa4978267aa190",
+ "syllable": "몬",
+ "used_route_words": [
+  "룻스키즈",
+  "즈보우몬"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001175,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6cc4e237a0d57f84762142e9c477d83544e44f252bb5f39eaa6dcd53172897cf",
+ "position_sha256": "5baa4978267aa190c61d77228f84eaa1fc74e4b03944845d788dc9f78fb84fbb",
+ "input_sha256": "80b1739e0f2c4eff67f4af9ca679a46c9392bced3e65f4e651cb46cb51d90e14",
+ "proof_bytes": 772
+}

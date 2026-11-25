@@ -1,0 +1,31 @@
+{
+ "id": "을_ca6860583df5a10c",
+ "syllable": "을",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "율현마을",
+  "틀기름",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000227,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9678e6348d783c34a0691bd9722ca1dec4de5e7c2486e4f4a20a461cb7c1e153",
+ "position_sha256": "ca6860583df5a10c7e9d1d2481daf12cfb61456ef198a558d12fb39f08a79bc1",
+ "input_sha256": "54bc97f6599a504484f56bd10b0ed58627df2175e9f71e3f94b18cb52dc63cf4",
+ "proof_bytes": 294
+}

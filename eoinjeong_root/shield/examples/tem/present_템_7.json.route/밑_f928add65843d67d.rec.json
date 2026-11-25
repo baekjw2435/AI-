@@ -1,0 +1,28 @@
+{
+ "id": "밑_f928add65843d67d",
+ "syllable": "밑",
+ "used_route_words": [
+  "샅굴",
+  "잇샅",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000165,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f928add65843d67d710728331e9a92a0a25fa8c4b0266ed0686e3d74789c7549",
+ "input_sha256": "58157a10f678d98484238629b944da551459abaacd9ce5446da7aec28a9b6390",
+ "proof_bytes": 124
+}

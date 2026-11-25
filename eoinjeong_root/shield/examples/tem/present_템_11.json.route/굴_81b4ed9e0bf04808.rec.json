@@ -1,0 +1,31 @@
+{
+ "id": "굴_81b4ed9e0bf04808",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱도시험",
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "득첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000138,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "81b4ed9e0bf0480866ffe08e7f53593212854e5e1e72d6daa7f9d404e04783e0",
+ "input_sha256": "e5b8a2135662dd0be34bb5a0f77b4ed37ad79294453cfeb46b5c65e6a2485783",
+ "proof_bytes": 124
+}

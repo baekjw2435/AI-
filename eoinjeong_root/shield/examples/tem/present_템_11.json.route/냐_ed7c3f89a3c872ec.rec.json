@@ -1,0 +1,29 @@
+{
+ "id": "냐_ed7c3f89a3c872ec",
+ "syllable": "냐",
+ "used_route_words": [
+  "굴저냐",
+  "샅굴",
+  "읍읍",
+  "읍할읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001068,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "ed7c3f89a3c872ecfed573594c740369d55136d300dbc8700fb6a10e0b8efa1e",
+ "input_sha256": "8d77f834e2605c3c6521fd20842c7c8836ad31ad4327b66123e46071ebc65439",
+ "proof_bytes": 799
+}

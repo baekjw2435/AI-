@@ -1,0 +1,31 @@
+{
+ "id": "을_b6df3aaea8ad6bc9",
+ "syllable": "을",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "권율",
+  "쇄쇄",
+  "쇄심권",
+  "율현마을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001968,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c82265e30d6df9259c11b7155a7d72c9d010da45c5996efaa3da0ebc58e21867",
+ "position_sha256": "b6df3aaea8ad6bc9e5200d9ad3349b1818ea78dda3579de41e4904beffa71071",
+ "input_sha256": "14806e1f4a29c7019d68d082741d86cf7761bf83ecc4fac37e2ecb0b559f4bb5",
+ "proof_bytes": 2475
+}

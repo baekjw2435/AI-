@@ -1,0 +1,27 @@
+{
+ "id": "굴_5521885753aa2881",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱무꼼짝",
+  "겁나는얼굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000135,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "5521885753aa2881d899cc27d4028f41207f5aa52627e3f593aeada008f8cec5",
+ "input_sha256": "2b92780fbea85d2ab29f8f2f8204552853f148a5c3c0ed75334482ccc44f7a68",
+ "proof_bytes": 124
+}

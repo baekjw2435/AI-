@@ -1,0 +1,28 @@
+{
+ "id": "척_3e2f007fb08515fa",
+ "syllable": "척",
+ "used_route_words": [
+  "갱재첩",
+  "권척",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000264,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d912eaf20c199ac584aeebdd4713a36411df3b67b5f83e32a376f68b637c2967",
+ "position_sha256": "3e2f007fb08515fa1a84da6ef9bb11103d1b03cd2af11036ec9d2c41780d221f",
+ "input_sha256": "6017814f5c4f318587be80e1cc16a10f5db99048730eab75742160cea883a0a9",
+ "proof_bytes": 291
+}

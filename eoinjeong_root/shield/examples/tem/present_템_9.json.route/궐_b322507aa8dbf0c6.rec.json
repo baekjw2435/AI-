@@ -1,0 +1,27 @@
+{
+ "id": "궐_b322507aa8dbf0c6",
+ "syllable": "궐",
+ "used_route_words": [
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.096679,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5ce38b765f74a8bb67a35463abac30dd31c5694f449e00942f8e022dd96344e2",
+ "position_sha256": "b322507aa8dbf0c607ccb01c32872e401f3b121cf634a5712b0474c6bc32b799",
+ "input_sha256": "f204172a9224ceb0df644259d1b49870d68abe0fc6eafe2e506b625f1efa3c63",
+ "proof_bytes": 18605
+}

@@ -1,0 +1,28 @@
+{
+ "id": "톤_ebe97cd8efa07978",
+ "syllable": "톤",
+ "used_route_words": [
+  "톤톤",
+  "펠레톤",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002105,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3193875be4d7efa048eceb567b13f8a5c218c926c0a0fa55cda9b3847b76476d",
+ "position_sha256": "ebe97cd8efa0797807ee7ccbb8e406d71bdd00dcaf39ac23bccdf4bbf3e25de8",
+ "input_sha256": "d2e3593d0d109cd04d962b750b087fdd75f87f921deefe9e608c62b2a975149c",
+ "proof_bytes": 1889
+}

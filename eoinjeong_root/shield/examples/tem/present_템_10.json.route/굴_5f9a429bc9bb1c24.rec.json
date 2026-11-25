@@ -1,0 +1,26 @@
+{
+ "id": "굴_5f9a429bc9bb1c24",
+ "syllable": "굴",
+ "used_route_words": [
+  "샅굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001184,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "42c7585bc66287c02aafb7de2fe5b2500a812460f12f256fb5bd71bf8034559b",
+ "position_sha256": "5f9a429bc9bb1c24b8771247a673033a7b164cc779653d3b3561d2ba5127b993",
+ "input_sha256": "78d9062965a3a09d9e816119e6b61411ef863e98f5ab1f7c9efced2116a8e670",
+ "proof_bytes": 805
+}

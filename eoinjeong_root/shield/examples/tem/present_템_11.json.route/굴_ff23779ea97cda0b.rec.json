@@ -1,0 +1,27 @@
+{
+ "id": "굴_ff23779ea97cda0b",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "뭐든시작이어려운법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000259,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "ff23779ea97cda0b296a0da9f2125ff7ab1e0eceb01e66c5f1d29add7a0213a7",
+ "input_sha256": "1c0757a84c5e6617ac4389477e5167dfbc9fa8ac29371b2871dc5b0c80bc364b",
+ "proof_bytes": 124
+}

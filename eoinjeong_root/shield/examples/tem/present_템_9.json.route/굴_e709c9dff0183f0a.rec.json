@@ -1,0 +1,29 @@
+{
+ "id": "굴_e709c9dff0183f0a",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "찍어먹는초코스틱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000204,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "e709c9dff0183f0a2b153447c588c91dbe01f5b47ea9ced8c7add055c05323bc",
+ "input_sha256": "bf5b11adf03a1472d7c2512d41711e647822dfaaa6aad76ad10b6cce7cdcd844",
+ "proof_bytes": 124
+}

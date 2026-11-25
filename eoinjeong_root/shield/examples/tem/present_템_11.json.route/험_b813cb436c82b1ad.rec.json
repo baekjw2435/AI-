@@ -1,0 +1,30 @@
+{
+ "id": "험_b813cb436c82b1ad",
+ "syllable": "험",
+ "used_route_words": [
+  "득첩",
+  "첩섭",
+  "험할험",
+  "험험",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.004846,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2937e3e974300769c6309dc5aa1a33afccbe4f1c1601f39f99178ff8e557a7d3",
+ "position_sha256": "b813cb436c82b1ada376dc6500ca295f33cbec547de55ff9938c198aa970f3e9",
+ "input_sha256": "4d7cd8fa84492da1c00c50b86ab785bb61d0c30425d33b1b506dd538816f206b",
+ "proof_bytes": 1256
+}

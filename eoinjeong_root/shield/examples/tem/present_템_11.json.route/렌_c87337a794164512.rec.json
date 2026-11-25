@@ -1,0 +1,29 @@
+{
+ "id": "렌_c87337a794164512",
+ "syllable": "렌",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "렛츠인조이더무비카가미네렌",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.015612,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e22e239e7b0ebc4630e988f5aa287505d578963c569cf0bc1df845fef061b57f",
+ "position_sha256": "c87337a79416451282b0fe9aead690bd3eb404a3db8222feeea36f70c6de93a5",
+ "input_sha256": "17d49a9be0f08e30e75bfbf83ed4e6bebd6bcadfe05012ef24a5b5765ac884e8",
+ "proof_bytes": 8965
+}

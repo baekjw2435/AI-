@@ -1,0 +1,30 @@
+{
+ "id": "쇄_bdf3c44489636d9e",
+ "syllable": "쇄",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "율현마을",
+  "을지형",
+  "형광인쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007519,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1a10bfd15b21821b1cbf4509ac746004f28ffd06c0268e1d5a9082025a60eab5",
+ "position_sha256": "bdf3c44489636d9e7516a38f6648c7966037a73e90efbf41a6cb0571c605b341",
+ "input_sha256": "7de4f750c511a0af361a211bc09fd1a335bac0d8e61dfd903f0936853f9a307c",
+ "proof_bytes": 6601
+}

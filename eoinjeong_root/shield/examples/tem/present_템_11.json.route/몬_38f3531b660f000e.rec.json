@@ -1,0 +1,31 @@
+{
+ "id": "몬_38f3531b660f000e",
+ "syllable": "몬",
+ "used_route_words": [
+  "갑상샘자극호르몬",
+  "쇄쇄",
+  "쇄자갑",
+  "죄인의벗을수없는족쇄",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000474,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c187aa48b5c54ea21e765cfe7ab3ffe95d36cb1057f93b7cb56f910237816421",
+ "position_sha256": "38f3531b660f000eb9b9b43221724be00b34cdb45275d66f376d29cca17875b5",
+ "input_sha256": "99f126168c7e4f94e980199c4ad26a323d9457386c35c2d957ec5f3c7c9afe29",
+ "proof_bytes": 431
+}

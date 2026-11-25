@@ -1,0 +1,26 @@
+{
+ "id": "밑_9c14553ddb2fc096",
+ "syllable": "밑",
+ "used_route_words": [
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002801,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a361afadc7f48444194bf53a4cb734abe424939bb1276bed175e71f6ad9e7b15",
+ "position_sha256": "9c14553ddb2fc096e69d47fcd8a4d5545238be19edc1d1972b02272827c5fbd0",
+ "input_sha256": "d89df430ea2949c5ee3d72eacbc1d7fb2feacce3cb86c885ec90eecc5fb7d709",
+ "proof_bytes": 2428
+}

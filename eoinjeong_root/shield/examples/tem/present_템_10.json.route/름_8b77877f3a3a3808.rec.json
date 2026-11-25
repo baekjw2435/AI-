@@ -1,0 +1,28 @@
+{
+ "id": "름_8b77877f3a3a3808",
+ "syllable": "름",
+ "used_route_words": [
+  "권삼득",
+  "읍권",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00047,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c1c672e7fcf36d81b3fbfbf30ebd0701dd342b3393dea2535c5efab556e11f82",
+ "position_sha256": "8b77877f3a3a38086625d5c66cbd850dc5155cb56ab331015e3c73796f39cea5",
+ "input_sha256": "897ed7155e03346236aca14f7b2d386351c8c4a0fac50350b78e041faff7de2a",
+ "proof_bytes": 796
+}

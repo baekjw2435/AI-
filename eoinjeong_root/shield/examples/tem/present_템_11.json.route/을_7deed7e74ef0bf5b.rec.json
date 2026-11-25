@@ -1,0 +1,29 @@
+{
+ "id": "을_7deed7e74ef0bf5b",
+ "syllable": "을",
+ "used_route_words": [
+  "갱도시험",
+  "득첩",
+  "법원검찰청복사골문화센터반달마을",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007348,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "db93132e44783b19cb4869e0ed1e48e8a6313239e3c1a62faa8733946ccd7934",
+ "position_sha256": "7deed7e74ef0bf5bf950dcb56eb8e8b6559bfad8f973d4cb76261e0ef92df060",
+ "input_sha256": "634a508c45339dacb3dcc631e52911c598a7e1a30fb9ece3d940252bee268148",
+ "proof_bytes": 5521
+}

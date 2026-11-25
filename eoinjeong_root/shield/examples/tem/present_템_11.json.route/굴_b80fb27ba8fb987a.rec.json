@@ -1,0 +1,27 @@
+{
+ "id": "굴_b80fb27ba8fb987a",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00013,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "b80fb27ba8fb987a8b911cec011aae4bbb80def8631c3db03420b8067f2ad6a9",
+ "input_sha256": "2fe2d6d097c5664cdc599ac951ba03c1d00ac4a027b3f7f9fa4ad97b8a20c558",
+ "proof_bytes": 124
+}

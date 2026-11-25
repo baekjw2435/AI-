@@ -1,0 +1,29 @@
+{
+ "id": "굉_91a14d49a6caa299",
+ "syllable": "굉",
+ "used_route_words": [
+  "굉굉",
+  "읍권",
+  "읍읍",
+  "읍할읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.0053,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "23c2967f526ddda64d2804e704c59c6e788a26a64d621bd9b90f7a05f5c75e66",
+ "position_sha256": "91a14d49a6caa2992b7b730e1ea2aa91dcf5a738ec5ba6378284ff5ac9380347",
+ "input_sha256": "2ce4cdcdbff98d9487602b032519c0db2cf792e9a1f0db2dde1b1e389624b636",
+ "proof_bytes": 1220
+}

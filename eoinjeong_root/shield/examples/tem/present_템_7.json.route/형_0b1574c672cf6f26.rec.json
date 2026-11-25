@@ -1,0 +1,27 @@
+{
+ "id": "형_0b1574c672cf6f26",
+ "syllable": "형",
+ "used_route_words": [
+  "넨장맞을",
+  "을지형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.014414,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ccc6402e909d9039940d3c6bf542918234543cc152f858402ccea0224e6287a4",
+ "position_sha256": "0b1574c672cf6f26a017160ec3741c431dddd1b8320ac079b5e79f8f662ba657",
+ "input_sha256": "6dea9acb7e262cf138fbf4a29abbd77c27dea33ef94240e61dc5db47f98d5aa1",
+ "proof_bytes": 2871
+}

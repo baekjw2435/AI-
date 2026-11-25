@@ -1,0 +1,30 @@
+{
+ "id": "굴_1db59cde4316914c",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱재첩",
+  "겁나는얼굴",
+  "득첩",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00014,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "1db59cde4316914c24aaeaee72dcd843f2be04c84854b3be958f414e0153be7b",
+ "input_sha256": "3b6019c74bcca5beb7045531ec0168e671fa48fa065ae38e0a21110c010001c3",
+ "proof_bytes": 124
+}

@@ -1,0 +1,27 @@
+{
+ "id": "밑_a1eda29c413b32b5",
+ "syllable": "밑",
+ "used_route_words": [
+  "딩가딩",
+  "딩딩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.004219,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a361afadc7f48444194bf53a4cb734abe424939bb1276bed175e71f6ad9e7b15",
+ "position_sha256": "a1eda29c413b32b5a38f89f0acc52d48d60e04ba36199c6923cd73fdb786952f",
+ "input_sha256": "017b13dce296e1d7967a13f21ebdedb279f5e5e907f032ab0fe0219f8c4a9736",
+ "proof_bytes": 2428
+}

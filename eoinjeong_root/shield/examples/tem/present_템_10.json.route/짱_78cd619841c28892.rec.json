@@ -1,0 +1,32 @@
+{
+ "id": "짱_78cd619841c28892",
+ "syllable": "짱",
+ "used_route_words": [
+  "냐냐",
+  "냐냐냐냐냐냐냐",
+  "냐짱",
+  "늠름",
+  "늠준",
+  "딩동댕지난여름",
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.005523,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "edd10bc7c6cf8c608003d293243db3ec2ebdaf29e4eb62325939852e7b7def9b",
+ "position_sha256": "78cd619841c288921fb6ee4defffd60805c0ac29034c58641c1b517ee82a0c78",
+ "input_sha256": "b55336d2ba54532f34f5da32031eb572ee7311f0a9777290b85f82f701494bcd",
+ "proof_bytes": 685
+}

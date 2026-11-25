@@ -1,0 +1,26 @@
+{
+ "id": "멱_aee2454976fb1929",
+ "syllable": "멱",
+ "used_route_words": [
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.03243,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e605222221d8c72c05059611fc74f678caf23f542ae6c990e9ddb2e3f5823933",
+ "position_sha256": "aee2454976fb1929beca96fb7cba49eabc61a784869b781a75dd7bbe24a429e4",
+ "input_sha256": "49d70e8f18cc4d5e687d7583cf9c35d35e8b6cd21e96f70d6dbdf7a726ece4fd",
+ "proof_bytes": 20833
+}

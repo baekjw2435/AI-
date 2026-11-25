@@ -1,0 +1,30 @@
+{
+ "id": "섭_dc3db0dac930ca02",
+ "syllable": "섭",
+ "used_route_words": [
+  "득첩",
+  "뜸마을",
+  "을종근로소득",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000165,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e9eca380b50b17dc4321eb8c3388bbb620d453965fbc41c24dd6784bed12a036",
+ "position_sha256": "dc3db0dac930ca02ec0f4d8c9004b83a31f6e1658bfabe368fc7b42dd1652052",
+ "input_sha256": "6135219d532ff1a358ee95ce4882e611894d86cb0a443b975d8279af562f484e",
+ "proof_bytes": 152
+}

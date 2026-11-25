@@ -1,0 +1,30 @@
+{
+ "id": "준_c5ea0adcea1c39a9",
+ "syllable": "준",
+ "used_route_words": [
+  "늠균",
+  "늠름",
+  "늠준",
+  "딩동댕지난여름",
+  "밑거름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000477,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "420bdc1b30452070f37dd95b92982591e661db2c036ed7bf53185d611b5bfde0",
+ "position_sha256": "c5ea0adcea1c39a9fd072472b0816dda3baa43439f92f37a42610108f52b4eda",
+ "input_sha256": "20316df700de5bb4e729f4d8e613c39678094322e1f8a1670d887c9984a40ab3",
+ "proof_bytes": 502
+}

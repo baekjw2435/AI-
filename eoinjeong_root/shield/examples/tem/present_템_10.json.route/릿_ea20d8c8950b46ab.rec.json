@@ -1,0 +1,27 @@
+{
+ "id": "릿_ea20d8c8950b46ab",
+ "syllable": "릿",
+ "used_route_words": [
+  "펠릿",
+  "헴펠"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.004336,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fd72b4c232cc77114e4f40bab2fa6fe93270a995fa5ce4c1bbf7b88f11f7f4b0",
+ "position_sha256": "ea20d8c8950b46ab906327891775cca680b4ffc595eb00f1395469765a43882a",
+ "input_sha256": "1e771b645f4ab1ee570363671e7d81750b514e71932d0e521ad99c1622bb9a1b",
+ "proof_bytes": 4656
+}

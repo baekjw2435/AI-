@@ -1,0 +1,28 @@
+{
+ "id": "렌_ec6a35a875401ff4",
+ "syllable": "렌",
+ "used_route_words": [
+  "넨장맞을",
+  "을지형",
+  "형태로만들어선물하고싶은마음카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.042024,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e017a73b34c12dbc2e2c32bda973d21ddc47feaabca4e1b25ec4fa3032144637",
+ "position_sha256": "ec6a35a875401ff446a7a5d222ad9982b9ba475b15ec5474e0385fff775d254a",
+ "input_sha256": "44fa761fd7973672bbbc0081754f6ef692e49bbb01df0ce6e054da04ad502509",
+ "proof_bytes": 15627
+}

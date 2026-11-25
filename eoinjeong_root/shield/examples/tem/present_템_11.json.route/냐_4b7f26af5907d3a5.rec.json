@@ -1,0 +1,30 @@
+{
+ "id": "냐_4b7f26af5907d3a5",
+ "syllable": "냐",
+ "used_route_words": [
+  "냐냐",
+  "냐냐냐냐냐냐냐",
+  "늠름",
+  "늠준",
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001193,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cd8022d078db33bb36c4f03fd94b4dff7245c1a14e100c6432ef28be66bc9c1f",
+ "position_sha256": "4b7f26af5907d3a53d6a0c075bd30093324583495ae377fef5d0bd6ccadae3e4",
+ "input_sha256": "c21887977caf9621a7703b68e8df3bdf45be3bf65d280d0e9d4a45728bfdb14f",
+ "proof_bytes": 692
+}

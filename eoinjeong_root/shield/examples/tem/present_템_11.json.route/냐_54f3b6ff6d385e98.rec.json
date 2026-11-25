@@ -1,0 +1,31 @@
+{
+ "id": "냐_54f3b6ff6d385e98",
+ "syllable": "냐",
+ "used_route_words": [
+  "냐냐",
+  "냐냐냐냐냐냐냐",
+  "득첩",
+  "준치저냐",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00024,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "704b0bce736efa7ec554f38f0201f3f42ea9b3fa8d2e97114fb6793f4a71b497",
+ "position_sha256": "54f3b6ff6d385e980ff76c2f086fdaa341f21a47cd991e71b4dc28b2c4b4b52e",
+ "input_sha256": "ac023b80754918696a0eef3c67033e6d3b57443fc0904e50fd02f972b728463e",
+ "proof_bytes": 223
+}

@@ -1,0 +1,31 @@
+{
+ "id": "굉_43dfa226cbe21874",
+ "syllable": "굉",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "굉굉",
+  "권굉",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009831,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a0e8f51e0a259197782eae453b7d62eb5cd8ef738593629493ac7c753b2d5d05",
+ "position_sha256": "43dfa226cbe21874d6bb6b07c2196cd6b111d4ccd0a93e0c0aa2d9d744507d7d",
+ "input_sha256": "0bb7be7c2a738be7a1542201a5366e907ea6b796a63533d6e20379ae2a7a1839",
+ "proof_bytes": 6789
+}

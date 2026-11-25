@@ -1,0 +1,29 @@
+{
+ "id": "틱_71acc2554ca70176",
+ "syllable": "틱",
+ "used_route_words": [
+  "갱도시험",
+  "겁겁",
+  "겁낼겁",
+  "폼플라스틱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.042282,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "bd2d83ac3f0caf3ea9f2e6e4cb35fd6ae3a2eb7840a08829de1dabf4f9b673d8",
+ "position_sha256": "71acc2554ca70176954f64a9ef31b15a6bd2fd998101fe6db904589f52e9c06e",
+ "input_sha256": "3b422f55d2c2aead83222b87508101340291a459f334759362e2b00f8804247a",
+ "proof_bytes": 15796
+}

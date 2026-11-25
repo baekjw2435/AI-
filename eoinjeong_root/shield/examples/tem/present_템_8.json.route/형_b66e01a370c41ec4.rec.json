@@ -1,0 +1,28 @@
+{
+ "id": "형_b66e01a370c41ec4",
+ "syllable": "형",
+ "used_route_words": [
+  "권리행사방해죄",
+  "읍권",
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.008495,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "79710a75368e5e7207ae772fdbf09148d52adb70b3fefa573cf4a569455dff7e",
+ "position_sha256": "b66e01a370c41ec47aa85bd86615db69baef6abb50364eda02a4ae6f9fcfb0c6",
+ "input_sha256": "a3f47dba5102f10b3005a9f4e010e267496ceba10488228c7e3bfe1fda57752c",
+ "proof_bytes": 2889
+}

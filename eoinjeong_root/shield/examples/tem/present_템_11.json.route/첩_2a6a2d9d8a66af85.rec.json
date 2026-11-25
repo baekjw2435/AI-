@@ -1,0 +1,31 @@
+{
+ "id": "첩_2a6a2d9d8a66af85",
+ "syllable": "첩",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "권첩",
+  "쇄쇄",
+  "쇄심권",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00019,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a2648bf489eb81cebefae73204b167f0a4246d268994628da110b2fed67cf832",
+ "position_sha256": "2a6a2d9d8a66af851f0d9bc2e2d3d53abbeb759a812a9b264fc8906985d8fd21",
+ "input_sha256": "4a8a5ddb913fd040f9fa4bb7460a79b11fee68c1b7ca62882d26953a00649a79",
+ "proof_bytes": 141
+}

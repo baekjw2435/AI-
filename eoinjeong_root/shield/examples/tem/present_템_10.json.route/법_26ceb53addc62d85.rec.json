@@ -1,0 +1,30 @@
+{
+ "id": "법_26ceb53addc62d85",
+ "syllable": "법",
+ "used_route_words": [
+  "득첩",
+  "뜸마을",
+  "을종근로소득",
+  "첩음법",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000229,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0b5ca70c653a789393b966ead6c4e5850d52edc3b653bbc21f4c764fa9c90c4e",
+ "position_sha256": "26ceb53addc62d85ba4b97bf3995771b146a8b3d813fc31f27bd7463e3ee861d",
+ "input_sha256": "ea4d1f1d33e0e61576ed9d2bd5268d0e3a6335b050bb5b9edff0067aa5dc313c",
+ "proof_bytes": 187
+}

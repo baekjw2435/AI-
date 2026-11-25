@@ -1,0 +1,31 @@
+{
+ "id": "냐_fcf7d5026dd17bde",
+ "syllable": "냐",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "권준",
+  "쇄쇄",
+  "쇄심권",
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000904,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7ecd4d670ba380d600bb6587b37eedce7281030b8a5ca613aa29123f936f9079",
+ "position_sha256": "fcf7d5026dd17bde747976b6491190cc95a57f0807fa26c079d590f33601e5d7",
+ "input_sha256": "4c2b483179f8c96855bd80cf82defd8f8d1d57ea79458244a1130ff97a989f53",
+ "proof_bytes": 732
+}

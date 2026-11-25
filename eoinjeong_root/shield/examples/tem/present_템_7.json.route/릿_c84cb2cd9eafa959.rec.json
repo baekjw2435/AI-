@@ -1,0 +1,30 @@
+{
+ "id": "릿_c84cb2cd9eafa959",
+ "syllable": "릿",
+ "used_route_words": [
+  "즈브스킨",
+  "킨더초콜릿",
+  "톤데모원더즈",
+  "톤톤",
+  "펠레톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.004661,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "467989451aa6c93fc4def736341d75f9efad4edb43cd691c2b6bdbc23d730eac",
+ "position_sha256": "c84cb2cd9eafa9597176f4bb8b192d97ac03dbdfcf76562bf152e8d93050f642",
+ "input_sha256": "91badd27f4c4faf5aaa9585010fece846c6819a9d11e039db32fc2ef239e19cf",
+ "proof_bytes": 4705
+}

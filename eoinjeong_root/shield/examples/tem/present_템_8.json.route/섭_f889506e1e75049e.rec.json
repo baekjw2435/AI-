@@ -1,0 +1,28 @@
+{
+ "id": "섭_f889506e1e75049e",
+ "syllable": "섭",
+ "used_route_words": [
+  "득첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000195,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e9eca380b50b17dc4321eb8c3388bbb620d453965fbc41c24dd6784bed12a036",
+ "position_sha256": "f889506e1e75049ec90e4012334a6cfb841a6240d1ffd02b4a9d01a3038330bd",
+ "input_sha256": "50b637bf87888459d76c80cff7c5012b41912592d07d3fb266845267fb79ef0c",
+ "proof_bytes": 152
+}

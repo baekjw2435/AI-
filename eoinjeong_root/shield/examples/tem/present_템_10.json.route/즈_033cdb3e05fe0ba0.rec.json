@@ -1,0 +1,28 @@
+{
+ "id": "즈_033cdb3e05fe0ba0",
+ "syllable": "즈",
+ "used_route_words": [
+  "렌즈",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000981,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2c7a1b46f4fd268070b781108be084cf377468c2617e77f619990c634a27c5d9",
+ "position_sha256": "033cdb3e05fe0ba08167c274a8ada9d3241eef5813b43217b4c5f59ab1f1023c",
+ "input_sha256": "344f341f1c22acff5fc6a5158b39df2bb89d3630f0e6fdbefcd6cdd5adcf3cae",
+ "proof_bytes": 762
+}

@@ -1,0 +1,29 @@
+{
+ "id": "렌_9f8ff6828d15f448",
+ "syllable": "렌",
+ "used_route_words": [
+  "권폄",
+  "쇄소건즐",
+  "읍권",
+  "즐거움가득보물상자카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006149,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b75f18d9fc7c65f1ec277c030942f22238f5cd3c1a0622787c455efd2ba51a83",
+ "position_sha256": "9f8ff6828d15f4484302d35f9fd0f84fcdbdf4744fd13fbeb5fb22aab0a3cbf3",
+ "input_sha256": "c42bc2439722b109adad8575c5be5802af2edc06aa5a0456e54190e02cdf7ed8",
+ "proof_bytes": 6080
+}

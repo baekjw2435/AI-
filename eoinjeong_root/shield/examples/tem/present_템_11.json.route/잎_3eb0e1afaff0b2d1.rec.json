@@ -1,0 +1,28 @@
+{
+ "id": "잎_3eb0e1afaff0b2d1",
+ "syllable": "잎",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "뽕잎"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.027213,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ad1256627e2f4414ed004fcad27b4a0495a2a4a657ef0b87d6100e1b665b6d71",
+ "position_sha256": "3eb0e1afaff0b2d1628147ab69d02a574474f61a76ff55cd7f0b26df7b5a989e",
+ "input_sha256": "60780f8d51d2b51e8135acfe4be8decb2fbe2202d3d4b32e4c98cb150ea84ec1",
+ "proof_bytes": 11044
+}

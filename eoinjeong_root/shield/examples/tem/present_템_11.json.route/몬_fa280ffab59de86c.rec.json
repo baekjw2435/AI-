@@ -1,0 +1,31 @@
+{
+ "id": "몬_fa280ffab59de86c",
+ "syllable": "몬",
+ "used_route_words": [
+  "냐냐",
+  "냐냐냐냐냐냐냐",
+  "냐짱",
+  "즈보우몬",
+  "짱갈래즈",
+  "짱짱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001449,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6cc4e237a0d57f84762142e9c477d83544e44f252bb5f39eaa6dcd53172897cf",
+ "position_sha256": "fa280ffab59de86c491e6415145791a47eb660bb052fd7f4d9b3485124f65e78",
+ "input_sha256": "205534fdc87de625345ec47f4024ce3bb15fe488dc53def6ac26afcfe96e462c",
+ "proof_bytes": 772
+}

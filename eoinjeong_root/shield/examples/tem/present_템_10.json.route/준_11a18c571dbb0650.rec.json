@@ -1,0 +1,28 @@
+{
+ "id": "준_11a18c571dbb0650",
+ "syllable": "준",
+ "used_route_words": [
+  "읍읍",
+  "읍할읍",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.006133,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "af1ea8cba2a440205d13463ee73aad9f498b5c63342812f46a0fc6dca5b233fe",
+ "position_sha256": "11a18c571dbb0650cf53b43039c4c6f6422e4903b394befd4729ea905794273e",
+ "input_sha256": "2f12e67e54b6e2a7a3bb85004e33422dee5b96d3f1a3b5175c0d672b926a7748",
+ "proof_bytes": 805
+}

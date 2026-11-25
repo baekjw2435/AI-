@@ -1,0 +1,28 @@
+{
+ "id": "렌_d40b314ed59c1dbd",
+ "syllable": "렌",
+ "used_route_words": [
+  "톡톡파워풀카가미네렌",
+  "틱톡",
+  "폼플라스틱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.031494,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "d40b314ed59c1dbdd35352b6626e224ad4bb24f0da176de779d16419c9e2a219",
+ "input_sha256": "9597ce200dd273e971913f90a194d771a238a1302a4cbf16bcef9c2a6fc389e9",
+ "proof_bytes": 15781
+}

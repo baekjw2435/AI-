@@ -1,0 +1,26 @@
+{
+ "id": "룻_e2c4c903f445f888",
+ "syllable": "룻",
+ "used_route_words": [
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000846,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "96aecd079b74f3ea83b9104f396f8b237786a7b9a800e4b5ce0b91cc9fe0f2c4",
+ "position_sha256": "e2c4c903f445f8886397e1d2417010ba235170053ff5bd5471613a1adb01f136",
+ "input_sha256": "456d32cb9fbd2ad0acd155bb2f1da3761a36237808f98654bdd73c7c7ac741f8",
+ "proof_bytes": 194
+}

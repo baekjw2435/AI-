@@ -1,0 +1,30 @@
+{
+ "id": "균_431a3cee025e5edb",
+ "syllable": "균",
+ "used_route_words": [
+  "균핵균",
+  "늠균",
+  "늠름",
+  "틀기름",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00056,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b3d85c3346eeaeb6aa78de7c073c29439f43cfd4ab86a5070683feebfc9a63cf",
+ "position_sha256": "431a3cee025e5edb0a2fcfcdce8f1a686d13877a658f5eb1cc22e507419b4275",
+ "input_sha256": "15d4add4a9ba3b100ffde27078d787be0be5553e0adb57eac70d26644799ad3e",
+ "proof_bytes": 1011
+}

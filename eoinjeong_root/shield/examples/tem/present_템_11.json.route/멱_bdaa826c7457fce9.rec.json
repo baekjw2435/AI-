@@ -1,0 +1,28 @@
+{
+ "id": "멱_bdaa826c7457fce9",
+ "syllable": "멱",
+ "used_route_words": [
+  "갱도시험",
+  "겁겁",
+  "겁낼겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.041998,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e605222221d8c72c05059611fc74f678caf23f542ae6c990e9ddb2e3f5823933",
+ "position_sha256": "bdaa826c7457fce93f870daaff483a7698aa3ef34d64c31bf0d6f885176033ec",
+ "input_sha256": "c4c4ff7525397f8d6351bb3b252dbd70016e505a2ef79e245dddcf5fe6ebdb71",
+ "proof_bytes": 20833
+}

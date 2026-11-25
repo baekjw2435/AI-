@@ -1,0 +1,30 @@
+{
+ "id": "읍_0da24c67a970100b",
+ "syllable": "읍",
+ "used_route_words": [
+  "득득",
+  "득법",
+  "법원읍",
+  "읍읍",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.054406,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e58aac3dd0da78fa57d0563277895cadb6a2e465c6ba7f48238d2009948080a4",
+ "position_sha256": "0da24c67a970100b297e0aa510d841f0bf94e76d8c3008564e13014aecb3a87a",
+ "input_sha256": "def69a323ece0bc37d5b3d5db9a7832211aaa3ecdef32e5f4e27902a31d8af78",
+ "proof_bytes": 9548
+}

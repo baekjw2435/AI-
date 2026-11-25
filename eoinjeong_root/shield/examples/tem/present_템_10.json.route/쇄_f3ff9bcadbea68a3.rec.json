@@ -1,0 +1,30 @@
+{
+ "id": "쇄_f3ff9bcadbea68a3",
+ "syllable": "쇄",
+ "used_route_words": [
+  "권삼득",
+  "득득",
+  "득죄",
+  "읍권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001614,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "989a3e450e87b6457520174f4fb08bd913e5653f1923bd713b35692864552a9e",
+ "position_sha256": "f3ff9bcadbea68a392571546ba8260b1dde355bffef82007f92593d8e803512d",
+ "input_sha256": "827bbc8980ff2b99f68103741657eb222615acb61996b216efd3d653393c1cc1",
+ "proof_bytes": 1999
+}

@@ -1,0 +1,28 @@
+{
+ "id": "촉_e0ada3e36a1662b7",
+ "syllable": "촉",
+ "used_route_words": [
+  "갱재첩",
+  "첩첩",
+  "촉촉"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000214,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "20d86d7c5c43cd047d2efa1d5d6582922cecd7cceb4855a202b9239a5a88430f",
+ "position_sha256": "e0ada3e36a1662b725667a535c363482780ef745458444c2b2b67338fa51e7d5",
+ "input_sha256": "54a2a9917ed4f674fcd28145b6afea518f865a6a21eef3b8d22d39d1fffe76a7",
+ "proof_bytes": 206
+}

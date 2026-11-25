@@ -1,0 +1,30 @@
+{
+ "id": "딩_e2d7326efd3b26a4",
+ "syllable": "딩",
+ "used_route_words": [
+  "득첩",
+  "딩가딩",
+  "딩딩",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001599,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "75902d3259a86645b50134e3a158514536e2db56e5d6743dfd4bd05d50df9dff",
+ "position_sha256": "e2d7326efd3b26a43e766c067c755f5ea0b05bee58a6ec63c9760a45a1478961",
+ "input_sha256": "1a0963819cd02bb2499c5d61f04104448d75048909f5f57377d1fe925211ce2d",
+ "proof_bytes": 2306
+}

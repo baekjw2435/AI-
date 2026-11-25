@@ -1,0 +1,29 @@
+{
+ "id": "톤_600bfd1b58407ed4",
+ "syllable": "톤",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "톤톤",
+  "펠레톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002139,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3193875be4d7efa048eceb567b13f8a5c218c926c0a0fa55cda9b3847b76476d",
+ "position_sha256": "600bfd1b58407ed41ad562de857d1f795b3d96d3aa5841eeaad00b85d136194c",
+ "input_sha256": "fdbf64d27781dbb4ea36cbb7fd8024067f6c76229b990305ef35447e07dbf73b",
+ "proof_bytes": 1889
+}

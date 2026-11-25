@@ -1,0 +1,27 @@
+{
+ "id": "샅_87c04d7ac31cdb65",
+ "syllable": "샅",
+ "used_route_words": [
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002787,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "07e2f606ffc9aecd5efaa65f3815c983ed907f19fb6a6f87807343e91a5778ea",
+ "position_sha256": "87c04d7ac31cdb65f93f147cfdc6071690bb8173d3f000d85c36222ff448df97",
+ "input_sha256": "508c41c2ff00707a69fab6449c208776456c104a40e81116d8568803e9932cb3",
+ "proof_bytes": 4000
+}

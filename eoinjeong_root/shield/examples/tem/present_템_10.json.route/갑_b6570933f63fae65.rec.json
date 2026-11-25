@@ -1,0 +1,28 @@
+{
+ "id": "갑_b6570933f63fae65",
+ "syllable": "갑",
+ "used_route_words": [
+  "렌지로의피묻은장갑",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.005733,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e4439349422222be7615bfed0239348573bbc0fec3b441e8b564403af8322dad",
+ "position_sha256": "b6570933f63fae65bc065b06663ec5ac2d28b29093275d9f7a34086f7ed0090c",
+ "input_sha256": "9649665ddc3c296c175eef82977c8e0e74ab005065df41f92e8a3c1e403d6540",
+ "proof_bytes": 1278
+}

@@ -1,0 +1,31 @@
+{
+ "id": "척_51bde276bbb2b926",
+ "syllable": "척",
+ "used_route_words": [
+  "갱재첩",
+  "겁겁",
+  "겁낼겁",
+  "첩첩",
+  "첩쾌",
+  "쾌척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000255,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cd8bcfa74bd719880a1be1fe46416a64054890661a01923f87a2d99e570077bd",
+ "position_sha256": "51bde276bbb2b926b70cf3a64b1ce93af05078ef0ecee46fd7660a461f32bc9b",
+ "input_sha256": "370337a1175d4217781089fda61a291a31cac80727fed9bb811dfb21c1cbb21e",
+ "proof_bytes": 271
+}

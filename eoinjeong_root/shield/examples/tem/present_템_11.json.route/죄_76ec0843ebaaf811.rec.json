@@ -1,0 +1,29 @@
+{
+ "id": "죄_76ec0843ebaaf811",
+ "syllable": "죄",
+ "used_route_words": [
+  "득죄",
+  "득첩",
+  "폄척",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006148,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3d88d16bbdc3a47fb00527952bf1f67c7175dc41bcd9ad8b9d2ff7c853a6a58a",
+ "position_sha256": "76ec0843ebaaf811903a59f968dea168c0c838f1496fbf85ac91b7c8849ad8a7",
+ "input_sha256": "0bd692ba9307811fe7424b6d356417a4b90e92687ce4413c69b3e26a445711bc",
+ "proof_bytes": 1312
+}

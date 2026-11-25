@@ -1,0 +1,28 @@
+{
+ "id": "몬_254966ec04e781ea",
+ "syllable": "몬",
+ "used_route_words": [
+  "갑상샘자극호르몬",
+  "첩첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000159,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f210155cc3ff5c3896ed571fbd4b4b6d4ac17f073699dc8c14ab3c6dd3604ca",
+ "position_sha256": "254966ec04e781ead753bf4345ad42c466d492fe22c9cc30d9a2bc2abc1628d9",
+ "input_sha256": "8bddad63d5c6504d1b875fb183fb2636744f4fcf3f9a9ef86d8ae11a5ed7fc84",
+ "proof_bytes": 181
+}

@@ -1,0 +1,27 @@
+{
+ "id": "굴_c478427c60129094",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱내채굴",
+  "겁나는얼굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000128,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "c478427c60129094298cfbf9dd6c6da6d8025748cb803aefbced76cce31c52e3",
+ "input_sha256": "f1ad480431cbbaab6131a3229c64801d2311a7d936e30913c47f0d1b8c76790d",
+ "proof_bytes": 124
+}

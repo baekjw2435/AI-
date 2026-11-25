@@ -1,0 +1,29 @@
+{
+ "id": "읍_20f6b2500dc0c62e",
+ "syllable": "읍",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "읍읍",
+  "읍할읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.019984,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1301e73d79785df128f228e32465fad6c5b4226afffe9d55570f4a9489ebd936",
+ "position_sha256": "20f6b2500dc0c62e52df7f2898fc4ca2323747b8ab5f3366276dd4d0696d8fee",
+ "input_sha256": "ed23e2b348f833b0c96606a8b8ad7cbcbf091ed9a181024a184523370b7b211b",
+ "proof_bytes": 5744
+}

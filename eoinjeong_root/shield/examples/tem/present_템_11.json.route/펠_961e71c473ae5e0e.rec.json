@@ -1,0 +1,27 @@
+{
+ "id": "펠_961e71c473ae5e0e",
+ "syllable": "펠",
+ "used_route_words": [
+  "득첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009517,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f128f6b5099465767a2fea4b8072f0b23a5d72d8c8dbf115075aedf5382ee0ca",
+ "position_sha256": "961e71c473ae5e0e53c104840fe4c4eac466569dc3ffeb2a2386ad9b79e8f0af",
+ "input_sha256": "7d60200e303566d674d04a2a90266e4b883ffe3a63f4211732736fee70393fb0",
+ "proof_bytes": 6868
+}

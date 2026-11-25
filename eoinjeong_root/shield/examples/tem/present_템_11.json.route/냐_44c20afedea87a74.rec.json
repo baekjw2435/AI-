@@ -1,0 +1,29 @@
+{
+ "id": "냐_44c20afedea87a74",
+ "syllable": "냐",
+ "used_route_words": [
+  "권폄",
+  "준치저냐",
+  "험준",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.014139,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "44c20afedea87a74aa8539fa5ad1c95f008f2487968bb6cd06f614e7a67df6d1",
+ "input_sha256": "b12c4cf52ec4b2af6b299893832a793e9e289b6d20eeec77e8d16d89529522ff",
+ "proof_bytes": 799
+}

@@ -1,0 +1,28 @@
+{
+ "id": "밑_34296d2dea2a3536",
+ "syllable": "밑",
+ "used_route_words": [
+  "뜸마을",
+  "뜸통뜸",
+  "을자형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002637,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a361afadc7f48444194bf53a4cb734abe424939bb1276bed175e71f6ad9e7b15",
+ "position_sha256": "34296d2dea2a3536f0385d3374664a7f08f53713989d2fb99cc8cd33c056d9c0",
+ "input_sha256": "c9e8e292a645305c6f917c610bb75e461fb8c86e507ebc9c1fb61b32e11d9ab8",
+ "proof_bytes": 2428
+}

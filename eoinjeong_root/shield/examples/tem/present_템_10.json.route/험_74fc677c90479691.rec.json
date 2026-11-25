@@ -1,0 +1,28 @@
+{
+ "id": "험_74fc677c90479691",
+ "syllable": "험",
+ "used_route_words": [
+  "뜸마을",
+  "뜸통뜸",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001252,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b326a00dc216d591585ef23167a56356f680ef6d07d5c48e123caa51a9591413",
+ "position_sha256": "74fc677c904796917206f6a6ba8c40f3c6a84745f7d97b541c5fc5cafcfd0e26",
+ "input_sha256": "9c5f18f1b3c4f7182d345ac956eb6359692f144b83ab45e1991b4deab07157b6",
+ "proof_bytes": 1264
+}

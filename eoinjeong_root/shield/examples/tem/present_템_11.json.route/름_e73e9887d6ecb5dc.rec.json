@@ -1,0 +1,28 @@
+{
+ "id": "름_e73e9887d6ecb5dc",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "샅바씨름",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.029831,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "35d7f027ba23443b24a8f08ac0baf422d345f3477b20f0075aa66fc982b75808",
+ "position_sha256": "e73e9887d6ecb5dcb92330c775df35b387381dfb5fb15f29e15bbd37e3c4899e",
+ "input_sha256": "65cbc07f525b73a3f0807419baa9e36c3e728823d789879a4239199e0ffff4b4",
+ "proof_bytes": 8347
+}

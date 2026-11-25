@@ -1,0 +1,28 @@
+{
+ "id": "멱_bc9dc3a8043289ce",
+ "syllable": "멱",
+ "used_route_words": [
+  "득첩",
+  "첩섭",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.033031,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "29b8df7bab02c94748915a4edce1d37d986713f14d16bb12299cecd01464efb5",
+ "position_sha256": "bc9dc3a8043289cef5b217848a29b93cae8b590134d3e7a03b93db67cea1f96d",
+ "input_sha256": "6d86520853c37c58a01dd6c76b6cca876676123074e3f5b7519bf07735583491",
+ "proof_bytes": 17484
+}

@@ -1,0 +1,28 @@
+{
+ "id": "톡_944b457aa3bb908b",
+ "syllable": "톡",
+ "used_route_words": [
+  "뜸마을",
+  "을종근로소득",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.015415,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "334e18a7e3e0420d0e1a517bef33685366ab1235908b64812434aac2d2db30ea",
+ "position_sha256": "944b457aa3bb908b702d2f3ba2a7f4f5a19e039410d3fa94a1073bad3896d51a",
+ "input_sha256": "f4e6dd6d95c2357626ea8b43a8dc1741e5f30f980e9e728391da249a9ada8b13",
+ "proof_bytes": 5730
+}

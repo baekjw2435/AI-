@@ -1,0 +1,28 @@
+{
+ "id": "을_b82eb2c3ecf391d9",
+ "syllable": "을",
+ "used_route_words": [
+  "갱생보호법",
+  "샅흰검은말율",
+  "율현마을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006897,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "99a3059e098c00eb10d4f54ae798950a486c4e5361f27602bc777fc938d7a1ab",
+ "position_sha256": "b82eb2c3ecf391d9964883db55f67d8acb1711ba598483f087dc07c8579c4943",
+ "input_sha256": "b4e453ef1c30ad8851a95e97ee72a96c3908078e04e39274b06d7f84904312fb",
+ "proof_bytes": 2613
+}

@@ -1,0 +1,31 @@
+{
+ "id": "척_b9e8ad19ecd65c83",
+ "syllable": "척",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "권권",
+  "권척",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.235544,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0960fc790afd15c24f509073c6cd923fbc60d775e5f3995c7e75d06908499172",
+ "position_sha256": "b9e8ad19ecd65c83241679113a1fd7e66ca494199463d160ff6a5cc464d13403",
+ "input_sha256": "16e51f993375fdc3040ff44018468f40f080b77d60e6a765fd90d723ce01fbbc",
+ "proof_bytes": 188461
+}

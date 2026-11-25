@@ -1,0 +1,30 @@
+{
+ "id": "름_39845395bf7ba7d7",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "득첩",
+  "딩동댕지난여름",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001592,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e3bf44c267795b81e884dbf17c391dc14924e35370c5f63f75cb2940eedc627f",
+ "position_sha256": "39845395bf7ba7d79912a0616c0a947fc727391c1be9113c1be53dbbf0c7c18c",
+ "input_sha256": "4d1ee606f11fd92c25cf15d465ef1f15b553153aa2c594ce54bdd40d4ecb99ee",
+ "proof_bytes": 2291
+}

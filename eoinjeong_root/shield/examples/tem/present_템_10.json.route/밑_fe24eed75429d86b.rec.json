@@ -1,0 +1,26 @@
+{
+ "id": "밑_fe24eed75429d86b",
+ "syllable": "밑",
+ "used_route_words": [
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.011003,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d6c96a8e5db0a8144a2d49fc71c6e4e7ca70cbdd347db3b3ff608cd551634084",
+ "position_sha256": "fe24eed75429d86b5076e261a01440d39a252182b3c79bfa2c22378c4e73994c",
+ "input_sha256": "187253e180275d267e0dae785fbeca0f4c56d81696ac4cda1131b4678632959f",
+ "proof_bytes": 2498
+}

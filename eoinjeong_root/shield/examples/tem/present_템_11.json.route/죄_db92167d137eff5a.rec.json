@@ -1,0 +1,28 @@
+{
+ "id": "죄_db92167d137eff5a",
+ "syllable": "죄",
+ "used_route_words": [
+  "넨장맞을",
+  "득죄",
+  "을종근로소득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00259,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "939e9c4b216535e3b82915e152c3bde895b66a492ba4c13ae1462611116551e6",
+ "position_sha256": "db92167d137eff5a39a936e248e07ab7d232541544a1a5d7d3eb130e183f6684",
+ "input_sha256": "7ce08b498e93d53cc10d1021299da722f9dcba86e6cea4ea6b5e856befb98ac2",
+ "proof_bytes": 2798
+}

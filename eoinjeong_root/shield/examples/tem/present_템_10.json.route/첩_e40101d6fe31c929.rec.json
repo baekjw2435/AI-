@@ -1,0 +1,28 @@
+{
+ "id": "첩_e40101d6fe31c929",
+ "syllable": "첩",
+ "used_route_words": [
+  "득득",
+  "득죄",
+  "죄첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000145,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2475041634113036578341367876af7c2d4a9aef62fc5bbcc55673280e5471cd",
+ "position_sha256": "e40101d6fe31c92989a967117741663f41cf45d6751819e6d900e52e51836c8e",
+ "input_sha256": "a28565324b5ba431e724d7734d9446549ea49d6c4accd74d105af2e32399960e",
+ "proof_bytes": 151
+}

@@ -1,0 +1,29 @@
+{
+ "id": "멱_fddbf987448f2c39",
+ "syllable": "멱",
+ "used_route_words": [
+  "갱재첩",
+  "섭험",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00017,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "fddbf987448f2c39f15032d8c44b0c96ac52d44b0f73817b5460934d63f37587",
+ "input_sha256": "21c578404dfc5286a1e2dac772f697591428afd389bf63c79347bf62aca33317",
+ "proof_bytes": 124
+}

@@ -1,0 +1,29 @@
+{
+ "id": "렌_f3f7a98f198fe546",
+ "syllable": "렌",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "렛츠인조이더무비카가미네렌",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.011614,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e22e239e7b0ebc4630e988f5aa287505d578963c569cf0bc1df845fef061b57f",
+ "position_sha256": "f3f7a98f198fe546d0de6ea7210130ceb4320c1e1dc340a49cd9137225e88e36",
+ "input_sha256": "a0fe196a4ec186fb417514c341fb9cfe4ef2fe84002a794e16b8931455eb51da",
+ "proof_bytes": 8965
+}

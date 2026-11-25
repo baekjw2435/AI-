@@ -1,0 +1,29 @@
+{
+ "id": "몬_43f8c9887916277c",
+ "syllable": "몬",
+ "used_route_words": [
+  "갑상샘자극호르몬",
+  "쇄자갑",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002095,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6cc8d86bdb2495f423eab7f9b35b5160db954dc0d98282600e1e1e715031f693",
+ "position_sha256": "43f8c9887916277c2bfae25e22ef92d375f241a5b77edbe9ea8dae6c3831fe96",
+ "input_sha256": "a2afbfcc6cb09d83d6491f4f99693edbfedb1a6726963894dfecf78c84fa2a4f",
+ "proof_bytes": 1272
+}

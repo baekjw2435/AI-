@@ -1,0 +1,28 @@
+{
+ "id": "룻_8a8b2bbc0deabce1",
+ "syllable": "룻",
+ "used_route_words": [
+  "득첩",
+  "폄척",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000152,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "8a8b2bbc0deabce1ef50a2f8f5cce1cc3a69969a84910c4b2eecb34c06d25e11",
+ "input_sha256": "2b21c6d403f9c560e336595ed0c6103e3cd6de79dd5abb3063c8ac096bde285d",
+ "proof_bytes": 124
+}

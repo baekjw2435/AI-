@@ -1,0 +1,31 @@
+{
+ "id": "척_1c836dff7d17ff23",
+ "syllable": "척",
+ "used_route_words": [
+  "득득",
+  "득첩",
+  "득표율",
+  "율척",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000344,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "901d54e0873d47392101d947b75578f5e76b93ac327fee5816fa50d69cce838e",
+ "position_sha256": "1c836dff7d17ff23c9497fe74ec4f3d1138904ed425903b46e68b46a08b8bdb2",
+ "input_sha256": "26b4a2d83e7ece68563494c5a320ac043bf78c28122470c2eb0e3115e3b55984",
+ "proof_bytes": 310
+}

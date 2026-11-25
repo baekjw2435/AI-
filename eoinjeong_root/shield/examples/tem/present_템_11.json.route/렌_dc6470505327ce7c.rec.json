@@ -1,0 +1,29 @@
+{
+ "id": "렌_dc6470505327ce7c",
+ "syllable": "렌",
+ "used_route_words": [
+  "갱도시험",
+  "톡톡파워풀카가미네렌",
+  "틱톡",
+  "폼플라스틱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.022559,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "dc6470505327ce7c9f073cb83081b05f713fe05b7ddcc999c6cef09d0c033f91",
+ "input_sha256": "0671539b129eb7dbb46247404c03e7c85c9ab181fa860081ec59174c720ecbf4",
+ "proof_bytes": 15781
+}

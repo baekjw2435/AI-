@@ -1,0 +1,29 @@
+{
+ "id": "죄_b7e1ed669f1066b4",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "권폄",
+  "쇄심권",
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000996,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "404b921c813f2e99c6de3ed9437eb180f6ece5459d8a474a4d88f761253a90db",
+ "position_sha256": "b7e1ed669f1066b40cf785cebdf82b4545fa4ffb8d8033e766f76723e19fbf58",
+ "input_sha256": "107c4b99473be8bbd0312cb5b66bf3280f90b830eb69bc6bafe0ae3d27ad804f",
+ "proof_bytes": 1577
+}

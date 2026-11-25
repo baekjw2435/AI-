@@ -1,0 +1,29 @@
+{
+ "id": "굉_e306ad886f8aeaab",
+ "syllable": "굉",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굉굉",
+  "굴대두겁",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001225,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "23c2967f526ddda64d2804e704c59c6e788a26a64d621bd9b90f7a05f5c75e66",
+ "position_sha256": "e306ad886f8aeaab1dae24cd404b5d7063688ce1d667cdf183f999c70927839a",
+ "input_sha256": "4969db41b7e78c4a3ff0dc4a318661f286ed1414b100d49f4c56a839c41b2d85",
+ "proof_bytes": 1220
+}

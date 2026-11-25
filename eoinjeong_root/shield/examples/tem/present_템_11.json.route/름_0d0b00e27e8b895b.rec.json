@@ -1,0 +1,29 @@
+{
+ "id": "름_0d0b00e27e8b895b",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "렌즈구름",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.012464,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "64af9dd991df344d0bfdc610eed1c159bbcae233f27a9b463a680dee02dc77ca",
+ "position_sha256": "0d0b00e27e8b895b61a065c4598f1d5c8b2084816b34566288afca483aa9e554",
+ "input_sha256": "7ab59fd1bbe48667be4824d4a78212f06bcdfb54889312897716fdc65bb1ba25",
+ "proof_bytes": 9435
+}

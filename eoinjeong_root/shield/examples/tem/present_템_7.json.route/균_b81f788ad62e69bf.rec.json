@@ -1,0 +1,30 @@
+{
+ "id": "균_b81f788ad62e69bf",
+ "syllable": "균",
+ "used_route_words": [
+  "늠균",
+  "늠름",
+  "샅바씨름",
+  "잇샅",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.007018,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "45ec1f8eee6a1f91854fb1fc30ee9afa299af73dfdb4d7b589fe4ccd20f95dcb",
+ "position_sha256": "b81f788ad62e69bfc7c9029a205ce9ddd9aa425f629b5eddbda67cdbe281b2f2",
+ "input_sha256": "b82a1d3f1d5e8a0f383295d5fbdf2d58ef0047f37f6b47cecbc49f3085bc2e58",
+ "proof_bytes": 3157
+}

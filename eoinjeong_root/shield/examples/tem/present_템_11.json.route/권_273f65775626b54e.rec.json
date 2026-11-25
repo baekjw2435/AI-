@@ -1,0 +1,29 @@
+{
+ "id": "권_273f65775626b54e",
+ "syllable": "권",
+ "used_route_words": [
+  "갱내채굴",
+  "굴대두겁",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.369385,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b6f7443be0b114d675e2abb8751e2d350eab41db9a5ac08d7cce3961feb7e506",
+ "position_sha256": "273f65775626b54e9646bcdf9d6e6a707be8749d04c0554702bd2823084a0ead",
+ "input_sha256": "a7841a0fceac9295f621895a33047149083e6af4a6112fdffb7c10570dceb599",
+ "proof_bytes": 184422
+}

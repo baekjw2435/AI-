@@ -1,0 +1,30 @@
+{
+ "id": "굴_2cf72d1396994fd2",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱재첩",
+  "겁나는얼굴",
+  "섭험",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000148,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "2cf72d1396994fd2ab8fc49c6911631e3fb272fc7340bf92f76ba14055f8ca51",
+ "input_sha256": "ce12d641e86cac43e61f59fda53e44bd12513dd25a2e8f40505244c3241ac210",
+ "proof_bytes": 124
+}

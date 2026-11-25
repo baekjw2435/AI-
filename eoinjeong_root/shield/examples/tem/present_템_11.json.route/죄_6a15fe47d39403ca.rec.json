@@ -1,0 +1,30 @@
+{
+ "id": "죄_6a15fe47d39403ca",
+ "syllable": "죄",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "넨장맞을",
+  "득죄",
+  "을종근로소득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00509,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "939e9c4b216535e3b82915e152c3bde895b66a492ba4c13ae1462611116551e6",
+ "position_sha256": "6a15fe47d39403ca01336b45ec48600b56202df3af9fd6e8ac836c9011b97b5a",
+ "input_sha256": "1a796ffac9ef69ba2486eca7a698474984609b1c00f74d1f899d55c696ff3d91",
+ "proof_bytes": 2798
+}

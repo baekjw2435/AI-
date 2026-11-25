@@ -1,0 +1,29 @@
+{
+ "id": "척_423efa482bb3725d",
+ "syllable": "척",
+ "used_route_words": [
+  "권척",
+  "득첩",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000378,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7e37dff0980ee3386a3a818070a22fc3ced2b0019e243098f993e25e66495646",
+ "position_sha256": "423efa482bb3725dd5452906e79a0382a4ce40550b18c3ee39fb9168b3b4e1f5",
+ "input_sha256": "d0c0d2f81f189d2d96bbc77fb9fa535ced5373adaf765b657464527583c543f9",
+ "proof_bytes": 307
+}

@@ -1,0 +1,28 @@
+{
+ "id": "굉_04da6141812746b9",
+ "syllable": "굉",
+ "used_route_words": [
+  "굉굉",
+  "읍권",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001221,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "23c2967f526ddda64d2804e704c59c6e788a26a64d621bd9b90f7a05f5c75e66",
+ "position_sha256": "04da6141812746b9823866a046934a96cca3b2e4ccceef31e7951771303d59c9",
+ "input_sha256": "ccce2f50eb5b298f912b5444f86036d9cdc3879eaad18006d7a859a698549135",
+ "proof_bytes": 1220
+}

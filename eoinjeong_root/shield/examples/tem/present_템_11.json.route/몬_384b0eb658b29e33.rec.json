@@ -1,0 +1,31 @@
+{
+ "id": "몬_384b0eb658b29e33",
+ "syllable": "몬",
+ "used_route_words": [
+  "갑상샘자극호르몬",
+  "겁나는얼굴",
+  "굴대두겁",
+  "권갑",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000692,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5c1d40ea1a6198f09222d0836ca15bb1edfa014c5bd0fb489999c976da104551",
+ "position_sha256": "384b0eb658b29e337aa583e8d6e020bd12e25059f82bba506e8f0417c7c82f67",
+ "input_sha256": "c44b1c97a5bfdea8bff960a6511121c723f9eed3fca3ac4d3cb491ce7b685f5b",
+ "proof_bytes": 748
+}

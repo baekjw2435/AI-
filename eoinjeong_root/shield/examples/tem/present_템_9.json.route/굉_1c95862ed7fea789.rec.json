@@ -1,0 +1,29 @@
+{
+ "id": "굉_1c95862ed7fea789",
+ "syllable": "굉",
+ "used_route_words": [
+  "굉굉",
+  "권굉",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.024226,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a0e8f51e0a259197782eae453b7d62eb5cd8ef738593629493ac7c753b2d5d05",
+ "position_sha256": "1c95862ed7fea7897cd7662cbf57ebdb11a2bf05395afec921e986fb29b928b8",
+ "input_sha256": "13e972ae231e115298abb6a39a4b01b3b673ace4e181b4044ee5d54bb44a5e77",
+ "proof_bytes": 6789
+}

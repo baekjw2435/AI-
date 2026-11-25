@@ -1,0 +1,27 @@
+{
+ "id": "멱_6e3ac77e49a1ccfc",
+ "syllable": "멱",
+ "used_route_words": [
+  "읍읍",
+  "읍할읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.054178,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e605222221d8c72c05059611fc74f678caf23f542ae6c990e9ddb2e3f5823933",
+ "position_sha256": "6e3ac77e49a1ccfc3c2b3004174c7b439504a6296b4ed8e70f8b8f8686f654ec",
+ "input_sha256": "fecf6ede1bf651f40841cf7204fb15c5aae202c5f84c2e99b0dd812c1659179d",
+ "proof_bytes": 20833
+}

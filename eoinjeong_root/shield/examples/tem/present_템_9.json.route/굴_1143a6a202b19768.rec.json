@@ -1,0 +1,27 @@
+{
+ "id": "굴_1143a6a202b19768",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "쇄자갑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000132,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "1143a6a202b19768293dae2014a02d30c9af844920550b34313930557bf5bc30",
+ "input_sha256": "f5dcae24f5c44442cbce933f0510682bfd29ec89e04c443f675c426d0ca263ac",
+ "proof_bytes": 124
+}

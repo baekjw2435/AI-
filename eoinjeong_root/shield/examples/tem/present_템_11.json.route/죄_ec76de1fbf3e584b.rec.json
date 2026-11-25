@@ -1,0 +1,29 @@
+{
+ "id": "죄_ec76de1fbf3e584b",
+ "syllable": "죄",
+ "used_route_words": [
+  "권폄",
+  "득죄",
+  "읍권",
+  "험득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000689,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "12b0c31cccb4609dea6b888d4a6bfb7d7bd1f6a7fe21f436996d2ae818ec40e0",
+ "position_sha256": "ec76de1fbf3e584b7885940b2635faea7d884c8b3062a0f36553041bf268f245",
+ "input_sha256": "dbc976929868e3957801ceecc5acbe467e8566e8f599f9dfb7f69b9eb4f4906e",
+ "proof_bytes": 1215
+}

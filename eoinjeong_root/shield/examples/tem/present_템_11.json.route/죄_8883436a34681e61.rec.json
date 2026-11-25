@@ -1,0 +1,29 @@
+{
+ "id": "죄_8883436a34681e61",
+ "syllable": "죄",
+ "used_route_words": [
+  "권폄",
+  "촉탁살인죄",
+  "폄척",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.004789,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e56c7f5a928b6907f232d6cad759e474d72be237883bcf9069cd8596cd604ffa",
+ "position_sha256": "8883436a34681e61e2400c7c5d35e519e05a9bc17e94f2b21ce8e4ac398368ca",
+ "input_sha256": "82d5a3be426682dd4e785b8ca855e13350f7d390f892ee11bb56b66c366d7160",
+ "proof_bytes": 4309
+}

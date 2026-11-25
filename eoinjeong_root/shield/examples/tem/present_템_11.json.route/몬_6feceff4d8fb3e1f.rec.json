@@ -1,0 +1,31 @@
+{
+ "id": "몬_6feceff4d8fb3e1f",
+ "syllable": "몬",
+ "used_route_words": [
+  "갑상샘자극호르몬",
+  "겁겁",
+  "겁낼겁",
+  "권갑",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000876,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5c1d40ea1a6198f09222d0836ca15bb1edfa014c5bd0fb489999c976da104551",
+ "position_sha256": "6feceff4d8fb3e1f12c3b7c6f9eabb8698a68a96a3d93a75d3892f1ec493e90f",
+ "input_sha256": "b3d1adfb65aab9912f832cf7bd381597a922e815be39ca5650c4bf1ba88d8e9e",
+ "proof_bytes": 748
+}

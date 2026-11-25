@@ -1,0 +1,29 @@
+{
+ "id": "굴_5c2cdeed093c850a",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "늠름",
+  "늠준",
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000236,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "5c2cdeed093c850a2a58904b488f666b33cb3cb3e77157f6303b0cfbe59f75e5",
+ "input_sha256": "d92827d719f416ac8ef3db24e7377787a72263bf45c3f5238778ce4612f30b70",
+ "proof_bytes": 124
+}

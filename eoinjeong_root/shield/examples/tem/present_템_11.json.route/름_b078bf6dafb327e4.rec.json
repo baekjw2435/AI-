@@ -1,0 +1,29 @@
+{
+ "id": "름_b078bf6dafb327e4",
+ "syllable": "름",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "늠름",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000646,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "011739b7d482d41c1bd4833c6fa16f5345c22923acd39db959877dde1508b5b5",
+ "position_sha256": "b078bf6dafb327e4adb95d0fe522689f36862914ea8afd68cd062732db8690fa",
+ "input_sha256": "abc3712807da4783a681e777315624ec2ff5c3bf1ed18d26ec4822061123a119",
+ "proof_bytes": 1230
+}

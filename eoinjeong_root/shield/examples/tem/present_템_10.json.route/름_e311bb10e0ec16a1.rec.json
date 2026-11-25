@@ -1,0 +1,27 @@
+{
+ "id": "름_e311bb10e0ec16a1",
+ "syllable": "름",
+ "used_route_words": [
+  "밑틀",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001875,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5fad66280f94ba2a06d506a5290d731aa03d4b372c8b374efdc3eb27e54a9f95",
+ "position_sha256": "e311bb10e0ec16a18ebf939316cda919e92f291f04715b6329df14ea12a9582b",
+ "input_sha256": "11cb435b40072a0c35007dcbf0761e8702d884a06495bf36659fdb8b8ae3b56e",
+ "proof_bytes": 2411
+}

@@ -1,0 +1,29 @@
+{
+ "id": "름_3e0a5c1f6efe1f27",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "톤톤",
+  "틀기름",
+  "획죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000579,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "011739b7d482d41c1bd4833c6fa16f5345c22923acd39db959877dde1508b5b5",
+ "position_sha256": "3e0a5c1f6efe1f27512b4989a57667708c695521272e150c4ce37d6fb38d433b",
+ "input_sha256": "819f555994530fc63b65137c0483b669e22699d702e3e5191afa828d36473a23",
+ "proof_bytes": 1230
+}

@@ -1,0 +1,31 @@
+{
+ "id": "뼈_5c7d70f3130d4350",
+ "syllable": "뼈",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "권척",
+  "쇄쇄",
+  "쇄심권",
+  "척추뼈"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.380772,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "11f3eeedcbb4a579f08495d1e37541390dcd3c57d0f955fb98c1c8b7a3414292",
+ "position_sha256": "5c7d70f3130d43508ed1344c3f28cf5bc0d8ce402048b04480147e767c7164b1",
+ "input_sha256": "e47823f43632af70ad87d845f4b86a85a32f19e33dee11c837fc978631be7551",
+ "proof_bytes": 199909
+}

@@ -1,0 +1,26 @@
+{
+ "id": "궐_e17722b4923024af",
+ "syllable": "궐",
+ "used_route_words": [
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010395,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "26f7b486ecc805b64d11e28bd54458607a3d432dbef5f97840bd404308ddbbab",
+ "position_sha256": "e17722b4923024af46f336a9dbf0e7e88ff58ab12d8cde995cb7087fc8e3c14a",
+ "input_sha256": "ea3a77a21dd292d72614f512cf95dfc66f3543d6d4362c80f42df38f334b3f2e",
+ "proof_bytes": 7323
+}

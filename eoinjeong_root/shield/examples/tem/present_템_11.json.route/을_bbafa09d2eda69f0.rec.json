@@ -1,0 +1,27 @@
+{
+ "id": "을_bbafa09d2eda69f0",
+ "syllable": "을",
+ "used_route_words": [
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010805,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d47728872cbf0f94689ae497e4097a4eb3a4cfb4f8d1aeca5c18ed36f575d211",
+ "position_sha256": "bbafa09d2eda69f046d88ed2ea10bc11e6850449cc8e370afb330178e3c3213d",
+ "input_sha256": "0f8beffc784c84a22c9a9d1e44d9e95b7db0bebf9937c62036f9cd402fbcb808",
+ "proof_bytes": 5436
+}

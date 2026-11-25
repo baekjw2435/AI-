@@ -1,0 +1,29 @@
+{
+ "id": "땀_e093890a1cdbfcb7",
+ "syllable": "땀",
+ "used_route_words": [
+  "갱내채굴",
+  "겁나는얼굴",
+  "굴대두겁",
+  "밑땀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.008048,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "047fb87f50bb3381a5af02042c4f622fa06425cedba1062fbc6243daa66817e6",
+ "position_sha256": "e093890a1cdbfcb7089eded49bcd293f22dd1e71f17ac4c81fcfcd256ca1efc8",
+ "input_sha256": "c4d23d3e01864d448ea8272ff4c2d8935dcb22442e4d043c8eab16882fe294b5",
+ "proof_bytes": 8403
+}

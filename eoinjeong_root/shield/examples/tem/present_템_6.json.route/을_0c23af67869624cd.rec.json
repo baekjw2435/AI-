@@ -1,0 +1,29 @@
+{
+ "id": "을_0c23af67869624cd",
+ "syllable": "을",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을",
+  "잇샅",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000578,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "eff2a39631d99ab80a293daa03517d1017be510ab9996cd2136dda6346886aab",
+ "position_sha256": "0c23af67869624cd546dc22c231d4151e1d3286c07616d14f7bc5a7c90bc688b",
+ "input_sha256": "fb2534e23742bfd201f66c4a34b95daea91b67677b3c85fa891522cfcbf5c9f1",
+ "proof_bytes": 884
+}

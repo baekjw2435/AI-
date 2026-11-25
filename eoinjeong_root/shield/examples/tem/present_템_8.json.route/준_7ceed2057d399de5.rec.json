@@ -1,0 +1,28 @@
+{
+ "id": "준_7ceed2057d399de5",
+ "syllable": "준",
+ "used_route_words": [
+  "득득",
+  "험준",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00265,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7f1cdfafac1f6f8303fb43d004f52f42b1a5d89262418d6330acab9892af8178",
+ "position_sha256": "7ceed2057d399de599e3b4868cc58c19a4bcb026a48c64576458200ad574de7e",
+ "input_sha256": "f003ff17e2a897e112a9edc67dd87b1107a0f75bb886f14cc84a7424f22c17b9",
+ "proof_bytes": 921
+}

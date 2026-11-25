@@ -1,0 +1,28 @@
+{
+ "id": "을_d2aa006b953e72ca",
+ "syllable": "을",
+ "used_route_words": [
+  "득첩",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001018,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b9269a51b8e12edfc42104e65e1a1311cc8dcc55118a0b0efccdafdef486d215",
+ "position_sha256": "d2aa006b953e72ca6797d977089187341a96f29d63c9ff852570218ac1615763",
+ "input_sha256": "f8d39396798e62244f64a9190105fdff80628484a28b46c4d8030bfb456c5c25",
+ "proof_bytes": 1189
+}

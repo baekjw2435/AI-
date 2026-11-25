@@ -1,0 +1,29 @@
+{
+ "id": "샅_7595bb41eb4c2fd0",
+ "syllable": "샅",
+ "used_route_words": [
+  "렌즈터릿",
+  "잇샅",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005615,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9b478a65e42e52de45cc2b9a2e4c4224769295ce7631bb46cbc7cee994170993",
+ "position_sha256": "7595bb41eb4c2fd05336a9839480bccc99413551c7c2503f22511f884b775be0",
+ "input_sha256": "c6acafb3d4aba18ec2ce0fec5cdee4cadfde7ab00d0e7029f5727fd7b6597be2",
+ "proof_bytes": 4949
+}

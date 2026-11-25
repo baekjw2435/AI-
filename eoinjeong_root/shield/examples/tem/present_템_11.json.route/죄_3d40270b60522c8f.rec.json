@@ -1,0 +1,29 @@
+{
+ "id": "죄_3d40270b60522c8f",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "득첩",
+  "읍권",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006736,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2446930a3a20d5a7a08faa2fa74f0260b05cc54b54b91ce3a574aaa8aaa11a0c",
+ "position_sha256": "3d40270b60522c8fccc8e609c84bb8b3a6d5bea2e104e44c0bd703c44809a6c6",
+ "input_sha256": "627babe3268aa74542a719f061f283a4ef92369abf7d61750b5db81982f30395",
+ "proof_bytes": 6215
+}

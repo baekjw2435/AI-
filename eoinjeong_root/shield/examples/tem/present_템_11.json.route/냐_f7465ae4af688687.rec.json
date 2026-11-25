@@ -1,0 +1,31 @@
+{
+ "id": "냐_f7465ae4af688687",
+ "syllable": "냐",
+ "used_route_words": [
+  "죄첩",
+  "준치저냐",
+  "첩첩",
+  "험준",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000176,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "962d8b172716df895dce7ed4bec2dfafbabaeaf131b5a34ad73189c1ad83b3f3",
+ "position_sha256": "f7465ae4af68868758b248ffcd638576152dedf43b227ac8c30a870ff6993375",
+ "input_sha256": "fdd0343c1d0cc2f9a6ffa2531eace6aa1148d4d34bb45aa47861035a342ce5e3",
+ "proof_bytes": 209
+}

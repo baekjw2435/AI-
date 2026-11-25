@@ -1,0 +1,26 @@
+{
+ "id": "름_fde954dfdf659ddf",
+ "syllable": "름",
+ "used_route_words": [
+  "샅바씨름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.044933,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e0bbb5d1e1d7320d3dac9f656365c12bfedacc7d391f7a440b8c6a5b816cc38a",
+ "position_sha256": "fde954dfdf659ddf0e54208c4643494afbf5246d2876f3a39a526ad807b84c41",
+ "input_sha256": "49f283342c68faa61f0f34c22378b383bbdcc41ca7ee20f779784599b7cedab0",
+ "proof_bytes": 8683
+}

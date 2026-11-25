@@ -1,0 +1,29 @@
+{
+ "id": "틱_953e7bff16e6823a",
+ "syllable": "틱",
+ "used_route_words": [
+  "갱도시험",
+  "득첩",
+  "폼플라스틱",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.02231,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "82b72ba651723e8e49de3258f07b13d2f183ba13f50df9230b27743cbf52b8b1",
+ "position_sha256": "953e7bff16e6823af307a84c80b066b5ad18321b1b08e06ccdad8a79f68cd51b",
+ "input_sha256": "a387cf4613c1a21aaccaf464a14b39c3bb72d039c3047dd7a2ee950717bf9537",
+ "proof_bytes": 15824
+}

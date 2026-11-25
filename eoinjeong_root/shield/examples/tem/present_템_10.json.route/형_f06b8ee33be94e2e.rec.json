@@ -1,0 +1,30 @@
+{
+ "id": "형_f06b8ee33be94e2e",
+ "syllable": "형",
+ "used_route_words": [
+  "득률",
+  "뜸마을",
+  "율현마을",
+  "을자형",
+  "을종근로소득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00136,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cf2db90ca3cae5754219a4cf43424db7a2173f5874d3c6edb9346f6a3e7757d1",
+ "position_sha256": "f06b8ee33be94e2e157a083d75c844379b05cda2ee52757b311d893db0ada72f",
+ "input_sha256": "918b4bab916e4503e5cd8ac7d16b13fe1a17475b468b4c65ea2fdfe4b0ee380f",
+ "proof_bytes": 960
+}

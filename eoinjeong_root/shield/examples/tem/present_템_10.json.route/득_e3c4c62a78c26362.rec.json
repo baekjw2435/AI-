@@ -1,0 +1,30 @@
+{
+ "id": "득_e3c4c62a78c26362",
+ "syllable": "득",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "딩동댕지난여름",
+  "율현마을",
+  "을종근로소득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002116,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3ab69e9da55e9fc5cf4ef9fc1c3a3cd315ab8710764f8d27e1c7430b398a7632",
+ "position_sha256": "e3c4c62a78c26362c09819d095e8b7e437da90c5c30126889c06f53c98e1a9b9",
+ "input_sha256": "c8c83d04c3e28e65fde2301be51519ad7006b934f2d4307d54d56c257372ab07",
+ "proof_bytes": 2260
+}

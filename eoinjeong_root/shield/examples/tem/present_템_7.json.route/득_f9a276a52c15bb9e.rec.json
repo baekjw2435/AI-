@@ -1,0 +1,30 @@
+{
+ "id": "득_f9a276a52c15bb9e",
+ "syllable": "득",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을",
+  "을종근로소득",
+  "잇샅",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000547,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f0c5569793dc0a95bbc6ec93298be2f34e0ee32c0936d9ca1443cbfd3dbc1b1c",
+ "position_sha256": "f9a276a52c15bb9edae3314ff844d37d32ffb87c143dadca51ce4c2158cc82bf",
+ "input_sha256": "fa7a95f8aeeca0112a4ea7c043c6c3d801a0df70898828a2a73173ce219b2b53",
+ "proof_bytes": 688
+}

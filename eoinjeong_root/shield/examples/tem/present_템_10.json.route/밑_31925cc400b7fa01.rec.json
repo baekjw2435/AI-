@@ -1,0 +1,27 @@
+{
+ "id": "밑_31925cc400b7fa01",
+ "syllable": "밑",
+ "used_route_words": [
+  "잎밑",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002769,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "da8434f7c3b8f90d8e291ebaa5b52be87ac189727ab7515065a798b67820a793",
+ "position_sha256": "31925cc400b7fa0196b3b10244f29306302d1ab9c47947d24cf397a1ac94d9f6",
+ "input_sha256": "cb06b33f7869ddd53552e8ccc8a5a6320eb0cc5791c55e61084d364445e4f87d",
+ "proof_bytes": 2419
+}

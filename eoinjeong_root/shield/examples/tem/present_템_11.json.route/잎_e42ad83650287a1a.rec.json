@@ -1,0 +1,29 @@
+{
+ "id": "잎_e42ad83650287a1a",
+ "syllable": "잎",
+ "used_route_words": [
+  "뽕잎",
+  "죄율",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.008485,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3d68fa09957e18fea7f5b91f4a27e9f019496250ab7a37de4c39c8b9ed28fafb",
+ "position_sha256": "e42ad83650287a1a153487d50e04549d73964dbd916243cd1eec08ea70f8fd9d",
+ "input_sha256": "2e22826523022f0997fe2cdbd95aa1f4b9df76bde3350b332826ff2244b9b0dc",
+ "proof_bytes": 7350
+}

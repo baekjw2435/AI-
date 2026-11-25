@@ -1,0 +1,27 @@
+{
+ "id": "펠_9ec442d7d08b8691",
+ "syllable": "펠",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007949,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f3dbdf216818aee48fa5411a1642a1a0a8363301a200f73cf99c12c78c027f9",
+ "position_sha256": "9ec442d7d08b869128de6dd88ab19cf883f8e9240efbcbe0a5164adffd57e36e",
+ "input_sha256": "4471f78b844d9c13fb513590b33d947571a359c09af915b8cf523a5eaf643cb5",
+ "proof_bytes": 6437
+}

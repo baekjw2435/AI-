@@ -1,0 +1,30 @@
+{
+ "id": "준_cc43b1b4df7f0173",
+ "syllable": "준",
+ "used_route_words": [
+  "늠름",
+  "늠준",
+  "샅바씨름",
+  "잇샅",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00059,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "709101920afb808d7359078dd7fad4eb7f50d2bb118c0f449f01fcf0a4843c6a",
+ "position_sha256": "cc43b1b4df7f0173b98474374d931605b8b4499488b23c4221e3844d2755b89a",
+ "input_sha256": "415ad380c1d9ccb7d872f3a1e1cb48dd775ea7d27f8ad0f7d58a5fd24a3909a2",
+ "proof_bytes": 355
+}

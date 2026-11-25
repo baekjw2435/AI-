@@ -1,0 +1,30 @@
+{
+ "id": "읍_a3dc3795ecba9db0",
+ "syllable": "읍",
+ "used_route_words": [
+  "권삼득",
+  "득법",
+  "법원읍",
+  "읍권",
+  "읍읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000144,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "a3dc3795ecba9db02b5d3b39d1ba2eca13101164d1d6855deeca858fc7d9cd9d",
+ "input_sha256": "c9c12823a5c5c8865fdd698e8d9452bb9ec7ebeed15857804df737fe3123ec54",
+ "proof_bytes": 124
+}

@@ -1,0 +1,30 @@
+{
+ "id": "율_896c056d0ca35e0f",
+ "syllable": "율",
+ "used_route_words": [
+  "득득",
+  "득죄",
+  "뜸마을",
+  "을종근로소득",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000716,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1eb61ec0a4292aa76a228814bd59e2709f57684665b6841906e6ec0f3498967f",
+ "position_sha256": "896c056d0ca35e0f6509568455c7021e5269ee7b8af6da85d95fcf52c7ff8b64",
+ "input_sha256": "aa07ac42144e5cb0c096f90d09c036ce5f972b7dcb7b6bd5b158b8084c3cb853",
+ "proof_bytes": 646
+}

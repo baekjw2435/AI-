@@ -1,0 +1,29 @@
+{
+ "id": "렌_d8ba61395b757e0a",
+ "syllable": "렌",
+ "used_route_words": [
+  "권폄",
+  "쇄소건즐",
+  "즐거움가득보물상자카가미네렌",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013171,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5cc0a9435bc1fe4d2a1f40461bc653b470d9fbc78d7e157ae3282d53e3595046",
+ "position_sha256": "d8ba61395b757e0ac0aacdac22c291c738f48efeaadffe294ea84f05a83ac5ca",
+ "input_sha256": "298872f3ffa61fe6898a0c5b70f880394bc8fe0a58c7e46c29d5967ca7e10d29",
+ "proof_bytes": 10679
+}

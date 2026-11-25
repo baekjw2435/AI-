@@ -1,0 +1,31 @@
+{
+ "id": "을_5aa73b643ceba14c",
+ "syllable": "을",
+ "used_route_words": [
+  "갱재첩",
+  "겁나는얼굴",
+  "굴대두겁",
+  "법원검찰청복사골문화센터반달마을",
+  "첩음법",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000213,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7d46f327d65d072d463e84898f542097d2509b84f4c9f6db78c3f5536af1797d",
+ "position_sha256": "5aa73b643ceba14c7cb43abb1493924574652234b90c37994b24deb55e59f9a9",
+ "input_sha256": "de2a51f8aa1fac205c66389ae4ed58d152b78c98fb78054b269af820edb14ce9",
+ "proof_bytes": 207
+}

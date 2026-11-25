@@ -1,0 +1,28 @@
+{
+ "id": "멸_33c6f8fc640cfe2c",
+ "syllable": "멸",
+ "used_route_words": [
+  "권리행사방해죄",
+  "읍권",
+  "죄멸"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000185,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "33c6f8fc640cfe2c19693fcd5a2e49dda045b18ad2b675943f45ad42ef5d55f2",
+ "input_sha256": "e1a4531aadea796097db6ab46ee41101db2b87f1ae4e7d964ffdf30666f4875d",
+ "proof_bytes": 124
+}

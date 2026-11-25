@@ -1,0 +1,29 @@
+{
+ "id": "첩_2741b824a030f446",
+ "syllable": "첩",
+ "used_route_words": [
+  "갱재첩",
+  "죄첩",
+  "첩첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000157,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a2648bf489eb81cebefae73204b167f0a4246d268994628da110b2fed67cf832",
+ "position_sha256": "2741b824a030f4463c3f3dd452d966542eaa8a8fd85f1514174e2726edfb9a52",
+ "input_sha256": "9c210b3c7634729a447dc0ddfe366c9e3f3586e95905fb46b4058e1c2e1c142c",
+ "proof_bytes": 141
+}

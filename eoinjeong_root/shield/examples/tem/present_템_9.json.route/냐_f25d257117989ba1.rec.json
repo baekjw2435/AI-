@@ -1,0 +1,27 @@
+{
+ "id": "냐_f25d257117989ba1",
+ "syllable": "냐",
+ "used_route_words": [
+  "준치저냐",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000236,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "962d8b172716df895dce7ed4bec2dfafbabaeaf131b5a34ad73189c1ad83b3f3",
+ "position_sha256": "f25d257117989ba1cb3c0317d112e0e82fcfddd61c00f39cc0bcfd66e3ae6b0a",
+ "input_sha256": "05e0e4e482700691a8c05ec9c8022e4c050e5c59cc30cd2288416c785a9654d5",
+ "proof_bytes": 209
+}

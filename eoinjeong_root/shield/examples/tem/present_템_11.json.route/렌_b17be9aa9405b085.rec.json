@@ -1,0 +1,28 @@
+{
+ "id": "렌_b17be9aa9405b085",
+ "syllable": "렌",
+ "used_route_words": [
+  "갱생보호법",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.023711,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "b17be9aa9405b08575fae34463c6b0f6ada0c30a9e00859fe0f3383795aac6dd",
+ "input_sha256": "10ef092f1cc51c93f3c57fdd4e250dccfed878f208779565b3231219ad76552d",
+ "proof_bytes": 15781
+}

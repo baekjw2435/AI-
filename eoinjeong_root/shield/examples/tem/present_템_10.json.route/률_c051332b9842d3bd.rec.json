@@ -1,0 +1,30 @@
+{
+ "id": "률_c051332b9842d3bd",
+ "syllable": "률",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "샅바씨름",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000539,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1e54d368704ce64f7acb364dac1f2f5da4015dcd8f3cd411ca968724e83f0ea2",
+ "position_sha256": "c051332b9842d3bd26ed93c924a5fd5b26583756e486a3778aeec1a6c0e654c9",
+ "input_sha256": "6fbfb5ada68bc0363303e9beb6cd841b87d81f223a9aae510ef0b82bfb29e65c",
+ "proof_bytes": 785
+}

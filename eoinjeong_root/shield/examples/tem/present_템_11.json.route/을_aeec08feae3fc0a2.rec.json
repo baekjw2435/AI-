@@ -1,0 +1,30 @@
+{
+ "id": "을_aeec08feae3fc0a2",
+ "syllable": "을",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "굴대두겁",
+  "넨장맞을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009566,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d47728872cbf0f94689ae497e4097a4eb3a4cfb4f8d1aeca5c18ed36f575d211",
+ "position_sha256": "aeec08feae3fc0a2be0d3c4b4c1a2f1f4b4da63d05e1e81d5d9b0fe89c042a6d",
+ "input_sha256": "902e85f45f7655b9d03148d5a51af0c3bf36975e7bc35065dc586c97415dd757",
+ "proof_bytes": 5436
+}

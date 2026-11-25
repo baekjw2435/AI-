@@ -1,0 +1,27 @@
+{
+ "id": "득_8948d45497d951a4",
+ "syllable": "득",
+ "used_route_words": [
+  "넨장맞을",
+  "을종근로소득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.003895,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8f2c9cde6e5e484304feee6e7617509c9fa0561f05d5a8cd0529d0162991c676",
+ "position_sha256": "8948d45497d951a4c6e4ef76f37e2e62eb4c9d46a137db1805ef49d9620e0fcb",
+ "input_sha256": "dec3bd857f8d4d7b475d1cec49ba27f1f52b6e5e0304ccae4edb54eb34797275",
+ "proof_bytes": 2920
+}

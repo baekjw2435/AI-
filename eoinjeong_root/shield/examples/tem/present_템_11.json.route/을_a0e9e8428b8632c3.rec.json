@@ -1,0 +1,29 @@
+{
+ "id": "을_a0e9e8428b8632c3",
+ "syllable": "을",
+ "used_route_words": [
+  "갱도시험",
+  "겁나는얼굴",
+  "굴대두겁",
+  "법원검찰청복사골문화센터반달마을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006301,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d00da83bcc68aa1f57f976454f6f9949f3337fc4f76fc04d0a27d8e417add6df",
+ "position_sha256": "a0e9e8428b8632c32ae3e8f2836513f8d9b634d11d8245526f3853dbad6ba25a",
+ "input_sha256": "9a80936fbba0c1a930f46e76905cb7cf27387b97c3ae197b178227abea7591f9",
+ "proof_bytes": 5324
+}

@@ -1,0 +1,28 @@
+{
+ "id": "렌_5e7e04aa9d1dece6",
+ "syllable": "렌",
+ "used_route_words": [
+  "렛츠인조이더무비카가미네렌",
+  "읍권",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.017192,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "46a45892eb54e6974e953b43dce272d5a3dfbb68c89d51ca1477174c22a15b81",
+ "position_sha256": "5e7e04aa9d1dece6fc63d78abc4a82096c1a20ca26ee43f7b309d4bb360d9b59",
+ "input_sha256": "e1eb335c55a9093d3db1bb9cbca2ec7ad53320322d4acc6a693e2c95e9510a9e",
+ "proof_bytes": 10105
+}

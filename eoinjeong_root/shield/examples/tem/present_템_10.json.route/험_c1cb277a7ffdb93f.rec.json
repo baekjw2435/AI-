@@ -1,0 +1,28 @@
+{
+ "id": "험_c1cb277a7ffdb93f",
+ "syllable": "험",
+ "used_route_words": [
+  "읍읍",
+  "읍할읍",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000769,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b326a00dc216d591585ef23167a56356f680ef6d07d5c48e123caa51a9591413",
+ "position_sha256": "c1cb277a7ffdb93f8f3c3c29bf073bec922c5682112c444a753ec0d02f501bbc",
+ "input_sha256": "965d2165ed4432b6384a2203c6b2d8c7a1dca2187e7e45ec3ad6069f1db935b0",
+ "proof_bytes": 1264
+}

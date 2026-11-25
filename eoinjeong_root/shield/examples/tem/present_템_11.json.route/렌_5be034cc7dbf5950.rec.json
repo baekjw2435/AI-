@@ -1,0 +1,29 @@
+{
+ "id": "렌_5be034cc7dbf5950",
+ "syllable": "렌",
+ "used_route_words": [
+  "렛츠인조이더무비카가미네렌",
+  "읍권",
+  "읍읍",
+  "읍할읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.008399,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "46a45892eb54e6974e953b43dce272d5a3dfbb68c89d51ca1477174c22a15b81",
+ "position_sha256": "5be034cc7dbf5950a31fae384466074dcc8f67287cd4063480841fb0327db337",
+ "input_sha256": "5bb294662e002fa5ba01a2f2f9a2dc50338baa85d735323a397d2671db08f888",
+ "proof_bytes": 10105
+}

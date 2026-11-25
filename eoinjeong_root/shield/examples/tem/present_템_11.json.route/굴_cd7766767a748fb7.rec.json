@@ -1,0 +1,29 @@
+{
+ "id": "굴_cd7766767a748fb7",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "폼플라스틱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000131,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "cd7766767a748fb7946f8703414d9dcc9d4814ce973a5a4313493daea8f0e64d",
+ "input_sha256": "bf723fd0d7d10c184896b66f8744fcf91e6b5f1fc2594792020c48b9cb7094c4",
+ "proof_bytes": 124
+}

@@ -1,0 +1,29 @@
+{
+ "id": "렌_771e3d319f942d25",
+ "syllable": "렌",
+ "used_route_words": [
+  "갱내채굴",
+  "굴대두겁",
+  "쇄소건즐",
+  "즐거움가득보물상자카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.027087,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "136b6d3469d6e29d8924bcaca677bdced7178dca386a049bff31622bbe3e5845",
+ "position_sha256": "771e3d319f942d250e719ad13d030bb060452b7c494df63ae296a4b659745d1b",
+ "input_sha256": "d9b368f9afa250665fc1e417238a2cfcf3ac5a86c4bc6bf76f5890c2026a860a",
+ "proof_bytes": 11922
+}

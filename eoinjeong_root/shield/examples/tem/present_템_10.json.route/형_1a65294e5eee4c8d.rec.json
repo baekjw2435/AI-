@@ -1,0 +1,28 @@
+{
+ "id": "형_1a65294e5eee4c8d",
+ "syllable": "형",
+ "used_route_words": [
+  "율현마을",
+  "을지형",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001057,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9bd7a78f1cb9012f6cbbc7b4590b8f932c0711eeaaf2347ac93663acbc288ca2",
+ "position_sha256": "1a65294e5eee4c8daf67e74804878251250a7f280bf64736ef766eeebfa7498b",
+ "input_sha256": "3a0144d5c527113356c103eecfc3bf4bb49b311c088ac93be78a951e3628af3e",
+ "proof_bytes": 1002
+}

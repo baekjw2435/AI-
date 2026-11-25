@@ -1,0 +1,28 @@
+{
+ "id": "룻_80131105229eedea",
+ "syllable": "룻",
+ "used_route_words": [
+  "갱도시험",
+  "겁나는얼굴",
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001149,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b40f4df6e10341c7bb0432e8c26e6eb5c1c93b331179fc2e4af76506ac08f193",
+ "position_sha256": "80131105229eedead30962623191f00296e3b70e79267f9d1ce46b4c944d654a",
+ "input_sha256": "7bcd08aa63c572ac3c191147e3c3abbd7cb8385a556ad2847b3e056c2f3fa2c4",
+ "proof_bytes": 785
+}

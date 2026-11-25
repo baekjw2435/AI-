@@ -1,0 +1,31 @@
+{
+ "id": "을_60720c1189b4623a",
+ "syllable": "을",
+ "used_route_words": [
+  "굉굉",
+  "굉주교착",
+  "득첩",
+  "착한쿠키에게선물을",
+  "첩쾌",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001699,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "89ed79a319591e890e7930d2f61615a282319d20f67259c2b2a7c9dce164be20",
+ "position_sha256": "60720c1189b4623a8a467b16144657c2d8bb5050720b41a65ca91d10f6c8f8b5",
+ "input_sha256": "7c1c4a22d63470adccb8e564cd38ecbf0822823e597d560910f1dfcb7ad6db39",
+ "proof_bytes": 1590
+}

@@ -1,0 +1,28 @@
+{
+ "id": "톡_2fff1cf5661c8bcf",
+ "syllable": "톡",
+ "used_route_words": [
+  "읍읍",
+  "읍할읍",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.055378,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ac2553586fb79d27fdb8fe859053c9294fd4ba71ccecdbb00fc1635103296d8c",
+ "position_sha256": "2fff1cf5661c8bcf09c3f0d3395505bcbb8359f6a85a483776b1c0a9c0c15e1c",
+ "input_sha256": "c7e2ce9b938c7d3fcb694d9dfecead7e376d6047f62ef8fecbc0cd8025e88c02",
+ "proof_bytes": 15788
+}

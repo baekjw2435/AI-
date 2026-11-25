@@ -1,0 +1,30 @@
+{
+ "id": "율_078cd3088560e9a1",
+ "syllable": "율",
+ "used_route_words": [
+  "벅스킨",
+  "샅흰검은말율",
+  "슴벅",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000738,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "56e03b311d65a9dd233fdbc7b4319a4361d86bd5608a3a0d5e92cfc13c2db2c1",
+ "position_sha256": "078cd3088560e9a1ebc1a32e5bb0bcc2ddec745160b3237f4f1d9e527d297937",
+ "input_sha256": "e6375d2baa2943034b5aafc6dd1f28ba19fe8c496f10a7619d738fd4ca926efe",
+ "proof_bytes": 784
+}

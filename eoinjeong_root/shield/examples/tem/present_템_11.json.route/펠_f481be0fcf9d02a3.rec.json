@@ -1,0 +1,27 @@
+{
+ "id": "펠_f481be0fcf9d02a3",
+ "syllable": "펠",
+ "used_route_words": [
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010315,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f3dbdf216818aee48fa5411a1642a1a0a8363301a200f73cf99c12c78c027f9",
+ "position_sha256": "f481be0fcf9d02a382092cac6adf894bcc64234510b5bbcde8a04312cf90b7b4",
+ "input_sha256": "07e95448db877ca86e2a062b28398c5a3da6fdcab445ff54f4cc6d928772f88b",
+ "proof_bytes": 6437
+}

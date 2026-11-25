@@ -1,0 +1,31 @@
+{
+ "id": "첩_bbcf176320f0e299",
+ "syllable": "첩",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "권첩",
+  "쇄쇄",
+  "쇄심권",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000178,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a2648bf489eb81cebefae73204b167f0a4246d268994628da110b2fed67cf832",
+ "position_sha256": "bbcf176320f0e299a2a26495b66c5fe0e70f7be82b9574e84b93e8728aeed549",
+ "input_sha256": "25dcf2438824b6157ed1e6672efa23841249013bac2fa4f36313fc8da5b00e06",
+ "proof_bytes": 141
+}

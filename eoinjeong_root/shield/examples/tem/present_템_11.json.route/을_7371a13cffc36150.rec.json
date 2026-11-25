@@ -1,0 +1,29 @@
+{
+ "id": "을_7371a13cffc36150",
+ "syllable": "을",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "법원검찰청복사골문화센터반달마을",
+  "쇄석포도법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009316,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "89b7a5921d71dc41901b4e254f46df6bf5325e69fb65c3c03b55692dbc8d4a03",
+ "position_sha256": "7371a13cffc361508f43832f0ce3da8298e8cbea8e1f4ab3f2f5762c73fca5f7",
+ "input_sha256": "ace94d44981efa68c6f944e52a72420ef8b5073a5ca03756d563a937e3cd308a",
+ "proof_bytes": 5740
+}

@@ -1,0 +1,28 @@
+{
+ "id": "굴_cfb56fef10c186f3",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000135,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "cfb56fef10c186f392727d3d665a70a0867e616b63d5efbb1fce8a0a392f9c40",
+ "input_sha256": "9217c450e8a9e12e1c478a52e581a8b41a86b45b95e07d0885e9c88a99b30eed",
+ "proof_bytes": 124
+}

@@ -1,0 +1,30 @@
+{
+ "id": "읍_c052e44105ee74b2",
+ "syllable": "읍",
+ "used_route_words": [
+  "득법",
+  "뜸마을",
+  "법원읍",
+  "을종근로소득",
+  "읍할읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001898,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5d26696e25768b70bfe543128bda7693fdfc77116f675af765d43719b549ac36",
+ "position_sha256": "c052e44105ee74b25d9d10c73c486353c34b9fc733bd594d063f46782923abfc",
+ "input_sha256": "d82f3f5fcae67e07ddc6ec85bcc0c833520332630af20450603eca331c10af06",
+ "proof_bytes": 1497
+}

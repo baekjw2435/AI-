@@ -1,0 +1,29 @@
+{
+ "id": "렌_2fb5ee8c80b82bf7",
+ "syllable": "렌",
+ "used_route_words": [
+  "죄율",
+  "형태로만들어선물하고싶은마음카가미네렌",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.011469,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "46228e1a0494d8a6d0de54d6d57952e07c9ca56f2d20870c11b104af1a59f4d7",
+ "position_sha256": "2fb5ee8c80b82bf70b8528c7cd293cc4716901424f6dbd9fcf4d6e62a5f2bf62",
+ "input_sha256": "8c84f7eda26c7adfda76238057f9bfd571f508d79af743dfb1d2de368a29cc81",
+ "proof_bytes": 8807
+}

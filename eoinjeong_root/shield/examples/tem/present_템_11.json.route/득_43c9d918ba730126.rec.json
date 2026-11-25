@@ -1,0 +1,29 @@
+{
+ "id": "득_43c9d918ba730126",
+ "syllable": "득",
+ "used_route_words": [
+  "권삼득",
+  "득득",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.493055,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c2920ecfef130a5665bf70c343d664ad7aa134d82b1bf8d3f6d056d7946c14f4",
+ "position_sha256": "43c9d918ba730126bb6644463febcbfc5d8f896e9204f89e650ccca5a3078bb2",
+ "input_sha256": "b45bda49a2516f481dfb2174a278c92b9a890444c3e5693a633aecfcb4a9b2e8",
+ "proof_bytes": 165051
+}

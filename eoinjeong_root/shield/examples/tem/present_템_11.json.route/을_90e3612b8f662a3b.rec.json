@@ -1,0 +1,31 @@
+{
+ "id": "을_90e3612b8f662a3b",
+ "syllable": "을",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "권섭",
+  "섭도마을",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009423,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6b63a2bad2bbf5c5746bed155ffbe696f6c0d5a9ff039c372704ad000a195c62",
+ "position_sha256": "90e3612b8f662a3bbffca9f107983d97e6407f57fdbc5822e49ca00af3d25f9a",
+ "input_sha256": "4f40c0fd88488a81fa807cf519af44ac9ed79c447ef4f7056d2b7a8a04db41a6",
+ "proof_bytes": 8201
+}
