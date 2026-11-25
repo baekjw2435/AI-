@@ -286,6 +286,7 @@ class StaticModel:
             for t in self.succ0[v]:
                 self.pred0[t].add(v)
         self.val0 = self._fixpoint(range(self.n), self.succ0, self.loop0, self.shl0, {})
+        self.lcnt0 = [sum(1 for t in self.succ0[v] if self.val0[t] == 'L') for v in range(self.n)]
 
     def _fixpoint(self, verts, succ, loop1, shloop, fixed):
         """verts 안의 판정을 최소 고정점으로. verts 밖은 fixed(없으면 self.val0)의 값을 그대로 쓴다."""
@@ -364,7 +365,7 @@ class StaticModel:
                 newpred[t].add(v)
         # U: 판정이 바뀔 수 있는 꼭짓점 = 바뀐 꼭짓점과 그 조상. 단, 원래 승이고 U 밖의 원래 패 후속이 남아 있는
         # 꼭짓점은 승 그대로(safe 개수가 0이 되면 그때 U에 넣는다).
-        U, frontier, safe = set(), [], {}
+        U, frontier, safe, UL = set(), [], {}, []
 
         def add(v):
             stack = [v]
@@ -375,6 +376,7 @@ class StaticModel:
                 U.add(v)
                 frontier.append(v)
                 if self.val0[v] == 'L':
+                    UL.append(v)
                     for p in preds(v):
                         if p in safe and p not in U and v in succ(p):
                             safe[p] -= 1
@@ -389,7 +391,11 @@ class StaticModel:
                     continue
                 if self.val0[p] == 'W':
                     if p not in safe:
-                        safe[p] = sum(1 for t in succ(p) if t not in U and self.val0[t] == 'L')
+                        if p in new:
+                            safe[p] = sum(1 for t in succ(p) if t not in U and self.val0[t] == 'L')
+                        else:   # 원래 패 후속 수에서 U 안의 것만 뺀다(U는 작다)
+                            sp = self.succ0[p]
+                            safe[p] = self.lcnt0[p] - sum(1 for t in UL if t in sp)
                     if safe[p] > 0:
                         continue
                 add(p)

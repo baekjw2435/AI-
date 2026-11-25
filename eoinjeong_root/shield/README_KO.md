@@ -22,6 +22,8 @@ python3 eoinjeong_root/shield/shield_verify.py 칩3.json
 
 - `present X --shield N` : 보호막 N에서 ~X를 제시 → 제시한 쪽 승/패, **패배 요인**(상대가 이기는 응수), 보호막 때문에 상대가 못 내는 단어.
 - `receive X --shield N` : 보호막 N에서 X를 받음 → 이기는 수 / 지는 수.
+- 이기는 쪽은 이기는 수 하나만 찾으면 결과가 확정되므로, 패배 요인은 찾은 하나만 적고 멈춥니다.
+  모든 수를 이기는 수/지는 수로 나눠 보려면 `--all` (보호막이 크면 오래 걸립니다).
 - `--used 단어,단어` : 그 판에서 이미 쓴 단어.
 - `--cert 파일` : 판정 근거를 저장. `shield_verify.py`가 계산기 코드를 쓰지 않고 다시 확인합니다.
 
@@ -34,7 +36,11 @@ python3 eoinjeong_root/shield/shield_verify.py 칩3.json
 - 보호막 0이 되면 평소 게임입니다.
   - 루트 음절 173개: 확정된 루트전 결과(쓴 루트 단어가 있으면 루트전 계산기로 다시 계산).
   - 그 밖: 전체 사전으로 한 보호막 0 판정(ModelV3와 같은 정리, 쓴 단어 반영).
-  - 그것으로도 안 정해지는 루트 밖 순환 음절 18개(깡 낄 낑 놈 눅 눌 덥 뛰 룩 룰 룽 뱐 쎈 쓸 쯔 탓 팟 헙)는 공격 목록을 따릅니다.
+  - 그것으로도 안 정해지는 루트 밖 순환 음절 18개(깡 낄 낑 놈 눅 눌 덥 뛰 룩 룰 룽 뱐 쎈 쓸 쯔 탓 팟 헙)는
+    그 안의 단어 26개를 하나씩 실제로 두어 보는 탐색으로 정합니다.
+  - 공격 목록은 계산에 쓰지 않습니다(검증기의 대조용).
+- 쓴 루트 단어가 있는 루트 자리는 solver_v5로 증명서를 만들고 verify_v4가 수락 조건 8개를 모두 통과해야 확정입니다
+  (증명서는 `--cert 파일` 옆 `파일.route/` 폴더에 저장, 시간 한도 60초 고정).
 
 ## 검증기가 보는 것
 
@@ -47,6 +53,7 @@ python3 eoinjeong_root/shield/shield_verify.py 칩3.json
 ## 파일
 
 - `shield_calc.py` 계산기, `shield_verify.py` 검증기, `shield_core.py` 사전 그래프와 보호막 0 판정
+- `route_proof.py` 쓴 루트 단어가 있는 루트 자리를 solver_v5 + verify_v4로 확정(`bin/`에 자동 컴파일)
 - `route_value` 루트전 계산기(`site/solver/eoin_solver.c`, 사이트의 브라우저 계산과 같은 코드). 처음 쓸 때 자동으로 컴파일됩니다.
 - `build_shield_table.py`, `syllable_shield_table.tsv`, `attack_words_shield.tsv` 음절별·공격 단어별 보호막 표
 - `source/` 받은 사전과 공격 목록 원본

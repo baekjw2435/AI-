@@ -65,6 +65,7 @@ class Calc:
         # 루트 밖 순환 음절(보호막 0 정리로 안 정해지는 루트 밖 음절, 기본 18개): 단어를 하나씩 두어 보는 직접 탐색
         self.cyc = frozenset(x for x in self.sm.recv if self.sm.label(x) is None and x not in self.route_fresh)
         self.cyc_memo = {}
+        self.order_cache = {}
 
     # ── 사전 ──
     def cont(self, x):
@@ -202,9 +203,12 @@ class Calc:
         """이기는 수를 빨리 찾기 위한 순서: 보호막 0 판정이 패인 음절, 상대가 낼 수 있는 갈래가 적은 음절부터."""
         if t == 0:
             return (0, 0, y)
-        lab = self.sm.label(y)
-        n = sum(1 for z in self.succ(y) if self.cont(z) >= t)
-        return (0 if lab == 'L' else 1, n, y)
+        k = (y, t)
+        if k not in self.order_cache:
+            lab = self.sm.label(y)
+            n = sum(1 for z in self.succ(y) if self.cont(z) >= t)
+            self.order_cache[k] = (0 if lab == 'L' else 1, n, y)
+        return self.order_cache[k]
 
     def win_at0(self, x, used=frozenset()):
         """보호막 0에서 x를 받아 이길 때 실제로 이기는 단어 하나(표시용)."""
@@ -215,8 +219,11 @@ class Calc:
                 return (y, w)
         return None
 
-    def classify(self, x, s, used=frozenset()):
+    def classify(self, x, s, used=frozenset(), only=None):
+        """x에서 낼 수 있는 수마다 결과. only = (끝 음절, 단어)면 그 수 하나만(이기는 수를 찾았으면 나머지는 안 봄)."""
         ch, blocked = self.choices(x, s, used)
+        if only is not None:
+            ch = [c for c in ch if (c[0], c[1]) == tuple(only)]
         rows = []
         for y, w, same in ch:
             cu = self.child_used(used, w)
@@ -288,6 +295,7 @@ def main():
     ap.add_argument('--used', default='')
     ap.add_argument('--json', action='store_true')
     ap.add_argument('--cert')
+    ap.add_argument('--all', action='store_true', help='이기는 수를 찾은 뒤에도 나머지 수를 모두 분류(오래 걸릴 수 있음)')
     a = ap.parse_args()
     if not 0 <= a.shield <= 12:
         raise SystemExit('보호막은 0~12만 계산합니다(기록하지 않는 단어가 바닥나지 않는다는 근거가 12수까지임).')
@@ -296,7 +304,9 @@ def main():
     q = {'mode': a.mode, 'syllable': x, 'shield': s, 'used': a.used}
     t = max(0, s - 1) if a.mode == 'present' else s
     v, why, win = c.value(x, t)
-    rows, blocked = c.classify(x, t)
+    # 패(모든 수가 짐)는 이미 모든 수를 본 결과라 분류가 공짜. 승은 이기는 수 하나로 확정되므로 --all일 때만 나머지를 본다.
+    partial = v == 'W' and win is not None and not a.all
+    rows, blocked = c.classify(x, t, only=win if partial else None)
     if a.cert:
         cert = certificate(c, x, t, route_dir=Path(a.cert + '.route'))
         Path(a.cert).write_text(json.dumps(dict(cert, query=q), ensure_ascii=False), encoding='utf-8')
@@ -312,8 +322,11 @@ def main():
         print(f'  판정: 제시한 쪽 {({"L": "승", "W": "패"}).get(v, "미정")}  ({why})')
         wins = [r for r in rows if r['result_for_mover'] == '이기는 수']
         loses = [r for r in rows if r['result_for_mover'] == '지는 수']
-        if wins:
+        if wins and partial:
+            print('  패배 요인(상대의 이기는 응수) — 하나만 나와도 결과가 확정되므로 찾은 하나만 적습니다(전부는 --all):')
+        elif wins:
             print(f'  패배 요인(상대의 이기는 응수) {len(wins)}가지:')
+        if wins:
             for r in wins:
                 print(f"    - {fmt_words(r['words'])} → 내가 보호막 {max(0, t - 1)}에서 {josa(r['end'], '을', '를')} 받고 짐  [{r['opponent']['why']}]")
         if loses:
@@ -327,6 +340,8 @@ def main():
         label = '상대가'
     else:
         print(f'보호막 {s}에서 {josa(x, "을", "를")} 받음 → 받은 쪽 {({"W": "승", "L": "패"}).get(v, "미정")}  ({why})')
+        if partial:
+            print('  (이기는 수 하나로 확정. 나머지 수의 분류는 --all)')
         for lab in ('이기는 수', '지는 수', '미정'):
             rs = [r for r in rows if r['result_for_mover'] == lab]
             if rs:
