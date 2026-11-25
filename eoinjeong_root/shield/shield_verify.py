@@ -112,6 +112,7 @@ def main():
     def is_loop(x, w):
         return key(w[-1]) == key(x)
 
+    att_ends = {h[-1] for hs in heads.values() for h in hs}
     C = frozenset(cert.get('cycle', []))   # 루트 밖 순환 음절: 공격 목록을 믿지 않고 직접 탐색으로만 판정
 
     def head_ok(h, used):
@@ -151,6 +152,13 @@ def main():
             for w in playable(x, used):
                 if (is_loop(x, w) or (back is not None and key(w[-1]) == key(back))) and pl(w[-1], used | {w}, d - 1):
                     return True
+            # 그래도 안 되면 모든 단어를 실제로 두어 본다(공격 목록에 없는 이기는 수, 예: 측정값을 쓴 뒤의 측미척).
+            # 공격 목록의 끝 음절(받으면 지는 쪽으로 알려진 음절)로 가는 단어부터.
+            ws = playable(x, used)
+            if len(ws) <= 400:
+                for w in sorted(ws, key=lambda w: (w[-1] not in att_ends, w)):
+                    if pl(w[-1], used | {w}, d - 1):
+                        return True
         return False
 
     def pl(x, used, d):
