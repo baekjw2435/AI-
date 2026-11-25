@@ -33,7 +33,9 @@ typedef unsigned long long u64;
 #define MAXOUT 16
 #define MAXDEPTH 640
 #define INF 0x3fffffffu
+#ifndef TT_BITS
 #define TT_BITS 21
+#endif
 #define TT_SIZE (1u << TT_BITS)
 
 static int V, G;

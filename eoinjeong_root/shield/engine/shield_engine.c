@@ -179,7 +179,8 @@ static Map delta_map;
 static int *dpool_v; static signed char *dpool_l; static size_t dtop, dcap;
 static int *d_off, *d_n, nd, cap_d;
 static u32 ep = 1;
-static u32 *inU, *safeE, *newE, *rcE;
+static u32 *inU, *safeE, *newE, *rcE, *ulE;
+static int *ulC;
 static int *safeV, *newIdx, *rcV, *labA, *leftA;
 static u8 *blk;
 static int *stk, *front, *ULl, *Ul;
@@ -295,9 +296,11 @@ static int delta(const Set *removed_sensitive) {
   }
   /* 닫힘 U */
   int nU = 0, nUL = 0, nf = 0;
+/* v의 앞 꼭짓점 p마다 BODY. edge_ok = 'v가 지금 p의 후속인가'. pred0의 p는 구조가 안 바뀌었으면 늘 참이고
+ * (pred0은 succ0에서 만듦), newpred의 p는 새로 생긴 간선이라 늘 참이다. 구조가 바뀐 p만 실제로 찾아본다. */
 #define PRED_LOOP(v, p, BODY) do { \
-    for (int _i = 0; _i < p0_n[v]; _i++) { int p = vpool[p0_off[v] + _i]; BODY } \
-    if (npE[v] == ep) for (int _k = npHead[v]; _k >= 0; _k = npNext[_k]) { int p = npV[_k]; BODY } } while (0)
+    for (int _i = 0; _i < p0_n[v]; _i++) { int p = vpool[p0_off[v] + _i]; int edge_ok = newE[p] != ep || succ_has(p, v); BODY } \
+    if (npE[v] == ep) for (int _k = npHead[v]; _k >= 0; _k = npNext[_k]) { int p = npV[_k]; int edge_ok = 1; BODY } } while (0)
   {
     /* add(v) */
     for (int a = 0; a < NV; a++) if (newE[a] == ep) {
@@ -308,20 +311,21 @@ static int delta(const Set *removed_sensitive) {
         inU[v] = ep; Ul[nU++] = v; front[nf++] = v;
         if (val0[v] == 0) {
           ULl[nUL++] = v;
-          PRED_LOOP(v, p, { if (safeE[p] == ep && inU[p] != ep && succ_has(p, v)) { if (--safeV[p] == 0) stk[ns++] = p; } });
+          PRED_LOOP(v, p, { if (edge_ok) { if (ulE[p] != ep) { ulE[p] = ep; ulC[p] = 0; } ulC[p]++; }
+                            if (safeE[p] == ep && inU[p] != ep && edge_ok) { if (--safeV[p] == 0) stk[ns++] = p; } });
         }
       }
     }
     while (nf) {
       int v = front[--nf];
       PRED_LOOP(v, p, {
-        if (inU[p] == ep || !succ_has(p, v)) continue;
+        if (inU[p] == ep || !edge_ok) continue;
         if (val0[p] == 1) {
           if (safeE[p] != ep) {
             safeE[p] = ep;
             int c = 0;
             if (newE[p] == ep) { VStruct *s = &newS[newIdx[p]]; for (int k = 0; k < s->n; k++) { int t = s->s[k]; if (inU[t] != ep && val0[t] == 0) c++; } }
-            else { c = lcnt0[p]; for (int k = 0; k < nUL; k++) if (vs_has(vpool + s0_off[p], s0_n[p], ULl[k])) c--; }
+            else c = lcnt0[p] - (ulE[p] == ep ? ulC[p] : 0);   /* 원래 패 후속 중 U 안의 것(ulC)을 뺀다 */
             safeV[p] = c;
           }
           if (safeV[p] > 0) continue;
@@ -334,7 +338,8 @@ static int delta(const Set *removed_sensitive) {
           inU[q] = ep; Ul[nU++] = q; front[nf++] = q;
           if (val0[q] == 0) {
             ULl[nUL++] = q;
-            PRED_LOOP(q, pp, { if (safeE[pp] == ep && inU[pp] != ep && succ_has(pp, q)) { if (--safeV[pp] == 0) stk[ns++] = pp; } });
+            PRED_LOOP(q, pp, { if (edge_ok) { if (ulE[pp] != ep) { ulE[pp] = ep; ulC[pp] = 0; } ulC[pp]++; }
+                               if (safeE[pp] == ep && inU[pp] != ep && edge_ok) { if (--safeV[pp] == 0) stk[ns++] = pp; } });
           }
         }
       });
@@ -360,7 +365,7 @@ static int delta(const Set *removed_sensitive) {
   while (nq) {
     int t = stk[--nq];
     PRED_LOOP(t, p, {
-      if (inU[p] != ep || labA[p] >= 0 || !succ_has(p, t)) continue;
+      if (inU[p] != ep || labA[p] >= 0 || !edge_ok) continue;
       if (labA[t] == 0) { labA[p] = 1; stk[nq++] = p; }
       else if (--leftA[p] == 0 && !blk[p]) {
         u8 l1 = newE[p] == ep ? newS[newIdx[p]].loop1 : loop0[p];
@@ -513,6 +518,11 @@ static int cmpord(const void *p, const void *q) {
 }
 
 static Map val_map; static Res *vres; static int nvr, capvr;
+/* 이기는 수 순서 도움(killer): 같은 보호막에서 최근에 이긴 수(끝 음절, 단어)를 먼저 둬 본다.
+ * 찾는 순서만 바꾸므로 값은 그대로다(승 자리는 이기는 수 하나, 패 자리는 모든 수를 본다). */
+#define NKILL 2
+static int kill_y[64][NKILL], kill_w[64][NKILL];
+static int use_killer = 1;
 static long nodes_searched;
 static Res value(int x, int s, const Set *used) {
   if (s < 0) s = 0;
@@ -533,15 +543,38 @@ static Res value(int x, int s, const Set *used) {
       int t = s - 1;
       for (i = 0; i < n; i++) {
         o[i].c = ch[i]; o[i].idx = i; o[i].y = ch[i].y;
-        if (t == 0) { o[i].a = 0; o[i].n = 0; }   /* Calc.order: (0, 0, y) */
+        if (t == 0) {
+          /* 보호막 0 자식: 값이 싸게 나오는 것부터(전체 사전 판정이 패 → 판정 있음 → 루트 계산이 필요 없는 것 → 루트 계산) */
+          o[i].a = 0; o[i].n = 0;
+          if (use_killer) {   /* 쓴 단어를 빼기 전 판정만 본다(다시 판정하면 오히려 느림) */
+            int lab = base_label(ch[i].y);
+            if (lab == 0) o[i].a = 0;
+            else if (lab == 1) o[i].a = 3;
+            else if (sroute[ch[i].y] >= 0) o[i].a = sroute[ch[i].y] == 0 ? 1 : 2;
+            else o[i].a = 1;
+          }
+        }
         else { o[i].a = base_label(ch[i].y) == 0 ? 0 : 1; o[i].n = nchoice_at(ch[i].y, t); }
       }
       qsort(o, n, sizeof(Ord), cmpord);
+      if (use_killer) {
+        int front_n = 0;
+        for (int k = 0; k < NKILL; k++) {
+          for (int j = front_n; j < n; j++) if (o[j].c.y == kill_y[s][k] && o[j].c.w == kill_w[s][k] && kill_w[s][k] >= 0) {
+            Ord tmp = o[j]; memmove(o + front_n + 1, o + front_n, sizeof(Ord) * (j - front_n)); o[front_n++] = tmp; break;
+          }
+        }
+      }
       int unknown = 0, found = 0;
       for (i = 0; i < n && !found; i++) {
         Set cu; child_used(used, o[i].c.w, &cu);
         Res c = value(o[i].c.y, t, &cu);
-        if (c.v == 0) { r.v = 1; r.kind = W_WORD; r.a = o[i].c.w; r.b = o[i].c.y; r.wy = o[i].c.y; r.ww = o[i].c.w; found = 1; }
+        if (c.v == 0) {
+          r.v = 1; r.kind = W_WORD; r.a = o[i].c.w; r.b = o[i].c.y; r.wy = o[i].c.y; r.ww = o[i].c.w; found = 1;
+          if (use_killer && !(kill_y[s][0] == o[i].c.y && kill_w[s][0] == o[i].c.w)) {
+            kill_y[s][1] = kill_y[s][0]; kill_w[s][1] = kill_w[s][0]; kill_y[s][0] = o[i].c.y; kill_w[s][0] = o[i].c.w;
+          }
+        }
         else if (c.v < 0) unknown = 1;
       }
       free(o);
@@ -644,6 +677,7 @@ static int win_at0(int x, const Set *used, int *wy) {
 }
 
 static void alloc_work(void) {
+  ulE = calloc(NV, 4); ulC = xm(4 * NV);
   inU = calloc(NV, 4); safeE = calloc(NV, 4); newE = calloc(NV, 4); rcE = calloc(NGR, 4); npE = calloc(NV, 4);
   safeV = xm(4 * NV); newIdx = xm(4 * NV); rcV = xm(4 * NGR); labA = xm(4 * NV); leftA = xm(4 * NV); blk = xm(NV);
   stk = xm(4 * (NV * 4 + 16)); front = xm(4 * (NV * 4 + 16)); ULl = xm(4 * (NV + 16)); Ul = xm(4 * (NV + 16));
@@ -664,6 +698,8 @@ int main(int argc, char **argv) {
   if (argc < 4) { fprintf(stderr, "usage: shield_engine MODEL SYLLABLE T [all]\n"); return 2; }
   load_model(argv[1]);
   alloc_work();
+  for (int a = 0; a < 64; a++) for (int k = 0; k < NKILL; k++) { kill_y[a][k] = -1; kill_w[a][k] = -1; }
+  if (getenv("SHIELD_NO_KILLER")) use_killer = 0;
   int x = syl_id(argv[2]), t = atoi(argv[3]), all = argc > 4 && !strcmp(argv[4], "all");
   if (x < 0) { printf("{\"error\":\"unknown syllable\"}\n"); return 0; }
   Set u0; u0.n = 0;
