@@ -10,12 +10,34 @@ check(record, outdir)               → 검증기에서: 같은 파일을 verify
 """
 import hashlib
 import json
+import os
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 REPO = ROOT.parent
+BIN = HERE / 'bin'
+
+
+def _build():
+    """solver_v5·verify_v4를 저장소 소스(guopsaem_root)에서 shield/bin/에 컴파일한다(없을 때만)."""
+    import subprocess
+    BIN.mkdir(exist_ok=True)
+    g = REPO / 'guopsaem_root'
+    jobs = [(BIN / 'solver_v5', ['g++', '-O3', '-march=x86-64-v3', '-std=c++17', '-o', str(BIN / 'solver_v5'),
+                                 str(g / 'solver_v5' / 'solver_v5.cpp'), '-lz', '-pthread']),
+            (BIN / 'verify_v4', ['g++', '-O2', '-std=c++17', '-o', str(BIN / 'verify_v4'),
+                                 str(g / 'verifier_v4' / 'verify_v4.cpp'), '-lz'])]
+    for out, cmd in jobs:
+        if not out.exists():
+            subprocess.run(cmd, check=True)
+
+
+_build()
+os.environ.setdefault('SOLVER', str(BIN / 'solver_v5'))
+os.environ.setdefault('VERIFY_V4', str(BIN / 'verify_v4'))
+os.environ.setdefault('VERIFY_LOCK', str(BIN / 'verify.lock'))
 sys.path.insert(0, str(REPO / 'guopsaem_root' / 'verifier_v3'))
 sys.path.insert(0, str(REPO / 'guopsaem_root' / 'tools'))
 from verify_v3 import ModelV3  # noqa: E402
