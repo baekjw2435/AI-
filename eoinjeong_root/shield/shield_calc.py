@@ -291,13 +291,23 @@ def certificate(c, x, s, route_dir=None):
             'cycle': sorted(c.cyc), 'nodes': nodes}
 
 
-def attach_route_proofs(nodes, base_used, route_words, route_dir):
-    """쓴 루트 단어가 있는 루트 잎(why '루트전 계산…')마다 solver_v5 증명서를 만들고 verify_v4로 확인해 붙인다."""
+def attach_route_proofs(nodes, base_used, route_words, route_dir, jobs=4):
+    """쓴 루트 단어가 있는 루트 잎(why '루트전 계산…')마다 solver_v5 증명서를 만들고 verify_v4로 확인해 붙인다.
+    같은 (음절, 쓴 루트 단어)는 한 번만, jobs개를 동시에."""
     import route_proof
+    from concurrent.futures import ThreadPoolExecutor
+    route_proof.model()   # 스레드 전에 한 번 만든다
+    todo = {}
     for key, n in nodes.items():
         if n.get('leaf') and n['why'].startswith('루트전 계산'):
             ru = (frozenset(base_used) | frozenset(n['used'])) & route_words
-            rec = route_proof.prove(n['x'], ru, route_dir)
+            todo.setdefault((n['x'], ru), []).append(key)
+    with ThreadPoolExecutor(jobs) as ex:
+        recs = dict(zip(todo, ex.map(lambda k: route_proof.prove(k[0], k[1], route_dir), todo)))
+    for k, keys in todo.items():
+        rec = recs[k]
+        for key in keys:
+            n = nodes[key]
             n['route_proof'] = {'id': rec['id'], 'accepted': rec['accepted'], 'result': rec['result']}
             if rec['accepted'] and rec['result'] != n['v']:
                 print(f'경고: {key} 루트 계산기 {n["v"]}, 정식 증명 {rec["result"]}', file=sys.stderr)

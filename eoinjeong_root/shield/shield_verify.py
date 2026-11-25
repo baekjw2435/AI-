@@ -226,6 +226,17 @@ def main():
     if cert['root'] != ckey(q['syllable'], t0, frozenset()):
         problems.append('시작 자리가 질문과 다름')
     abundant_bad = 0
+    # 쓴 루트 단어가 있는 루트 잎의 증명서는 먼저 한꺼번에(동시에 4개) verify_v4로 확인해 둔다
+    from concurrent.futures import ThreadPoolExecutor
+    route_proof.model()
+    rtodo = {}
+    for k, n in nodes.items():
+        if n.get('leaf') and n['x'] in route and n['why'].startswith('루트'):
+            ru = frozenset((qused | frozenset(n['used'])) & route_words)
+            if ru:
+                rtodo.setdefault((n['x'], ru, n['v']), None)
+    with ThreadPoolExecutor(4) as ex:
+        rdone = dict(zip(rtodo, ex.map(lambda a: route_proof.check(a[0], a[1], a[2], ROUTE_DIR), rtodo)))
     for k, n in nodes.items():
         x, t, u = n['x'], n['t'], frozenset(n['used'])
         if k != ckey(x, t, u):
@@ -253,7 +264,7 @@ def main():
             continue
         if x in route and n['why'].startswith('루트'):
             if used & route_words:
-                ok, msg = route_proof.check(x, used & route_words, n['v'], ROUTE_DIR)
+                ok, msg = rdone.get((x, frozenset(used & route_words), n['v'])) or route_proof.check(x, used & route_words, n['v'], ROUTE_DIR)
                 leaves['루트(쓴 루트 단어 있음): solver_v5 증명서 verify_v4 수락' if ok else '루트(쓴 루트 단어 있음): 대조 안 됨'] += 1
                 if not ok:
                     unchecked.append(f'{k} ({msg})')
