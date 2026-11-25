@@ -14,6 +14,7 @@
 #define EOIN_NO_MAIN
 #include "../../site/solver/eoin_solver.c"
 #include <stdint.h>
+#include <unistd.h>
 
 /* ── 모형 ───────────────────────────────────────── */
 static int NW, NS, NV, NGR;
@@ -591,11 +592,13 @@ static Res value(int x, int s, const Set *used) {
   return r;
 }
 
+static FILE *OUT;   /* JSON을 쓰는 곳(기본 stdout, 나눠 돌리기에서는 수마다 파일) */
+#define PUTC(c) fputc((c), OUT)
 /* ── JSON 출력 ─────────────────────────────────── */
 static void js(const char *s) {
-  putchar('"');
-  for (; *s; s++) { if (*s == '"' || *s == '\\') putchar('\\'); putchar(*s); }
-  putchar('"');
+  PUTC('"');
+  for (; *s; s++) { if (*s == '"' || *s == '\\') PUTC('\\'); PUTC(*s); }
+  PUTC('"');
 }
 static const char *vstr(int v) { return v == 1 ? "W" : v == 0 ? "L" : "?"; }
 static void why_str(const Res *r, char *buf, size_t n) {
@@ -613,20 +616,20 @@ static void why_str(const Res *r, char *buf, size_t n) {
   }
 }
 static void key_str(int y, int t, const Set *u) {
-  printf("\"%s|%d|", sstr[y], t);
-  for (int i = 0; i < u->n; i++) { if (i) putchar(','); fputs(wstr[u->w[i]], stdout); }
-  putchar('"');
+  fprintf(OUT, "\"%s|%d|", sstr[y], t);
+  for (int i = 0; i < u->n; i++) { if (i) PUTC(','); fputs(wstr[u->w[i]], OUT); }
+  PUTC('"');
 }
 
 /* 판정 근거 자리 모으기(Python certificate와 같은 순회) */
 typedef struct { int y, t; Set u; } Todo;
 static Map cert_map;
-static void certificate(int x, int s) {
+static void certificate(int x, int s, const Set *u0) {
   Todo *todo = xm(sizeof(Todo) * 1024); int cap = 1024, nt = 0, first = 1;
-  todo[nt].y = x; todo[nt].t = s; todo[nt].u.n = 0; nt++;
+  todo[nt].y = x; todo[nt].t = s; todo[nt].u = *u0; nt++;
   char buf[2048];
   static Choice ch[4096];
-  printf("\"nodes\":{");
+  fprintf(OUT, "\"nodes\":{");
   while (nt) {
     Todo it = todo[--nt];
     int key[MAXU + 3]; key[0] = 9; key[1] = it.y; key[2] = it.t; memcpy(key + 3, it.u.w, sizeof(int) * it.u.n);
@@ -634,33 +637,33 @@ static void certificate(int x, int s) {
     if (*slot >= 0) continue;
     *slot = 1;
     Res r = value(it.y, it.t, &it.u);
-    if (!first) putchar(',');
+    if (!first) PUTC(',');
     first = 0;
     key_str(it.y, it.t, &it.u);
-    printf(":{\"x\":"); js(sstr[it.y]); printf(",\"t\":%d,\"used\":[", it.t);
-    for (int i = 0; i < it.u.n; i++) { if (i) putchar(','); js(wstr[it.u.w[i]]); }
+    fprintf(OUT, ":{\"x\":"); js(sstr[it.y]); fprintf(OUT, ",\"t\":%d,\"used\":[", it.t);
+    for (int i = 0; i < it.u.n; i++) { if (i) PUTC(','); js(wstr[it.u.w[i]]); }
     why_str(&r, buf, sizeof buf);
-    printf("],\"v\":\"%s\",\"why\":", vstr(r.v)); js(buf);
-    if (it.t == 0) printf(",\"leaf\":true");
+    fprintf(OUT, "],\"v\":\"%s\",\"why\":", vstr(r.v)); js(buf);
+    if (it.t == 0) fprintf(OUT, ",\"leaf\":true");
     else if (r.v == 1) {
       Set cu; child_used(&it.u, r.ww, &cu);
-      printf(",\"word\":"); js(wstr[r.ww]); printf(",\"child\":"); key_str(r.wy, it.t - 1, &cu);
+      fprintf(OUT, ",\"word\":"); js(wstr[r.ww]); fprintf(OUT, ",\"child\":"); key_str(r.wy, it.t - 1, &cu);
       if (nt + 1 >= cap) { cap *= 2; todo = realloc(todo, sizeof(Todo) * cap); }
       todo[nt].y = r.wy; todo[nt].t = it.t - 1; todo[nt].u = cu; nt++;
     } else if (r.v == 0) {
       int n = choices(it.y, it.t, &it.u, ch, 4096);
-      printf(",\"words\":[");
-      for (int i = 0; i < n; i++) { if (i) putchar(','); js(wstr[ch[i].w]); }
-      putchar(']');
+      fprintf(OUT, ",\"words\":[");
+      for (int i = 0; i < n; i++) { if (i) PUTC(','); js(wstr[ch[i].w]); }
+      PUTC(']');
       for (int i = 0; i < n; i++) {
         Set cu; child_used(&it.u, ch[i].w, &cu);
         if (nt + 1 >= cap) { cap *= 2; todo = realloc(todo, sizeof(Todo) * cap); }
         todo[nt].y = ch[i].y; todo[nt].t = it.t - 1; todo[nt].u = cu; nt++;
       }
     }
-    putchar('}');
+    PUTC('}');
   }
-  printf("}");
+  fprintf(OUT, "}");
   free(todo);
 }
 
@@ -692,28 +695,82 @@ static int syl_id(const char *s) {
   return -1;
 }
 
-/* usage: shield_engine MODEL SYLLABLE T [all]
+/* usage: shield_engine MODEL SYLLABLE T [all | list | part I,J,K OUTDIR]
  *   T = 받은 쪽의 보호막. all이면 이기는 수를 찾은 뒤에도 첫 자리의 모든 수를 분류. */
 int main(int argc, char **argv) {
   if (argc < 4) { fprintf(stderr, "usage: shield_engine MODEL SYLLABLE T [all]\n"); return 2; }
+  OUT = stdout;
   load_model(argv[1]);
   alloc_work();
   for (int a = 0; a < 64; a++) for (int k = 0; k < NKILL; k++) { kill_y[a][k] = -1; kill_w[a][k] = -1; }
   if (getenv("SHIELD_NO_KILLER")) use_killer = 0;
   int x = syl_id(argv[2]), t = atoi(argv[3]), all = argc > 4 && !strcmp(argv[4], "all");
-  if (x < 0) { printf("{\"error\":\"unknown syllable\"}\n"); return 0; }
+  if (x < 0) { fprintf(OUT, "{\"error\":\"unknown syllable\"}\n"); return 0; }
   Set u0; u0.n = 0;
+  if (argc > 4 && !strcmp(argv[4], "list")) {
+    /* 첫 자리(보호막 t에서 x를 받음)의 수 목록: 나눠 돌리기용 */
+    static Choice cl[4096];
+    int n = choices(x, t, &u0, cl, 4096);
+    /* value()와 같은 순서(유망한 수부터)로 내보낸다. 번호 i는 choices 순서 그대로. */
+    Ord *o = xm(sizeof(Ord) * (n + 1));
+    for (int i = 0; i < n; i++) {
+      o[i].c = cl[i]; o[i].idx = i; o[i].y = cl[i].y;
+      if (t - 1 <= 0) { int lab = base_label(cl[i].y); o[i].n = 0;
+        o[i].a = lab == 0 ? 0 : lab == 1 ? 3 : sroute[cl[i].y] >= 0 ? (sroute[cl[i].y] == 0 ? 1 : 2) : 1; }
+      else { o[i].a = base_label(cl[i].y) == 0 ? 0 : 1; o[i].n = nchoice_at(cl[i].y, t - 1); }
+    }
+    qsort(o, n, sizeof(Ord), cmpord);
+    fprintf(OUT, "[");
+    for (int j = 0; j < n; j++) {
+      int i = o[j].idx;
+      Set cu; child_used(&u0, cl[i].w, &cu);
+      if (j) PUTC(',');
+      fprintf(OUT, "{\"i\":%d,\"end\":", i); js(sstr[cl[i].y]); fprintf(OUT, ",\"word\":"); js(wstr[cl[i].w]);
+      fprintf(OUT, ",\"child\":"); key_str(cl[i].y, t - 1, &cu); PUTC('}');
+    }
+    fprintf(OUT, "]\n");
+    return 0;
+  }
+  if (argc > 6 && !strcmp(argv[4], "part")) {
+    /* 정해 준 수만: 수마다 상대 자리(보호막 t-1)의 값과 그 판정 근거를 OUTDIR/move_<i>.json에 따로 쓴다.
+     * 같은 프로세스 안에서 앞 수의 파일에 이미 쓴 자리는 다시 쓰지 않는다(모두 합치면 빠짐없음). */
+    static Choice cl[4096];
+    int n = choices(x, t, &u0, cl, 4096);
+    char *list = strdup(argv[5]), *tok, path[4096], tmp[4200];
+    for (tok = strtok(list, ","); tok; tok = strtok(NULL, ",")) {
+      int i = atoi(tok);
+      if (i < 0 || i >= n) die("move index");
+      snprintf(path, sizeof path, "%s/move_%d.json", argv[6], i);
+      if (!access(path, F_OK)) continue;   /* 이미 끝난 수(다시 시작했을 때) */
+      Set cu; child_used(&u0, cl[i].w, &cu);
+      Res c = value(cl[i].y, t - 1, &cu);
+      snprintf(tmp, sizeof tmp, "%s.tmp", path);
+      OUT = fopen(tmp, "w");
+      if (!OUT) die("open move file");
+      char wb[2048]; why_str(&c, wb, sizeof wb);
+      fprintf(OUT, "{\"i\":%d,\"end\":", i); js(sstr[cl[i].y]); fprintf(OUT, ",\"word\":"); js(wstr[cl[i].w]);
+      fprintf(OUT, ",\"value\":\"%s\",\"why\":", vstr(c.v)); js(wb);
+      fprintf(OUT, ",\"child\":"); key_str(cl[i].y, t - 1, &cu); PUTC(',');
+      certificate(cl[i].y, t - 1, &cu);
+      fprintf(OUT, ",\"stats\":{\"positions\":%d,\"route_solves\":%ld}}\n", nvr, route_calls);
+      fclose(OUT);
+      OUT = stdout;
+      rename(tmp, path);
+      fprintf(stderr, "move %d %s %s -> %s\n", i, sstr[cl[i].y], wstr[cl[i].w], vstr(c.v));
+    }
+    return 0;
+  }
   Res r = value(x, t, &u0);
   char buf[2048];
   why_str(&r, buf, sizeof buf);
-  printf("{\"value\":\"%s\",\"why\":", vstr(r.v)); js(buf);
-  if (r.v == 1 && r.ww >= 0) { printf(",\"win\":["); js(sstr[r.wy]); putchar(','); js(wstr[r.ww]); putchar(']'); }
-  else printf(",\"win\":null");
+  fprintf(OUT, "{\"value\":\"%s\",\"why\":", vstr(r.v)); js(buf);
+  if (r.v == 1 && r.ww >= 0) { fprintf(OUT, ",\"win\":["); js(sstr[r.wy]); PUTC(','); js(wstr[r.ww]); PUTC(']'); }
+  else fprintf(OUT, ",\"win\":null");
   /* 첫 자리의 수 분류(Calc.classify) */
   int partial = r.v == 1 && r.ww >= 0 && !all;
   static Choice ch[4096];
   int n = choices(x, t, &u0, ch, 4096);
-  printf(",\"rows\":[");
+  fprintf(OUT, ",\"rows\":[");
   int firstrow = 1;
   for (int i = 0; i < n; i++) {
     if (partial && !(ch[i].y == r.wy && ch[i].w == r.ww)) continue;
@@ -721,25 +778,25 @@ int main(int argc, char **argv) {
     Res c = value(ch[i].y, t - 1, &cu);
     int wy = c.wy, ww = c.ww;
     if (ww < 0 && c.v == 1 && t - 1 <= 0) ww = win_at0(ch[i].y, &cu, &wy);
-    if (!firstrow) putchar(',');
+    if (!firstrow) PUTC(',');
     firstrow = 0;
-    printf("{\"end\":"); js(sstr[ch[i].y]); printf(",\"word\":"); js(wstr[ch[i].w]); printf(",\"words\":[");
+    fprintf(OUT, "{\"end\":"); js(sstr[ch[i].y]); fprintf(OUT, ",\"word\":"); js(wstr[ch[i].w]); fprintf(OUT, ",\"words\":[");
     if (ch[i].e >= 0) {
       int fw = 1, e = ch[i].e;
       for (int k = 0; k < me_n[e]; k++) {
         int w = mwords[me_off[e] + k];
         if (set_has(&u0, w) || tracked(w)) continue;
-        if (!fw) putchar(',');
+        if (!fw) PUTC(',');
         fw = 0; js(wstr[w]);
       }
     } else js(wstr[ch[i].w]);
     why_str(&c, buf, sizeof buf);
-    printf("],\"cont\":%d,\"value\":\"%s\",\"why\":", scont[ch[i].y], vstr(c.v)); js(buf);
-    printf(",\"winning_word\":");
-    if (ww >= 0) js(wstr[ww]); else printf("null");
-    putchar('}');
+    fprintf(OUT, "],\"cont\":%d,\"value\":\"%s\",\"why\":", scont[ch[i].y], vstr(c.v)); js(buf);
+    fprintf(OUT, ",\"winning_word\":");
+    if (ww >= 0) js(wstr[ww]); else fprintf(OUT, "null");
+    PUTC('}');
   }
-  printf("],\"blocked\":[");
+  fprintf(OUT, "],\"blocked\":[");
   int fb = 1;
   for (int e = sm_off[x]; e < sm_off[x] + sm_n[x]; e++) {
     int y = me_y[e];
@@ -747,19 +804,19 @@ int main(int argc, char **argv) {
     int any = 0;
     for (int k = 0; k < me_n[e]; k++) if (!set_has(&u0, mwords[me_off[e] + k])) any = 1;
     if (!any) continue;
-    if (!fb) putchar(',');
+    if (!fb) PUTC(',');
     fb = 0;
-    printf("["); js(sstr[y]); printf(",%d,[", scont[y]);
+    fprintf(OUT, "["); js(sstr[y]); fprintf(OUT, ",%d,[", scont[y]);
     int fw = 1;
-    for (int k = 0; k < me_n[e]; k++) { int w = mwords[me_off[e] + k]; if (set_has(&u0, w)) continue; if (!fw) putchar(','); fw = 0; js(wstr[w]); }
-    printf("]]");
+    for (int k = 0; k < me_n[e]; k++) { int w = mwords[me_off[e] + k]; if (set_has(&u0, w)) continue; if (!fw) PUTC(','); fw = 0; js(wstr[w]); }
+    fprintf(OUT, "]]");
   }
-  printf("],\"cycle\":[");
+  fprintf(OUT, "],\"cycle\":[");
   int fc = 1;
-  for (int i = 0; i < NS; i++) if (scyc[i]) { if (!fc) putchar(','); fc = 0; js(sstr[i]); }
-  printf("],");
-  certificate(x, t);
-  printf(",\"stats\":{\"positions\":%d,\"searched\":%ld,\"delta_sets\":%d,\"route_solves\":%ld,\"cycle_positions\":%d}}\n",
+  for (int i = 0; i < NS; i++) if (scyc[i]) { if (!fc) PUTC(','); fc = 0; js(sstr[i]); }
+  fprintf(OUT, "],");
+  certificate(x, t, &u0);
+  fprintf(OUT, ",\"stats\":{\"positions\":%d,\"searched\":%ld,\"delta_sets\":%d,\"route_solves\":%ld,\"cycle_positions\":%d}}\n",
          nvr, nodes_searched, nd, route_calls, ncv);
   return 0;
 }
