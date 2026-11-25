@@ -44,6 +44,23 @@ def route_binary():
     return out
 
 
+class Lite:
+    """C 엔진을 쓸 때 화면 출력에 필요한 것만(이을 수 있는 단어 수, 루트 단어)."""
+    def __init__(self, used=()):
+        self.full = Graph()
+        self.base_used = frozenset(used)
+        unknown = [w for w in self.base_used if w not in set(self.full.words)]
+        if unknown:
+            raise SystemExit(f'사전에 없는 단어: {unknown}')
+        self.route_words = set((ROOT / 'words_621.txt').read_text(encoding='utf-8').split())
+        self.cont_cache = {}
+
+    def cont(self, x):
+        if x not in self.cont_cache:
+            self.cont_cache[x] = self.full.cont(x)
+        return self.cont_cache[x]
+
+
 class Calc:
     def __init__(self, used=()):
         self.full = Graph()
@@ -274,6 +291,52 @@ def certificate(c, x, s, route_dir=None):
             'cycle': sorted(c.cyc), 'nodes': nodes}
 
 
+def attach_route_proofs(nodes, base_used, route_words, route_dir):
+    """쓴 루트 단어가 있는 루트 잎(why '루트전 계산…')마다 solver_v5 증명서를 만들고 verify_v4로 확인해 붙인다."""
+    import route_proof
+    for key, n in nodes.items():
+        if n.get('leaf') and n['why'].startswith('루트전 계산'):
+            ru = (frozenset(base_used) | frozenset(n['used'])) & route_words
+            rec = route_proof.prove(n['x'], ru, route_dir)
+            n['route_proof'] = {'id': rec['id'], 'accepted': rec['accepted'], 'result': rec['result']}
+            if rec['accepted'] and rec['result'] != n['v']:
+                print(f'경고: {key} 루트 계산기 {n["v"]}, 정식 증명 {rec["result"]}', file=sys.stderr)
+
+
+def engine_binary():
+    """C 엔진(engine/shield_engine.c)을 필요할 때 컴파일한다."""
+    src, out = HERE / 'engine' / 'shield_engine.c', HERE / 'bin' / 'shield_engine'
+    solver = ROOT / 'site' / 'solver' / 'eoin_solver.c'
+    if not out.exists() or out.stat().st_mtime < max(src.stat().st_mtime, solver.stat().st_mtime):
+        out.parent.mkdir(exist_ok=True)
+        subprocess.run(['gcc', '-O2', '-o', str(out), str(src)], check=True)
+    return out
+
+
+def run_c_engine(base_used, x, t, all_moves):
+    """C 엔진으로 계산. 반환: (값, 근거, 이기는 수, 수 분류 rows, 막힌 수 blocked, 증명서 자리들, 순환 음절, 통계)."""
+    import shield_export
+    mp = shield_export.model_path(base_used)
+    if not mp.exists():
+        shield_export.export(base_used, mp)
+    r = subprocess.run([str(engine_binary()), str(mp), x, str(t)] + (['all'] if all_moves else []),
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        raise SystemExit(f'C 엔진 오류: {r.stderr.strip()[-400:]}')
+    out = json.loads(r.stdout)
+    if 'error' in out:
+        raise SystemExit(f"C 엔진: {out['error']} ({x})")
+    rows = []
+    for m in out['rows']:
+        rows.append({'end': m['end'], 'word': m['word'], 'words': m['words'], 'cont': m['cont'],
+                     'result_for_mover': {'L': '이기는 수', 'W': '지는 수'}.get(m['value'], '미정'),
+                     'opponent': {'value': m['value'], 'why': m['why'], 'winning_word': m['winning_word']}})
+    rows.sort(key=lambda r: (r['result_for_mover'] != '이기는 수', r['end']))
+    blocked = {y: ws for y, _, ws in out['blocked']}
+    win = tuple(out['win']) if out['win'] else None
+    return out['value'], out['why'], win, rows, blocked, out['nodes'], out['cycle'], out['stats']
+
+
 def josa(word, a, b):
     """받침 있으면 a, 없으면 b (을/를, 은/는). a가 '으로'면 으로/로."""
     c = ord(word[-1]) - 0xAC00
@@ -296,10 +359,15 @@ def main():
     ap.add_argument('--json', action='store_true')
     ap.add_argument('--cert')
     ap.add_argument('--all', action='store_true', help='이기는 수를 찾은 뒤에도 나머지 수를 모두 분류(오래 걸릴 수 있음)')
+    ap.add_argument('--engine', choices=['c', 'py'], default='c', help='c: C 엔진(기본, 빠름), py: 파이썬 엔진(대조용)')
     a = ap.parse_args()
     if not 0 <= a.shield <= 12:
         raise SystemExit('보호막은 0~12만 계산합니다(기록하지 않는 단어가 바닥나지 않는다는 근거가 12수까지임).')
-    c = Calc([w.strip() for w in a.used.split(',') if w.strip()])
+    base_used = [w.strip() for w in a.used.split(',') if w.strip()]
+    if a.engine == 'py':
+        c = Calc(base_used)
+    else:
+        c = Lite(base_used)
     x, s = a.syllable, a.shield
     q = {'mode': a.mode, 'syllable': x, 'shield': s, 'used': a.used}
     t = max(0, s - 1) if a.mode == 'present' else s
@@ -316,13 +384,22 @@ def main():
                                                 'used': sorted(c.base_used), 'nodes': {}}, ensure_ascii=False),
                                     encoding='utf-8')
         return
-    v, why, win = c.value(x, t)
     # 패(모든 수가 짐)는 이미 모든 수를 본 결과라 분류가 공짜. 승은 이기는 수 하나로 확정되므로 --all일 때만 나머지를 본다.
-    partial = v == 'W' and win is not None and not a.all
-    rows, blocked = c.classify(x, t, only=win if partial else None)
-    if a.cert:
-        cert = certificate(c, x, t, route_dir=Path(a.cert + '.route'))
-        Path(a.cert).write_text(json.dumps(dict(cert, query=q), ensure_ascii=False), encoding='utf-8')
+    if a.engine == 'py':
+        v, why, win = c.value(x, t)
+        partial = v == 'W' and win is not None and not a.all
+        rows, blocked = c.classify(x, t, only=win if partial else None)
+        if a.cert:
+            cert = certificate(c, x, t, route_dir=Path(a.cert + '.route'))
+            Path(a.cert).write_text(json.dumps(dict(cert, query=q), ensure_ascii=False), encoding='utf-8')
+    else:
+        v, why, win, rows, blocked, nodes, cycle, stats = run_c_engine(c.base_used, x, t, a.all)
+        partial = v == 'W' and win is not None and not a.all
+        if a.cert:
+            attach_route_proofs(nodes, c.base_used, c.route_words, Path(a.cert + '.route'))
+            cert = {'format': 'shield-cert-2', 'root': f'{x}|{t}|', 'used': sorted(c.base_used), 'cycle': cycle,
+                    'nodes': nodes, 'engine': dict(stats, engine='c')}
+            Path(a.cert).write_text(json.dumps(dict(cert, query=q), ensure_ascii=False), encoding='utf-8')
     if a.json:
         print(json.dumps(dict(q, value_for_mover=v, why=why, moves=rows, blocked=blocked), ensure_ascii=False, indent=1))
         return

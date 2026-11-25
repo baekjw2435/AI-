@@ -28,6 +28,13 @@ python3 eoinjeong_root/shield/shield_verify.py 칩3.json
 - `--used 단어,단어` : 그 판에서 이미 쓴 단어.
 - `--cert 파일` : 판정 근거를 저장. `shield_verify.py`가 계산기 코드를 쓰지 않고 다시 확인합니다.
 
+## 엔진
+
+- 기본은 **C 엔진**(`engine/shield_engine.c`)입니다. 파이썬 엔진(`--engine py`)과 규칙·순서가 같고,
+  예시 19개 질문에서 판정 근거 자리가 하나하나까지 똑같았습니다(빠르기는 수십~수백 배).
+- C 엔진은 `shield_export.py`가 만든 모형 파일(`bin/engine_model_*.txt`, 사전·묶음·보호막 0 판정)을 읽습니다.
+  모형 파일과 실행 파일은 처음 쓸 때 자동으로 만들어집니다.
+
 ## 계산 방법
 
 - 보호막 1 이상: 한 수씩 실제로 둡니다. 이기는 쪽은 이기는 수 하나, 지는 쪽은 **낼 수 있는 모든 수**를 확인합니다.
@@ -53,7 +60,8 @@ python3 eoinjeong_root/shield/shield_verify.py 칩3.json
 
 ## 파일
 
-- `shield_calc.py` 계산기, `shield_verify.py` 검증기, `shield_core.py` 사전 그래프와 보호막 0 판정
+- `shield_calc.py` 계산기(화면·증명서), `shield_verify.py` 검증기, `shield_core.py` 사전 그래프와 보호막 0 판정
+- `engine/shield_engine.c` C 엔진, `shield_export.py` C 엔진용 모형 파일 만들기
 - `route_proof.py` 쓴 루트 단어가 있는 루트 자리를 solver_v5 + verify_v4로 확정(`bin/`에 자동 컴파일)
 - `route_value` 루트전 계산기(`site/solver/eoin_solver.c`, 사이트의 브라우저 계산과 같은 코드). 처음 쓸 때 자동으로 컴파일됩니다.
 - `build_shield_table.py`, `syllable_shield_table.tsv`, `attack_words_shield.tsv` 음절별·공격 단어별 보호막 표

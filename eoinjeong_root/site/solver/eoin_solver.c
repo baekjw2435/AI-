@@ -257,7 +257,7 @@ EXPORT int child_value(int g, u32 step) {
   return solve_from(tgt[g], work, step);
 }
 
-#ifdef NATIVE
+#if defined(NATIVE) && !defined(EOIN_NO_MAIN)
 /* 시험: model.txt(V G, 묶음마다 "src tgt full", 단어마다 묶음 번호)와 positions.txt(줄마다 "시작꼭짓점 기대값 n w1..wn")를 받아
  * 모든 국면의 값을 기대값과 맞춥니다. 기대값 -1은 비교하지 않고 값만 적습니다. */
 int main(int argc, char **argv) {
