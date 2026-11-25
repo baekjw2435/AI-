@@ -1,0 +1,30 @@
+{
+ "question": "보호막 12에서 ~템 제시",
+ "result": "제시한 쪽 승",
+ "verified": true,
+ "problems": 0,
+ "nodes": 1641540,
+ "leaves": {
+  "승: 공격 목록/제자리 단어로 증명": 1121341,
+  "루트(쓴 루트 단어 있음): solver_v5 증명서 verify_v4 수락": 24093,
+  "루트 확정 결과와 같음": 847,
+  "순환 음절: 직접 탐색으로 같음": 483
+ },
+ "certificate_json_sha256": "1681a775f9dc11aa058df160fe2b1d2e57306e0995d0c8113a78e1246d2225d3",
+ "certificate_json_gz_sha256": "096aefbb2deeab90ff0f8f98b9ab31f4030f73227377452a745a2b47b08a8d4d",
+ "route_tgz_sha256": "b2548a535d5d1bf53a7b37c0a6be0c100db600f487f085942cd75764bb8a0453",
+ "parts": {
+  "present_템_12.json.gz.part00": {
+   "bytes": 41943040,
+   "sha256": "2725c462e6d5fe9d5514809d46f5eaeca4070553b4a6af0e04375e67f033db75"
+  },
+  "present_템_12.json.gz.part01": {
+   "bytes": 3954540,
+   "sha256": "bab04e34981c669a26e27bc8f7eb8ce72f844ee148610cb21ba85234b6d1d2da"
+  },
+  "route.tgz.part00": {
+   "bytes": 3351289,
+   "sha256": "b2548a535d5d1bf53a7b37c0a6be0c100db600f487f085942cd75764bb8a0453"
+  }
+ }
+}
