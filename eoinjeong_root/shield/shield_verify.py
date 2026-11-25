@@ -113,6 +113,19 @@ def main():
             return route[y] == 'L' and not (used & route_words)
         return True
 
+    rmemo = {}
+
+    def route_formal(x, used):
+        """쓴 루트 단어가 있는 루트 음절: solver_v5 증명서를 (없으면 만들고) verify_v4 수락 조건 8개로 확인한 값, 아니면 None."""
+        ru = frozenset(used & route_words)
+        k = (x, ru)
+        if k not in rmemo:
+            d = Path(sys.argv[1] + '.route')
+            rec = route_proof.prove(x, ru, d)
+            ok = rec.get('result') in ('W', 'L') and route_proof.check(x, ru, rec['result'], d)[0]
+            rmemo[k] = rec['result'] if ok else None
+        return rmemo[k]
+
     def pw(x, used, d, back=None):
         """x를 받은 쪽이 이김을 짧게 증명: 공격 목록의 단어가 남아 있음, 확정 루트 승(쓴 루트 단어 없음),
         순환 음절이면 직접 탐색, 또는 제자리 단어나 방금 온 음절(back)로 되돌려 보내는 단어를 두면 상대가 짐(d수까지)."""
@@ -121,6 +134,8 @@ def main():
         if any(head_ok(h, used) for h in heads.get(x, set()) - used):
             return True
         if route.get(x) == 'W' and not (used & route_words):
+            return True
+        if x in route and used & route_words and route_formal(x, used) == 'W':
             return True
         if d > 0:
             for w in playable(x, used):
@@ -134,6 +149,8 @@ def main():
             return cyc(x, used) == 'L'
         if x in route and not (used & route_words):
             return route[x] == 'L'
+        if x in route and route_formal(x, used) == 'L':
+            return True
         return all(pw(w[-1], used | {w}, d - 1, back=x) for w in playable(x, used))
 
     cyc_memo = {}
