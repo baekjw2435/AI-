@@ -28,6 +28,19 @@ import shield_calc as sc  # noqa: E402
 import shield_export  # noqa: E402
 
 
+def load_heads(d):
+    """수 파일의 앞부분(결과)만 읽는다. 근거 자리(nodes)는 크니까 status에서는 안 읽는다."""
+    import re
+    out = {}
+    for f in sorted((d / 'moves').glob('move_*.json')):
+        with open(f, encoding='utf-8') as fh:
+            head = fh.read(4096)
+        m = re.match(r'\{"i":(\d+),"end":"([^"]*)","word":"([^"]*)","value":"([WL?])"', head)
+        if m:
+            out[int(m.group(1))] = {'i': int(m.group(1)), 'end': m.group(2), 'word': m.group(3), 'value': m.group(4)}
+    return out
+
+
 def load_moves(d):
     out = {}
     for f in sorted((d / 'moves').glob('move_*.json')):
@@ -78,7 +91,7 @@ def alive(pid):
 def cmd_status(a):
     d = Path(a.dir)
     meta = json.loads((d / 'meta.json').read_text(encoding='utf-8'))
-    moves = load_moves(d)
+    moves = load_heads(d)
     wins = [m for m in moves.values() if m['value'] == 'L']
     unknown = [m for m in moves.values() if m['value'] not in ('L', 'W')]
     running = [p for p in meta['pids'] if alive(p)]
