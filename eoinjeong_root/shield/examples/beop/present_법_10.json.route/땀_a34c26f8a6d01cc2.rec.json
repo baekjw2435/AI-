@@ -1,0 +1,27 @@
+{
+ "id": "땀_a34c26f8a6d01cc2",
+ "syllable": "땀",
+ "used_route_words": [
+  "갱내채굴",
+  "밑땀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007446,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "047fb87f50bb3381a5af02042c4f622fa06425cedba1062fbc6243daa66817e6",
+ "position_sha256": "a34c26f8a6d01cc2930ee28f1fb94160cb74af36f4b887af81e773970770e7ff",
+ "input_sha256": "701af35c1fb48f2c05a044a797d231fd15660f19ebd59c68a3adc670bc35d82e",
+ "proof_bytes": 8403
+}

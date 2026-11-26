@@ -1,0 +1,28 @@
+{
+ "id": "몬_eee413ff43d553e3",
+ "syllable": "몬",
+ "used_route_words": [
+  "갑상샘자극호르몬",
+  "몬드니켈",
+  "켈리몬"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002922,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6cc8d86bdb2495f423eab7f9b35b5160db954dc0d98282600e1e1e715031f693",
+ "position_sha256": "eee413ff43d553e3ce5d46372e7bb98bd3b0a9c9160a4dcc8d69110800d5e48a",
+ "input_sha256": "c52ed7da3d3704d128e6aa3a95a345af0b2851259327cb18b97485498355aaa6",
+ "proof_bytes": 1272
+}

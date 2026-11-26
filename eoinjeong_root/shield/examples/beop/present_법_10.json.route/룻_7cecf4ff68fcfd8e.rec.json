@@ -1,0 +1,26 @@
+{
+ "id": "룻_7cecf4ff68fcfd8e",
+ "syllable": "룻",
+ "used_route_words": [
+  "잎혀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001044,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b40f4df6e10341c7bb0432e8c26e6eb5c1c93b331179fc2e4af76506ac08f193",
+ "position_sha256": "7cecf4ff68fcfd8e61d71542f403c5a84603fdfccae09394c4e9fde729cc5563",
+ "input_sha256": "137f1f7b1182049ee30996cc4ca2c85d628ceaf39960552aed146becc775821e",
+ "proof_bytes": 785
+}

@@ -1,0 +1,27 @@
+{
+ "id": "멱_b7d4878fe541449a",
+ "syllable": "멱",
+ "used_route_words": [
+  "몬드니켈",
+  "켈리몬"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.034542,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e605222221d8c72c05059611fc74f678caf23f542ae6c990e9ddb2e3f5823933",
+ "position_sha256": "b7d4878fe541449a1e76d6c759539ed6503af2a25b845d8023a5a9adba10020a",
+ "input_sha256": "d015701739facc1c04014f1a0ce2606fc1ff3843807d744b47df79f3bb2e7c21",
+ "proof_bytes": 20833
+}

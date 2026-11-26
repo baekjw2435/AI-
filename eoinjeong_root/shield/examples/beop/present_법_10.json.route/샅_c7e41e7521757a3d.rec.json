@@ -1,0 +1,32 @@
+{
+ "id": "샅_c7e41e7521757a3d",
+ "syllable": "샅",
+ "used_route_words": [
+  "냐짱",
+  "잇샅",
+  "잎혀",
+  "즈브스킨",
+  "짱갈래즈",
+  "킨더초콜릿",
+  "혀끝에자개바람들었느냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007018,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "252e8c4c941683841e71683bdbce2573744c6261b8af412da826d233f8bd4258",
+ "position_sha256": "c7e41e7521757a3dd96f48975feee67ea180cddbbda005741eb9d3be77bf6b50",
+ "input_sha256": "3950798b87d480011a1e7247773d53b924428f35d056ea4d6d69c3b8d2944067",
+ "proof_bytes": 4325
+}

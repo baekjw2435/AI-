@@ -1,0 +1,29 @@
+{
+ "id": "을_63e45a1793e74dd9",
+ "syllable": "을",
+ "used_route_words": [
+  "권유법",
+  "법원검찰청복사골문화센터반달마을",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.017096,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d34f96ea77791fb8a2cb25f0f15def6c21d5b9e6dd3d55c54b9f8a2caad0705c",
+ "position_sha256": "63e45a1793e74dd911452056dfcdbbc05e39a701d6187837352a1bddd8816225",
+ "input_sha256": "8c60ff7d2930f27eb16b713f0698bd2d6beeaffbb87d5be0e8013f26e7b8a89b",
+ "proof_bytes": 8406
+}

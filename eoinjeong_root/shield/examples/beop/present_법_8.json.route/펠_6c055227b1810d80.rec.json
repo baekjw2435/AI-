@@ -1,0 +1,26 @@
+{
+ "id": "펠_6c055227b1810d80",
+ "syllable": "펠",
+ "used_route_words": [
+  "헴펠"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.017415,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f3dbdf216818aee48fa5411a1642a1a0a8363301a200f73cf99c12c78c027f9",
+ "position_sha256": "6c055227b1810d803ba1cda9b1e9109d224d1427d788c3bb348bd110b7f32029",
+ "input_sha256": "554ce39693a26a43779df0626b58665c344bca3a73fc74dd5b8fdf4cdd7acb1b",
+ "proof_bytes": 6437
+}

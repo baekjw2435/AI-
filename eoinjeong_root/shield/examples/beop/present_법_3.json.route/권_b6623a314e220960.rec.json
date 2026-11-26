@@ -1,0 +1,27 @@
+{
+ "id": "권_b6623a314e220960",
+ "syllable": "권",
+ "used_route_words": [
+  "법원읍",
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.029763,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1e9fa5875db75cc782d66bbb82ea4f9a7c0247022763df36e3d2a40e0caadcbb",
+ "position_sha256": "b6623a314e2209602b525cc94513dc2bf88af5e06a6ec575f46c089cf9543614",
+ "input_sha256": "74eb49168f7584f0c8f8b25db2693e22a6f289c9546c4cc62dc9edbde54a6df9",
+ "proof_bytes": 4863
+}

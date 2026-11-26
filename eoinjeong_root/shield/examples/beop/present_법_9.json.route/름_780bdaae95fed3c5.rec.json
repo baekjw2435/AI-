@@ -1,0 +1,30 @@
+{
+ "id": "름_780bdaae95fed3c5",
+ "syllable": "름",
+ "used_route_words": [
+  "샅바씨름",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿",
+  "툰드라피즈"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.003569,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5c69deff2fd5d9f8c7ddd0d0a130058e0b0bfc74b704239c8bb5b80fd9aecc5f",
+ "position_sha256": "780bdaae95fed3c52a172301a30770b5db6e09d49ba0f7bfea9e0e93ff2817eb",
+ "input_sha256": "0e2338187652bc920238e3615b853e6ce338b8c50fff26968146405047ff7e54",
+ "proof_bytes": 3768
+}

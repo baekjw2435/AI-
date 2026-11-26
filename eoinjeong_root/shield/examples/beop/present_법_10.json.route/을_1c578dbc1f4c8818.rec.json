@@ -1,0 +1,28 @@
+{
+ "id": "을_1c578dbc1f4c8818",
+ "syllable": "을",
+ "used_route_words": [
+  "겔렌데슈프링겐",
+  "샅흰검은말율",
+  "율현마을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006795,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "99a3059e098c00eb10d4f54ae798950a486c4e5361f27602bc777fc938d7a1ab",
+ "position_sha256": "1c578dbc1f4c88189da4e5f3c5a5ed03b5936c929a88fbfd11cab0e197e57881",
+ "input_sha256": "f3d94e4e1dd8702c2389c5da54299cd999c6e9a258e1725358050573fd04099d",
+ "proof_bytes": 2613
+}

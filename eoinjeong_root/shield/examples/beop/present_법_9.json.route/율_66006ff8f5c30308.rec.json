@@ -1,0 +1,30 @@
+{
+ "id": "율_66006ff8f5c30308",
+ "syllable": "율",
+ "used_route_words": [
+  "권리행사방해죄",
+  "읍권",
+  "읍읍",
+  "읍할읍",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.005451,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f2bb15ff14cf280c4b4e8603d68bfbc42e0fd713809b88afecb117062b6cd0da",
+ "position_sha256": "66006ff8f5c30308e1b05a61ef1698bf08bb82e7d27ec4a8bc67d841eb7f70fe",
+ "input_sha256": "ab44a359d008f67850263d5f62b6f3ce2a5d26de88f7d694cebf8afa3b21c076",
+ "proof_bytes": 1491
+}

@@ -1,0 +1,30 @@
+{
+ "id": "형_43c3028294a1f8f4",
+ "syllable": "형",
+ "used_route_words": [
+  "권삼득",
+  "득득",
+  "득죄",
+  "읍권",
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001901,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2b28d4a81c9e7da4f303121f0ab2cdc3127d9398d07640fd021b4536ec4f2daa",
+ "position_sha256": "43c3028294a1f8f49ca1530b4bdef570e9fa8de6ee60c8ac20f985be1007d63a",
+ "input_sha256": "aa1b0bbe2ff2e2201a64c83cb0fadcbb40d95a14d2e78f05a96625867201416c",
+ "proof_bytes": 1447
+}

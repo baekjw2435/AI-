@@ -1,0 +1,27 @@
+{
+ "id": "냐_ce7d0c53dc7e0fea",
+ "syllable": "냐",
+ "used_route_words": [
+  "잎혀",
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000993,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "ce7d0c53dc7e0fea9f3ec3b8614f4eca3407960cd7b9e9eb9bb6455a5862fa3e",
+ "input_sha256": "d58af9aacf6b800549a05f3ce586378cd0b1d1174350f05df3056685242e435d",
+ "proof_bytes": 799
+}

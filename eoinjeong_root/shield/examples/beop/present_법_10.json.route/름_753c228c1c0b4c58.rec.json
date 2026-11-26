@@ -1,0 +1,32 @@
+{
+ "id": "름_753c228c1c0b4c58",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "렌즈구름",
+  "잎혀",
+  "찍어먹는초코스틱",
+  "톡톡파워풀카가미네렌",
+  "틱톡",
+  "혀채찍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.025363,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "64af9dd991df344d0bfdc610eed1c159bbcae233f27a9b463a680dee02dc77ca",
+ "position_sha256": "753c228c1c0b4c5871ef6e081509e6699186e87b4d331ca9cf71ed564543f6ca",
+ "input_sha256": "8f7f95da7dc65ebe5abfc1e2eedb6dc445a99655b01147c940f643e7f2cc5990",
+ "proof_bytes": 9435
+}

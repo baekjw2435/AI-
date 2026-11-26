@@ -1,0 +1,32 @@
+{
+ "id": "몬_45157fdaba6444f3",
+ "syllable": "몬",
+ "used_route_words": [
+  "렌즈",
+  "잎혀",
+  "즈보우몬",
+  "찍어먹는초코스틱",
+  "톡톡파워풀카가미네렌",
+  "틱톡",
+  "혀채찍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001116,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f52c59ec39ca779750dd90c45ed50e11069b3f195e2847dc0aaf33d1196b2098",
+ "position_sha256": "45157fdaba6444f3cc7ebc29b1f6d79ac23a48301682d61aab53398ccc40cb5c",
+ "input_sha256": "59e30f8bba4773ab987905afeb32123041f51eb02d5b9901919d8ebfbf376d5f",
+ "proof_bytes": 755
+}

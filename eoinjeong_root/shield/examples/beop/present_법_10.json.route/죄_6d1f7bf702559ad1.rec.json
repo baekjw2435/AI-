@@ -1,0 +1,27 @@
+{
+ "id": "죄_6d1f7bf702559ad1",
+ "syllable": "죄",
+ "used_route_words": [
+  "득죄",
+  "잎혀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010352,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2ac16e379cc470e4ccb37780f7032bc2f0620190c2db55d32ef6399c650bbbf5",
+ "position_sha256": "6d1f7bf702559ad1df41fea1e9194b500a30e9ee3edb85784ca3566770cb7359",
+ "input_sha256": "7b51e99eff51ae4dfa3fc6959513fd119d7271947ac03fe456fe2dd249fa9423",
+ "proof_bytes": 8373
+}

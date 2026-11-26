@@ -1,0 +1,29 @@
+{
+ "id": "균_bfc6219472f2f0d4",
+ "syllable": "균",
+ "used_route_words": [
+  "균핵균",
+  "늠균",
+  "늠름",
+  "샅바씨름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009655,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "321c5c05a4a1825922f1b606083786ce536a4520608f279359f512b05b365a40",
+ "position_sha256": "bfc6219472f2f0d466cbffb258aaa4b2755d8cccfa7e4a5376a62fb1e93acb96",
+ "input_sha256": "11fe2453953a39d6e4d500c34e0a61829bf2dba15d29670e7c3bf5df87c29a4b",
+ "proof_bytes": 6898
+}

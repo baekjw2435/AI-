@@ -1,0 +1,28 @@
+{
+ "id": "렌_50945b404e5a472e",
+ "syllable": "렌",
+ "used_route_words": [
+  "몬드니켈",
+  "을지형",
+  "형태로만들어선물하고싶은마음카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.040949,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e017a73b34c12dbc2e2c32bda973d21ddc47feaabca4e1b25ec4fa3032144637",
+ "position_sha256": "50945b404e5a472ef119d0f687713f1332699d032b205b4961f16fa35d04d7cd",
+ "input_sha256": "7b8178390ad17d78e6b985f2ce3e48d0a8dabe2bea31e444a3260e1c825c0c32",
+ "proof_bytes": 15627
+}

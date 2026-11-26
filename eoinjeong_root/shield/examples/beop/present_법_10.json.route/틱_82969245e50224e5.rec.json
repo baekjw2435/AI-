@@ -1,0 +1,26 @@
+{
+ "id": "틱_82969245e50224e5",
+ "syllable": "틱",
+ "used_route_words": [
+  "쿵짝스틱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.025364,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "bd2d83ac3f0caf3ea9f2e6e4cb35fd6ae3a2eb7840a08829de1dabf4f9b673d8",
+ "position_sha256": "82969245e50224e59a364bf41ba7c48d8409532b18bada1977f90b04738c4d5a",
+ "input_sha256": "42779a13e89b3c05a6f65b78dc207995115d9b7b6a21ff9d04af592824002625",
+ "proof_bytes": 15796
+}

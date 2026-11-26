@@ -1,0 +1,29 @@
+{
+ "id": "름_779b4c5ff645cdc8",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "렌즈구름",
+  "렛츠인조이더무비카가미네렌",
+  "쵸콜렛"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.011822,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "64af9dd991df344d0bfdc610eed1c159bbcae233f27a9b463a680dee02dc77ca",
+ "position_sha256": "779b4c5ff645cdc8c90b04674e831ca5c651e6726e36a9c92f5df46b5bf7280e",
+ "input_sha256": "dce68e4b27bb6207daf5e2762d8159d5b21bfb7dd4510b82741fd891757b24cf",
+ "proof_bytes": 9435
+}

@@ -1,0 +1,32 @@
+{
+ "id": "샅_1ebe4a121e62848d",
+ "syllable": "샅",
+ "used_route_words": [
+  "렌즈터릿",
+  "잇샅",
+  "잎혀",
+  "찍어먹는초코스틱",
+  "톡톡파워풀카가미네렌",
+  "틱톡",
+  "혀채찍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005839,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9b478a65e42e52de45cc2b9a2e4c4224769295ce7631bb46cbc7cee994170993",
+ "position_sha256": "1ebe4a121e62848d3185072c9d0237f4e233c3b15fa738409e8eadb66c71e797",
+ "input_sha256": "68c72ec5fc77fa946e59cc6417d281e36791ffc4df0b2bc437891af6a2f8b901",
+ "proof_bytes": 4949
+}

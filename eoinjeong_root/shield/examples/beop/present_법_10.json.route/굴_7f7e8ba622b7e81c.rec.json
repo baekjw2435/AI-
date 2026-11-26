@@ -1,0 +1,31 @@
+{
+ "id": "굴_7f7e8ba622b7e81c",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "잎혀",
+  "찍어먹는초코스틱",
+  "톡톡파워풀카가미네렌",
+  "틱톡",
+  "혀채찍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00013,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "7f7e8ba622b7e81c0a4f410f922a0bea353890eb0aff871f3bd2682f47a45eaa",
+ "input_sha256": "b4041f1371c2a4689359bb4408680f012ac02b13f6941ae3bdb751ab14a339f0",
+ "proof_bytes": 124
+}

@@ -1,0 +1,28 @@
+{
+ "id": "득_9c56578e3098cd4f",
+ "syllable": "득",
+ "used_route_words": [
+  "권삼득",
+  "읍권",
+  "험득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.005074,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e52b764bea72202d7f5a902b4c8a4adcfa709b4e8b9adfc71ab9cb67c2db6ed7",
+ "position_sha256": "9c56578e3098cd4fbe11a099dd65266a4387827ff82305d56a2aacd7a364a8d0",
+ "input_sha256": "1ba0dd5da7204e9a5967d5c02f2738819bf6c094bcf47375f494b79f7e4e9971",
+ "proof_bytes": 1227
+}

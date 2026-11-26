@@ -1,0 +1,26 @@
+{
+ "id": "율_8f1422de32899440",
+ "syllable": "율",
+ "used_route_words": [
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00396,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "dd138ef7827e03943d94f313702bb107ec3fae6b00f9b410c90838f3d9be1946",
+ "position_sha256": "8f1422de32899440a840942f2604bad52de424daec6094a42964287f2c934b07",
+ "input_sha256": "a01d10fff8ff361a871d8f892cf1f836a097587c8c4ea8d3644b8c0032490281",
+ "proof_bytes": 2620
+}

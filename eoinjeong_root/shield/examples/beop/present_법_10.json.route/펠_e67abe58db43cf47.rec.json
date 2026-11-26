@@ -1,0 +1,26 @@
+{
+ "id": "펠_e67abe58db43cf47",
+ "syllable": "펠",
+ "used_route_words": [
+  "겔렌데슈프링겐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006989,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f3dbdf216818aee48fa5411a1642a1a0a8363301a200f73cf99c12c78c027f9",
+ "position_sha256": "e67abe58db43cf47a229528486adf4d6b8670443fc53af23ad1c96d0d323194b",
+ "input_sha256": "c7f90abd5dc6ed9bead44862b83aa58a5a9f24bd64d2c0f35daa62129f59eddd",
+ "proof_bytes": 6437
+}

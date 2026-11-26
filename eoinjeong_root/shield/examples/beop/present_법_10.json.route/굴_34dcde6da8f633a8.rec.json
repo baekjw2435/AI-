@@ -1,0 +1,28 @@
+{
+ "id": "굴_34dcde6da8f633a8",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "겔렌데슈프링겐",
+  "즈브스킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000135,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "34dcde6da8f633a894b73b271fe4ccb2567a6b223662fe85427fb6017e16474b",
+ "input_sha256": "838f7f3cade6d95e82c91d59a89757c6ece8376bb371dfb8bfd3ca3db0d943c0",
+ "proof_bytes": 124
+}

@@ -1,0 +1,27 @@
+{
+ "id": "밑_906df98e0b0be29a",
+ "syllable": "밑",
+ "used_route_words": [
+  "샅흰검은말율",
+  "잎밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002456,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a361afadc7f48444194bf53a4cb734abe424939bb1276bed175e71f6ad9e7b15",
+ "position_sha256": "906df98e0b0be29a1604851e44b09580dd059cb627ba93d74cdf867b4ba01ebe",
+ "input_sha256": "495c5420ec01ce5654195ed43b3b436ef782f0736fb7d7fd275b07e737a67309",
+ "proof_bytes": 2428
+}

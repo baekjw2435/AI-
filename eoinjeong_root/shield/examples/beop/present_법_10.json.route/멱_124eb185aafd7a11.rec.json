@@ -1,0 +1,26 @@
+{
+ "id": "멱_124eb185aafd7a11",
+ "syllable": "멱",
+ "used_route_words": [
+  "잎혀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.079538,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e6852ad0a1cccc1ea840c080855f3c994ed4ee6d8bc5350ce1f860bfb131bc00",
+ "position_sha256": "124eb185aafd7a11d8b98206f348ed6a891765221b3dc4e499430694e8b5c2bc",
+ "input_sha256": "1e5d3b35c03dd6061eebadcda553313a0f95f60159b0c340a7be196e06a1c3bf",
+ "proof_bytes": 21039
+}

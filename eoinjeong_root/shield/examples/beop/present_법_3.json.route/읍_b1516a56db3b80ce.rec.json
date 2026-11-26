@@ -1,0 +1,27 @@
+{
+ "id": "읍_b1516a56db3b80ce",
+ "syllable": "읍",
+ "used_route_words": [
+  "법원읍",
+  "읍읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.013877,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2d41bd67da226e3a2725dcd5c346d785fe635fb900e81fd77a126a8178a248c4",
+ "position_sha256": "b1516a56db3b80ce2f2b778cb77063156de99ec64a3e1532f4fc9b8d8526d975",
+ "input_sha256": "f1387b68cb769500c943e31da8e01293b46d686424694fe79212cdb62f08648b",
+ "proof_bytes": 4911
+}

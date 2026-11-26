@@ -1,0 +1,26 @@
+{
+ "id": "뽕_613cc842d13bd8a5",
+ "syllable": "뽕",
+ "used_route_words": [
+  "잎뽕"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.004852,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0bb61453dc069867d901e28d5a996572ea539f05e3dd51915a29737bcc1c2ad2",
+ "position_sha256": "613cc842d13bd8a569f4695404a6c588c2ad7c43f17eb18448fd198e007f1e43",
+ "input_sha256": "6af28a4598327ebb6c056b10e6fd3411b96a0b50f5d731941ba13174f2d06aaf",
+ "proof_bytes": 4234
+}

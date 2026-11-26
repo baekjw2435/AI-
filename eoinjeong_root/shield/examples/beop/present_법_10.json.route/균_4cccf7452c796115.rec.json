@@ -1,0 +1,29 @@
+{
+ "id": "균_4cccf7452c796115",
+ "syllable": "균",
+ "used_route_words": [
+  "겔렌데슈프링겐",
+  "균핵균",
+  "늠균",
+  "늠름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.023398,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7cb3c0ab15ce865aaa9962364900199587b26c32ce26754f8226a423786e049e",
+ "position_sha256": "4cccf7452c796115e80a6dd256dde450cee198825e2675c70e8dce385b06b884",
+ "input_sha256": "c1f1bcdf997b30110ef1e21e8e154308d3f6fd030748eb987418f284f6e62292",
+ "proof_bytes": 7539
+}

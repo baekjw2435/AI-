@@ -1,0 +1,32 @@
+{
+ "id": "을_7a405ba90d110a65",
+ "syllable": "을",
+ "used_route_words": [
+  "겐키드럭스토어즈",
+  "겔렌데슈프링겐",
+  "샅흰검은말율",
+  "율현마을",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000561,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "eff2a39631d99ab80a293daa03517d1017be510ab9996cd2136dda6346886aab",
+ "position_sha256": "7a405ba90d110a655f23fedbd4cbea7f8c38af46ee8d7becdc5575c9007c34a1",
+ "input_sha256": "318645b138cf1c86166b214f353bb1d9b695d759629a6c94115b87d59b3911cb",
+ "proof_bytes": 884
+}

@@ -1,0 +1,26 @@
+{
+ "id": "즈_509b1c21b00ffe8b",
+ "syllable": "즈",
+ "used_route_words": [
+  "룻스키즈"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.007318,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8961e0b6272d895c2ef556af960c0683c69b50c818401b58bd961d416fbd6647",
+ "position_sha256": "509b1c21b00ffe8b35e333950f10fbebc232ff7511eaaa32444fe4787ff7fb9e",
+ "input_sha256": "c3c78b53c2233b0845f489a897322301d663634ee329116df32bcc60e9a6d987",
+ "proof_bytes": 778
+}

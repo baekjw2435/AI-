@@ -1,0 +1,28 @@
+{
+ "id": "름_0a82a13539b37733",
+ "syllable": "름",
+ "used_route_words": [
+  "겔렌데슈프링겐",
+  "늠름",
+  "딩동댕지난여름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.024838,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "10ecb77a4fddd674471a7e113166005b97436bbcd7e06a9ccc0331ac5c883159",
+ "position_sha256": "0a82a13539b3773383dba7a8b16bfbdf9c790e726a75da1828d50f540bee332f",
+ "input_sha256": "6db033eca436f876b7189d94d77b2c162b0e5940a362f7923dfb6b546521352e",
+ "proof_bytes": 9898
+}

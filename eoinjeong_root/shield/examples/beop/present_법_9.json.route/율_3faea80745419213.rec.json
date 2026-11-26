@@ -1,0 +1,30 @@
+{
+ "id": "율_3faea80745419213",
+ "syllable": "율",
+ "used_route_words": [
+  "샅흰검은말율",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿",
+  "툰드라피즈"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000619,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3f33550d81baad0d34f444b6f79a6f93530b6865fc4fa2fd2c619defb9e4a36a",
+ "position_sha256": "3faea807454192139c963d1f4d4e84a8136c95ccde25140a1d4d2a95cfef13ba",
+ "input_sha256": "804a92257a1ffbe4df9ee1dccd5608204f2cf755c1484fd9241e0ea914b2df3a",
+ "proof_bytes": 893
+}

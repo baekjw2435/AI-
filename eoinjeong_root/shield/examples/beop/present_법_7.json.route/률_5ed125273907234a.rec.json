@@ -1,0 +1,28 @@
+{
+ "id": "률_5ed125273907234a",
+ "syllable": "률",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "샅바씨름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2e91538e2902d7fafbd07b989b2fb8f9872bfd464ad9326752d4df940ec2401d",
+ "position_sha256": "5ed125273907234a8b68913ab8a84c51fdd99fda8cf75d465f98c66d3bf202ab",
+ "input_sha256": "307bebb9091e613514d76d723a6d6c834523f98c9325f4c98a5e0199c924b23e",
+ "proof_bytes": 1266
+}

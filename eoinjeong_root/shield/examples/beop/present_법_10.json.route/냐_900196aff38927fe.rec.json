@@ -1,0 +1,28 @@
+{
+ "id": "냐_900196aff38927fe",
+ "syllable": "냐",
+ "used_route_words": [
+  "겔렌데슈프링겐",
+  "굴저냐",
+  "샅굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00508,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "900196aff38927fef60e7ac038865692f6e886b10df9b8c53b719426ec436f52",
+ "input_sha256": "778ec61cc3b631df89503602e214bf04faeea5c64dacfbcf8dcad7964045ab93",
+ "proof_bytes": 799
+}

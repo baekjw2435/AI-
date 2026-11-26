@@ -1,0 +1,26 @@
+{
+ "id": "멱_646502cede32b131",
+ "syllable": "멱",
+ "used_route_words": [
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001928,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6843d30f6fd1df9f51a4a1b61d85c4fe5eb67e2b196b3b71ff041984b7c1c3e5",
+ "position_sha256": "646502cede32b131ac439bf0aea5027a1142fb1cfb14c7358323788c3b0d6e5f",
+ "input_sha256": "b109e2ef5027fa573808cc3d294877e158da8b2ffb1c4514ffd4d025d8d84fcb",
+ "proof_bytes": 3213
+}

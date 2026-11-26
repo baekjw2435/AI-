@@ -1,0 +1,29 @@
+{
+ "id": "굴_6201f749046daaca",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "쇄석포도법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000133,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "6201f749046daacad98bb09addca7ca28b17a7dc289200f9789720cef9281e51",
+ "input_sha256": "7d46d36bb0fc5bba693c9eb401caa01b7cc982275d07ef9de9335f3cad06006f",
+ "proof_bytes": 124
+}

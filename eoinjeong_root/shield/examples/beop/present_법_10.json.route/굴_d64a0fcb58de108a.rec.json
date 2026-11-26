@@ -1,0 +1,31 @@
+{
+ "id": "굴_d64a0fcb58de108a",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "냐짱",
+  "잎혀",
+  "즈브스킨",
+  "짱갈래즈",
+  "혀끝에자개바람들었느냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000137,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "d64a0fcb58de108ab0d6066727b3740d8a0d1044b783d6eb40046078ced12991",
+ "input_sha256": "631bdac0e448a02525f86f6d6333f3903be62bdc8b2bb69943da82c1cc0dae7c",
+ "proof_bytes": 124
+}

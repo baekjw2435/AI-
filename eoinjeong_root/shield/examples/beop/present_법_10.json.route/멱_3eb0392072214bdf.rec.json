@@ -1,0 +1,26 @@
+{
+ "id": "멱_3eb0392072214bdf",
+ "syllable": "멱",
+ "used_route_words": [
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000498,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1ced5ad0e25c877c987d5c8e7be6a6e0feacc95662a2deaa928bb35931f4eee9",
+ "position_sha256": "3eb0392072214bdf5fbe135fe0d276205538b0995bb716f05486d051224bee93",
+ "input_sha256": "74195c125f6ae6458ead3eb2b0c962a4c7aa51bf60663a6adc6ec1a0aee48ebc",
+ "proof_bytes": 767
+}

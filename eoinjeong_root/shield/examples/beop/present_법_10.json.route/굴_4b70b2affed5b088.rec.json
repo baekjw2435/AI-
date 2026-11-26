@@ -1,0 +1,31 @@
+{
+ "id": "굴_4b70b2affed5b088",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "겐키드럭스토어즈",
+  "겔렌데슈프링겐",
+  "즈브스킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000166,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "4b70b2affed5b0883ad2726d66991659364b36dacfec14d8f4d28ef82c65e745",
+ "input_sha256": "601deeffab5276f6bdd744ec9af0e96bf84e52842effcf4b4fde2fde1a740560",
+ "proof_bytes": 124
+}

@@ -1,0 +1,26 @@
+{
+ "id": "궐_2b8b018f26d4cbdf",
+ "syllable": "궐",
+ "used_route_words": [
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000197,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c2d68739679980d5e79dcd796820f3403730286c92084f0a21284423dd37a1e2",
+ "position_sha256": "2b8b018f26d4cbdf698120e198babc50c32c4cbe220baf8df89c0a6639771c20",
+ "input_sha256": "175b644695c6b0bfe0019d4993696875203393c82e571ba29926ca0011917364",
+ "proof_bytes": 297
+}

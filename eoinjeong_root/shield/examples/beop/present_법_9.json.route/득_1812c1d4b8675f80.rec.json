@@ -1,0 +1,30 @@
+{
+ "id": "득_1812c1d4b8675f80",
+ "syllable": "득",
+ "used_route_words": [
+  "권삼득",
+  "득표율",
+  "율현마을",
+  "을종근로소득",
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000684,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0d92ca13ecb744703ee127cff59716a74b919c5384a73403e79c6a6e2e3646ad",
+ "position_sha256": "1812c1d4b8675f809549d7e5932265c40470b0747335aa6dc3ba2df27002a31f",
+ "input_sha256": "6de844f88cf6a25ac387c3a103a46f574fb8e740386d39fc01e5d63939ea0482",
+ "proof_bytes": 1055
+}
