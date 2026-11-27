@@ -23,14 +23,17 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parents[1] / 'guopsaem_root' / 'verifier_v3'))
 from verify_v3 import conv  # noqa: E402
+sys.path.insert(0, str(HERE))
+import shield_files as F  # noqa: E402  (끝말잇기/앞말잇기 자료: SHIELD_GAME)
 
-DICT = HERE / 'source' / '표준사전_어인정_전체단어.txt'
-ATTACK = HERE / 'source' / '공격단어_목록.txt'
+DICT = F.DICT
+ATTACK = F.ATTACK
 
 
 class Graph:
-    def __init__(self, dict_path=DICT, words=None):
+    def __init__(self, dict_path=None, words=None):
         if words is None:
+            dict_path = DICT if dict_path is None else dict_path
             words = [w.strip() for w in Path(dict_path).read_text(encoding='utf-8-sig').splitlines() if w.strip()]
         self.words = list(words)
         self.by_first = collections.defaultdict(list)
@@ -462,7 +465,8 @@ class StaticModel:
         return out
 
 
-def read_attack_list(path=ATTACK):
+def read_attack_list(path=None):
+    path = ATTACK if path is None else path
     out, cur = [], None
     for line in Path(path).read_text(encoding='utf-8-sig').splitlines():
         line = line.strip()

@@ -33,6 +33,8 @@ ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(ROOT.parent / 'guopsaem_root' / 'verifier_v3'))
 from shield_core import Graph, StaticModel  # noqa: E402
+import shield_files as F  # noqa: E402  (끝말잇기/앞말잇기 자료: SHIELD_GAME)
+from shield_files import show, show_why  # noqa: E402
 from verify_v3 import ModelV3  # noqa: E402
 
 
@@ -52,7 +54,7 @@ class Lite:
         unknown = [w for w in self.base_used if w not in set(self.full.words)]
         if unknown:
             raise SystemExit(f'사전에 없는 단어: {unknown}')
-        self.route_words = set((ROOT / 'words_621.txt').read_text(encoding='utf-8').split())
+        self.route_words = set(F.ROUTE_WORDS.read_text(encoding='utf-8').split())
         self.cont_cache = {}
 
     def cont(self, x):
@@ -72,10 +74,10 @@ class Calc:
         self.sm = StaticModel(self.g)
         self.cont_cache = {}
         self.succ_cache = {}
-        data = json.loads((ROOT / 'site' / 'data.json').read_text(encoding='utf-8'))
+        data = json.loads(F.ROUTE_DATA.read_text(encoding='utf-8'))
         self.route_syls = [s['s'] for s in data['syllables']]
         self.route_fresh = {s['s']: s['r'] for s in data['syllables']}
-        self.route_words = set((ROOT / 'words_621.txt').read_text(encoding='utf-8').split())
+        self.route_words = set(F.ROUTE_WORDS.read_text(encoding='utf-8').split())
         self.route_cache = {}
         self._route_model = None
         self.memo = {}
@@ -134,7 +136,7 @@ class Calc:
         k = (x, ru)
         if k not in self.route_cache:
             if self._route_model is None:
-                self._route_model = ModelV3((ROOT / 'words_621.txt').read_bytes(), 621)
+                self._route_model = ModelV3(F.ROUTE_WORDS.read_bytes(), F.N_ROUTE)
             m = self._route_model
             with tempfile.TemporaryDirectory() as d:
                 d = Path(d)
@@ -357,7 +359,7 @@ def josa(word, a, b):
 
 
 def fmt_words(ws, k=3):
-    return ', '.join(ws[:k]) + (f' 외 {len(ws) - k}개' if len(ws) > k else '')
+    return ', '.join(show(w) for w in ws[:k]) + (f' 외 {len(ws) - k}개' if len(ws) > k else '')
 
 
 def main():
@@ -384,13 +386,13 @@ def main():
     if a.mode == 'present' and c.cont(x) < s:
         # 규칙: ~X는 보호막이 (X로 이을 수 있는 단어 수) 이하일 때만 낼 수 있다. 낼 수 없으면 승패를 따지지 않는다.
         msg = (f'보호막 {s}에서 ~{josa(x, "을", "를")} 제시 → 제시할 수 없음\n'
-               f'  {josa(x, "으로", "로")} 시작하는 단어가 {c.cont(x)}개라서 ~{josa(x, "은", "는")} 보호막 {c.cont(x)} 이하에서만 낼 수 있습니다.')
+               f'  {josa(x, "으로", "로")} {F.CONT_WORD} 단어가 {c.cont(x)}개라서 ~{josa(x, "은", "는")} 보호막 {c.cont(x)} 이하에서만 낼 수 있습니다.')
         if a.json:
             print(json.dumps(dict(q, legal=False, cont=c.cont(x)), ensure_ascii=False, indent=1))
         else:
             print(msg)
         if a.cert:
-            Path(a.cert).write_text(json.dumps({'format': 'shield-cert-2', 'query': q, 'illegal': True, 'cont': c.cont(x),
+            Path(a.cert).write_text(json.dumps({'format': 'shield-cert-2', 'game': F.GAME, 'query': q, 'illegal': True, 'cont': c.cont(x),
                                                 'used': sorted(c.base_used), 'nodes': {}}, ensure_ascii=False),
                                     encoding='utf-8')
         return
@@ -401,7 +403,7 @@ def main():
         rows, blocked = c.classify(x, t, only=win if partial else None)
         if a.cert:
             cert = certificate(c, x, t, route_dir=Path(a.cert + '.route'))
-            Path(a.cert).write_text(json.dumps(dict(cert, query=q), ensure_ascii=False), encoding='utf-8')
+            Path(a.cert).write_text(json.dumps(dict(cert, query=q, game=F.GAME), ensure_ascii=False), encoding='utf-8')
     else:
         v, why, win, rows, blocked, nodes, cycle, stats = run_c_engine(c.base_used, x, t, a.all)
         partial = v == 'W' and win is not None and not a.all
@@ -409,14 +411,14 @@ def main():
             attach_route_proofs(nodes, c.base_used, c.route_words, Path(a.cert + '.route'))
             cert = {'format': 'shield-cert-2', 'root': f'{x}|{t}|', 'used': sorted(c.base_used), 'cycle': cycle,
                     'nodes': nodes, 'engine': dict(stats, engine='c')}
-            Path(a.cert).write_text(json.dumps(dict(cert, query=q), ensure_ascii=False), encoding='utf-8')
+            Path(a.cert).write_text(json.dumps(dict(cert, query=q, game=F.GAME), ensure_ascii=False), encoding='utf-8')
     if a.json:
-        print(json.dumps(dict(q, value_for_mover=v, why=why, moves=rows, blocked=blocked), ensure_ascii=False, indent=1))
+        print(json.dumps(dict(q, game=F.GAME, value_for_mover=v, why=why, moves=rows, blocked=blocked), ensure_ascii=False, indent=1))
         return
     if a.mode == 'present':
         print(f'보호막 {s}에서 ~{josa(x, "을", "를")} 제시')
         print(f'  상대는 보호막 {t}에서 {josa(x, "을", "를")} 받습니다.')
-        print(f'  판정: 제시한 쪽 {({"L": "승", "W": "패"}).get(v, "미정")}  ({why})')
+        print(f'  판정: 제시한 쪽 {({"L": "승", "W": "패"}).get(v, "미정")}  ({show_why(why)})')
         wins = [r for r in rows if r['result_for_mover'] == '이기는 수']
         loses = [r for r in rows if r['result_for_mover'] == '지는 수']
         if wins and partial:
@@ -425,18 +427,18 @@ def main():
             print(f'  패배 요인(상대의 이기는 응수) {len(wins)}가지:')
         if wins:
             for r in wins:
-                print(f"    - {fmt_words(r['words'])} → 내가 보호막 {max(0, t - 1)}에서 {josa(r['end'], '을', '를')} 받고 짐  [{r['opponent']['why']}]")
+                print(f"    - {fmt_words(r['words'])} → 내가 보호막 {max(0, t - 1)}에서 {josa(r['end'], '을', '를')} 받고 짐  [{show_why(r['opponent']['why'])}]")
         if loses:
             print(f'  상대가 내도 지는 응수 {len(loses)}가지:')
             for r in loses[:12]:
                 o = r['opponent']
-                ans = f" → 내가 {josa(o['winning_word'], '으로', '로')} 이김" if o['winning_word'] else ''
-                print(f"    - {fmt_words(r['words'], 2)}{ans}  [{o['why']}]")
+                ans = f" → 내가 {josa(show(o['winning_word']), '으로', '로')} 이김" if o['winning_word'] else ''
+                print(f"    - {fmt_words(r['words'], 2)}{ans}  [{show_why(o['why'])}]")
             if len(loses) > 12:
                 print(f'    … 외 {len(loses) - 12}가지')
         label = '상대가'
     else:
-        print(f'보호막 {s}에서 {josa(x, "을", "를")} 받음 → 받은 쪽 {({"W": "승", "L": "패"}).get(v, "미정")}  ({why})')
+        print(f'보호막 {s}에서 {josa(x, "을", "를")} 받음 → 받은 쪽 {({"W": "승", "L": "패"}).get(v, "미정")}  ({show_why(why)})')
         if partial:
             print('  (이기는 수 하나로 확정. 나머지 수의 분류는 --all)')
         for lab in ('이기는 수', '지는 수', '미정'):
@@ -445,7 +447,7 @@ def main():
                 print(f'  {lab} {len(rs)}가지:')
                 for r in rs[:15]:
                     o = r['opponent']
-                    tail = f" — 상대가 {josa(o['winning_word'], '으로', '로')} 이김" if o['winning_word'] else f"  [상대: {o['why']}]"
+                    tail = f" — 상대가 {josa(show(o['winning_word']), '으로', '로')} 이김" if o['winning_word'] else f"  [상대: {show_why(o['why'])}]"
                     print(f"    - {fmt_words(r['words'], 3)} (→{r['end']}){tail}")
                 if len(rs) > 15:
                     print(f'    … 외 {len(rs) - 15}가지')

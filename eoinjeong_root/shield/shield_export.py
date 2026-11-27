@@ -19,6 +19,7 @@ ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(ROOT.parent / 'guopsaem_root' / 'verifier_v3'))
 from shield_core import DICT, Graph, StaticModel  # noqa: E402
+import shield_files as F  # noqa: E402  (끝말잇기/앞말잇기 자료: SHIELD_GAME)
 from verify_v3 import ModelV3  # noqa: E402
 
 FORMAT = 'shield-engine-model-1'
@@ -26,7 +27,7 @@ FORMAT = 'shield-engine-model-1'
 
 def model_path(base_used):
     h = hashlib.sha256(json.dumps([FORMAT, sorted(base_used)], ensure_ascii=False).encode()).hexdigest()[:16]
-    return HERE / 'bin' / f'engine_model_{h}.txt'
+    return F.MODEL_DIR / f'engine_model_{h}.txt'
 
 
 def export(base_used=frozenset(), out=None):
@@ -35,11 +36,11 @@ def export(base_used=frozenset(), out=None):
     g = Graph(words=[w for w in full.words if w not in base_used]) if base_used else full
     sm = StaticModel(g)
     sm._base()
-    data = json.loads((ROOT / 'site' / 'data.json').read_text(encoding='utf-8'))
+    data = json.loads(F.ROUTE_DATA.read_text(encoding='utf-8'))
     route_fresh = {s['s']: s['r'] for s in data['syllables']}
-    route_words = set((ROOT / 'words_621.txt').read_text(encoding='utf-8').split())
+    route_words = set(F.ROUTE_WORDS.read_text(encoding='utf-8').split())
     cyc = {x for x in sm.recv if sm.label(x) is None and x not in route_fresh}
-    m = ModelV3((ROOT / 'words_621.txt').read_bytes(), 621)
+    m = ModelV3(F.ROUTE_WORDS.read_bytes(), F.N_ROUTE)
 
     words = sorted(g.words)
     wid = {w: i for i, w in enumerate(words)}
@@ -92,7 +93,7 @@ def export(base_used=frozenset(), out=None):
     bu = sorted(m.words.index(w) for w in base_used & route_words)   # 질문 전에 이미 쓴 루트 단어
     lines.append(' '.join(map(str, [len(bu)] + bu)))
     out = Path(out or model_path(base_used))
-    out.parent.mkdir(exist_ok=True)
+    out.parent.mkdir(parents=True, exist_ok=True)
     tmp = out.with_suffix('.tmp')
     tmp.write_text('\n'.join(lines) + '\n', encoding='utf-8')
     tmp.replace(out)

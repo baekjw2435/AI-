@@ -1,0 +1,6 @@
+# 저장 상태(계산 중간 파일)와 실행 파일은 저장소에 넣지 않습니다. 증명서(proof/)는 넣습니다.
+results/*/tt/
+results/verify.lock
+shield/bin/
+shield/work/
+__pycache__/

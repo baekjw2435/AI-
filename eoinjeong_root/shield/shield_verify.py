@@ -29,6 +29,7 @@ sys.path.insert(0, str(ROOT.parent / 'guopsaem_root' / 'verifier_v3'))
 from verify_v3 import conv  # noqa: E402  (규칙: 엔진 표준두음법칙)
 sys.path.insert(0, str(HERE))
 import route_proof  # noqa: E402  (verify_v4 실행과 수락 조건 확인만 씀)
+import shield_files as F  # noqa: E402  (끝말잇기/앞말잇기 자료: SHIELD_GAME)
 
 
 ROUTE_DIR = None
@@ -45,7 +46,11 @@ def main():
     ROUTE_DIR = Path((cert_path[:-3] if cert_path.endswith('.gz') else cert_path) + '.route')
     q = cert['query']
     qused = frozenset(w.strip() for w in q['used'].split(',') if w.strip())
-    words = [w.strip() for w in (HERE / 'source' / '표준사전_어인정_전체단어.txt').read_text(encoding='utf-8-sig').splitlines() if w.strip()]
+    if cert.get('game', 'end') != F.GAME:
+        print(json.dumps({'query': cert.get('query'), 'verified': False, 'problems': [
+            f"증명서는 {cert.get('game', 'end')} 게임인데 지금 자료는 {F.GAME} (SHIELD_GAME을 맞춰 주세요)"]}, ensure_ascii=False))
+        sys.exit(1)
+    words = [w.strip() for w in F.DICT.read_text(encoding='utf-8-sig').splitlines() if w.strip()]
     assert qused <= set(words) and set(cert['used']) == qused, 'used words'
     first_n = collections.Counter(w[0] for w in words)
     by_first = collections.defaultdict(list)
@@ -79,7 +84,7 @@ def main():
         g = (tuple(sorted(srcs_of[w[0]])), key(w[-1]))
         group[w] = g
         gcount[g] += 1
-    route_words = set((ROOT / 'words_621.txt').read_text(encoding='utf-8').split())
+    route_words = set(F.ROUTE_WORDS.read_text(encoding='utf-8').split())
 
     def tracked(w):
         if w in route_words:
@@ -94,7 +99,7 @@ def main():
 
     heads = collections.defaultdict(set)
     cur = None
-    for line in (HERE / 'source' / '공격단어_목록.txt').read_text(encoding='utf-8-sig').splitlines():
+    for line in F.ATTACK.read_text(encoding='utf-8-sig').splitlines():
         line = line.strip()
         m = re.match(r'^\[(.+)\]$', line)
         if m:
@@ -103,7 +108,7 @@ def main():
         m = re.match(r'^깊이\s*(\d+)\s*:\s*(.*)$', line)
         if m:
             heads[cur] |= {w.strip() for w in m.group(2).split(',') if w.strip()}
-    data = json.loads((ROOT / 'site' / 'data.json').read_text(encoding='utf-8'))
+    data = json.loads(F.ROUTE_DATA.read_text(encoding='utf-8'))
     route = {s['s']: s['r'] for s in data['syllables']}
 
     def playable(x, used):

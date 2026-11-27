@@ -18,6 +18,8 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 REPO = ROOT.parent
 BIN = HERE / 'bin'
+sys.path.insert(0, str(HERE))
+import shield_files as F  # noqa: E402  (끝말잇기/앞말잇기 자료: SHIELD_GAME)
 
 
 def _build():
@@ -43,8 +45,8 @@ sys.path.insert(0, str(REPO / 'guopsaem_root' / 'tools'))
 from verify_v3 import ModelV3  # noqa: E402
 import solve_common as sc  # noqa: E402
 
-DICT = ROOT / 'words_621.txt'
-NWORDS = 621
+DICT = F.ROUTE_WORDS
+NWORDS = F.N_ROUTE
 SECONDS = 60
 TT_MB = 512
 _model = None

@@ -1,0 +1,49 @@
+{
+ "dictionary": "standard_words.txt",
+ "dictionary_words": 291652,
+ "dictionary_sha256": "49b592739dd69a56e433d1238a46ad9cdcbc4ead31efd7bab20764bec040242f",
+ "sources": {
+  "공격단어_목록.txt": "2d4d7b1f6dda32d842dc9980da820af29909afcd97caf99e2f83f47c6345dcda",
+  "루트단어_음절1.txt": "74ad7baa1670a84325ab79b2b8c455d0f1a13208f238675cb2b4f9acf8c48c2e",
+  "루트단어_음절2.txt": "c249d93571c5638a7a31f349a500875adb36b1663a77256ab421134cc367d4e5",
+  "루트단어_짝.txt": "8cacd07b4961eb85fd5cabdd3f7d8fc60f80659b1338ac7b6cfc94c807318d7f"
+ },
+ "route_counts": {
+  "syllable_lines": 113,
+  "pair_lines": 104,
+  "pairs": 52,
+  "syllable_words": 430,
+  "pair_words": 104,
+  "words": 534
+ },
+ "attack": {
+  "syllables": 739,
+  "entries": 8273,
+  "distinct_words": 7147,
+  "depth1_entries": 4702,
+  "depth1_not_one_shot": []
+ },
+ "outputs": {
+  "reversed/표준사전_뒤집음.txt": "7133af395994e376b6843b6a920f4f81fe453d053e38363dbebee7d975c57f14",
+  "reversed/루트단어_뒤집음.txt": "a784c834f7b8bf8202f23d2e291a6d34323f5c37b0e80b468786c703514d0023",
+  "reversed/공격단어_뒤집음.txt": "839a0f8a3879ee253404184f95bc1dbf6141cb18483657c316463e3a9f50601f",
+  "words_534.txt": "1271450c11a0b20e793f4f74c3bd90039f3d2d0643fcd451ecc3ad5a9434b62b",
+  "syllables_113.txt": "89da9bd19ca445adf13e2c55661f4db3f34746b20a32a2b46d61a1b9d207554f"
+ },
+ "model_v3": {
+  "vertices": 121,
+  "groups": 458,
+  "shared_groups": 0
+ },
+ "pair_only_first_syllables": [
+  "둬",
+  "따",
+  "엠",
+  "잡",
+  "죄",
+  "쭝",
+  "척",
+  "훼",
+  "흉"
+ ]
+}

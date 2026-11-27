@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Solve and verify a list of positions of the 어인정 621-word dictionary.
 
-usage: run_positions.py PLAN.jsonl WORKDIR SECONDS TT_MB JOBS
+usage: run_positions.py PLAN.jsonl WORKDIR SECONDS TT_MB JOBS [DICT NWORDS]
+  DICT NWORDS  다른 루트 사전(기본 eoinjeong_root/words_621.txt 621). 예: 앞말잇기 apmal_root/words_534.txt 534
 
 PLAN.jsonl: one position per line, {"id": "R001", "initial_syllable": "갑", "history": [...]}.
 Every position is solved by itself from its full history (no result is copied from another position).
@@ -46,7 +47,10 @@ def sha(path):
 
 
 def main():
+    global DICT, NWORDS
     plan, work, seconds, ttmb, jobs = sys.argv[1:6]
+    if len(sys.argv) > 6:
+        DICT, NWORDS = Path(sys.argv[6]).resolve(), int(sys.argv[7])
     seconds, ttmb, jobs = float(seconds), int(ttmb), int(jobs)
     work = Path(work)
     for d in ('pos', 'in', 'proof', 'log', 'res', 'tt'):

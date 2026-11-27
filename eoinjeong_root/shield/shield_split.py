@@ -28,6 +28,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import shield_calc as sc  # noqa: E402
 import shield_export  # noqa: E402
+import shield_files as F  # noqa: E402  (끝말잇기/앞말잇기 자료: SHIELD_GAME)
 
 
 def load_heads(d):
@@ -66,7 +67,7 @@ def cmd_start(a):
                                      check=True).stdout)
     done = load_moves(d)
     parts = [[m['i'] for m in lst[k::a.parts] if m['i'] not in done] for k in range(a.parts)]
-    meta = {'mode': a.mode, 'syllable': a.syllable, 'shield': a.shield, 'used': a.used, 't': t, 'model': str(mp),
+    meta = {'game': F.GAME, 'mode': a.mode, 'syllable': a.syllable, 'shield': a.shield, 'used': a.used, 't': t, 'model': str(mp),
             'moves': lst, 'cycle': head['cycle'], 'parts': parts, 'hours': a.hours, 'pids': [],
             'started': time.strftime('%Y-%m-%d %H:%M:%S')}
     for k, idx in enumerate(parts):
@@ -112,6 +113,8 @@ def cmd_status(a):
 def cmd_finish(a):
     d = Path(a.dir)
     meta = json.loads((d / 'meta.json').read_text(encoding='utf-8'))
+    if meta.get('game', 'end') != F.GAME:
+        raise SystemExit(f"이 계산은 {meta.get('game', 'end')} 게임인데 지금 SHIELD_GAME은 {F.GAME}입니다.")
     moves = load_moves(d)
     x, t = meta['syllable'], meta['t']
     wins = [m for m in moves.values() if m['value'] == 'L']
@@ -137,7 +140,7 @@ def cmd_finish(a):
     lite = sc.Lite([w.strip() for w in meta['used'].split(',') if w.strip()])
     sc.attach_route_proofs(nodes, lite.base_used, lite.route_words, Path(a.cert + '.route'))
     q = {'mode': meta['mode'], 'syllable': x, 'shield': meta['shield'], 'used': meta['used']}
-    cert = {'format': 'shield-cert-2', 'root': root_key, 'used': sorted(lite.base_used), 'cycle': meta['cycle'],
+    cert = {'format': 'shield-cert-2', 'game': F.GAME, 'root': root_key, 'used': sorted(lite.base_used), 'cycle': meta['cycle'],
             'nodes': nodes, 'engine': {'engine': 'c', 'split': len(meta['parts'])}, 'query': q}
     Path(a.cert).write_text(json.dumps(cert, ensure_ascii=False), encoding='utf-8')
     res = {'present': {'L': '제시한 쪽 승', 'W': '제시한 쪽 패'}, 'receive': {'W': '받은 쪽 승', 'L': '받은 쪽 패'}}[meta['mode']][root['v']]
