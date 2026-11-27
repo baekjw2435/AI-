@@ -1,0 +1,31 @@
+{
+ "id": "득_9aa7b22121eef02f",
+ "syllable": "득",
+ "used_route_words": [
+  "갱도시험",
+  "득득",
+  "득첩",
+  "첩첩",
+  "험득",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00022,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "9aa7b22121eef02f52029e00e64b9089b3521e99771e2b0a3124cb05f89d006f",
+ "input_sha256": "fda5a592748cd42c5e934020f133740dea10ea8f52321eab136503d219d9fbf5",
+ "proof_bytes": 124
+}

@@ -1,0 +1,29 @@
+[
+ {
+  "part": 0,
+  "name": "갑~야",
+  "syllables": 40,
+  "books": 165,
+  "entries": 52445702,
+  "files": 248,
+  "mb": 210.3
+ },
+ {
+  "part": 1,
+  "name": "약~환",
+  "syllables": 49,
+  "books": 222,
+  "entries": 54636509,
+  "files": 302,
+  "mb": 216.2
+ },
+ {
+  "part": 2,
+  "name": "활~흥",
+  "syllables": 6,
+  "books": 9,
+  "entries": 8151140,
+  "files": 31,
+  "mb": 34.3
+ }
+]

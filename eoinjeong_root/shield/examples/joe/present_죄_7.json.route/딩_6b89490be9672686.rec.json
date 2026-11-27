@@ -1,0 +1,26 @@
+{
+ "id": "딩_6b89490be9672686",
+ "syllable": "딩",
+ "used_route_words": [
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.011967,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "19be17785bf25765636656a4526af51ea49bdf00f8c5be8a1f2e022b5984ab04",
+ "position_sha256": "6b89490be9672686c3a3c66f1828c04710c790ccfc3417bf8ca45862fe2950f7",
+ "input_sha256": "059cd909705fbb36556ec3959d431989ab820679e3027d85637acad3ee262e12",
+ "proof_bytes": 5465
+}

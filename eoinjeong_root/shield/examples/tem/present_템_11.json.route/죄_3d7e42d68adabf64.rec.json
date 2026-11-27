@@ -1,0 +1,28 @@
+{
+ "id": "죄_3d7e42d68adabf64",
+ "syllable": "죄",
+ "used_route_words": [
+  "갱도시험",
+  "득죄",
+  "험득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000645,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "16b5de1aa80128b65b4f8a94c45706bfbf2c31be0779c9ede85729f9fcd91f75",
+ "position_sha256": "3d7e42d68adabf64cf57959a542e59576d6c459527804e362e5f12a5b0e2100a",
+ "input_sha256": "cce218847be77a6f6697275bd40bed79fefcb47a8f73dad6fd01e5fca3dcc106",
+ "proof_bytes": 1239
+}

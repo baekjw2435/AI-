@@ -1,0 +1,28 @@
+{
+ "id": "멱_8b1c22cab62dff31",
+ "syllable": "멱",
+ "used_route_words": [
+  "죄상첨죄",
+  "죄첩",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003888,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1b947bfce816f07749480277d3b273a8667e4224a44cb2b8860b3e60c3dc8170",
+ "position_sha256": "8b1c22cab62dff31f26da94ca6123a9f377b0675c3126a9254ac8e67ef93a68b",
+ "input_sha256": "eef4d39c1eacb0770083d7b4a6eb4a3573823a9ab824c371d085871d3b6b6e7e",
+ "proof_bytes": 7119
+}

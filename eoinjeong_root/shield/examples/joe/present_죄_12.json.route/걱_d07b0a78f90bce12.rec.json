@@ -1,0 +1,26 @@
+{
+ "id": "걱_d07b0a78f90bce12",
+ "syllable": "걱",
+ "used_route_words": [
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000998,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "d07b0a78f90bce1249a8ae85c4d53de0e147c5d066907a865a307ff69cbb30bd",
+ "input_sha256": "18ed14957c15e731504f0262267bab6e72fe2107a58d52eb10d01195c2f01963",
+ "proof_bytes": 1271
+}

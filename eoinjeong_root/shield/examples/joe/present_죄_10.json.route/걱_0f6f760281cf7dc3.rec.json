@@ -1,0 +1,26 @@
+{
+ "id": "걱_0f6f760281cf7dc3",
+ "syllable": "걱",
+ "used_route_words": [
+  "갱생보호법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000762,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "0f6f760281cf7dc3c78a645d90811509eed7c47fa8f1c09d0fddaf41299499db",
+ "input_sha256": "0af6f41786a515827fdb2298a6339e671646fd9ab0020128f697d473b2de696c",
+ "proof_bytes": 1271
+}

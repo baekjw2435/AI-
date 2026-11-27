@@ -1,0 +1,29 @@
+{
+ "id": "름_b42a61377ac5311e",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "샅바씨름",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002463,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "88dff48f2430726c8e8cae640517fc7b04ff728062ce28da4f62561ba23d5e08",
+ "position_sha256": "b42a61377ac5311e59a0ed32a03eabf81e82c88e146153212599aed54aa11e2c",
+ "input_sha256": "7250a6348234128d32dd2c3c2dbc79e24667b2505a6949d12794a4b637db383a",
+ "proof_bytes": 3314
+}

@@ -1,0 +1,27 @@
+{
+ "id": "굉_626d6bad7503220f",
+ "syllable": "굉",
+ "used_route_words": [
+  "굉굉",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.0051,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "23c2967f526ddda64d2804e704c59c6e788a26a64d621bd9b90f7a05f5c75e66",
+ "position_sha256": "626d6bad7503220fc1a6f0c345b9d8bec08925d6c7855a011bd972a04c4b475b",
+ "input_sha256": "a4537000875410421f0998db6639077cb4adb35a70d3fd58458355890587ee47",
+ "proof_bytes": 1220
+}

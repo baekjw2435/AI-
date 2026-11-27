@@ -1,0 +1,28 @@
+{
+ "id": "득_51f09482bb223b2b",
+ "syllable": "득",
+ "used_route_words": [
+  "율현마을",
+  "을종근로소득",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002248,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c3193498bd3993e072c4ff87b304ba934f44260d590038cd28fe0effa21f1b7d",
+ "position_sha256": "51f09482bb223b2b562824dde5209270dcb1b8558d09226f1abe7fd8050cbd36",
+ "input_sha256": "f3c90549a1639761a2d30dbdcfd3931c93752bbd29bd2445f1b1fde295c46850",
+ "proof_bytes": 1817
+}

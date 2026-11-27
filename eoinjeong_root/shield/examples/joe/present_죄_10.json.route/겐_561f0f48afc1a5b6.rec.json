@@ -1,0 +1,29 @@
+{
+ "id": "겐_561f0f48afc1a5b6",
+ "syllable": "겐",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "율현마을",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000251,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "49aa8fd60753e7209cf4a50a919bb5f77c5fe1b3a2a5d42fb2f59e1d28398647",
+ "position_sha256": "561f0f48afc1a5b6ee0d98359c8d32fc22cfbec2e0d57f2ae0fb4a8ad7a8efcd",
+ "input_sha256": "fc2b5d1aa14dfedacb1a865d7a69040693de98cd850882cb9205ec167c9e4eb7",
+ "proof_bytes": 262
+}

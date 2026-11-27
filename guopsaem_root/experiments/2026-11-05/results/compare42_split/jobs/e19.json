@@ -1,0 +1,40 @@
+{
+ "endpoint": 19,
+ "vertex": "박",
+ "roots": [
+  "맥"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 16718848,
+  "child_gens": 42292501,
+  "tt_entries": 9088486,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 16718848,
+  "tt_replacements": 551804,
+  "seconds": 40.002865,
+  "pn": 1162,
+  "dn": 7541,
+  "best_group": 200,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 1,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.32299,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

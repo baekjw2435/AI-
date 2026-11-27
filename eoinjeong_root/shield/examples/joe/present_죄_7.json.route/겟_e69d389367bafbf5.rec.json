@@ -1,0 +1,27 @@
+{
+ "id": "겟_e69d389367bafbf5",
+ "syllable": "겟",
+ "used_route_words": [
+  "밑틀",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.0053,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "af013499a94bbd5a6c8688e9779e664cf6f17571337769d3f9417ecbf28fd952",
+ "position_sha256": "e69d389367bafbf5cc5cd31a958eedad37ce937c24bff584422216505618b3ed",
+ "input_sha256": "be83cec9bbd924cbb678f7079209e33dcb6c7cacab9c92a8a4f20e3aac087f74",
+ "proof_bytes": 4967
+}

@@ -1,0 +1,29 @@
+{
+ "id": "읍_3f5d6e8e28788a20",
+ "syllable": "읍",
+ "used_route_words": [
+  "득득",
+  "득첩",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000232,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "adf082ba69fd17e1229ec99af6d6cec2fa3d4b4caae0b95b614eb4c511a00545",
+ "position_sha256": "3f5d6e8e28788a20391da9c2cf7e75e7c5e47f09550362a3dfb8ba50824148e3",
+ "input_sha256": "03123bce1059e523932eb498ce6a7236f3edc6dacb51941a41a5c568b8da204e",
+ "proof_bytes": 285
+}

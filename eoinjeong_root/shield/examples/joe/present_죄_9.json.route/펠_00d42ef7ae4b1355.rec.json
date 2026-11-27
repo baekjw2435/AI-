@@ -1,0 +1,27 @@
+{
+ "id": "펠_00d42ef7ae4b1355",
+ "syllable": "펠",
+ "used_route_words": [
+  "죄기죄",
+  "죄첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.475335,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e0f7c12a0a44a890f2f8050208f4a508d99839b9630782b24baae6ac44312a6b",
+ "position_sha256": "00d42ef7ae4b13556b0c2e3ccfbfbf86fac6a8c4f5fa11081e053c3d2a1690bb",
+ "input_sha256": "dbf26555c457ac6a6edfb14398dde26f184a7d987f6e965a70c316936a668040",
+ "proof_bytes": 165860
+}

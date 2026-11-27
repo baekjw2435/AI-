@@ -1,0 +1,27 @@
+{
+ "id": "궐_c41f25fe00e7de7c",
+ "syllable": "궐",
+ "used_route_words": [
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000931,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e9da1cf1b5dc64b00df6e604dc10716077a9155cb14fc6f2cd6820e9e481764a",
+ "position_sha256": "c41f25fe00e7de7c2d900b4e4dc7cf78553905a160dd94bdf74e8509310c84ad",
+ "input_sha256": "82128518f56bc9262f0295fe33caef3dfa81ecc0904eee371bccec92d95cf253",
+ "proof_bytes": 1360
+}

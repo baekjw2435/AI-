@@ -1,0 +1,29 @@
+{
+ "id": "궐_2225cde7f9f4a314",
+ "syllable": "궐",
+ "used_route_words": [
+  "갑자기쪽지시험",
+  "쇄쇄",
+  "쇄자갑",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00105,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "58d283f863671c7db86e24c9fbd1e1f9c4a6d95cbbdd9005d5c6c497b18bd70d",
+ "position_sha256": "2225cde7f9f4a314382eef070279858cdfe16b9d12ddbfa6c206d78a5a452b3e",
+ "input_sha256": "ed4356c5c82acdd86ad917d131df4ecb45fd9f0add6d57fc76d8213f84275d11",
+ "proof_bytes": 1016
+}

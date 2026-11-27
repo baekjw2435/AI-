@@ -1,0 +1,130 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay8-v1:\" + id), first 999",
+ "eligible": 12,
+ "eligible_by_source": {
+  "식": 12
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "s01",
+   "id": "박/박학다식",
+   "syllable": "박",
+   "word": "박학다식",
+   "source": "식",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "s02",
+   "id": "군/군대식",
+   "syllable": "군",
+   "word": "군대식",
+   "source": "식",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "s03",
+   "id": "절/절식",
+   "syllable": "절",
+   "word": "절식",
+   "source": "식",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "s04",
+   "id": "급/급식",
+   "syllable": "급",
+   "word": "급식",
+   "source": "식",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "s05",
+   "id": "준/준공식",
+   "syllable": "준",
+   "word": "준공식",
+   "source": "식",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "s06",
+   "id": "직/직업의식",
+   "syllable": "직",
+   "word": "직업의식",
+   "source": "식",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "s07",
+   "id": "숙/숙식",
+   "syllable": "숙",
+   "word": "숙식",
+   "source": "식",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "s08",
+   "id": "학/학식",
+   "syllable": "학",
+   "word": "학식",
+   "source": "식",
+   "split": "tune",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "s09",
+   "id": "야/야식",
+   "syllable": "야",
+   "word": "야식",
+   "source": "식",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "s10",
+   "id": "편/편식",
+   "syllable": "편",
+   "word": "편식",
+   "source": "식",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "s11",
+   "id": "폭/폭식",
+   "syllable": "폭",
+   "word": "폭식",
+   "source": "식",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "s12",
+   "id": "증/증식",
+   "syllable": "증",
+   "word": "증식",
+   "source": "식",
+   "split": "final",
+   "root_form": "pair_cancelled",
+   "earlier_search_seconds": 0
+  }
+ ]
+}

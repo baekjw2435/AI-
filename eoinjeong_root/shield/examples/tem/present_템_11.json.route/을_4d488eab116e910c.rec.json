@@ -1,0 +1,31 @@
+{
+ "id": "을_4d488eab116e910c",
+ "syllable": "을",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "권착",
+  "쇄쇄",
+  "쇄심권",
+  "착한쿠키에게선물을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.02354,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f88927c0b39b0968f44799d0355d995d4287d143ee0bcfa80216f1a3cd3759a1",
+ "position_sha256": "4d488eab116e910c90d83c8044b0b5f257f5063d940955b3890ae245a1cfbf7b",
+ "input_sha256": "072d7fea895289985fa0467f7a5543a405a4fdf3c71fc1aceb7d9422dbd143a2",
+ "proof_bytes": 6782
+}

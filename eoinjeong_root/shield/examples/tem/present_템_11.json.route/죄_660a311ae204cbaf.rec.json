@@ -1,0 +1,29 @@
+{
+ "id": "죄_660a311ae204cbaf",
+ "syllable": "죄",
+ "used_route_words": [
+  "갱신청구권",
+  "권폄",
+  "득죄",
+  "험득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00122,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "12b0c31cccb4609dea6b888d4a6bfb7d7bd1f6a7fe21f436996d2ae818ec40e0",
+ "position_sha256": "660a311ae204cbaf1fe60c1240d129afdd156972adf6c8f32166cf549f37195e",
+ "input_sha256": "9a3632a2d0043fd16c9ff128639d8be517240ee954caa3316ebbee95c235f8d0",
+ "proof_bytes": 1215
+}

@@ -1,0 +1,30 @@
+{
+ "id": "멸_9fa2453d22223b0d",
+ "syllable": "멸",
+ "used_route_words": [
+  "득죄",
+  "뜸마을",
+  "뜸통뜸",
+  "을종근로소득",
+  "죄멸"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00053,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9bbb5c0d3a32bcd083f11da5d5bf5a88a369e4cd698f3c0c215857046b97f5b5",
+ "position_sha256": "9fa2453d22223b0d7dea44b8abbe67c9ee106fd317a6f9535937c36c0508ed09",
+ "input_sha256": "c1bc98208f18c4e64a7e40e62ea9eb20130a2b7da3f5e23625fdd3c2af910f7a",
+ "proof_bytes": 214
+}

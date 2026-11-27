@@ -1,0 +1,30 @@
+{
+ "id": "첩_30e5f586790fc2cb",
+ "syllable": "첩",
+ "used_route_words": [
+  "권삼득",
+  "득득",
+  "득죄",
+  "읍권",
+  "죄첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000213,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2475041634113036578341367876af7c2d4a9aef62fc5bbcc55673280e5471cd",
+ "position_sha256": "30e5f586790fc2cb4d3c64bb1492306804c548d7bf9e5f0229ea8fed0a9a6187",
+ "input_sha256": "b0166070e608b1ffb852d6c78c50591fc4fb46f51a539de9d4503e26aabd909b",
+ "proof_bytes": 151
+}

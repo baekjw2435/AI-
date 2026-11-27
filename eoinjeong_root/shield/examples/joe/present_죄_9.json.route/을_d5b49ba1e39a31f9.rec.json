@@ -1,0 +1,30 @@
+{
+ "id": "을_d5b49ba1e39a31f9",
+ "syllable": "을",
+ "used_route_words": [
+  "법원검찰청복사골문화센터반달마을",
+  "죄죄",
+  "죄첩",
+  "척추조정요법",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000477,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f1fb4446acdc4cdc526f3c4754f9a9d96c57b28add675deaa1b1e36d998977d5",
+ "position_sha256": "d5b49ba1e39a31f9b5b4155cc9bf3bc66a53d0b450270ced9da0006722b2a310",
+ "input_sha256": "6fa69fe28582d09b2ec3ac91e6aa53c32f0cdb763f75d7923db3f73f18823f34",
+ "proof_bytes": 473
+}

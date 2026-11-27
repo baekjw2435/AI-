@@ -1,0 +1,29 @@
+{
+ "id": "권_e101c8089e2157b1",
+ "syllable": "권",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.454707,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b6f7443be0b114d675e2abb8751e2d350eab41db9a5ac08d7cce3961feb7e506",
+ "position_sha256": "e101c8089e2157b156a22d8956f21b023d9cc965aeffb08c745ad9efa8bfaa6e",
+ "input_sha256": "5d1936b2874a4dd14244ac37ba373219da0c68aaf3f256fafd0685d1ab802dd8",
+ "proof_bytes": 184422
+}

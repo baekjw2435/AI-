@@ -1,0 +1,30 @@
+{
+ "id": "죄_f95c555e36a71c2c",
+ "syllable": "죄",
+ "used_route_words": [
+  "득죄",
+  "뜸대뜸",
+  "뜸마을",
+  "을종근로소득",
+  "죄기죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.003029,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "beaac6f0ae160d7c2151f9e37144894b26d6e329d5eb34623dc1e545e054064a",
+ "position_sha256": "f95c555e36a71c2c77c1d6a0c6e2e07656229ff223f16da80625e447a7ea8033",
+ "input_sha256": "6e6597b3fcec7470321c39f050a2bb3751f85b83b6871f54d2650e46458f4e4b",
+ "proof_bytes": 2917
+}

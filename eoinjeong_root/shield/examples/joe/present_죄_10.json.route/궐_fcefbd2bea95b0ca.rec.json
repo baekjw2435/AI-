@@ -1,0 +1,27 @@
+{
+ "id": "궐_fcefbd2bea95b0ca",
+ "syllable": "궐",
+ "used_route_words": [
+  "늠름",
+  "딩동댕지난여름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010841,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c98903be95ce9c820de15b0fac7fa10ffab0cc905b660563ffa040ffffb56945",
+ "position_sha256": "fcefbd2bea95b0caf00159ab0be0d7a4f018e74b7276a9fd5f0212c315c7e01f",
+ "input_sha256": "1101984c37458b62bfb50e4f746fff66c0a2679d5f659df5628d82c250367307",
+ "proof_bytes": 8418
+}

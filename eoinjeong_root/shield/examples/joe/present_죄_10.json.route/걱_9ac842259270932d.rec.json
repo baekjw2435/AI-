@@ -1,0 +1,29 @@
+{
+ "id": "걱_9ac842259270932d",
+ "syllable": "걱",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000201,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "666e6c88636a73cdb826ce1ea16ee0062a3501053809ea709cb73760f08e1d15",
+ "position_sha256": "9ac842259270932d4f93ff77a23a474f0c71c8c603de20ce4f31f2348f36d8cc",
+ "input_sha256": "ef18887e5d93785ffe251f49dd1ec585b1b0cc9e586183919a0781ac757f9309",
+ "proof_bytes": 308
+}

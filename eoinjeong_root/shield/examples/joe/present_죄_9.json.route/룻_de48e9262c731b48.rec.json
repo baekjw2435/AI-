@@ -1,0 +1,30 @@
+{
+ "id": "룻_de48e9262c731b48",
+ "syllable": "룻",
+ "used_route_words": [
+  "권폄",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000545,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f9fd9b688d2c6c8b918528d20af41de75120763d21204cf47aec0839dae7ae19",
+ "position_sha256": "de48e9262c731b481a11bd62ded0d373c9e6e36360afa22ce9a58aaa35fb5915",
+ "input_sha256": "f1b628db36f4888aadea3a454cabde911031385f54c4dc0a2a6093ebe1f95108",
+ "proof_bytes": 507
+}

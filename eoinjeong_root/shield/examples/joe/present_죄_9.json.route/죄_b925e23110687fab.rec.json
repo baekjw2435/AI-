@@ -1,0 +1,29 @@
+{
+ "id": "죄_b925e23110687fab",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000706,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c646a3e0a4f10b424389f0d94687c22d8b04632b61057f87ca5d329b5eb9202e",
+ "position_sha256": "b925e23110687fabbee4f57894cb2e1eb065efb2432026ad7dd834f4ad11623c",
+ "input_sha256": "9ff2a2bfe32faa42b1b0a5494ca707a81fb971ccb6880894b966966194e27398",
+ "proof_bytes": 685
+}

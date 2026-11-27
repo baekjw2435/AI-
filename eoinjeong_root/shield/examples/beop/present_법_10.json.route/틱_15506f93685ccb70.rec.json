@@ -1,0 +1,27 @@
+{
+ "id": "틱_15506f93685ccb70",
+ "syllable": "틱",
+ "used_route_words": [
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.231628,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "48ca2f174e8233cfa5c0da9c3e6f2574f7cb83e1d12e8826ab591620b662aa29",
+ "position_sha256": "15506f93685ccb709546c25ac933afd2156491d2240456a485be4ab17dac504d",
+ "input_sha256": "1856753231e5d97b5d4326eb5bfaf8beb5cf65f7bd754941a142f00dc230e176",
+ "proof_bytes": 163023
+}

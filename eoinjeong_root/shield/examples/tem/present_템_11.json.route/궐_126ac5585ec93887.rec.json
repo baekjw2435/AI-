@@ -1,0 +1,26 @@
+{
+ "id": "궐_126ac5585ec93887",
+ "syllable": "궐",
+ "used_route_words": [
+  "넨장맞을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.023226,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "86671fec3125da25b61cd6143a77fb114abfd7d13edd03b7c54061a5a5f1944b",
+ "position_sha256": "126ac5585ec9388701fc927388926139a6e410f4ac6fce668bb6c813a81fad4d",
+ "input_sha256": "531461bae182193370c7d3c9536f899abe48948c86d42292550c35652bbbcc66",
+ "proof_bytes": 7169
+}

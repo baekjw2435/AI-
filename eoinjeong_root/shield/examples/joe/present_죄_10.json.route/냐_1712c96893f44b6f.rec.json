@@ -1,0 +1,28 @@
+{
+ "id": "냐_1712c96893f44b6f",
+ "syllable": "냐",
+ "used_route_words": [
+  "냐짱",
+  "준치저냐",
+  "짱짱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000132,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "1712c96893f44b6f1733e329894cc664f93335c0a7a7b2dc81c5efe0e4bdc01a",
+ "input_sha256": "a739b5ab707d14e49f3b7e57811cb129b44a85d3c475e5934233d44abbaf6534",
+ "proof_bytes": 124
+}

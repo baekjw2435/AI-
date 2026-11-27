@@ -1,0 +1,31 @@
+{
+ "id": "몬_b8a34a558400a612",
+ "syllable": "몬",
+ "used_route_words": [
+  "득첩",
+  "렌즈",
+  "렛츠인조이더무비카가미네렌",
+  "즈보우몬",
+  "첩쾌",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00213,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f52c59ec39ca779750dd90c45ed50e11069b3f195e2847dc0aaf33d1196b2098",
+ "position_sha256": "b8a34a558400a612d31c9bf5adacfb08825a4ff108076f6f41344a8cc5b7ca5f",
+ "input_sha256": "4479ca9ec917a1b7ce379a7eebf787fad2f9dfa97d03cf98adba6544178b2cfe",
+ "proof_bytes": 755
+}

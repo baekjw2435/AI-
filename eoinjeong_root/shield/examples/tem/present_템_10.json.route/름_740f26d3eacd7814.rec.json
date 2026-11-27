@@ -1,0 +1,30 @@
+{
+ "id": "름_740f26d3eacd7814",
+ "syllable": "름",
+ "used_route_words": [
+  "벅스킨",
+  "샅바씨름",
+  "슴벅슴벅",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002488,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ebae0f25a600baeaf447d30762667f94971331aaeaf1ef7e3b84aab0aeee5d4c",
+ "position_sha256": "740f26d3eacd7814635af5176a555e8c9b0f16e9533dcb8aa85307df29559794",
+ "input_sha256": "b99b5db8e8c6002745edf3bf5dc3e7abc73b756c65fc8eabcf86dd800e663202",
+ "proof_bytes": 3432
+}

@@ -1,0 +1,30 @@
+{
+ "id": "쾌_670cee78e84c1e0f",
+ "syllable": "쾌",
+ "used_route_words": [
+  "득첩",
+  "뜸마을",
+  "을종근로소득",
+  "첩첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000274,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cb5b5dbb25f19ce27e95cae46eb2bb76bf2e4018637ca22ed5f65bf86891bf61",
+ "position_sha256": "670cee78e84c1e0f852ae20c556b7f2bacf55356866f1b393df79db1cc651c95",
+ "input_sha256": "abb92ac54c340ed4655052b49e50dcbbc0bcc471567fb403ea58ed02beb86dcf",
+ "proof_bytes": 172
+}

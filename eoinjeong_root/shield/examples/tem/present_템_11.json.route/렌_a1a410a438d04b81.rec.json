@@ -1,0 +1,29 @@
+{
+ "id": "렌_a1a410a438d04b81",
+ "syllable": "렌",
+ "used_route_words": [
+  "쇄소건즐",
+  "즐거움가득보물상자카가미네렌",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.017188,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "136b6d3469d6e29d8924bcaca677bdced7178dca386a049bff31622bbe3e5845",
+ "position_sha256": "a1a410a438d04b816f1a30a39c0e9d29b971e7749fbfb97bb7e802f0edd13f7b",
+ "input_sha256": "cddb345c427dfe882e3a0e1b174cc38037739fad62ccb9ad5ee52c6ac8ac7b96",
+ "proof_bytes": 11922
+}

@@ -1,0 +1,31 @@
+{
+ "id": "댁_5c49bd43627449ad",
+ "syllable": "댁",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000135,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "5c49bd43627449add3b12b28d006fd78c02a438a70341d19bcb1b1677c048db3",
+ "input_sha256": "98639f8ae05392fc07d6c52c4aec50f57287a2fdffa61e417cbe67301b146b08",
+ "proof_bytes": 124
+}

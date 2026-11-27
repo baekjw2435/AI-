@@ -1,0 +1,31 @@
+{
+ "id": "궐_124ab63d176f7b1e",
+ "syllable": "궐",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000141,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "124ab63d176f7b1ea1f4e1b29a50adde927fdf03aab3085a2992cc15e43514b8",
+ "input_sha256": "163d296519d09efd8d335e93f47785c9bf6f1b3c9dd6ade5930678548b29326a",
+ "proof_bytes": 124
+}

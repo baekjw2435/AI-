@@ -1,0 +1,26 @@
+{
+ "id": "을_940c2ed9d835b5a7",
+ "syllable": "을",
+ "used_route_words": [
+  "율현마을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.008654,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1ab3aa17698e636207b7b06acfabdc35d4639877ff1d66df252b49de9d3bb7fc",
+ "position_sha256": "940c2ed9d835b5a7feff911677211f81fb288243ebc374c19fbf880139dd9a9b",
+ "input_sha256": "0dd8ef2b02c0305a5dff526278078a286fee8ee108796f17ce253b32199ac733",
+ "proof_bytes": 2653
+}

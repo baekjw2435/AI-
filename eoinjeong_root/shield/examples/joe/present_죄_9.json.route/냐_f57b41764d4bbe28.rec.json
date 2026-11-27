@@ -1,0 +1,30 @@
+{
+ "id": "냐_f57b41764d4bbe28",
+ "syllable": "냐",
+ "used_route_words": [
+  "냐냐",
+  "냐냐냐냐냐냐냐",
+  "죄상가죄",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000241,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "962d8b172716df895dce7ed4bec2dfafbabaeaf131b5a34ad73189c1ad83b3f3",
+ "position_sha256": "f57b41764d4bbe28700289e003a73d36778dcb1da6d278bf6e52ed4f5ddcfcea",
+ "input_sha256": "fe7c6ddb88ff9e888b7478d72f8aa6224437c99465fe70c3fdb1246c419339f4",
+ "proof_bytes": 209
+}

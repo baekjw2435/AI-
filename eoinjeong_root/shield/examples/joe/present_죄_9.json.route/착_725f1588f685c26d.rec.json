@@ -1,0 +1,29 @@
+{
+ "id": "착_725f1588f685c26d",
+ "syllable": "착",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000134,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "725f1588f685c26d99ab5d0aee5985efc943ac115b15dd0694988c6bdb5c2526",
+ "input_sha256": "5be421ca2a04e81bdbf6570b26e83c64c7cacd43c4c4e79ef6c59a2cbab83696",
+ "proof_bytes": 124
+}

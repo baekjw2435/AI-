@@ -1,0 +1,28 @@
+{
+ "id": "준_8c500b177cab6a97",
+ "syllable": "준",
+ "used_route_words": [
+  "뜸마을",
+  "뜸통뜸",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001555,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "af1ea8cba2a440205d13463ee73aad9f498b5c63342812f46a0fc6dca5b233fe",
+ "position_sha256": "8c500b177cab6a97c313d679c8a7706934cdf91a304aad7ed74a50391ad8eb21",
+ "input_sha256": "63f6c551e870bc8470f543110d33447d1a633fc17a00b734ab5450b3dfe0e1db",
+ "proof_bytes": 805
+}

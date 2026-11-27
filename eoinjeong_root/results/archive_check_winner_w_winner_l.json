@@ -1,0 +1,21 @@
+{
+ "stages": [
+  "winner_w",
+  "winner_l"
+ ],
+ "checked_at": "2026-11-23 07:29:35 UTC",
+ "tags": [
+  "eoin621-proofs-r1",
+  "eoin621-proofs-r2-01",
+  "eoin621-proofs-r2-02"
+ ],
+ "files_needed": 2040,
+ "files_downloaded_same_sha256": 2040,
+ "files_differ_or_missing": [],
+ "positions": 44593,
+ "positions_reverified_from_download": 44593,
+ "positions_reverify_failed": [],
+ "download_wall_seconds": 70.9,
+ "reverify_wall_seconds": 208.5,
+ "reverify_verifier_seconds_sum": 702.5
+}

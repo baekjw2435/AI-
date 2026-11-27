@@ -1,0 +1,31 @@
+{
+ "id": "을_d7f087bb0d81f21c",
+ "syllable": "을",
+ "used_route_words": [
+  "멸종의바다속마을",
+  "섭험",
+  "죄멸",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00017,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "d7f087bb0d81f21cea1c7cd32441f07f4955edc2c8b2e598b1263686552c684f",
+ "input_sha256": "418873785e0edd81692d9c70dae48a139a53e24aceddd98bf1e861a665cfdd17",
+ "proof_bytes": 124
+}

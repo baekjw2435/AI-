@@ -1,0 +1,26 @@
+{
+ "id": "냐_476380c2f92a7bf1",
+ "syllable": "냐",
+ "used_route_words": [
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001024,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "952a49b4df82030389d55c36fb469733d15fda7fc090d17fffd7d2d6f3635974",
+ "position_sha256": "476380c2f92a7bf1f75637e3eaa5967cfb75cb724d7006809c166b61c63eeaaa",
+ "input_sha256": "c781f6ba1b6209b4e0407cb6c59e12da8a4dba1d676928e286342d248049a02b",
+ "proof_bytes": 794
+}

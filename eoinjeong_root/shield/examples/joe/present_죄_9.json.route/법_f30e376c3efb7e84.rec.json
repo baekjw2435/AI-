@@ -1,0 +1,31 @@
+{
+ "id": "법_f30e376c3efb7e84",
+ "syllable": "법",
+ "used_route_words": [
+  "섭험",
+  "율동법",
+  "죄율",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000149,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f30e376c3efb7e84be2222a855b6d10df86169803bc19b0f02d561691eb5ee19",
+ "input_sha256": "2275161c3ce6bb29d1a7fae4a2cc8d8d63b120582d2a1c71a430b13b5cff369e",
+ "proof_bytes": 124
+}

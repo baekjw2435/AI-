@@ -1,0 +1,30 @@
+{
+ "id": "균_5d899007be463524",
+ "syllable": "균",
+ "used_route_words": [
+  "늠균",
+  "늠름",
+  "샅바씨름",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.005874,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d54feff65806e4c6de48d80eac331efb04ccdc978f9d91581d16009390ac71c0",
+ "position_sha256": "5d899007be4635249c03d043dde7b88137e74a5e933c9ec70ae51d5d97dc1d28",
+ "input_sha256": "a32c4a172758b1c284cfa4223d49f06c229989b8b2c0b53bd774e306280cfd9f",
+ "proof_bytes": 2851
+}

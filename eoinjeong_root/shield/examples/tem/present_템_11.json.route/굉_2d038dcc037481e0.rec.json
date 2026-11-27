@@ -1,0 +1,29 @@
+{
+ "id": "굉_2d038dcc037481e0",
+ "syllable": "굉",
+ "used_route_words": [
+  "갱신청구권",
+  "겁나는얼굴",
+  "굉굉",
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001312,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "23c2967f526ddda64d2804e704c59c6e788a26a64d621bd9b90f7a05f5c75e66",
+ "position_sha256": "2d038dcc037481e0ced5f42c77b892bfa36f8cedab25cbdd16c2553ced4c7305",
+ "input_sha256": "12eb9a59fe0dbbba6400b31330c27da52b233af34f2dd265a98eeb3ba2cbfde0",
+ "proof_bytes": 1220
+}

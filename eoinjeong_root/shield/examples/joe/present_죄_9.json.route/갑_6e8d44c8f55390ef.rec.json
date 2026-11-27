@@ -1,0 +1,30 @@
+{
+ "id": "갑_6e8d44c8f55390ef",
+ "syllable": "갑",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.0002,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "6e8d44c8f55390efeab0315e0e12a4faba31340087ecf1bd6485b57132a986be",
+ "input_sha256": "bcdd688308edcd659dc36386909277c76edc4977925d8b5646775f9fabbb9aba",
+ "proof_bytes": 124
+}

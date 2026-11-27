@@ -1,0 +1,28 @@
+{
+ "id": "읍_b41b4cc961295e1c",
+ "syllable": "읍",
+ "used_route_words": [
+  "늠름",
+  "딩동댕지난여름",
+  "읍읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.02444,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "be6c36145f334cde67c3d03d86b39404090735bcd06418a7fe1ba6b0ee4de981",
+ "position_sha256": "b41b4cc961295e1c24554439ffab19e1c51825e842b9a673a03c26c33701f8c7",
+ "input_sha256": "cf6f62807f18293b0500ab9bf9676fbdee29e9c111b554c90b64579f9d57c112",
+ "proof_bytes": 9932
+}

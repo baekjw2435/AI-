@@ -1,0 +1,29 @@
+{
+ "id": "죄_b530b9dc6b629dd3",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "쇄쇄",
+  "읍권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000427,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e2924f74fd75d995ee46c1cd4eb4234d2569a9bb8819a66064c3f9da5f497783",
+ "position_sha256": "b530b9dc6b629dd368cd3a3dc5e0b8617f780d43ff0a493d58360d46431f6396",
+ "input_sha256": "803f5c6289c4513d4f2c7749a4811c835a0a9a7cb9e42a36db74b3dd0870c14d",
+ "proof_bytes": 535
+}

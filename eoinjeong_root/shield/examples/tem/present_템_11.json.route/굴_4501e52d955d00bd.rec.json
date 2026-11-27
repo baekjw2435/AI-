@@ -1,0 +1,27 @@
+{
+ "id": "굴_4501e52d955d00bd",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "헴펠"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000135,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "4501e52d955d00bd91b0fa9e3aa6c6d79d05daa9b3e3fe1edc98d03295d18103",
+ "input_sha256": "1e727cc610e499e8e1f38595ec333943a8d7dee93125a80a1672770b005902aa",
+ "proof_bytes": 124
+}

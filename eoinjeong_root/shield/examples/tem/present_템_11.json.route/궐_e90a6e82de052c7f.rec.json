@@ -1,0 +1,28 @@
+{
+ "id": "궐_e90a6e82de052c7f",
+ "syllable": "궐",
+ "used_route_words": [
+  "득첩",
+  "첩섭",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.012193,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5416a62814a25c2f1d2586da64d53c32c33d9152481fae1e3b900939d0a1cbad",
+ "position_sha256": "e90a6e82de052c7f3a096b64ee58c8c8a8f46099e0891c95fa712f0f873be8bf",
+ "input_sha256": "060d348d80c2f2a36d72a7b5d10622382666b97981ea7964ea420373ba93a713",
+ "proof_bytes": 6136
+}

@@ -1,0 +1,28 @@
+{
+ "id": "읍_bf4032e2affc8fe1",
+ "syllable": "읍",
+ "used_route_words": [
+  "읍읍",
+  "읍할읍",
+  "즈브스킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010099,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1301e73d79785df128f228e32465fad6c5b4226afffe9d55570f4a9489ebd936",
+ "position_sha256": "bf4032e2affc8fe1a9360852159b0a5ddd43025f7828b7f51b4c727ecfd23bbc",
+ "input_sha256": "8727a7abd7f409ebdd7fc9810db327eaa5dbcf133dcf97afd48a953ad6d3d166",
+ "proof_bytes": 5744
+}

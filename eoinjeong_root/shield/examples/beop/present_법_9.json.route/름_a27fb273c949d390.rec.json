@@ -1,0 +1,28 @@
+{
+ "id": "름_a27fb273c949d390",
+ "syllable": "름",
+ "used_route_words": [
+  "샅바씨름",
+  "읍읍",
+  "읍할읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.038715,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e0bbb5d1e1d7320d3dac9f656365c12bfedacc7d391f7a440b8c6a5b816cc38a",
+ "position_sha256": "a27fb273c949d3904cc0c083830222655802157e1e94c712b65396ace08d4fe5",
+ "input_sha256": "7c46016c35ab4c13c0e84e133a325d2191cb338d69145b6cf68da462cb49f86a",
+ "proof_bytes": 8683
+}

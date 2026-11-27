@@ -1,0 +1,28 @@
+{
+ "id": "궐_0ecc24b9ce8beb88",
+ "syllable": "궐",
+ "used_route_words": [
+  "갱도시험",
+  "겁나는얼굴",
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.011725,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "86671fec3125da25b61cd6143a77fb114abfd7d13edd03b7c54061a5a5f1944b",
+ "position_sha256": "0ecc24b9ce8beb888b97591815ab32b380431fd9142d8288db2f9a87e5e4b39a",
+ "input_sha256": "076621e2cc74affc768fde0c850268ae52c4ece29c558f7f8f835c9d80d4c70d",
+ "proof_bytes": 7169
+}

@@ -1,0 +1,26 @@
+{
+ "id": "돼_ef01a9a2eabab778",
+ "syllable": "돼",
+ "used_route_words": [
+  "즈브스킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.016073,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5c715e931911ce7a627303e4583a8440aff0486b01a54738d1ea5c0329081ceb",
+ "position_sha256": "ef01a9a2eabab77883fe87172bed9539d25549ea25f4186c9afa9a60e9c3ae2e",
+ "input_sha256": "5c197e4bc5adbe6b7368ef00e4424681a052687a4bfec00b1623f22806d38e39",
+ "proof_bytes": 11051
+}

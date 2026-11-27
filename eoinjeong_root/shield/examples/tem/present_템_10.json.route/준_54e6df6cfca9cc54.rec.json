@@ -1,0 +1,28 @@
+{
+ "id": "준_54e6df6cfca9cc54",
+ "syllable": "준",
+ "used_route_words": [
+  "뜸마을",
+  "을종근로소득",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000605,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d126fe11512ac2baa889fbeed787c45e8c49a9fe74845d5a42be9d2ea0b33362",
+ "position_sha256": "54e6df6cfca9cc5440f19985e8ac947eb422a56cee54a9863571a452a9a061d8",
+ "input_sha256": "7fb96a58e1b82900914d5de62db953b2081c7a339447a93489c9333bced5f6fe",
+ "proof_bytes": 338
+}

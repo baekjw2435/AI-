@@ -1,0 +1,28 @@
+{
+ "id": "멱_9caa26ebc9e1d194",
+ "syllable": "멱",
+ "used_route_words": [
+  "갱도시험",
+  "득첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.031064,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "05a873495bf380c70adef9f2892fb75c31fc1ea8b9f48d91032e4877fe195779",
+ "position_sha256": "9caa26ebc9e1d194ff254e3b8a3e6202dd50e4c589370ee68ed33faeca61ad07",
+ "input_sha256": "45f4a6e845ee9f972107a986f1f4b8970777f04fce36887bca5f56e5c2aad07a",
+ "proof_bytes": 20137
+}

@@ -1,0 +1,26 @@
+{
+ "id": "겟_fc362056076e1049",
+ "syllable": "겟",
+ "used_route_words": [
+  "갱생보호법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009586,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "40cef6df53c1d420f7ee6335bd5354240aec228006dab16a4778b43f7cd40b5f",
+ "position_sha256": "fc362056076e1049f1b8faac156ebff1fcc2fd9be6e3275e8fb7f39bcd54d6b5",
+ "input_sha256": "384866c251d4a3f8b432d41cb80972e89024d161ab4ede14d034b95c6ce5b52d",
+ "proof_bytes": 5292
+}

@@ -1,0 +1,30 @@
+{
+ "id": "을_dc0fb7c282cf8883",
+ "syllable": "을",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을",
+  "죄첩",
+  "첩음법",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000484,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "08c840a9983af98e3bd1e8cf4ccb5a44f209e540b4eabab7ee38d00f026b8242",
+ "position_sha256": "dc0fb7c282cf888374b40b3d16aa9fc8a820a31d3102a632733214eff2c76c1f",
+ "input_sha256": "c782aea489c50873ea259e1d0e2991fb12bfe52a1535617e2f921d797027850f",
+ "proof_bytes": 390
+}

@@ -1,0 +1,29 @@
+{
+ "id": "딩_cc76045d411ff02e",
+ "syllable": "딩",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000137,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "cc76045d411ff02e90204fe8bd2050b6e6276e5014a930f295da3f3ccec2071d",
+ "input_sha256": "0c1542d0accfc2d3ff3a1a749177546f8fb5dc1aab3bb735093a22bc6584582d",
+ "proof_bytes": 124
+}

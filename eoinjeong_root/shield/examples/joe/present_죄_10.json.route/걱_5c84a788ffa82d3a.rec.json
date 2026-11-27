@@ -1,0 +1,28 @@
+{
+ "id": "걱_5c84a788ffa82d3a",
+ "syllable": "걱",
+ "used_route_words": [
+  "즈브스킨",
+  "톤데모원더즈",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000779,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "5c84a788ffa82d3ad374cce3d4b7d3300cad5517d932c17d1ad48cf9be0346be",
+ "input_sha256": "6a763b88ca48c82c552abb3c58fb6e7994e26bda86838bdc10eb5cfda4abed01",
+ "proof_bytes": 1271
+}

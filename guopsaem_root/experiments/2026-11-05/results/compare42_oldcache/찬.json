@@ -1,0 +1,58 @@
+{
+ "syllable": "찬",
+ "members": [
+  "찬"
+ ],
+ "vertex": "찬",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 51520512,
+  "child_gens": 131418111,
+  "tt_entries": 16638118,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 51520512,
+  "tt_replacements": 23539646,
+  "seconds": 120.001557,
+  "pn": 1435,
+  "dn": 10189,
+  "best_group": 499,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16638118,
+  "tt_save_seconds": 1.457672,
+  "tt_save_error": "",
+  "proven": {
+   "proven_loaded": 8388608,
+   "proven_inserted": 8388608,
+   "proven_tt_used_after_load": 8334734,
+   "proven_load_seconds": 1.466538,
+   "proven_saved": 2686141,
+   "proven_skipped_small": 0,
+   "proven_skipped_loaded": 8038830,
+   "proven_save_seconds": 0.274087,
+   "proven_save_error": ""
+  },
+  "proven_merge": {
+   "read": 11074749,
+   "distinct": 11073672,
+   "written": 8388608
+  }
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

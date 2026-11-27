@@ -1,0 +1,31 @@
+{
+ "id": "땀_3b47686a143be0ad",
+ "syllable": "땀",
+ "used_route_words": [
+  "밑땀",
+  "섭험",
+  "죄밑",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000454,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "3b47686a143be0add9a2d8e050824a61979343b84a212c708c30c9765e821183",
+ "input_sha256": "5b41825f4a5a25175e97f3660d9a827a129e34ceafa325edce8357ae0a354fcb",
+ "proof_bytes": 124
+}

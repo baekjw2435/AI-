@@ -1,0 +1,27 @@
+{
+ "id": "겅_ac099d431f5b14ef",
+ "syllable": "겅",
+ "used_route_words": [
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000152,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8dff38ae154650608f8ebcbc77864a034e647f0fe8871536becdce12979b6c04",
+ "position_sha256": "ac099d431f5b14ef4b4f37ece37f1cd63b367a10b0a694c0f6d5a301d88c26f3",
+ "input_sha256": "783323c3fb4b46b6b5ddffc7e89917bdd41fe11b2e23c47ba06e5eed0cbe967c",
+ "proof_bytes": 194
+}

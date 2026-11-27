@@ -1,0 +1,28 @@
+{
+ "id": "틱_c6b693681d025c81",
+ "syllable": "틱",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "딩동댕지난여름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.007599,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d01270576540ff48992ad4e4f89a6a383adeefae7b010dd0979e54d588f31d5a",
+ "position_sha256": "c6b693681d025c81f7048d51daebe2bd4f05872af18ddf8291dd27930c1cd367",
+ "input_sha256": "e94c0f6453c8e7cf04240587516fb9c1cefed85b60d480f0bc22d66989f8f25d",
+ "proof_bytes": 2854
+}

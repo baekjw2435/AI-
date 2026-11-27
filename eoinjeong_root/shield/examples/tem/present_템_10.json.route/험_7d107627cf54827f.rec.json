@@ -1,0 +1,28 @@
+{
+ "id": "험_7d107627cf54827f",
+ "syllable": "험",
+ "used_route_words": [
+  "권삼득",
+  "읍권",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001553,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8b716b69823474a81ec393c707ece0607df53c6d97acde8c0baa86f1bd657a03",
+ "position_sha256": "7d107627cf54827f32e2918ef8d169680ae90cf4153b1e46ba3594641c2662fe",
+ "input_sha256": "f6587df5798d1788894eb5a9b7fb7a81910ce80b61f68e4fbcd6cc48e2779860",
+ "proof_bytes": 1243
+}

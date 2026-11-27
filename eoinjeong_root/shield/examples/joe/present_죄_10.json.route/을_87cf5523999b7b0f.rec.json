@@ -1,0 +1,31 @@
+{
+ "id": "을_87cf5523999b7b0f",
+ "syllable": "을",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "샅바씨름",
+  "율현마을",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000465,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "82750151f9b1a410037af1c007b42b94df515fae72512d02738f8109bddad52e",
+ "position_sha256": "87cf5523999b7b0fc48fc798f4c289105a860bf0cfc44d575804c2d9b355c857",
+ "input_sha256": "14bdb61c446e43adf977976898d4d5561b405f1584b6846696d954fe52e9c033",
+ "proof_bytes": 778
+}

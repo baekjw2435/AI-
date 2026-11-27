@@ -1,0 +1,30 @@
+{
+ "id": "즈_860cd846029a3707",
+ "syllable": "즈",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000151,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "860cd846029a3707069bb6746faacfb993e4ed01954f67eae78b1414dc6d3948",
+ "input_sha256": "b25ff327943514e40ae597f9099884eea378f287e0bdd2a9ad48994ba7276e4e",
+ "proof_bytes": 124
+}

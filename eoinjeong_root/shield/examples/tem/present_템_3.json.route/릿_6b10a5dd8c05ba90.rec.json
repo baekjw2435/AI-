@@ -1,0 +1,26 @@
+{
+ "id": "릿_6b10a5dd8c05ba90",
+ "syllable": "릿",
+ "used_route_words": [
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.020728,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fd72b4c232cc77114e4f40bab2fa6fe93270a995fa5ce4c1bbf7b88f11f7f4b0",
+ "position_sha256": "6b10a5dd8c05ba90986e6305f9edc1019e2e7ad027e6b59c55fb2a3d28a08dae",
+ "input_sha256": "978db277f690dca229d0ff74c15d39e5f80c10d4a292232b0703eead4736f1c9",
+ "proof_bytes": 4656
+}

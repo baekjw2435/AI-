@@ -1,0 +1,28 @@
+{
+ "id": "을_5d6f3a46002cb8ab",
+ "syllable": "을",
+ "used_route_words": [
+  "권폄",
+  "법원검찰청복사골문화센터반달마을",
+  "쇄석포도법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00788,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1724ea665b8eeb71e15f90b8530a5fe5bf5694953e3b12eb4738a83a191116f6",
+ "position_sha256": "5d6f3a46002cb8ab8bbe1355c6e9a723ef42f4301b458782bd63f8b67b2e2618",
+ "input_sha256": "11c973d876f65428ce5faf96b4c86671998e780cf2ad6508d4fe55faf0f5a899",
+ "proof_bytes": 5676
+}

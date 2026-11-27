@@ -1,0 +1,29 @@
+{
+ "id": "죄_0d0a085365d79156",
+ "syllable": "죄",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "권리행사방해죄",
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.004382,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c53473d51c1b2ef3910b09e93f04e23851555a03dad393b8357f67a91502d783",
+ "position_sha256": "0d0a085365d791561b5515dc6f189b8f6c0bedb7a160dc478642e3857c0391df",
+ "input_sha256": "90859f2a0a7773ea2c39e117c2d3043176b20b27fde9a6fac8fe6f2ba5bd95d3",
+ "proof_bytes": 4102
+}

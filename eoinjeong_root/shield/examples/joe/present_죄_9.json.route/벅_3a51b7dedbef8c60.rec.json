@@ -1,0 +1,31 @@
+{
+ "id": "벅_3a51b7dedbef8c60",
+ "syllable": "벅",
+ "used_route_words": [
+  "벅벅",
+  "섭험",
+  "슴벅슴벅",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000133,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "3a51b7dedbef8c6099a77a9d13bbaaf7e364df83d1582481bb57f569ab0cadb7",
+ "input_sha256": "7e14449bd00b6ba1a5b37e186abe66bbb26d5dbeb0c231c006900d841812a8dc",
+ "proof_bytes": 124
+}

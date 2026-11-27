@@ -1,0 +1,31 @@
+{
+ "id": "득_e67c575f902028b8",
+ "syllable": "득",
+ "used_route_words": [
+  "득득",
+  "섭험",
+  "을종근로소득",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000143,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "e67c575f902028b884507ba98b47b987228539a53887446af42975cc62044077",
+ "input_sha256": "860bce02d417e1bbdd3cb5fa8287e6b0ae1b10a970a189670dfc68a9457e8748",
+ "proof_bytes": 124
+}

@@ -1,0 +1,30 @@
+{
+ "id": "쾌_31430a5a1d7dd5ea",
+ "syllable": "쾌",
+ "used_route_words": [
+  "권삼득",
+  "득첩",
+  "읍권",
+  "첩첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000185,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cb5b5dbb25f19ce27e95cae46eb2bb76bf2e4018637ca22ed5f65bf86891bf61",
+ "position_sha256": "31430a5a1d7dd5ea5e8a6a0bad49f8249e425e4719391358191e4abc23163da9",
+ "input_sha256": "85cf673d0e40df642fd59f5d55bdc7b19bdd51885492a93437a6f8f2ab54ea0a",
+ "proof_bytes": 172
+}

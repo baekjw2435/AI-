@@ -1,0 +1,30 @@
+{
+ "id": "뼈_078b4f172c54c244",
+ "syllable": "뼈",
+ "used_route_words": [
+  "죄기죄",
+  "죄첩",
+  "척추뼈",
+  "척하면척",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003833,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "abcc0c0990d0b961bd8d226572a423b2ab73d7db219b6bf3480b25fb8a5c42e8",
+ "position_sha256": "078b4f172c54c244e95c3d54751e5e80ff7a0055083fd4c8b8a0445ec94ce43d",
+ "input_sha256": "bde6f8af351cc9f4af4c0928454bd249dead91ce43f041c6e8df147ac85538bc",
+ "proof_bytes": 3958
+}

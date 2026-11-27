@@ -1,0 +1,31 @@
+{
+ "id": "권_70da43706515a152",
+ "syllable": "권",
+ "used_route_words": [
+  "겸손법",
+  "법권",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000159,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "70da43706515a1529dfba1afc422fd3e288348405b00a53831767b1b7753f02f",
+ "input_sha256": "f5ce44726e056882e49b32e5599c79bce7a655e112ff43ed0b5b5ec82b0bf0f4",
+ "proof_bytes": 124
+}

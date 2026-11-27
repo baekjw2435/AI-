@@ -1,0 +1,26 @@
+{
+ "id": "겅_9dc7d7a30f8b8075",
+ "syllable": "겅",
+ "used_route_words": [
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001108,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fd997b6e685322be4c530756b53051727ba31db2632645293ccdbb4290b7c865",
+ "position_sha256": "9dc7d7a30f8b8075e8471c4bc1a425377ea563ac447cfc263e0d532958cb79c0",
+ "input_sha256": "96fdc7704cf964987f22b845fd2bc388b0861c9a690d6cb2330de4f729a490e9",
+ "proof_bytes": 784
+}

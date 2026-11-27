@@ -1,0 +1,28 @@
+{
+ "id": "험_f2dc30e4ba7451bb",
+ "syllable": "험",
+ "used_route_words": [
+  "뜸마을",
+  "을종근로소득",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000251,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3db4be4af056256506eb2533c39e76e1fbd09f367b2c0ca218e51d8f7b615d1d",
+ "position_sha256": "f2dc30e4ba7451bbb7870b629b1b76650593bcf0d6b0f0e27df2eb7d031935b7",
+ "input_sha256": "e27c795a68449f416a138626c66704a11da36fc88df38c787a3d9aa2bf762c5b",
+ "proof_bytes": 338
+}

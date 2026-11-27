@@ -1,0 +1,29 @@
+{
+ "id": "겸_7425f0ccdac47221",
+ "syllable": "겸",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "굴대두겁",
+  "댁대굴댁대굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013806,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5845111cd0b2dbbec2e7c1bcd142bc6eae4f7fa9f6147de6bb0e9ed4a18bbba9",
+ "position_sha256": "7425f0ccdac47221d8fe5efbbde903c85f57d3cb3ebdc58c6b20056d669033b2",
+ "input_sha256": "5bda92869322781dc746ea8288a86884b3b1cb7b7c2f36b028f8268ae5b64cc9",
+ "proof_bytes": 10015
+}

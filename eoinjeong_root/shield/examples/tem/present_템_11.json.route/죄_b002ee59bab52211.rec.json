@@ -1,0 +1,30 @@
+{
+ "id": "죄_b002ee59bab52211",
+ "syllable": "죄",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "득죄",
+  "율현마을",
+  "을종근로소득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005467,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "01960061e089a3c13c55a7b2e93488518f0815b6f6356987c4029b15239bdd4f",
+ "position_sha256": "b002ee59bab5221141499a0310a7cdd15ee4a3f48782c8e2029b8c132093802a",
+ "input_sha256": "d981c7fbf59cba8a34cb724eb61c4d13124b6c29cadf34b784febacad2f00afc",
+ "proof_bytes": 2289
+}

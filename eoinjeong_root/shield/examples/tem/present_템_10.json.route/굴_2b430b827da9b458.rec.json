@@ -1,0 +1,30 @@
+{
+ "id": "굴_2b430b827da9b458",
+ "syllable": "굴",
+ "used_route_words": [
+  "샅굴",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿",
+  "툰드라피즈"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000236,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ca121f374a89e6bcb0010656353f264e03e6581a5c8baaa347017511343f86e1",
+ "position_sha256": "2b430b827da9b458db1b31c7da2889d93f3722d6e04a5b4955ef103f6d9cf543",
+ "input_sha256": "06dc8b3a169adee4ad8e53a9c84992bcd9421e9e99864397979258cdb41cddcf",
+ "proof_bytes": 333
+}

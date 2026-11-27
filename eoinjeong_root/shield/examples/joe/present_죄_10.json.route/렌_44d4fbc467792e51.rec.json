@@ -1,0 +1,26 @@
+{
+ "id": "렌_44d4fbc467792e51",
+ "syllable": "렌",
+ "used_route_words": [
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.02414,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "44d4fbc467792e5133db0116afb2fc3da68cf7ab7f9ab49738c22cf45b60bd20",
+ "input_sha256": "2671e59d20c3eb40ed38ee180172d8948a32489fc07012f8e0976474d53ed4e6",
+ "proof_bytes": 15781
+}

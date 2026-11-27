@@ -1,0 +1,33 @@
+{
+ "syllable": "핵",
+ "vertex": "핵",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 32.393,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 20484288,
+ "proof_nodes": 188759,
+ "proof_seconds": 3.89095,
+ "solver_wall_seconds": 37.3,
+ "verify_seconds": 5.29,
+ "verify_wall_seconds": 5.3,
+ "proof_bytes": 1349031,
+ "proof_sha256": "6bb6c65661a40823d9fc9b8c9e40852366303b0629b03d54f19122cc92b2d78c",
+ "position_sha256": "ea516bb4cb863635ea4f82516e8f188f1227ead6a1a4a31d64ff92a0756fc126",
+ "input_sha256": "738d3f602ff291446f917c7b0a4dbaa2a80eed1261ae965fe405ee33f7ca8b8c",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

@@ -1,0 +1,29 @@
+{
+ "id": "굴_4301312e7e75b33e",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "획죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000132,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "4301312e7e75b33e0b0ed3f630522618454e483f8514f7cf9486c0a89a37e64a",
+ "input_sha256": "bd7d24dfc86d9c5902a4312ec902836d07856790e4cbdc1ee8245573035f1e2c",
+ "proof_bytes": 124
+}

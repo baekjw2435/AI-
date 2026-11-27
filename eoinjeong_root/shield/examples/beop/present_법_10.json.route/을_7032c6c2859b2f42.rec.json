@@ -1,0 +1,29 @@
+{
+ "id": "을_7032c6c2859b2f42",
+ "syllable": "을",
+ "used_route_words": [
+  "권율",
+  "쇄쇄",
+  "쇄심권",
+  "율현마을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002096,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c82265e30d6df9259c11b7155a7d72c9d010da45c5996efaa3da0ebc58e21867",
+ "position_sha256": "7032c6c2859b2f42d60866034ecca03cd4c5da03b238d460b7a5d502adb71bf5",
+ "input_sha256": "09626fa4b7b1b341d1bcb69a5938eb74b41806067f0d49100d36558cc330e5d7",
+ "proof_bytes": 2475
+}

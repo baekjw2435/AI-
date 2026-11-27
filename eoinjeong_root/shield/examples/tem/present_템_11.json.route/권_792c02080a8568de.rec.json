@@ -1,0 +1,29 @@
+{
+ "id": "권_792c02080a8568de",
+ "syllable": "권",
+ "used_route_words": [
+  "권폄",
+  "쇄쇄",
+  "쇄심권",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.219033,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ca8dbc5ddd5c5a820d1cce59ad409f891e545fbc66ec2a34f01765006a84a1b9",
+ "position_sha256": "792c02080a8568ded63eaf45e43a98034b456f672a93022c0d27233d8fc54d2f",
+ "input_sha256": "70b594cedf735a2cbef8e76c84fd4d2153b5c6ddcd9d3e6b6aee9938697df669",
+ "proof_bytes": 68417
+}

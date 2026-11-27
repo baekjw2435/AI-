@@ -1,0 +1,32 @@
+{
+ "id": "름_21cbea437da96153",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "샅바씨름",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿",
+  "톤데모원더즈",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.004106,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9e5d3edbd647cca19a181952e327459b0e630678f96bef61eb0bba4b12cd40e0",
+ "position_sha256": "21cbea437da96153932f8790bc0ac0bb4285a7feea03653a34bb7c3d06e159ea",
+ "input_sha256": "79c686c0cc5d1101d534c64489e268881e380600065ccecb9c4bade4c359be81",
+ "proof_bytes": 3761
+}

@@ -1,0 +1,32 @@
+{
+ "syllable": "율",
+ "vertex": "율",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 7.782,
+ "lost_runs": [],
+ "unfinished_starts": 0,
+ "mid_calls": 5022450,
+ "proof_nodes": 98210,
+ "proof_seconds": 2.120876,
+ "solver_wall_seconds": 11.52,
+ "verify_seconds": 6.357,
+ "verify_wall_seconds": 6.37,
+ "proof_bytes": 694266,
+ "proof_sha256": "ecb5a716861c21f89fd608c578f933bcf63f41b68d4d589896e54facb4df258e",
+ "position_sha256": "7f146b943fb4830db56eba0f2c753530018acc78be54b5afbec5f7fdfbeab364",
+ "input_sha256": "a24fff7aacfbb0fae8176d0a8f374869de4a27c538f7da5860276344f0629271",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "ea7ff989f0c96cc377e78881f040ea79798302a3b65555b1220c4831fbe18471"
+}

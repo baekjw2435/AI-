@@ -1,0 +1,28 @@
+{
+ "id": "준_381880f8d2a3195c",
+ "syllable": "준",
+ "used_route_words": [
+  "권삼득",
+  "읍권",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000127,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "381880f8d2a3195c273a1da77d904a6d25af637c00c297a2886c649bab5b485e",
+ "input_sha256": "8618eee8ced68827e68a11dba98277106b91cdb5fa57a9c48790b3fa6b35f198",
+ "proof_bytes": 124
+}

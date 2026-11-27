@@ -1,0 +1,29 @@
+{
+ "id": "렌_556029a2c1beceea",
+ "syllable": "렌",
+ "used_route_words": [
+  "득첩",
+  "첩섭",
+  "형태로만들어선물하고싶은마음카가미네렌",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.019261,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f8ef566bcf0f527a1820bcdf276f75d9fb8ab51488de546e41848d8b3f73e0e",
+ "position_sha256": "556029a2c1beceeab38e9eec21be557a50df770d29832a0e141835709c00f44b",
+ "input_sha256": "e811eee2537e0178c5b78efa662d4436a1ff7bf69a6719f340b69d364845a272",
+ "proof_bytes": 13015
+}

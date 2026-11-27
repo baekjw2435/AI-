@@ -1,0 +1,32 @@
+{
+ "id": "죄_0d6ba26ed2437d99",
+ "syllable": "죄",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "준강간죄",
+  "첩섭",
+  "첩첩",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000136,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "0d6ba26ed2437d99c3746da8cee402d72b20fd8eda89131827a69dbf2df1e21c",
+ "input_sha256": "bb356cc71178b6a063502f905e83f57b680c33bef07837c9dde161ed831edf79",
+ "proof_bytes": 124
+}

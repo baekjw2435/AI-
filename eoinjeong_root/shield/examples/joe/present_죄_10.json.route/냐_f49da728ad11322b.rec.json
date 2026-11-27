@@ -1,0 +1,27 @@
+{
+ "id": "냐_f49da728ad11322b",
+ "syllable": "냐",
+ "used_route_words": [
+  "갱신청구권",
+  "굴저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001065,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0942a5d8e6250ac8e6402e3b546e2cb148b18549bae0e8d9bf8a9f581c4c164a",
+ "position_sha256": "f49da728ad11322bb854eb1a5d2982651c441b31937caabcd3230e86673ce6be",
+ "input_sha256": "c9e0bd82e8bac2b5967a223453b667eac8dc228cfec0e92b79412525aff04789",
+ "proof_bytes": 830
+}

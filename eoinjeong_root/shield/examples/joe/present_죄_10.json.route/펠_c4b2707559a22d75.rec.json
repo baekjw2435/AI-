@@ -1,0 +1,26 @@
+{
+ "id": "펠_c4b2707559a22d75",
+ "syllable": "펠",
+ "used_route_words": [
+  "즈브스킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007405,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d338a00865197d965a19cbfc1ae8cd44e8f99f437169af15bb4fada3c63945be",
+ "position_sha256": "c4b2707559a22d7549f40f2e94288a31a4ffc4b0094d11fa171aa631d892681e",
+ "input_sha256": "9f505a37a61007ea8eeeea8c59ccb2a79e1c1658f79dc7fe5c53185380a7b845",
+ "proof_bytes": 6032
+}

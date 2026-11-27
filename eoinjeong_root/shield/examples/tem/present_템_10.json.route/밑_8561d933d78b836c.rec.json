@@ -1,0 +1,28 @@
+{
+ "id": "밑_8561d933d78b836c",
+ "syllable": "밑",
+ "used_route_words": [
+  "늠균",
+  "늠름",
+  "샅바씨름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000572,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "37b34ae050b41ee044049e03b92b535ae75533ffb1aac47907efe69faf97854b",
+ "position_sha256": "8561d933d78b836c34b6d88aaa6da3a56b9b064ef3d7118f67c6223efacf7e74",
+ "input_sha256": "5fa3a9f583b0cd540b92fbaffddf0d306e920791e7e9a6ae8fa7faf2870fbeb5",
+ "proof_bytes": 599
+}

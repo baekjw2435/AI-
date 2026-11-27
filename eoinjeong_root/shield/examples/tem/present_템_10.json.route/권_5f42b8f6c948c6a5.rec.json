@@ -1,0 +1,30 @@
+{
+ "id": "권_5f42b8f6c948c6a5",
+ "syllable": "권",
+ "used_route_words": [
+  "득법",
+  "뜸마을",
+  "법원읍",
+  "을종근로소득",
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00233,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7490c544c461e8419efe85e8ceee5d194d744f9f32ad72d1a82472616b7968d2",
+ "position_sha256": "5f42b8f6c948c6a53c06586b068e83d782f1534ae7414b8599c88babab9e4836",
+ "input_sha256": "5cba211304f0f4e5613c1b7b4f2a5cc18c0fb1af24158a7f56533a5b6bd0fb5e",
+ "proof_bytes": 1482
+}

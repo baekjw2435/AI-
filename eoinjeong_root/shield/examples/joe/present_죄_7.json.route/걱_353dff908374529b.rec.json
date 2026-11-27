@@ -1,0 +1,29 @@
+{
+ "id": "걱_353dff908374529b",
+ "syllable": "걱",
+ "used_route_words": [
+  "냐냐",
+  "냐냐냐냐냐냐냐",
+  "멸치저냐",
+  "죄멸"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00078,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "353dff908374529ba8e3b96cb5c8d88096f41068ae653f098dcc351076443cbd",
+ "input_sha256": "a04754ce29a4cf6c9c391834d5ecb8e6aef8d5f095a7fdbb1ceb63014e0162ce",
+ "proof_bytes": 1271
+}

@@ -1,0 +1,31 @@
+{
+ "id": "득_25017cf8b2c92c15",
+ "syllable": "득",
+ "used_route_words": [
+  "득득",
+  "섭도마을",
+  "을종근로소득",
+  "죄상가죄",
+  "죄첩",
+  "첩섭"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005087,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8b7312f4e4e12bf1d5a1cdc27a6a48b1c45043583d65c94f8e52ba2554b42b95",
+ "position_sha256": "25017cf8b2c92c15801fa593e243ccc3f70a725a4f017dd0b937ad40d1a9fa25",
+ "input_sha256": "e6b92efd5a893a61b51756d157a29e5b56da3866d550cc240f0ab5d008944024",
+ "proof_bytes": 4746
+}

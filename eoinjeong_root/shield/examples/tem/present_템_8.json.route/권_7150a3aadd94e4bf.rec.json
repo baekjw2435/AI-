@@ -1,0 +1,30 @@
+{
+ "id": "권_7150a3aadd94e4bf",
+ "syllable": "권",
+ "used_route_words": [
+  "득득",
+  "득법",
+  "법원읍",
+  "읍권",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.062954,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f1390357aaaba2bee67e9d082cf44877a978f410d14ace8fb207e30f8efe9b76",
+ "position_sha256": "7150a3aadd94e4bf6957a4ac5d173fa5f50293d79c903c1e74caa95fd063b25f",
+ "input_sha256": "c4323fe5d4d0c903bf19eeeba3e132d3d07d7c63fe23e91bb16b1eefadfaf1e6",
+ "proof_bytes": 8599
+}

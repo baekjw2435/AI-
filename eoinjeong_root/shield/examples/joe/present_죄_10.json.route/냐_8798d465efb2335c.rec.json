@@ -1,0 +1,32 @@
+{
+ "id": "냐_8798d465efb2335c",
+ "syllable": "냐",
+ "used_route_words": [
+  "늠름",
+  "늠준",
+  "샅바씨름",
+  "잇샅",
+  "준치저냐",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000238,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "35827ed2a63dd388529226686b7f5af4cd746975569c2e37e764488ed2a23c0e",
+ "position_sha256": "8798d465efb2335c878508b585d78197f72bfb161e6884a9be6a9f791fb3031a",
+ "input_sha256": "f9aec6a2c0d9351d55284452f3463a7b192447752e24047315f70c349977da48",
+ "proof_bytes": 349
+}

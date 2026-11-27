@@ -1,0 +1,6 @@
+#!/bin/sh
+# run from the repository root
+python3 guopsaem_root/verifier_v4/verify_v4.py --dictionary guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/p.json --proof guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/proof.jsonl
+guopsaem_root/verifier_v4/build/verify_v4 --dictionary guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/p.json --proof guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/proof.jsonl
+python3 guopsaem_root/verifier_v4/verify_v4.py --dictionary guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/p.json --proof guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/proof.jsonl --digest-only
+guopsaem_root/verifier_v4/build/verify_v4 --dictionary guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/p.json --proof guopsaem_root/verifier_v4/attacks/cases/ws_only_line_end/proof.jsonl --digest-only

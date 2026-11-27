@@ -1,0 +1,31 @@
+{
+ "id": "률_9fc6e29d2d6d06dd",
+ "syllable": "률",
+ "used_route_words": [
+  "득률",
+  "섭험",
+  "을종근로소득",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000139,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "9fc6e29d2d6d06dd2c68d4036e1f7b62e3cf1584e1c467d71696f996f3ad3cf5",
+ "input_sha256": "ae588af283f5e293ae7e17394fc17a8c42c76aa2faebcfdac037554be35306aa",
+ "proof_bytes": 124
+}

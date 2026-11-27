@@ -1,0 +1,30 @@
+{
+ "id": "을_e3c81553ff9294f8",
+ "syllable": "을",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00014,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "e3c81553ff9294f89ea28cad9c23ecb6ce215d7e0c9787310423b7a671b8a4ee",
+ "input_sha256": "09d9fbc0605ba97d2d8e7565bcf6b737043d240b6f6a9fb83d7c61b74cc601fd",
+ "proof_bytes": 124
+}

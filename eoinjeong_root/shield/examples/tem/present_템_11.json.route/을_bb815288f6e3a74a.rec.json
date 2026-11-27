@@ -1,0 +1,29 @@
+{
+ "id": "을_bb815288f6e3a74a",
+ "syllable": "을",
+ "used_route_words": [
+  "법원검찰청복사골문화센터반달마을",
+  "쇄석포도법",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.008677,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "89b7a5921d71dc41901b4e254f46df6bf5325e69fb65c3c03b55692dbc8d4a03",
+ "position_sha256": "bb815288f6e3a74a76ff312bb2dca4f29b5d12b7b49e914f799e60ac2e00c773",
+ "input_sha256": "f0f92ce027b2299dfbb5b551dd4cf22bc96c60b692142daa94d5e3aabbcc8e3d",
+ "proof_bytes": 5740
+}

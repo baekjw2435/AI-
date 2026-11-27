@@ -1,0 +1,30 @@
+{
+ "id": "름_7e749f97fb0d340b",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "득첩",
+  "샅바씨름",
+  "첩음법",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.017913,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c445266948386f1de9e1c16ebf41e92e35522ad488a4448954eec15cf5ec79a0",
+ "position_sha256": "7e749f97fb0d340b46d6b4fea15b4cd23c5ef1fd68ee62e6aeaeb94b76350d40",
+ "input_sha256": "b00d5e10b3876609124cb0aebfc775a509e03ceb38c312a9b0166feff12b28fe",
+ "proof_bytes": 8462
+}

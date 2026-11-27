@@ -1,0 +1,28 @@
+{
+ "id": "멸_5da87cbecb333d10",
+ "syllable": "멸",
+ "used_route_words": [
+  "득득",
+  "득죄",
+  "죄멸"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.03445,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "34cf41d38ba94c29d5e7a14db74c23baa3255cab1e3a27ecbcd1f743e0aded8b",
+ "position_sha256": "5da87cbecb333d10e90094f4936f0cd56dc4a185611edb75d3588c15f99de6ee",
+ "input_sha256": "c273f8518f34b33a080de7e5242d70e201a97b38bf3653298e42ecae49de7ba8",
+ "proof_bytes": 4139
+}

@@ -1,0 +1,49 @@
+{
+ "tests": [
+  {
+   "name": "a05",
+   "of": "p05",
+   "stage": "a",
+   "syllable": "순",
+   "history": [
+    "순발력",
+    "역습"
+   ],
+   "input_sha256": null
+  },
+  {
+   "name": "a17",
+   "of": "p17",
+   "stage": "a",
+   "syllable": "맹",
+   "history": [
+    "맹탕",
+    "탕약"
+   ],
+   "input_sha256": null
+  },
+  {
+   "name": "a19",
+   "of": "p19",
+   "stage": "a",
+   "syllable": "절",
+   "history": [
+    "절벽",
+    "벽돌",
+    "돌돌"
+   ],
+   "input_sha256": null
+  },
+  {
+   "name": "a23",
+   "of": "p23",
+   "stage": "a",
+   "syllable": "준",
+   "history": [
+    "준결승",
+    "승객"
+   ],
+   "input_sha256": null
+  }
+ ]
+}

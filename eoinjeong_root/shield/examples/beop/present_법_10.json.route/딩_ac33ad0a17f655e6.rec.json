@@ -1,0 +1,28 @@
+{
+ "id": "딩_ac33ad0a17f655e6",
+ "syllable": "딩",
+ "used_route_words": [
+  "겔렌데슈프링겐",
+  "딩가딩",
+  "딩딩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.015249,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8d3e8510d28dd03dda511fa3dcaae15520c8f577dabb18290eac2df76e245fbf",
+ "position_sha256": "ac33ad0a17f655e6a478ca5161f886c409788ca4ecb563374d593d34f70e9cb8",
+ "input_sha256": "5beb0d31e3e0717062ef3eda07f815294a0301436e411e097450c38d8a55df0e",
+ "proof_bytes": 9434
+}

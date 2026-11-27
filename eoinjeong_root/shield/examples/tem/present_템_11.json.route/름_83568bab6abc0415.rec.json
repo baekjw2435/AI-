@@ -1,0 +1,29 @@
+{
+ "id": "름_83568bab6abc0415",
+ "syllable": "름",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "늠름",
+  "샅바씨름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013819,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "35d7f027ba23443b24a8f08ac0baf422d345f3477b20f0075aa66fc982b75808",
+ "position_sha256": "83568bab6abc0415cfb86a742411ebafc94c686223251d366b04bf690643f956",
+ "input_sha256": "9a73bdf38a6a4bb974284581912e8275f656fd74389de6b0e325c36f2cd301cd",
+ "proof_bytes": 8347
+}

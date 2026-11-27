@@ -1,0 +1,27 @@
+{
+ "id": "죄_706d507256c8a7e9",
+ "syllable": "죄",
+ "used_route_words": [
+  "득죄",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005779,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "43e28768bf2a1410a96df027cc7da7dc1a5f1e6928ab91260638aec8f998199d",
+ "position_sha256": "706d507256c8a7e9219e3e8313d8899797623324325ee369da3cbdb562033c09",
+ "input_sha256": "f1d1031083e4f4dea29d11c7467fbf945da16bad54ea8264e4aebb319e53b2d9",
+ "proof_bytes": 4099
+}

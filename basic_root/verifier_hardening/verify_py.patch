@@ -1,0 +1,26 @@
+--- ../../verifier/route-verifier-v2/verify.py	2026-10-28 04:18:44.415834961 +0000
++++ verify.py	2026-10-28 08:00:30.769005482 +0000
+@@ -40,8 +40,12 @@
+     initial, remainder = divmod(offset, 588)
+     vowel = remainder // 28
+     if initial == 5:  # rieul
+-        initial = 11 if vowel in (2, 6, 7, 12, 17, 20) else 2
+-    elif initial == 2 and vowel in (6, 12, 17, 20):  # nieun
++        if vowel in (2, 6, 7, 12, 17, 20):    # 랴 려 례 료 류 리 -> ㅇ (맞춤법 제11항)
++            initial = 11
++        elif vowel in (0, 1, 8, 11, 13, 18):  # 라 래 로 뢰 루 르 -> ㄴ (제12항)
++            initial = 2
++        # every other rieul syllable (러 레 뤄 릐 ...) is not a Sino-Korean reading: unchanged
++    elif initial == 2 and vowel in (6, 12, 17, 20):  # 녀 뇨 뉴 니 -> ㅇ (제10항)
+         initial = 11
+     return chr(0xAC00 + initial * 588 + remainder)
+ 
+@@ -170,7 +174,7 @@
+ def _parse_line(line, line_number):
+     try:
+         result = json.loads(line, object_pairs_hook=_unique_keys)
+-    except (ValueError, TypeError) as exc:
++    except (ValueError, TypeError, RecursionError) as exc:
+         raise VerificationError(f"invalid JSON on line {line_number}: {exc}") from exc
+     require(isinstance(result, dict), f"line {line_number} is not an object")
+     return result

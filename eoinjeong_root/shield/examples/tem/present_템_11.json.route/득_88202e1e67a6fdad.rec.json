@@ -1,0 +1,31 @@
+{
+ "id": "득_88202e1e67a6fdad",
+ "syllable": "득",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "권삼득",
+  "득득",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.563431,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c2920ecfef130a5665bf70c343d664ad7aa134d82b1bf8d3f6d056d7946c14f4",
+ "position_sha256": "88202e1e67a6fdadb21c20614f633232e0b44b9ebbb1929ac647f15543d567e5",
+ "input_sha256": "d145beef41cb9dbe137fa3352f46c63c472ba17214e8c99f2650f5a4d815440e",
+ "proof_bytes": 165051
+}

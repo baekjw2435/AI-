@@ -1,0 +1,27 @@
+{
+ "id": "걱_83be9c1dff2d305e",
+ "syllable": "걱",
+ "used_route_words": [
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00019,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0c70790d915e759093e3e4ef56480cd10d778b7799db34c58fff743b95e6fb2f",
+ "position_sha256": "83be9c1dff2d305e84ab16b2e0a18c324dd3c8ab3ac0c9bf20e7d232f8c9766b",
+ "input_sha256": "18415520e7603c3ca30b60ebb6f6996d05af66447d7f75b6645cbc0e1648e8a4",
+ "proof_bytes": 161
+}

@@ -1,0 +1,26 @@
+{
+ "id": "겸_4ff5338ebab0d066",
+ "syllable": "겸",
+ "used_route_words": [
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.016578,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ac1412388aaba4a31aa2b8a556c34058e6ba93870e2dd2aba42566f83a682efa",
+ "position_sha256": "4ff5338ebab0d066c031bba8ca1cc20ad62442b5734a3808a7204afa7796ba17",
+ "input_sha256": "53a4e556904e65e9ea2d31de1572abcff588bb4c4b800ffa3f5b62e839d93185",
+ "proof_bytes": 9638
+}

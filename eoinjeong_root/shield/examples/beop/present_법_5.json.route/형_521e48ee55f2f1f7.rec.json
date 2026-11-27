@@ -1,0 +1,27 @@
+{
+ "id": "형_521e48ee55f2f1f7",
+ "syllable": "형",
+ "used_route_words": [
+  "율현마을",
+  "을자형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001018,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9bd7a78f1cb9012f6cbbc7b4590b8f932c0711eeaaf2347ac93663acbc288ca2",
+ "position_sha256": "521e48ee55f2f1f7ec5a74476004dad236ebe04fd189f4c112841479e001ca42",
+ "input_sha256": "e3c25b4274f22eafa74c6c44dccebb80da54456e3a3cc9254c26461ce38dc7da",
+ "proof_bytes": 1002
+}

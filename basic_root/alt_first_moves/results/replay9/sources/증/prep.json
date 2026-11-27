@@ -1,0 +1,33 @@
+{
+ "syllable": "증",
+ "vertex": "증",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 1280.358,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 898770868,
+ "proof_nodes": 2040116,
+ "proof_seconds": 41.655348,
+ "solver_wall_seconds": 1323.81,
+ "verify_seconds": 50.045,
+ "verify_wall_seconds": 50.07,
+ "proof_bytes": 14526707,
+ "proof_sha256": "1a81f6205617ef694ef56dc7333c00dcc4ab6ba533347df895a38cc1d6d54688",
+ "position_sha256": "e77e860bb94589cef0314e655bd3ab85a18f9deecc1868d90de18190073f16f2",
+ "input_sha256": "df2d0f9824e0cd019525bc59660014a429ef7ef0d3781dd7ebbe8c54ed42fbe8",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

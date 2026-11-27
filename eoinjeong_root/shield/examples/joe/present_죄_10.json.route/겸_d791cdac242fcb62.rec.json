@@ -1,0 +1,27 @@
+{
+ "id": "겸_d791cdac242fcb62",
+ "syllable": "겸",
+ "used_route_words": [
+  "굴대두겁",
+  "댁대굴댁대굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013016,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5845111cd0b2dbbec2e7c1bcd142bc6eae4f7fa9f6147de6bb0e9ed4a18bbba9",
+ "position_sha256": "d791cdac242fcb621492855fb8c805464b13c0dea9cfc782de2265bdadc219af",
+ "input_sha256": "feddfea5d118670d7d9ca880f502a9737d369ad26531177f96cef15b9b46f8b4",
+ "proof_bytes": 10015
+}

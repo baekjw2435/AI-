@@ -1,0 +1,38 @@
+{
+ "syllable": "역",
+ "vertex": "역",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 513.311,
+ "lost_runs": [
+  {
+   "seconds": null,
+   "note": "first attempt (1500 s cap, 2048 MB, no checkpoint) was cut off by a container restart before it finished; nothing was saved, at most 1500 s lost"
+  }
+ ],
+ "spent_is_lower_bound": true,
+ "unfinished_starts": 0,
+ "mid_calls": 299510647,
+ "proof_nodes": 888855,
+ "proof_seconds": 19.143368,
+ "solver_wall_seconds": null,
+ "verify_seconds": 51.584,
+ "verify_wall_seconds": 51.6,
+ "proof_bytes": 6424540,
+ "proof_sha256": "01d5706873c37c41f79db88ba866c5aea903b93a53fdc98f5ebc981b9149028c",
+ "position_sha256": "acdb9751f000909ca3a4c5601a2346b7357086ea31bfecd999d5d816d450bee5",
+ "input_sha256": "311cc43c13f1d1805cb794ff31618d3e2d22f2d52ad5ad514d9b51cafb162fee",
+ "tt_mb": 2048,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "7136cccd2d6acc768afa666f2809f7d17a673bd9df4ecff1add28164faeefc4e"
+}

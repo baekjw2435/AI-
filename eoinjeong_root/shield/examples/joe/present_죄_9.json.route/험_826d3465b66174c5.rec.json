@@ -1,0 +1,31 @@
+{
+ "id": "험_826d3465b66174c5",
+ "syllable": "험",
+ "used_route_words": [
+  "권폄",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄",
+  "험할험",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000276,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2b19362a7916edd6b7eea80d91dc2667a4c0ba3d99ed6120fc93e87213fe2ff4",
+ "position_sha256": "826d3465b66174c5cd811a3046096d7fb3d4def70c934e7283fce5853783c1e7",
+ "input_sha256": "2bf8aa51fd36e3ceca8160e7c49ef29e4b9340ef9f17a876560ea327bf56697e",
+ "proof_bytes": 417
+}

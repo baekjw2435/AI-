@@ -1,0 +1,26 @@
+{
+ "id": "궐_37f3637c3a85866e",
+ "syllable": "궐",
+ "used_route_words": [
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.011298,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ef1403f4a45ff7c39633ae2832fef60bb263d8ca06f8c7f5ef22dfbb26771cd0",
+ "position_sha256": "37f3637c3a85866ebf6de5d026fee4109edc2e6ecf70acf79e6f54fdc1503292",
+ "input_sha256": "a4286c61a482c4e0ec00ad990c98404b2f69b4ec513310d7ac71ea9761679140",
+ "proof_bytes": 7155
+}

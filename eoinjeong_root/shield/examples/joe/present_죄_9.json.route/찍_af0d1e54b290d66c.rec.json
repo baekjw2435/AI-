@@ -1,0 +1,29 @@
+{
+ "id": "찍_af0d1e54b290d66c",
+ "syllable": "찍",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00014,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "af0d1e54b290d66ca547df38503aeaf1f133d5ce29ca361fac69822351b23d86",
+ "input_sha256": "a8e27b61cfbf5f78dd1b6bbe4c75263397c14c7a21f63b73503346bf58366d4c",
+ "proof_bytes": 124
+}

@@ -1,0 +1,31 @@
+{
+ "id": "셔_ad5b86ddd92198e1",
+ "syllable": "셔",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000125,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "ad5b86ddd92198e107fa036d53a6ed48976290fe947dfa1c78be6761d13f1a65",
+ "input_sha256": "53864d911d4d00e36db6ac8c93e770544b89fa3375ab2601fa035b55c484c1e8",
+ "proof_bytes": 124
+}

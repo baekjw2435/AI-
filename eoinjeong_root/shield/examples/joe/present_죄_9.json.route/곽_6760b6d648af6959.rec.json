@@ -1,0 +1,29 @@
+{
+ "id": "곽_6760b6d648af6959",
+ "syllable": "곽",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000166,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "6760b6d648af69596929c079bf94a0a5b70cc54a92f8e907f697fd8493217fed",
+ "input_sha256": "cc3240415bbbd6277955e75153eb251fad7fec8c1ffcf09f833bef05706bb00e",
+ "proof_bytes": 124
+}

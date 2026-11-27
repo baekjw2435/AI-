@@ -1,0 +1,27 @@
+{
+ "id": "톤_139334962e2bd0a4",
+ "syllable": "톤",
+ "used_route_words": [
+  "굴대두겁",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00215,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3193875be4d7efa048eceb567b13f8a5c218c926c0a0fa55cda9b3847b76476d",
+ "position_sha256": "139334962e2bd0a4da589709f584f0d8adaa555d39438ff1349fd0e20ab8ae58",
+ "input_sha256": "d3d5cff1f649c8c4e237c29c987b16d9612a44a97c84f976dda93a2e7a41a2b4",
+ "proof_bytes": 1889
+}

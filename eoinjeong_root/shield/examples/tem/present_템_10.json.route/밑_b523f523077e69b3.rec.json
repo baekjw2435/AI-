@@ -1,0 +1,28 @@
+{
+ "id": "밑_b523f523077e69b3",
+ "syllable": "밑",
+ "used_route_words": [
+  "득득",
+  "득죄",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.013952,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0a400067af2cbbab30b677da92d532ff83e421fdd20846e901dab805e63bd550",
+ "position_sha256": "b523f523077e69b31768770f0aaa7457fe038d32c6a0b60b4fa2498108ad1a25",
+ "input_sha256": "caa694f5b9fb2d9ab374391de1d812df9cfd0cc5cb7ea7638395052699ce6fce",
+ "proof_bytes": 2990
+}

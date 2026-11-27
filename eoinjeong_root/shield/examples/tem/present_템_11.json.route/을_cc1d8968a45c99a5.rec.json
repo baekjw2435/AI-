@@ -1,0 +1,28 @@
+{
+ "id": "을_cc1d8968a45c99a5",
+ "syllable": "을",
+ "used_route_words": [
+  "섭도마을",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000131,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "cc1d8968a45c99a50633cefd9a540afac23e727d27b8e9d16d9703285b583573",
+ "input_sha256": "fc10969df6ce6850a91430a3f0ccd27993fd6144b0a0d355a0573af5671de0bc",
+ "proof_bytes": 124
+}

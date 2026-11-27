@@ -1,0 +1,539 @@
+{
+ "format": "route-site-1",
+ "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+ "books": [
+  {
+   "id": "p67cc6208431c",
+   "name": "교활로 활 제시",
+   "entries": 2250120,
+   "files": [
+    {
+     "path": "t/p67cc6208431c/00.wasm",
+     "core_lo": 0,
+     "core_hi": 149,
+     "n": 393302,
+     "bytes": 1813893,
+     "k": 25,
+     "width": 44,
+     "sha256": "41c8be47b7fe60a9fbc044c2522e5d16b7a5222d7519a521bd61f992624f1429",
+     "content_sha256": "077a8b346d98a646660e2943d7fd4d4f4edeefa2a4a5833c21b6d74f4d5fef43"
+    },
+    {
+     "path": "t/p67cc6208431c/01.wasm",
+     "core_lo": 150,
+     "core_hi": 192,
+     "n": 398960,
+     "bytes": 1839051,
+     "k": 25,
+     "width": 44,
+     "sha256": "532465a0fd5c9bc029b61ad9f178a7a1de321fc2687f51f7f7e081e9db5362d9",
+     "content_sha256": "cf82ca778cb8a9828aeffd24249db10f3289bac789a1cdee6417cf5a447f84d1"
+    },
+    {
+     "path": "t/p67cc6208431c/02.wasm",
+     "core_lo": 193,
+     "core_hi": 240,
+     "n": 392236,
+     "bytes": 1416922,
+     "k": 17,
+     "width": 36,
+     "sha256": "b2d734732c458efd4a1c251ff54290f00fd01ae1894b9a2250f6033d4c774702",
+     "content_sha256": "ff3c4abb90320cc3b307e6b5fad4fd8667824eb2e9c076f089363930397147ca"
+    },
+    {
+     "path": "t/p67cc6208431c/03.wasm",
+     "core_lo": 241,
+     "core_hi": 294,
+     "n": 398415,
+     "bytes": 1637471,
+     "k": 21,
+     "width": 40,
+     "sha256": "d6cb63826183597a235d1b7879e2647e82b7b024c1c6069b50c7266e407c8c8a",
+     "content_sha256": "53dbd91698719a419b3b8e95c091c37f7abd174f16f807f723bc4f9a5f2b042c"
+    },
+    {
+     "path": "t/p67cc6208431c/04.wasm",
+     "core_lo": 295,
+     "core_hi": 374,
+     "n": 399905,
+     "bytes": 1643289,
+     "k": 21,
+     "width": 40,
+     "sha256": "056a9771295cf03d629c442c0540859310887acff6a9fb8d018b4d7af46daf1d",
+     "content_sha256": "9803fd2b345f8419d43d68cf31d706f2df4ec7ae3352d70d9a30b5cb2277d8bb"
+    },
+    {
+     "path": "t/p67cc6208431c/05.wasm",
+     "core_lo": 375,
+     "core_hi": 577,
+     "n": 267302,
+     "bytes": 985834,
+     "k": 17,
+     "width": 36,
+     "sha256": "83302e08453b88077c7175c487fbe3af542e464b2bf8b5fc74c542ed6e321490",
+     "content_sha256": "530c6214541050993783a9eaa76ccbec905c2b669168d9ac40c04949bd469cdc"
+    }
+   ],
+   "proofs": [
+    {
+     "id": "교/교활",
+     "start": "교",
+     "history": [
+      "교활"
+     ],
+     "via": 1,
+     "syllable": "활",
+     "result_for_player_to_move": "L",
+     "nodes": 6005550,
+     "proof_sha256": "ba00db35aea61a211ff855ebe2e62d78451d28eac05476a0d74f0675298111f6",
+     "table_records": 2250120,
+     "source": "basic_root/alt_first_moves/results/replay17/archive/INDEX.json (h04)",
+     "verifier": "verify_v4 (C++)",
+     "batch": "replay17",
+     "case": "h04",
+     "certificate": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay17/ba00db35aea61a211ff855ebe2e62d78451d28eac05476a0d74f0675298111f6.v4.gz"
+    }
+   ]
+  },
+  {
+   "id": "p7579be1ba282",
+   "name": "식생활로 활 제시",
+   "entries": 1177141,
+   "files": [
+    {
+     "path": "t/p7579be1ba282/00.wasm",
+     "core_lo": 0,
+     "core_hi": 189,
+     "n": 398592,
+     "bytes": 1638138,
+     "k": 21,
+     "width": 40,
+     "sha256": "329dad02055416a1492a9aa682f05e08a7deea734adc4916800a55dd73764297",
+     "content_sha256": "ea8785e034e2a6f81d5b1a039b8f04ab96320348e0e34a2edefcb2b9f046ec3e"
+    },
+    {
+     "path": "t/p7579be1ba282/01.wasm",
+     "core_lo": 190,
+     "core_hi": 284,
+     "n": 399481,
+     "bytes": 1641630,
+     "k": 21,
+     "width": 40,
+     "sha256": "6039f644a1e4c78853a9517c6d9135235c2410cae50ca2d0ba3df4190eda6dca",
+     "content_sha256": "f387dc3fd7431e2d3f821d2f00aff8dd3c0c9e7bd8e77cf9c57dd3fccc730bed"
+    },
+    {
+     "path": "t/p7579be1ba282/02.wasm",
+     "core_lo": 285,
+     "core_hi": 577,
+     "n": 379068,
+     "bytes": 1750509,
+     "k": 25,
+     "width": 44,
+     "sha256": "a4efa08214406a3e3d9e0bf457ba0790724e71aa5f46d892c73a781fc51fe952",
+     "content_sha256": "2573e153ead163eb0f9f86ca3d4c8851c14e2b9c181d25b99afc48c61311f404"
+    }
+   ],
+   "proofs": [
+    {
+     "id": "식/식생활",
+     "start": "식",
+     "history": [
+      "식생활"
+     ],
+     "via": 1,
+     "syllable": "활",
+     "result_for_player_to_move": "L",
+     "nodes": 3086184,
+     "proof_sha256": "5da15cbfd89b4b7f9a3b36e49525fe9fc651bc849c5d29959b1a39fdfea910bc",
+     "table_records": 1177141,
+     "source": "basic_root/alt_first_moves/results/replay17/archive/INDEX.json (h03)",
+     "verifier": "verify_v4 (C++)",
+     "batch": "replay17",
+     "case": "h03",
+     "certificate": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay17/5da15cbfd89b4b7f9a3b36e49525fe9fc651bc849c5d29959b1a39fdfea910bc.v4.gz"
+    }
+   ]
+  },
+  {
+   "id": "p63c1ebacf9ca",
+   "name": "언어생활로 활 제시",
+   "entries": 1844423,
+   "files": [
+    {
+     "path": "t/p63c1ebacf9ca/00.wasm",
+     "core_lo": 0,
+     "core_hi": 159,
+     "n": 397203,
+     "bytes": 1632677,
+     "k": 21,
+     "width": 40,
+     "sha256": "f37672cd9a0a5b1b7f559956c8f741ef57439922b9a8ca47c55ad2936e7575d7",
+     "content_sha256": "f71034b5c61e5809680bfb9327103842a290a076cc618ef1dde5d42a0b305150"
+    },
+    {
+     "path": "t/p63c1ebacf9ca/01.wasm",
+     "core_lo": 160,
+     "core_hi": 211,
+     "n": 395432,
+     "bytes": 1823392,
+     "k": 25,
+     "width": 44,
+     "sha256": "fccd9f38fa45aba05a3a3bd29d14838c43d5c4d53272d39d71ed0e59c51c41d5",
+     "content_sha256": "be4f50f1e73b961cbb463a1a0e05fd9e316d45440d6261cf4a6d8d2691b708c7"
+    },
+    {
+     "path": "t/p63c1ebacf9ca/02.wasm",
+     "core_lo": 212,
+     "core_hi": 270,
+     "n": 393950,
+     "bytes": 1619786,
+     "k": 21,
+     "width": 40,
+     "sha256": "1d69164275e2083bc44f6fb62131f7384170057fe17b88ec870689e572a68057",
+     "content_sha256": "54525009f23dfe1841da5f69b9e95f26776c76d9516a930c0b5fa400c3d40217"
+    },
+    {
+     "path": "t/p63c1ebacf9ca/03.wasm",
+     "core_lo": 271,
+     "core_hi": 361,
+     "n": 396895,
+     "bytes": 1631445,
+     "k": 21,
+     "width": 40,
+     "sha256": "c3313e43db108ae5058b59213f681161735c07f52da744702fdd2948947d1354",
+     "content_sha256": "5c1e6e17a7a6aebe2843ff5e794a14ddb1ee2f90fd199c7f5455568e2fea4c48"
+    },
+    {
+     "path": "t/p63c1ebacf9ca/04.wasm",
+     "core_lo": 362,
+     "core_hi": 577,
+     "n": 260943,
+     "bytes": 965055,
+     "k": 18,
+     "width": 36,
+     "sha256": "82f657c0e7e2dd4473c58b5bca13fedb99e14117e202a56419e97697d87743ac",
+     "content_sha256": "22ccffe62085c957fa45b27f4a2efaed145a49eaecb0d0439df44f0b91be18ca"
+    }
+   ],
+   "proofs": [
+    {
+     "id": "언/언어생활",
+     "start": "언",
+     "history": [
+      "언어생활"
+     ],
+     "via": 1,
+     "syllable": "활",
+     "result_for_player_to_move": "L",
+     "nodes": 4933205,
+     "proof_sha256": "ff36195c2a40069c52bb72f4d87dfaefc22c015fbfe62e7553ef27e9301a152b",
+     "table_records": 1844423,
+     "source": "basic_root/alt_first_moves/results/replay17/archive/INDEX.json (h01)",
+     "verifier": "verify_v4 (C++)",
+     "batch": "replay17",
+     "case": "h01",
+     "certificate": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay17/ff36195c2a40069c52bb72f4d87dfaefc22c015fbfe62e7553ef27e9301a152b.v4.gz"
+    }
+   ]
+  },
+  {
+   "id": "p198b16555e76",
+   "name": "학교생활로 활 제시",
+   "entries": 2249969,
+   "files": [
+    {
+     "path": "t/p198b16555e76/00.wasm",
+     "core_lo": 0,
+     "core_hi": 149,
+     "n": 393509,
+     "bytes": 1814818,
+     "k": 25,
+     "width": 44,
+     "sha256": "d513db8f9e7fc536e83d63ceb02e477dd10774b9f73fb68704735a117c4a8fdd",
+     "content_sha256": "a3c3698f40c260948f36467695e127ad3224e648db3622f88c5e3561062f9319"
+    },
+    {
+     "path": "t/p198b16555e76/01.wasm",
+     "core_lo": 150,
+     "core_hi": 191,
+     "n": 390627,
+     "bytes": 1606623,
+     "k": 21,
+     "width": 40,
+     "sha256": "e02a7f7f1f1bb39bbd1f4fa68c80dbb035a8cf825930dd176295a331a70b162c",
+     "content_sha256": "c8f3d69d623be41e81550b1bfa538963e421a274b749d725b846807026e8ca7e"
+    },
+    {
+     "path": "t/p198b16555e76/02.wasm",
+     "core_lo": 192,
+     "core_hi": 239,
+     "n": 396295,
+     "bytes": 1430898,
+     "k": 17,
+     "width": 36,
+     "sha256": "5c88bf344e9ffa21caddff3a5510f1567cf0c1cc2205f2f9d930704a71636ac5",
+     "content_sha256": "795cd87fe050c8b65efa2cd6c58fe00513ba2cb743da383ae5a3cd58c807f8ff"
+    },
+    {
+     "path": "t/p198b16555e76/03.wasm",
+     "core_lo": 240,
+     "core_hi": 293,
+     "n": 398634,
+     "bytes": 1638305,
+     "k": 21,
+     "width": 40,
+     "sha256": "580e067995e95f751ada90f17d0cdb16a68d6fe65e9925f13973a9a96f7c8d61",
+     "content_sha256": "444a052ec95451f927b81b4eded22c567f7a952859c68c6b4bcd1db13b8399a4"
+    },
+    {
+     "path": "t/p198b16555e76/04.wasm",
+     "core_lo": 294,
+     "core_hi": 372,
+     "n": 396353,
+     "bytes": 1629291,
+     "k": 21,
+     "width": 40,
+     "sha256": "ce563921bf23064778e8b23be21fce6d84bf86971947a48a53ff12f02770c7f4",
+     "content_sha256": "ceeaa7d93801aa9560a853eda05cbf6888fc01eb05d9314fe2dacb833cb350b7"
+    },
+    {
+     "path": "t/p198b16555e76/05.wasm",
+     "core_lo": 373,
+     "core_hi": 577,
+     "n": 274551,
+     "bytes": 1285382,
+     "k": 25,
+     "width": 44,
+     "sha256": "3a9d5f5c58e1177f5a8948e863f73222db84fa03938567b5a873253302094de2",
+     "content_sha256": "c2ab1b55dd69ccb3da7403216f9d9dd6f0f923ff53159bed8c72410fc4752190"
+    }
+   ],
+   "proofs": [
+    {
+     "id": "학/학교생활",
+     "start": "학",
+     "history": [
+      "학교생활"
+     ],
+     "via": 1,
+     "syllable": "활",
+     "result_for_player_to_move": "L",
+     "nodes": 6004940,
+     "proof_sha256": "33ecae595b51418d07abfecaa468c83840d72be05453a20f4512d7320db07f48",
+     "table_records": 2249969,
+     "source": "basic_root/alt_first_moves/results/replay17/archive/INDEX.json (h02)",
+     "verifier": "verify_v4 (C++)",
+     "batch": "replay17",
+     "case": "h02",
+     "certificate": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay17/33ecae595b51418d07abfecaa468c83840d72be05453a20f4512d7320db07f48.v4.gz"
+    }
+   ]
+  },
+  {
+   "id": "pbf2fd8b99c3a",
+   "name": "진두지휘로 휘 제시",
+   "entries": 72770,
+   "files": [
+    {
+     "path": "t/pbf2fd8b99c3a/00.wasm",
+     "core_lo": 0,
+     "core_hi": 578,
+     "n": 72770,
+     "bytes": 285171,
+     "k": 19,
+     "width": 36,
+     "sha256": "d78fbc32fe3622c16cd8a0ddf7691605bb789ed23801b8efd6144abf5b7bdd6d",
+     "content_sha256": "3b6878c206efd0f626b890913a07be28359562c7eed6bb1589543e7a29dcc391"
+    }
+   ],
+   "proofs": [
+    {
+     "id": "진/진두지휘",
+     "start": "진",
+     "history": [
+      "진두지휘"
+     ],
+     "via": 1,
+     "syllable": "휘",
+     "result_for_player_to_move": "W",
+     "nodes": 191103,
+     "proof_sha256": "be21189049dadcae7bbb4278cc842f257b83bfe3de1052012f9bc58ff2086270",
+     "table_records": 72770,
+     "source": "basic_root/alt_first_moves/results/replay5/archive/INDEX.json (m14)",
+     "verifier": "verify_v4 (C++)",
+     "batch": "replay5",
+     "case": "m14",
+     "certificate": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay5/be21189049dadcae7bbb4278cc842f257b83bfe3de1052012f9bc58ff2086270.v4.gz"
+    }
+   ]
+  },
+  {
+   "id": "pdcd9bebb54c1",
+   "name": "칠흑로 흑 제시",
+   "entries": 73054,
+   "files": [
+    {
+     "path": "t/pdcd9bebb54c1/00.wasm",
+     "core_lo": 0,
+     "core_hi": 578,
+     "n": 73054,
+     "bytes": 286214,
+     "k": 19,
+     "width": 36,
+     "sha256": "e46aa9c3090ae3a7002023d48d1274eab671037e4347897c4bd34345919982fd",
+     "content_sha256": "9ba9edeb661cca4226d0b8a187b632521dac66ef8950c838fbd912164349e9c5"
+    }
+   ],
+   "proofs": [
+    {
+     "id": "칠/칠흑",
+     "start": "칠",
+     "history": [
+      "칠흑"
+     ],
+     "via": 1,
+     "syllable": "흑",
+     "result_for_player_to_move": "W",
+     "nodes": 193772,
+     "proof_sha256": "15dabe1844df7fc87182e5861b2535617f580ccbb13cca5924715a3368f0342d",
+     "table_records": 73054,
+     "source": "basic_root/alt_first_moves/results/replay5/archive/INDEX.json (m03)",
+     "verifier": "verify_v4 (C++)",
+     "batch": "replay5",
+     "case": "m03",
+     "certificate": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay5/15dabe1844df7fc87182e5861b2535617f580ccbb13cca5924715a3368f0342d.v4.gz"
+    }
+   ]
+  },
+  {
+   "id": "p3d44a9ca4bb8",
+   "name": "흑흑로 흑 제시",
+   "entries": 425278,
+   "files": [
+    {
+     "path": "t/p3d44a9ca4bb8/00.wasm",
+     "core_lo": 0,
+     "core_hi": 473,
+     "n": 399816,
+     "bytes": 1642950,
+     "k": 21,
+     "width": 40,
+     "sha256": "06fb577e5a11659ac1ddefc6d19e9fe674c76d53e110243a643f15b27a933961",
+     "content_sha256": "2f77fca8101e58ce0246de35ee1533eedcc7d3df476c1832f4a447b4d2ce0441"
+    },
+    {
+     "path": "t/p3d44a9ca4bb8/01.wasm",
+     "core_lo": 474,
+     "core_hi": 577,
+     "n": 25462,
+     "bytes": 104579,
+     "k": 21,
+     "width": 36,
+     "sha256": "5df2172ee520a0270ef61ecc6a0536322c7fec7295308ff9f5452557ee6ccb38",
+     "content_sha256": "a1cf52df3549bb5633bb44a2951f6bb7d838ff270eeb0bbad0c46a62db154b85"
+    }
+   ],
+   "proofs": [
+    {
+     "id": "흑/흑흑",
+     "start": "흑",
+     "history": [
+      "흑흑"
+     ],
+     "via": 1,
+     "syllable": "흑",
+     "result_for_player_to_move": "L",
+     "nodes": 1093694,
+     "proof_sha256": "c4d60797dd61b27bb5167934377bc11b2964c43d34641432a993a88c355eb117",
+     "table_records": 425278,
+     "source": "basic_root/alt_first_moves/results/replay5/archive/INDEX.json (m34)",
+     "verifier": "verify_v4 (C++)",
+     "batch": "replay5",
+     "case": "m34",
+     "certificate": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay5/c4d60797dd61b27bb5167934377bc11b2964c43d34641432a993a88c355eb117.v4.gz"
+    }
+   ]
+  },
+  {
+   "id": "p330acd7f19e2",
+   "name": "즉흥로 흥 제시",
+   "entries": 28307,
+   "files": [
+    {
+     "path": "t/p330acd7f19e2/00.wasm",
+     "core_lo": 0,
+     "core_hi": 578,
+     "n": 28307,
+     "bytes": 115827,
+     "k": 21,
+     "width": 36,
+     "sha256": "166a765d51fffd5fcca6eb298b475db34bad1ae144592526239caf3ba53ff0ab",
+     "content_sha256": "41bac92a904dd70b8ad0e32fd5505e0a8f0c511376824d0b90325525b9c0d304"
+    }
+   ],
+   "proofs": [
+    {
+     "id": "즉/즉흥",
+     "start": "즉",
+     "history": [
+      "즉흥"
+     ],
+     "via": 1,
+     "syllable": "흥",
+     "result_for_player_to_move": "W",
+     "nodes": 72644,
+     "proof_sha256": "66a5e2a86afbddb2b012e36006421ff2b0abd1ec23bea4ef9e5b97e06eff8fd7",
+     "table_records": 28307,
+     "source": "basic_root/alt_first_moves/results/replay1/archive/INDEX.json (r05)",
+     "verifier": "verify_v4 (C++)",
+     "batch": "replay1",
+     "case": "r05",
+     "certificate": "results/replay1/archive/certs/66a5e2a86afbddb2b012e36006421ff2b0abd1ec23bea4ef9e5b97e06eff8fd7.v4.gz"
+    }
+   ]
+  },
+  {
+   "id": "pf37fa9dd177e",
+   "name": "진흥로 흥 제시",
+   "entries": 30078,
+   "files": [
+    {
+     "path": "t/pf37fa9dd177e/00.wasm",
+     "core_lo": 0,
+     "core_hi": 578,
+     "n": 30078,
+     "bytes": 122837,
+     "k": 21,
+     "width": 36,
+     "sha256": "3c54a407a32595fb5814c2166f9291b833b19efaa075325890089a868d008195",
+     "content_sha256": "63637ce74efc5cdff52f9f633f46ab611f7f0777076342c92b938c2348b2245f"
+    }
+   ],
+   "proofs": [
+    {
+     "id": "진/진흥",
+     "start": "진",
+     "history": [
+      "진흥"
+     ],
+     "via": 1,
+     "syllable": "흥",
+     "result_for_player_to_move": "W",
+     "nodes": 76951,
+     "proof_sha256": "386c4519efb14ce31b7218377d40ac88d985131b389c847ce9acf31832e3d6fe",
+     "table_records": 30078,
+     "source": "basic_root/alt_first_moves/results/replay3/archive/INDEX.json (g29)",
+     "verifier": "verify_v4 (C++)",
+     "batch": "replay3",
+     "case": "g29",
+     "certificate": "https://github.com/baekjw2435/AI-/releases/download/alt817-proofs-replay3/386c4519efb14ce31b7218377d40ac88d985131b389c847ce9acf31832e3d6fe.v4.gz"
+    }
+   ]
+  }
+ ],
+ "note": "one book per position (w로 t 제시); every table comes from that position's own verified v4 certificate",
+ "total_entries": 8151140,
+ "total_bytes": 34001987,
+ "encoding": "wasm-custom"
+}

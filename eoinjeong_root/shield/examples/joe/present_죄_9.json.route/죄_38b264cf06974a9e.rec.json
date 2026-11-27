@@ -1,0 +1,31 @@
+{
+ "id": "죄_38b264cf06974a9e",
+ "syllable": "죄",
+ "used_route_words": [
+  "뼈살촉",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩",
+  "촉탁살인죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000132,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "38b264cf06974a9e14a2708539c2704f0c4e620581070bec854a0ff317df1719",
+ "input_sha256": "c22a95df76d2ad7845027144713c3cf2b96b47aa9c892989ab0467424055d6fb",
+ "proof_bytes": 124
+}

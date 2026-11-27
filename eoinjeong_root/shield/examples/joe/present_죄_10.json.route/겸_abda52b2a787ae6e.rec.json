@@ -1,0 +1,28 @@
+{
+ "id": "겸_abda52b2a787ae6e",
+ "syllable": "겸",
+ "used_route_words": [
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001899,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4fe9ed59c9cd2d9bb68d5c709c89e086110c65588a7a6f7b0381d08835ff773a",
+ "position_sha256": "abda52b2a787ae6e195bd3dfc5514fdfe8da56085bd569f6cb951b8b87b2790c",
+ "input_sha256": "0debdf463466f437c5d853d4136f95889905ae79849ae3aa4068160eb32ddadb",
+ "proof_bytes": 2589
+}

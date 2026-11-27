@@ -1,0 +1,42 @@
+{
+ "question": "보호막 11에서 ~죄 제시",
+ "result": "제시한 쪽 승",
+ "verified": true,
+ "problems": 0,
+ "nodes": 2462031,
+ "leaves": {
+  "패: 공격 목록/제자리 단어로 증명": 1030424,
+  "루트 확정 결과와 같음": 2273,
+  "루트(쓴 루트 단어 있음): solver_v5 증명서 verify_v4 수락": 17003,
+  "순환 음절: 직접 탐색으로 같음": 580
+ },
+ "certificate_json_sha256": "9bdd2653614bb45ab9e014ac6416c828f0c6461831819e62679da687b0565cd5",
+ "certificate_json_gz_sha256": "97cb1a01485970725004c7d7df582247267c2b0e9819f4566fa2514daaeed770",
+ "route_tgz_sha256": "8e55e9f179b81926b68f2eb64f7bcc0c1c606199b857bfb956ff094566ba8464",
+ "parts": {
+  "present_죄_11.json.gz.part00": {
+   "bytes": 41943040,
+   "sha256": "c0256d9fe9a733ac399447a1b886950a98391b171bae4d2dc675751656bbe768"
+  },
+  "present_죄_11.json.gz.part01": {
+   "bytes": 32517129,
+   "sha256": "b8bf023a46f0b8fa1681e7681b0fec0e7649e4c309e6dad58a61f257d8651ef4"
+  },
+  "route.tgz.part00": {
+   "bytes": 41943040,
+   "sha256": "9aeef084528f69ed82ad74334259a44ac4607eac3196458e3135015cd95585b6"
+  },
+  "route.tgz.part01": {
+   "bytes": 41943040,
+   "sha256": "84dd2c20e0cc2b9420138a4ada149dd35ee29f26a9401bc3e55e24091147bd98"
+  },
+  "route.tgz.part02": {
+   "bytes": 41943040,
+   "sha256": "38e31f1c4565a81225140b1ed105f28332ccbbf12a3ceca8f8e6f5b4b065843e"
+  },
+  "route.tgz.part03": {
+   "bytes": 10915613,
+   "sha256": "85a03850b8610e3fca18c4ce1718b57b59baa325927292657e7a1577508bb580"
+  }
+ }
+}

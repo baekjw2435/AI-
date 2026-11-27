@@ -1,0 +1,30 @@
+{
+ "id": "률_be00114c189e2d64",
+ "syllable": "률",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000172,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "be00114c189e2d64285dee1ba581f316173c863e3299c337091988553597a2d5",
+ "input_sha256": "6934e000d554df53beacce418d284f7f0f8bfc0440cddba8f9b3cf59337bafce",
+ "proof_bytes": 124
+}

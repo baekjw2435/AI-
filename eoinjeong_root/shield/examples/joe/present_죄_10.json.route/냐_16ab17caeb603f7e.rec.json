@@ -1,0 +1,27 @@
+{
+ "id": "냐_16ab17caeb603f7e",
+ "syllable": "냐",
+ "used_route_words": [
+  "준치저냐",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000931,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "16ab17caeb603f7e67ec18f88d384232f6ab11540642657ee1927f088253c2fd",
+ "input_sha256": "f87282c0e3a236c7a4156db4075feff9cc356f5aa2810d09ec225203172fe59c",
+ "proof_bytes": 799
+}

@@ -1,0 +1,31 @@
+{
+ "id": "죄_02c00c8a3a28fce5",
+ "syllable": "죄",
+ "used_route_words": [
+  "득죄",
+  "죄첩",
+  "첩첩",
+  "험득",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000153,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "02c00c8a3a28fce5b5a1e542c46dec4c53c717ab292d740700e1ee62abdd5ed9",
+ "input_sha256": "cdf55c96eabd38b38389a3e3d4b4a3c47b4697702069dcda873314ff7705c060",
+ "proof_bytes": 124
+}

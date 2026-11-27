@@ -1,0 +1,29 @@
+{
+ "id": "잇_dd6191099c95f0c2",
+ "syllable": "잇",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00013,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "dd6191099c95f0c210e5557bf071fb41f29aedf518fed05892495647d6c8da19",
+ "input_sha256": "737124452ff5fec3fb1b41203db193e351f99608928d4deb0da1163859a81bbb",
+ "proof_bytes": 124
+}

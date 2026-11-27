@@ -1,0 +1,29 @@
+{
+ "id": "첩_17a0e62bbfd93c58",
+ "syllable": "첩",
+ "used_route_words": [
+  "권첩",
+  "쇄쇄",
+  "쇄심권",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000173,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a2648bf489eb81cebefae73204b167f0a4246d268994628da110b2fed67cf832",
+ "position_sha256": "17a0e62bbfd93c5886605d90bf038d488007c6e3248c598cd27cc6f21a0ca687",
+ "input_sha256": "2eddcbaaf0c718e2698d34f676a8871359d015416260858c2a563f88a183d665",
+ "proof_bytes": 141
+}

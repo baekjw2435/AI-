@@ -1,0 +1,29 @@
+{
+ "id": "둔_f5ee88a3599171b4",
+ "syllable": "둔",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000147,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f5ee88a3599171b40adffa5fc36143e03940f423d8d6877a4de9d3a386a6a7cd",
+ "input_sha256": "537774a69829f39c6d8d741acf1fbc3f9d20f41d654334686daec2b3b0c3770d",
+ "proof_bytes": 124
+}

@@ -1,0 +1,32 @@
+{
+ "id": "률_0db32ff7c778e496",
+ "syllable": "률",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "늠률",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000125,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "0db32ff7c778e4963f0a898e97fb9a7e16f48eda6cbddd97228c78ad211cb83f",
+ "input_sha256": "5efe44a32cbdf9ddfc2bf03e16259bd942372380a145c3a8bf9f6e44f8fb304b",
+ "proof_bytes": 124
+}

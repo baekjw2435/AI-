@@ -1,0 +1,29 @@
+{
+ "id": "을_cd516be795a94f53",
+ "syllable": "을",
+ "used_route_words": [
+  "권섭",
+  "섭도마을",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.01036,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6b63a2bad2bbf5c5746bed155ffbe696f6c0d5a9ff039c372704ad000a195c62",
+ "position_sha256": "cd516be795a94f5316dfd59fee9e42d4c9287c42f0fede5dd9842d0f886a75d7",
+ "input_sha256": "b804de436c0fa32bcb62c708fc0d316608f4a75659655f5c6eb0ab63358ae5d2",
+ "proof_bytes": 8201
+}

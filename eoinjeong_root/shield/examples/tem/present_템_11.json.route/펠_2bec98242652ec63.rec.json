@@ -1,0 +1,27 @@
+{
+ "id": "펠_2bec98242652ec63",
+ "syllable": "펠",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007641,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f3dbdf216818aee48fa5411a1642a1a0a8363301a200f73cf99c12c78c027f9",
+ "position_sha256": "2bec98242652ec63c94d51ee46fe635c0e9ee5295c49bd4175185ba82147e298",
+ "input_sha256": "0df6222f57ed85fa11d7a4bdc972ca5fb5554bd41bb19bdcd43cf9f928cc72e7",
+ "proof_bytes": 6437
+}

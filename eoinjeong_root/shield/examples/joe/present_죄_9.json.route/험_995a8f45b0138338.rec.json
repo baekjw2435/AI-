@@ -1,0 +1,31 @@
+{
+ "id": "험_995a8f45b0138338",
+ "syllable": "험",
+ "used_route_words": [
+  "갑자기쪽지시험",
+  "쇄쇄",
+  "쇄자갑",
+  "죄인의벗을수없는족쇄",
+  "험할험",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000305,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2b19362a7916edd6b7eea80d91dc2667a4c0ba3d99ed6120fc93e87213fe2ff4",
+ "position_sha256": "995a8f45b01383389a736d6d1207585e3b7ea7661e244f9576ac3d3d33193d70",
+ "input_sha256": "3b95744f18d95569f71b03e5e856f0c8cd890e02b0cc3b00a3ee20c1b6d1a65a",
+ "proof_bytes": 417
+}

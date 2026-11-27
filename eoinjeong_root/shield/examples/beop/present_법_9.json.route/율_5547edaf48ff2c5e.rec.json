@@ -1,0 +1,30 @@
+{
+ "id": "율_5547edaf48ff2c5e",
+ "syllable": "율",
+ "used_route_words": [
+  "권삼득",
+  "득득",
+  "득죄",
+  "읍권",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000544,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5e25b768a8c400cb8ab433d10e05d07c0fb0606623447389ce10ec09ffc9facb",
+ "position_sha256": "5547edaf48ff2c5ee76d07827e15d53bb0705c334996f7d179de1549b8793ace",
+ "input_sha256": "0a8ecba94b7702a9525e67aa7d60d013565a8658cff511a0392a1e27166ea4f2",
+ "proof_bytes": 806
+}

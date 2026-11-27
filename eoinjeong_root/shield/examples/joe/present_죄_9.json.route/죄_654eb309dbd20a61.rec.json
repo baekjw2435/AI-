@@ -1,0 +1,28 @@
+{
+ "id": "죄_654eb309dbd20a61",
+ "syllable": "죄",
+ "used_route_words": [
+  "득죄",
+  "죠죠의기묘한모험",
+  "험득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00097,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "16b5de1aa80128b65b4f8a94c45706bfbf2c31be0779c9ede85729f9fcd91f75",
+ "position_sha256": "654eb309dbd20a616ee8a37b44f9a78cd5332d4dfd9a46294dd9a90c590e79df",
+ "input_sha256": "7101e021c162092aa972d245ba1a314525108aa3cfee2a639112d8931d7d5254",
+ "proof_bytes": 1239
+}

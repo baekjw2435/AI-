@@ -1,0 +1,28 @@
+{
+ "id": "냐_683ed4215426dd5c",
+ "syllable": "냐",
+ "used_route_words": [
+  "굴저냐",
+  "샅굴",
+  "획죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001092,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "683ed4215426dd5c103d7d2a49a6def1c65be99287d5267a54a62c6d5ef1ec59",
+ "input_sha256": "6cb60cf9757269aec6e2221821553c67abd84f39cdaead4c2256a7c13d032a8b",
+ "proof_bytes": 799
+}

@@ -1,0 +1,28 @@
+{
+ "id": "득_42c2d8ee9f67810e",
+ "syllable": "득",
+ "used_route_words": [
+  "뜸마을",
+  "뜸통뜸",
+  "험득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000721,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "299e1ebf432b79ee3e31b3d5f09238f9d3f9af2a02c01d9b4b97e8753d55ba70",
+ "position_sha256": "42c2d8ee9f67810ed5427e138df7f25d8585baf146e682d0f7872f4b1b1f80d7",
+ "input_sha256": "507bd0144a58950265a70ed62cdfaf972edaddec54fc46b3d4095685a7f7cd54",
+ "proof_bytes": 1248
+}

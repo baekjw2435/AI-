@@ -1,0 +1,31 @@
+{
+ "id": "쇄_a9d76abd34ab551f",
+ "syllable": "쇄",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000138,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "a9d76abd34ab551fb49bd7f2759b88a7a0e8a6151e8b3f2a8c3ea1aa239699f0",
+ "input_sha256": "a445ec57110ee6d041798d045d1009d1cd4f7bf265540ca305d0484bdc67a770",
+ "proof_bytes": 124
+}

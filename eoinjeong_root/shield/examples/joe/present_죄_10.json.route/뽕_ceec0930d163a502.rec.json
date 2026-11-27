@@ -1,0 +1,28 @@
+{
+ "id": "뽕_ceec0930d163a502",
+ "syllable": "뽕",
+ "used_route_words": [
+  "굴대두겁",
+  "댁대굴",
+  "뽕뽕"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.011071,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1df450344ca502b8c74a62f64a25938e2209cc88d35d653b186ec98efdd5042d",
+ "position_sha256": "ceec0930d163a502a9b2788e7f8c895a89329baeb7856b4d662b9250c206ca7a",
+ "input_sha256": "ce2978367bd33b79f1c2db6ca6343a5a713989821f73187b84a8eee89c5bb237",
+ "proof_bytes": 8401
+}

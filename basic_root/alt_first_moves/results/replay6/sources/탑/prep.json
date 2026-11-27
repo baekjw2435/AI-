@@ -1,0 +1,33 @@
+{
+ "syllable": "탑",
+ "vertex": "탑",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 187.926,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 117468043,
+ "proof_nodes": 637852,
+ "proof_seconds": 13.437881,
+ "solver_wall_seconds": 202.42,
+ "verify_seconds": 17.812,
+ "verify_wall_seconds": 17.83,
+ "proof_bytes": 4601228,
+ "proof_sha256": "7accd29472e88596e3479aa85d751e4080f7b64d444cdfed8b6924df5ab7b97d",
+ "position_sha256": "4227621934dda5029f460f574612fd1b7ddfd9a33888b2cff19e20308432c4ee",
+ "input_sha256": "2092a7bc9ed49966120562538caabaec159535cb631b7d5f93b1cf467f66a141",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

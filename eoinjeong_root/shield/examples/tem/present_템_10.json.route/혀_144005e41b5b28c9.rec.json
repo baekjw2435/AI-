@@ -1,0 +1,27 @@
+{
+ "id": "혀_144005e41b5b28c9",
+ "syllable": "혀",
+ "used_route_words": [
+  "잎혀",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.005913,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fd96b047645bdd5c3591fcc897347fc7dd7538bfea8bb4dbaa2466aee18d951d",
+ "position_sha256": "144005e41b5b28c9bb68d5f7edbc590ed9cfcf9117ebe77354f56ef767f358f8",
+ "input_sha256": "fcbf6259e6141ed3a38542bd95bfbbbb33d06c1c675eec9aed048121393bfe85",
+ "proof_bytes": 806
+}

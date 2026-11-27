@@ -1,0 +1,28 @@
+{
+ "id": "읍_6eb4b2d95510c7c7",
+ "syllable": "읍",
+ "used_route_words": [
+  "읍읍",
+  "읍할읍",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010145,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1301e73d79785df128f228e32465fad6c5b4226afffe9d55570f4a9489ebd936",
+ "position_sha256": "6eb4b2d95510c7c75a3297d4f6fcde996d74de6e62f9f66ba3330033a8d8ef5b",
+ "input_sha256": "d6555c9d3dbaf16742297e0380ab328428a5bd986c2973b49bc0b520ec7f01f8",
+ "proof_bytes": 5744
+}

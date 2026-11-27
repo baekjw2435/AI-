@@ -1,0 +1,26 @@
+{
+ "id": "펠_9af7fa41a13cee33",
+ "syllable": "펠",
+ "used_route_words": [
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.011955,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f3dbdf216818aee48fa5411a1642a1a0a8363301a200f73cf99c12c78c027f9",
+ "position_sha256": "9af7fa41a13cee33a410c727c71312d834b905293b396b617c55334240b0428e",
+ "input_sha256": "0b65c40551222a2660d85bcf921ca9b0a7df4ca875669f13d4b3b98a8379d6a1",
+ "proof_bytes": 6437
+}

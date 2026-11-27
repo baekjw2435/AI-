@@ -1,0 +1,33 @@
+{
+ "syllable": "탕",
+ "vertex": "탕",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 685.98,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 477630238,
+ "proof_nodes": 2214077,
+ "proof_seconds": 44.003571,
+ "solver_wall_seconds": 732.16,
+ "verify_seconds": 54.486,
+ "verify_wall_seconds": 54.53,
+ "proof_bytes": 15957261,
+ "proof_sha256": "5461d8099eb735937f968fbbb1ca7df5d9698adf7f70a8784af5236d567dd91c",
+ "position_sha256": "7d8c531a9609caadeb24a6c11e10173e0d00d3f7f6383e925e8380e593d3b8d1",
+ "input_sha256": "100b9425c6b8fe5f4f5a2d4d7b2ea6337cd92cef10fc2b50dcdecee8735c6a8e",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

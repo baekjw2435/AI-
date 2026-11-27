@@ -1,0 +1,28 @@
+{
+ "id": "틱_3ad0339c5a07dbe4",
+ "syllable": "틱",
+ "used_route_words": [
+  "죄상가죄",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001977,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9d45d338a8632115878316aa6f13cb97b29d6d1ef3e6deab55f1f63c4759609e",
+ "position_sha256": "3ad0339c5a07dbe44ee42891b1d765b712b515bb64a6bf275b89f906616de278",
+ "input_sha256": "8cf54473acfcfee02b043089498cd3380c8da56bbe9dcad69403a9b08af1fe2e",
+ "proof_bytes": 2592
+}

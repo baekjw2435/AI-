@@ -1,0 +1,27 @@
+{
+ "id": "죄_81a155220c607a2d",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003736,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c53473d51c1b2ef3910b09e93f04e23851555a03dad393b8357f67a91502d783",
+ "position_sha256": "81a155220c607a2dca64d1d00b12ce391dc297e60ca7bf907a1a7ceae86be897",
+ "input_sha256": "2fa35df94099233e34c4514f71993c11bd49feb21fbc12c62d2bdf1eb08aaf01",
+ "proof_bytes": 4102
+}

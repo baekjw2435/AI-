@@ -1,0 +1,20 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay15-v1:\" + id), first 999",
+ "eligible": 1,
+ "eligible_by_source": {
+  "껑": 1
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "z01",
+   "id": "병/병뚜껑",
+   "syllable": "병",
+   "word": "병뚜껑",
+   "source": "껑",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}

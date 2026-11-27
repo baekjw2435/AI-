@@ -1,0 +1,31 @@
+{
+ "id": "득_7be04a7e65cd13b4",
+ "syllable": "득",
+ "used_route_words": [
+  "겸겸",
+  "겸득",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000168,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "7be04a7e65cd13b4c8dab1376544c0b7c861ef3ea6beaae284a402b023c123f6",
+ "input_sha256": "04381a43da9aacf19959bc4aceeaa3ef4e9e66899c93ccefb6ef822f8f9b5a0f",
+ "proof_bytes": 124
+}

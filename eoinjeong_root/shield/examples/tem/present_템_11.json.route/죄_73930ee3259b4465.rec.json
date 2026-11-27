@@ -1,0 +1,28 @@
+{
+ "id": "죄_73930ee3259b4465",
+ "syllable": "죄",
+ "used_route_words": [
+  "득죄",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009022,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "47764b806b6159f4353a3ac4cf814be2e4f8bcaaf890267d22f3562060b8c1c9",
+ "position_sha256": "73930ee3259b4465cb3a9f930f76560cadfa68511218d795f9ff467c725e0442",
+ "input_sha256": "cc12754bcdbd50629ff83abfec0ac3ce74049218d8124ce63e7d12f4366d4ad1",
+ "proof_bytes": 7917
+}

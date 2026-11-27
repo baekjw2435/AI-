@@ -1,0 +1,26 @@
+{
+ "id": "궐_cf4d4f3138d630c6",
+ "syllable": "궐",
+ "used_route_words": [
+  "몬드니켈"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.02375,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "86671fec3125da25b61cd6143a77fb114abfd7d13edd03b7c54061a5a5f1944b",
+ "position_sha256": "cf4d4f3138d630c6ea9da9506ca4b9fd2adccfb03f9bbedcaa9c065add15f6de",
+ "input_sha256": "a7e1e5019b76bd33960d37f82f398d17de8df3c6d3c7987b30b4e7861f0c83d7",
+ "proof_bytes": 7169
+}

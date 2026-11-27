@@ -1,0 +1,28 @@
+{
+ "id": "형_5a48b865dd299b60",
+ "syllable": "형",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을",
+  "을지형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.005061,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "64185d6f8916dda9bfb58b15734f1e4b5fe93be990802ac1d8174349a8deab02",
+ "position_sha256": "5a48b865dd299b60cea7e8534881c1b871d2ef50e531dab7e8d8ab40bf0bc501",
+ "input_sha256": "b050b991bf6ba27be4ca6417ac7da9ed590c212da437ef11e957fac3dec6a463",
+ "proof_bytes": 983
+}

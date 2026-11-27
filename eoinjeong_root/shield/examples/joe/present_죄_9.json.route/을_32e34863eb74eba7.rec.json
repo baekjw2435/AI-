@@ -1,0 +1,29 @@
+{
+ "id": "을_32e34863eb74eba7",
+ "syllable": "을",
+ "used_route_words": [
+  "섭도마을",
+  "죠죠의기묘한모험",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000288,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "32e34863eb74eba7f06747292ced37e3be4e41da2a72d30551af55b26fe6cc99",
+ "input_sha256": "0e02d2b77cc4685ff8c0db7d652988865340cda3ea086656dda79dc1254a1398",
+ "proof_bytes": 124
+}

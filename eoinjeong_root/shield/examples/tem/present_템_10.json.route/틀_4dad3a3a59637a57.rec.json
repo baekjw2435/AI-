@@ -1,0 +1,29 @@
+{
+ "id": "틀_4dad3a3a59637a57",
+ "syllable": "틀",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "딩동댕지난여름",
+  "빔실틀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00458,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "617e3050577dea8c3a12f526b3d130dffa1a27aa30ae02e1d8bd5aa6c8511ac6",
+ "position_sha256": "4dad3a3a59637a57747e273e1f51808e376dc446b06429ca9aa1bed9ce95dd3b",
+ "input_sha256": "d93be8fe758254d531ca5842965f04f0618412ba4b951a4dd8ac2459f62cb849",
+ "proof_bytes": 1058
+}

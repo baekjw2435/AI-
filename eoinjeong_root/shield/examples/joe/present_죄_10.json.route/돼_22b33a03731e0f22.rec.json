@@ -1,0 +1,26 @@
+{
+ "id": "돼_22b33a03731e0f22",
+ "syllable": "돼",
+ "used_route_words": [
+  "냅킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.022926,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d45b150858e00a85fb774dca8fe661808e9d6b12761f96b07417d2ceadc12112",
+ "position_sha256": "22b33a03731e0f226d792418e0bbecfb0c190442832025a1bee47504afff79fa",
+ "input_sha256": "07bf8c9919b39a2b36c8c22da11c8037c602543d3a058cb34bdc1a4717be89e2",
+ "proof_bytes": 12089
+}

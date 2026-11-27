@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "format": "route-proof-v4",
+  "rule": "engine-standard-dueum (ㄹ:ㅑㅕㅖㅛㅠㅣ→ㅇ, ㅏㅐㅗㅚㅜㅡ→ㄴ; ㄴ:ㅕㅛㅠㅣ→ㅇ; one-way)",
+  "result_for_player_to_move": "W",
+  "initial_syllable": "격",
+  "current_vertex": "멸",
+  "history": [
+    "격멸"
+  ],
+  "initial_used_words": [],
+  "dictionary_words": 817,
+  "used_words": 1,
+  "model_vertices": 160,
+  "model_groups": 718,
+  "shared_groups": 0,
+  "checked_certificate_states": 108307,
+  "checked_certificate_moves": 110320,
+  "checked_static_leaves": 21032,
+  "reduced_root_word_count": 578,
+  "certificate_nodes": 108307,
+  "unreached_nodes": 0,
+  "state_storage": "deflate-exact",
+  "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+  "position_sha256": "d876a8d305a6f5d413f866b8f5d8ec889950c67aba3cb08ed2d63afcb8649130",
+  "proof_sha256": "d290ecf1781b56f19505e4f566c91326bf17c451e597f385e807c034215d1a5d",
+  "input_sha256": "914167bcbc61807d866b21859211acf0e7d7bafc6475023714b3939691864bac",
+  "elapsed_seconds": 5.271
+}

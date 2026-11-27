@@ -1,0 +1,28 @@
+{
+ "id": "굴_f8f90797aab4f600",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "잇샅",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000201,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f8f90797aab4f600da6c6c7545a9d2429a1b7af67b04beed7a8db2ddd5b30a5d",
+ "input_sha256": "4aff2c8f0d3294349a29072ed09b0b9241992d3b2c0b52185a080b1b9176c8fd",
+ "proof_bytes": 124
+}

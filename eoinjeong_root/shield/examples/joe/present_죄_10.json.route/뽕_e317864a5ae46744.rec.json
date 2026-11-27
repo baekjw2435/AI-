@@ -1,0 +1,27 @@
+{
+ "id": "뽕_e317864a5ae46744",
+ "syllable": "뽕",
+ "used_route_words": [
+  "굴대두겁",
+  "뽕뽕"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.014817,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1df450344ca502b8c74a62f64a25938e2209cc88d35d653b186ec98efdd5042d",
+ "position_sha256": "e317864a5ae467446a4d4d4ebef49e818d36367166b3fbeb20e133dba1ba334d",
+ "input_sha256": "cc51289dc32e187b789d7385c3b4ed379b630cabe07f909eb0398414a8681fb3",
+ "proof_bytes": 8401
+}

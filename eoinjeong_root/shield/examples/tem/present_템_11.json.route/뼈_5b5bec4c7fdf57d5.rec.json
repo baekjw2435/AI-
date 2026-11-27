@@ -1,0 +1,29 @@
+{
+ "id": "뼈_5b5bec4c7fdf57d5",
+ "syllable": "뼈",
+ "used_route_words": [
+  "권척",
+  "쇄쇄",
+  "쇄심권",
+  "척추뼈"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.484198,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "11f3eeedcbb4a579f08495d1e37541390dcd3c57d0f955fb98c1c8b7a3414292",
+ "position_sha256": "5b5bec4c7fdf57d5a41aaf4dbfe5e32618d41338bfa891af4cce3ba093e8a7cb",
+ "input_sha256": "4f1e01848a2e065a5f5ff87bf7e2a7e46f34b912439a822dc6c225fdfd43971c",
+ "proof_bytes": 199909
+}

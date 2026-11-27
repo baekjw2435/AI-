@@ -1,0 +1,29 @@
+{
+ "id": "겅_72f440c1f0fc4563",
+ "syllable": "겅",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000172,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "72f440c1f0fc4563dbb654541964de97041ca4bff8c2aae2fa37be645300db18",
+ "input_sha256": "e0a7e9613106350554f29b2074316dd63f271745a9e8686d0bbfa2244a95b22e",
+ "proof_bytes": 124
+}

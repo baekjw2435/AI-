@@ -1,0 +1,28 @@
+{
+ "id": "죄_a1814b175ca3ca05",
+ "syllable": "죄",
+ "used_route_words": [
+  "쇄쇄",
+  "죄인의벗을수없는족쇄",
+  "촉탁살인죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000466,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "778b405644d953588db2a87dfc0e2ffbe8abade104dbe6739bb59a6ceeb4e7f9",
+ "position_sha256": "a1814b175ca3ca0517902a5f804c04a0800348422b4c81947c9b82f1a37e261d",
+ "input_sha256": "486fe2fcc2e371bf1dceaa56d7d5485728274c8a32d26eacf55cadd452fc50a3",
+ "proof_bytes": 502
+}

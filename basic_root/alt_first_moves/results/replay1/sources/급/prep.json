@@ -1,0 +1,32 @@
+{
+ "syllable": "급",
+ "vertex": "급",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 0.926,
+ "lost_runs": [],
+ "unfinished_starts": 0,
+ "mid_calls": 552430,
+ "proof_nodes": 8247,
+ "proof_seconds": 0.122403,
+ "solver_wall_seconds": 2.44,
+ "verify_seconds": 0.299,
+ "verify_wall_seconds": 0.3,
+ "proof_bytes": 60703,
+ "proof_sha256": "a423592ad513a3585fe555f8df9af6110dfe0c9cb1e8401797274b3fa356ed96",
+ "position_sha256": "c0dbe0abd805cb0c9325c7d1d97f274c4bacba4ba07353146c45b2e443e9faa6",
+ "input_sha256": "fd93cec4a079e6bc10b897fa11d812a542ca7b8e4059b47c0957e60e218e927c",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "ea7ff989f0c96cc377e78881f040ea79798302a3b65555b1220c4831fbe18471"
+}

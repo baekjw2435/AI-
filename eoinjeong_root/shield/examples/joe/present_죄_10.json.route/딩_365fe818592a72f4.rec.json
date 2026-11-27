@@ -1,0 +1,28 @@
+{
+ "id": "딩_365fe818592a72f4",
+ "syllable": "딩",
+ "used_route_words": [
+  "냐짱",
+  "준치저냐",
+  "짱짱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.015117,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "eda4063a86fd5c7ae5161fd787afa962a932c3fdafb45a2e4483bf9c04303296",
+ "position_sha256": "365fe818592a72f44313c4dfa726759a0889a053344699ee0f33a3ad00f84afe",
+ "input_sha256": "5f31031da5663813e4233479059e05c20d6f2566cfa6add06889fd929adcc37c",
+ "proof_bytes": 10457
+}

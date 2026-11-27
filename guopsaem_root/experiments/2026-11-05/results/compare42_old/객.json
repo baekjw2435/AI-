@@ -1,0 +1,42 @@
+{
+ "syllable": "객",
+ "members": [
+  "객"
+ ],
+ "vertex": "객",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 52202496,
+  "child_gens": 129770897,
+  "tt_entries": 16395549,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 52202496,
+  "tt_replacements": 15760177,
+  "seconds": 120.001244,
+  "pn": 5389,
+  "dn": 1588,
+  "best_group": 4,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16395549,
+  "tt_save_seconds": 2.244828,
+  "tt_save_error": ""
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

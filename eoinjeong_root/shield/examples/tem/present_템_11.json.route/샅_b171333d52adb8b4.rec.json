@@ -1,0 +1,30 @@
+{
+ "id": "샅_b171333d52adb8b4",
+ "syllable": "샅",
+ "used_route_words": [
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.004816,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "139cb41f6e0285d350e89f45546b52c0e77ab3960b623ac9ae0fe49973ee58de",
+ "position_sha256": "b171333d52adb8b4920aae9271a728f50efa634f33121b590ad4ec5b19c79a9f",
+ "input_sha256": "da558232b705098a6974db71bb5fde599f929e3973c483447aaa3697a526774e",
+ "proof_bytes": 4696
+}

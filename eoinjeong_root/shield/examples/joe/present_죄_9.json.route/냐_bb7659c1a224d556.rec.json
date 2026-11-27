@@ -1,0 +1,28 @@
+{
+ "id": "냐_bb7659c1a224d556",
+ "syllable": "냐",
+ "used_route_words": [
+  "밑틀",
+  "죄밑",
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000401,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a509130a7ac7241e92dbcbda7460155e4d60a56c2a443cb8b57a6adcd92be5cd",
+ "position_sha256": "bb7659c1a224d55653514f049a87aa167482ed4ae6b116fd3fe10efbb34d561e",
+ "input_sha256": "4088778c0c1c7ea1a04e1716c45c43b9bcc4c178553c2225d343c132c73c034f",
+ "proof_bytes": 456
+}

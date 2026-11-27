@@ -1,0 +1,28 @@
+{
+ "id": "굴_744c114982cfda83",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "뜸마을",
+  "을종근로소득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000148,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "744c114982cfda83d4020ef36a05de89369f33f667e1951c9004c89cad845679",
+ "input_sha256": "7e1de661e654a30a71ba752b34772d47c67341d95dc5469574c4f093123f1a66",
+ "proof_bytes": 124
+}

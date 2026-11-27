@@ -1,0 +1,28 @@
+{
+ "id": "율_de69fa1bf76b0627",
+ "syllable": "율",
+ "used_route_words": [
+  "득득",
+  "득죄",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.006093,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "403c6d81284263836addf17f2c009d59d680cd5c5a5ddc19048110897dbe1ea8",
+ "position_sha256": "de69fa1bf76b0627a1383a10f034db34321c76c3de08f8afcfeceb5352a25f22",
+ "input_sha256": "94117a137965914aed796a17f85b4897860ad317e2899be5905ea5a4ee69e8f9",
+ "proof_bytes": 4763
+}

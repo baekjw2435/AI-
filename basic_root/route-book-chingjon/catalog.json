@@ -1,0 +1,449 @@
+{
+ "format": "route-book-1",
+ "dictionary_sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273",
+ "verifier": {
+  "verify_v2.py": "9019cd1da696c7cc2db7faf6a37a6fe69614f83697a855884bcbdcca6360e69f",
+  "verify.py": "b08c2491b95d6ccc477b385e648581f970d48961df06ceb6f2a9bd81ad1b5ec3"
+ },
+ "proofs": [
+  {
+   "id": "ching",
+   "start": "칭",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 296765,
+   "proof_sha256": "be4b4e4e270f77820f2a13b166ded8c99e6e3416430f5c998f682c99b0d1c6e1",
+   "verify_seconds": 142.199,
+   "table_entries": 98201
+  },
+  {
+   "id": "ching.via_myeongching",
+   "start": "명",
+   "history": [
+    "명칭"
+   ],
+   "via": 1,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 304749,
+   "proof_sha256": "9281e8b18796c457bb002b4b37da8de423b8ff49425f95f9d6d54e8ab153000d",
+   "verify_seconds": 155.464,
+   "table_entries": 100976
+  },
+  {
+   "id": "ching.via_geukjonching",
+   "start": "극",
+   "history": [
+    "극존칭"
+   ],
+   "via": 1,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 384728,
+   "proof_sha256": "b2980734df72e6c9405a0d623092b0ac04d738a6d8a0bff1eb9e637433d5b60e",
+   "verify_seconds": 182.553,
+   "table_entries": 126349
+  },
+  {
+   "id": "ching.via_saminching",
+   "start": "삼",
+   "history": [
+    "삼인칭"
+   ],
+   "via": 1,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 410515,
+   "proof_sha256": "c1e8e58883e4fb2189e8e95c87d4b26285a16cf99eac3ced8a20b6034fd50276",
+   "verify_seconds": 202.807,
+   "table_entries": 145600
+  },
+  {
+   "id": "ching.via_jonching",
+   "start": "존",
+   "history": [
+    "존칭"
+   ],
+   "via": 1,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "W",
+   "nodes": 8180,
+   "proof_sha256": "833065e4bf0ed8077004d16b6da0e9f034a48c40585e3b3a6bd0356b79494b8c",
+   "verify_seconds": 3.371,
+   "table_entries": 3337
+  },
+  {
+   "id": "ching.via_jonching.chingchan",
+   "start": "존",
+   "history": [
+    "존칭",
+    "칭찬"
+   ],
+   "via": 1,
+   "player_to_move": "presenter",
+   "result_for_player_to_move": "W",
+   "nodes": 9883,
+   "proof_sha256": "0748ab866923d088d1dc45a8846b1a0585e25b8a06f689756de0ac002880a192",
+   "verify_seconds": 3.983,
+   "table_entries": 4024
+  },
+  {
+   "id": "jon",
+   "start": "존",
+   "history": [],
+   "via": 0,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 8181,
+   "proof_sha256": "5d04dcbb903be13e22cedea68ffd90bfe6b1a26ccbf064e1e3602db27d62c6f8",
+   "verify_seconds": 3.329,
+   "table_entries": 3337
+  },
+  {
+   "id": "jon.via_byeongjon",
+   "start": "병",
+   "history": [
+    "병존"
+   ],
+   "via": 1,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 8004,
+   "proof_sha256": "031536ffaf3ead732e4bd857cdd7b2c22ec3b719d2c240944c8e5178efdb070f",
+   "verify_seconds": 3.239,
+   "table_entries": 3275
+  },
+  {
+   "id": "jon.via_jeokjasaengjon",
+   "start": "적",
+   "history": [
+    "적자생존"
+   ],
+   "via": 1,
+   "player_to_move": "receiver",
+   "result_for_player_to_move": "L",
+   "nodes": 747957,
+   "proof_sha256": "9571c3f50f09a647b9051c73aa937f639f976976139303a58318d3a0f988f8c1",
+   "verify_seconds": 358.048,
+   "table_entries": 269535
+  }
+ ],
+ "stats": {
+  "records": 754634,
+  "unique_states": 685261,
+  "duplicate_records_removed": 69373,
+  "states_in_several_proofs": 44028,
+  "states_with_different_moves": 554
+ },
+ "starts": {
+  "칭": {
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "칭찬"
+     ],
+     "group": 533,
+     "result": "loss",
+     "proof": "ching",
+     "refutation": {
+      "word": "찬성표",
+      "how": "증명",
+      "alts": []
+     }
+    },
+    {
+     "words": [
+      "칭칭"
+     ],
+     "group": 534,
+     "result": "loss",
+     "proof": "ching",
+     "refutation": {
+      "word": "칭찬",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  "존": {
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "존칭"
+     ],
+     "group": 420,
+     "result": "loss",
+     "proof": "ching.via_jonching",
+     "refutation": {
+      "word": "칭칭",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  }
+ },
+ "positions": [
+  {
+   "id": "칭",
+   "syllable": "칭",
+   "start": "칭",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "칭찬"
+     ],
+     "group": 533,
+     "result": "loss",
+     "proof": "ching",
+     "refutation": {
+      "word": "찬성표",
+      "how": "증명",
+      "alts": []
+     }
+    },
+    {
+     "words": [
+      "칭칭"
+     ],
+     "group": 534,
+     "result": "loss",
+     "proof": "ching",
+     "refutation": {
+      "word": "칭찬",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "칭.via.명칭",
+   "syllable": "칭",
+   "start": "명",
+   "prefix": [
+    "명칭"
+   ],
+   "via": "명칭",
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "칭찬"
+     ],
+     "group": 533,
+     "result": "loss",
+     "proof": "ching.via_myeongching",
+     "refutation": {
+      "word": "찬성표",
+      "how": "증명",
+      "alts": []
+     }
+    },
+    {
+     "words": [
+      "칭칭"
+     ],
+     "group": 534,
+     "result": "loss",
+     "proof": "ching.via_myeongching",
+     "refutation": {
+      "word": "칭찬",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "칭.via.극존칭",
+   "syllable": "칭",
+   "start": "극",
+   "prefix": [
+    "극존칭"
+   ],
+   "via": "극존칭",
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "칭찬"
+     ],
+     "group": 533,
+     "result": "loss",
+     "proof": "ching.via_geukjonching",
+     "refutation": {
+      "word": "찬성표",
+      "how": "증명",
+      "alts": []
+     }
+    },
+    {
+     "words": [
+      "칭칭"
+     ],
+     "group": 534,
+     "result": "loss",
+     "proof": "ching.via_geukjonching",
+     "refutation": {
+      "word": "칭찬",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "칭.via.삼인칭",
+   "syllable": "칭",
+   "start": "삼",
+   "prefix": [
+    "삼인칭"
+   ],
+   "via": "삼인칭",
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "칭찬"
+     ],
+     "group": 533,
+     "result": "loss",
+     "proof": "ching.via_saminching",
+     "refutation": {
+      "word": "찬성표",
+      "how": "증명",
+      "alts": []
+     }
+    },
+    {
+     "words": [
+      "칭칭"
+     ],
+     "group": 534,
+     "result": "loss",
+     "proof": "ching.via_saminching",
+     "refutation": {
+      "word": "칭찬",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "칭.via.존칭",
+   "syllable": "칭",
+   "start": "존",
+   "prefix": [
+    "존칭"
+   ],
+   "via": "존칭",
+   "receiver_wins": true,
+   "first_moves": [
+    {
+     "words": [
+      "칭찬"
+     ],
+     "group": 533,
+     "result": "loss",
+     "proof": "ching.via_jonching.chingchan",
+     "refutation": {
+      "word": "찬성표",
+      "how": "증명",
+      "alts": []
+     }
+    },
+    {
+     "words": [
+      "칭칭"
+     ],
+     "group": 534,
+     "result": "win",
+     "proof": "ching.via_jonching"
+    }
+   ]
+  },
+  {
+   "id": "존",
+   "syllable": "존",
+   "start": "존",
+   "prefix": [],
+   "via": null,
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "존칭"
+     ],
+     "group": 420,
+     "result": "loss",
+     "proof": "ching.via_jonching",
+     "refutation": {
+      "word": "칭칭",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "존.via.병존",
+   "syllable": "존",
+   "start": "병",
+   "prefix": [
+    "병존"
+   ],
+   "via": "병존",
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "존칭"
+     ],
+     "group": 420,
+     "result": "loss",
+     "proof": "jon.via_byeongjon",
+     "refutation": {
+      "word": "칭칭",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "존.via.적자생존",
+   "syllable": "존",
+   "start": "적",
+   "prefix": [
+    "적자생존"
+   ],
+   "via": "적자생존",
+   "receiver_wins": false,
+   "first_moves": [
+    {
+     "words": [
+      "존칭"
+     ],
+     "group": 420,
+     "result": "loss",
+     "proof": "jon.via_jeokjasaengjon",
+     "refutation": {
+      "word": "칭찬",
+      "how": "증명",
+      "alts": []
+     }
+    }
+   ]
+  }
+ ]
+}

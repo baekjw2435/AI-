@@ -1,0 +1,31 @@
+{
+ "id": "을_b739011aeabeac16",
+ "syllable": "을",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "권섭",
+  "섭도마을",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.015064,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6b63a2bad2bbf5c5746bed155ffbe696f6c0d5a9ff039c372704ad000a195c62",
+ "position_sha256": "b739011aeabeac1672ae49eb60f292bb50daaef98a4871d515a414be0df4a8c1",
+ "input_sha256": "75ee2e156159d3ea94b8a1bc7303bb8e0d0bea0a8c0f6a2dddedde727aee6a53",
+ "proof_bytes": 8201
+}

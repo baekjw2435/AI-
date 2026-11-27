@@ -1,0 +1,29 @@
+{
+ "id": "몬_74197c28e941f01d",
+ "syllable": "몬",
+ "used_route_words": [
+  "렌즈",
+  "즈보우몬",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00094,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f52c59ec39ca779750dd90c45ed50e11069b3f195e2847dc0aaf33d1196b2098",
+ "position_sha256": "74197c28e941f01da15ec34e7aaccaa71ea255c04574d7bb63371b67ffe0f254",
+ "input_sha256": "2d3378215318c909b2c4035e1af97b59611b509bff22eec703e49fee88e01586",
+ "proof_bytes": 755
+}

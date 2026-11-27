@@ -1,0 +1,28 @@
+{
+ "id": "딩_dd7063ed840a053e",
+ "syllable": "딩",
+ "used_route_words": [
+  "죄첩",
+  "첩음법",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000723,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "14e8c7b88642756607051effeacfd04fece3db7645246342f3c528c9d97766cb",
+ "position_sha256": "dd7063ed840a053ec2238176032bd6951647d42be4e0d21e5601de488d59ad0b",
+ "input_sha256": "a6a855c727b7cb3b93068ec675f5af6909e617112f96f9070bd864edbf73278a",
+ "proof_bytes": 1085
+}

@@ -1,0 +1,26 @@
+{
+ "id": "권_0c411c72e89384b2",
+ "syllable": "권",
+ "used_route_words": [
+  "죄상가죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.219144,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7f5dfb7d9a97640b25dee141d3d0fe7927ec65496ac36bd6119cf2898f81167b",
+ "position_sha256": "0c411c72e89384b2bad67b30b57f485d483dbf43a5b6168706d2799f656e6a28",
+ "input_sha256": "481c2d950ad92d7daee47a3765d0dfae59564d0a1974bc83af45382f0c95bc44",
+ "proof_bytes": 231014
+}

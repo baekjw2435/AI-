@@ -1,0 +1,26 @@
+{
+ "id": "궐_976a4c445a62a01a",
+ "syllable": "궐",
+ "used_route_words": [
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003557,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d80e5389398e89edfda3def750633df6cf9874c947f772be3b35d65c82762c20",
+ "position_sha256": "976a4c445a62a01a0b967b8d4f462ce88276ac3777c366dc67caffef7937c7f6",
+ "input_sha256": "c2fd3ddced1ead5e623a51178ae36e837c1006574d0f3b47dd3851d05d3b8e85",
+ "proof_bytes": 3450
+}

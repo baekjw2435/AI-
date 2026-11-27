@@ -1,0 +1,29 @@
+{
+ "id": "굴_4c1e112c1f88d4ae",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱생보호법",
+  "겁나는얼굴",
+  "득첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000212,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "4c1e112c1f88d4aec9159d6153c04ec9d215d4e7a438fcc758dbdf8b4f6e25f1",
+ "input_sha256": "be4874d76cdb4e04ffdd2f51bd274f105cf1ecb840ad261d96b3a27d40a32dfb",
+ "proof_bytes": 124
+}

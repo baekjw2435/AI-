@@ -1,0 +1,29 @@
+{
+ "id": "뭄_5a6f707f308cc696",
+ "syllable": "뭄",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000137,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "5a6f707f308cc6960bdfdef44a9bfdb9d85af96443ea5f3e804efdb6b52b0fcf",
+ "input_sha256": "f42bbdec71afe1290067be88d0b4e445472bcb970ea139b7b14a06357a3db0c6",
+ "proof_bytes": 124
+}

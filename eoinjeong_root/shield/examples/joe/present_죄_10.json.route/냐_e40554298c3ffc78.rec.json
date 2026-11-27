@@ -1,0 +1,26 @@
+{
+ "id": "냐_e40554298c3ffc78",
+ "syllable": "냐",
+ "used_route_words": [
+  "갱도시험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001441,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "e40554298c3ffc78a0bc90c72c6fddb9547dc96e4bd9e696b3cec8a49d59fa33",
+ "input_sha256": "ff10b6ea07baffa98140caf7854acf02fa7c22760e92ca285ed05d63577b964e",
+ "proof_bytes": 799
+}

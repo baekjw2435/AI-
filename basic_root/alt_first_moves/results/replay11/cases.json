@@ -1,0 +1,101 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay11-v1:\" + id), first 999",
+ "eligible": 9,
+ "eligible_by_source": {
+  "탄": 3,
+  "탕": 6
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "v01",
+   "id": "진/진탕",
+   "syllable": "진",
+   "word": "진탕",
+   "source": "탕",
+   "split": "final",
+   "root_form": "kept_partly_cancelled",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "v02",
+   "id": "삼/삼계탕",
+   "syllable": "삼",
+   "word": "삼계탕",
+   "source": "탕",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "v03",
+   "id": "폭/폭탄",
+   "syllable": "폭",
+   "word": "폭탄",
+   "source": "탄",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "v04",
+   "id": "흑/흑설탕",
+   "syllable": "흑",
+   "word": "흑설탕",
+   "source": "탕",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "v05",
+   "id": "탕/탕탕",
+   "syllable": "탕",
+   "word": "탕탕",
+   "source": "탕",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "v06",
+   "id": "직/직격탄",
+   "syllable": "직",
+   "word": "직격탄",
+   "source": "탄",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "v07",
+   "id": "박/박하사탕",
+   "syllable": "박",
+   "word": "박하사탕",
+   "source": "탕",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "v08",
+   "id": "규/규탄",
+   "syllable": "규",
+   "word": "규탄",
+   "source": "탄",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "v09",
+   "id": "맹/맹탕",
+   "syllable": "맹",
+   "word": "맹탕",
+   "source": "탕",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 600.002
+  }
+ ]
+}

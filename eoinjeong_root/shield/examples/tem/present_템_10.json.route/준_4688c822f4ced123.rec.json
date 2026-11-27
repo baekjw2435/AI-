@@ -1,0 +1,27 @@
+{
+ "id": "준_4688c822f4ced123",
+ "syllable": "준",
+ "used_route_words": [
+  "갑자기쪽지시험",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001543,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "af1ea8cba2a440205d13463ee73aad9f498b5c63342812f46a0fc6dca5b233fe",
+ "position_sha256": "4688c822f4ced1235179ef7e1076302622f211f30eef291209e953ecb4f02478",
+ "input_sha256": "529f37989477422f8f73d6de6800df1544366e5309ecc9903da314f4f47bef6c",
+ "proof_bytes": 805
+}

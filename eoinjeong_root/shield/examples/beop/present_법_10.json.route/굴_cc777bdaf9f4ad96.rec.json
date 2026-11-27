@@ -1,0 +1,30 @@
+{
+ "id": "굴_cc777bdaf9f4ad96",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "벅스킨",
+  "슴벅슴벅",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000132,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "cc777bdaf9f4ad96a390ce7730f89c2d9ee38b0059251f942e456026d8a5822c",
+ "input_sha256": "ba31998f63ffdb1d8be9366fdecb03b4d51a9b586d68a8ceddf972b45923963b",
+ "proof_bytes": 124
+}

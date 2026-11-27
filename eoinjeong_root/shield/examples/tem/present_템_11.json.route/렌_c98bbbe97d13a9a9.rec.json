@@ -1,0 +1,29 @@
+{
+ "id": "렌_c98bbbe97d13a9a9",
+ "syllable": "렌",
+ "used_route_words": [
+  "득첩",
+  "렛츠인조이더무비카가미네렌",
+  "첩쾌",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.022924,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fee8dcca942ec3a16f3ccf37e8657307fcb3b6dc231f45aa3bb8ad08ab3daa2f",
+ "position_sha256": "c98bbbe97d13a9a9f3995d13e413114087c1df101ac35e60c18082cbceb6d6b5",
+ "input_sha256": "1d1b79a6d5030e1bb9f6451848ce92599659b021589954d54c6bdfd867b694a6",
+ "proof_bytes": 15809
+}

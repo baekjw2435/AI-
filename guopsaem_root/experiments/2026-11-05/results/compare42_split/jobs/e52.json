@@ -1,0 +1,40 @@
+{
+ "endpoint": 52,
+ "vertex": "표",
+ "roots": [
+  "찬"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 17161216,
+  "child_gens": 44774901,
+  "tt_entries": 8988559,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 17161216,
+  "tt_replacements": 541552,
+  "seconds": 40.003879,
+  "pn": 4084,
+  "dn": 2169,
+  "best_group": 592,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 1,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.342533,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

@@ -1,0 +1,29 @@
+{
+ "id": "죄_c6a665b4f9816ac1",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "읍권",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000818,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6d180ca5d2ee31490b0ed88697705eb94de9337a5c3b8d60ab9713a0ad06b0a8",
+ "position_sha256": "c6a665b4f9816ac1b311f8cd754da6816c8a2b3b9f85280a869d13c25a857e39",
+ "input_sha256": "5e889a2dd2da61229714366a345d7dde9c51d2b710ba03ea45b9276f4c19d51c",
+ "proof_bytes": 1164
+}

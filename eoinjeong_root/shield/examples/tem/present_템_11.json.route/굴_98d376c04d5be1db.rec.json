@@ -1,0 +1,30 @@
+{
+ "id": "굴_98d376c04d5be1db",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "득첩",
+  "렛츠인조이더무비카가미네렌",
+  "첩쾌",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000137,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "98d376c04d5be1db9ad891b9bae082c261de9577e4d1eb0b1167180ff371248c",
+ "input_sha256": "1786b1f3856908a86ca98bb9a15c11fcfec0eafae44d4b0a46f1cc5e2017ff2e",
+ "proof_bytes": 124
+}

@@ -1,0 +1,26 @@
+{
+ "id": "룻_02c999702198254b",
+ "syllable": "룻",
+ "used_route_words": [
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000984,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b40f4df6e10341c7bb0432e8c26e6eb5c1c93b331179fc2e4af76506ac08f193",
+ "position_sha256": "02c999702198254b74f87f46c7496100b8c1213c6de7a909b1b381f78c6206fb",
+ "input_sha256": "a0306a1246b12f404a6ee7678dcce1602ddf0054faf1ba635ec641173687f579",
+ "proof_bytes": 785
+}

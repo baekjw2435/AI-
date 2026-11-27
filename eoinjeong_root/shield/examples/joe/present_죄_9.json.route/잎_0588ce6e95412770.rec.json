@@ -1,0 +1,28 @@
+{
+ "id": "잎_0588ce6e95412770",
+ "syllable": "잎",
+ "used_route_words": [
+  "뽕잎",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003704,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f2c6634019512a805e3cea44c19b6d9e05d69488f431bc9f1e4db843da589f3c",
+ "position_sha256": "0588ce6e954127700ac8b95698f78627a5a546b30e189c2e673526f69bf3fd64",
+ "input_sha256": "4b5a10112ca12d381b245173ae2853fa682d4685f79cec1aa1cd8ea908bd8999",
+ "proof_bytes": 2875
+}

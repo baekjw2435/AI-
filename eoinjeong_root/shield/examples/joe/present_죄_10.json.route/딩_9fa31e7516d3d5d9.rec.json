@@ -1,0 +1,26 @@
+{
+ "id": "딩_9fa31e7516d3d5d9",
+ "syllable": "딩",
+ "used_route_words": [
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.021015,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8d3e8510d28dd03dda511fa3dcaae15520c8f577dabb18290eac2df76e245fbf",
+ "position_sha256": "9fa31e7516d3d5d9a2b5eb358b89dcff99dab52302aa520ade13a3a8cd36bd4f",
+ "input_sha256": "c93dca8bc57a693e4e49c42f1cee191aab079b8358e549571f104ec22629b091",
+ "proof_bytes": 9434
+}

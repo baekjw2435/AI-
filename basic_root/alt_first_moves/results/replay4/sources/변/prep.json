@@ -1,0 +1,33 @@
+{
+ "syllable": "변",
+ "vertex": "변",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 82.951,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 57633285,
+ "proof_nodes": 220575,
+ "proof_seconds": 4.206273,
+ "solver_wall_seconds": 88.17,
+ "verify_seconds": 5.799,
+ "verify_wall_seconds": 5.81,
+ "proof_bytes": 1579914,
+ "proof_sha256": "223498660ed618ca606b4f5a1844cd469d0c0e817ff30b282dccf39a6ac5c33a",
+ "position_sha256": "4f1d098e256a1de81cc2862e151b2597536747310f6fca2b1fb5d5b8da911c1c",
+ "input_sha256": "a89acf7146f559a5c2c9f513d468417ee8fda4008605db0380a18a9da079c788",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

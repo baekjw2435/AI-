@@ -1,0 +1,28 @@
+{
+ "id": "냐_03e3d8e4ee8e5c4a",
+ "syllable": "냐",
+ "used_route_words": [
+  "죠죠의기묘한모험",
+  "준치저냐",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001492,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "03e3d8e4ee8e5c4a0a57e828d4a396b0c30489f167e93f3205060a47ff073304",
+ "input_sha256": "5034bcabac2943f81c59fcf4450d4c962a1df0963bfb8b8634c18c6eecbc9281",
+ "proof_bytes": 799
+}

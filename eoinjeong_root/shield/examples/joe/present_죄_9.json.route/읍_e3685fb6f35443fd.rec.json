@@ -1,0 +1,29 @@
+{
+ "id": "읍_e3685fb6f35443fd",
+ "syllable": "읍",
+ "used_route_words": [
+  "밑틀",
+  "읍읍",
+  "읍할읍",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001827,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ecd6f7b88e3b63a834c69613301ebb5b1e24e514d89edca29f66dba5622f9000",
+ "position_sha256": "e3685fb6f35443fde8bf2ab8dd47fa5076dde0e63d24b681c5ce10865fc00bba",
+ "input_sha256": "f12a35726d4037adf98d9303132ed483dc11e4417018c6e2a3a6500026fc442d",
+ "proof_bytes": 1304
+}

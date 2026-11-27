@@ -1,0 +1,31 @@
+{
+ "id": "을_8f665fc7a79012f5",
+ "syllable": "을",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000134,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "8f665fc7a79012f56cbe38a697fdafa28bd245a335086505df387a4a14ba49fd",
+ "input_sha256": "36c01426f504d83b82ef4c711480dd8e8189b0135f07d68207765dafc8066e2f",
+ "proof_bytes": 124
+}

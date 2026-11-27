@@ -1,0 +1,31 @@
+{
+ "id": "렌_640f2435244a1df6",
+ "syllable": "렌",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "권일형",
+  "쇄쇄",
+  "쇄심권",
+  "형태로만들어선물하고싶은마음카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.895576,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5681e8ca516e336b4a98aa36897c4af57159fc7920db7038bdf318c5d3fd80e3",
+ "position_sha256": "640f2435244a1df6e70bc750bc311a2c2b0ca0c914c1982847eecd6b24328cf9",
+ "input_sha256": "e6a9d31a3a16c2bca3b3016893d29016ece397c92ec3759fd57472b16404a88f",
+ "proof_bytes": 138040
+}

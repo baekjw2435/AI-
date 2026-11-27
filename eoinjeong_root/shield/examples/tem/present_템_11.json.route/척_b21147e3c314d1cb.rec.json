@@ -1,0 +1,29 @@
+{
+ "id": "척_b21147e3c314d1cb",
+ "syllable": "척",
+ "used_route_words": [
+  "권폄",
+  "쇄쇄",
+  "쇄심권",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003936,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6ad5cb8d85581fb4d009cbe7460e0d4e44ae870006a86198ec2309474e52edd1",
+ "position_sha256": "b21147e3c314d1cb0ed1e1f8e7ab0e21d72cb2879dd1dad603751401526c0ca6",
+ "input_sha256": "ffdee232199a2688eaf67e3cf049e44fff570ba596c7ae796dcab80d3e6f9cec",
+ "proof_bytes": 2649
+}

@@ -1,0 +1,31 @@
+{
+ "id": "촉_f50b4ea4d2ab8177",
+ "syllable": "촉",
+ "used_route_words": [
+  "겸득",
+  "득롱망촉",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000175,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f50b4ea4d2ab81779dbebaf81058ae489647ea8042a244e388b6f049473b98d4",
+ "input_sha256": "5ca87cea6b4bdca018e722da0f2f11823c247a3ba2216071219631857f9a90c9",
+ "proof_bytes": 124
+}

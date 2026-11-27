@@ -1,0 +1,27 @@
+{
+ "id": "펠_23ea49e92341cfbd",
+ "syllable": "펠",
+ "used_route_words": [
+  "읍읍",
+  "읍할읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.015391,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f3dbdf216818aee48fa5411a1642a1a0a8363301a200f73cf99c12c78c027f9",
+ "position_sha256": "23ea49e92341cfbdfc42c7a20faafd12626e6872cdcc4ec0038ed05354e27b01",
+ "input_sha256": "712e60cb68bdf32fef400f01c7d61d6a0e9bc5d263658bbf0a7af2e3ff847f87",
+ "proof_bytes": 6437
+}

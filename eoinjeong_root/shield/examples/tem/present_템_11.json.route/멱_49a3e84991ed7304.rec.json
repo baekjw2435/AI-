@@ -1,0 +1,27 @@
+{
+ "id": "멱_49a3e84991ed7304",
+ "syllable": "멱",
+ "used_route_words": [
+  "권폄",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.029418,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1d31a2fa94c947f660ebb1de1b7409ddcab786785e0a5e3bf70402fc8508a589",
+ "position_sha256": "49a3e84991ed73048676e0211f1f76bab918321e1bdd7323ad5afa1fc284885b",
+ "input_sha256": "91bb964c1505020d5c01246ec88f4968fe377849ea185a327bb9affed7af889d",
+ "proof_bytes": 19061
+}

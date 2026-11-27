@@ -1,0 +1,29 @@
+{
+ "id": "냐_d6872d97cc3d4c83",
+ "syllable": "냐",
+ "used_route_words": [
+  "늠름",
+  "밑틀",
+  "죄밑",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000235,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3f1eac7293e08ef4a7a26cbca13a3744551875ef581c7e6ae5cd721f0d558c46",
+ "position_sha256": "d6872d97cc3d4c8347e18c2f7f7a28508d4d5e7fa1730014b128a40a80307086",
+ "input_sha256": "1dc9303964019a39a3196f8cdfdf00b18b77953b8007be82b688ff2089d700bb",
+ "proof_bytes": 234
+}

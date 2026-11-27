@@ -1,0 +1,26 @@
+{
+ "id": "겅_728595b3a111fd91",
+ "syllable": "겅",
+ "used_route_words": [
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001037,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fd997b6e685322be4c530756b53051727ba31db2632645293ccdbb4290b7c865",
+ "position_sha256": "728595b3a111fd91edd9ce5f175ad0ac5461abcaa8bb6261a947894f80f8c17a",
+ "input_sha256": "26c664f117d077788bda5b19447443f6f643833aeaf7527fc35e63a788c07a73",
+ "proof_bytes": 784
+}

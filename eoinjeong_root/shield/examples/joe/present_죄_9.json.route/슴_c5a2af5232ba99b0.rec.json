@@ -1,0 +1,30 @@
+{
+ "id": "슴_c5a2af5232ba99b0",
+ "syllable": "슴",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000202,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "c5a2af5232ba99b001b3c453345404343ef74630faeb4f782a7c544e0267cd80",
+ "input_sha256": "39505666cb69a17e80b39d1f6db5f01e2f9ebe654dae0421ae5c5115d06a5a4f",
+ "proof_bytes": 124
+}

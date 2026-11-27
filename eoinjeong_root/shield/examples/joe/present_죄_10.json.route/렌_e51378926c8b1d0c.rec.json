@@ -1,0 +1,29 @@
+{
+ "id": "렌_e51378926c8b1d0c",
+ "syllable": "렌",
+ "used_route_words": [
+  "굴대두겁",
+  "댁대굴댁대굴",
+  "쇄소건즐",
+  "즐거움가득보물상자카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.018183,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "136b6d3469d6e29d8924bcaca677bdced7178dca386a049bff31622bbe3e5845",
+ "position_sha256": "e51378926c8b1d0cbd6682840708a44131d5de70c251cbf88308b51725fd7885",
+ "input_sha256": "e65e7f3aab22c598f3dc32b63a41f45e036a97e8d3f100672ef423771957666a",
+ "proof_bytes": 11922
+}

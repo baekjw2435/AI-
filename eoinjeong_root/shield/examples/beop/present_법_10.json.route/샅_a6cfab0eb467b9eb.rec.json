@@ -1,0 +1,29 @@
+{
+ "id": "샅_a6cfab0eb467b9eb",
+ "syllable": "샅",
+ "used_route_words": [
+  "겔렌데슈프링겐",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006255,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "139cb41f6e0285d350e89f45546b52c0e77ab3960b623ac9ae0fe49973ee58de",
+ "position_sha256": "a6cfab0eb467b9eb187538fff14095d78d77a173ee4407b9861656ab1e120727",
+ "input_sha256": "531b71d9241d56cd513c4c71b8bbe8aee9db1c38a57ffa2778f1098f9d463d7d",
+ "proof_bytes": 4696
+}

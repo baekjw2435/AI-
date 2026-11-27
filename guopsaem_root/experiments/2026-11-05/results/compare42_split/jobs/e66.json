@@ -1,0 +1,40 @@
+{
+ "endpoint": 66,
+ "vertex": "승",
+ "roots": [
+  "탑"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 19308544,
+  "child_gens": 48285322,
+  "tt_entries": 10383708,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 19308544,
+  "tt_replacements": 1005933,
+  "seconds": 40.001822,
+  "pn": 1613,
+  "dn": 5687,
+  "best_group": 288,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 1,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.249284,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

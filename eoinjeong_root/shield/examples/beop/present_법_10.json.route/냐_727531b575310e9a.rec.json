@@ -1,0 +1,32 @@
+{
+ "id": "냐_727531b575310e9a",
+ "syllable": "냐",
+ "used_route_words": [
+  "겐키드럭스토어즈",
+  "겔렌데슈프링겐",
+  "굴저냐",
+  "샅굴",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000246,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "89712680c11894ed37dadd0c1ee171ae60c3885da5de0a74b3836d55b23b7fe0",
+ "position_sha256": "727531b575310e9adf5550707fcab2a90ee564b062da9864c373afe32266387a",
+ "input_sha256": "5fd992b37c2ba4da5692dab6230a5df71c557ab69f49a4fcb7efb38e3cc7d731",
+ "proof_bytes": 326
+}

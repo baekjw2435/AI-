@@ -1,0 +1,26 @@
+{
+ "id": "겟_33cda6b7c215a2e3",
+ "syllable": "겟",
+ "used_route_words": [
+  "즈브스킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006046,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "597392d983f7b1e25d47af4455dca59c2a57e62e548785fdf19f2f20842d6c52",
+ "position_sha256": "33cda6b7c215a2e369fc14d117491225ae816cae5129f2bd91e563284cd7c587",
+ "input_sha256": "c5c47264b8c541cdeb4282c63e7eda98627ba0cb326187e3b2a19212412c3706",
+ "proof_bytes": 4912
+}

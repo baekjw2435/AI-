@@ -1,0 +1,28 @@
+{
+ "id": "죄_b4595e7a15496b5e",
+ "syllable": "죄",
+ "used_route_words": [
+  "촉탁살인죄",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00911,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "36719b46e99cd39b12ee3a1d6d51a330d3a47fc7f084ae822f797e210f781128",
+ "position_sha256": "b4595e7a15496b5edf774d38df0b3b41ee0a6a1e2972ea0fa460124ca9a24d78",
+ "input_sha256": "f294d033a52faa5fba6ee6b80f56d29d4225bedbecb9ada6cadaa931da76cac8",
+ "proof_bytes": 4395
+}

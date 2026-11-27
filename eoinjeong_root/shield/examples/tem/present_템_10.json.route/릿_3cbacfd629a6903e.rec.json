@@ -1,0 +1,26 @@
+{
+ "id": "릿_3cbacfd629a6903e",
+ "syllable": "릿",
+ "used_route_words": [
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002688,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "94eafeaa4cc2f8e691ab76dbc528bb2cbaeb82b846e187ede2e286dd2504bec6",
+ "position_sha256": "3cbacfd629a6903e15ced274be269c21bc022ae2a0154d3c677551873dab4e91",
+ "input_sha256": "8de7e5c9b20bf49417cc55dc74a2e5ef11cba81e8a972ec75d161e28da12ddb3",
+ "proof_bytes": 4008
+}

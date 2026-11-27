@@ -1,0 +1,33 @@
+{
+ "syllable": "탄",
+ "vertex": "탄",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 932.695,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 638607435,
+ "proof_nodes": 2313254,
+ "proof_seconds": 44.752772,
+ "solver_wall_seconds": 979.63,
+ "verify_seconds": 54.493,
+ "verify_wall_seconds": 54.52,
+ "proof_bytes": 16698442,
+ "proof_sha256": "fd17af413e4909bcc105c318f7e11c869b15d9e470c17e8d0c531c623bda6fde",
+ "position_sha256": "ff6581d265b332bc7c64d3197684840e342b0e11dcd00026d144a4e222346845",
+ "input_sha256": "357a069998353b3ff09c4bbbae84d732c6a42fbb6fc6f79fea6dbf9232acf8f0",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

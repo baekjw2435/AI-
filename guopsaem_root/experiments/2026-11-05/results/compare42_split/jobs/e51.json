@@ -1,0 +1,40 @@
+{
+ "endpoint": 51,
+ "vertex": "탄",
+ "roots": [
+  "찬"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 16901120,
+  "child_gens": 44233290,
+  "tt_entries": 9168400,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 16901120,
+  "tt_replacements": 590353,
+  "seconds": 40.001118,
+  "pn": 2319,
+  "dn": 5017,
+  "best_group": 541,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 1,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.256114,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

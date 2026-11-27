@@ -1,0 +1,29 @@
+{
+ "id": "킨_8f795039bdccbf92",
+ "syllable": "킨",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000137,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "8f795039bdccbf920ff2152e80b13c8cffacc2b1847746b75020c1d90bc67512",
+ "input_sha256": "0c84bfd34944b721e669fc538e4864c570f9ebd0ca77ed2dcc55a9ea1c4cb0ac",
+ "proof_bytes": 124
+}

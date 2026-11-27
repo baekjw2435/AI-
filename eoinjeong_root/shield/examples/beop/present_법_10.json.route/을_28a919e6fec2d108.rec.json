@@ -1,0 +1,29 @@
+{
+ "id": "을_28a919e6fec2d108",
+ "syllable": "을",
+ "used_route_words": [
+  "겔렌데슈프링겐",
+  "늠률",
+  "늠름",
+  "율현마을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007065,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2fd543b7b9a1032b3bca621426bf4ba49b7882fb8a6de41fb085799db89a0db4",
+ "position_sha256": "28a919e6fec2d1081ebe61941db0e9038fcc59233cc84097dcc503ac2cb4e0b8",
+ "input_sha256": "568c63105c92c1972ecadeb8d71ad2e1c014a9d61ebbb09420b133287bd252dc",
+ "proof_bytes": 2987
+}

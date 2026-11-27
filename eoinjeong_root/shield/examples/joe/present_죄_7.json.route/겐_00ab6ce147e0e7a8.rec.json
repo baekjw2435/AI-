@@ -1,0 +1,27 @@
+{
+ "id": "겐_00ab6ce147e0e7a8",
+ "syllable": "겐",
+ "used_route_words": [
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00052,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "989f2d902557c4c286f560df4454b25f3fa0cb1cb660f31bc35aec36f177f807",
+ "position_sha256": "00ab6ce147e0e7a89e446b588de8400448713051dcd82dd12d3a10e92fb9dad3",
+ "input_sha256": "ff8929244d468cab67efbddbd95751daa2d42d4b075de2344c9e187e151608e6",
+ "proof_bytes": 507
+}

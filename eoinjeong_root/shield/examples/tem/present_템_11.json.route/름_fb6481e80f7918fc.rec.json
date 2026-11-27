@@ -1,0 +1,31 @@
+{
+ "id": "름_fb6481e80f7918fc",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "득첩",
+  "렌즈구름",
+  "렛츠인조이더무비카가미네렌",
+  "첩쾌",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.014236,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e52ec9f75238835152e558339c447de85c693811a4ba48431dea6a712741b849",
+ "position_sha256": "fb6481e80f7918fcad3a5f7dd6c74aa99fd7f1a27745f5fd64a60c21d5740f7a",
+ "input_sha256": "1d5f8a13523d28515da50b552af9bae22a8c53c6ddb7f30c7f4bf96a3220d6d5",
+ "proof_bytes": 9702
+}

@@ -1,0 +1,28 @@
+{
+ "id": "죄_116c6a34356f998c",
+ "syllable": "죄",
+ "used_route_words": [
+  "밑틀",
+  "죄밑",
+  "촉탁살인죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002453,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "423f47299568606c49b8929c12b39bdbc4a0c5a85b82042090c475942c374200",
+ "position_sha256": "116c6a34356f998c1ddd1db27cbf1d1b0acdfc2bbfcfc9c5a7189edcd7321676",
+ "input_sha256": "6dfab304a540cc4d953aa215ab9e94e0dfe769a4b74908cd5b50bcae89f2dc84",
+ "proof_bytes": 1972
+}

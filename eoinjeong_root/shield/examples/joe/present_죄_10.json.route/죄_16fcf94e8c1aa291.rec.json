@@ -1,0 +1,29 @@
+{
+ "id": "죄_16fcf94e8c1aa291",
+ "syllable": "죄",
+ "used_route_words": [
+  "굴대두겁",
+  "권리행사방해죄",
+  "댁대굴댁대굴",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.01111,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2889779e27be46cf3a973ac5d3ed73f29fa2052132ab8ab320cd62cb1c395948",
+ "position_sha256": "16fcf94e8c1aa291fc9d621c653b8f3eac1f3123d8f2add7b16ed97806846eba",
+ "input_sha256": "c2550507424dd913c3a1146b5d7ab38604c7dc97c56d681886a5533a22593d7a",
+ "proof_bytes": 7331
+}

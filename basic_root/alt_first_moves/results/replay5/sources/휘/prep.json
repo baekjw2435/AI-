@@ -1,0 +1,33 @@
+{
+ "syllable": "휘",
+ "vertex": "휘",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 29.397,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 21248567,
+ "proof_nodes": 178263,
+ "proof_seconds": 3.342552,
+ "solver_wall_seconds": 33.75,
+ "verify_seconds": 4.652,
+ "verify_wall_seconds": 4.66,
+ "proof_bytes": 1273983,
+ "proof_sha256": "87220f66845ea805f3bc0c7b3f56e25e83191275f8b8443d31b9b7a523a11408",
+ "position_sha256": "da5c6d13f889ddc4cfa7219e9f0ea861b2be1b0f9e988c204cbed339bdf6f24e",
+ "input_sha256": "e958b3f7e48783effac144e11914b3f2b6ca64df59f73e485206ef93db3c26b5",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

@@ -1,0 +1,58 @@
+{
+ "syllable": "즉",
+ "members": [
+  "즉"
+ ],
+ "vertex": "즉",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 52966400,
+  "child_gens": 136431638,
+  "tt_entries": 16663752,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 52966400,
+  "tt_replacements": 25706194,
+  "seconds": 120.001604,
+  "pn": 918,
+  "dn": 28083,
+  "best_group": 434,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16663752,
+  "tt_save_seconds": 1.398716,
+  "tt_save_error": "",
+  "proven": {
+   "proven_loaded": 8388608,
+   "proven_inserted": 8388608,
+   "proven_tt_used_after_load": 8324031,
+   "proven_load_seconds": 2.313962,
+   "proven_saved": 2180534,
+   "proven_skipped_small": 0,
+   "proven_skipped_loaded": 7988138,
+   "proven_save_seconds": 0.273488,
+   "proven_save_error": ""
+  },
+  "proven_merge": {
+   "read": 10569142,
+   "distinct": 10558220,
+   "written": 8388608
+  }
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

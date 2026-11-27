@@ -1,0 +1,28 @@
+{
+ "id": "몬_754075018e901cb2",
+ "syllable": "몬",
+ "used_route_words": [
+  "갱도시험",
+  "룻스키즈",
+  "즈보우몬"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001522,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6cc4e237a0d57f84762142e9c477d83544e44f252bb5f39eaa6dcd53172897cf",
+ "position_sha256": "754075018e901cb24ec6408033bdd645388ba0b70bdc45e2b46a82f7ec23cb0c",
+ "input_sha256": "abf662aff9778611dd6e0c90bb15f69333ad7c665bf1a28582970ea68ed75c14",
+ "proof_bytes": 772
+}

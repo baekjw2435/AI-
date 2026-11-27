@@ -1,0 +1,26 @@
+{
+ "id": "펠_3492ec9790923fd0",
+ "syllable": "펠",
+ "used_route_words": [
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007493,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "67d82da69fc75aaf87a73c82b6a9250552e1b5289aab651e2cbf98ca895a06e1",
+ "position_sha256": "3492ec9790923fd064292c9eb10b63f826fdd0c5ba473014f07ecfe859698d0b",
+ "input_sha256": "98cfb251ebb1b6834e5d1a26d5c8c26f36defe3713b9cd8c37bb08f51cefa2fc",
+ "proof_bytes": 6394
+}

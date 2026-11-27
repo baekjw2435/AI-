@@ -1,0 +1,33 @@
+{
+ "syllable": "곡",
+ "vertex": "곡",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 144.173,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 75904236,
+ "proof_nodes": 658274,
+ "proof_seconds": 15.167,
+ "solver_wall_seconds": 160.75,
+ "verify_seconds": 21.503,
+ "verify_wall_seconds": 21.52,
+ "proof_bytes": 4822174,
+ "proof_sha256": "733088373ff3d06a831eb1e69a8c9bcf60945f1fb230715b3eb7b40f777943af",
+ "position_sha256": "006d233f18dbc8ebd6ef439c3f1af6c9348f5227b0a5016e46597329a5312f6a",
+ "input_sha256": "d49205b9c6fdb27aa6d2de9f2b86fa3f17e345dbb0428b3345e8846a7d835bdc",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

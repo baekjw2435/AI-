@@ -1,0 +1,4 @@
+{"plan": "eoinjeong_root/plans/roots.jsonl", "positions": 173, "pending": 173, "limit_seconds": 600.0, "tt_mb": 1024, "jobs": 4, "solver": "/tmp/claude-0/-home-user-AI-/031f8e24-f3ac-5078-b803-87a3111d3d30/scratchpad/work/bin/solver_v5", "verifier": "/tmp/claude-0/-home-user-AI-/031f8e24-f3ac-5078-b803-87a3111d3d30/scratchpad/work/bin/verify_v4"}
+06:04:13 50/173 R050 둘 차례인 쪽 승 탐색 0.001139s
+06:04:23 100/173 R100 둘 차례인 쪽 승 탐색 0.03206s
+06:04:33 150/173 R150 둘 차례인 쪽 승 탐색 0.023104s

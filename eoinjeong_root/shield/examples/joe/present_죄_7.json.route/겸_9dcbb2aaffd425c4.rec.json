@@ -1,0 +1,28 @@
+{
+ "id": "겸_9dcbb2aaffd425c4",
+ "syllable": "겸",
+ "used_route_words": [
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001764,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1fbbbf5290cfad0a448332a57927c66a5e769fc5347a6673c39f4c1c0b3e1673",
+ "position_sha256": "9dcbb2aaffd425c44b367abc836e56faf44c9e2bdb39e4c67e4bfa695e91f7e9",
+ "input_sha256": "384a438a312a4ee85f921b906f6e0d635306398391bca223986d15640db70cda",
+ "proof_bytes": 1687
+}

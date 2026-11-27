@@ -1,0 +1,40 @@
+{
+ "endpoint": 23,
+ "vertex": "돌",
+ "roots": [
+  "벽"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 52981760,
+  "child_gens": 133953786,
+  "tt_entries": 16369968,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 52981760,
+  "tt_replacements": 16204028,
+  "seconds": 120.001246,
+  "pn": 3543,
+  "dn": 8819,
+  "best_group": 139,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.565718,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

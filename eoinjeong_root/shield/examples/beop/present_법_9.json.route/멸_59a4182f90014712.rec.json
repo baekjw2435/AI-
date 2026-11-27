@@ -1,0 +1,30 @@
+{
+ "id": "멸_59a4182f90014712",
+ "syllable": "멸",
+ "used_route_words": [
+  "권삼득",
+  "득득",
+  "득죄",
+  "읍권",
+  "죄멸"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000121,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "59a4182f90014712a0973bdd3fee172c28e62afbcc0db7f46a02166edacf9ff8",
+ "input_sha256": "27b2daa05b1b66cb814d270890b431acd27c35c1400c8574a389687201c6e4d5",
+ "proof_bytes": 124
+}

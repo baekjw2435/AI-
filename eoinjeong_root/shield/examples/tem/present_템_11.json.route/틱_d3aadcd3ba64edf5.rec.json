@@ -1,0 +1,28 @@
+{
+ "id": "틱_d3aadcd3ba64edf5",
+ "syllable": "틱",
+ "used_route_words": [
+  "득첩",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.008058,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "671f6e4f6c0fbd1c3f5be758dd60b0f772081a1fed8201c3a42533b6cc18ff76",
+ "position_sha256": "d3aadcd3ba64edf5b933910854fb16e7c7bbea31aa9b3ce5d0942d1edd0c1ddd",
+ "input_sha256": "f5e68a6ce4682d40a36cbd1d5962b03a6ed837e872e0004fb96365e45c750778",
+ "proof_bytes": 4479
+}

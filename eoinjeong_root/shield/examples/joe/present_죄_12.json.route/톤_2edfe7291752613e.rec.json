@@ -1,0 +1,27 @@
+{
+ "id": "톤_2edfe7291752613e",
+ "syllable": "톤",
+ "used_route_words": [
+  "톤톤",
+  "펠레톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006005,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3193875be4d7efa048eceb567b13f8a5c218c926c0a0fa55cda9b3847b76476d",
+ "position_sha256": "2edfe7291752613e7da723e006a7a8690219b6852a7a874a2851fe089d07093c",
+ "input_sha256": "993766770de01b167f0aa4d5609fd3494a9d886c9a8cd4f470586199fc976701",
+ "proof_bytes": 1889
+}

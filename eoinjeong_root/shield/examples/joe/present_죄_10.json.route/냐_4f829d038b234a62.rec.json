@@ -1,0 +1,27 @@
+{
+ "id": "냐_4f829d038b234a62",
+ "syllable": "냐",
+ "used_route_words": [
+  "늠름",
+  "샅바씨름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001699,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "35931f3abc76bb61f39161a1a2ef3bae2a1ddb764ce7ef071d9d7e19a5937579",
+ "position_sha256": "4f829d038b234a62d90360a02c0357ceb7b153a9083163323f1a0ce2c50bc0ff",
+ "input_sha256": "3fd46af9231cd30868854575171183ccaa4d654375035f761725fa18f08df197",
+ "proof_bytes": 789
+}

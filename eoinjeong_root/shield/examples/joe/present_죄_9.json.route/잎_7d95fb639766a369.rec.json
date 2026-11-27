@@ -1,0 +1,29 @@
+{
+ "id": "잎_7d95fb639766a369",
+ "syllable": "잎",
+ "used_route_words": [
+  "뽕잎",
+  "죄상가죄",
+  "죄첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.181397,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "dee00c1683cf3f2efd0133dfaaf47ce71faa40e12a5a17432004ca7452365e19",
+ "position_sha256": "7d95fb639766a369d6d55c4ea8c4417ff8851a8ce3caa68d03827c66fa8d6b67",
+ "input_sha256": "c234dd86e6d959afe4e551ad9e79f5b26df0b0a52263ca35427e38946db1bdc5",
+ "proof_bytes": 50790
+}

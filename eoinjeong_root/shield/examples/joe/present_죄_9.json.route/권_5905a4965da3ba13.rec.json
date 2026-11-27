@@ -1,0 +1,31 @@
+{
+ "id": "권_5905a4965da3ba13",
+ "syllable": "권",
+ "used_route_words": [
+  "법권",
+  "섭험",
+  "죄첩",
+  "척추조정요법",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000161,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "5905a4965da3ba13a4598eea0d9e14c50ff81b177a3d990c8bf322726816c95a",
+ "input_sha256": "dfb68b4b0d840a54273db90160c065fa3d624d43718deb711c27d748c33819a0",
+ "proof_bytes": 124
+}

@@ -1,0 +1,28 @@
+{
+ "id": "샅_a4cc3337caa84569",
+ "syllable": "샅",
+ "used_route_words": [
+  "잇샅",
+  "죄율",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001995,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "07c3c55b0faa872639219300cca899a7e438cef6cfb6e75144754d4fb4ab5ea3",
+ "position_sha256": "a4cc3337caa84569dad0122eebc494d406471bc164f10aed9f400f5d7520c82d",
+ "input_sha256": "d654848775742b45db7c35a4c4e87a283095136cd201df4555a4b11eb6112cc8",
+ "proof_bytes": 2246
+}

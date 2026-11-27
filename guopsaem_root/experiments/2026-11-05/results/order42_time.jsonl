@@ -1,0 +1,84 @@
+{"root": "갑", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 79.83, "emit_s": 0.0, "solver_wall_s": 80.38, "verify_s": 0.0, "correct": null, "total_s": 80.38}
+{"root": "갑", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 95.94, "emit_s": 0.0, "solver_wall_s": 96.48, "verify_s": 0.0, "correct": null, "total_s": 96.48}
+{"root": "객", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 87.37, "emit_s": 0.0, "solver_wall_s": 87.7, "verify_s": 0.0, "correct": null, "total_s": 87.7}
+{"root": "객", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 101.59, "emit_s": 0.0, "solver_wall_s": 101.96, "verify_s": 0.0, "correct": null, "total_s": 101.96}
+{"root": "곡", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 85.02, "emit_s": 0.0, "solver_wall_s": 85.41, "verify_s": 0.0, "correct": null, "total_s": 85.41}
+{"root": "곡", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 97.83, "emit_s": 0.0, "solver_wall_s": 98.17, "verify_s": 0.0, "correct": null, "total_s": 98.17}
+{"root": "권", "init": "1", "result": "win", "mid_calls": 19074122, "search_s": 42.07, "emit_s": 6.1, "solver_wall_s": 48.67, "verify_s": 18.22, "correct": true, "proof_states": 207478, "total_s": 66.89}
+{"root": "권", "init": "9", "result": "win", "mid_calls": 5616456, "search_s": 13.33, "emit_s": 3.23, "solver_wall_s": 16.94, "verify_s": 9.73, "correct": true, "proof_states": 112242, "total_s": 26.67}
+{"root": "균", "init": "1", "result": "loss", "mid_calls": 12044725, "search_s": 23.87, "emit_s": 4.14, "solver_wall_s": 28.43, "verify_s": 12.51, "correct": true, "proof_states": 158264, "total_s": 40.94}
+{"root": "균", "init": "9", "result": "loss", "mid_calls": 10466930, "search_s": 23.95, "emit_s": 4.14, "solver_wall_s": 28.52, "verify_s": 12.67, "correct": true, "proof_states": 160634, "total_s": 41.19}
+{"root": "낙", "init": "1", "result": "win", "mid_calls": 26397961, "search_s": 54.8, "emit_s": 5.4, "solver_wall_s": 60.64, "verify_s": 16.52, "correct": true, "proof_states": 191826, "total_s": 77.16}
+{"root": "낙", "init": "9", "result": "win", "mid_calls": 26180728, "search_s": 64.21, "emit_s": 5.71, "solver_wall_s": 70.41, "verify_s": 16.98, "correct": true, "proof_states": 199756, "total_s": 87.39}
+{"root": "낭", "init": "1", "result": "win", "mid_calls": 1080593, "search_s": 2.19, "emit_s": 0.76, "solver_wall_s": 3.33, "verify_s": 2.45, "correct": true, "proof_states": 27885, "total_s": 5.78}
+{"root": "낭", "init": "9", "result": "win", "mid_calls": 1145500, "search_s": 2.73, "emit_s": 0.95, "solver_wall_s": 4.06, "verify_s": 2.61, "correct": true, "proof_states": 30549, "total_s": 6.67}
+{"root": "눅", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 85.54, "emit_s": 0.0, "solver_wall_s": 85.98, "verify_s": 0.0, "correct": null, "total_s": 85.98}
+{"root": "눅", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 100.95, "emit_s": 0.0, "solver_wall_s": 101.27, "verify_s": 0.0, "correct": null, "total_s": 101.27}
+{"root": "맥", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 91.22, "emit_s": 0.0, "solver_wall_s": 91.64, "verify_s": 0.0, "correct": null, "total_s": 91.64}
+{"root": "맥", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 108.7, "emit_s": 0.0, "solver_wall_s": 109.09, "verify_s": 0.0, "correct": null, "total_s": 109.09}
+{"root": "멸", "init": "1", "result": "win", "mid_calls": 18765800, "search_s": 42.29, "emit_s": 3.02, "solver_wall_s": 45.7, "verify_s": 9.32, "correct": true, "proof_states": 117053, "total_s": 55.02}
+{"root": "멸", "init": "9", "result": "win", "mid_calls": 15727351, "search_s": 40.57, "emit_s": 3.27, "solver_wall_s": 44.24, "verify_s": 8.84, "correct": true, "proof_states": 109225, "total_s": 53.08}
+{"root": "벽", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 90.11, "emit_s": 0.0, "solver_wall_s": 90.56, "verify_s": 0.0, "correct": null, "total_s": 90.56}
+{"root": "벽", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 107.63, "emit_s": 0.0, "solver_wall_s": 108.01, "verify_s": 0.0, "correct": null, "total_s": 108.01}
+{"root": "삭", "init": "1", "result": "loss", "mid_calls": 19946976, "search_s": 41.36, "emit_s": 5.87, "solver_wall_s": 47.73, "verify_s": 17.87, "correct": true, "proof_states": 217116, "total_s": 65.6}
+{"root": "삭", "init": "9", "result": "loss", "mid_calls": 23395702, "search_s": 57.6, "emit_s": 6.05, "solver_wall_s": 64.15, "verify_s": 18.59, "correct": true, "proof_states": 220177, "total_s": 82.74}
+{"root": "색", "init": "1", "result": "loss", "mid_calls": 12133999, "search_s": 32.2, "emit_s": 5.54, "solver_wall_s": 38.3, "verify_s": 18.94, "correct": true, "proof_states": 198085, "total_s": 57.24}
+{"root": "색", "init": "9", "result": "loss", "mid_calls": 11205047, "search_s": 31.73, "emit_s": 5.17, "solver_wall_s": 37.41, "verify_s": 17.08, "correct": true, "proof_states": 183396, "total_s": 54.49}
+{"root": "섭", "init": "1", "result": "win", "mid_calls": 6051848, "search_s": 13.04, "emit_s": 2.7, "solver_wall_s": 16.18, "verify_s": 8.31, "correct": true, "proof_states": 98127, "total_s": 24.49}
+{"root": "섭", "init": "9", "result": "win", "mid_calls": 5879727, "search_s": 14.38, "emit_s": 3.21, "solver_wall_s": 18.02, "verify_s": 8.58, "correct": true, "proof_states": 103581, "total_s": 26.6}
+{"root": "솥", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 87.79, "emit_s": 0.0, "solver_wall_s": 88.21, "verify_s": 0.0, "correct": null, "total_s": 88.21}
+{"root": "솥", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 105.22, "emit_s": 0.0, "solver_wall_s": 105.62, "verify_s": 0.0, "correct": null, "total_s": 105.62}
+{"root": "십", "init": "1", "result": "loss", "mid_calls": 20230956, "search_s": 49.05, "emit_s": 4.71, "solver_wall_s": 54.24, "verify_s": 14.28, "correct": true, "proof_states": 166369, "total_s": 68.52}
+{"root": "십", "init": "9", "result": "loss", "mid_calls": 14137327, "search_s": 38.51, "emit_s": 3.89, "solver_wall_s": 42.81, "verify_s": 10.93, "correct": true, "proof_states": 130136, "total_s": 53.74}
+{"root": "업", "init": "1", "result": "loss", "mid_calls": 6197902, "search_s": 13.64, "emit_s": 2.66, "solver_wall_s": 16.78, "verify_s": 7.49, "correct": true, "proof_states": 93390, "total_s": 24.27}
+{"root": "업", "init": "9", "result": "loss", "mid_calls": 5480653, "search_s": 13.33, "emit_s": 2.51, "solver_wall_s": 16.28, "verify_s": 7.99, "correct": true, "proof_states": 96165, "total_s": 24.27}
+{"root": "엽", "init": "1", "result": "loss", "mid_calls": 9127088, "search_s": 20.83, "emit_s": 2.92, "solver_wall_s": 24.21, "verify_s": 8.49, "correct": true, "proof_states": 104008, "total_s": 32.7}
+{"root": "엽", "init": "9", "result": "loss", "mid_calls": 7659996, "search_s": 19.45, "emit_s": 2.83, "solver_wall_s": 22.73, "verify_s": 7.92, "correct": true, "proof_states": 98906, "total_s": 30.65}
+{"root": "온", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 89.73, "emit_s": 0.0, "solver_wall_s": 90.15, "verify_s": 0.0, "correct": null, "total_s": 90.15}
+{"root": "온", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 103.7, "emit_s": 0.0, "solver_wall_s": 104.09, "verify_s": 0.0, "correct": null, "total_s": 104.09}
+{"root": "움", "init": "1", "result": "win", "mid_calls": 10631208, "search_s": 21.99, "emit_s": 3.28, "solver_wall_s": 25.69, "verify_s": 9.18, "correct": true, "proof_states": 116445, "total_s": 34.87}
+{"root": "움", "init": "9", "result": "win", "mid_calls": 8417623, "search_s": 20.71, "emit_s": 3.14, "solver_wall_s": 24.28, "verify_s": 9.01, "correct": true, "proof_states": 111938, "total_s": 33.29}
+{"root": "웅", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 84.42, "emit_s": 0.0, "solver_wall_s": 84.86, "verify_s": 0.0, "correct": null, "total_s": 84.86}
+{"root": "웅", "init": "9", "result": "loss", "mid_calls": 36975833, "search_s": 94.09, "emit_s": 6.09, "solver_wall_s": 100.65, "verify_s": 15.76, "correct": true, "proof_states": 184933, "total_s": 116.41}
+{"root": "율", "init": "1", "result": "win", "mid_calls": 5121532, "search_s": 10.68, "emit_s": 3.07, "solver_wall_s": 14.22, "verify_s": 8.48, "correct": true, "proof_states": 98147, "total_s": 22.7}
+{"root": "율", "init": "9", "result": "win", "mid_calls": 4428153, "search_s": 10.46, "emit_s": 3.05, "solver_wall_s": 13.94, "verify_s": 8.68, "correct": true, "proof_states": 100883, "total_s": 22.62}
+{"root": "젓", "init": "1", "result": "loss", "mid_calls": 8541674, "search_s": 18.4, "emit_s": 2.87, "solver_wall_s": 21.69, "verify_s": 8.34, "correct": true, "proof_states": 98307, "total_s": 30.03}
+{"root": "젓", "init": "9", "result": "loss", "mid_calls": 6732981, "search_s": 16.32, "emit_s": 2.74, "solver_wall_s": 19.53, "verify_s": 8.44, "correct": true, "proof_states": 99614, "total_s": 27.97}
+{"root": "존", "init": "1", "result": "loss", "mid_calls": 335209, "search_s": 0.62, "emit_s": 0.18, "solver_wall_s": 1.15, "verify_s": 0.47, "correct": true, "proof_states": 8181, "total_s": 1.62}
+{"root": "존", "init": "9", "result": "loss", "mid_calls": 212495, "search_s": 0.47, "emit_s": 0.17, "solver_wall_s": 0.96, "verify_s": 0.48, "correct": true, "proof_states": 7866, "total_s": 1.44}
+{"root": "죄", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 91.63, "emit_s": 0.0, "solver_wall_s": 91.98, "verify_s": 0.0, "correct": null, "total_s": 91.98}
+{"root": "죄", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 107.1, "emit_s": 0.0, "solver_wall_s": 107.47, "verify_s": 0.0, "correct": null, "total_s": 107.47}
+{"root": "죽", "init": "1", "result": "win", "mid_calls": 1989632, "search_s": 4.94, "emit_s": 1.13, "solver_wall_s": 6.5, "verify_s": 3.17, "correct": true, "proof_states": 38311, "total_s": 9.67}
+{"root": "죽", "init": "9", "result": "win", "mid_calls": 2015135, "search_s": 5.17, "emit_s": 1.19, "solver_wall_s": 6.79, "verify_s": 3.04, "correct": true, "proof_states": 40890, "total_s": 9.83}
+{"root": "즉", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 93.12, "emit_s": 0.0, "solver_wall_s": 93.56, "verify_s": 0.0, "correct": null, "total_s": 93.56}
+{"root": "즉", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 107.43, "emit_s": 0.0, "solver_wall_s": 107.81, "verify_s": 0.0, "correct": null, "total_s": 107.81}
+{"root": "찬", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 94.58, "emit_s": 0.0, "solver_wall_s": 94.91, "verify_s": 0.0, "correct": null, "total_s": 94.91}
+{"root": "찬", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 107.65, "emit_s": 0.0, "solver_wall_s": 108.01, "verify_s": 0.0, "correct": null, "total_s": 108.01}
+{"root": "칙", "init": "1", "result": "loss", "mid_calls": 36545355, "search_s": 72.06, "emit_s": 5.73, "solver_wall_s": 78.29, "verify_s": 18.6, "correct": true, "proof_states": 216465, "total_s": 96.89}
+{"root": "칙", "init": "9", "result": "loss", "mid_calls": 36010455, "search_s": 83.84, "emit_s": 6.9, "solver_wall_s": 91.22, "verify_s": 17.76, "correct": true, "proof_states": 218703, "total_s": 108.98}
+{"root": "칠", "init": "1", "result": "win", "mid_calls": 503964, "search_s": 1.06, "emit_s": 0.36, "solver_wall_s": 1.83, "verify_s": 1.04, "correct": true, "proof_states": 15841, "total_s": 2.87}
+{"root": "칠", "init": "9", "result": "win", "mid_calls": 444341, "search_s": 1.01, "emit_s": 0.36, "solver_wall_s": 1.74, "verify_s": 1.02, "correct": true, "proof_states": 17386, "total_s": 2.76}
+{"root": "칭", "init": "1", "result": "loss", "mid_calls": 22108047, "search_s": 49.7, "emit_s": 7.61, "solver_wall_s": 57.85, "verify_s": 23.12, "correct": true, "proof_states": 294207, "total_s": 80.97}
+{"root": "칭", "init": "9", "result": "loss", "mid_calls": 16472199, "search_s": 44.95, "emit_s": 7.95, "solver_wall_s": 53.43, "verify_s": 23.7, "correct": true, "proof_states": 307454, "total_s": 77.13}
+{"root": "쾌", "init": "1", "result": "loss", "mid_calls": 30936699, "search_s": 67.7, "emit_s": 5.6, "solver_wall_s": 73.78, "verify_s": 16.68, "correct": true, "proof_states": 191001, "total_s": 90.46}
+{"root": "쾌", "init": "9", "result": "loss", "mid_calls": 25194833, "search_s": 64.89, "emit_s": 5.49, "solver_wall_s": 70.84, "verify_s": 16.51, "correct": true, "proof_states": 190867, "total_s": 87.35}
+{"root": "큼", "init": "1", "result": "loss", "mid_calls": 12305467, "search_s": 24.46, "emit_s": 3.07, "solver_wall_s": 27.96, "verify_s": 9.05, "correct": true, "proof_states": 112168, "total_s": 37.01}
+{"root": "큼", "init": "9", "result": "loss", "mid_calls": 8696790, "search_s": 20.36, "emit_s": 3.02, "solver_wall_s": 23.8, "verify_s": 8.94, "correct": true, "proof_states": 114557, "total_s": 32.74}
+{"root": "탁", "init": "1", "result": "win", "mid_calls": 226823, "search_s": 0.43, "emit_s": 0.06, "solver_wall_s": 0.87, "verify_s": 0.16, "correct": true, "proof_states": 2058, "total_s": 1.03}
+{"root": "탁", "init": "9", "result": "win", "mid_calls": 209699, "search_s": 0.43, "emit_s": 0.06, "solver_wall_s": 0.95, "verify_s": 0.17, "correct": true, "proof_states": 2053, "total_s": 1.12}
+{"root": "탑", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 91.71, "emit_s": 0.0, "solver_wall_s": 92.08, "verify_s": 0.0, "correct": null, "total_s": 92.08}
+{"root": "탑", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 109.24, "emit_s": 0.0, "solver_wall_s": 109.6, "verify_s": 0.0, "correct": null, "total_s": 109.6}
+{"root": "탕", "init": "1", "result": "unknown", "mid_calls": 40000512, "search_s": 85.51, "emit_s": 0.0, "solver_wall_s": 85.85, "verify_s": 0.0, "correct": null, "total_s": 85.85}
+{"root": "탕", "init": "9", "result": "unknown", "mid_calls": 40000512, "search_s": 101.27, "emit_s": 0.0, "solver_wall_s": 101.62, "verify_s": 0.0, "correct": null, "total_s": 101.62}
+{"root": "향", "init": "1", "result": "win", "mid_calls": 88130, "search_s": 0.18, "emit_s": 0.11, "solver_wall_s": 0.63, "verify_s": 0.32, "correct": true, "proof_states": 3950, "total_s": 0.95}
+{"root": "향", "init": "9", "result": "win", "mid_calls": 91268, "search_s": 0.21, "emit_s": 0.11, "solver_wall_s": 0.67, "verify_s": 0.3, "correct": true, "proof_states": 3793, "total_s": 0.97}
+{"root": "혁", "init": "1", "result": "loss", "mid_calls": 34342076, "search_s": 76.23, "emit_s": 7.99, "solver_wall_s": 84.71, "verify_s": 23.36, "correct": true, "proof_states": 268329, "total_s": 108.07}
+{"root": "혁", "init": "9", "result": "loss", "mid_calls": 26282046, "search_s": 67.49, "emit_s": 8.22, "solver_wall_s": 76.17, "verify_s": 23.9, "correct": true, "proof_states": 276507, "total_s": 100.07}
+{"root": "훈", "init": "1", "result": "loss", "mid_calls": 487989, "search_s": 0.9, "emit_s": 0.17, "solver_wall_s": 1.45, "verify_s": 0.57, "correct": true, "proof_states": 7906, "total_s": 2.02}
+{"root": "훈", "init": "9", "result": "loss", "mid_calls": 655574, "search_s": 1.54, "emit_s": 0.18, "solver_wall_s": 2.09, "verify_s": 0.55, "correct": true, "proof_states": 8137, "total_s": 2.64}
+{"root": "휘", "init": "1", "result": "win", "mid_calls": 20371542, "search_s": 43.87, "emit_s": 4.86, "solver_wall_s": 49.25, "verify_s": 15.7, "correct": true, "proof_states": 177672, "total_s": 64.95}
+{"root": "휘", "init": "9", "result": "win", "mid_calls": 16608179, "search_s": 41.33, "emit_s": 4.82, "solver_wall_s": 46.69, "verify_s": 14.9, "correct": true, "proof_states": 173263, "total_s": 61.59}
+{"root": "흔", "init": "1", "result": "loss", "mid_calls": 20759747, "search_s": 47.45, "emit_s": 5.86, "solver_wall_s": 53.92, "verify_s": 16.5, "correct": true, "proof_states": 190069, "total_s": 70.42}
+{"root": "흔", "init": "9", "result": "loss", "mid_calls": 17668990, "search_s": 47.26, "emit_s": 6.06, "solver_wall_s": 53.96, "verify_s": 16.37, "correct": true, "proof_states": 187387, "total_s": 70.33}
+{"root": "흥", "init": "1", "result": "win", "mid_calls": 11997310, "search_s": 25.01, "emit_s": 2.0, "solver_wall_s": 27.42, "verify_s": 6.18, "correct": true, "proof_states": 74346, "total_s": 33.6}
+{"root": "흥", "init": "9", "result": "win", "mid_calls": 6496503, "search_s": 16.4, "emit_s": 2.05, "solver_wall_s": 18.85, "verify_s": 6.3, "correct": true, "proof_states": 72391, "total_s": 25.15}

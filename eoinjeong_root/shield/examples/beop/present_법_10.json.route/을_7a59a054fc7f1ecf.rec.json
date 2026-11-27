@@ -1,0 +1,28 @@
+{
+ "id": "을_7a59a054fc7f1ecf",
+ "syllable": "을",
+ "used_route_words": [
+  "몬드니켈",
+  "법원검찰청복사골문화센터반달마을",
+  "켈리몬"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006277,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d00da83bcc68aa1f57f976454f6f9949f3337fc4f76fc04d0a27d8e417add6df",
+ "position_sha256": "7a59a054fc7f1ecf0d4ea2fadf6a00492b9594bf407e1f3937dcd8593145b266",
+ "input_sha256": "108b0deb70c9b8768a22489727f92a08fd74555d1a3372a87a0b92b4d07b5f58",
+ "proof_bytes": 5324
+}

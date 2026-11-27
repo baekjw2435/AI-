@@ -1,0 +1,28 @@
+{
+ "id": "냐_e75c547fa43eea4c",
+ "syllable": "냐",
+ "used_route_words": [
+  "굴저냐",
+  "권폄",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000496,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "047462b59e0f892fd7e839ff6c2b92a33b3009b0a85227be783571683bd9f831",
+ "position_sha256": "e75c547fa43eea4c7399f62b9b7e791d5acb93d5ee098e1125b46c6014c78cbc",
+ "input_sha256": "4b0c5c5cbc05e546b856667afadc2db4a77924bb3fa794078f9ff24084c3a409",
+ "proof_bytes": 538
+}

@@ -1,0 +1,26 @@
+{
+ "id": "법_c7b6022b3b5334ad",
+ "syllable": "법",
+ "used_route_words": [
+  "잎주기법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.006869,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "509a85d63f58707d4090900936e16ac007d0e70c205f9c0e39ae35bfc51ee0a5",
+ "position_sha256": "c7b6022b3b5334ad77a5a92e7f3f4f0a063eb7e7f41c226ff27059ecf5d5c437",
+ "input_sha256": "f50db0eb16771761c70149c4d8206f2f2812b1d5509b7a0ec35719c4c186182c",
+ "proof_bytes": 1263
+}

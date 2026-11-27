@@ -1,0 +1,28 @@
+{
+ "id": "톡_15c184a68bf2bd7c",
+ "syllable": "톡",
+ "used_route_words": [
+  "권삼득",
+  "읍권",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.015266,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1b57f5971c0703a0de7b67e3d8ec15bf99fdbfede1cc9ae15d32e53b2916aa68",
+ "position_sha256": "15c184a68bf2bd7c0eca79e54dec218ee59b6aee008ac573621850c2d6f571a9",
+ "input_sha256": "491585cdb2b5db4b71b3ffaecf4c9cbdd345cf9f0f67f20cec15305cf37a4696",
+ "proof_bytes": 7798
+}

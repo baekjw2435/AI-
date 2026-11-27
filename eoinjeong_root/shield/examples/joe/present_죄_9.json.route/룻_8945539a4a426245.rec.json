@@ -1,0 +1,27 @@
+{
+ "id": "룻_8945539a4a426245",
+ "syllable": "룻",
+ "used_route_words": [
+  "죄상첨죄",
+  "죄첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002071,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3a9ab78b88e1910b8c7d540ed0db9fa21251fb51f92914afab533ffde41c1ea1",
+ "position_sha256": "8945539a4a4262451e702dbe4339cd38734072992a4e6eece4ff05bf58fc823b",
+ "input_sha256": "1a2c0748b0c342352c715d85bfeecbb546096c967cd6ea3af158b88f5f4ba303",
+ "proof_bytes": 1445
+}

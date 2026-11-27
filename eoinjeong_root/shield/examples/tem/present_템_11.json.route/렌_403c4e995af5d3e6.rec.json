@@ -1,0 +1,31 @@
+{
+ "id": "렌_403c4e995af5d3e6",
+ "syllable": "렌",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "굴대두겁",
+  "쇄소건즐",
+  "즐거움가득보물상자카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.017198,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "136b6d3469d6e29d8924bcaca677bdced7178dca386a049bff31622bbe3e5845",
+ "position_sha256": "403c4e995af5d3e6b3d5e70bb21c741c28907b5b22e67d87f877feceaef23f1d",
+ "input_sha256": "e777c720fd7d0ff6ad7543a840fccaf7ba745bd47fa120938b8c63b714bad765",
+ "proof_bytes": 11922
+}

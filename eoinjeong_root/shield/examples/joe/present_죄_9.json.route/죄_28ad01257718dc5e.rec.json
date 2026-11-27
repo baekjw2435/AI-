@@ -1,0 +1,28 @@
+{
+ "id": "죄_28ad01257718dc5e",
+ "syllable": "죄",
+ "used_route_words": [
+  "득죄",
+  "밑틀",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003322,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6e2154726b38819da9ae4266646d8db5e5d706cfa801915b5a4322ebf8d328cb",
+ "position_sha256": "28ad01257718dc5e3f12d9e30d95eaa631754c4aa993a8d6eb55457e31fe8212",
+ "input_sha256": "082c5480b8437bb4e6993327118b2b82efb6cd117c24c2ec0e02a59610cd9df0",
+ "proof_bytes": 3487
+}

@@ -1,0 +1,26 @@
+{
+ "id": "렌_476dc98da0ae3fda",
+ "syllable": "렌",
+ "used_route_words": [
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.022252,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9a3702ae9be63e1ee698dd73e17d6673c3e8a5a70735aec6a482370b3fd80683",
+ "position_sha256": "476dc98da0ae3fdaec3001cdea6ebdd0ab2672232780306b5bc3e5efe11f67c9",
+ "input_sha256": "b70b85b79f1e18c642b4eba726d44debe2af6431bcde4bd904780ef33d2fcb45",
+ "proof_bytes": 15405
+}

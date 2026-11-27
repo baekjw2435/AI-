@@ -1,0 +1,30 @@
+{
+ "id": "척_83f29c2b4e09bac7",
+ "syllable": "척",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000169,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "83f29c2b4e09bac78d42d92d52cf82229673f14f19413f46fd7026abd10896ee",
+ "input_sha256": "3012e495c5f8039ca95b32a5ecb99eeb8026443bc731a1b0762154e48f53c037",
+ "proof_bytes": 124
+}

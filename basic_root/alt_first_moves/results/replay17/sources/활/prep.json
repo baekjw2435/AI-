@@ -1,0 +1,33 @@
+{
+ "syllable": "활",
+ "vertex": "활",
+ "result_for_receiver": "L",
+ "runs": 2,
+ "search_seconds_spent": 2268.621,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 1480292988,
+ "proof_nodes": 6016858,
+ "proof_seconds": 155.208972,
+ "solver_wall_seconds": 2429.62,
+ "verify_seconds": 164.348,
+ "verify_wall_seconds": 164.43,
+ "proof_bytes": 43325764,
+ "proof_sha256": "98a0d559862684e89521f99bf41bc99082e782d37082550e6025dcc24d34f822",
+ "position_sha256": "6d0bc23fa0edb8ad25fc78ddf479926099d65bee39b06758b48c0c220f590fd0",
+ "input_sha256": "cb08d946e08dd0e59b42d895c9d4e25a75b4ffbb4d2b9629d3f05c39dc54798f",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

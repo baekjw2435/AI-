@@ -1,0 +1,28 @@
+{
+ "id": "험_da4bccb839e3e1ad",
+ "syllable": "험",
+ "used_route_words": [
+  "갱도시험",
+  "몬드니켈",
+  "켈리몬"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00081,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2937e3e974300769c6309dc5aa1a33afccbe4f1c1601f39f99178ff8e557a7d3",
+ "position_sha256": "da4bccb839e3e1ad61b440ce9ec737bb9db7fbaa1b1362c68c6d28cc28c8f2db",
+ "input_sha256": "1a08908a40d15fdf59d12ad82cb066547a19e21a73b86a40f0d544912fb2c18d",
+ "proof_bytes": 1256
+}

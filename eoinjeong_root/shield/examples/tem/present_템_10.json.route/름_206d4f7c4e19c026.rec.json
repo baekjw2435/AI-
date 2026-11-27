@@ -1,0 +1,28 @@
+{
+ "id": "름_206d4f7c4e19c026",
+ "syllable": "름",
+ "used_route_words": [
+  "뜸마을",
+  "을종근로소득",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00016,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cf44e9d61241743ba163f8b936d56e7ba5c723fc1d13c462175554e4e65b37d8",
+ "position_sha256": "206d4f7c4e19c026b0824d206a61d7056c19e18de6c6c36070468a365cc9d10d",
+ "input_sha256": "f5e8baf6ee3eaf145f7744375a7b627f62647b87345cf590ef5812c4d332ef26",
+ "proof_bytes": 208
+}

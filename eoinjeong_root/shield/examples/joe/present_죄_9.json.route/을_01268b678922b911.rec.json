@@ -1,0 +1,29 @@
+{
+ "id": "을_01268b678922b911",
+ "syllable": "을",
+ "used_route_words": [
+  "법원검찰청복사골문화센터반달마을",
+  "죄상첨죄",
+  "죄첩",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005094,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d10d7303022c3639572a6c3899653d2e94b7488912298178ddcecb4fa52f12f1",
+ "position_sha256": "01268b678922b911fe10aa489ae21946de83277ac310a2c98e5e450547696838",
+ "input_sha256": "7c3552e80b2577ae0a4c3b0fd0d246a0c7b3520274fe9202275f52f066fd9aab",
+ "proof_bytes": 5959
+}

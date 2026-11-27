@@ -1,0 +1,28 @@
+{
+ "id": "을_b2eff750063f2512",
+ "syllable": "을",
+ "used_route_words": [
+  "넨장맞을",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.030796,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d47728872cbf0f94689ae497e4097a4eb3a4cfb4f8d1aeca5c18ed36f575d211",
+ "position_sha256": "b2eff750063f2512ce0a30f2d70aa9cb46c85183aef50c45fd2cee64bcf5e6b9",
+ "input_sha256": "05515e63f07b9080ca4d6f2e882770f1d580ae5ea23e00237aac7b69dc9cb690",
+ "proof_bytes": 5436
+}

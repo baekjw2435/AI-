@@ -1,0 +1,27 @@
+{
+ "id": "겅_0fb5bdd86e2d64e3",
+ "syllable": "겅",
+ "used_route_words": [
+  "굴대두겁",
+  "댁대굴댁대굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001143,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fd997b6e685322be4c530756b53051727ba31db2632645293ccdbb4290b7c865",
+ "position_sha256": "0fb5bdd86e2d64e3f9a35c5fcbf94681ba4975843291053ca10f2435aaa0486a",
+ "input_sha256": "3e05863a64f47bb7d0a2298982ce02692f04d07f7e71241eca1a26e81dc316ce",
+ "proof_bytes": 784
+}

@@ -1,0 +1,29 @@
+{
+ "id": "굴_db0a64c4762d0def",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱생보호법",
+  "겁나는얼굴",
+  "죄상가죄",
+  "죄첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000133,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "db0a64c4762d0def09827005f86632cdeaa1caaba3ec5334261da812131c411d",
+ "input_sha256": "1a749f49bff5f70dd92ab748bc247d8b144e8f66d6f9f12ab652bdb8aac319e1",
+ "proof_bytes": 124
+}

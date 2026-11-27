@@ -1,0 +1,29 @@
+{
+ "id": "준_2d03b38d201b80e2",
+ "syllable": "준",
+ "used_route_words": [
+  "늠름",
+  "늠준",
+  "밑틀",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001253,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1005f883a2e8fc6374cb463b5c1bedfdc9be3b3c6c0a3a49a1da9ef2cb8b67dd",
+ "position_sha256": "2d03b38d201b80e2989a15fe9c2a79f5cb868704134fae7dc11cd6901a626f0f",
+ "input_sha256": "9617be47246df84f2d28586954d6c032c12b9d056164a28ad27707f5a7311bcd",
+ "proof_bytes": 318
+}

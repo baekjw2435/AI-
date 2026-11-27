@@ -1,0 +1,28 @@
+{
+ "id": "렌_38b001c143a50793",
+ "syllable": "렌",
+ "used_route_words": [
+  "죄율",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013675,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7b2d7c57ccbd7c7a30d6bb54a7414d79ce35abadf1d98860d52e96317a9f1350",
+ "position_sha256": "38b001c143a507938c0ffaec9d2fc17c33a770c787007584450d9549bcf647af",
+ "input_sha256": "f12a1fe3f20a65b0305d244e4d0047d0a48eb9b074537badf52e83a8ffd7fe3b",
+ "proof_bytes": 8658
+}

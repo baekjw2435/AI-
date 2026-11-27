@@ -1,0 +1,31 @@
+{
+ "id": "형_6b276a49af17e885",
+ "syllable": "형",
+ "used_route_words": [
+  "권력균형",
+  "섭험",
+  "죄첩",
+  "척수공권",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000168,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "6b276a49af17e8852914a34017113397c2a06085f22a9653bc6f0fe344c4c4a8",
+ "input_sha256": "e2a2ac80341c735f24ae2181eb25f8e755aca86971e75efa6ae3b7e7132cfc3d",
+ "proof_bytes": 124
+}

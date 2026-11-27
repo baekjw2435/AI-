@@ -1,0 +1,31 @@
+{
+ "id": "을_c46f2ab75b2b6977",
+ "syllable": "을",
+ "used_route_words": [
+  "굉굉",
+  "굉주교착",
+  "죄상첨죄",
+  "죄첩",
+  "착한쿠키에게선물을",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00347,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d10d7303022c3639572a6c3899653d2e94b7488912298178ddcecb4fa52f12f1",
+ "position_sha256": "c46f2ab75b2b6977cc420b114212c14a1a0fe979e2ef88ec20cc2b0d7c74d91d",
+ "input_sha256": "7eaf547eb411da1624d0a90ebe954d7bcd326f29968a084144f512d626b3c3eb",
+ "proof_bytes": 5959
+}

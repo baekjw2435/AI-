@@ -1,0 +1,28 @@
+{
+ "id": "읍_a43c359945c4f7eb",
+ "syllable": "읍",
+ "used_route_words": [
+  "겔렌데슈프링겐",
+  "읍읍",
+  "읍할읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009428,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1301e73d79785df128f228e32465fad6c5b4226afffe9d55570f4a9489ebd936",
+ "position_sha256": "a43c359945c4f7eb33cf4b10b2332143fd2628e2aac951c2a2d70d9cc6916f6c",
+ "input_sha256": "3d7136ad9e641df063f8d116f1ced733ee16cc41cff8173f288cdb2d363f31dd",
+ "proof_bytes": 5744
+}

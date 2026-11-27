@@ -1,0 +1,31 @@
+{
+ "id": "죄_821c78e549d0c5b1",
+ "syllable": "죄",
+ "used_route_words": [
+  "권폄",
+  "득죄",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄",
+  "험득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000234,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b84ad1c3fea87808a0d37ed31c8f8fb3ea5e879c5bda92ccbe59f2dd41c4b779",
+ "position_sha256": "821c78e549d0c5b1ddcb3c817559c2a6df46b9ce2e9393901f391a18b418ac84",
+ "input_sha256": "09456834c9c971ed8386e3511ed2fdb9a5dc0fddc7425c519adc009e72f6ad45",
+ "proof_bytes": 467
+}

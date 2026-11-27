@@ -1,0 +1,29 @@
+{
+ "id": "험_501f71feaddb1bca",
+ "syllable": "험",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00019,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "501f71feaddb1bca9cb5d614fef217ef88a289f9e1737a3da0d3c72a76a54790",
+ "input_sha256": "67c61b51633276a8d8fe75789ecd733cab8ab1e1cc3f65816769fca139183a90",
+ "proof_bytes": 124
+}

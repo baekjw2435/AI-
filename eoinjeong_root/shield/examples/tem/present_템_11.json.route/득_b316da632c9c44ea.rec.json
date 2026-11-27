@@ -1,0 +1,31 @@
+{
+ "id": "득_b316da632c9c44ea",
+ "syllable": "득",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "권삼득",
+  "득득",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.58166,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c2920ecfef130a5665bf70c343d664ad7aa134d82b1bf8d3f6d056d7946c14f4",
+ "position_sha256": "b316da632c9c44ea6ed54edf60f8564191b64e0cc3ab6a447045971af8459cd6",
+ "input_sha256": "213b17a53eb4cdd52b81f3c402f58018abfc6aa6478cc3f5965f701c5c8a31bb",
+ "proof_bytes": 165051
+}

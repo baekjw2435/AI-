@@ -1,0 +1,31 @@
+{
+ "id": "법_6998e9877d7274c3",
+ "syllable": "법",
+ "used_route_words": [
+  "샅흰검은말율",
+  "섭험",
+  "율법",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000165,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "6998e9877d7274c39c3b42ddb0e1cf0bb3e6a593244971fd9424ddfa52fd4c7b",
+ "input_sha256": "02f9ecdf2eee3949e4298003abff7fd505e369de480577db1d1dc74ea914d1fd",
+ "proof_bytes": 124
+}

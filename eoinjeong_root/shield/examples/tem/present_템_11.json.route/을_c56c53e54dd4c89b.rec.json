@@ -1,0 +1,28 @@
+{
+ "id": "을_c56c53e54dd4c89b",
+ "syllable": "을",
+ "used_route_words": [
+  "갱내채굴",
+  "굴대두겁",
+  "넨장맞을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010426,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d47728872cbf0f94689ae497e4097a4eb3a4cfb4f8d1aeca5c18ed36f575d211",
+ "position_sha256": "c56c53e54dd4c89bb90a39f5c3f7de79d372f2a30522216cc75c15817a26cf8a",
+ "input_sha256": "20f845b405b985170e6013c00baab3826b852cd7fc7e4b0f18b9f696862d6ae0",
+ "proof_bytes": 5436
+}

@@ -1,0 +1,26 @@
+{
+ "id": "겸_e559a1f40801aa25",
+ "syllable": "겸",
+ "used_route_words": [
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005769,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cea4312c74be272c53f1e8c9d5f218cd3a9896d0e0390896a291ca774a53c24d",
+ "position_sha256": "e559a1f40801aa2575bd8064c578ec0544a03ebb4db635b93ede3f1b8de491b2",
+ "input_sha256": "9d0f1fffa1fd3ab025042ae7a83f12bddad3292ba4022323bd5ee3ee8c2693b2",
+ "proof_bytes": 5775
+}

@@ -1,0 +1,58 @@
+{
+ "syllable": "솥",
+ "members": [
+  "솥"
+ ],
+ "vertex": "솥",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 59045888,
+  "child_gens": 148282463,
+  "tt_entries": 16711110,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 59045888,
+  "tt_replacements": 28727186,
+  "seconds": 120.002083,
+  "pn": 4928,
+  "dn": 4763,
+  "best_group": 259,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16711110,
+  "tt_save_seconds": 1.430596,
+  "tt_save_error": "",
+  "proven": {
+   "proven_loaded": 8388608,
+   "proven_inserted": 8388608,
+   "proven_tt_used_after_load": 8317541,
+   "proven_load_seconds": 1.32113,
+   "proven_saved": 2663157,
+   "proven_skipped_small": 0,
+   "proven_skipped_loaded": 7953830,
+   "proven_save_seconds": 0.260197,
+   "proven_save_error": ""
+  },
+  "proven_merge": {
+   "read": 11051765,
+   "distinct": 11051737,
+   "written": 8388608
+  }
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

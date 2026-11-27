@@ -1,0 +1,33 @@
+{
+ "syllable": "혁",
+ "vertex": "혁",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 64.271,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 42484234,
+ "proof_nodes": 278116,
+ "proof_seconds": 5.961511,
+ "solver_wall_seconds": 71.28,
+ "verify_seconds": 7.634,
+ "verify_wall_seconds": 7.64,
+ "proof_bytes": 2012432,
+ "proof_sha256": "1792394d120e2f90f7d817ce88a1c4f6c5a100f8cfdd9461eb37dbbeb79b2087",
+ "position_sha256": "625aceccfb18ad51b5be11efc8d2adbc6233bdbc39cd7771a822089468d9513a",
+ "input_sha256": "fc7d185db91870a7f05a117163b648e6259d75fdb81d02356c1516afc8591b09",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

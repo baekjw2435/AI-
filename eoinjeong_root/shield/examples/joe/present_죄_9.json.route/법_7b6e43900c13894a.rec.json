@@ -1,0 +1,32 @@
+{
+ "id": "법_7b6e43900c13894a",
+ "syllable": "법",
+ "used_route_words": [
+  "균수평준법",
+  "늠균",
+  "늠름",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00013,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "7b6e43900c13894a7bfe5da679927327d7654456421042d71001251e1f391ee8",
+ "input_sha256": "43544c0af5f8235cf02bd59ae981fae5e033062670f2c91086bb775788a5b5b4",
+ "proof_bytes": 124
+}

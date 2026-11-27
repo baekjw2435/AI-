@@ -1,0 +1,28 @@
+{
+ "id": "멱_e0f41c42d47cb349",
+ "syllable": "멱",
+ "used_route_words": [
+  "갱도시험",
+  "겁나는얼굴",
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.031389,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e605222221d8c72c05059611fc74f678caf23f542ae6c990e9ddb2e3f5823933",
+ "position_sha256": "e0f41c42d47cb349a4e9db05066447cde30bf2f5ad84697bf2fd089cc9ce7f37",
+ "input_sha256": "233e35ca7bb11e4b7696564b51b35e114d42d2c5c4a992d78bcf17e9c43a8d98",
+ "proof_bytes": 20833
+}

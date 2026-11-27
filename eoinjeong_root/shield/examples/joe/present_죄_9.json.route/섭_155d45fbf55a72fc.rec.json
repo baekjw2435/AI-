@@ -1,0 +1,30 @@
+{
+ "id": "섭_155d45fbf55a72fc",
+ "syllable": "섭",
+ "used_route_words": [
+  "겸섭",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000181,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "155d45fbf55a72fc69b0246921ea470383433276126489adb86f77e18b9e8d8c",
+ "input_sha256": "24041bd2ff175370d00617b97d960cf7a5f7fbe921e18d3a7b0b9c84a595bc33",
+ "proof_bytes": 124
+}

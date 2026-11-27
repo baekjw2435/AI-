@@ -1,0 +1,30 @@
+{
+ "id": "쇄_2af107d1c76949d5",
+ "syllable": "쇄",
+ "used_route_words": [
+  "득죄",
+  "뜸대뜸",
+  "뜸마을",
+  "을종근로소득",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00719,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8c79f855a5ac57793334c6294ae7f99890a5cb3ef1a0df79efb413b932f09cb5",
+ "position_sha256": "2af107d1c76949d52508c849c2d8edddf41f4d90bd5336304a39097c2a80babe",
+ "input_sha256": "9aa2ffad98a73db0acc8792c7b568c6bdbc279023a4796fa8e232b954b7cc978",
+ "proof_bytes": 2451
+}

@@ -1,0 +1,28 @@
+{
+ "id": "름_ea26bf70b42ce37e",
+ "syllable": "름",
+ "used_route_words": [
+  "밑틀",
+  "샅굴",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001738,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5fad66280f94ba2a06d506a5290d731aa03d4b372c8b374efdc3eb27e54a9f95",
+ "position_sha256": "ea26bf70b42ce37e36fbcd4a943180c02bf3a28308a430327fdcc60ce93f1bd7",
+ "input_sha256": "a891e716f9940fbc0d6d5bfbe9e144ab46271b3742b29486af1f006b803c1ac9",
+ "proof_bytes": 2411
+}

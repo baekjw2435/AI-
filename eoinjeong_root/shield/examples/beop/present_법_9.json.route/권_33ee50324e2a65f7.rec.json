@@ -1,0 +1,28 @@
+{
+ "id": "권_33ee50324e2a65f7",
+ "syllable": "권",
+ "used_route_words": [
+  "읍권",
+  "읍읍",
+  "읍할읍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.022905,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a99ded2cb778571e6deef5ecad7f48a2adf64ea7b699b7bc0dcff03a3072b997",
+ "position_sha256": "33ee50324e2a65f75e74b9d57e3466b272388e197debf97c3394660c834f53da",
+ "input_sha256": "15cc12301f5e23126902517b87e58c8bcff2b4e1fa4fac5245ab11814ca91f10",
+ "proof_bytes": 5735
+}

@@ -1,0 +1,58 @@
+{
+ "syllable": "탑",
+ "members": [
+  "탑"
+ ],
+ "vertex": "탑",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 52296704,
+  "child_gens": 131093029,
+  "tt_entries": 16685913,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 52296704,
+  "tt_replacements": 24158399,
+  "seconds": 120.000435,
+  "pn": 1317,
+  "dn": 7154,
+  "best_group": 547,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16685913,
+  "tt_save_seconds": 1.49139,
+  "tt_save_error": "",
+  "proven": {
+   "proven_loaded": 8388608,
+   "proven_inserted": 8388608,
+   "proven_tt_used_after_load": 8340069,
+   "proven_load_seconds": 1.639897,
+   "proven_saved": 3163804,
+   "proven_skipped_small": 0,
+   "proven_skipped_loaded": 8036734,
+   "proven_save_seconds": 0.284,
+   "proven_save_error": ""
+  },
+  "proven_merge": {
+   "read": 11552412,
+   "distinct": 11552378,
+   "written": 8388608
+  }
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

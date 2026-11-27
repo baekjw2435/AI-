@@ -1,0 +1,32 @@
+{
+ "id": "법_c76daeccfda11009",
+ "syllable": "법",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "섭험",
+  "율동법",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00013,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "c76daeccfda11009e51569f79e5c1527a6f717174f320f16e87891c8398a9271",
+ "input_sha256": "f0e8a7a5dd7b56b88fdc5dc435026aaa9ecefb955d07d600578f786e4b2e67a9",
+ "proof_bytes": 124
+}

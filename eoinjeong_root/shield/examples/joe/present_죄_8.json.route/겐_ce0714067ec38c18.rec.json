@@ -1,0 +1,27 @@
+{
+ "id": "겐_ce0714067ec38c18",
+ "syllable": "겐",
+ "used_route_words": [
+  "톤세법",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001186,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4c55c0297dd1a9c64f0f5b818bb4577d6520979a2519011020b09f203adee2f0",
+ "position_sha256": "ce0714067ec38c1897d10c6cd2b654229d4e6f05f6a7e42898f9deda238f85de",
+ "input_sha256": "29a350efca52708ecb62e4b4083c24d9eaeb11ab67a2ff3f1e827d8e5f0d9f82",
+ "proof_bytes": 784
+}

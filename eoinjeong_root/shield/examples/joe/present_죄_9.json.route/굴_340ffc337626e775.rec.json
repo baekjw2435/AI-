@@ -1,0 +1,31 @@
+{
+ "id": "굴_340ffc337626e775",
+ "syllable": "굴",
+ "used_route_words": [
+  "법굴",
+  "섭험",
+  "죄첩",
+  "척추마취법",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00018,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "340ffc337626e775ff9a47eedde94f497a7584e20b7f04b079a29bd95016837a",
+ "input_sha256": "fcec4d37b6409b62e6080335ccfaa3d054852f7447194aea073ca72b57cc493f",
+ "proof_bytes": 124
+}

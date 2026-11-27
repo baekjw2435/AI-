@@ -1,0 +1,29 @@
+{
+ "id": "렌_ac837b22d66a534a",
+ "syllable": "렌",
+ "used_route_words": [
+  "톡톡파워풀카가미네렌",
+  "톤세법",
+  "톤톤",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.02284,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "ac837b22d66a534a89fe38522de6bc894d1e82773a2520f30d1e6a328dbe2a9e",
+ "input_sha256": "616235ebd530311ceeb65241990d0f71066c9f2562da6463524307965bd6ea01",
+ "proof_bytes": 15781
+}

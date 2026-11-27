@@ -1,0 +1,28 @@
+{
+ "id": "굉_0584867ec3166dd3",
+ "syllable": "굉",
+ "used_route_words": [
+  "굉굉",
+  "권폄",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001127,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "23c2967f526ddda64d2804e704c59c6e788a26a64d621bd9b90f7a05f5c75e66",
+ "position_sha256": "0584867ec3166dd30254d89059f498688852c1acd19fc26ded372cb91a8ae84d",
+ "input_sha256": "6ad5dfa5fae03ae291b8a909af109ff4ea8935023f8abd7025b833a540e99022",
+ "proof_bytes": 1220
+}

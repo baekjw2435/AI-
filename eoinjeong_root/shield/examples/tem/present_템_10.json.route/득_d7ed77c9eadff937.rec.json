@@ -1,0 +1,28 @@
+{
+ "id": "득_d7ed77c9eadff937",
+ "syllable": "득",
+ "used_route_words": [
+  "뜸마을",
+  "을종근로소득",
+  "험득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000222,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ff4e32624d20a4d0cf49c0b338d0e92e5a530e37f0ee1cfc7c8a7ea8685a6c58",
+ "position_sha256": "d7ed77c9eadff93775b92a64e862aba8e702168905c1329c5e83b4fb84841760",
+ "input_sha256": "40954410406c1a0d8ae343616c5bd4d797b9befd688d049daada40f4fb6d98f1",
+ "proof_bytes": 324
+}

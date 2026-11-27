@@ -1,0 +1,30 @@
+{
+ "id": "름_07571ca21d37e25d",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "샅바씨름",
+  "쇄석포도법",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001524,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "08a3fa18a2c510c8a0662f4b6c6cac6a09cc1fb0d2c1361f44244c753e07c0da",
+ "position_sha256": "07571ca21d37e25df792ecd219d767f221e6d25d9e1ef7c642db17c951e42651",
+ "input_sha256": "b792d06120eb2f077ea07aee36c85541b863584247611136ff02729638d33649",
+ "proof_bytes": 1925
+}

@@ -1,0 +1,31 @@
+{
+ "id": "을_077a01caf0d9d1ae",
+ "syllable": "을",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "권상법",
+  "법원검찰청복사골문화센터반달마을",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.014594,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d34f96ea77791fb8a2cb25f0f15def6c21d5b9e6dd3d55c54b9f8a2caad0705c",
+ "position_sha256": "077a01caf0d9d1ae547c0e1df2da4a2d3270e46d90f6b333dfcc114b76a6e78b",
+ "input_sha256": "4b1ff83ee1b16c5aa606622ae5dadc23dbf6ea1635a6ef52226ef491b512f9df",
+ "proof_bytes": 8406
+}

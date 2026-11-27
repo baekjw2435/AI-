@@ -1,0 +1,30 @@
+{
+ "id": "굴_d217ec6c3c93a548",
+ "syllable": "굴",
+ "used_route_words": [
+  "샅굴",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000138,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "d217ec6c3c93a54805cf3374a6627b3ad2216ad8b946de45c8ec22a66e04c615",
+ "input_sha256": "6c3590bfa6f52cf48440bdb0fb7a7cca9923afaa9183492e6c544496427221f7",
+ "proof_bytes": 124
+}

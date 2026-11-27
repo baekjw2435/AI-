@@ -1,0 +1,27 @@
+{
+ "id": "겐_509ab7e44e086e4b",
+ "syllable": "겐",
+ "used_route_words": [
+  "굴대두겁",
+  "댁대굴댁대굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001162,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4c55c0297dd1a9c64f0f5b818bb4577d6520979a2519011020b09f203adee2f0",
+ "position_sha256": "509ab7e44e086e4b648aba348db6241c9bab0a2414e519947bf9e4f0f0e4cc96",
+ "input_sha256": "b5fc68b91852c6e9bd6e714d19287da5e893021810ebe4a5af13e77d6bbec1d4",
+ "proof_bytes": 784
+}

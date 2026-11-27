@@ -1,0 +1,27 @@
+{
+ "id": "펠_f0da5c87790e1e03",
+ "syllable": "펠",
+ "used_route_words": [
+  "헴펠",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.008042,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f3dbdf216818aee48fa5411a1642a1a0a8363301a200f73cf99c12c78c027f9",
+ "position_sha256": "f0da5c87790e1e0314a52b51179d0c0da0766c5ebdbb75787dfb1bf38324a639",
+ "input_sha256": "a7fc30a4df56ca995e6c06945b934c37e2319dae04513a4b5d667f0258c4daed",
+ "proof_bytes": 6437
+}

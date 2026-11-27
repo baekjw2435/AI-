@@ -1,0 +1,30 @@
+{
+ "id": "짱_55a331e7a53ad0ea",
+ "syllable": "짱",
+ "used_route_words": [
+  "냐짱",
+  "죄죄",
+  "죄첩",
+  "짱짱",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000194,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6ac9de420ab6aa70e4e76adb35f16d332e3d666fc5d69f7b3a0f5e091a7b522f",
+ "position_sha256": "55a331e7a53ad0ea10b5011eb5d8e562a57600a5f6dabb6039400296f57fa2fc",
+ "input_sha256": "2703e1bacfd8f9d893fe78f334ff12c3d80c01936cbaeb937a30d5043f0db771",
+ "proof_bytes": 196
+}

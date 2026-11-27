@@ -1,0 +1,29 @@
+{
+ "id": "몬_b2431ea2824f280e",
+ "syllable": "몬",
+ "used_route_words": [
+  "갑상샘자극호르몬",
+  "렌지로의피묻은장갑",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002186,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6cc8d86bdb2495f423eab7f9b35b5160db954dc0d98282600e1e1e715031f693",
+ "position_sha256": "b2431ea2824f280ede5f2f1edc4912b528499d79e444e89be14a7fee7fe9bb86",
+ "input_sha256": "cd5c13805c4dff32e6ba6816e01c824f829084aea067387c9a3e03ea4df320e8",
+ "proof_bytes": 1272
+}

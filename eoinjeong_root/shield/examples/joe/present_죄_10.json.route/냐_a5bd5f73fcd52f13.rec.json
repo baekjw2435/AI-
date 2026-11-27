@@ -1,0 +1,30 @@
+{
+ "id": "냐_a5bd5f73fcd52f13",
+ "syllable": "냐",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "굴대두겁",
+  "굴저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001138,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0942a5d8e6250ac8e6402e3b546e2cb148b18549bae0e8d9bf8a9f581c4c164a",
+ "position_sha256": "a5bd5f73fcd52f13d79b2c85bb28b685806a5641fd3ad84d06d3ec73eee8097c",
+ "input_sha256": "8b5a19376d1d435768ee799d064466c4449a54119b7fabadde08ef5ede470efc",
+ "proof_bytes": 830
+}

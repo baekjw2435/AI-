@@ -1,0 +1,27 @@
+{
+ "id": "돼_e838f63eac48fe47",
+ "syllable": "돼",
+ "used_route_words": [
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003097,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "96a47905e6ce8e7a1cb12e7b03b82ef953c726d905d31a903309357a2183228b",
+ "position_sha256": "e838f63eac48fe47677bf52e3bba29b605841f2a6e532cef6b633ccf4a1d766a",
+ "input_sha256": "9bd2ae57ea66959403b29017c85485203b32081880047c2e7f5ea465dc276dda",
+ "proof_bytes": 3022
+}

@@ -1,0 +1,26 @@
+{
+ "id": "험_25a947e60bc05e30",
+ "syllable": "험",
+ "used_route_words": [
+  "험할험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000824,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b326a00dc216d591585ef23167a56356f680ef6d07d5c48e123caa51a9591413",
+ "position_sha256": "25a947e60bc05e30c521a75157abda1b0a24128eac318f270afc48e676e68e13",
+ "input_sha256": "ed25ed9f3a708f5176a5abcf6360ed40de1e2d7a586e4116f3d652d70dc8a65b",
+ "proof_bytes": 1264
+}

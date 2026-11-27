@@ -1,0 +1,26 @@
+{
+ "id": "율_448ea4005e9d6c7d",
+ "syllable": "율",
+ "used_route_words": [
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.003288,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f8c1e89a927fad82cb2aadef030c85b84ca51dcb48e32f0b975e2778cb439591",
+ "position_sha256": "448ea4005e9d6c7d374d50225e6a9e22df073ff1cb31b590cb8ecc795844ad6e",
+ "input_sha256": "51f2112983757013b6b25d0406c28af90b7f65e2e706981437a37e4ba8fe9806",
+ "proof_bytes": 2083
+}

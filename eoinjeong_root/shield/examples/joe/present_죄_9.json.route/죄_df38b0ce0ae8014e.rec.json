@@ -1,0 +1,31 @@
+{
+ "id": "죄_df38b0ce0ae8014e",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "권폄",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000765,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3eb5b0daeeb9c9ef2e09facfc5647b0bbd94434ebd39c0c53d2af994c1e81eab",
+ "position_sha256": "df38b0ce0ae8014eda5ebc7ec2c21a7729bef63519637d4c0f8dfe92d9789841",
+ "input_sha256": "f3720d74d1828bf3d873966452a266ffee82ae229473a50a339e4d6f1060de56",
+ "proof_bytes": 585
+}

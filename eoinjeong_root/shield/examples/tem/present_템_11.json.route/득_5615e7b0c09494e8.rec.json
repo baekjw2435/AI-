@@ -1,0 +1,29 @@
+{
+ "id": "득_5615e7b0c09494e8",
+ "syllable": "득",
+ "used_route_words": [
+  "득득",
+  "득첩",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000934,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e531c8afa1c18ede16c5e6f515c3d681bd01eeb207d21a43f34206b66de2ee16",
+ "position_sha256": "5615e7b0c09494e8cb5a723bf6e33d2de34eec2ba973bba172d69504a8d5f45e",
+ "input_sha256": "ef56a2ae6dfa2b6a190de9b9e0d546ffa0ffca3330ebfd134d04be2367267d48",
+ "proof_bytes": 1137
+}

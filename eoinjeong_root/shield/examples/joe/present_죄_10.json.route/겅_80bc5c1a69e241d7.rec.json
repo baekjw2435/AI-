@@ -1,0 +1,29 @@
+{
+ "id": "겅_80bc5c1a69e241d7",
+ "syllable": "겅",
+ "used_route_words": [
+  "굴대두겁",
+  "샅굴",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000135,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "80bc5c1a69e241d70c9a2ebb0733b7febf03cf1c9f64b4a1a63072dfd21a8b34",
+ "input_sha256": "94c63ccea57b3faa5c21f3a477933cab532ff996686caaa19909d96d23c2c838",
+ "proof_bytes": 124
+}

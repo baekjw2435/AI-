@@ -1,0 +1,30 @@
+{
+ "id": "율_f73c3eb20359afa8",
+ "syllable": "율",
+ "used_route_words": [
+  "늠름",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000134,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f73c3eb20359afa88d72bd798f56a12a3f9390ce70a06d5d885c059479a6b43e",
+ "input_sha256": "814b69f832f17a2e5f0848c92cdb08dd645dabe349ef758e1545d0d91676bcb6",
+ "proof_bytes": 124
+}

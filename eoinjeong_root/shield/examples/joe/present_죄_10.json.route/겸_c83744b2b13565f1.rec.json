@@ -1,0 +1,29 @@
+{
+ "id": "겸_c83744b2b13565f1",
+ "syllable": "겸",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "율현마을",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001159,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e83a635f93ce7681bd2f659aaf91e22a1510667c9a0a9e6a6db940338626be5b",
+ "position_sha256": "c83744b2b13565f102be058528abc675a551b54fa9aabab61989a8d1f539df9a",
+ "input_sha256": "b969e36d24d53b70c860ac574f47f58de2d0290e6c74e4d3d1440c15cca59dd2",
+ "proof_bytes": 836
+}

@@ -1,0 +1,6 @@
+#!/bin/sh
+# run from the repository root
+python3 guopsaem_root/verifier_v4/verify_v4.py --dictionary guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/p.json --proof guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/proof.jsonl.gz
+guopsaem_root/verifier_v4/build/verify_v4 --dictionary guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/p.json --proof guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/proof.jsonl.gz
+python3 guopsaem_root/verifier_v4/verify_v4.py --dictionary guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/p.json --proof guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/proof.jsonl.gz --digest-only
+guopsaem_root/verifier_v4/build/verify_v4 --dictionary guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/p.json --proof guopsaem_root/verifier_v4/attacks/cases/gz_raw_deflate_magic/proof.jsonl.gz --digest-only

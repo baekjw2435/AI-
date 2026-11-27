@@ -1,0 +1,29 @@
+{
+ "id": "궐_5a00e95dc879a653",
+ "syllable": "궐",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.038956,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5ce38b765f74a8bb67a35463abac30dd31c5694f449e00942f8e022dd96344e2",
+ "position_sha256": "5a00e95dc879a6534887830b844bd63b5126039c3c6804d0eed7d4fdeb7d72f0",
+ "input_sha256": "4372fbabe04cb80acfecaaab405bb5e487f6d618e576b4910462ea4e78dd7e06",
+ "proof_bytes": 18605
+}

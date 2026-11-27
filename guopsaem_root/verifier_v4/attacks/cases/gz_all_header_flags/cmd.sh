@@ -1,0 +1,6 @@
+#!/bin/sh
+# run from the repository root
+python3 guopsaem_root/verifier_v4/verify_v4.py --dictionary guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/p.json --proof guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/proof.jsonl.gz
+guopsaem_root/verifier_v4/build/verify_v4 --dictionary guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/p.json --proof guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/proof.jsonl.gz
+python3 guopsaem_root/verifier_v4/verify_v4.py --dictionary guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/p.json --proof guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/proof.jsonl.gz --digest-only
+guopsaem_root/verifier_v4/build/verify_v4 --dictionary guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/d.txt --expected-word-count 0 --position guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/p.json --proof guopsaem_root/verifier_v4/attacks/cases/gz_all_header_flags/proof.jsonl.gz --digest-only

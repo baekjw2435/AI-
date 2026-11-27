@@ -1,0 +1,30 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay12-v1:\" + id), first 999",
+ "eligible": 2,
+ "eligible_by_source": {
+  "갑": 2
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "w01",
+   "id": "환/환갑",
+   "syllable": "환",
+   "word": "환갑",
+   "source": "갑",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "w02",
+   "id": "진/진갑",
+   "syllable": "진",
+   "word": "진갑",
+   "source": "갑",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}

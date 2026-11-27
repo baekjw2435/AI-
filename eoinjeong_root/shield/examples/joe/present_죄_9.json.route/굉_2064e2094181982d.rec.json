@@ -1,0 +1,31 @@
+{
+ "id": "굉_2064e2094181982d",
+ "syllable": "굉",
+ "used_route_words": [
+  "권굉",
+  "섭험",
+  "죄첩",
+  "척수공권",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000169,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "2064e2094181982d07a39750e4852ac4acb765046a4071aa05276648577f0c36",
+ "input_sha256": "bfed523b6a54c58362a711ddf8f025c1ce06a8431f8cec810b68bb9dbe1cec74",
+ "proof_bytes": 124
+}

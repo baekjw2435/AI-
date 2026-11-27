@@ -1,0 +1,33 @@
+{
+ "syllable": "온",
+ "vertex": "온",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 901.416,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 670839263,
+ "proof_nodes": 3229550,
+ "proof_seconds": 61.41882,
+ "solver_wall_seconds": 965.12,
+ "verify_seconds": 75.328,
+ "verify_wall_seconds": 75.36,
+ "proof_bytes": 23298369,
+ "proof_sha256": "ee2bbd37aa2bab1e80940cc4ac51b440cdd633313ea1374e87f625afc91ee98b",
+ "position_sha256": "6db98763b77cbf7a01e818155d2c76975f30fb684f9146ac640b7b6a0d190ccd",
+ "input_sha256": "cbf985bca3ea43ca531600e1593a312f79b98776e5ff52ccb169bab36c6758e4",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

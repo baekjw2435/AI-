@@ -1,0 +1,31 @@
+{
+ "id": "권_6567dd19207cf613",
+ "syllable": "권",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "척수공권",
+  "척척",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000137,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "6567dd19207cf61357c9a99b65332aef977040a198fa79e0d607f1a1e7f59563",
+ "input_sha256": "417e283b741c1064b00a31ac4ed33f30d129ec2a34fbfd32bd2f5b11a14732a5",
+ "proof_bytes": 124
+}

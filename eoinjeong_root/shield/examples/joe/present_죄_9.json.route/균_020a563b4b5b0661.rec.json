@@ -1,0 +1,31 @@
+{
+ "id": "균_020a563b4b5b0661",
+ "syllable": "균",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000162,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "020a563b4b5b0661efeb7744536294de2773c57fe8de74ecbcf85fd0084b1a8d",
+ "input_sha256": "8bb44f91d12b89d6b3e4724fbc0fc4fd8c2e403cadcc2e4c7eee4c4bd50a532d",
+ "proof_bytes": 124
+}

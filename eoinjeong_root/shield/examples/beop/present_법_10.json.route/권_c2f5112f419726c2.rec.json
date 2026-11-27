@@ -1,0 +1,29 @@
+{
+ "id": "권_c2f5112f419726c2",
+ "syllable": "권",
+ "used_route_words": [
+  "권균",
+  "균권",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.514199,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b6f7443be0b114d675e2abb8751e2d350eab41db9a5ac08d7cce3961feb7e506",
+ "position_sha256": "c2f5112f419726c25f0642379ed01e0a4fcf06407204ec69d930dd12e1d9f332",
+ "input_sha256": "c8d72be7f7af53d33762afc76f07eb3f08d417e50805082340be7f24ac94b5e5",
+ "proof_bytes": 184422
+}

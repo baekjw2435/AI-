@@ -1,0 +1,30 @@
+{
+ "id": "균_3fa1097ff658e993",
+ "syllable": "균",
+ "used_route_words": [
+  "늠균",
+  "늠름",
+  "딩가딩",
+  "딩동댕지난여름",
+  "딩딩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.011854,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c3fa7aa1d85ae9b03c267bf3e66dcc0e07dcd832a9a2d9fa900ebb92d5f8fd6b",
+ "position_sha256": "3fa1097ff658e993e9e9469f184fcb3a529b6d197a23d7563f2ed3840d1bb785",
+ "input_sha256": "189c55d5efae1746dc6205b141e175bf4b2509081179ff22234ad6f751f574d3",
+ "proof_bytes": 7618
+}

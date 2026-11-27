@@ -1,0 +1,30 @@
+{
+ "id": "굴_e0f291e0afef4037",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "권폄",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000122,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "e0f291e0afef4037bdf84206b49610771323639c1296ead21eb492379037d378",
+ "input_sha256": "8ad52af2569f14a638cf096f5c5ef801b5cef166c4d94420b8cc1cc67ef76d1f",
+ "proof_bytes": 124
+}

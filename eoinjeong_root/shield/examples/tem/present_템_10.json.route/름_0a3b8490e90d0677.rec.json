@@ -1,0 +1,28 @@
+{
+ "id": "름_0a3b8490e90d0677",
+ "syllable": "름",
+ "used_route_words": [
+  "득득",
+  "틀기름",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001481,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ef46701be96aae5659867fc3ad73ad52fe0e7370a8990000c6c84305f99eb61c",
+ "position_sha256": "0a3b8490e90d067732fc8e1bd83fb59dfd55028b39e923e8b34697a4d446f5be",
+ "input_sha256": "26686021b9435f45945ed443ee87d314c5d6d8cc040a01ac09ce007bc709fc1b",
+ "proof_bytes": 1771
+}

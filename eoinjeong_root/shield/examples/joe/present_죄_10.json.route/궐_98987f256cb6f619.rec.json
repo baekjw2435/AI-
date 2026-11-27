@@ -1,0 +1,29 @@
+{
+ "id": "궐_98987f256cb6f619",
+ "syllable": "궐",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00125,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "53ffd6d82ddebb7703a52611c4da6876b4562c28431477ce5be92186d03b239a",
+ "position_sha256": "98987f256cb6f619adb02d50d62bd94165f8d074c16dd0f01bed1848266b1d4a",
+ "input_sha256": "ac70c790b13d2eb5ef06347cd79c92ef9e81b076a5dfc4529a6f7531483a3a3a",
+ "proof_bytes": 576
+}

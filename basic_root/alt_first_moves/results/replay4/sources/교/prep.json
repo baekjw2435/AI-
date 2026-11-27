@@ -1,0 +1,33 @@
+{
+ "syllable": "교",
+ "vertex": "교",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 2.11,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 1578529,
+ "proof_nodes": 8080,
+ "proof_seconds": 0.125839,
+ "solver_wall_seconds": 2.97,
+ "verify_seconds": 0.176,
+ "verify_wall_seconds": 0.18,
+ "proof_bytes": 59547,
+ "proof_sha256": "51ea30e32d113434a6dc979c32f3f7afe40976fcef0327eb7b8dfc8db76b11ab",
+ "position_sha256": "a3f0c57ab7ade60c6d3960c5f065df15803a7cdf019adb1ece7d2b4da8e856d8",
+ "input_sha256": "3b759df6d4f2eb29c8deda526e62953a4627edf64be84d4b5b129988e0292bc7",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

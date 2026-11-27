@@ -1,0 +1,29 @@
+{
+ "id": "을_03b45b8badcbd28d",
+ "syllable": "을",
+ "used_route_words": [
+  "법원검찰청복사골문화센터반달마을",
+  "죠죠의기묘한모험",
+  "첩음법",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000198,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7d46f327d65d072d463e84898f542097d2509b84f4c9f6db78c3f5536af1797d",
+ "position_sha256": "03b45b8badcbd28d50b5a981f1ef1e475dcb01e8e11270c2da6bc413caab75e1",
+ "input_sha256": "32c4bccc486821119850400580900d6833608f21736f0a37e72823eaf0909761",
+ "proof_bytes": 207
+}

@@ -1,0 +1,15 @@
+{
+ "rule": "as recert1_cases.json; this one waited for its source 움",
+ "cases": [
+  {
+   "name": "c15",
+   "id": "편/편싸움",
+   "syllable": "편",
+   "word": "편싸움",
+   "source": "움",
+   "split": "final",
+   "verdict_before": "lose",
+   "proof_sha256_before": "5ffde00ea18d8b11c938fc980be4a63ad3cce274402202f751007fbd13e4e7ca"
+  }
+ ]
+}

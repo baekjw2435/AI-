@@ -1,0 +1,32 @@
+{
+ "id": "즈_b9380a105952b28f",
+ "syllable": "즈",
+ "used_route_words": [
+  "냐짱",
+  "늠름",
+  "늠준",
+  "딩동댕지난여름",
+  "준치저냐",
+  "짱갈래즈",
+  "짱짱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001096,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b723adb62590854ca09ab86b72b87cd816cdfe4afba686b7a01d661027ae4fd2",
+ "position_sha256": "b9380a105952b28ff38c7742018ce618e91a9fafe16df30916adfedebadbf0c1",
+ "input_sha256": "21b635c7f35480427e9013f17f8bdbe03bbc2403a7bd4ec06d0171cdfc98708e",
+ "proof_bytes": 671
+}

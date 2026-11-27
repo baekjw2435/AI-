@@ -1,0 +1,29 @@
+{
+ "id": "돼_d0aa3932df9e515a",
+ "syllable": "돼",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000161,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "d0aa3932df9e515a794e59f35a456c4a341918d89c4b10ee540e43151e3fe2a8",
+ "input_sha256": "a149d678554e42c045c62ef20c3f42b77b5e52ba585f1fd8d100ac7f370de84f",
+ "proof_bytes": 124
+}

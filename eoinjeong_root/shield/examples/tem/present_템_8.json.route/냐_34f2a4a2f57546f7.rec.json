@@ -1,0 +1,30 @@
+{
+ "id": "냐_34f2a4a2f57546f7",
+ "syllable": "냐",
+ "used_route_words": [
+  "냐냐",
+  "늠름",
+  "늠준",
+  "딩동댕지난여름",
+  "준치저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001793,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b63f15df142988d95d9829ddcbfc0b1f306e069d55438b40ca4da4ef7e8f4ce8",
+ "position_sha256": "34f2a4a2f57546f7cf2236d5013905ccc300dca6f8c2c507c36ffbfb7c66fd22",
+ "input_sha256": "f748f66a3c80c662142e246d67af1638fb8ba3354919e53648a0ad29c105206d",
+ "proof_bytes": 698
+}

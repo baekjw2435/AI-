@@ -1,0 +1,30 @@
+{
+ "id": "밑_cd10509fcb19b6cb",
+ "syllable": "밑",
+ "used_route_words": [
+  "득죄",
+  "뜸마을",
+  "뜸통뜸",
+  "을종근로소득",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000209,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "21524f99859560843e9bf75981a77a0470c85bfe85ba9eedbe76f90b2a8fd24a",
+ "position_sha256": "cd10509fcb19b6cbc4677d1c0610e5eae4913612e31966a5fe993974c7bffce6",
+ "input_sha256": "482a703ccd396379928f07f72fdeee1e0d6306add7e5ff591a3a4df5c98cd5a2",
+ "proof_bytes": 225
+}

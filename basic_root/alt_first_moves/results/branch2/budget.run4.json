@@ -1,0 +1,12 @@
+{
+ "budget": 1237.243,
+ "per_case": 600.0,
+ "search_spent": 476.62,
+ "allotments": [
+  {
+   "case": "b2_029",
+   "allotted": 476.62,
+   "at": "02:24:05"
+  }
+ ]
+}

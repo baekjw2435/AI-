@@ -1,0 +1,29 @@
+{
+ "id": "몬_1e4b51ef64056fd3",
+ "syllable": "몬",
+ "used_route_words": [
+  "갑상샘자극호르몬",
+  "권폄",
+  "쇄자갑",
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000199,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "1e4b51ef64056fd382ecd56e02e47ac709236af7f85f31f586471b4465b5e285",
+ "input_sha256": "632e5b14e57bdd64fdfa6b71891fd55d76ea35356e5a3dd32dfac9c4e1cfc60e",
+ "proof_bytes": 124
+}

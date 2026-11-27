@@ -1,0 +1,33 @@
+{
+ "syllable": "객",
+ "vertex": "객",
+ "result_for_receiver": "L",
+ "runs": 1,
+ "search_seconds_spent": 263.854,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 131670396,
+ "proof_nodes": 735621,
+ "proof_seconds": 19.776258,
+ "solver_wall_seconds": 285.26,
+ "verify_seconds": 28.765,
+ "verify_wall_seconds": 28.78,
+ "proof_bytes": 5315056,
+ "proof_sha256": "8ce52741d6613d38a15b4c3eb8d357cf65c0b827cd4e4a67a6d15b14c5190a40",
+ "position_sha256": "6d20b81e0650e70dd5f62e3ecc97dfc2621624807eced765889b2ccd0f3d5753",
+ "input_sha256": "1f340ded203e7190f869406702c2d01cf0b172530b5c73e876195d8133d9589a",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

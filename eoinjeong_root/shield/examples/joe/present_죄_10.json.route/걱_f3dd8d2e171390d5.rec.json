@@ -1,0 +1,26 @@
+{
+ "id": "걱_f3dd8d2e171390d5",
+ "syllable": "걱",
+ "used_route_words": [
+  "갱무꼼짝"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001128,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "f3dd8d2e171390d5dc7e847b90e0871541998377182d46ed785d680bea1365bb",
+ "input_sha256": "3f36ba5d3a29d846cf93dd2deb82cbf88f1be46da35facc81277863af34da1dc",
+ "proof_bytes": 1271
+}

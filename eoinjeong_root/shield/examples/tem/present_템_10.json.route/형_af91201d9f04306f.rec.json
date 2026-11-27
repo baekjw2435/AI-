@@ -1,0 +1,30 @@
+{
+ "id": "형_af91201d9f04306f",
+ "syllable": "형",
+ "used_route_words": [
+  "득득",
+  "득죄",
+  "뜸마을",
+  "을종근로소득",
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002868,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f78e30bf7ed5b5012582f599de6be77a431e50d1cc5dee3fc9004cdf667bc4b6",
+ "position_sha256": "af91201d9f04306fd5c7da66d4899d6b28802616ecc63ced5bc1f52280076c18",
+ "input_sha256": "92d190180b90175c4657ebde0ee5b2ec51244b1e4ebfc3d35990918a7205b6d6",
+ "proof_bytes": 1875
+}

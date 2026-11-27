@@ -1,0 +1,30 @@
+{
+ "id": "짱_7ebff731db1fd470",
+ "syllable": "짱",
+ "used_route_words": [
+  "냐냐",
+  "냐냐냐냐냐냐냐",
+  "냐짱",
+  "준치저냐",
+  "짱짱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001027,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "bb0642e293823814ca0d8bf5ded601c7a2b591463d559b9bbe8c6d4dd68b871c",
+ "position_sha256": "7ebff731db1fd470f00cbd484ad0e2e4fd37a107be2fb608e3b4cb2f98503b3d",
+ "input_sha256": "689e09bc8cb957d16689ad7c7733fd90db2cd0ac5a6bfbb6345a517be20c9599",
+ "proof_bytes": 786
+}

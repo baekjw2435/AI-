@@ -1,0 +1,27 @@
+{
+ "id": "멱_d909b24cb335f9b1",
+ "syllable": "멱",
+ "used_route_words": [
+  "갱신청구권",
+  "권폄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.030811,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1d31a2fa94c947f660ebb1de1b7409ddcab786785e0a5e3bf70402fc8508a589",
+ "position_sha256": "d909b24cb335f9b100b1d2fd1e94dec90364d4f61e7a533523f7c3ab74f60f2f",
+ "input_sha256": "20f896b1cacaf42e2f0037085501262df500b4486c19ed09aff81bb0b45951fe",
+ "proof_bytes": 19061
+}

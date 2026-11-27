@@ -1,0 +1,30 @@
+{
+ "id": "곽_10066a04f8404001",
+ "syllable": "곽",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000141,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "10066a04f840400180911a2e9b3d6de34c70f15206146e33f54c36b49ca4eff8",
+ "input_sha256": "306064c4d545e54c3268e4a9115bc354de20c0b2dda3e7af3ebb8b31f76f207d",
+ "proof_bytes": 124
+}

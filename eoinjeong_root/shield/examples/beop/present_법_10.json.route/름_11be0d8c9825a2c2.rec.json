@@ -1,0 +1,28 @@
+{
+ "id": "름_11be0d8c9825a2c2",
+ "syllable": "름",
+ "used_route_words": [
+  "겔렌데슈프링겐",
+  "늠름",
+  "샅바씨름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.025531,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "35d7f027ba23443b24a8f08ac0baf422d345f3477b20f0075aa66fc982b75808",
+ "position_sha256": "11be0d8c9825a2c20f5a53b6f3a5ea887f9bc6a880d58fe26dc1962d1c1d15a4",
+ "input_sha256": "ae292f998cce44e7765edc7ed44c08d2852a73dfb8720c06ef5f5ea8243662bf",
+ "proof_bytes": 8347
+}

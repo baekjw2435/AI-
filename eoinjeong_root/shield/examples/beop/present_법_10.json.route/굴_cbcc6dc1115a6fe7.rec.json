@@ -1,0 +1,28 @@
+{
+ "id": "굴_cbcc6dc1115a6fe7",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "몬드니켈",
+  "켈리몬"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00014,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "cbcc6dc1115a6fe7951cf9465dc9bef8f7e8e593060e2de927130b3a2ffd1fcc",
+ "input_sha256": "4ad03740978eec666b9edeb4f034625c9ed42697ec4533438f900bb8a411ab49",
+ "proof_bytes": 124
+}

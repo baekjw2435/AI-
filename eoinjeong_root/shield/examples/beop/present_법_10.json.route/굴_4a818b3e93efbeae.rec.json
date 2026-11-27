@@ -1,0 +1,28 @@
+{
+ "id": "굴_4a818b3e93efbeae",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "렛츠인조이더무비카가미네렌",
+  "쵸콜렛"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000134,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "4a818b3e93efbeae9ec4cf116fbac3980bcb70332888f423f265b45ca9a57b2a",
+ "input_sha256": "2c465e5799c4848f07e16cbd6595cdc282eba994b33e6de21cf42e7033fa29b0",
+ "proof_bytes": 124
+}

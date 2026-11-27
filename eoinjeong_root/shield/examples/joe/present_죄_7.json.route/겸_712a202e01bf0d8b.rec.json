@@ -1,0 +1,26 @@
+{
+ "id": "겸_712a202e01bf0d8b",
+ "syllable": "겸",
+ "used_route_words": [
+  "죄상첨죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.059411,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4b88bbb26f66ecd9acef88a92af8dd44c57ac4d6c7ce0d5ba577fdd9320fb919",
+ "position_sha256": "712a202e01bf0d8bdacf46f82e1c2b34ad2133388a9bc348c235d4ffe2ac323c",
+ "input_sha256": "b90084586470ce88b3cb8b72249f46b682f9fe99de6989ec2ea5602fdf401765",
+ "proof_bytes": 29576
+}

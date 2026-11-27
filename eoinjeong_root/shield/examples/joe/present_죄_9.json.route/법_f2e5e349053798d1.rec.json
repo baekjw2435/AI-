@@ -1,0 +1,31 @@
+{
+ "id": "법_f2e5e349053798d1",
+ "syllable": "법",
+ "used_route_words": [
+  "법과헌법",
+  "섭험",
+  "죄첩",
+  "척주지압요법",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000134,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f2e5e349053798d1b47d2c412ac86389c449afac5e69eadc1e39efb478896aee",
+ "input_sha256": "e7f6bb00d15b8854a07d1e5f75ca1005f003e21576cc057ff0716596e2861f7c",
+ "proof_bytes": 124
+}

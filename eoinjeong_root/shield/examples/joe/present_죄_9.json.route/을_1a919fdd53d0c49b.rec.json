@@ -1,0 +1,28 @@
+{
+ "id": "을_1a919fdd53d0c49b",
+ "syllable": "을",
+ "used_route_words": [
+  "밑틀",
+  "법원검찰청복사골문화센터반달마을",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.004423,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "64229cc2b9cf5f2463acd49ba9cbc25fd9126136cbb42a237ebd95bbbea16317",
+ "position_sha256": "1a919fdd53d0c49bcdd8d0d11be54b28edb4a19a6cd6554a49b4693a3b071b38",
+ "input_sha256": "98b3554bb5da633ea95497b8873128a702a569653d0ea4d15ea2991fb844202e",
+ "proof_bytes": 2622
+}

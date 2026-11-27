@@ -1,0 +1,29 @@
+{
+ "id": "을_53f6f315fbae46a0",
+ "syllable": "을",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을",
+  "톤세법",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002839,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "99a3059e098c00eb10d4f54ae798950a486c4e5361f27602bc777fc938d7a1ab",
+ "position_sha256": "53f6f315fbae46a0f4fdf66b3d59c380073dd953c3ed9bec586a9b45772e1c49",
+ "input_sha256": "4e55f9e4897d50e512922b4b538d2c4a27202f35bc4020d7303ae0c686a1724a",
+ "proof_bytes": 2613
+}

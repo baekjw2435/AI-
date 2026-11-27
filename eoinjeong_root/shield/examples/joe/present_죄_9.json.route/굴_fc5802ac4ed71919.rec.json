@@ -1,0 +1,27 @@
+{
+ "id": "굴_fc5802ac4ed71919",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "죠죠의기묘한모험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000139,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "fc5802ac4ed71919e6a772d3e99823d22e14b5309bdfe6b2563196ee4299b477",
+ "input_sha256": "4110a959be7ae24ad6c4746325af7c8a45e5d7bfdfeec82240e1881fbf71aee6",
+ "proof_bytes": 124
+}

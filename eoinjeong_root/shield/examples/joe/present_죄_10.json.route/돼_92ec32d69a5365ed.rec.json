@@ -1,0 +1,26 @@
+{
+ "id": "돼_92ec32d69a5365ed",
+ "syllable": "돼",
+ "used_route_words": [
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.017036,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d45b150858e00a85fb774dca8fe661808e9d6b12761f96b07417d2ceadc12112",
+ "position_sha256": "92ec32d69a5365ed61480804df13a24ae9e3c807e4cef1c90eeb7ef69a2cb209",
+ "input_sha256": "5097ecb32214967ab19e00c05a8e47c1fced15409e28eb0072a680301c02f903",
+ "proof_bytes": 12089
+}

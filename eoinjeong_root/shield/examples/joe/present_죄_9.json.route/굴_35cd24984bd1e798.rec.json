@@ -1,0 +1,31 @@
+{
+ "id": "굴_35cd24984bd1e798",
+ "syllable": "굴",
+ "used_route_words": [
+  "겸양법",
+  "법굴",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000165,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "35cd24984bd1e798b024eb5e0fe77f846a17492383865a0bd02c6952ddb3212e",
+ "input_sha256": "7078a9fa87f25205b1396a9bd44843a0935306656baa9ee35093d1b7181806b9",
+ "proof_bytes": 124
+}

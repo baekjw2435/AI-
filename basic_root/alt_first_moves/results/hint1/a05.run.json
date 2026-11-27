@@ -1,0 +1,33 @@
+{
+ "name": "a05",
+ "of": "p05",
+ "stage": "a",
+ "syllable": "순",
+ "history": [
+  "순발력",
+  "역습"
+ ],
+ "seconds_limit": 120.0,
+ "tt_mb": 1024,
+ "proven_dir": "/home/user/AI-/.work/alt817/hint1/proven",
+ "search_seconds": 120.00056,
+ "mid_calls": 67781632,
+ "solver_result": "unknown",
+ "reason": "time_limit",
+ "proof_nodes": 0,
+ "proof_seconds": 0.0,
+ "proof_error": "",
+ "proven": {
+  "proven_loaded": 0,
+  "proven_inserted": 0,
+  "proven_tt_used_after_load": 0,
+  "proven_load_seconds": 0.0,
+  "proven_saved": 13544950,
+  "proven_skipped_small": 0,
+  "proven_skipped_loaded": 0,
+  "proven_save_seconds": 0.52165,
+  "proven_save_error": ""
+ },
+ "solve_wall_seconds": 199.3,
+ "decided": false
+}

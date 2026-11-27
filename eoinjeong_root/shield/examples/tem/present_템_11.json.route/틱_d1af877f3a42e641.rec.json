@@ -1,0 +1,29 @@
+{
+ "id": "틱_d1af877f3a42e641",
+ "syllable": "틱",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.062847,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "48ca2f174e8233cfa5c0da9c3e6f2574f7cb83e1d12e8826ab591620b662aa29",
+ "position_sha256": "d1af877f3a42e6412ce138e18fac7076d69c331354b16271b882d9c3de120e8e",
+ "input_sha256": "060df79443b480ec1e946440827a25408a72d5e11f21e438aa838d454823bd95",
+ "proof_bytes": 163023
+}

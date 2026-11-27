@@ -1,0 +1,33 @@
+{
+ "name": "a23",
+ "of": "p23",
+ "stage": "a",
+ "syllable": "준",
+ "history": [
+  "준결승",
+  "승객"
+ ],
+ "seconds_limit": 120.0,
+ "tt_mb": 1024,
+ "proven_dir": "/home/user/AI-/.work/alt817/hint1/proven",
+ "search_seconds": 120.000509,
+ "mid_calls": 73905152,
+ "solver_result": "unknown",
+ "reason": "time_limit",
+ "proof_nodes": 0,
+ "proof_seconds": 0.0,
+ "proof_error": "",
+ "proven": {
+  "proven_loaded": 9146030,
+  "proven_inserted": 8388608,
+  "proven_tt_used_after_load": 8388608,
+  "proven_load_seconds": 1.485292,
+  "proven_saved": 9422968,
+  "proven_skipped_small": 0,
+  "proven_skipped_loaded": 8343134,
+  "proven_save_seconds": 0.378624,
+  "proven_save_error": ""
+ },
+ "solve_wall_seconds": 158.5,
+ "decided": false
+}

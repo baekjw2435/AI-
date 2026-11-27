@@ -1,0 +1,26 @@
+{
+ "id": "펠_ee121594c1669e54",
+ "syllable": "펠",
+ "used_route_words": [
+  "잎혀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.011358,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f3dbdf216818aee48fa5411a1642a1a0a8363301a200f73cf99c12c78c027f9",
+ "position_sha256": "ee121594c1669e54082a315263192c447b0ae3e9077223fc6723e43eacf61671",
+ "input_sha256": "1ee88c4bc40dfe593af726fdebdb8b794aa49a9f6b92c1c9e26e30f5f08e5a72",
+ "proof_bytes": 6437
+}

@@ -1,0 +1,26 @@
+{
+ "id": "펠_e6dc12fa1094f8a1",
+ "syllable": "펠",
+ "used_route_words": [
+  "쇄쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.444385,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e48be74e457898963d6a08e673eb405f8502e4ef115ce7d0797a66bfe103737e",
+ "position_sha256": "e6dc12fa1094f8a170f5c0dcfea53aeac4df8c2ce4a0302df6263c572e4edc4c",
+ "input_sha256": "b3fad24400cd35794abfff6ff5ac6db738ea94376e2bee07a1337017d92476da",
+ "proof_bytes": 89452
+}

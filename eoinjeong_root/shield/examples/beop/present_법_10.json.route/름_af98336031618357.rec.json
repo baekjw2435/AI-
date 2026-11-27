@@ -1,0 +1,32 @@
+{
+ "id": "름_af98336031618357",
+ "syllable": "름",
+ "used_route_words": [
+  "겐키드럭스토어즈",
+  "겔렌데슈프링겐",
+  "늠름",
+  "샅바씨름",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003554,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9e5d3edbd647cca19a181952e327459b0e630678f96bef61eb0bba4b12cd40e0",
+ "position_sha256": "af9833603161835768276a8a0d45122390a9728d756e46fff66050cba6c27aa7",
+ "input_sha256": "2fa3fc7d5132b15bfa82370f1a67bfb129c244559aa7ed9a9678d83447f58bb3",
+ "proof_bytes": 3761
+}

@@ -1,0 +1,29 @@
+{
+ "id": "샅_61161d4df2a02e76",
+ "syllable": "샅",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "잇샅",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00875,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "dcd1806da69d5a6c44e8b42baab75175c9944b3d1663a43ebb45e37dfe6605e3",
+ "position_sha256": "61161d4df2a02e76fbb30f815c7fcc4153d7fd83eb573d95922a39480647c6a9",
+ "input_sha256": "57e73f2379651fe8a4cdd060d8be4c736fdbe56076da7724739bb6f1c91937ac",
+ "proof_bytes": 4647
+}

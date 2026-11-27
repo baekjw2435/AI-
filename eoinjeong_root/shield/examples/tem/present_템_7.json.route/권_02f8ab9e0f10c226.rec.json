@@ -1,0 +1,30 @@
+{
+ "id": "권_02f8ab9e0f10c226",
+ "syllable": "권",
+ "used_route_words": [
+  "법원읍",
+  "읍권",
+  "톤세법",
+  "톤톤",
+  "펠레톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.009633,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1e9fa5875db75cc782d66bbb82ea4f9a7c0247022763df36e3d2a40e0caadcbb",
+ "position_sha256": "02f8ab9e0f10c226719fde9fe944ae3cec363d2b9a386864d176c66e84c106bb",
+ "input_sha256": "11118a3dbcb6b6fadcee5e4e78739ef947d00400be8fd6652ef60f4986f29d45",
+ "proof_bytes": 4863
+}

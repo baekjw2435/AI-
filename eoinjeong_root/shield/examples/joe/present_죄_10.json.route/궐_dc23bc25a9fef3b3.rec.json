@@ -1,0 +1,27 @@
+{
+ "id": "궐_dc23bc25a9fef3b3",
+ "syllable": "궐",
+ "used_route_words": [
+  "잇샅",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001192,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9eb8b5cb8cdcecd675347fca3fc5fe8083e7a464227c9a10ba724bce71cff8db",
+ "position_sha256": "dc23bc25a9fef3b3f93cde9877b679032eb2e4f283c726e8770a971babe86a17",
+ "input_sha256": "c876d1dbbf1f8a810f4c1d37cd77858df31d0acfd83ffca0f4c76c8e85393706",
+ "proof_bytes": 1537
+}

@@ -1,0 +1,28 @@
+{
+ "id": "을_282e88e0408fc7bd",
+ "syllable": "을",
+ "used_route_words": [
+  "권폄",
+  "법원검찰청복사골문화센터반달마을",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.014372,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "030c0dfc78751062846fdfbd0faced5ebd4154f9fa10c11c8808d5bb06ee4492",
+ "position_sha256": "282e88e0408fc7bde0b55927e77e8a8b84de9555569b0522e85c33bf73812118",
+ "input_sha256": "7d48969411184c29f58ecd50e0af164753cc350b8226f44a032c21baac94a8f9",
+ "proof_bytes": 5290
+}

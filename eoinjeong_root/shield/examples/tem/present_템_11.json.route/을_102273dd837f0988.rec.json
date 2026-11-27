@@ -1,0 +1,31 @@
+{
+ "id": "을_102273dd837f0988",
+ "syllable": "을",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿",
+  "획죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000612,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "eff2a39631d99ab80a293daa03517d1017be510ab9996cd2136dda6346886aab",
+ "position_sha256": "102273dd837f098876d14cb177802ca90fccd9bafac52db183783b6f10854861",
+ "input_sha256": "4730cb84754814e873993585b192b28e56e233ca0f9357a8a41d579955028310",
+ "proof_bytes": 884
+}

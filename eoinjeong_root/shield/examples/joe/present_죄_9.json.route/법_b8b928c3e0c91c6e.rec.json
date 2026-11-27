@@ -1,0 +1,31 @@
+{
+ "id": "법_b8b928c3e0c91c6e",
+ "syllable": "법",
+ "used_route_words": [
+  "멸법",
+  "섭험",
+  "죄멸",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000163,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "b8b928c3e0c91c6e65cd0ea17b543dc8d9b6a8c5ec4f91d68f4d5fe129142c38",
+ "input_sha256": "18d567509486a43c8b0deb0e82f903304e71cc1764981a01d967dae9bfa38bc7",
+ "proof_bytes": 124
+}

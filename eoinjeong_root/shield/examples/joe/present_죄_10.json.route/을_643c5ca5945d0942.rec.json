@@ -1,0 +1,27 @@
+{
+ "id": "을_643c5ca5945d0942",
+ "syllable": "을",
+ "used_route_words": [
+  "뜸마을",
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009281,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "662b154ad5b7e0c8365960d19b96b2886d514e20aaac18bd17378ba84e08c50e",
+ "position_sha256": "643c5ca5945d0942ae05a59a0f0a8a360ce46f522829fe6a1117cecaed7ca354",
+ "input_sha256": "ea534fb7130af16da4514055884bf1ecc059df7c9c8dd1dca762fcb28cd681e1",
+ "proof_bytes": 5259
+}

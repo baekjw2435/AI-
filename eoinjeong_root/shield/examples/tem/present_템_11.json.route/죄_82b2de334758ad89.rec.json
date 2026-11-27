@@ -1,0 +1,29 @@
+{
+ "id": "죄_82b2de334758ad89",
+ "syllable": "죄",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "권리행사방해죄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010025,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2889779e27be46cf3a973ac5d3ed73f29fa2052132ab8ab320cd62cb1c395948",
+ "position_sha256": "82b2de334758ad8995d8f42e6698db1cdd2d1879aa989da262b8953ac9224fbb",
+ "input_sha256": "30961340c7bf569b4e7d504af9202264a97b88f0987b00b2be3b04ac4825d681",
+ "proof_bytes": 7331
+}

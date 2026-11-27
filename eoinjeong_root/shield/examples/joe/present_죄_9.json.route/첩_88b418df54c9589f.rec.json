@@ -1,0 +1,30 @@
+{
+ "id": "첩_88b418df54c9589f",
+ "syllable": "첩",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000144,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "88b418df54c9589f5667502c260df1fc5f8d344ffe56a120946aeebc306397c3",
+ "input_sha256": "2dfad3b9ecdbfe0e307344267b85aeaa65195aad179b00bc275929a35b1c2440",
+ "proof_bytes": 124
+}

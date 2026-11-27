@@ -1,0 +1,28 @@
+{
+ "id": "즈_f3874caf683e5108",
+ "syllable": "즈",
+ "used_route_words": [
+  "겐키드럭스토어즈",
+  "겔렌데슈프링겐",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001281,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8961e0b6272d895c2ef556af960c0683c69b50c818401b58bd961d416fbd6647",
+ "position_sha256": "f3874caf683e51086ea1ef64e9c0c842db42ee3492d01a4f671a4098687eeb2e",
+ "input_sha256": "f44d1acdc703998c7bec55f41de94b50ff3366433fd9a41bb941166ef4998071",
+ "proof_bytes": 778
+}

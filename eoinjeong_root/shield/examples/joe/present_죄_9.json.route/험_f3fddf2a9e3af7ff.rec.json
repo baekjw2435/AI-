@@ -1,0 +1,30 @@
+{
+ "id": "험_f3fddf2a9e3af7ff",
+ "syllable": "험",
+ "used_route_words": [
+  "죄상첨죄",
+  "죄첩",
+  "첩첩",
+  "험할험",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000179,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5fb5a4bd5dd678ec5dde52a9bd4b4ef50476f562a1d3cbfbc61341f13441eadc",
+ "position_sha256": "f3fddf2a9e3af7ff432957b39166056b276f92ba4eee918a7e07aeb366489945",
+ "input_sha256": "e8f42a29c44c93b8691e79f4fb7fd386d6ddfa0db99c8d9cc902a00150292e18",
+ "proof_bytes": 141
+}

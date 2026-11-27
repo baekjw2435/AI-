@@ -1,0 +1,33 @@
+{
+ "syllable": "극",
+ "vertex": "극",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 69.684,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 44825293,
+ "proof_nodes": 390390,
+ "proof_seconds": 7.272958,
+ "solver_wall_seconds": 78.06,
+ "verify_seconds": 9.83,
+ "verify_wall_seconds": 9.84,
+ "proof_bytes": 2819902,
+ "proof_sha256": "4204b7d19acf92fa193ae16d1c4955d37e4c7f88adacffe5ebee8ff2ef8a6c6a",
+ "position_sha256": "59a516c720503d6c77f0528a505a622107d827f02f8cd81079a71ec4e05311ec",
+ "input_sha256": "8575dc5641026cc6d40f2c40984407e9ce6913cb635c324933cc5d1f375c2737",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

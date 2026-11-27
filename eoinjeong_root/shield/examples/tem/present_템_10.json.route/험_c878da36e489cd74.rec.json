@@ -1,0 +1,27 @@
+{
+ "id": "험_c878da36e489cd74",
+ "syllable": "험",
+ "used_route_words": [
+  "갑자기쪽지시험",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000752,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b326a00dc216d591585ef23167a56356f680ef6d07d5c48e123caa51a9591413",
+ "position_sha256": "c878da36e489cd741fcb5aa9ce77342923ab80beeddcd4aa3cbc112a39778a08",
+ "input_sha256": "c97e8aa42205102936023c67db89990aafdc1d323fbcb08678d093d7007e27a0",
+ "proof_bytes": 1264
+}

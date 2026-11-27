@@ -1,0 +1,27 @@
+{
+ "id": "험_938b5a646c9d54c5",
+ "syllable": "험",
+ "used_route_words": [
+  "갱도시험",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000496,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "bfdf4bed90a3c022ec2196822d87f971bb0e352fbb28b8b6615f72de0aa06236",
+ "position_sha256": "938b5a646c9d54c521354fc0eb20d3a3504d8aead7c980ca9f49684ac57c8085",
+ "input_sha256": "8d643dd2c54dc138dd0b5429e931ab4c4dc3ee94b429e0b998834b56e8528d33",
+ "proof_bytes": 715
+}

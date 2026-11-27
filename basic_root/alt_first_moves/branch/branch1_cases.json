@@ -1,0 +1,133 @@
+{
+ "batch": "branch1",
+ "created": "2026-11-15",
+ "question": "식생활로 활 제시 → 받은 쪽 활극 뒤, 제시자의 미확인 수(극존칭 말고 모든 묶음)의 승패",
+ "base_position": {
+  "initial_syllable": "식",
+  "history": [
+   "식생활",
+   "활극"
+  ]
+ },
+ "already_known": {
+  "극존칭": "증명의 수(이기는 수), 증명서 replay17 h03"
+ },
+ "rule": "each case: the position after its word, with 식생활·활극·그 단어를 모두 쓴 이력; solver_v5_replay --replay <source of the handed-over vertex>, --seconds 600 (whole search), certificate by the unchanged emitter, accepted only by verify_v4 with every acceptance condition",
+ "cases": [
+  {
+   "name": "b01",
+   "word": "극락",
+   "group_words": [
+    "극락"
+   ],
+   "group": 77,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극락"
+    ]
+   },
+   "hands_over": "낙",
+   "source": "낙",
+   "method": "replay"
+  },
+  {
+   "name": "b02",
+   "word": "극약",
+   "group_words": [
+    "극약"
+   ],
+   "group": 78,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극약"
+    ]
+   },
+   "hands_over": "약",
+   "source": "약",
+   "method": "replay"
+  },
+  {
+   "name": "b03",
+   "word": "극언",
+   "group_words": [
+    "극언"
+   ],
+   "group": 79,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극언"
+    ]
+   },
+   "hands_over": "언",
+   "source": "언",
+   "method": "replay"
+  },
+  {
+   "name": "b04",
+   "word": "극력",
+   "group_words": [
+    "극력"
+   ],
+   "group": 80,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극력"
+    ]
+   },
+   "hands_over": "역",
+   "source": "역",
+   "method": "replay"
+  },
+  {
+   "name": "b05",
+   "word": "극적",
+   "group_words": [
+    "극적",
+    "극단적"
+   ],
+   "group": 81,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극적"
+    ]
+   },
+   "hands_over": "적",
+   "source": "적",
+   "method": "replay"
+  },
+  {
+   "name": "b06",
+   "word": "극찬",
+   "group_words": [
+    "극찬"
+   ],
+   "group": 82,
+   "position": {
+    "initial_syllable": "식",
+    "history": [
+     "식생활",
+     "활극",
+     "극찬"
+    ]
+   },
+   "hands_over": "찬",
+   "source": "찬",
+   "method": "replay"
+  }
+ ]
+}

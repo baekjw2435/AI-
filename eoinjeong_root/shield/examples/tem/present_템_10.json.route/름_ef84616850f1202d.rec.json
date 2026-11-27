@@ -1,0 +1,29 @@
+{
+ "id": "름_ef84616850f1202d",
+ "syllable": "름",
+ "used_route_words": [
+  "딩가딩",
+  "딩딩",
+  "밑틀",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.006342,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5fad66280f94ba2a06d506a5290d731aa03d4b372c8b374efdc3eb27e54a9f95",
+ "position_sha256": "ef84616850f1202d8e787e77f98aa624a178b0d6d5a0a2566b017a2b02dc0fad",
+ "input_sha256": "0ffb9f215e8f0a1ca8a05427bf8d8de7a1f6231ba02c44faf1c84c6ea36df767",
+ "proof_bytes": 2411
+}

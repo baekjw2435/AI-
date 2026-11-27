@@ -1,0 +1,31 @@
+{
+ "id": "을_150ac8054c561560",
+ "syllable": "을",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "권상법",
+  "법원검찰청복사골문화센터반달마을",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.008888,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d34f96ea77791fb8a2cb25f0f15def6c21d5b9e6dd3d55c54b9f8a2caad0705c",
+ "position_sha256": "150ac8054c561560d6f205672cc2f693f9b98794be742078101223bb7d8cc2f6",
+ "input_sha256": "c320d46fb0b5335d4bdc2df182fbb391038dcfc8de2b36980c866a6fd88a6d28",
+ "proof_bytes": 8406
+}

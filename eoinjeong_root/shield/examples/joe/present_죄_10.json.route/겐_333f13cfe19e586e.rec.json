@@ -1,0 +1,30 @@
+{
+ "id": "겐_333f13cfe19e586e",
+ "syllable": "겐",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000185,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f3e75ae49a176fe630be82ec5eb4979dff0706eae5b8d99b8cffebae161e8658",
+ "position_sha256": "333f13cfe19e586ed5011f56b7f5056835a87e125b2c1ffd95a0f77d172c9d1b",
+ "input_sha256": "7932cdb2adb18a3b45525a3234f2cd7aa584cee9adf95085874a0d13c954bddd",
+ "proof_bytes": 247
+}

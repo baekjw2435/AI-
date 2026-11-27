@@ -1,0 +1,27 @@
+{
+ "id": "뽕_155c6ff7971572b9",
+ "syllable": "뽕",
+ "used_route_words": [
+  "샅흰검은말율",
+  "잎뽕"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.015324,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4fb5630377f2cefea61e7d6f3e2b31f55b30d8cdb9559195d70aa5fb6bd8c212",
+ "position_sha256": "155c6ff7971572b986af51f9bf4071c9491f7db7cf25568c046048533cb4687e",
+ "input_sha256": "d120adbb873405da8b14656c01c6752ded0b391d6ba03d6223a93cfe830a5288",
+ "proof_bytes": 4183
+}

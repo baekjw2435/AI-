@@ -1,0 +1,1 @@
+{"dicts": 3000, "positions": 8927, "accepted": 8927, "mismatch": 0, "not_decided": 0, "shared_dicts": 1317, "py_checked": 1427, "py_disagree": 0, "fuzz": 23397, "fuzz_accepted": 3, "fuzz_wrong_accepted": 0, "multi_node_proofs": 1360}

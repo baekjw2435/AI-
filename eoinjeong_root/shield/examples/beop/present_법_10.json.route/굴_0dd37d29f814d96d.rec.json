@@ -1,0 +1,28 @@
+{
+ "id": "굴_0dd37d29f814d96d",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "벅스킨",
+  "슴벅"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000133,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "0dd37d29f814d96dbb2638d84f34033f74941fe9f8e9257287ec81070303cac1",
+ "input_sha256": "253a01ef495dff9669ae5310ebba96ae576212e448b42eca4076e24177622b1a",
+ "proof_bytes": 124
+}

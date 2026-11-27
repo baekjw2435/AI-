@@ -1,0 +1,28 @@
+{
+ "id": "룻_c4896e90f1a037f8",
+ "syllable": "룻",
+ "used_route_words": [
+  "권폄",
+  "읍권",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000229,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "c4896e90f1a037f8bd6a98031262a40c1ff405d46f2c6dbba4c54fca9809377b",
+ "input_sha256": "2e9d2aca405b284fa43bdc0ee6890dd7fa4ee108c38bb2b3dbe9d973ca2becf8",
+ "proof_bytes": 124
+}

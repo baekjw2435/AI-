@@ -1,0 +1,29 @@
+{
+ "id": "을_bfd34dbe679df0d4",
+ "syllable": "을",
+ "used_route_words": [
+  "권착",
+  "쇄쇄",
+  "쇄심권",
+  "착한쿠키에게선물을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007092,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f88927c0b39b0968f44799d0355d995d4287d143ee0bcfa80216f1a3cd3759a1",
+ "position_sha256": "bfd34dbe679df0d463557fcbb35ddff0c9a94367e85b4702531d101635956a37",
+ "input_sha256": "4bdeef74f83ce844e8fd3d916de962483d9c83db44836c807f65c6fe92afa49f",
+ "proof_bytes": 6782
+}

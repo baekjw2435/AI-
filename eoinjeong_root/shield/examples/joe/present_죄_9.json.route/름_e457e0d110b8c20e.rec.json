@@ -1,0 +1,28 @@
+{
+ "id": "름_e457e0d110b8c20e",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "딩동댕지난여름",
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.012619,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cbd4bbe71ae4ad9d506cf54f918063a9803fffab680be7fea48fb0a1db17afb5",
+ "position_sha256": "e457e0d110b8c20e4a097f5b520e1bfd99f46a34e08694bb2881bddaf61652fd",
+ "input_sha256": "f6eca207f4bcfee55d146a53dc2eca460159c23c3938d6070936dcbacffa5774",
+ "proof_bytes": 9757
+}

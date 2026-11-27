@@ -1,0 +1,27 @@
+{
+ "id": "딩_db3bb62b137a96a8",
+ "syllable": "딩",
+ "used_route_words": [
+  "굴대두겁",
+  "댁대굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.014676,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8d3e8510d28dd03dda511fa3dcaae15520c8f577dabb18290eac2df76e245fbf",
+ "position_sha256": "db3bb62b137a96a8d373c49ebcbba5de84a714fb1fe6a635be882c7b1be31ed5",
+ "input_sha256": "0343a34316537365c54a3912afe1365b416f1d19e85c5622d892111913fa938d",
+ "proof_bytes": 9434
+}

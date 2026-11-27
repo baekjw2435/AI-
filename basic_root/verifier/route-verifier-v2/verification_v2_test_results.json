@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-28",
+  "suite": "test_verifier_v2.py",
+  "tests_run": 11,
+  "tests_passed": 11,
+  "tests_skipped": 0,
+  "exhaustive_raw_word_positions": 1488,
+  "nonempty_three_vertex_graphs": 511,
+  "site_normalization_comparisons": 100,
+  "site_normalization_matches": true,
+  "independent_static_algorithm": "fixed-point scans; no site lookup or reverse-edge queue",
+  "legacy_lookup_trusted": false,
+  "current_review": "No unsound acceptance path identified. Full root/history and child count equality; independent static fixed-point scans.",
+  "v2_rejection_tests": [
+    "forged_static_verdict",
+    "false_static_claim",
+    "omitted_unknown_loss_choice",
+    "literal_word_reuse",
+    "illegal_literal_move",
+    "different_history_root",
+    "incorrect_child_state",
+    "unknown_verdict"
+  ],
+  "wrapper_review": "Only verifier exit0 plus matching result_for_player_to_move accepted; --solver/--verifier/--oracle supported.",
+  "source_hashes": {
+    "verify.py": "b08c2491b95d6ccc477b385e648581f970d48961df06ceb6f2a9bd81ad1b5ec3",
+    "verify_v2.py": "9019cd1da696c7cc2db7faf6a37a6fe69614f83697a855884bcbdcca6360e69f",
+    "test_verifier_v2.py": "90068e77462aeec47b3c79cb89abe7c53e4f020a2457f292849bc9bd6725b95a",
+    "run_position.py": "2803227cc9a98b4870c1256a18343399610d66a17d3d9b8ce0a94b0cb84c2561",
+    "solver_v2.cpp": "842e8f2f0e3fa0c219cb7b37314c39ce0166ab3949647cc02759142d72ad3b50",
+    "solver_v2": "8faad3947388a060d3d2d6ee44ca1cfba40abf7008dc11c78cc12ecb3e592812"
+  },
+  "cpp_certificates_independently_verified": 180,
+  "cpp_scenarios": "60 toy directed multigraphs, each fresh cache, warm same history, warm changed literal history; all compare to raw individual-word minimax"
+}

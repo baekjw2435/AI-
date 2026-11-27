@@ -1,0 +1,27 @@
+{
+ "id": "죄_97e63706eaa8cfd0",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "잎혀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005301,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "804c6845f0c98546041be5302943dfb9efc9d61ba4274259abee92c703a0975d",
+ "position_sha256": "97e63706eaa8cfd0917c53aef7ae8901119b3ae6891f10a43ff937ad10d3b8ee",
+ "input_sha256": "37242a2faabb24ef4e0c4eec0e71223eea3adf0006ff56fdcd47224cfc099176",
+ "proof_bytes": 4681
+}

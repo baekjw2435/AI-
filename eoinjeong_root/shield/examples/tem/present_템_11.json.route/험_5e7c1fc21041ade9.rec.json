@@ -1,0 +1,30 @@
+{
+ "id": "험_5e7c1fc21041ade9",
+ "syllable": "험",
+ "used_route_words": [
+  "죄율",
+  "험할험",
+  "험험",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000551,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "bfdf4bed90a3c022ec2196822d87f971bb0e352fbb28b8b6615f72de0aa06236",
+ "position_sha256": "5e7c1fc21041ade974608fe4f313e1a60a921c24ddbb857e6124d599174c4865",
+ "input_sha256": "8f6432041011aca9afff841baccdd4ca7933aa3dcaf2d55dc3c659ace8cd714a",
+ "proof_bytes": 715
+}

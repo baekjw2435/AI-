@@ -1,0 +1,26 @@
+{
+ "id": "돼_14f2be9bfb09c1db",
+ "syllable": "돼",
+ "used_route_words": [
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.012346,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4536bc1f820db9424d3a0cc1435c62fdbc6e8ecebff724d0671b142d6bd1eff0",
+ "position_sha256": "14f2be9bfb09c1dbdb45f3151f329f5694e412d7e75c45f25d12281bbfc3651f",
+ "input_sha256": "06ec4b19d9d86425c36f6ce313b31cc6626a9ad807507b9bcbe841e83aa1e919",
+ "proof_bytes": 7351
+}

@@ -1,0 +1,31 @@
+{
+ "id": "균_7f4cd8c2ae8e0bd4",
+ "syllable": "균",
+ "used_route_words": [
+  "늠균",
+  "샅바씨름",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000125,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "7f4cd8c2ae8e0bd4c8e0b486568543ae8cd86d0fb5eaa350069dc61f43af77f3",
+ "input_sha256": "9e560346b3efadf62e5c4606828224762c46f1cf155a2deec1b3cc23a99a58c2",
+ "proof_bytes": 124
+}

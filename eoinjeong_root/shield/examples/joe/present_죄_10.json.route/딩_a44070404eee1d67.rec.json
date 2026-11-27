@@ -1,0 +1,26 @@
+{
+ "id": "딩_a44070404eee1d67",
+ "syllable": "딩",
+ "used_route_words": [
+  "갱생보호법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.014932,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "8d3e8510d28dd03dda511fa3dcaae15520c8f577dabb18290eac2df76e245fbf",
+ "position_sha256": "a44070404eee1d6710829b16a9af9d5dab8349035b1d1fbdfba72a6de7c7bdfa",
+ "input_sha256": "1ce95582f0f02a285f3c8468a817b724d0a0361538b9fb284a202988dd288a3d",
+ "proof_bytes": 9434
+}

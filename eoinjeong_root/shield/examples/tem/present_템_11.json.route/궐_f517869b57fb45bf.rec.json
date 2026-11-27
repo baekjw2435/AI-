@@ -1,0 +1,27 @@
+{
+ "id": "궐_f517869b57fb45bf",
+ "syllable": "궐",
+ "used_route_words": [
+  "권폄",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009924,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e1ed307b080a60299742a8758ff0c976e9d95184fabf9320b7c0822eda3669f9",
+ "position_sha256": "f517869b57fb45bf85034e59eb520cccf15c3e18f371ae7e6f433cf36704ed8a",
+ "input_sha256": "b35f29e76a769993e6f1f6550a5e068dbb44258906706f28cd1b46a2122a8eec",
+ "proof_bytes": 7043
+}

@@ -1,0 +1,29 @@
+{
+ "id": "죄_39dedfa351a4ad1e",
+ "syllable": "죄",
+ "used_route_words": [
+  "갱내채굴",
+  "굴대두겁",
+  "권리행사방해죄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.015959,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2889779e27be46cf3a973ac5d3ed73f29fa2052132ab8ab320cd62cb1c395948",
+ "position_sha256": "39dedfa351a4ad1e8d8abf59d607c4a841069566ad88af3c70ea750d751c2dab",
+ "input_sha256": "7824f1768b1caf8edae63ab867a8afc6cc9be9b298a82397c7a091d9bf63d86a",
+ "proof_bytes": 7331
+}

@@ -1,0 +1,27 @@
+{
+ "id": "멱_aa31f05ff5846d23",
+ "syllable": "멱",
+ "used_route_words": [
+  "권폄",
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.0119,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "afc448c2a9e434cf85728a32d0c8acd828767a14e460ca47d19cd6e19549f847",
+ "position_sha256": "aa31f05ff5846d2363dfce6351de37717528d8b6dd21d8cddc669d89aa645d58",
+ "input_sha256": "a86158466799c886cf07426a166166b91e14a4915f72a923c24c6500edb6b8b2",
+ "proof_bytes": 11611
+}

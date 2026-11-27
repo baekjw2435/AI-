@@ -1,0 +1,31 @@
+{
+ "id": "렌_a7ae7120b94b2933",
+ "syllable": "렌",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "권력형",
+  "쇄쇄",
+  "쇄심권",
+  "형태로만들어선물하고싶은마음카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.861747,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5681e8ca516e336b4a98aa36897c4af57159fc7920db7038bdf318c5d3fd80e3",
+ "position_sha256": "a7ae7120b94b2933319dc6bfab19930e9fd7bb2ab884bf139ca8c917dd9e309c",
+ "input_sha256": "e244a90004322093d7f68c06e848d9062916ff16b1f99cb686dfaae2fd91030e",
+ "proof_bytes": 138040
+}

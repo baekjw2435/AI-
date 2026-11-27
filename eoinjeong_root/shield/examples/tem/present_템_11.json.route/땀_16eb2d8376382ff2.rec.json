@@ -1,0 +1,28 @@
+{
+ "id": "땀_16eb2d8376382ff2",
+ "syllable": "땀",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "밑땀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007363,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "047fb87f50bb3381a5af02042c4f622fa06425cedba1062fbc6243daa66817e6",
+ "position_sha256": "16eb2d8376382ff20fb9ff7b630316b2434cca2832d1344545e25577bf2e263a",
+ "input_sha256": "f88a81cd3115b533db2bbdde0db7ca3d6c4f9907073ce1f32104648667be1475",
+ "proof_bytes": 8403
+}

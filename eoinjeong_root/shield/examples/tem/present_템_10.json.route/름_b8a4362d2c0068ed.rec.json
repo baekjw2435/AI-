@@ -1,0 +1,28 @@
+{
+ "id": "름_b8a4362d2c0068ed",
+ "syllable": "름",
+ "used_route_words": [
+  "댁대굴",
+  "밑틀",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001764,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5fad66280f94ba2a06d506a5290d731aa03d4b372c8b374efdc3eb27e54a9f95",
+ "position_sha256": "b8a4362d2c0068ed1b6dfb07565880eba591de769a15eaf10066172b29c976b2",
+ "input_sha256": "5f7463af123d0fbd0f7cf5126a526acaf2d898a6fd08b47876e6f54d7e500722",
+ "proof_bytes": 2411
+}

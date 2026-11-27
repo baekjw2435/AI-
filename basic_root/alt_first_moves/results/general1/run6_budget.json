@@ -1,0 +1,19 @@
+{
+ "stage_A_resume": {
+  "budget": 600.0,
+  "spent": 599.002,
+  "left_to_B": 0.998
+ },
+ "stage_B_untried": {
+  "budget": 1200.0,
+  "from_A": 0.998,
+  "spent": 1199.999,
+  "left": 0.999
+ },
+ "stage_C_resume_left": {
+  "items": "",
+  "budget": 0.999,
+  "spent": 0
+ },
+ "total_spent": 1799.001
+}

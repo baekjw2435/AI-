@@ -1,0 +1,28 @@
+{
+ "id": "쇄_1c0c366b119d54f6",
+ "syllable": "쇄",
+ "used_route_words": [
+  "쇄쇄",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000939,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6dfc5390ff66868b4dd284c9e70d57ad2a65559f6210bcea398447081e0fdad9",
+ "position_sha256": "1c0c366b119d54f6d9869e18212c64c483abf2bbec8308d75faf696796adcb5f",
+ "input_sha256": "3f5d2fc00ca8ee094d8c76c4498cd36a2afd6a476e379735d110baec62ea4d6f",
+ "proof_bytes": 1101
+}

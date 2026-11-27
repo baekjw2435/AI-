@@ -1,0 +1,29 @@
+{
+ "id": "걱_0db4b2285d856dad",
+ "syllable": "걱",
+ "used_route_words": [
+  "늠름",
+  "늠준",
+  "준치저냐",
+  "틀기름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000299,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "72c5a0e4616bfc3ef46160d09e44f806ed55ebcfdfa1df707ad79e47eb946bcd",
+ "position_sha256": "0db4b2285d856dadd3ca217ede0e59972a94c530349d766d378f3eb0514e169e",
+ "input_sha256": "c62f1cda238e7825a57feecd16a87acb7dce5b9e056eeeb52bcc22e878fe1029",
+ "proof_bytes": 435
+}

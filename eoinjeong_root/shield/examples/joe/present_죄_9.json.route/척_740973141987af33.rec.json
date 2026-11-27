@@ -1,0 +1,32 @@
+{
+ "id": "척_740973141987af33",
+ "syllable": "척",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "섭험",
+  "율척",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000168,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "740973141987af33a93db283dff9a652c900fcfcb19e933ffdeec35c701794c8",
+ "input_sha256": "07e9d641948373c32e085153aa7faece05e0fdb6ad88e75ef9e859c2b37b6929",
+ "proof_bytes": 124
+}

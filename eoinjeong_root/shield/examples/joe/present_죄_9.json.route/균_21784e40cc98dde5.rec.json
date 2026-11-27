@@ -1,0 +1,31 @@
+{
+ "id": "균_21784e40cc98dde5",
+ "syllable": "균",
+ "used_route_words": [
+  "늠균",
+  "뼈거름",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00017,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "21784e40cc98dde58f49e1d98c4a52838f0824458dc8ac7c65f5ade4a93c8c4e",
+ "input_sha256": "c30921c427c46471501653435331a6770b4b3eae2f3b265ed39b153bf193071d",
+ "proof_bytes": 124
+}

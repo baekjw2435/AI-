@@ -1,0 +1,31 @@
+{
+ "id": "을_7b96f0c6a3fe2ff7",
+ "syllable": "을",
+ "used_route_words": [
+  "권폄",
+  "법원검찰청복사골문화센터반달마을",
+  "쇄석포도법",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000517,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "38e011850c0476a1a364824d232d7783e29ca62428446e1bf22ae5517ab16e09",
+ "position_sha256": "7b96f0c6a3fe2ff7515cee1b5ea594b41ac60fecd63d1d9c35ed1af88d35e1d2",
+ "input_sha256": "505e4c2cd81abdda2b1aea9cbbdac38e235a9a411cbb22d953dca5a40ff65218",
+ "proof_bytes": 528
+}

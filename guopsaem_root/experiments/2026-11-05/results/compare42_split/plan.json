@@ -1,0 +1,2473 @@
+{
+ "summary": {
+  "roots": 42,
+  "requests": 80,
+  "static_endpoints": 0,
+  "unique_endpoints": 80,
+  "max_plies": 2
+ },
+ "roots": [
+  {
+   "members": [
+    "갑"
+   ],
+   "static": -1,
+   "requests": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "members": [
+    "객"
+   ],
+   "static": -1,
+   "requests": [
+    3,
+    4
+   ]
+  },
+  {
+   "members": [
+    "곡"
+   ],
+   "static": -1,
+   "requests": [
+    5,
+    6
+   ]
+  },
+  {
+   "members": [
+    "권"
+   ],
+   "static": -1,
+   "requests": [
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "members": [
+    "균"
+   ],
+   "static": -1,
+   "requests": [
+    10
+   ]
+  },
+  {
+   "members": [
+    "낙"
+   ],
+   "static": -1,
+   "requests": [
+    11,
+    12,
+    13
+   ]
+  },
+  {
+   "members": [
+    "낭"
+   ],
+   "static": -1,
+   "requests": [
+    14,
+    15,
+    16
+   ]
+  },
+  {
+   "members": [
+    "눅"
+   ],
+   "static": -1,
+   "requests": [
+    17
+   ]
+  },
+  {
+   "members": [
+    "맥"
+   ],
+   "static": -1,
+   "requests": [
+    18,
+    19,
+    20
+   ]
+  },
+  {
+   "members": [
+    "멸"
+   ],
+   "static": -1,
+   "requests": [
+    21,
+    22
+   ]
+  },
+  {
+   "members": [
+    "벽"
+   ],
+   "static": -1,
+   "requests": [
+    23
+   ]
+  },
+  {
+   "members": [
+    "삭"
+   ],
+   "static": -1,
+   "requests": [
+    24
+   ]
+  },
+  {
+   "members": [
+    "색"
+   ],
+   "static": -1,
+   "requests": [
+    25,
+    26,
+    27
+   ]
+  },
+  {
+   "members": [
+    "섭"
+   ],
+   "static": -1,
+   "requests": [
+    28
+   ]
+  },
+  {
+   "members": [
+    "솥"
+   ],
+   "static": -1,
+   "requests": [
+    29
+   ]
+  },
+  {
+   "members": [
+    "십"
+   ],
+   "static": -1,
+   "requests": [
+    30,
+    31,
+    32
+   ]
+  },
+  {
+   "members": [
+    "업"
+   ],
+   "static": -1,
+   "requests": [
+    33
+   ]
+  },
+  {
+   "members": [
+    "엽"
+   ],
+   "static": -1,
+   "requests": [
+    34
+   ]
+  },
+  {
+   "members": [
+    "온"
+   ],
+   "static": -1,
+   "requests": [
+    35,
+    36,
+    37
+   ]
+  },
+  {
+   "members": [
+    "움"
+   ],
+   "static": -1,
+   "requests": [
+    38,
+    39
+   ]
+  },
+  {
+   "members": [
+    "웅"
+   ],
+   "static": -1,
+   "requests": [
+    40
+   ]
+  },
+  {
+   "members": [
+    "율"
+   ],
+   "static": -1,
+   "requests": [
+    41
+   ]
+  },
+  {
+   "members": [
+    "젓"
+   ],
+   "static": -1,
+   "requests": [
+    42
+   ]
+  },
+  {
+   "members": [
+    "존"
+   ],
+   "static": -1,
+   "requests": [
+    43
+   ]
+  },
+  {
+   "members": [
+    "죄"
+   ],
+   "static": -1,
+   "requests": [
+    44,
+    45
+   ]
+  },
+  {
+   "members": [
+    "죽"
+   ],
+   "static": -1,
+   "requests": [
+    46,
+    47
+   ]
+  },
+  {
+   "members": [
+    "즉"
+   ],
+   "static": -1,
+   "requests": [
+    48,
+    49,
+    50
+   ]
+  },
+  {
+   "members": [
+    "찬"
+   ],
+   "static": -1,
+   "requests": [
+    51,
+    52,
+    53
+   ]
+  },
+  {
+   "members": [
+    "칙"
+   ],
+   "static": -1,
+   "requests": [
+    54
+   ]
+  },
+  {
+   "members": [
+    "칠"
+   ],
+   "static": -1,
+   "requests": [
+    55,
+    56,
+    57
+   ]
+  },
+  {
+   "members": [
+    "칭"
+   ],
+   "static": -1,
+   "requests": [
+    58,
+    59
+   ]
+  },
+  {
+   "members": [
+    "쾌"
+   ],
+   "static": -1,
+   "requests": [
+    60
+   ]
+  },
+  {
+   "members": [
+    "큼"
+   ],
+   "static": -1,
+   "requests": [
+    61
+   ]
+  },
+  {
+   "members": [
+    "탁"
+   ],
+   "static": -1,
+   "requests": [
+    62,
+    63
+   ]
+  },
+  {
+   "members": [
+    "탑"
+   ],
+   "static": -1,
+   "requests": [
+    64,
+    65,
+    66
+   ]
+  },
+  {
+   "members": [
+    "탕"
+   ],
+   "static": -1,
+   "requests": [
+    67,
+    68
+   ]
+  },
+  {
+   "members": [
+    "향"
+   ],
+   "static": -1,
+   "requests": [
+    69,
+    70,
+    71
+   ]
+  },
+  {
+   "members": [
+    "혁"
+   ],
+   "static": -1,
+   "requests": [
+    72,
+    73
+   ]
+  },
+  {
+   "members": [
+    "훈"
+   ],
+   "static": -1,
+   "requests": [
+    74
+   ]
+  },
+  {
+   "members": [
+    "휘"
+   ],
+   "static": -1,
+   "requests": [
+    75,
+    76
+   ]
+  },
+  {
+   "members": [
+    "흔"
+   ],
+   "static": -1,
+   "requests": [
+    77
+   ]
+  },
+  {
+   "members": [
+    "흥"
+   ],
+   "static": -1,
+   "requests": [
+    78,
+    79
+   ]
+  }
+ ],
+ "requests": [
+  {
+   "root": "갑",
+   "groups": [
+    0
+   ],
+   "words": [
+    "갑론을박"
+   ],
+   "plies": 1,
+   "endpoint": 0,
+   "endpoint_static": -1
+  },
+  {
+   "root": "갑",
+   "groups": [
+    1
+   ],
+   "words": [
+    "갑절"
+   ],
+   "plies": 1,
+   "endpoint": 1,
+   "endpoint_static": -1
+  },
+  {
+   "root": "갑",
+   "groups": [
+    2
+   ],
+   "words": [
+    "갑갑증"
+   ],
+   "plies": 1,
+   "endpoint": 2,
+   "endpoint_static": -1
+  },
+  {
+   "root": "객",
+   "groups": [
+    4
+   ],
+   "words": [
+    "객관식"
+   ],
+   "plies": 1,
+   "endpoint": 3,
+   "endpoint_static": -1
+  },
+  {
+   "root": "객",
+   "groups": [
+    5
+   ],
+   "words": [
+    "객관적"
+   ],
+   "plies": 1,
+   "endpoint": 4,
+   "endpoint_static": -1
+  },
+  {
+   "root": "곡",
+   "groups": [
+    21
+   ],
+   "words": [
+    "곡식"
+   ],
+   "plies": 1,
+   "endpoint": 5,
+   "endpoint_static": -1
+  },
+  {
+   "root": "곡",
+   "groups": [
+    22
+   ],
+   "words": [
+    "곡절"
+   ],
+   "plies": 1,
+   "endpoint": 6,
+   "endpoint_static": -1
+  },
+  {
+   "root": "권",
+   "groups": [
+    62
+   ],
+   "words": [
+    "권능"
+   ],
+   "plies": 1,
+   "endpoint": 7,
+   "endpoint_static": -1
+  },
+  {
+   "root": "권",
+   "groups": [
+    63
+   ],
+   "words": [
+    "권력"
+   ],
+   "plies": 1,
+   "endpoint": 8,
+   "endpoint_static": -1
+  },
+  {
+   "root": "권",
+   "groups": [
+    64
+   ],
+   "words": [
+    "권위적"
+   ],
+   "plies": 1,
+   "endpoint": 9,
+   "endpoint_static": -1
+  },
+  {
+   "root": "균",
+   "groups": [
+    76
+   ],
+   "words": [
+    "균형적"
+   ],
+   "plies": 1,
+   "endpoint": 10,
+   "endpoint_static": -1
+  },
+  {
+   "root": "낙",
+   "groups": [
+    107,
+    344
+   ],
+   "words": [
+    "낙농업",
+    "업적"
+   ],
+   "plies": 2,
+   "endpoint": 11,
+   "endpoint_static": -1
+  },
+  {
+   "root": "낙",
+   "groups": [
+    108,
+    358
+   ],
+   "words": [
+    "낙엽",
+    "엽기적"
+   ],
+   "plies": 2,
+   "endpoint": 12,
+   "endpoint_static": -1
+  },
+  {
+   "root": "낙",
+   "groups": [
+    109
+   ],
+   "words": [
+    "낙관적"
+   ],
+   "plies": 1,
+   "endpoint": 13,
+   "endpoint_static": -1
+  },
+  {
+   "root": "낭",
+   "groups": [
+    111
+   ],
+   "words": [
+    "낭군"
+   ],
+   "plies": 1,
+   "endpoint": 14,
+   "endpoint_static": -1
+  },
+  {
+   "root": "낭",
+   "groups": [
+    112,
+    211
+   ],
+   "words": [
+    "낭비벽",
+    "벽돌"
+   ],
+   "plies": 2,
+   "endpoint": 15,
+   "endpoint_static": -1
+  },
+  {
+   "root": "낭",
+   "groups": [
+    113
+   ],
+   "words": [
+    "낭만적"
+   ],
+   "plies": 1,
+   "endpoint": 16,
+   "endpoint_static": -1
+  },
+  {
+   "root": "눅",
+   "groups": [
+    118
+   ],
+   "words": [
+    "눅진눅진"
+   ],
+   "plies": 1,
+   "endpoint": 17,
+   "endpoint_static": -1
+  },
+  {
+   "root": "맥",
+   "groups": [
+    150
+   ],
+   "words": [
+    "맥락"
+   ],
+   "plies": 1,
+   "endpoint": 18,
+   "endpoint_static": -1
+  },
+  {
+   "root": "맥",
+   "groups": [
+    151
+   ],
+   "words": [
+    "맥박"
+   ],
+   "plies": 1,
+   "endpoint": 19,
+   "endpoint_static": -1
+  },
+  {
+   "root": "맥",
+   "groups": [
+    152
+   ],
+   "words": [
+    "맥주병"
+   ],
+   "plies": 1,
+   "endpoint": 20,
+   "endpoint_static": -1
+  },
+  {
+   "root": "멸",
+   "groups": [
+    160,
+    76
+   ],
+   "words": [
+    "멸균",
+    "균형적"
+   ],
+   "plies": 2,
+   "endpoint": 21,
+   "endpoint_static": -1
+  },
+  {
+   "root": "멸",
+   "groups": [
+    161,
+    419
+   ],
+   "words": [
+    "멸치젓",
+    "젓가락"
+   ],
+   "plies": 2,
+   "endpoint": 22,
+   "endpoint_static": -1
+  },
+  {
+   "root": "벽",
+   "groups": [
+    211
+   ],
+   "words": [
+    "벽돌"
+   ],
+   "plies": 1,
+   "endpoint": 23,
+   "endpoint_static": -1
+  },
+  {
+   "root": "삭",
+   "groups": [
+    245
+   ],
+   "words": [
+    "삭풍"
+   ],
+   "plies": 1,
+   "endpoint": 24,
+   "endpoint_static": -1
+  },
+  {
+   "root": "색",
+   "groups": [
+    254
+   ],
+   "words": [
+    "색맹"
+   ],
+   "plies": 1,
+   "endpoint": 25,
+   "endpoint_static": -1
+  },
+  {
+   "root": "색",
+   "groups": [
+    255
+   ],
+   "words": [
+    "색색"
+   ],
+   "plies": 1,
+   "endpoint": 26,
+   "endpoint_static": -1
+  },
+  {
+   "root": "색",
+   "groups": [
+    256
+   ],
+   "words": [
+    "색칠"
+   ],
+   "plies": 1,
+   "endpoint": 27,
+   "endpoint_static": -1
+  },
+  {
+   "root": "섭",
+   "groups": [
+    257,
+    358
+   ],
+   "words": [
+    "섭렵",
+    "엽기적"
+   ],
+   "plies": 2,
+   "endpoint": 28,
+   "endpoint_static": -1
+  },
+  {
+   "root": "솥",
+   "groups": [
+    259,
+    100
+   ],
+   "words": [
+    "솥뚜껑",
+    "껑충"
+   ],
+   "plies": 2,
+   "endpoint": 29,
+   "endpoint_static": -1
+  },
+  {
+   "root": "십",
+   "groups": [
+    305
+   ],
+   "words": [
+    "십계명"
+   ],
+   "plies": 1,
+   "endpoint": 30,
+   "endpoint_static": -1
+  },
+  {
+   "root": "십",
+   "groups": [
+    306
+   ],
+   "words": [
+    "십진법"
+   ],
+   "plies": 1,
+   "endpoint": 31,
+   "endpoint_static": -1
+  },
+  {
+   "root": "십",
+   "groups": [
+    307
+   ],
+   "words": [
+    "십인십색"
+   ],
+   "plies": 1,
+   "endpoint": 32,
+   "endpoint_static": -1
+  },
+  {
+   "root": "업",
+   "groups": [
+    344
+   ],
+   "words": [
+    "업적"
+   ],
+   "plies": 1,
+   "endpoint": 33,
+   "endpoint_static": -1
+  },
+  {
+   "root": "엽",
+   "groups": [
+    358
+   ],
+   "words": [
+    "엽기적"
+   ],
+   "plies": 1,
+   "endpoint": 34,
+   "endpoint_static": -1
+  },
+  {
+   "root": "온",
+   "groups": [
+    360
+   ],
+   "words": [
+    "온돌"
+   ],
+   "plies": 1,
+   "endpoint": 35,
+   "endpoint_static": -1
+  },
+  {
+   "root": "온",
+   "groups": [
+    361
+   ],
+   "words": [
+    "온조왕"
+   ],
+   "plies": 1,
+   "endpoint": 36,
+   "endpoint_static": -1
+  },
+  {
+   "root": "온",
+   "groups": [
+    362
+   ],
+   "words": [
+    "온탕"
+   ],
+   "plies": 1,
+   "endpoint": 37,
+   "endpoint_static": -1
+  },
+  {
+   "root": "움",
+   "groups": [
+    387
+   ],
+   "words": [
+    "움직움직"
+   ],
+   "plies": 1,
+   "endpoint": 38,
+   "endpoint_static": -1
+  },
+  {
+   "root": "움",
+   "groups": [
+    388,
+    537
+   ],
+   "words": [
+    "움큼",
+    "큼직큼직"
+   ],
+   "plies": 2,
+   "endpoint": 39,
+   "endpoint_static": -1
+  },
+  {
+   "root": "웅",
+   "groups": [
+    389
+   ],
+   "words": [
+    "웅변"
+   ],
+   "plies": 1,
+   "endpoint": 40,
+   "endpoint_static": -1
+  },
+  {
+   "root": "율",
+   "groups": [
+    390
+   ],
+   "words": [
+    "율격"
+   ],
+   "plies": 1,
+   "endpoint": 41,
+   "endpoint_static": -1
+  },
+  {
+   "root": "젓",
+   "groups": [
+    419
+   ],
+   "words": [
+    "젓가락"
+   ],
+   "plies": 1,
+   "endpoint": 42,
+   "endpoint_static": -1
+  },
+  {
+   "root": "존",
+   "groups": [
+    420
+   ],
+   "words": [
+    "존칭"
+   ],
+   "plies": 1,
+   "endpoint": 43,
+   "endpoint_static": -1
+  },
+  {
+   "root": "죄",
+   "groups": [
+    426
+   ],
+   "words": [
+    "죄명"
+   ],
+   "plies": 1,
+   "endpoint": 44,
+   "endpoint_static": -1
+  },
+  {
+   "root": "죄",
+   "groups": [
+    427
+   ],
+   "words": [
+    "죄의식"
+   ],
+   "plies": 1,
+   "endpoint": 45,
+   "endpoint_static": -1
+  },
+  {
+   "root": "죽",
+   "groups": [
+    428
+   ],
+   "words": [
+    "죽순"
+   ],
+   "plies": 1,
+   "endpoint": 46,
+   "endpoint_static": -1
+  },
+  {
+   "root": "죽",
+   "groups": [
+    429,
+    428
+   ],
+   "words": [
+    "죽죽",
+    "죽순"
+   ],
+   "plies": 2,
+   "endpoint": 47,
+   "endpoint_static": -1
+  },
+  {
+   "root": "즉",
+   "groups": [
+    434
+   ],
+   "words": [
+    "즉흥곡"
+   ],
+   "plies": 1,
+   "endpoint": 48,
+   "endpoint_static": -1
+  },
+  {
+   "root": "즉",
+   "groups": [
+    435
+   ],
+   "words": [
+    "즉각적"
+   ],
+   "plies": 1,
+   "endpoint": 49,
+   "endpoint_static": -1
+  },
+  {
+   "root": "즉",
+   "groups": [
+    436
+   ],
+   "words": [
+    "즉흥"
+   ],
+   "plies": 1,
+   "endpoint": 50,
+   "endpoint_static": -1
+  },
+  {
+   "root": "찬",
+   "groups": [
+    498
+   ],
+   "words": [
+    "찬탄"
+   ],
+   "plies": 1,
+   "endpoint": 51,
+   "endpoint_static": -1
+  },
+  {
+   "root": "찬",
+   "groups": [
+    499
+   ],
+   "words": [
+    "찬성표"
+   ],
+   "plies": 1,
+   "endpoint": 52,
+   "endpoint_static": -1
+  },
+  {
+   "root": "찬",
+   "groups": [
+    500
+   ],
+   "words": [
+    "찬합"
+   ],
+   "plies": 1,
+   "endpoint": 53,
+   "endpoint_static": -1
+  },
+  {
+   "root": "칙",
+   "groups": [
+    521
+   ],
+   "words": [
+    "칙칙폭폭"
+   ],
+   "plies": 1,
+   "endpoint": 54,
+   "endpoint_static": -1
+  },
+  {
+   "root": "칠",
+   "groups": [
+    530
+   ],
+   "words": [
+    "칠순"
+   ],
+   "plies": 1,
+   "endpoint": 55,
+   "endpoint_static": -1
+  },
+  {
+   "root": "칠",
+   "groups": [
+    531
+   ],
+   "words": [
+    "칠십"
+   ],
+   "plies": 1,
+   "endpoint": 56,
+   "endpoint_static": -1
+  },
+  {
+   "root": "칠",
+   "groups": [
+    532
+   ],
+   "words": [
+    "칠흑"
+   ],
+   "plies": 1,
+   "endpoint": 57,
+   "endpoint_static": -1
+  },
+  {
+   "root": "칭",
+   "groups": [
+    533
+   ],
+   "words": [
+    "칭찬"
+   ],
+   "plies": 1,
+   "endpoint": 58,
+   "endpoint_static": -1
+  },
+  {
+   "root": "칭",
+   "groups": [
+    534,
+    533
+   ],
+   "words": [
+    "칭칭",
+    "칭찬"
+   ],
+   "plies": 2,
+   "endpoint": 59,
+   "endpoint_static": -1
+  },
+  {
+   "root": "쾌",
+   "groups": [
+    536
+   ],
+   "words": [
+    "쾌락"
+   ],
+   "plies": 1,
+   "endpoint": 60,
+   "endpoint_static": -1
+  },
+  {
+   "root": "큼",
+   "groups": [
+    537
+   ],
+   "words": [
+    "큼직큼직"
+   ],
+   "plies": 1,
+   "endpoint": 61,
+   "endpoint_static": -1
+  },
+  {
+   "root": "탁",
+   "groups": [
+    538
+   ],
+   "words": [
+    "탁발승"
+   ],
+   "plies": 1,
+   "endpoint": 62,
+   "endpoint_static": -1
+  },
+  {
+   "root": "탁",
+   "groups": [
+    539,
+    538
+   ],
+   "words": [
+    "탁탁",
+    "탁발승"
+   ],
+   "plies": 2,
+   "endpoint": 63,
+   "endpoint_static": -1
+  },
+  {
+   "root": "탑",
+   "groups": [
+    547
+   ],
+   "words": [
+    "탑승객"
+   ],
+   "plies": 1,
+   "endpoint": 64,
+   "endpoint_static": -1
+  },
+  {
+   "root": "탑",
+   "groups": [
+    548
+   ],
+   "words": [
+    "탑승권"
+   ],
+   "plies": 1,
+   "endpoint": 65,
+   "endpoint_static": -1
+  },
+  {
+   "root": "탑",
+   "groups": [
+    549
+   ],
+   "words": [
+    "탑승"
+   ],
+   "plies": 1,
+   "endpoint": 66,
+   "endpoint_static": -1
+  },
+  {
+   "root": "탕",
+   "groups": [
+    550
+   ],
+   "words": [
+    "탕약"
+   ],
+   "plies": 1,
+   "endpoint": 67,
+   "endpoint_static": -1
+  },
+  {
+   "root": "탕",
+   "groups": [
+    552,
+    550
+   ],
+   "words": [
+    "탕탕",
+    "탕약"
+   ],
+   "plies": 2,
+   "endpoint": 68,
+   "endpoint_static": -1
+  },
+  {
+   "root": "향",
+   "groups": [
+    659
+   ],
+   "words": [
+    "향수병"
+   ],
+   "plies": 1,
+   "endpoint": 69,
+   "endpoint_static": -1
+  },
+  {
+   "root": "향",
+   "groups": [
+    660
+   ],
+   "words": [
+    "향토색"
+   ],
+   "plies": 1,
+   "endpoint": 70,
+   "endpoint_static": -1
+  },
+  {
+   "root": "향",
+   "groups": [
+    661
+   ],
+   "words": [
+    "향락적"
+   ],
+   "plies": 1,
+   "endpoint": 71,
+   "endpoint_static": -1
+  },
+  {
+   "root": "혁",
+   "groups": [
+    663
+   ],
+   "words": [
+    "혁명"
+   ],
+   "plies": 1,
+   "endpoint": 72,
+   "endpoint_static": -1
+  },
+  {
+   "root": "혁",
+   "groups": [
+    664
+   ],
+   "words": [
+    "혁명적"
+   ],
+   "plies": 1,
+   "endpoint": 73,
+   "endpoint_static": -1
+  },
+  {
+   "root": "훈",
+   "groups": [
+    707
+   ],
+   "words": [
+    "훈련병"
+   ],
+   "plies": 1,
+   "endpoint": 74,
+   "endpoint_static": -1
+  },
+  {
+   "root": "휘",
+   "groups": [
+    708
+   ],
+   "words": [
+    "휘적휘적"
+   ],
+   "plies": 1,
+   "endpoint": 75,
+   "endpoint_static": -1
+  },
+  {
+   "root": "휘",
+   "groups": [
+    709,
+    708
+   ],
+   "words": [
+    "휘휘",
+    "휘적휘적"
+   ],
+   "plies": 2,
+   "endpoint": 76,
+   "endpoint_static": -1
+  },
+  {
+   "root": "흔",
+   "groups": [
+    714
+   ],
+   "words": [
+    "흔적"
+   ],
+   "plies": 1,
+   "endpoint": 77,
+   "endpoint_static": -1
+  },
+  {
+   "root": "흥",
+   "groups": [
+    716
+   ],
+   "words": [
+    "흥행"
+   ],
+   "plies": 1,
+   "endpoint": 78,
+   "endpoint_static": -1
+  },
+  {
+   "root": "흥",
+   "groups": [
+    717,
+    716
+   ],
+   "words": [
+    "흥흥",
+    "흥행"
+   ],
+   "plies": 2,
+   "endpoint": 79,
+   "endpoint_static": -1
+  }
+ ],
+ "endpoints": [
+  {
+   "id": 0,
+   "vertex": "박",
+   "position": {
+    "initial_syllable": "갑",
+    "history": [
+     "갑론을박"
+    ]
+   },
+   "roots": [
+    "갑"
+   ]
+  },
+  {
+   "id": 1,
+   "vertex": "절",
+   "position": {
+    "initial_syllable": "갑",
+    "history": [
+     "갑절"
+    ]
+   },
+   "roots": [
+    "갑"
+   ]
+  },
+  {
+   "id": 2,
+   "vertex": "증",
+   "position": {
+    "initial_syllable": "갑",
+    "history": [
+     "갑갑증"
+    ]
+   },
+   "roots": [
+    "갑"
+   ]
+  },
+  {
+   "id": 3,
+   "vertex": "식",
+   "position": {
+    "initial_syllable": "객",
+    "history": [
+     "객관식"
+    ]
+   },
+   "roots": [
+    "객"
+   ]
+  },
+  {
+   "id": 4,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "객",
+    "history": [
+     "객관적"
+    ]
+   },
+   "roots": [
+    "객"
+   ]
+  },
+  {
+   "id": 5,
+   "vertex": "식",
+   "position": {
+    "initial_syllable": "곡",
+    "history": [
+     "곡식"
+    ]
+   },
+   "roots": [
+    "곡"
+   ]
+  },
+  {
+   "id": 6,
+   "vertex": "절",
+   "position": {
+    "initial_syllable": "곡",
+    "history": [
+     "곡절"
+    ]
+   },
+   "roots": [
+    "곡"
+   ]
+  },
+  {
+   "id": 7,
+   "vertex": "능",
+   "position": {
+    "initial_syllable": "권",
+    "history": [
+     "권능"
+    ]
+   },
+   "roots": [
+    "권"
+   ]
+  },
+  {
+   "id": 8,
+   "vertex": "역",
+   "position": {
+    "initial_syllable": "권",
+    "history": [
+     "권력"
+    ]
+   },
+   "roots": [
+    "권"
+   ]
+  },
+  {
+   "id": 9,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "권",
+    "history": [
+     "권위적"
+    ]
+   },
+   "roots": [
+    "권"
+   ]
+  },
+  {
+   "id": 10,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "균",
+    "history": [
+     "균형적"
+    ]
+   },
+   "roots": [
+    "균"
+   ]
+  },
+  {
+   "id": 11,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "낙",
+    "history": [
+     "낙농업",
+     "업적"
+    ]
+   },
+   "roots": [
+    "낙"
+   ]
+  },
+  {
+   "id": 12,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "낙",
+    "history": [
+     "낙엽",
+     "엽기적"
+    ]
+   },
+   "roots": [
+    "낙"
+   ]
+  },
+  {
+   "id": 13,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "낙",
+    "history": [
+     "낙관적"
+    ]
+   },
+   "roots": [
+    "낙"
+   ]
+  },
+  {
+   "id": 14,
+   "vertex": "군",
+   "position": {
+    "initial_syllable": "낭",
+    "history": [
+     "낭군"
+    ]
+   },
+   "roots": [
+    "낭"
+   ]
+  },
+  {
+   "id": 15,
+   "vertex": "돌",
+   "position": {
+    "initial_syllable": "낭",
+    "history": [
+     "낭비벽",
+     "벽돌"
+    ]
+   },
+   "roots": [
+    "낭"
+   ]
+  },
+  {
+   "id": 16,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "낭",
+    "history": [
+     "낭만적"
+    ]
+   },
+   "roots": [
+    "낭"
+   ]
+  },
+  {
+   "id": 17,
+   "vertex": "진",
+   "position": {
+    "initial_syllable": "눅",
+    "history": [
+     "눅진눅진"
+    ]
+   },
+   "roots": [
+    "눅"
+   ]
+  },
+  {
+   "id": 18,
+   "vertex": "낙",
+   "position": {
+    "initial_syllable": "맥",
+    "history": [
+     "맥락"
+    ]
+   },
+   "roots": [
+    "맥"
+   ]
+  },
+  {
+   "id": 19,
+   "vertex": "박",
+   "position": {
+    "initial_syllable": "맥",
+    "history": [
+     "맥박"
+    ]
+   },
+   "roots": [
+    "맥"
+   ]
+  },
+  {
+   "id": 20,
+   "vertex": "병",
+   "position": {
+    "initial_syllable": "맥",
+    "history": [
+     "맥주병"
+    ]
+   },
+   "roots": [
+    "맥"
+   ]
+  },
+  {
+   "id": 21,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "멸",
+    "history": [
+     "멸균",
+     "균형적"
+    ]
+   },
+   "roots": [
+    "멸"
+   ]
+  },
+  {
+   "id": 22,
+   "vertex": "낙",
+   "position": {
+    "initial_syllable": "멸",
+    "history": [
+     "멸치젓",
+     "젓가락"
+    ]
+   },
+   "roots": [
+    "멸"
+   ]
+  },
+  {
+   "id": 23,
+   "vertex": "돌",
+   "position": {
+    "initial_syllable": "벽",
+    "history": [
+     "벽돌"
+    ]
+   },
+   "roots": [
+    "벽"
+   ]
+  },
+  {
+   "id": 24,
+   "vertex": "풍",
+   "position": {
+    "initial_syllable": "삭",
+    "history": [
+     "삭풍"
+    ]
+   },
+   "roots": [
+    "삭"
+   ]
+  },
+  {
+   "id": 25,
+   "vertex": "맹",
+   "position": {
+    "initial_syllable": "색",
+    "history": [
+     "색맹"
+    ]
+   },
+   "roots": [
+    "색"
+   ]
+  },
+  {
+   "id": 26,
+   "vertex": "색",
+   "position": {
+    "initial_syllable": "색",
+    "history": [
+     "색색"
+    ]
+   },
+   "roots": [
+    "색"
+   ]
+  },
+  {
+   "id": 27,
+   "vertex": "칠",
+   "position": {
+    "initial_syllable": "색",
+    "history": [
+     "색칠"
+    ]
+   },
+   "roots": [
+    "색"
+   ]
+  },
+  {
+   "id": 28,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "섭",
+    "history": [
+     "섭렵",
+     "엽기적"
+    ]
+   },
+   "roots": [
+    "섭"
+   ]
+  },
+  {
+   "id": 29,
+   "vertex": "충",
+   "position": {
+    "initial_syllable": "솥",
+    "history": [
+     "솥뚜껑",
+     "껑충"
+    ]
+   },
+   "roots": [
+    "솥"
+   ]
+  },
+  {
+   "id": 30,
+   "vertex": "명",
+   "position": {
+    "initial_syllable": "십",
+    "history": [
+     "십계명"
+    ]
+   },
+   "roots": [
+    "십"
+   ]
+  },
+  {
+   "id": 31,
+   "vertex": "법",
+   "position": {
+    "initial_syllable": "십",
+    "history": [
+     "십진법"
+    ]
+   },
+   "roots": [
+    "십"
+   ]
+  },
+  {
+   "id": 32,
+   "vertex": "색",
+   "position": {
+    "initial_syllable": "십",
+    "history": [
+     "십인십색"
+    ]
+   },
+   "roots": [
+    "십"
+   ]
+  },
+  {
+   "id": 33,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "업",
+    "history": [
+     "업적"
+    ]
+   },
+   "roots": [
+    "업"
+   ]
+  },
+  {
+   "id": 34,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "엽",
+    "history": [
+     "엽기적"
+    ]
+   },
+   "roots": [
+    "엽"
+   ]
+  },
+  {
+   "id": 35,
+   "vertex": "돌",
+   "position": {
+    "initial_syllable": "온",
+    "history": [
+     "온돌"
+    ]
+   },
+   "roots": [
+    "온"
+   ]
+  },
+  {
+   "id": 36,
+   "vertex": "왕",
+   "position": {
+    "initial_syllable": "온",
+    "history": [
+     "온조왕"
+    ]
+   },
+   "roots": [
+    "온"
+   ]
+  },
+  {
+   "id": 37,
+   "vertex": "탕",
+   "position": {
+    "initial_syllable": "온",
+    "history": [
+     "온탕"
+    ]
+   },
+   "roots": [
+    "온"
+   ]
+  },
+  {
+   "id": 38,
+   "vertex": "직",
+   "position": {
+    "initial_syllable": "움",
+    "history": [
+     "움직움직"
+    ]
+   },
+   "roots": [
+    "움"
+   ]
+  },
+  {
+   "id": 39,
+   "vertex": "직",
+   "position": {
+    "initial_syllable": "움",
+    "history": [
+     "움큼",
+     "큼직큼직"
+    ]
+   },
+   "roots": [
+    "움"
+   ]
+  },
+  {
+   "id": 40,
+   "vertex": "변",
+   "position": {
+    "initial_syllable": "웅",
+    "history": [
+     "웅변"
+    ]
+   },
+   "roots": [
+    "웅"
+   ]
+  },
+  {
+   "id": 41,
+   "vertex": "격",
+   "position": {
+    "initial_syllable": "율",
+    "history": [
+     "율격"
+    ]
+   },
+   "roots": [
+    "율"
+   ]
+  },
+  {
+   "id": 42,
+   "vertex": "낙",
+   "position": {
+    "initial_syllable": "젓",
+    "history": [
+     "젓가락"
+    ]
+   },
+   "roots": [
+    "젓"
+   ]
+  },
+  {
+   "id": 43,
+   "vertex": "칭",
+   "position": {
+    "initial_syllable": "존",
+    "history": [
+     "존칭"
+    ]
+   },
+   "roots": [
+    "존"
+   ]
+  },
+  {
+   "id": 44,
+   "vertex": "명",
+   "position": {
+    "initial_syllable": "죄",
+    "history": [
+     "죄명"
+    ]
+   },
+   "roots": [
+    "죄"
+   ]
+  },
+  {
+   "id": 45,
+   "vertex": "식",
+   "position": {
+    "initial_syllable": "죄",
+    "history": [
+     "죄의식"
+    ]
+   },
+   "roots": [
+    "죄"
+   ]
+  },
+  {
+   "id": 46,
+   "vertex": "순",
+   "position": {
+    "initial_syllable": "죽",
+    "history": [
+     "죽순"
+    ]
+   },
+   "roots": [
+    "죽"
+   ]
+  },
+  {
+   "id": 47,
+   "vertex": "순",
+   "position": {
+    "initial_syllable": "죽",
+    "history": [
+     "죽죽",
+     "죽순"
+    ]
+   },
+   "roots": [
+    "죽"
+   ]
+  },
+  {
+   "id": 48,
+   "vertex": "곡",
+   "position": {
+    "initial_syllable": "즉",
+    "history": [
+     "즉흥곡"
+    ]
+   },
+   "roots": [
+    "즉"
+   ]
+  },
+  {
+   "id": 49,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "즉",
+    "history": [
+     "즉각적"
+    ]
+   },
+   "roots": [
+    "즉"
+   ]
+  },
+  {
+   "id": 50,
+   "vertex": "흥",
+   "position": {
+    "initial_syllable": "즉",
+    "history": [
+     "즉흥"
+    ]
+   },
+   "roots": [
+    "즉"
+   ]
+  },
+  {
+   "id": 51,
+   "vertex": "탄",
+   "position": {
+    "initial_syllable": "찬",
+    "history": [
+     "찬탄"
+    ]
+   },
+   "roots": [
+    "찬"
+   ]
+  },
+  {
+   "id": 52,
+   "vertex": "표",
+   "position": {
+    "initial_syllable": "찬",
+    "history": [
+     "찬성표"
+    ]
+   },
+   "roots": [
+    "찬"
+   ]
+  },
+  {
+   "id": 53,
+   "vertex": "합",
+   "position": {
+    "initial_syllable": "찬",
+    "history": [
+     "찬합"
+    ]
+   },
+   "roots": [
+    "찬"
+   ]
+  },
+  {
+   "id": 54,
+   "vertex": "폭",
+   "position": {
+    "initial_syllable": "칙",
+    "history": [
+     "칙칙폭폭"
+    ]
+   },
+   "roots": [
+    "칙"
+   ]
+  },
+  {
+   "id": 55,
+   "vertex": "순",
+   "position": {
+    "initial_syllable": "칠",
+    "history": [
+     "칠순"
+    ]
+   },
+   "roots": [
+    "칠"
+   ]
+  },
+  {
+   "id": 56,
+   "vertex": "십",
+   "position": {
+    "initial_syllable": "칠",
+    "history": [
+     "칠십"
+    ]
+   },
+   "roots": [
+    "칠"
+   ]
+  },
+  {
+   "id": 57,
+   "vertex": "흑",
+   "position": {
+    "initial_syllable": "칠",
+    "history": [
+     "칠흑"
+    ]
+   },
+   "roots": [
+    "칠"
+   ]
+  },
+  {
+   "id": 58,
+   "vertex": "찬",
+   "position": {
+    "initial_syllable": "칭",
+    "history": [
+     "칭찬"
+    ]
+   },
+   "roots": [
+    "칭"
+   ]
+  },
+  {
+   "id": 59,
+   "vertex": "찬",
+   "position": {
+    "initial_syllable": "칭",
+    "history": [
+     "칭칭",
+     "칭찬"
+    ]
+   },
+   "roots": [
+    "칭"
+   ]
+  },
+  {
+   "id": 60,
+   "vertex": "낙",
+   "position": {
+    "initial_syllable": "쾌",
+    "history": [
+     "쾌락"
+    ]
+   },
+   "roots": [
+    "쾌"
+   ]
+  },
+  {
+   "id": 61,
+   "vertex": "직",
+   "position": {
+    "initial_syllable": "큼",
+    "history": [
+     "큼직큼직"
+    ]
+   },
+   "roots": [
+    "큼"
+   ]
+  },
+  {
+   "id": 62,
+   "vertex": "승",
+   "position": {
+    "initial_syllable": "탁",
+    "history": [
+     "탁발승"
+    ]
+   },
+   "roots": [
+    "탁"
+   ]
+  },
+  {
+   "id": 63,
+   "vertex": "승",
+   "position": {
+    "initial_syllable": "탁",
+    "history": [
+     "탁탁",
+     "탁발승"
+    ]
+   },
+   "roots": [
+    "탁"
+   ]
+  },
+  {
+   "id": 64,
+   "vertex": "객",
+   "position": {
+    "initial_syllable": "탑",
+    "history": [
+     "탑승객"
+    ]
+   },
+   "roots": [
+    "탑"
+   ]
+  },
+  {
+   "id": 65,
+   "vertex": "권",
+   "position": {
+    "initial_syllable": "탑",
+    "history": [
+     "탑승권"
+    ]
+   },
+   "roots": [
+    "탑"
+   ]
+  },
+  {
+   "id": 66,
+   "vertex": "승",
+   "position": {
+    "initial_syllable": "탑",
+    "history": [
+     "탑승"
+    ]
+   },
+   "roots": [
+    "탑"
+   ]
+  },
+  {
+   "id": 67,
+   "vertex": "약",
+   "position": {
+    "initial_syllable": "탕",
+    "history": [
+     "탕약"
+    ]
+   },
+   "roots": [
+    "탕"
+   ]
+  },
+  {
+   "id": 68,
+   "vertex": "약",
+   "position": {
+    "initial_syllable": "탕",
+    "history": [
+     "탕탕",
+     "탕약"
+    ]
+   },
+   "roots": [
+    "탕"
+   ]
+  },
+  {
+   "id": 69,
+   "vertex": "병",
+   "position": {
+    "initial_syllable": "향",
+    "history": [
+     "향수병"
+    ]
+   },
+   "roots": [
+    "향"
+   ]
+  },
+  {
+   "id": 70,
+   "vertex": "색",
+   "position": {
+    "initial_syllable": "향",
+    "history": [
+     "향토색"
+    ]
+   },
+   "roots": [
+    "향"
+   ]
+  },
+  {
+   "id": 71,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "향",
+    "history": [
+     "향락적"
+    ]
+   },
+   "roots": [
+    "향"
+   ]
+  },
+  {
+   "id": 72,
+   "vertex": "명",
+   "position": {
+    "initial_syllable": "혁",
+    "history": [
+     "혁명"
+    ]
+   },
+   "roots": [
+    "혁"
+   ]
+  },
+  {
+   "id": 73,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "혁",
+    "history": [
+     "혁명적"
+    ]
+   },
+   "roots": [
+    "혁"
+   ]
+  },
+  {
+   "id": 74,
+   "vertex": "병",
+   "position": {
+    "initial_syllable": "훈",
+    "history": [
+     "훈련병"
+    ]
+   },
+   "roots": [
+    "훈"
+   ]
+  },
+  {
+   "id": 75,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "휘",
+    "history": [
+     "휘적휘적"
+    ]
+   },
+   "roots": [
+    "휘"
+   ]
+  },
+  {
+   "id": 76,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "휘",
+    "history": [
+     "휘휘",
+     "휘적휘적"
+    ]
+   },
+   "roots": [
+    "휘"
+   ]
+  },
+  {
+   "id": 77,
+   "vertex": "적",
+   "position": {
+    "initial_syllable": "흔",
+    "history": [
+     "흔적"
+    ]
+   },
+   "roots": [
+    "흔"
+   ]
+  },
+  {
+   "id": 78,
+   "vertex": "행",
+   "position": {
+    "initial_syllable": "흥",
+    "history": [
+     "흥행"
+    ]
+   },
+   "roots": [
+    "흥"
+   ]
+  },
+  {
+   "id": 79,
+   "vertex": "행",
+   "position": {
+    "initial_syllable": "흥",
+    "history": [
+     "흥흥",
+     "흥행"
+    ]
+   },
+   "roots": [
+    "흥"
+   ]
+  }
+ ]
+}

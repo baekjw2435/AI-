@@ -1,0 +1,29 @@
+{
+ "id": "즈_59ec713ca1572109",
+ "syllable": "즈",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000136,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "59ec713ca15721092a35ca7dfe14b8a1a02c4f1921d9510587cba1232fb17848",
+ "input_sha256": "2531dea05a266a7140bbd1b4b2c8d1b69a9aba9ca2794569e52637da9892fcce",
+ "proof_bytes": 124
+}

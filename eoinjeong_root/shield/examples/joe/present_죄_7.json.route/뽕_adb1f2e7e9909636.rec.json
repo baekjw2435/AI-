@@ -1,0 +1,27 @@
+{
+ "id": "뽕_adb1f2e7e9909636",
+ "syllable": "뽕",
+ "used_route_words": [
+  "뽕뽕",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009532,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f20592f3df14d8413b1ab390d87e900160f216d5eadd9972bb201989ef77d6f5",
+ "position_sha256": "adb1f2e7e990963671eefc2ef18091f39384c186c1dadb9d68c6cdb534c37fe3",
+ "input_sha256": "fc079a2636c7f7c3a8d7290e6edd9aa61b63e8f35cfd247afaef2acf33f16327",
+ "proof_bytes": 5462
+}

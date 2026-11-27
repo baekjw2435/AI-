@@ -1,0 +1,26 @@
+{
+ "id": "잎_0d1fdb5ec6c27ae7",
+ "syllable": "잎",
+ "used_route_words": [
+  "뽕잎"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.031322,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ad1256627e2f4414ed004fcad27b4a0495a2a4a657ef0b87d6100e1b665b6d71",
+ "position_sha256": "0d1fdb5ec6c27ae7bd4a0c28e9bd9e56f71659f20694cc7db5e5621c10c60862",
+ "input_sha256": "2b3b0c8ed19e5059c08c0da75fcc4b0c4a75c077b9ab2f97019fb72fa6d7d2b6",
+ "proof_bytes": 11044
+}

@@ -1,0 +1,28 @@
+{
+ "id": "득_07f4491ccd884037",
+ "syllable": "득",
+ "used_route_words": [
+  "득득",
+  "험득",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000761,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "db8bfe61f1e7b94596d9fbe4c07394986f743f036023e0a3a616fe3dc4258383",
+ "position_sha256": "07f4491ccd88403711caa72d8ff316e4501a21fc2f963835c58c5adaa47451db",
+ "input_sha256": "30da95b389c9fa9f6028450049a4033022b2a0f0b00f81af7af9bc2b078e80fc",
+ "proof_bytes": 1012
+}

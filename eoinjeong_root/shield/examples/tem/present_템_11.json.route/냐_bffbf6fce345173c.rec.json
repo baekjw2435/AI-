@@ -1,0 +1,29 @@
+{
+ "id": "냐_bffbf6fce345173c",
+ "syllable": "냐",
+ "used_route_words": [
+  "갱신청구권",
+  "겁겁",
+  "겁낼겁",
+  "굴저냐"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001172,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0942a5d8e6250ac8e6402e3b546e2cb148b18549bae0e8d9bf8a9f581c4c164a",
+ "position_sha256": "bffbf6fce345173c33ae141200d128c427fd0be6cd388c8ff080d6f5c9c6716b",
+ "input_sha256": "02f2fb09b3b890ce0f909ed5e65e87662f3bc6e2bc14c23372586815e7751cc1",
+ "proof_bytes": 830
+}

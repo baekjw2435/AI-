@@ -1,0 +1,28 @@
+{
+ "id": "을_a80c5d09c2e09b35",
+ "syllable": "을",
+ "used_route_words": [
+  "쇄쇄",
+  "율현마을",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000415,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1d1ac02bc5372da4935ae6747914a576d372e28d22b7689fc950fa2ab4edae31",
+ "position_sha256": "a80c5d09c2e09b35ecb267354fc2d2fa6d67d469ebbf41b8d0484d63d66456d4",
+ "input_sha256": "3c772d9b7ee29619d946afbdc62bb9946ffbed1a5aa3b3c0fd67ef6ee67445ff",
+ "proof_bytes": 407
+}

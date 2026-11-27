@@ -1,0 +1,27 @@
+{
+ "id": "을_932dbc7041a60aa9",
+ "syllable": "을",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003028,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "99a3059e098c00eb10d4f54ae798950a486c4e5361f27602bc777fc938d7a1ab",
+ "position_sha256": "932dbc7041a60aa9b7207ca20d3d2d9940c79cdee0cc8b987a5ce0975f9c66c0",
+ "input_sha256": "6b702eef7ba94467048ad2110b257ddbda195325200e9b8212db40015241dce5",
+ "proof_bytes": 2613
+}

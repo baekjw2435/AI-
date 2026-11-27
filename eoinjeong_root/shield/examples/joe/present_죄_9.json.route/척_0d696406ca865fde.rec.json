@@ -1,0 +1,31 @@
+{
+ "id": "척_0d696406ca865fde",
+ "syllable": "척",
+ "used_route_words": [
+  "샅흰검은말율",
+  "섭험",
+  "율척",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000138,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "0d696406ca865fde1a7903ef961063f14a34ed34cb040f889eb59c77f556145c",
+ "input_sha256": "0bd10300653496fc6751dc325534e4b4738043669daa3e5d6e42b54c3d2cf4db",
+ "proof_bytes": 124
+}

@@ -1,0 +1,27 @@
+{
+ "id": "펠_76abbb2d4a722d3c",
+ "syllable": "펠",
+ "used_route_words": [
+  "죄형",
+  "헴펠"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.009287,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "328ab3928d20b4531c7fe2bd47c1bed15ff754b0212a7517701e236cb536b824",
+ "position_sha256": "76abbb2d4a722d3c76612072e98a3c4e034f9d619a6f632563f449e41bb7d93b",
+ "input_sha256": "7659ad04c4e96b1e1a93870522624c9511d07e60494d991b99906b0edb090aa0",
+ "proof_bytes": 6361
+}

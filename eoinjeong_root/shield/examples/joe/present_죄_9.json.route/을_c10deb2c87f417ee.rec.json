@@ -1,0 +1,29 @@
+{
+ "id": "을_c10deb2c87f417ee",
+ "syllable": "을",
+ "used_route_words": [
+  "뭐든시작이어려운법",
+  "법원검찰청복사골문화센터반달마을",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000345,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "3e614613ede4fd032567df6b8a9a6a6249779072f15aa43a9ce65d820fccb629",
+ "position_sha256": "c10deb2c87f417eef497cf91b74f99429171fdc8a708767d3fd8eb35df61ed32",
+ "input_sha256": "695acd09f779481ffae6a47af47d7fbecd5bcc76bac2c8aaa3ad912aaf9dc395",
+ "proof_bytes": 340
+}

@@ -1,0 +1,33 @@
+{
+ "syllable": "진",
+ "vertex": "진",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 46.799,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 31764296,
+ "proof_nodes": 210945,
+ "proof_seconds": 3.718208,
+ "solver_wall_seconds": 51.64,
+ "verify_seconds": 5.664,
+ "verify_wall_seconds": 5.67,
+ "proof_bytes": 1508890,
+ "proof_sha256": "2382d8aef736afefd4990d18f1a4b493a125b75efa5b74f7175e9f08b0ffc2f4",
+ "position_sha256": "06055cda003aa6ba51b44ab65bb9a5679dfeeddcf3c5c1d545d061be5617ffe1",
+ "input_sha256": "ebcc216b5aa379eeca72fd468b8ff440ffcca1d0e94f89839d40db9bf7e5f500",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

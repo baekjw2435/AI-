@@ -1,0 +1,29 @@
+{
+ "id": "틱_b1de56113c8e9c5d",
+ "syllable": "틱",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.106452,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "48ca2f174e8233cfa5c0da9c3e6f2574f7cb83e1d12e8826ab591620b662aa29",
+ "position_sha256": "b1de56113c8e9c5d071facf16be0c55b8e839a5d74ac533d5b682339d195133b",
+ "input_sha256": "5ca36770693858af2f51d43122f9816130c63a3db194ba5d3fce6b703793f022",
+ "proof_bytes": 163023
+}

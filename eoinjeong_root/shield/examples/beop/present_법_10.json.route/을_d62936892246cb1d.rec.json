@@ -1,0 +1,26 @@
+{
+ "id": "을_d62936892246cb1d",
+ "syllable": "을",
+ "used_route_words": [
+  "뜸마을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.018712,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d47728872cbf0f94689ae497e4097a4eb3a4cfb4f8d1aeca5c18ed36f575d211",
+ "position_sha256": "d62936892246cb1d9008aaead5f755f2ea8967bbddd409ad5c56c03a1d670be3",
+ "input_sha256": "5cfd8af1942e83d551c4d8f8dfdd5775fb3b18ea4cd2644f0a04f37dd304740b",
+ "proof_bytes": 5436
+}

@@ -1,0 +1,29 @@
+{
+ "id": "궐_4b86080a8c052f9e",
+ "syllable": "궐",
+ "used_route_words": [
+  "섭도마을",
+  "죄상가죄",
+  "죄첩",
+  "첩섭"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.049581,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "55a14af66e62ad370bf2b7fae56d3747124a958b714ae72d8b9a1452ceee278c",
+ "position_sha256": "4b86080a8c052f9eb2c76105939c536100d4007d3f99d304b8d3b25014edcb6f",
+ "input_sha256": "df142a80d63b355a037f6169df6bbfeeb7713ed5e4bcae3352a9278f1ac67e1b",
+ "proof_bytes": 18775
+}

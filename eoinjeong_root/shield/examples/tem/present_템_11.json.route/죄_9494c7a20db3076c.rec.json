@@ -1,0 +1,30 @@
+{
+ "id": "죄_9494c7a20db3076c",
+ "syllable": "죄",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "넨장맞을",
+  "득죄",
+  "을종근로소득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003168,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "939e9c4b216535e3b82915e152c3bde895b66a492ba4c13ae1462611116551e6",
+ "position_sha256": "9494c7a20db3076cd645ec7de97e3999e76028df1d7b18ac384613c133987b45",
+ "input_sha256": "f8ddcc1715e037e9efd5aeb0f817e738c65caf5ec90175f2ae842c96a55698e8",
+ "proof_bytes": 2798
+}

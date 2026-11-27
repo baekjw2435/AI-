@@ -1,0 +1,34 @@
+[
+ {
+  "name": "e43_낙락",
+  "pos": "/home/user/AI-/.work/g/frontier192/jobs/e43/pos.json",
+  "input": "/home/user/AI-/.work/g/frontier192/jobs/e43/in.txt",
+  "tt": "/home/user/AI-/.work/g/focus/e43.tt",
+  "tt_mb": 1024,
+  "tt_save_max": 4000000
+ },
+ {
+  "name": "e1_죽",
+  "pos": "/home/user/AI-/.work/g/frontier192/jobs/e1/pos.json",
+  "input": "/home/user/AI-/.work/g/frontier192/jobs/e1/in.txt",
+  "tt": "/home/user/AI-/.work/g/focus/e1.tt",
+  "tt_mb": 1024,
+  "tt_save_max": 4000000
+ },
+ {
+  "name": "면_면벚",
+  "pos": "/home/user/AI-/.work/g/myeon/c_5.json",
+  "input": "/home/user/AI-/.work/g/myeon/c_5.txt",
+  "tt": "/home/user/AI-/.work/g/myeon/c_5.tt",
+  "tt_mb": 3072,
+  "tt_save_max": 40000000
+ },
+ {
+  "name": "면_면접착",
+  "pos": "/home/user/AI-/.work/g/myeon/c_9.json",
+  "input": "/home/user/AI-/.work/g/myeon/c_9.txt",
+  "tt": "/home/user/AI-/.work/g/myeon/c_9.tt",
+  "tt_mb": 3072,
+  "tt_save_max": 40000000
+ }
+]

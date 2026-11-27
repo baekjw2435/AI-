@@ -1,0 +1,30 @@
+{
+ "id": "험_29c671a75efd19c4",
+ "syllable": "험",
+ "used_route_words": [
+  "갱도시험",
+  "죄첩",
+  "첩첩",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00013,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5fb5a4bd5dd678ec5dde52a9bd4b4ef50476f562a1d3cbfbc61341f13441eadc",
+ "position_sha256": "29c671a75efd19c417b40c0ddedba911d1c2002b33bb84c0633974ce365bc9ce",
+ "input_sha256": "4ae50fcdbacdd1bd968bc07ac7196761e0808adf3117085c0d46637117e7d347",
+ "proof_bytes": 141
+}

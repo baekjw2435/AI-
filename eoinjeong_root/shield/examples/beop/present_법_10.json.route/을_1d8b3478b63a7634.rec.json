@@ -1,0 +1,27 @@
+{
+ "id": "을_1d8b3478b63a7634",
+ "syllable": "을",
+ "used_route_words": [
+  "법원검찰청복사골문화센터반달마을",
+  "잎혀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006434,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d00da83bcc68aa1f57f976454f6f9949f3337fc4f76fc04d0a27d8e417add6df",
+ "position_sha256": "1d8b3478b63a7634c53bc9a2d3cedff3e707a7a332abf07aa2c12445636b1cc3",
+ "input_sha256": "52992858dd949f665ee21888373667d025a7da532889ddb96f31223bfee30459",
+ "proof_bytes": 5324
+}

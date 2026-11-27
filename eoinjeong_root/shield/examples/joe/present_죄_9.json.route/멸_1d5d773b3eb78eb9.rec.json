@@ -1,0 +1,31 @@
+{
+ "id": "멸_1d5d773b3eb78eb9",
+ "syllable": "멸",
+ "used_route_words": [
+  "섭험",
+  "죄기죄",
+  "죄멸",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000151,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "1d5d773b3eb78eb9d7ec6ada30fc8f633647b5edc222c28871192dc13f647aaa",
+ "input_sha256": "9d4fc9219ee5d18c59aeb79ab640762de902934872847188626ac60a63427496",
+ "proof_bytes": 124
+}

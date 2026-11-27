@@ -1,0 +1,31 @@
+{
+ "id": "험_34a280d22172e7f5",
+ "syllable": "험",
+ "used_route_words": [
+  "갱도시험",
+  "권폄",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000275,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2b19362a7916edd6b7eea80d91dc2667a4c0ba3d99ed6120fc93e87213fe2ff4",
+ "position_sha256": "34a280d22172e7f5dd116325efa94f12ac594319490e2769ff6ec161d8cc6953",
+ "input_sha256": "2155976dacd4ed9cc570fa94bd7312b244908b0146d3a9e4172fe3916d61a315",
+ "proof_bytes": 417
+}

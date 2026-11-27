@@ -1,0 +1,29 @@
+{
+ "id": "죄_61b2518fbd6ae584",
+ "syllable": "죄",
+ "used_route_words": [
+  "갱신청구권",
+  "권폄",
+  "촉탁살인죄",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007096,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "e56c7f5a928b6907f232d6cad759e474d72be237883bcf9069cd8596cd604ffa",
+ "position_sha256": "61b2518fbd6ae584c6c28aeb969a9129f681f1fe1ff9b165c6a95e56cfe09dba",
+ "input_sha256": "e6ee44929b93bd61f40086a88d92dc6f67251ed5decdb779445ebae46990a67f",
+ "proof_bytes": 4309
+}

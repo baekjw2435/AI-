@@ -1,0 +1,33 @@
+{
+ "syllable": "섭",
+ "vertex": "섭",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 8.646,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 6098727,
+ "proof_nodes": 98187,
+ "proof_seconds": 1.822081,
+ "solver_wall_seconds": 11.39,
+ "verify_seconds": 2.54,
+ "verify_wall_seconds": 2.54,
+ "proof_bytes": 698898,
+ "proof_sha256": "389f08e0820e2db7862b50d3b755848d20e20b79f8bd929aad84ac3b1184c59c",
+ "position_sha256": "ddc58a95e82ece6502808a3eaf09ac201bf0d1a33751969966b6adb04a214173",
+ "input_sha256": "bcc77cd1247a462bd425100ea504e36cb308cc79cacb8972ca3ac5cd2f96164b",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

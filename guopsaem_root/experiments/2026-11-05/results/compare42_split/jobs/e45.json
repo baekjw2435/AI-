@@ -1,0 +1,40 @@
+{
+ "endpoint": 45,
+ "vertex": "식",
+ "roots": [
+  "죄"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 27170816,
+  "child_gens": 67341124,
+  "tt_entries": 13309460,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 27170816,
+  "tt_replacements": 3269531,
+  "seconds": 60.000546,
+  "pn": 1938,
+  "dn": 6461,
+  "best_group": 296,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 1,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.25287,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

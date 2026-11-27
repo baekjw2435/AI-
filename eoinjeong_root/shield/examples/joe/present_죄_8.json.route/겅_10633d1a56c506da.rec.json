@@ -1,0 +1,26 @@
+{
+ "id": "겅_10633d1a56c506da",
+ "syllable": "겅",
+ "used_route_words": [
+  "즈브스킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000464,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "14a81d610484bce5ef1eb5ea68312a76ea46a5bf5b252851f0574d222c4c4d3d",
+ "position_sha256": "10633d1a56c506dac7c11025fcb27cb9ff9ee99f09381be59fe229be0c451f5e",
+ "input_sha256": "29dad9348c58689d3e8c5bb944d2b704c479e672454aef44339ff93bdd176692",
+ "proof_bytes": 430
+}

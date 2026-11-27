@@ -1,0 +1,29 @@
+{
+ "id": "름_0321320dfc570082",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "샅바씨름",
+  "잇샅",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003384,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9e5d3edbd647cca19a181952e327459b0e630678f96bef61eb0bba4b12cd40e0",
+ "position_sha256": "0321320dfc570082121d5be8ace40f4886f073b4232ec8e851f6384cb4ba5072",
+ "input_sha256": "8afff6b4d1ea1f795f922de8cafc6e02f7dbf4288da86e30b14cf82f7c37f5e7",
+ "proof_bytes": 3761
+}

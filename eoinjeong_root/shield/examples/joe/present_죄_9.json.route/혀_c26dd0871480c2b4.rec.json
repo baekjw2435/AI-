@@ -1,0 +1,31 @@
+{
+ "id": "혀_c26dd0871480c2b4",
+ "syllable": "혀",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000126,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "c26dd0871480c2b42f40a7b790695c83b695052f656198a01e3e8485eca8f148",
+ "input_sha256": "bb24129d09f900098d05bff1d8f13eb7b1934c177ef9e0daf0d956838dfb117e",
+ "proof_bytes": 124
+}

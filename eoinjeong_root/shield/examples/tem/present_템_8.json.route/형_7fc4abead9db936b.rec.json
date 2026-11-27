@@ -1,0 +1,28 @@
+{
+ "id": "형_7fc4abead9db936b",
+ "syllable": "형",
+ "used_route_words": [
+  "득률",
+  "율현마을",
+  "을지형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001577,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9bd7a78f1cb9012f6cbbc7b4590b8f932c0711eeaaf2347ac93663acbc288ca2",
+ "position_sha256": "7fc4abead9db936b698ab57aca5329a72c9c929c316375d0abcf5d97996bc49d",
+ "input_sha256": "fe0fd0749a0456b49e9a6a38aeb60c903f011658d88a745eda0577fb291907aa",
+ "proof_bytes": 1002
+}

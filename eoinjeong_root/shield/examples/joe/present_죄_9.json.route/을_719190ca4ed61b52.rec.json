@@ -1,0 +1,29 @@
+{
+ "id": "을_719190ca4ed61b52",
+ "syllable": "을",
+ "used_route_words": [
+  "멸치저냐",
+  "샅흰검은말율",
+  "율현마을",
+  "죄멸"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003252,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "99a3059e098c00eb10d4f54ae798950a486c4e5361f27602bc777fc938d7a1ab",
+ "position_sha256": "719190ca4ed61b5253164d31d1bd7f57d340c7dced54ce3a9176e320a16db29d",
+ "input_sha256": "2024eed4ab1e52302d0ad7cb32677478cebcfaedb483e5799a8a2c41cf6d3898",
+ "proof_bytes": 2613
+}

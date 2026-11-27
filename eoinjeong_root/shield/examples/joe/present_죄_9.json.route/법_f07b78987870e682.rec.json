@@ -1,0 +1,31 @@
+{
+ "id": "법_f07b78987870e682",
+ "syllable": "법",
+ "used_route_words": [
+  "뼈살촉",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩",
+  "촉매법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000139,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f07b78987870e68205857414418e0c763173015e7e1e61396c036fc6a43db905",
+ "input_sha256": "de89e3cc00f5af1dc06728f8ad4764b627c2cf4e5e880b8a6c1897c80f9c3018",
+ "proof_bytes": 124
+}

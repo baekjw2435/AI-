@@ -1,0 +1,27 @@
+{
+ "id": "겸_282f09b67c3baeca",
+ "syllable": "겸",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013332,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5845111cd0b2dbbec2e7c1bcd142bc6eae4f7fa9f6147de6bb0e9ed4a18bbba9",
+ "position_sha256": "282f09b67c3baeca2725f6b7d48633a91b9f055a0b34e1062de5c7ec1c983081",
+ "input_sha256": "dfdef5741412ad6afaced831797feb7c3653aa20f5b333241e154bb93acadba3",
+ "proof_bytes": 10015
+}

@@ -1,0 +1,26 @@
+{
+ "id": "겸_6f821285baa9086d",
+ "syllable": "겸",
+ "used_route_words": [
+  "즈브스킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.0163,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "9eed1cf1a5090147e0d972f17d9deab7384c3877a0f7a6a5de4f2e08a65ad285",
+ "position_sha256": "6f821285baa9086db9584bb6bf9fe0a35df332802ddbbec50287b7902a4a1cc9",
+ "input_sha256": "f8a089b2b94ed89b0dcc180107a797bd8d838c61896a9f6e7c203a64c045666f",
+ "proof_bytes": 9704
+}

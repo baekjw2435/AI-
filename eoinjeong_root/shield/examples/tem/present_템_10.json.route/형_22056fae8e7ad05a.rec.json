@@ -1,0 +1,30 @@
+{
+ "id": "형_22056fae8e7ad05a",
+ "syllable": "형",
+ "used_route_words": [
+  "샅흰검은말율",
+  "율현마을",
+  "을자형",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000234,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "bb83ab4e68526a7c238544f11e37811d0b82b516cd9026845965666db73331f5",
+ "position_sha256": "22056fae8e7ad05a4639502534b902a64446bbd0c152ee781e97dfaf29034524",
+ "input_sha256": "9dc6990f345ab177cf7e75eb2a422b2a814b3b534073ed515d79bb0062b842ad",
+ "proof_bytes": 353
+}

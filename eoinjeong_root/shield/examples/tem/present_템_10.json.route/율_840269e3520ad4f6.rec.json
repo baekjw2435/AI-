@@ -1,0 +1,28 @@
+{
+ "id": "율_840269e3520ad4f6",
+ "syllable": "율",
+ "used_route_words": [
+  "샅흰검은말율",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00056,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "56e03b311d65a9dd233fdbc7b4319a4361d86bd5608a3a0d5e92cfc13c2db2c1",
+ "position_sha256": "840269e3520ad4f64f4fa1ad6c450ff2b9ba0f4bf6d64c65a5d4b08885a5d7ef",
+ "input_sha256": "71f4f173d18e3e1933beb52e6a60adb26d91ffd0a1aead48f01c81dbff811a09",
+ "proof_bytes": 784
+}

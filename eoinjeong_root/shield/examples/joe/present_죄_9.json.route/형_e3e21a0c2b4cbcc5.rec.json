@@ -1,0 +1,31 @@
+{
+ "id": "형_e3e21a0c2b4cbcc5",
+ "syllable": "형",
+ "used_route_words": [
+  "뼈바를척",
+  "섭험",
+  "죄첩",
+  "척변이형",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000132,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "e3e21a0c2b4cbcc5917356d8a6271414538721304f3d431edd19e72141542fde",
+ "input_sha256": "446486cf4d1d52781ac1086344955ff7635a1ccd37eb0e54a5b87edf81f60eb7",
+ "proof_bytes": 124
+}

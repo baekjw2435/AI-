@@ -1,0 +1,28 @@
+{
+ "id": "멱_bba318317c9dc04d",
+ "syllable": "멱",
+ "used_route_words": [
+  "죄율",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.020247,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "cae8a1308b9fe392cf4ccc3d2a8e570281a581654dd1d7028bc4ef01a3d846d8",
+ "position_sha256": "bba318317c9dc04dcb947ea95dab623ed94fc04fadb5183c8857a72563f8384b",
+ "input_sha256": "0ed19fe09b8b6ed3596287e3c7f573a4092ebed294e372e3e752099e086423c8",
+ "proof_bytes": 12093
+}

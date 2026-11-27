@@ -1,0 +1,29 @@
+{
+ "id": "멱_d6ee01e928ad409b",
+ "syllable": "멱",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.742876,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "af18d8e3d2a44140881d06dcbaa59ae3216ff28ffdc4af84bfef09a626146404",
+ "position_sha256": "d6ee01e928ad409bcf15b4e899cff4dfb7a2e21ac70f61fda41b741fa3aa0058",
+ "input_sha256": "a94d0186af82dfc4481a3db97f001e5d9ae55c22b7ad0fd513b781a983ceea34",
+ "proof_bytes": 106982
+}

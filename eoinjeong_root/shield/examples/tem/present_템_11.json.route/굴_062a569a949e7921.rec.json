@@ -1,0 +1,29 @@
+{
+ "id": "굴_062a569a949e7921",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱신청구권",
+  "겁나는얼굴",
+  "권폄",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000128,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "062a569a949e7921433971a056a9c130f00e65c03f9c4f717e1371412949f64f",
+ "input_sha256": "d5b186eae191120bc207dd0b069cd71aa12bca0615c06c6e1bf5476251cab17c",
+ "proof_bytes": 124
+}

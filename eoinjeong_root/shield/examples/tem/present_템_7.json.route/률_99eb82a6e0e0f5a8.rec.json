@@ -1,0 +1,30 @@
+{
+ "id": "률_99eb82a6e0e0f5a8",
+ "syllable": "률",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "샅바씨름",
+  "잇샅",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00082,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "42ea2c72fd5140049989a740b0a0e83f2e2f8d9aa6ed7489b551e19e5f4ec688",
+ "position_sha256": "99eb82a6e0e0f5a88b1af047389c85bf5a720d0819a0dda62421d3522f6f3b94",
+ "input_sha256": "5e991de694f3141680f81dc87f67376a16f28f877726de760e49b57766831713",
+ "proof_bytes": 900
+}

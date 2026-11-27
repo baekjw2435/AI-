@@ -1,0 +1,30 @@
+{
+ "id": "굴_f2f9ac711441f083",
+ "syllable": "굴",
+ "used_route_words": [
+  "갱재첩",
+  "겁나는얼굴",
+  "죄상첨죄",
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000171,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f2f9ac711441f083b78402d1243bf76ec32b58b62e2558408ee493fcef23c397",
+ "input_sha256": "c4252f8f0f9793e44ccbc8849d004c20b85bbf6a3ec8a16a7ec1bb618af509b2",
+ "proof_bytes": 124
+}

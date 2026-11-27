@@ -1,0 +1,30 @@
+{
+ "id": "형_1d5772e492d4e5ea",
+ "syllable": "형",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "딩동댕지난여름",
+  "율현마을",
+  "을자형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001156,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5f285037429157e1df27de517d0267d17b6c5f21a55f56493e80762000e9ea4b",
+ "position_sha256": "1d5772e492d4e5ea39e7218321493ee4afdae7aff5878b76a057a088dc77bb24",
+ "input_sha256": "3420de002b89fcf91efa52ae089ba64e1fa2d74388b8968e3f9510f916e6edd6",
+ "proof_bytes": 873
+}

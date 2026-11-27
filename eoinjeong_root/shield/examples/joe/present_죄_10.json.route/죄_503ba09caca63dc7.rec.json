@@ -1,0 +1,28 @@
+{
+ "id": "죄_503ba09caca63dc7",
+ "syllable": "죄",
+ "used_route_words": [
+  "굴대두겁",
+  "권리행사방해죄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.010376,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2889779e27be46cf3a973ac5d3ed73f29fa2052132ab8ab320cd62cb1c395948",
+ "position_sha256": "503ba09caca63dc7293d110ece6cf5c9e116d4d5c03d0921bc4bdf5cd2d92a44",
+ "input_sha256": "d735deb19a06513f42373d8b0a2492f68c263a5b15c4956975cca5757c79b9e6",
+ "proof_bytes": 7331
+}

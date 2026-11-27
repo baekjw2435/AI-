@@ -1,0 +1,33 @@
+{
+ "syllable": "권",
+ "vertex": "권",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 28.735,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 18581246,
+ "proof_nodes": 200851,
+ "proof_seconds": 4.170899,
+ "solver_wall_seconds": 34.07,
+ "verify_seconds": 5.718,
+ "verify_wall_seconds": 5.72,
+ "proof_bytes": 1452967,
+ "proof_sha256": "658ecc89c68e4a1e3137d83a897ed1e9ae050839184a9853400a46c46d35d67d",
+ "position_sha256": "6d01c5a16d4582109e3a39c231131882356edd4454f10e425c5ebc81b32f2221",
+ "input_sha256": "61ae41c31a9cd8c0a1fb5278838a77cf5e1bd1adf2e63fd1f1000f5fc3da3f6b",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

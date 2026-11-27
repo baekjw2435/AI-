@@ -1,0 +1,31 @@
+{
+ "id": "을_fca68459d63859fe",
+ "syllable": "을",
+ "used_route_words": [
+  "갱재첩",
+  "섭도마을",
+  "죄죄",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000126,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "fca68459d63859fe356707224c617cde41d8c90b23a7b47199cf8539bff218fe",
+ "input_sha256": "644f54cc2ed68ae00e541c0d86c7ca4b79a917a9c7d6326f064db908e0e8d363",
+ "proof_bytes": 124
+}

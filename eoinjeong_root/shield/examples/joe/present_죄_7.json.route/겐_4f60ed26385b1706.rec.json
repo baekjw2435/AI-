@@ -1,0 +1,27 @@
+{
+ "id": "겐_4f60ed26385b1706",
+ "syllable": "겐",
+ "used_route_words": [
+  "멸치저냐",
+  "죄멸"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001131,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4c55c0297dd1a9c64f0f5b818bb4577d6520979a2519011020b09f203adee2f0",
+ "position_sha256": "4f60ed26385b170609b8971bec65770c8bb22575856e1292bc493a4ea5085067",
+ "input_sha256": "e48100aee45af05147025b3f3180a3e970d397e277eb6a59b967533266c0b380",
+ "proof_bytes": 784
+}

@@ -1,0 +1,27 @@
+{
+ "id": "냐_262c8393a4af075a",
+ "syllable": "냐",
+ "used_route_words": [
+  "굴저냐",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001076,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "20b3593a92348e02fceab90614f760730e52878493e44092b0c1917bad1f8b24",
+ "position_sha256": "262c8393a4af075a5a0df5810b36ce5fceec2120692fcb5ee2426b4a671efef0",
+ "input_sha256": "22703e9b2513767eaca922983932ac32b8ac173b3d9bd195b9385f88b92c005d",
+ "proof_bytes": 632
+}

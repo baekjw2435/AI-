@@ -1,0 +1,31 @@
+{
+ "id": "냐_1a0e8b59c7410318",
+ "syllable": "냐",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "굴저냐",
+  "샅굴",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000159,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "1a0e8b59c74103181d8d27bb8084efc640aecc37d127a5b5b6b6e35c03f2e4d0",
+ "input_sha256": "e6970f4d3778fcdf3b04061e08051d3eaa3613689baffbff2938f07867081849",
+ "proof_bytes": 124
+}

@@ -1,0 +1,27 @@
+{
+ "id": "몬_8f527bbfed93c3c0",
+ "syllable": "몬",
+ "used_route_words": [
+  "굴대두겁",
+  "즈보우몬"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001248,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6cc4e237a0d57f84762142e9c477d83544e44f252bb5f39eaa6dcd53172897cf",
+ "position_sha256": "8f527bbfed93c3c050c4ccb73b40d5f10049b39aeb9911d7f424e30d32bee30f",
+ "input_sha256": "c829dd040ceff4750e41be67602c55eab6896e780b8405c6316f2e9be954fca4",
+ "proof_bytes": 772
+}

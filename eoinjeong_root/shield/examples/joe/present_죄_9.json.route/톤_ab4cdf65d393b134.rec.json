@@ -1,0 +1,28 @@
+{
+ "id": "톤_ab4cdf65d393b134",
+ "syllable": "톤",
+ "used_route_words": [
+  "죄율",
+  "톤톤",
+  "펠레톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001487,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "bb7eb65333db96785f9ee67e81e439c31ed01195b86cccc5e1f4f350a573981b",
+ "position_sha256": "ab4cdf65d393b134fc1a0fa682febc3b7a4e9ccf0379c00fb490e033c140caf9",
+ "input_sha256": "176d271895e6d404c9dfd696208a5ac63d5e094ecbd8883d69d200967077551f",
+ "proof_bytes": 1116
+}

@@ -1,0 +1,26 @@
+{
+ "id": "밑_cd508a26d3450ce7",
+ "syllable": "밑",
+ "used_route_words": [
+  "샅굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00686,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a361afadc7f48444194bf53a4cb734abe424939bb1276bed175e71f6ad9e7b15",
+ "position_sha256": "cd508a26d3450ce734332c8ecabe7bf7cb2579840b4150fc6878e776062112bb",
+ "input_sha256": "b7d63430c630a7cce50476543e6923b65af3cbee11b8a814bce56704797045f8",
+ "proof_bytes": 2428
+}

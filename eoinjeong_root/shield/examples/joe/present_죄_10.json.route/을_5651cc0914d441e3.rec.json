@@ -1,0 +1,29 @@
+{
+ "id": "을_5651cc0914d441e3",
+ "syllable": "을",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "딩동댕지난여름",
+  "율현마을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.004665,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2fd543b7b9a1032b3bca621426bf4ba49b7882fb8a6de41fb085799db89a0db4",
+ "position_sha256": "5651cc0914d441e3c358c008b2fc28883395a45469f2a1f66d408c6f64c30bca",
+ "input_sha256": "0ebea6eeb5a1d17ae0ddd54ddb2931e9e08b4a1e7031e70b1bd43c4e30868188",
+ "proof_bytes": 2987
+}

@@ -1,0 +1,28 @@
+{
+ "id": "걱_4d46d40cc532e0a5",
+ "syllable": "걱",
+ "used_route_words": [
+  "겁나는얼굴",
+  "굴대두겁",
+  "댁대굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001072,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "4d46d40cc532e0a5f3f5f20447aaf1125f524ac648459224b4946a6569d42ea2",
+ "input_sha256": "cfce4c55bfda553de4415708c28637daedd0f6c43c3b4a4a84a33d1a02a26929",
+ "proof_bytes": 1271
+}

@@ -1,0 +1,31 @@
+{
+ "id": "권_4693d2045c9669fc",
+ "syllable": "권",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "굴대두겁",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.436576,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b6f7443be0b114d675e2abb8751e2d350eab41db9a5ac08d7cce3961feb7e506",
+ "position_sha256": "4693d2045c9669fc08f32faa64f794fd9525964b7785cc0808b181eac033a2c2",
+ "input_sha256": "4edc7a48876f7b4af81f1e051b1fd8b2e6f3130db874cb3e94c1180569815d2e",
+ "proof_bytes": 184422
+}

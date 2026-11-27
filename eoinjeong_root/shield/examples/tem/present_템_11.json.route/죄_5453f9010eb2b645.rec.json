@@ -1,0 +1,29 @@
+{
+ "id": "죄_5453f9010eb2b645",
+ "syllable": "죄",
+ "used_route_words": [
+  "득첩",
+  "촉탁살인죄",
+  "폄척",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000447,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "bf135c42498bba9c9e4a0f83999a1ad33975dfafa0ed2db4411be4579487e6cc",
+ "position_sha256": "5453f9010eb2b6453bb9f254b8507e8f778fe4a503c3d020071aaffd48775d2c",
+ "input_sha256": "a890b69f42c7e71631279e7c1cc13f0ddd67a370edd4bb5211434ef40bfa3f2d",
+ "proof_bytes": 536
+}

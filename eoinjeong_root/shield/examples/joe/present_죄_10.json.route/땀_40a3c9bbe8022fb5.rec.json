@@ -1,0 +1,28 @@
+{
+ "id": "땀_40a3c9bbe8022fb5",
+ "syllable": "땀",
+ "used_route_words": [
+  "밑땀",
+  "톤세법",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.007611,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "047fb87f50bb3381a5af02042c4f622fa06425cedba1062fbc6243daa66817e6",
+ "position_sha256": "40a3c9bbe8022fb560db1a790caef6b6bb1b56c0035591a18b1252cd5ac1aebb",
+ "input_sha256": "30fe69eb666c7757e26c8ec9d0d624209fbab1d9a9713a86cf2d755087bb8b22",
+ "proof_bytes": 8403
+}

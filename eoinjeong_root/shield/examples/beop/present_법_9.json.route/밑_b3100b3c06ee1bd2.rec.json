@@ -1,0 +1,30 @@
+{
+ "id": "밑_b3100b3c06ee1bd2",
+ "syllable": "밑",
+ "used_route_words": [
+  "권삼득",
+  "득득",
+  "득죄",
+  "읍권",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.004488,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4aa03494b6d54c106eaf176636984cde3a3758acae53aeb74db2855e184fa8c6",
+ "position_sha256": "b3100b3c06ee1bd26147df42bf72b6e20f5b82b5572be50a8e42578a69367e48",
+ "input_sha256": "16d97eee8cd8f4c0876705f5f8300322bfb5f5fd297a469d114634d8156e8c70",
+ "proof_bytes": 569
+}

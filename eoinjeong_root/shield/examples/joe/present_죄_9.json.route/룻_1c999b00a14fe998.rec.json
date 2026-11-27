@@ -1,0 +1,27 @@
+{
+ "id": "룻_1c999b00a14fe998",
+ "syllable": "룻",
+ "used_route_words": [
+  "밑틀",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00049,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6525aa38daf86a00922103e33ad71e3b484ab7096770b00025ab89727f71aa17",
+ "position_sha256": "1c999b00a14fe998342ac7054bc951f2112ef60635f72d1a73d8c392253ffb1c",
+ "input_sha256": "0b4e60c42bb7e7bc0ba3ed9c05308e9ef1b443bb2d5ef2e4150be068e3819128",
+ "proof_bytes": 443
+}

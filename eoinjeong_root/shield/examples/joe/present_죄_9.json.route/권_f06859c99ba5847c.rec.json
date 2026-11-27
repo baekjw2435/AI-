@@ -1,0 +1,31 @@
+{
+ "id": "권_f06859c99ba5847c",
+ "syllable": "권",
+ "used_route_words": [
+  "권리보호청구권",
+  "섭험",
+  "죄첩",
+  "척수공권",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00017,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f06859c99ba5847cfa40fac4e736d2cadae195c08f599e63d80363ccd51295d2",
+ "input_sha256": "df60c970b3e381f35d1dce850c127dbddd83ca942ca1571da9b4ce2f69e03aa1",
+ "proof_bytes": 124
+}

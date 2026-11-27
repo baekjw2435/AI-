@@ -1,0 +1,27 @@
+{
+ "id": "렌_e54fbf469ab38c27",
+ "syllable": "렌",
+ "used_route_words": [
+  "갱신청구권",
+  "렛츠인조이더무비카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.135896,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "e54fbf469ab38c27915df9d6a098ef0ae39a5bee25a15edd38a3091dbdb23460",
+ "input_sha256": "a057b78a0c3f5ff4a68e8a5a34e5510a1b19181eb74f95353dfd3fee1232d749",
+ "proof_bytes": 15781
+}

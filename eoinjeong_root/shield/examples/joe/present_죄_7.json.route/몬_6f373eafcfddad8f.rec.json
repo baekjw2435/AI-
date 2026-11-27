@@ -1,0 +1,31 @@
+{
+ "id": "몬_6f373eafcfddad8f",
+ "syllable": "몬",
+ "used_route_words": [
+  "냐짱",
+  "멸치저냐",
+  "죄멸",
+  "즈보우몬",
+  "짱갈래즈",
+  "짱짱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001397,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6cc4e237a0d57f84762142e9c477d83544e44f252bb5f39eaa6dcd53172897cf",
+ "position_sha256": "6f373eafcfddad8f996b988a80ec8344688c0717f1987870a9aa25f4b3a20a7b",
+ "input_sha256": "a3b9732df1936fcbf2e5faafb7e705e14cb5a7fb358b3143f68ad66abfa8dbb1",
+ "proof_bytes": 772
+}

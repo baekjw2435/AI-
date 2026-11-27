@@ -1,0 +1,32 @@
+{
+ "id": "굴_1f76be4bf05c753b",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "샅흰검은말율",
+  "율현마을",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000222,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "1f76be4bf05c753b1021c20d915eb0b22e2944e2ed3c694393c3717a997b3099",
+ "input_sha256": "ddee1c3608f4ac4cb1d88b668ff11f439b1d437c79052492dcc3df8fd6da9dc2",
+ "proof_bytes": 124
+}

@@ -1,0 +1,30 @@
+{
+ "id": "냐_b5573ca86bd397fe",
+ "syllable": "냐",
+ "used_route_words": [
+  "굴저냐",
+  "득첩",
+  "샅굴",
+  "첩음법",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001326,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "b5573ca86bd397feae80126dd6b00cafb492a137ad277f182fd7f8a46968ec14",
+ "input_sha256": "37ea58af77b80ee805b7fe8baf88b37059bbe565dbc9ae53b2d898270d21b6ee",
+ "proof_bytes": 799
+}

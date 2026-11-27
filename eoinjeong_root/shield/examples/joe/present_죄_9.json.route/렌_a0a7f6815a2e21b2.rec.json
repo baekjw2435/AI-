@@ -1,0 +1,30 @@
+{
+ "id": "렌_a0a7f6815a2e21b2",
+ "syllable": "렌",
+ "used_route_words": [
+  "죄상가죄",
+  "죄첩",
+  "첩음법",
+  "톡톡파워풀카가미네렌",
+  "틱톡"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 2.12053,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "81d369f860f10cd3dc6b99e9ce07ce6b7ee70d82c4965659cf227968494125d7",
+ "position_sha256": "a0a7f6815a2e21b23419a4f87fef57d4efa7893009c01059a21bfaccf9112bfe",
+ "input_sha256": "97d8a589b49ceb8727729f805d93d3790d38616cd6a69303ef2fe6bfb50169c2",
+ "proof_bytes": 456361
+}

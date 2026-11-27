@@ -1,0 +1,58 @@
+{
+ "syllable": "곡",
+ "members": [
+  "곡"
+ ],
+ "vertex": "곡",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 56838144,
+  "child_gens": 142812671,
+  "tt_entries": 16687444,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 56838144,
+  "tt_replacements": 25025423,
+  "seconds": 120.001,
+  "pn": 19532,
+  "dn": 793,
+  "best_group": 22,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16687444,
+  "tt_save_seconds": 1.389145,
+  "tt_save_error": "",
+  "proven": {
+   "proven_loaded": 6827727,
+   "proven_inserted": 6827727,
+   "proven_tt_used_after_load": 6827727,
+   "proven_load_seconds": 1.433025,
+   "proven_saved": 3118876,
+   "proven_skipped_small": 0,
+   "proven_skipped_loaded": 6704385,
+   "proven_save_seconds": 0.240845,
+   "proven_save_error": ""
+  },
+  "proven_merge": {
+   "read": 11507484,
+   "distinct": 11480942,
+   "written": 8388608
+  }
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

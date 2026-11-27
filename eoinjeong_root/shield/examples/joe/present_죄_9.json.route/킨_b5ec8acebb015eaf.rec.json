@@ -1,0 +1,30 @@
+{
+ "id": "킨_b5ec8acebb015eaf",
+ "syllable": "킨",
+ "used_route_words": [
+  "냅킨",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000129,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "b5ec8acebb015eaf08b5a488a39ed520458a49686460dce7324fae687ef1bc76",
+ "input_sha256": "7345a12ac408c4c05b814ed8cf96eb65286b02eb78d082ca98dc496a1a7e27fd",
+ "proof_bytes": 124
+}

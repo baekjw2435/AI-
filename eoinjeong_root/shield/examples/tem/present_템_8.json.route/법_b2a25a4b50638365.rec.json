@@ -1,0 +1,27 @@
+{
+ "id": "법_b2a25a4b50638365",
+ "syllable": "법",
+ "used_route_words": [
+  "잎따기법",
+  "획법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.006272,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "509a85d63f58707d4090900936e16ac007d0e70c205f9c0e39ae35bfc51ee0a5",
+ "position_sha256": "b2a25a4b506383653d97b6e46ec3f0f0441d69e9ffa9a4c51a871db3b679c267",
+ "input_sha256": "b13a7cd04d858458d97d1c77e7a2fdf33571dc3b50189283374ea59ddb0aa8eb",
+ "proof_bytes": 1263
+}

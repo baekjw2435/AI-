@@ -1,0 +1,29 @@
+{
+ "id": "험_d3de5f7c111657c7",
+ "syllable": "험",
+ "used_route_words": [
+  "갱도시험",
+  "죄상첨죄",
+  "죄첩",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000908,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b952aa0fbd574e685c492266a72cdb134939069805ee4cc7e143eef8ab3e8f43",
+ "position_sha256": "d3de5f7c111657c7de0abb5aea76211c6edf18a89e7fc434dd11d9f9d04f4b0e",
+ "input_sha256": "de92dd0ba5b2752eaa0f56225f69dc452c64cf4a3a5e52d34bad36772b909e62",
+ "proof_bytes": 1170
+}

@@ -1,0 +1,28 @@
+{
+ "id": "겅_bd9ff25873c961e3",
+ "syllable": "겅",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001671,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fd997b6e685322be4c530756b53051727ba31db2632645293ccdbb4290b7c865",
+ "position_sha256": "bd9ff25873c961e35ec20e38358eed947c6093fc15b5a66bd1473acd6737d6fa",
+ "input_sha256": "cff96b92573856e7a38ae07a42bb322a808ccf2ee41ec4564ba95a33bc8efb71",
+ "proof_bytes": 784
+}

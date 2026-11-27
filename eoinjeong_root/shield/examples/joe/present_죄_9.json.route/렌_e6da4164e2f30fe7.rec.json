@@ -1,0 +1,29 @@
+{
+ "id": "렌_e6da4164e2f30fe7",
+ "syllable": "렌",
+ "used_route_words": [
+  "죄첩",
+  "첩첩",
+  "첩쾌",
+  "형태로만들어선물하고싶은마음카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001155,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2357cf0014894dd1c23bd050f8bc7fb10fb4aa30bbb5ed6a6b7804abf43d93b4",
+ "position_sha256": "e6da4164e2f30fe7b744b84159a200ec30a75a4f590db48d1f7391cd2dc8b4ce",
+ "input_sha256": "cbfa4d9c00c5fd37169082079d0a73e2b9c50cafc699b6dbc2180a0b53472f40",
+ "proof_bytes": 1987
+}

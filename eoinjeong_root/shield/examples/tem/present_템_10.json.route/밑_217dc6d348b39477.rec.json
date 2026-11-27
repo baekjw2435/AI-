@@ -1,0 +1,27 @@
+{
+ "id": "밑_217dc6d348b39477",
+ "syllable": "밑",
+ "used_route_words": [
+  "늠름",
+  "딩동댕지난여름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.015009,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "eacce512d4fa993593d9a464f97322d21f71fc9267ec0b63a98be75bb30cff41",
+ "position_sha256": "217dc6d348b394779d94b26e8c3d0180d34e5a18b85258f50ee3b3d94e1a82b0",
+ "input_sha256": "d87a9161feb3719952f4642ce57e0fb12b3f520cc64b1623313ca1360658bfe1",
+ "proof_bytes": 4090
+}

@@ -1,0 +1,30 @@
+{
+ "id": "률_d24c0aa79230dce2",
+ "syllable": "률",
+ "used_route_words": [
+  "늠균",
+  "늠률",
+  "늠름",
+  "딩동댕지난여름",
+  "밑거름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000548,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5025bdb073db77217873c8569442fc50e785fefb4858a82e1b7eac4e43c55686",
+ "position_sha256": "d24c0aa79230dce2daca747731d13c3730e27129f1a0c2a63399d994d9fee097",
+ "input_sha256": "2155e9cdd9574da25a4b3673487906ad3950d556695ae51a1767cf59a209b996",
+ "proof_bytes": 596
+}

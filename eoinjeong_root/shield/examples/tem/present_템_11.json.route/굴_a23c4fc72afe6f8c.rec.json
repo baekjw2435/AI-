@@ -1,0 +1,27 @@
+{
+ "id": "굴_a23c4fc72afe6f8c",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "쇄쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000183,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "a23c4fc72afe6f8ceface255b427f270659decd93a7d510049ee20a0923a1d15",
+ "input_sha256": "760ef8b68510c06dee686edf3ac62eab72537176d7aa1c9bfcc37d24ba98d63b",
+ "proof_bytes": 124
+}

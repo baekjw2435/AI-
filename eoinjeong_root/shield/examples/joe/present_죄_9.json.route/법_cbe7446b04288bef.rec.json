@@ -1,0 +1,31 @@
+{
+ "id": "법_cbe7446b04288bef",
+ "syllable": "법",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000174,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "cbe7446b04288befeba5e224f30851d28fe6e49c440484421effd2303acd2583",
+ "input_sha256": "c1c349508f59487c35a3a923ee964d603ff7b822974b88b3ccbffbcef0e2f05e",
+ "proof_bytes": 124
+}

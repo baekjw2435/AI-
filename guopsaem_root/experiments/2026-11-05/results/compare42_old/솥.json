@@ -1,0 +1,42 @@
+{
+ "syllable": "솥",
+ "members": [
+  "솥"
+ ],
+ "vertex": "솥",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 60332032,
+  "child_gens": 151410784,
+  "tt_entries": 16552102,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 60332032,
+  "tt_replacements": 19750807,
+  "seconds": 120.000782,
+  "pn": 5591,
+  "dn": 4099,
+  "best_group": 259,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16552102,
+  "tt_save_seconds": 1.335043,
+  "tt_save_error": ""
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

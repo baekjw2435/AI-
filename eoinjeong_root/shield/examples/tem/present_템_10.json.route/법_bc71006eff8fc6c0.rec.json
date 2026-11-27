@@ -1,0 +1,28 @@
+{
+ "id": "법_bc71006eff8fc6c0",
+ "syllable": "법",
+ "used_route_words": [
+  "득첩",
+  "첩음법",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.004212,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0b5ca70c653a789393b966ead6c4e5850d52edc3b653bbc21f4c764fa9c90c4e",
+ "position_sha256": "bc71006eff8fc6c0d7949945ad9663b6432689deb225aba52ebeea6cee4edaf2",
+ "input_sha256": "d4cbba5e6a9abd11e3e165811fb672ac5ad68d2435ea1b038a9382d4220f993f",
+ "proof_bytes": 187
+}

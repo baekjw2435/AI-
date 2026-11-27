@@ -1,0 +1,28 @@
+{
+ "id": "렌_3d44a8dd08b401c8",
+ "syllable": "렌",
+ "used_route_words": [
+  "권폄",
+  "렛츠인조이더무비카가미네렌",
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.015328,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6ea77902554d3681d696012785cdeb3a5d84369cc97bc8671b88d11abea26c08",
+ "position_sha256": "3d44a8dd08b401c8c969dadb2d473b36aefb48ea82becd7a6f29d9b5e115a01f",
+ "input_sha256": "1ddf2a347daeafde2406f76cf8bace4316091b0a609f350829e66ad30226f26e",
+ "proof_bytes": 7844
+}

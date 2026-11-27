@@ -1,0 +1,29 @@
+{
+ "id": "권_3188df5a512aa706",
+ "syllable": "권",
+ "used_route_words": [
+  "득첩",
+  "쇄쇄",
+  "쇄심권",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 2.244734,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "7b5fbf6147ddab36b22e3a319817c7c1c91b4df7b01eb070fd56f8e7064ffd20",
+ "position_sha256": "3188df5a512aa7066d48b21b28647c509d157b106c0db1fde9f9a9c68fcf5633",
+ "input_sha256": "0079e8eb3a5d7191307d41784c1c316dc8bb7ef292c08dd6f5ceec4f060ce6fc",
+ "proof_bytes": 275424
+}

@@ -1,0 +1,30 @@
+{
+ "id": "준_1d2fcaa56e057ea8",
+ "syllable": "준",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩",
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000133,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "1d2fcaa56e057ea8032d434871559a8c984bb94134cc91bf8e97aede5e0928f8",
+ "input_sha256": "21d326c1c9efa5e1def75217d9fdc956a1cc484d299c902a4bf3fbd4df66b357",
+ "proof_bytes": 124
+}

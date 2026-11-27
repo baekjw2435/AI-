@@ -1,0 +1,32 @@
+{
+ "id": "몬_0a3fb1d51df163fb",
+ "syllable": "몬",
+ "used_route_words": [
+  "갑상샘자극호르몬",
+  "렌지로의피묻은장갑",
+  "잎혀",
+  "찍어먹는초코스틱",
+  "톡톡파워풀카가미네렌",
+  "틱톡",
+  "혀채찍"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006116,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "6cc8d86bdb2495f423eab7f9b35b5160db954dc0d98282600e1e1e715031f693",
+ "position_sha256": "0a3fb1d51df163fbc805e8929dbab4efce9dfdc2d2677964a2f953aaf707202b",
+ "input_sha256": "f7c42754459f4dd3d8ef5e0471369b3c67baa8051824e1dbea2f2bd13e365b84",
+ "proof_bytes": 1272
+}

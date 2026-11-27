@@ -1,0 +1,29 @@
+{
+ "id": "권_8c99d287e787e264",
+ "syllable": "권",
+ "used_route_words": [
+  "쇄쇄",
+  "쇄심권",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.40509,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b6f7443be0b114d675e2abb8751e2d350eab41db9a5ac08d7cce3961feb7e506",
+ "position_sha256": "8c99d287e787e2645838852720b4907af025a26fb49449b1b2ed6e8cd89c0e22",
+ "input_sha256": "8a7a87a18a6f17840ab4fe784174939a594fd0bc64a55766cc5d80207613f97e",
+ "proof_bytes": 184422
+}

@@ -1,0 +1,26 @@
+{
+ "id": "렌_0b6fa7df70351aa1",
+ "syllable": "렌",
+ "used_route_words": [
+  "굴대두겁"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.032368,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "0b6fa7df70351aa11fce2003fb3958dd36dfc707ef3b367c194e94433223d85b",
+ "input_sha256": "7d90c8b46b986e16f4bd68682d9c6e0f63d02776708a2ca100a25eb7fa67e1b1",
+ "proof_bytes": 15781
+}

@@ -1,0 +1,31 @@
+{
+ "id": "밑_f67bdfd60589b6ca",
+ "syllable": "밑",
+ "used_route_words": [
+  "섭험",
+  "죄기죄",
+  "죄밑",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000454,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f67bdfd60589b6cadc401310ba1011a0733264aa9412da37479c35443c53bdde",
+ "input_sha256": "119e155e5b12de59470c643f9d42aac5027a655c94160a20c09fc1f469ecaaaa",
+ "proof_bytes": 124
+}

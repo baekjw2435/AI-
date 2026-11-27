@@ -1,0 +1,26 @@
+{
+ "id": "펠_85de9412401b05c3",
+ "syllable": "펠",
+ "used_route_words": [
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.004177,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "75a3b492b843abbc0d65b02734bdcd2f3b86cd14776bd7d4d3e6fd32cb075534",
+ "position_sha256": "85de9412401b05c389b2e41af29d78b7d99a5f5b06b493bec7b9cea368bfa356",
+ "input_sha256": "0ab7ce80606bed382655dabdb7a5ce76d401b290d6fdadbea758e37e212e3768",
+ "proof_bytes": 3291
+}

@@ -1,0 +1,28 @@
+{
+ "id": "걱_7c6244358fe27f13",
+ "syllable": "걱",
+ "used_route_words": [
+  "쇄석포도법",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000305,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b8b3e7810fda0c1a8183d4e8666d0209f61b3b76659d63a45fc923b3f0d151fe",
+ "position_sha256": "7c6244358fe27f13f4c16a7acc8c51c464e915d5db80b61c7dfc67f3c5cc48e9",
+ "input_sha256": "514ecc821744e429e8a55ebca340ed13c39d8932cc33e0794fba99ca8f02ed7c",
+ "proof_bytes": 430
+}

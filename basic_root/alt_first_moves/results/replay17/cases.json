@@ -1,0 +1,50 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-replay17-v1:\" + id), first 999",
+ "eligible": 4,
+ "eligible_by_source": {
+  "활": 4
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "h01",
+   "id": "언/언어생활",
+   "syllable": "언",
+   "word": "언어생활",
+   "source": "활",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "h02",
+   "id": "학/학교생활",
+   "syllable": "학",
+   "word": "학교생활",
+   "source": "활",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "h03",
+   "id": "식/식생활",
+   "syllable": "식",
+   "word": "식생활",
+   "source": "활",
+   "split": "final",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  },
+  {
+   "name": "h04",
+   "id": "교/교활",
+   "syllable": "교",
+   "word": "교활",
+   "source": "활",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 0
+  }
+ ]
+}

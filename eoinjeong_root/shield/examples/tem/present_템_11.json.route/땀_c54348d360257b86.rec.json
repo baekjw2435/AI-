@@ -1,0 +1,27 @@
+{
+ "id": "땀_c54348d360257b86",
+ "syllable": "땀",
+ "used_route_words": [
+  "갱생보호법",
+  "밑땀"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006803,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "047fb87f50bb3381a5af02042c4f622fa06425cedba1062fbc6243daa66817e6",
+ "position_sha256": "c54348d360257b869f843a706ef7ee4f19fac753dd0747a6d8fdb5aa9afc52a4",
+ "input_sha256": "50326e2eac8982ed96db183afcd185b9317961652a534ad77c8d018944b88264",
+ "proof_bytes": 8403
+}

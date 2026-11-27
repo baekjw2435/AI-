@@ -1,0 +1,31 @@
+{
+ "id": "샅_869c315f23fbd198",
+ "syllable": "샅",
+ "used_route_words": [
+  "냐짱",
+  "잇샅",
+  "즈브스킨",
+  "짱갈래즈",
+  "짱짱",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.016467,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "252e8c4c941683841e71683bdbce2573744c6261b8af412da826d233f8bd4258",
+ "position_sha256": "869c315f23fbd198d8fbfd8bd1478db6672dfec1eaf4da27f3866b70a9a49e5e",
+ "input_sha256": "44e0cd89c1efc50df06a0207238f54cfb4186fb2cc7642b1a239b4ed97213d94",
+ "proof_bytes": 4325
+}

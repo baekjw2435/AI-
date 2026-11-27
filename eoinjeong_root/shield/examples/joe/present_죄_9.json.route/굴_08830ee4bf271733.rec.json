@@ -1,0 +1,33 @@
+{
+ "id": "굴_08830ee4bf271733",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "권폄",
+  "쇄쇄",
+  "쇄심권",
+  "죄인의벗을수없는족쇄",
+  "폄척"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000172,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "08830ee4bf2717334763615b4e6074f71eda46b9118f0406baedacd3dbc10c5c",
+ "input_sha256": "b9a01f8f87bf78b0b3a100a69361ef8f97c58bfd069f3e409682ed24f6e096d2",
+ "proof_bytes": 124
+}

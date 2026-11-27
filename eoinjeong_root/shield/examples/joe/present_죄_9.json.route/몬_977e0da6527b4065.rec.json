@@ -1,0 +1,30 @@
+{
+ "id": "몬_977e0da6527b4065",
+ "syllable": "몬",
+ "used_route_words": [
+  "룻스키즈",
+  "죄기죄",
+  "죄첩",
+  "즈보우몬",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000165,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2f210155cc3ff5c3896ed571fbd4b4b6d4ac17f073699dc8c14ab3c6dd3604ca",
+ "position_sha256": "977e0da6527b40651f59df7271e9efbd56e31df0583cdb5371273b5334926abb",
+ "input_sha256": "22f87401a9fc1e62f4c6efc35c9d6a40b689ebad75f3ebab71455de2719d98fb",
+ "proof_bytes": 181
+}

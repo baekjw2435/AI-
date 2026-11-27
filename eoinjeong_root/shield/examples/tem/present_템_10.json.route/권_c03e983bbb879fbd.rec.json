@@ -1,0 +1,28 @@
+{
+ "id": "권_c03e983bbb879fbd",
+ "syllable": "권",
+ "used_route_words": [
+  "늠름",
+  "딩동댕지난여름",
+  "읍권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.03559,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ba7d8c89d5fa3d1ea052bdbd2692f870377649db507dec8549ac22ac54075903",
+ "position_sha256": "c03e983bbb879fbd6ed90d9a96bbcf55eeeb5baee0c248a109728b4faa081583",
+ "input_sha256": "ce59775e012cc6377b7e933b579b7b49ee45c7677e82a63e6a1b829288f0e4c5",
+ "proof_bytes": 9248
+}

@@ -1,0 +1,29 @@
+{
+ "id": "을_47cafb57664ef507",
+ "syllable": "을",
+ "used_route_words": [
+  "샅흰검은말율",
+  "쇄쇄",
+  "율현마을",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000506,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1d1ac02bc5372da4935ae6747914a576d372e28d22b7689fc950fa2ab4edae31",
+ "position_sha256": "47cafb57664ef507d2fc1c44bea082957284beffcca6993309377ee346a16e6f",
+ "input_sha256": "9977a2ac5d946f962f899652eaf786461f6f0285b5b18aa8a4f98ffb21187b55",
+ "proof_bytes": 407
+}

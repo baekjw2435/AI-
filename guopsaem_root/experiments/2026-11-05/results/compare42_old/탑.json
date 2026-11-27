@@ -1,0 +1,42 @@
+{
+ "syllable": "탑",
+ "members": [
+  "탑"
+ ],
+ "vertex": "탑",
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 58155008,
+  "child_gens": 145155738,
+  "tt_entries": 16547113,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 58155008,
+  "tt_replacements": 19048678,
+  "seconds": 120.00234,
+  "pn": 2272,
+  "dn": 5402,
+  "best_group": 547,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 2,
+  "tt_saved": 16547113,
+  "tt_save_seconds": 1.310318,
+  "tt_save_error": ""
+ },
+ "solver_binary": "/home/user/AI-/.work/measure/solver_v5",
+ "proof_format": "v4",
+ "verified": false
+}

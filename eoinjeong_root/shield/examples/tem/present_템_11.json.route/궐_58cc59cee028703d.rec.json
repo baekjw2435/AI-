@@ -1,0 +1,27 @@
+{
+ "id": "궐_58cc59cee028703d",
+ "syllable": "궐",
+ "used_route_words": [
+  "갱신청구권",
+  "권폄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.013969,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fee43faea8322abaa195e0d0aafee956781348b9dfa4274a5c49ba4d2aa1f559",
+ "position_sha256": "58cc59cee028703d10c11c0bb5995b4ffcecab340e8f1e81532a8f9fd1644bf3",
+ "input_sha256": "ad34e5457fd80a63114447b7267063873bb8ff0aef863b13140d7a9100e7d6cb",
+ "proof_bytes": 6930
+}

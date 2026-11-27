@@ -1,0 +1,26 @@
+{
+ "id": "겟_1acb4960079ab8b8",
+ "syllable": "겟",
+ "used_route_words": [
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.005227,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "f0a9d8b0b2d7055e50e0c7383eed473109e73f2ec2291a55166a9ca015be4a24",
+ "position_sha256": "1acb4960079ab8b826047a781626c84ef344bbc5ed4975e38786184f00dd9b94",
+ "input_sha256": "73bde4c65c51b026b057f73cfbb96718f7d5b197c17ddbd6ee5679dea3d280ec",
+ "proof_bytes": 4727
+}

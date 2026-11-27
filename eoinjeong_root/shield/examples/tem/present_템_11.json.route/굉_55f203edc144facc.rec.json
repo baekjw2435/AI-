@@ -1,0 +1,29 @@
+{
+ "id": "굉_55f203edc144facc",
+ "syllable": "굉",
+ "used_route_words": [
+  "갱신청구권",
+  "굉굉",
+  "득첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001952,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d654ff35b2e214bd0fd9e6e9b9c8af82798cf14facba293f29f71fef01ca9dad",
+ "position_sha256": "55f203edc144facc0f0bb32276eea1fda3fbea2af5063b7f936d78928e0b50a5",
+ "input_sha256": "0992070648361220c2ba82c4cfcfc9c1ab1e17a78fb2c9e9d442a055d7a9f098",
+ "proof_bytes": 1407
+}

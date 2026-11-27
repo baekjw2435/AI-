@@ -1,0 +1,32 @@
+{
+ "id": "굴_f673e8e4ee5380f7",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "즈브스킨",
+  "톤데모원더즈",
+  "톤톤",
+  "획죄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000167,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f673e8e4ee5380f72a20192d78ec6966582eeba156b8bda00d578481f6e9baa1",
+ "input_sha256": "8d40dc3342eda769ee923071f35665d8a5c2765a2c1a08e55087f29413e6270d",
+ "proof_bytes": 124
+}

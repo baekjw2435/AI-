@@ -1,0 +1,27 @@
+{
+ "id": "궐_9fc30131d3087e77",
+ "syllable": "궐",
+ "used_route_words": [
+  "죄죄",
+  "죄첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.060802,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5ecc3fe09ca6c588f0a58bc2aa0e78dd7af46b1b2a0d679c94e15c073892e8c0",
+ "position_sha256": "9fc30131d3087e77ebca2b8847b0162772a1d4aa7d9ba74a2284967d9cb8df78",
+ "input_sha256": "fcd4ceda475dbfaaa9c6eae6efdd0fbfefc9d4b5f9aaca0182d9ea8dbf105f13",
+ "proof_bytes": 29220
+}

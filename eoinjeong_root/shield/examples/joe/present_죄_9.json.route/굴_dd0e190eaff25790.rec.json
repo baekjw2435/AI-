@@ -1,0 +1,30 @@
+{
+ "id": "굴_dd0e190eaff25790",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "섭도마을",
+  "죄상첨죄",
+  "죄첩",
+  "첩섭"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00028,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "dd0e190eaff2579078e554577febc8a043867483a4c26a1630efdeaece89785d",
+ "input_sha256": "acfa1ef14ccd1d8d137165cb59a1b3ed7444d53a4e93185056eb0a3b28519517",
+ "proof_bytes": 124
+}

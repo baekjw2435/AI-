@@ -1,0 +1,31 @@
+{
+ "id": "굴_9f07bcf733f25c2b",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁겁",
+  "겁나는얼굴",
+  "겁낼겁",
+  "늠름",
+  "딩동댕지난여름",
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000141,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "9f07bcf733f25c2bb47f668886a7a09e9b7bde59cef32d8bab8d83f57fa5a070",
+ "input_sha256": "bbcc7be52c9a68a4781b340c322257ca2215986a1d0e95f8d3caa10379dc45e6",
+ "proof_bytes": 124
+}

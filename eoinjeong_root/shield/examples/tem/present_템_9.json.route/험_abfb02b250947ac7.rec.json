@@ -1,0 +1,28 @@
+{
+ "id": "험_abfb02b250947ac7",
+ "syllable": "험",
+ "used_route_words": [
+  "권폄",
+  "험할험",
+  "험험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000909,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "01f1ae38e689ee16373f8df4a24e1e6cd39e42e077deb39f162f92ce64880e85",
+ "position_sha256": "abfb02b250947ac7298f5399a96babff72e431aeda9b7b967ddc799ab84d10ba",
+ "input_sha256": "b66eb983e5a060d35d0e9ac7f451e5efc65966af6326b2b8d229708df0842009",
+ "proof_bytes": 1307
+}

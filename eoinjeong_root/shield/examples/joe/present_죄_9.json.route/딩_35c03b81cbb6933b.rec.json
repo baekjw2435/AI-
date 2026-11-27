@@ -1,0 +1,30 @@
+{
+ "id": "딩_35c03b81cbb6933b",
+ "syllable": "딩",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000131,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "35c03b81cbb6933bde02fba886050030bba0d3e020e89e8ad733e5e495d8465b",
+ "input_sha256": "c607b375f28c2fca36a0487d410cb287d2acd651113a092d973b3479375a2d6c",
+ "proof_bytes": 124
+}

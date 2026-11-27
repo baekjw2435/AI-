@@ -1,0 +1,27 @@
+{
+ "id": "굴_f4f675ef0ca4c3ac",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "윙치킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000133,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f4f675ef0ca4c3ac0d76f5d29eb9e164504d3282def14b9a3760a95cf140638c",
+ "input_sha256": "703248ab24902f08b36247c8f2accf6eb4a610da3bcba04f5441de6a9ff8b123",
+ "proof_bytes": 124
+}

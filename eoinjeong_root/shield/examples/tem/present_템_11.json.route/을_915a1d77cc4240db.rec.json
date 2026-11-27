@@ -1,0 +1,28 @@
+{
+ "id": "을_915a1d77cc4240db",
+ "syllable": "을",
+ "used_route_words": [
+  "죄율",
+  "획죄",
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003373,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "74f60259aefd3175da2f5fe0be8c9775b1c75404f4134e21e78c6d5fcd4ab4b0",
+ "position_sha256": "915a1d77cc4240db5b19b0557a7f9e26dbf89465e0474a6feb414c1ddf9dfddf",
+ "input_sha256": "22b84b9d49243a581d4913860aed8c1102feeee6dbd45a4dfd7c38cd03733aa1",
+ "proof_bytes": 2532
+}

@@ -1,0 +1,28 @@
+{
+ "id": "궐_145bed27f9b6128c",
+ "syllable": "궐",
+ "used_route_words": [
+  "늠률",
+  "늠름",
+  "율현마을"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.015474,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "25254fc4f16dc02ab7db3ce2f0ffae058d041dc3635b656916ff9a5ff2ea8058",
+ "position_sha256": "145bed27f9b6128cbc113d99d4a783f819adebe7efae3298e259c7462363e76e",
+ "input_sha256": "6ea0d289b0f92ce4ccfabe301465772299260591102d90026e87ca33435cb0ec",
+ "proof_bytes": 2455
+}

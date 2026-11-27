@@ -1,0 +1,26 @@
+{
+ "id": "겅_fc6f697ea98b47b2",
+ "syllable": "겅",
+ "used_route_words": [
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.0012,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d73fcd14d44e123ef1ac6654c60564b1da41a5cc11ce1c245eda863747f44483",
+ "position_sha256": "fc6f697ea98b47b29e5ebf7b753a982c713aada1d7f6494c0e50dab24a3b6a20",
+ "input_sha256": "e87400b13dd94ec39133cd85b107f297873c21bcbd5f3bba06262a57abfce1a0",
+ "proof_bytes": 779
+}

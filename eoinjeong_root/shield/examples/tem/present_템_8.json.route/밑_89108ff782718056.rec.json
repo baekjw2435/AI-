@@ -1,0 +1,26 @@
+{
+ "id": "밑_89108ff782718056",
+ "syllable": "밑",
+ "used_route_words": [
+  "획획"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.003735,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a361afadc7f48444194bf53a4cb734abe424939bb1276bed175e71f6ad9e7b15",
+ "position_sha256": "89108ff782718056e01f67f738c686491f521ffb7f570eb20e68547c6285696a",
+ "input_sha256": "33121b61c8accaea3f2529f570ee468b058da774cd4f3e95c5a239c6051c0624",
+ "proof_bytes": 2428
+}

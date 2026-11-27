@@ -1,0 +1,29 @@
+{
+ "id": "렌_0e10b30a8b24c2e9",
+ "syllable": "렌",
+ "used_route_words": [
+  "권력형",
+  "쇄쇄",
+  "쇄심권",
+  "형태로만들어선물하고싶은마음카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.733519,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "5681e8ca516e336b4a98aa36897c4af57159fc7920db7038bdf318c5d3fd80e3",
+ "position_sha256": "0e10b30a8b24c2e958b78454a62f85b3b2a0062933ab42a7051f5d7145824487",
+ "input_sha256": "f78f17cc004a452ad8cb8c61d47d8382e0d68e30e390596e62b94863eb7eb15a",
+ "proof_bytes": 138040
+}

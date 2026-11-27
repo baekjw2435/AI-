@@ -1,0 +1,31 @@
+{
+ "id": "굴_b1d82c05fdf243ae",
+ "syllable": "굴",
+ "used_route_words": [
+  "겁나는얼굴",
+  "겐키드럭스토어즈",
+  "겔렌데슈프링겐",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000157,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "b1d82c05fdf243aecf41347d53b184a2dd9324d70746452bd9a746adf4b76ec0",
+ "input_sha256": "b629a245aa9ff46622ef2f2f688f9520a8417fbf63aa6f44369db72aac7abf2f",
+ "proof_bytes": 124
+}

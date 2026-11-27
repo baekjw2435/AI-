@@ -1,0 +1,26 @@
+{
+ "id": "겐_e55a8a214ce063bc",
+ "syllable": "겐",
+ "used_route_words": [
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00104,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4c55c0297dd1a9c64f0f5b818bb4577d6520979a2519011020b09f203adee2f0",
+ "position_sha256": "e55a8a214ce063bc2e4567b0c7d32f08e1d9e6f4cbc7613f18b2d4b2c32065ba",
+ "input_sha256": "ee979bc80b4fa06f45777d65fe67719c3f3436d9b1bcf27d0c5702855cd26b25",
+ "proof_bytes": 784
+}

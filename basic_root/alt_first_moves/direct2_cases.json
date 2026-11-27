@@ -1,0 +1,20 @@
+{
+ "rule": "any split, no verified verdict, source prepared in sources; sorted by sha256(\"alt817-direct2-v1:\" + id), first 999",
+ "eligible": 1,
+ "eligible_by_source": {
+  "온": 1
+ },
+ "excluded": [],
+ "cases": [
+  {
+   "name": "e01",
+   "id": "삼/삼한사온",
+   "syllable": "삼",
+   "word": "삼한사온",
+   "source": "온",
+   "split": "tune",
+   "root_form": "kept",
+   "earlier_search_seconds": 600.001
+  }
+ ]
+}

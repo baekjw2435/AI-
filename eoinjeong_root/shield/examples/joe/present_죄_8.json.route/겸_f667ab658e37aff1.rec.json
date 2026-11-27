@@ -1,0 +1,28 @@
+{
+ "id": "겸_f667ab658e37aff1",
+ "syllable": "겸",
+ "used_route_words": [
+  "냐짱",
+  "준치저냐",
+  "짱짱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.01169,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "90fd40213d8080996c8eb0e9f578d5ede54302f21537ad5838aaa72a2c76970d",
+ "position_sha256": "f667ab658e37aff1c228c9bd2e068a971ee35ab54fa7f0365218231f517ef02d",
+ "input_sha256": "c3f68208fd24d372c234947a0215f7df2c0b08dc0440d5677153fbe5bd853bf3",
+ "proof_bytes": 9524
+}

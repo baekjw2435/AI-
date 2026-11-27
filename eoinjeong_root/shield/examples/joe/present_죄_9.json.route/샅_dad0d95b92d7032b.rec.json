@@ -1,0 +1,29 @@
+{
+ "id": "샅_dad0d95b92d7032b",
+ "syllable": "샅",
+ "used_route_words": [
+  "쇄쇄",
+  "잇샅",
+  "죄인의벗을수없는족쇄",
+  "펠릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000611,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "32c27c56e0aa87b65ba5d954e3f94cd079e56615357a1f2ec837a0fb229b3e16",
+ "position_sha256": "dad0d95b92d7032bca19f0a5843f5e31e932518bcdaafd32c1429b064e059458",
+ "input_sha256": "33cbc28f58567242202b7685ba690a2017561c545b52b09848b149edbc2fa57b",
+ "proof_bytes": 886
+}

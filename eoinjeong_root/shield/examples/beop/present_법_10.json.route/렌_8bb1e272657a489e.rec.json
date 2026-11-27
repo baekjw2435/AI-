@@ -1,0 +1,26 @@
+{
+ "id": "렌_8bb1e272657a489e",
+ "syllable": "렌",
+ "used_route_words": [
+  "렛츠인조이더무비카가미네렌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.051861,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b602a66f8438839e2e444328e66dc77de620c58f5be837791486a3cc588231e6",
+ "position_sha256": "8bb1e272657a489ee34006c4e21f6de22b049515bf30bd13f53d5096501ab62b",
+ "input_sha256": "9509f7f7b8ed130d1188eb402f912078eaaace69648ad51ad10d310bbfe0825e",
+ "proof_bytes": 15781
+}

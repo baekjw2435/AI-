@@ -1,0 +1,31 @@
+{
+ "id": "형_b4c03e8dc47f48aa",
+ "syllable": "형",
+ "used_route_words": [
+  "섭험",
+  "죄첩",
+  "척변이형",
+  "척하면척",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.00016,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "b4c03e8dc47f48aad4477e2e5be04b39ca9df32ab8fce70a8c4646ddb2c73a1b",
+ "input_sha256": "b41e38bac7b73ee88e8025771ecbd3b5f3ad03a7e02ae1e07a212a7348b134d1",
+ "proof_bytes": 124
+}

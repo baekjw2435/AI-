@@ -1,0 +1,27 @@
+{
+ "id": "냐_b8b5c877ad77681f",
+ "syllable": "냐",
+ "used_route_words": [
+  "톤세법",
+  "톤톤"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000948,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a272ff239c4123ecfe9bb60289d1ff90e71392156acf31e40bcf324226f15a44",
+ "position_sha256": "b8b5c877ad77681fcd34f74347fd2030d8293cf8a3fb9807596a2a5bfced49cc",
+ "input_sha256": "8f229313828b128af2da8a28d4abae93ecf0c588e61f11feda219215530ec620",
+ "proof_bytes": 799
+}

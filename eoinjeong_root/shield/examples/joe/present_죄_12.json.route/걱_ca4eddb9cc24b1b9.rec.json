@@ -1,0 +1,26 @@
+{
+ "id": "걱_ca4eddb9cc24b1b9",
+ "syllable": "걱",
+ "used_route_words": [
+  "샅흰검은말율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000732,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "762db06b7625bc8ddf980ce6912ac6eb38b91c7248821464f359cc89d24cdf68",
+ "position_sha256": "ca4eddb9cc24b1b977c42b23110d69de5718174820e253007e1793855b952e4c",
+ "input_sha256": "1a3a4c9d3306f29c09282b388580c219f79995dd78b78d60dd03dc28fcebe847",
+ "proof_bytes": 1296
+}

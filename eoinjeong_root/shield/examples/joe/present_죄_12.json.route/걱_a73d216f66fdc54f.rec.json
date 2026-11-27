@@ -1,0 +1,26 @@
+{
+ "id": "걱_a73d216f66fdc54f",
+ "syllable": "걱",
+ "used_route_words": [
+  "샅굴"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000813,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "a73d216f66fdc54f81fea1171ecdc2052610754fe941a9af4516c83c0fa6f678",
+ "input_sha256": "5b5d0a39d02642925c146fe35fac79b7bc26086178087ad8a7196ea95f765b38",
+ "proof_bytes": 1271
+}

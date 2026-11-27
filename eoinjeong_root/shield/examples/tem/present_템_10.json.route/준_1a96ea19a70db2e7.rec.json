@@ -1,0 +1,26 @@
+{
+ "id": "준_1a96ea19a70db2e7",
+ "syllable": "준",
+ "used_route_words": [
+  "험준"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001611,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "af1ea8cba2a440205d13463ee73aad9f498b5c63342812f46a0fc6dca5b233fe",
+ "position_sha256": "1a96ea19a70db2e7421b75a2f5146a754b08e2c9009e2e93e0d1fbadb9289a24",
+ "input_sha256": "167eaa72b4bf10a8855773fb48444263e38dc4020d9fae0f1e307f9ae6e26e9b",
+ "proof_bytes": 805
+}

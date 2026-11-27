@@ -1,0 +1,27 @@
+{
+ "id": "법_b8582be0656d7437",
+ "syllable": "법",
+ "used_route_words": [
+  "샅흰검은말율",
+  "잎주기법"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002056,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "b78cb7d78cb8e80465bfc4f70c48e9ed97a78770f33439cd99a29f90388a9058",
+ "position_sha256": "b8582be0656d74374dead1beceb57b0eeccaeca5a059e65360814403b779716a",
+ "input_sha256": "223bc8648b30c80664a02f2d8253496bad6fe9e9dda9365e434c5ec9756d805e",
+ "proof_bytes": 1290
+}

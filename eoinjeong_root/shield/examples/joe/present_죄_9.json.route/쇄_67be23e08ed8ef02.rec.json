@@ -1,0 +1,31 @@
+{
+ "id": "쇄_67be23e08ed8ef02",
+ "syllable": "쇄",
+ "used_route_words": [
+  "섭험",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000233,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "67be23e08ed8ef02f1f329bc2a09d639120f7dc7f36e618b4588bfe0894b23bc",
+ "input_sha256": "bc745f5de28bb8fc5519166115018adea94ae46f69a194d71d28a3ac1191f3c0",
+ "proof_bytes": 124
+}

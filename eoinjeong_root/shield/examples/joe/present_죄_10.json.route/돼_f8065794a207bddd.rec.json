@@ -1,0 +1,28 @@
+{
+ "id": "돼_f8065794a207bddd",
+ "syllable": "돼",
+ "used_route_words": [
+  "냐짱",
+  "준치저냐",
+  "짱짱"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.01458,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "22f3ebbb47b8777fac0f44dac7fd304a038eaed2d33e1733a99cc4060e3d3f10",
+ "position_sha256": "f8065794a207bddd12e1c93533c4f219bfd388e98d3b148eff34086853970b01",
+ "input_sha256": "763dc44c62acd59edbf1b890ae69daf573150bdf865f36c080013b135d57ec3a",
+ "proof_bytes": 12528
+}

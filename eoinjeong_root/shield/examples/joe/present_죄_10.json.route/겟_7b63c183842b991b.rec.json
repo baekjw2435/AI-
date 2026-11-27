@@ -1,0 +1,26 @@
+{
+ "id": "겟_7b63c183842b991b",
+ "syllable": "겟",
+ "used_route_words": [
+  "갱도시험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.006109,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "40cef6df53c1d420f7ee6335bd5354240aec228006dab16a4778b43f7cd40b5f",
+ "position_sha256": "7b63c183842b991b57e04f00aa7bdc0e56b445e2bf504c0737255c27cd06f319",
+ "input_sha256": "7aeb6761975f80c674165ba75530f0e33a73e1ad77df2413cd8d836deb89819a",
+ "proof_bytes": 5292
+}

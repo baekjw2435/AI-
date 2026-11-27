@@ -1,0 +1,28 @@
+{
+ "id": "름_aa43886381413c9d",
+ "syllable": "름",
+ "used_route_words": [
+  "갱생보호법",
+  "늠름",
+  "샅바씨름"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.020077,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "35d7f027ba23443b24a8f08ac0baf422d345f3477b20f0075aa66fc982b75808",
+ "position_sha256": "aa43886381413c9d1e5d917cab25d8297521fc88a7cd15ee2e751192eb4c9ba4",
+ "input_sha256": "d27fe741672d787e0aad5be1375cc5cb602532261d1cdfb954b699d1aab8923f",
+ "proof_bytes": 8347
+}

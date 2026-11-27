@@ -1,0 +1,28 @@
+{
+ "id": "겸_5cd8af36a21ff2d9",
+ "syllable": "겸",
+ "used_route_words": [
+  "쇄석포도법",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001746,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "1fbbbf5290cfad0a448332a57927c66a5e769fc5347a6673c39f4c1c0b3e1673",
+ "position_sha256": "5cd8af36a21ff2d9a700a82452903f0f109b709da226f4f62edbceedbc27254d",
+ "input_sha256": "73ab84668a999660c302116c26628cd480f3caf7433a9123c7faf224e1f13146",
+ "proof_bytes": 1687
+}

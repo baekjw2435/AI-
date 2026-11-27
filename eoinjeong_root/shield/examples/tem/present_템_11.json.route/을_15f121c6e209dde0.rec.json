@@ -1,0 +1,29 @@
+{
+ "id": "을_15f121c6e209dde0",
+ "syllable": "을",
+ "used_route_words": [
+  "득첩",
+  "법원검찰청복사골문화센터반달마을",
+  "폄척",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002669,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "89ed79a319591e890e7930d2f61615a282319d20f67259c2b2a7c9dce164be20",
+ "position_sha256": "15f121c6e209dde0fdba4c5c2ba0496ab1ea3330a7985c8927010add69dd77fe",
+ "input_sha256": "25948cec87996b360e94a0f3cf84002a7c668367eed6c9062375925751be2838",
+ "proof_bytes": 1590
+}

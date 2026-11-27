@@ -1,0 +1,96 @@
+{
+  "artifact": "new-independent-route-verifier-v2",
+  "date_kst": "2026-10-28",
+  "main": "verify_v2.py",
+  "required_sibling": "verify.py",
+  "dictionary_words": 817,
+  "legacy_FCT1_supported": false,
+  "proof_format": "route-proof-v2",
+  "files": [
+    {
+      "path": "INTERFACE.md",
+      "bytes": 2595,
+      "sha256": "9cb9e2bab472bd5c2a7a3e0fdb8dbec2462e43c5d35e5d4de30951db59356b55"
+    },
+    {
+      "path": "INTERFACE_v2.md",
+      "bytes": 2965,
+      "sha256": "adb63e2b791fda843f51aaa255a8abca929b329dd53bc34e8f977156b462b898"
+    },
+    {
+      "path": "README_KO.txt",
+      "bytes": 4229,
+      "sha256": "f35e7376527b1283fad5263b349947a31392d7ee0fa4cb94acf2c132a9bb12f1"
+    },
+    {
+      "path": "check_example.py",
+      "bytes": 441,
+      "sha256": "b8acd6c0cd1e949a4c6af067c984c378a37b2d169cfd823f8956c1cb352f8348"
+    },
+    {
+      "path": "examples/sik/position.json",
+      "bytes": 93,
+      "sha256": "d6b2bec1444040e70632bff39b91dd28e3be47b832780e25fb27631863301929"
+    },
+    {
+      "path": "examples/smoke/input.txt",
+      "bytes": 6180,
+      "sha256": "90d1ef046c1c9d63a08dfa0914baf0a9a2944c3b7229d2e3afa7ec9c527f79be"
+    },
+    {
+      "path": "examples/smoke/position.json",
+      "bytes": 268,
+      "sha256": "dc15f7254d4ecf390a44870230365b2b1b638e8f3da8f16c5e118f6350de4e78"
+    },
+    {
+      "path": "examples/smoke/proof.jsonl",
+      "bytes": 1540,
+      "sha256": "f546a694a44f572f666ab354168f5e7c8ff2b01894533b1dfd69ebdb70310264"
+    },
+    {
+      "path": "examples/smoke/search.json",
+      "bytes": 205,
+      "sha256": "c3663fed890a8ecc23ac255c78f4a4bac3510e14d35e5ab86e047004ff6e51cc"
+    },
+    {
+      "path": "examples/yeokpung/position.json",
+      "bytes": 65,
+      "sha256": "cf4147a50bdd028a8bf46ef5161b044406056f03327fccfd989491e3007b8149"
+    },
+    {
+      "path": "model_audit.md",
+      "bytes": 8958,
+      "sha256": "b52a98e81404af41083ba578f96c67005f276bc2c848b50e7ef69f365b814e19"
+    },
+    {
+      "path": "solver_v2.cpp",
+      "bytes": 15113,
+      "sha256": "842e8f2f0e3fa0c219cb7b37314c39ce0166ab3949647cc02759142d72ad3b50"
+    },
+    {
+      "path": "test_verifier_v2.py",
+      "bytes": 11484,
+      "sha256": "90068e77462aeec47b3c79cb89abe7c53e4f020a2457f292849bc9bd6725b95a"
+    },
+    {
+      "path": "verification_v2_test_results.json",
+      "bytes": 1712,
+      "sha256": "469dc6c508648a27c5936b08f3564deef967806a3580bde3faf41e51185b0dee"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 14736,
+      "sha256": "b08c2491b95d6ccc477b385e648581f970d48961df06ceb6f2a9bd81ad1b5ec3"
+    },
+    {
+      "path": "verify_v2.py",
+      "bytes": 10781,
+      "sha256": "9019cd1da696c7cc2db7faf6a37a6fe69614f83697a855884bcbdcca6360e69f"
+    },
+    {
+      "path": "words.txt",
+      "bytes": 6966,
+      "sha256": "aa37031019f1e2a95b422ffc2f8d8d1b76b03ca88163b03b17af16ff90c79273"
+    }
+  ]
+}

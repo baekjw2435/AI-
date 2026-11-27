@@ -1,0 +1,28 @@
+{
+ "id": "득_bc7392bf7a59eae3",
+ "syllable": "득",
+ "used_route_words": [
+  "득률",
+  "율현마을",
+  "을종근로소득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.001955,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c3193498bd3993e072c4ff87b304ba934f44260d590038cd28fe0effa21f1b7d",
+ "position_sha256": "bc7392bf7a59eae3a5d7332fe124493482e356b946c71a97b7860bf5aad3f357",
+ "input_sha256": "5298ffc5306fabe56d92dd0decfc5cd127812bab029f4de7c3607b8106feb350",
+ "proof_bytes": 1817
+}

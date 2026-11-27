@@ -1,0 +1,30 @@
+{
+ "id": "척_94d2a83a70e70706",
+ "syllable": "척",
+ "used_route_words": [
+  "득첩",
+  "뼈바를척",
+  "척추뼈",
+  "첩첩",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000254,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "312e65d23f2c912aab23ac78dd1449cc2dab06c9d5bd5d2d08daac7b68fcf05f",
+ "position_sha256": "94d2a83a70e707065d8b3573c8c92b62881908105fd3b1a24dff27c07a96dbf0",
+ "input_sha256": "ddafc2a63e41d646d1d01d6918db6134a6c2dc5978a3eac1f9fb49edc288373a",
+ "proof_bytes": 300
+}

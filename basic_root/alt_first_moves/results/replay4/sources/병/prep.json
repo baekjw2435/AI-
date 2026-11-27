@@ -1,0 +1,33 @@
+{
+ "syllable": "병",
+ "vertex": "병",
+ "result_for_receiver": "W",
+ "runs": 1,
+ "search_seconds_spent": 0.802,
+ "spent_is_lower_bound": false,
+ "lost_runs": [],
+ "rejected_certificates": 0,
+ "mid_calls": 515055,
+ "proof_nodes": 7789,
+ "proof_seconds": 0.126452,
+ "solver_wall_seconds": 1.63,
+ "verify_seconds": 0.154,
+ "verify_wall_seconds": 0.16,
+ "proof_bytes": 57386,
+ "proof_sha256": "88fad0dc1c140c8203f13182c2760e92397ef109a9e33c2e36f67bab33e80118",
+ "position_sha256": "5544d3fd15a13432e5eea406b9e38337829c43de4c146055802d6ec6f046c890",
+ "input_sha256": "e490802ef34de97b64f24a9c733d6a59225c89f949015f92a2f0b0bd4f683c53",
+ "tt_mb": 1024,
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "verifier": "verify_v4 (C++)",
+ "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714"
+}

@@ -1,0 +1,31 @@
+{
+ "id": "몬_bf8de1f4eeb35562",
+ "syllable": "몬",
+ "used_route_words": [
+  "갑상샘자극호르몬",
+  "렌지로의피묻은장갑",
+  "렛츠인조이더무비카가미네렌",
+  "죄죄",
+  "죄첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001845,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a239fdb8b9fca71ee31f341ec435f898146178460a043e4c3b3b10dd33bb97d3",
+ "position_sha256": "bf8de1f4eeb35562ab2d4eaeb395c729e6db8f89a3f2d547e990ab39fcb731f7",
+ "input_sha256": "9250806cb9c14255eca5d881c9d65d5b9dfb98ad7eaf85f0b56c8eb7b16d331e",
+ "proof_bytes": 1622
+}

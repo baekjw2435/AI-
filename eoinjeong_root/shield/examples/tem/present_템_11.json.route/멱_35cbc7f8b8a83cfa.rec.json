@@ -1,0 +1,29 @@
+{
+ "id": "멱_35cbc7f8b8a83cfa",
+ "syllable": "멱",
+ "used_route_words": [
+  "겁겁",
+  "겁낼겁",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.686215,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "af18d8e3d2a44140881d06dcbaa59ae3216ff28ffdc4af84bfef09a626146404",
+ "position_sha256": "35cbc7f8b8a83cfaf2294a252611d7d23c45aac246fd715b9207e496ccdd64db",
+ "input_sha256": "cfc1311600330d70c01959e8fc3558e56e633923f875e14bf4281e6454204ca9",
+ "proof_bytes": 106982
+}

@@ -1,0 +1,30 @@
+{
+ "id": "형_f25626f8ec7952d1",
+ "syllable": "형",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.000183,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "655a960ef75b1d0982d8a998878c8358eb6c6e8f9361b5758d3c0c31780b615a",
+ "position_sha256": "f25626f8ec7952d1800b12c8a5e5232f52f806f9a7f5a0208e82212be31d628e",
+ "input_sha256": "3a28754847269d71ef554eaf096f3d9d69a3e4cd2e48e4da7a2f07b63f7945d7",
+ "proof_bytes": 124
+}

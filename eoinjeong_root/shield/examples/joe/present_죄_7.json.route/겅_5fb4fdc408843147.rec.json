@@ -1,0 +1,27 @@
+{
+ "id": "겅_5fb4fdc408843147",
+ "syllable": "겅",
+ "used_route_words": [
+  "밑틀",
+  "죄밑"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000565,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "ea793704b264104cb99d27ea1f09a5f62b3d439a99b4fd04f91d36c19865daba",
+ "position_sha256": "5fb4fdc4088431473a0aa2dea6f70defe225a1ca9d641d07f00f2f818a6c644c",
+ "input_sha256": "b7c060ab4431684389da891e4714b8249ce10037424d2f56946b198e4e1f7f24",
+ "proof_bytes": 441
+}

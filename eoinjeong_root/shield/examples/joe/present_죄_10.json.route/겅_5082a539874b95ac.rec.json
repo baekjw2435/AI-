@@ -1,0 +1,26 @@
+{
+ "id": "겅_5082a539874b95ac",
+ "syllable": "겅",
+ "used_route_words": [
+  "갱도시험"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001109,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fd997b6e685322be4c530756b53051727ba31db2632645293ccdbb4290b7c865",
+ "position_sha256": "5082a539874b95acbb96817f0318854586fc2a985418361a07f489c1b264dd74",
+ "input_sha256": "1fed7fc924c4046cc1906ef325e9a6927e51bdc872f06dbbece45dbdcd2b610a",
+ "proof_bytes": 784
+}

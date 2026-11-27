@@ -1,0 +1,28 @@
+{
+ "id": "샅_48aee5f6b2c8ba75",
+ "syllable": "샅",
+ "used_route_words": [
+  "벅스킨",
+  "잇샅",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.002838,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "07e2f606ffc9aecd5efaa65f3815c983ed907f19fb6a6f87807343e91a5778ea",
+ "position_sha256": "48aee5f6b2c8ba75f7574be19c3c9b4d5fe5b2ebebfc1406c6b2a72608a29721",
+ "input_sha256": "48d148ea3baf9cda3ae7eb1a57d81269957492361b84ee727b0ce031a9d1140b",
+ "proof_bytes": 4000
+}

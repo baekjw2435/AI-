@@ -1,0 +1,31 @@
+{
+ "id": "촉_cd08066dc5dd4e1b",
+ "syllable": "촉",
+ "used_route_words": [
+  "득득",
+  "득롱망촉",
+  "득첩",
+  "첩첩",
+  "촉촉",
+  "획득"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000795,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0f83eb1b4e643b85014e2f5299f3baea401153323f824c25bbebd3c0fa02ed8b",
+ "position_sha256": "cd08066dc5dd4e1b6a25864bfa1b8988e306d505efd22bbd29ce84c3e6b76101",
+ "input_sha256": "cec4faf4cbd0b12d60b26708b9c0e8dafddc69317f1f486fc586eb198c78a3ce",
+ "proof_bytes": 482
+}

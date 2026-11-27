@@ -1,0 +1,30 @@
+{
+ "id": "궐_7b77e0e4abfb5b56",
+ "syllable": "궐",
+ "used_route_words": [
+  "법당은호법당이나불무영험",
+  "섭험",
+  "죄첩",
+  "첩섭",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00014,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "278c30fba34d8c37f5355cac1a991aeaea9bdef48b5e8559746aae6abf72dd13",
+ "position_sha256": "7b77e0e4abfb5b56abb95bce1a1496cac51d2c73f2a036f7aadd7205d26c159c",
+ "input_sha256": "9c6da429343a61c37da3582728608adb2f9defb9bfb863c62a0a2c3f90911818",
+ "proof_bytes": 124
+}

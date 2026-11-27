@@ -1,0 +1,27 @@
+{
+ "id": "렌_618717f9ab0dbf80",
+ "syllable": "렌",
+ "used_route_words": [
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.001073,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2357cf0014894dd1c23bd050f8bc7fb10fb4aa30bbb5ed6a6b7804abf43d93b4",
+ "position_sha256": "618717f9ab0dbf805ce30fff4dfcbef5f86961c04d4da6c0862165e4ad8a4508",
+ "input_sha256": "ea70ed16f4476de27b84b33061ae5b42f9917e908c2e1b35537e0b6ad9dc8c24",
+ "proof_bytes": 1987
+}

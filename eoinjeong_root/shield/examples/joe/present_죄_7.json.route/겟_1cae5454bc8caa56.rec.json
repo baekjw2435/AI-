@@ -1,0 +1,27 @@
+{
+ "id": "겟_1cae5454bc8caa56",
+ "syllable": "겟",
+ "used_route_words": [
+  "죄첩",
+  "첩첩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00057,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "89e123a98f043fbe44b61cf2d36a43f94a176c39ae80aa7c64e82fabd8173f90",
+ "position_sha256": "1cae5454bc8caa56e3fb2f8745fc20167cc3a0b3e631766bfb167fca2d40efd5",
+ "input_sha256": "f6991998e7ceb36f617dce264e00541caafc15354878152ee34808707e5e6ac0",
+ "proof_bytes": 1086
+}

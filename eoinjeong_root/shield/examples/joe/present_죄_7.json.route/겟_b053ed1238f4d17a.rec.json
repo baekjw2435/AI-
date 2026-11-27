@@ -1,0 +1,27 @@
+{
+ "id": "겟_b053ed1238f4d17a",
+ "syllable": "겟",
+ "used_route_words": [
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000907,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "4b9cd2c77ee29303d730f67525d4a6730d0d49a1d46c26b7e8c35b49f1085a9e",
+ "position_sha256": "b053ed1238f4d17ae2f51e19fb3d5297bb867da060e12e9f36a87e574467a4d2",
+ "input_sha256": "195482af22b36d52f30274b6ba9102f8b2ca4d04dee634281454c0c97d767304",
+ "proof_bytes": 1309
+}

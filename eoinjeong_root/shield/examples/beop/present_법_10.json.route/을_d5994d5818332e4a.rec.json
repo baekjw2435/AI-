@@ -1,0 +1,27 @@
+{
+ "id": "을_d5994d5818332e4a",
+ "syllable": "을",
+ "used_route_words": [
+  "몬드니켈",
+  "켈리몬"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.011174,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d47728872cbf0f94689ae497e4097a4eb3a4cfb4f8d1aeca5c18ed36f575d211",
+ "position_sha256": "d5994d5818332e4addd928564d1bfe40b64395ba7037b921dc888ffdb4c56b80",
+ "input_sha256": "f1ca8d201e8dbe4d3baed9a7283c62ee4e11ed01c39c7e3d94bf4162f16aa6e8",
+ "proof_bytes": 5436
+}

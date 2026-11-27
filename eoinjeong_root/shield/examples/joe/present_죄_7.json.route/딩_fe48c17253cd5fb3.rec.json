@@ -1,0 +1,28 @@
+{
+ "id": "딩_fe48c17253cd5fb3",
+ "syllable": "딩",
+ "used_route_words": [
+  "쇄석포도법",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.00213,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "d920383a6b741dbf2f3a1a9ee302d0f6425b0603e2fc0e5ccecff52fce9df489",
+ "position_sha256": "fe48c17253cd5fb36b5b1e85c2a68553cd8ac0c4157614e8a828e58c17412eae",
+ "input_sha256": "51b26784030637ab67e62e475c8445a0f4eaca7b972a78f0c32e7099c7027063",
+ "proof_bytes": 2330
+}

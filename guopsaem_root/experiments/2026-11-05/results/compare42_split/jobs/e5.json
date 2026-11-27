@@ -1,0 +1,40 @@
+{
+ "endpoint": 5,
+ "vertex": "식",
+ "roots": [
+  "곡"
+ ],
+ "solver": {
+  "result": "unknown",
+  "reason": "time_limit",
+  "mid_calls": 28100608,
+  "child_gens": 70310656,
+  "tt_entries": 13268714,
+  "tt_capacity": 16777216,
+  "tt_mb": 512,
+  "tt_stores": 28100608,
+  "tt_replacements": 3213802,
+  "seconds": 60.000791,
+  "pn": 1510,
+  "dn": 5248,
+  "best_group": 300,
+  "threads": 1,
+  "eps": 0.25,
+  "init": 1,
+  "wpn": 0,
+  "proof_nodes": 0,
+  "emit_resolves": 0,
+  "emit_resolve_mid": 0,
+  "emit_crosschecks": 0,
+  "emit_seconds": 0.0,
+  "selfchecks": 0,
+  "proof_error": "",
+  "tt_loaded": 0,
+  "tt_load_seconds": 0.0,
+  "tt_saves": 1,
+  "tt_saved": 1000000,
+  "tt_save_seconds": 0.235219,
+  "tt_save_error": ""
+ },
+ "verified": false
+}

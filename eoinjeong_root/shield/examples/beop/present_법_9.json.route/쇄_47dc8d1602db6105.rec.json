@@ -1,0 +1,28 @@
+{
+ "id": "쇄_47dc8d1602db6105",
+ "syllable": "쇄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "읍권",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "win",
+ "solver_seconds": 0.002421,
+ "accepted": true,
+ "result": "W",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c2b0819ab0070f6a0bdff16d55916fdd9e784d27373f9b799fd74407b29d2033",
+ "position_sha256": "47dc8d1602db61057cd6e314282acd8416ff9ccd5ac01ac2a75c91f4e9c7ed16",
+ "input_sha256": "13b6483bc8110c710a9890528748645fe135c696a957bad30371989f701b4cbc",
+ "proof_bytes": 2910
+}

@@ -1,0 +1,31 @@
+{
+ "id": "름_2445c5be7d1d4803",
+ "syllable": "름",
+ "used_route_words": [
+  "늠름",
+  "렌즈구름",
+  "렛츠인조이더무비카가미네렌",
+  "죄첩",
+  "첩첩",
+  "첩쾌"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000874,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "2af6214a59e4ce9ba5342525097a4c528911d16d6481fba4b9654fb2c15b2d63",
+ "position_sha256": "2445c5be7d1d4803f6388ce3883281f27a2d8166e3a3d94c27e0eccce7b91809",
+ "input_sha256": "db94639e3d56604e6e797dc2fdefc161eabda628ae27082fbe255239e2e3b0d0",
+ "proof_bytes": 1070
+}

@@ -1,0 +1,28 @@
+{
+ "id": "죄_6528b3694b530516",
+ "syllable": "죄",
+ "used_route_words": [
+  "권리행사방해죄",
+  "읍권",
+  "즈브스킨"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003837,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "c53473d51c1b2ef3910b09e93f04e23851555a03dad393b8357f67a91502d783",
+ "position_sha256": "6528b3694b5305169336e45dacd571d5165e51609e730bfcfa2fc1ac74d96e7a",
+ "input_sha256": "217efc4052b19ff43c2976a2fbdafaa17ac32560adc016da9005816a875988e9",
+ "proof_bytes": 4102
+}

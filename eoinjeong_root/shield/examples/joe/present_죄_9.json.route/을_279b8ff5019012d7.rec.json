@@ -1,0 +1,27 @@
+{
+ "id": "을_279b8ff5019012d7",
+ "syllable": "을",
+ "used_route_words": [
+  "법원검찰청복사골문화센터반달마을",
+  "죄율"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.003473,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "fce575d7aefff935697ff352e01022d7b50aec8e5f340780a6206665736e4943",
+ "position_sha256": "279b8ff5019012d74400ef1ddc279358c35c509d77c7faf54ab869ae14455440",
+ "input_sha256": "1f8280309e31302d922c3b2ecfee7be940fadde03d41a95a24d99b56bddbc936",
+ "proof_bytes": 2704
+}

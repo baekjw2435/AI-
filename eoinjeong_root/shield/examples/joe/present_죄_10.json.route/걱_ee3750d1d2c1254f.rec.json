@@ -1,0 +1,27 @@
+{
+ "id": "걱_ee3750d1d2c1254f",
+ "syllable": "걱",
+ "used_route_words": [
+  "딩가딩",
+  "딩딩"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000801,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "982ced8b323eb43f407ad6a4de4f3255672b28df2bba5add423ff7288d099209",
+ "position_sha256": "ee3750d1d2c1254f99789ef77a01c1527387bf0bc04c8b7a26190f5e5b81f173",
+ "input_sha256": "31b88ae5a166144bc86bd2319405a0d9fc518e68fc2cc1158c9e6e1d6177e0aa",
+ "proof_bytes": 1271
+}

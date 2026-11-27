@@ -1,0 +1,29 @@
+{
+ "id": "척_949802ad8b960b2c",
+ "syllable": "척",
+ "used_route_words": [
+  "권척",
+  "권할권",
+  "쇄쇄",
+  "쇄심권"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 1.150933,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "0960fc790afd15c24f509073c6cd923fbc60d775e5f3995c7e75d06908499172",
+ "position_sha256": "949802ad8b960b2c044b15a4d19f81622b10873f013e50e50fdceb8e574adaf6",
+ "input_sha256": "4c3a9ebadc7a166448996b4106e97f4f53062ee57ac8148b9a122fff5f2c0275",
+ "proof_bytes": 188461
+}

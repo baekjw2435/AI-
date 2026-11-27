@@ -1,0 +1,28 @@
+{
+ "id": "을_693fa14db6e8eb11",
+ "syllable": "을",
+ "used_route_words": [
+  "넨장맞을",
+  "쇄쇄",
+  "죄인의벗을수없는족쇄"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000598,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "38e011850c0476a1a364824d232d7783e29ca62428446e1bf22ae5517ab16e09",
+ "position_sha256": "693fa14db6e8eb118d5386f0788c841e4c64fbd1b829518378f9a0864dfcea6d",
+ "input_sha256": "8298f2203d446c297eb3fc5d0bef25326b3dcb0e538c8d74fdb8207142d176c7",
+ "proof_bytes": 528
+}

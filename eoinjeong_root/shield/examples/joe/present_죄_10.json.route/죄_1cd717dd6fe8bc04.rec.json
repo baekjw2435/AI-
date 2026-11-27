@@ -1,0 +1,32 @@
+{
+ "id": "죄_1cd717dd6fe8bc04",
+ "syllable": "죄",
+ "used_route_words": [
+  "득죄",
+  "샅흰검은말율",
+  "율현마을",
+  "을종근로소득",
+  "잇샅",
+  "즈브스킨",
+  "킨더초콜릿"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.000432,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "20f9dba9b032306e2fe2d4af03b12e1643d9aac14f6de3ce55abc144bc25bc9e",
+ "position_sha256": "1cd717dd6fe8bc0498e4edcb26aaed7e04b1972e18cdbfc5d082870fc3ccba6a",
+ "input_sha256": "0b09f505b2fb49fcb72e6f415362de3d74bcd5464d0537d068d469044e67a465",
+ "proof_bytes": 680
+}

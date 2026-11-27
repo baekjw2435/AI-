@@ -1,0 +1,119 @@
+{
+ "purpose": "pipeline check: first moves already verified with verify_v2 in the earlier study",
+ "picks": [
+  {
+   "name": "k01",
+   "id": "격/격멸",
+   "syllable": "격",
+   "word": "격멸",
+   "words": [
+    "격멸"
+   ],
+   "input_sha256": "914167bcbc61807d866b21859211acf0e7d7bafc6475023714b3939691864bac",
+   "known_verdict": "lose",
+   "known_reply": "멸치젓",
+   "known_nodes_v2": 100933,
+   "root_form": "kept"
+  },
+  {
+   "name": "k02",
+   "id": "격/격변",
+   "syllable": "격",
+   "word": "격변",
+   "words": [
+    "격변"
+   ],
+   "input_sha256": "58edb6641888f11ee70ebe474a55fdd224d849f5e8ac5d078e84904a5311bd21",
+   "known_verdict": "lose",
+   "known_reply": "변색",
+   "known_nodes_v2": 193753,
+   "root_form": "kept"
+  },
+  {
+   "name": "k03",
+   "id": "격/격식적",
+   "syllable": "격",
+   "word": "격식적",
+   "words": [
+    "격식적",
+    "격정적"
+   ],
+   "input_sha256": "cef6dc765cbaa36fe2e06e15c49f3ed8f68e093f13befcac7a31c6f1f021f00d",
+   "known_verdict": "lose",
+   "known_reply": "적갈색",
+   "known_nodes_v2": 178494,
+   "root_form": "kept_partly_cancelled"
+  },
+  {
+   "name": "k04",
+   "id": "격/격퇴",
+   "syllable": "격",
+   "word": "격퇴",
+   "words": [
+    "격퇴"
+   ],
+   "input_sha256": "3eef6c102d2db1ee752a3c5beb819795e0450b4b1e1973fb265d87227b8918c4",
+   "known_verdict": "lose",
+   "known_reply": "퇴색",
+   "known_nodes_v2": 176139,
+   "root_form": "kept"
+  },
+  {
+   "name": "k05",
+   "id": "역/역사학",
+   "syllable": "역",
+   "word": "역사학",
+   "words": [
+    "역사학",
+    "역학"
+   ],
+   "input_sha256": "d0d1539e43695340b0d1b35a70405b87f8dbe68d6da0986ed0bc3bbe31a13249",
+   "known_verdict": "lose",
+   "known_reply": "학업",
+   "known_nodes_v2": 88772,
+   "root_form": "kept_partly_cancelled"
+  },
+  {
+   "name": "k06",
+   "id": "역/역방향",
+   "syllable": "역",
+   "word": "역방향",
+   "words": [
+    "역방향"
+   ],
+   "input_sha256": "6dbfbe082fdc8d7a6067d2597296872d15339a34f5100446788b8d60161fc60c",
+   "known_verdict": "lose",
+   "known_reply": "향토색",
+   "known_nodes_v2": 568654,
+   "root_form": "kept"
+  },
+  {
+   "name": "k07",
+   "id": "격/격랑",
+   "syllable": "격",
+   "word": "격랑",
+   "words": [
+    "격랑"
+   ],
+   "input_sha256": "0cee8f1aef575270a82f6697b4c222444a6fc365d66de880baff0500840c25d5",
+   "known_verdict": "lose",
+   "known_reply": "낭비벽",
+   "known_nodes_v2": 1029671,
+   "root_form": "kept"
+  },
+  {
+   "name": "k08",
+   "id": "역/역풍",
+   "syllable": "역",
+   "word": "역풍",
+   "words": [
+    "역풍"
+   ],
+   "input_sha256": "528c83548dda87377e41531966608f751c9efe34ab508435fcf7dea43a9d9100",
+   "known_verdict": "lose",
+   "known_reply": "풍류객",
+   "known_nodes_v2": 1913131,
+   "root_form": "pair_cancelled"
+  }
+ ]
+}

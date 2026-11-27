@@ -1,0 +1,28 @@
+{
+ "id": "딩_e0ddb131211644b8",
+ "syllable": "딩",
+ "used_route_words": [
+  "딩가딩",
+  "딩딩",
+  "죄형"
+ ],
+ "limit_seconds": 60,
+ "solver_result": "loss",
+ "solver_seconds": 0.01544,
+ "accepted": true,
+ "result": "L",
+ "acceptance": {
+  "exit_code_0": true,
+  "verified_true": true,
+  "result": true,
+  "state_storage": true,
+  "dictionary_sha256": true,
+  "position_sha256": true,
+  "input_sha256": true,
+  "proof_sha256": true
+ },
+ "proof_sha256": "a65916a4306fcc1054cb58bcfec543a2ac5e9c094d7b02d14326f940930cfe3e",
+ "position_sha256": "e0ddb131211644b87d0c96201592e830bd9708fa3d0fa55654bf724aeb7402b0",
+ "input_sha256": "a9daab721026542a1df6e1103335a515ccebb2606f176bdf30d507e99b3853df",
+ "proof_bytes": 9250
+}
