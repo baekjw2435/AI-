@@ -1,0 +1,4670 @@
+{
+ "dictionary": "words_3683.txt",
+ "targets": "syllables_474.txt",
+ "seconds_per_position": 10,
+ "jobs": 3,
+ "positions": [
+  {
+   "position_syllable": "갇",
+   "syllables": [
+    "갇"
+   ],
+   "vertex": "갇",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "갉",
+   "syllables": [
+    "갉"
+   ],
+   "vertex": "갉",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "갖",
+   "syllables": [
+    "갖"
+   ],
+   "vertex": "갖",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "같",
+   "syllables": [
+    "같"
+   ],
+   "vertex": "같",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "객",
+   "syllables": [
+    "객"
+   ],
+   "vertex": "객",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "갠",
+   "syllables": [
+    "갠"
+   ],
+   "vertex": "갠",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "갬",
+   "syllables": [
+    "갬"
+   ],
+   "vertex": "갬",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "eed0d8c58f6fd2ae7635cf13079e2e2b56e423b5cd7748e445755af31b5bc041"
+  },
+  {
+   "position_syllable": "갭",
+   "syllables": [
+    "갭"
+   ],
+   "vertex": "갭",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "갱",
+   "syllables": [
+    "갱"
+   ],
+   "vertex": "갱",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "갸",
+   "syllables": [
+    "갸"
+   ],
+   "vertex": "갸",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "겅",
+   "syllables": [
+    "겅"
+   ],
+   "vertex": "겅",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "겐",
+   "syllables": [
+    "겐"
+   ],
+   "vertex": "겐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "겔",
+   "syllables": [
+    "겔"
+   ],
+   "vertex": "겔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "겜",
+   "syllables": [
+    "겜"
+   ],
+   "vertex": "겜",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "격",
+   "syllables": [
+    "격"
+   ],
+   "vertex": "격",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "견",
+   "syllables": [
+    "견"
+   ],
+   "vertex": "견",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "겸",
+   "syllables": [
+    "겸"
+   ],
+   "vertex": "겸",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "곁",
+   "syllables": [
+    "곁"
+   ],
+   "vertex": "곁",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "곤",
+   "syllables": [
+    "곤"
+   ],
+   "vertex": "곤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "곧",
+   "syllables": [
+    "곧"
+   ],
+   "vertex": "곧",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "곬",
+   "syllables": [
+    "곬"
+   ],
+   "vertex": "곬",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "곶",
+   "syllables": [
+    "곶"
+   ],
+   "vertex": "곶",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "곽",
+   "syllables": [
+    "곽"
+   ],
+   "vertex": "곽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "괄",
+   "syllables": [
+    "괄"
+   ],
+   "vertex": "괄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "괘",
+   "syllables": [
+    "괘"
+   ],
+   "vertex": "괘",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "괭",
+   "syllables": [
+    "괭"
+   ],
+   "vertex": "괭",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "굉",
+   "syllables": [
+    "굉"
+   ],
+   "vertex": "굉",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "굽",
+   "syllables": [
+    "굽"
+   ],
+   "vertex": "굽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "굿",
+   "syllables": [
+    "굿"
+   ],
+   "vertex": "굿",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "궈",
+   "syllables": [
+    "궈"
+   ],
+   "vertex": "궈",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "궐",
+   "syllables": [
+    "궐"
+   ],
+   "vertex": "궐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "궤",
+   "syllables": [
+    "궤"
+   ],
+   "vertex": "궤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "규",
+   "syllables": [
+    "규"
+   ],
+   "vertex": "규",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "09b4a87c221ecf9a0b814a85169655a74394545c74f17110fe3a2fdc3e8a8a1c"
+  },
+  {
+   "position_syllable": "균",
+   "syllables": [
+    "균"
+   ],
+   "vertex": "균",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "귤",
+   "syllables": [
+    "귤"
+   ],
+   "vertex": "귤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "급",
+   "syllables": [
+    "급"
+   ],
+   "vertex": "급",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "긍",
+   "syllables": [
+    "긍"
+   ],
+   "vertex": "긍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "긴",
+   "syllables": [
+    "긴"
+   ],
+   "vertex": "긴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "깁",
+   "syllables": [
+    "깁"
+   ],
+   "vertex": "깁",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "f4c3a65dda080bd25ee131c720fb3a190c23240df2a5fe37ab0e348cdf4a61f2"
+  },
+  {
+   "position_syllable": "깃",
+   "syllables": [
+    "깃"
+   ],
+   "vertex": "깃",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "깅",
+   "syllables": [
+    "깅"
+   ],
+   "vertex": "깅",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "깝",
+   "syllables": [
+    "깝"
+   ],
+   "vertex": "깝",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "깰",
+   "syllables": [
+    "깰"
+   ],
+   "vertex": "깰",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "꺄",
+   "syllables": [
+    "꺄"
+   ],
+   "vertex": "꺄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "꺌",
+   "syllables": [
+    "꺌"
+   ],
+   "vertex": "꺌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "꺽",
+   "syllables": [
+    "꺽"
+   ],
+   "vertex": "꺽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "껀",
+   "syllables": [
+    "껀"
+   ],
+   "vertex": "껀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "껑",
+   "syllables": [
+    "껑"
+   ],
+   "vertex": "껑",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "꼭",
+   "syllables": [
+    "꼭"
+   ],
+   "vertex": "꼭",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "꼽",
+   "syllables": [
+    "꼽"
+   ],
+   "vertex": "꼽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "꼿",
+   "syllables": [
+    "꼿"
+   ],
+   "vertex": "꼿",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "꽁",
+   "syllables": [
+    "꽁"
+   ],
+   "vertex": "꽁",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "꽂",
+   "syllables": [
+    "꽂"
+   ],
+   "vertex": "꽂",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "꽈",
+   "syllables": [
+    "꽈"
+   ],
+   "vertex": "꽈",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "꽝",
+   "syllables": [
+    "꽝"
+   ],
+   "vertex": "꽝",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "꽤",
+   "syllables": [
+    "꽤"
+   ],
+   "vertex": "꽤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "꽹",
+   "syllables": [
+    "꽹"
+   ],
+   "vertex": "꽹",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "꾼",
+   "syllables": [
+    "꾼"
+   ],
+   "vertex": "꾼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "꿍",
+   "syllables": [
+    "꿍"
+   ],
+   "vertex": "꿍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "꿩",
+   "syllables": [
+    "꿩"
+   ],
+   "vertex": "꿩",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "뀀",
+   "syllables": [
+    "뀀"
+   ],
+   "vertex": "뀀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뀌",
+   "syllables": [
+    "뀌"
+   ],
+   "vertex": "뀌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "끔",
+   "syllables": [
+    "끔"
+   ],
+   "vertex": "끔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "끗",
+   "syllables": [
+    "끗"
+   ],
+   "vertex": "끗",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "끽",
+   "syllables": [
+    "끽"
+   ],
+   "vertex": "끽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "낄",
+   "syllables": [
+    "낄"
+   ],
+   "vertex": "낄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "낙",
+   "syllables": [
+    "낙"
+   ],
+   "vertex": "낙",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "낚",
+   "syllables": [
+    "낚"
+   ],
+   "vertex": "낚",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "낯",
+   "syllables": [
+    "낯",
+    "랓"
+   ],
+   "vertex": "낯",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "낼",
+   "syllables": [
+    "낼"
+   ],
+   "vertex": "낼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "냄",
+   "syllables": [
+    "냄"
+   ],
+   "vertex": "냄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "냐",
+   "syllables": [
+    "냐"
+   ],
+   "vertex": "냐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "넉",
+   "syllables": [
+    "넉"
+   ],
+   "vertex": "넉",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "넛",
+   "syllables": [
+    "넛"
+   ],
+   "vertex": "넛",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "넥",
+   "syllables": [
+    "넥"
+   ],
+   "vertex": "넥",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "넬",
+   "syllables": [
+    "넬"
+   ],
+   "vertex": "넬",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "dd52618886a1fb26edf7c6584e6042199b34d2d0963ed5bf57a50a0b88beedf7"
+  },
+  {
+   "position_syllable": "넷",
+   "syllables": [
+    "넷"
+   ],
+   "vertex": "넷",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "녓",
+   "syllables": [
+    "녓"
+   ],
+   "vertex": "녓/엿",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "녜",
+   "syllables": [
+    "녜"
+   ],
+   "vertex": "녜",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "눅",
+   "syllables": [
+    "눅",
+    "룩"
+   ],
+   "vertex": "눅",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "눙",
+   "syllables": [
+    "눙"
+   ],
+   "vertex": "눙",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뉘",
+   "syllables": [
+    "뉘"
+   ],
+   "vertex": "뉘",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "늄",
+   "syllables": [
+    "늄"
+   ],
+   "vertex": "늄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "늉",
+   "syllables": [
+    "늉",
+    "륭",
+    "융"
+   ],
+   "vertex": "융",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "늙",
+   "syllables": [
+    "늙"
+   ],
+   "vertex": "늙",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "늡",
+   "syllables": [
+    "늡",
+    "릅"
+   ],
+   "vertex": "늡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "늬",
+   "syllables": [
+    "늬"
+   ],
+   "vertex": "늬",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "닢",
+   "syllables": [
+    "닢",
+    "잎"
+   ],
+   "vertex": "잎",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "닻",
+   "syllables": [
+    "닻"
+   ],
+   "vertex": "닻",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "댐",
+   "syllables": [
+    "댐"
+   ],
+   "vertex": "댐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "댕",
+   "syllables": [
+    "댕"
+   ],
+   "vertex": "댕",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "덕",
+   "syllables": [
+    "덕"
+   ],
+   "vertex": "덕",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "덫",
+   "syllables": [
+    "덫"
+   ],
+   "vertex": "덫",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "뎃",
+   "syllables": [
+    "뎃"
+   ],
+   "vertex": "뎃",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뎐",
+   "syllables": [
+    "뎐"
+   ],
+   "vertex": "뎐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "돔",
+   "syllables": [
+    "돔"
+   ],
+   "vertex": "돔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "돗",
+   "syllables": [
+    "돗"
+   ],
+   "vertex": "돗",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "둑",
+   "syllables": [
+    "둑"
+   ],
+   "vertex": "둑",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "둔",
+   "syllables": [
+    "둔"
+   ],
+   "vertex": "둔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "듁",
+   "syllables": [
+    "듁"
+   ],
+   "vertex": "듁",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "듕",
+   "syllables": [
+    "듕"
+   ],
+   "vertex": "듕",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "득",
+   "syllables": [
+    "득"
+   ],
+   "vertex": "득",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "듬",
+   "syllables": [
+    "듬"
+   ],
+   "vertex": "듬",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "듯",
+   "syllables": [
+    "듯"
+   ],
+   "vertex": "듯",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "딧",
+   "syllables": [
+    "딧"
+   ],
+   "vertex": "딧",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "딩",
+   "syllables": [
+    "딩"
+   ],
+   "vertex": "딩",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "딱",
+   "syllables": [
+    "딱"
+   ],
+   "vertex": "딱",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "딴",
+   "syllables": [
+    "딴"
+   ],
+   "vertex": "딴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "땍",
+   "syllables": [
+    "땍"
+   ],
+   "vertex": "땍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "땔",
+   "syllables": [
+    "땔"
+   ],
+   "vertex": "땔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "땜",
+   "syllables": [
+    "땜"
+   ],
+   "vertex": "땜",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "떵",
+   "syllables": [
+    "떵"
+   ],
+   "vertex": "떵",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "또",
+   "syllables": [
+    "또"
+   ],
+   "vertex": "또",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "똑",
+   "syllables": [
+    "똑"
+   ],
+   "vertex": "똑",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "똘",
+   "syllables": [
+    "똘"
+   ],
+   "vertex": "똘",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "똠",
+   "syllables": [
+    "똠"
+   ],
+   "vertex": "똠",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뚝",
+   "syllables": [
+    "뚝"
+   ],
+   "vertex": "뚝",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뚬",
+   "syllables": [
+    "뚬"
+   ],
+   "vertex": "뚬",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뚱",
+   "syllables": [
+    "뚱"
+   ],
+   "vertex": "뚱",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.006,
+   "verified": false
+  },
+  {
+   "position_syllable": "뛸",
+   "syllables": [
+    "뛸"
+   ],
+   "vertex": "뛸",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뜀",
+   "syllables": [
+    "뜀"
+   ],
+   "vertex": "뜀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "뜩",
+   "syllables": [
+    "뜩"
+   ],
+   "vertex": "뜩",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "뜬",
+   "syllables": [
+    "뜬"
+   ],
+   "vertex": "뜬",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "뜰",
+   "syllables": [
+    "뜰"
+   ],
+   "vertex": "뜰",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뜻",
+   "syllables": [
+    "뜻"
+   ],
+   "vertex": "뜻",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "띤",
+   "syllables": [
+    "띤"
+   ],
+   "vertex": "띤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "띰",
+   "syllables": [
+    "띰"
+   ],
+   "vertex": "띰",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "락",
+   "syllables": [
+    "락"
+   ],
+   "vertex": "낙/락",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "랜",
+   "syllables": [
+    "랜"
+   ],
+   "vertex": "낸/랜",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "럼",
+   "syllables": [
+    "럼"
+   ],
+   "vertex": "럼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "럽",
+   "syllables": [
+    "럽"
+   ],
+   "vertex": "럽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "렉",
+   "syllables": [
+    "렉"
+   ],
+   "vertex": "렉",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "렌",
+   "syllables": [
+    "렌"
+   ],
+   "vertex": "렌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "렘",
+   "syllables": [
+    "렘"
+   ],
+   "vertex": "렘",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "렙",
+   "syllables": [
+    "렙"
+   ],
+   "vertex": "렙",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "렛",
+   "syllables": [
+    "렛"
+   ],
+   "vertex": "렛",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "80f0333060eeea8d5ff4a1c281045b6a1a9d2702ab879bab23f0379416f60ae7"
+  },
+  {
+   "position_syllable": "렫",
+   "syllables": [
+    "렫"
+   ],
+   "vertex": "엳",
+   "result_for_receiver": "L",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "666a2a5ac8623f471fdf51fb1ce7e3da5120d722c429127bf1cb6003daf693c9"
+  },
+  {
+   "position_syllable": "렷",
+   "syllables": [
+    "렷",
+    "엿"
+   ],
+   "vertex": "엿",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "롕",
+   "syllables": [
+    "롕",
+    "옝"
+   ],
+   "vertex": "옝",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "롶",
+   "syllables": [
+    "롶"
+   ],
+   "vertex": "높",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "룸",
+   "syllables": [
+    "룸"
+   ],
+   "vertex": "룸",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "룽",
+   "syllables": [
+    "룽"
+   ],
+   "vertex": "눙/룽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뤄",
+   "syllables": [
+    "뤄"
+   ],
+   "vertex": "뤄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "륜",
+   "syllables": [
+    "륜"
+   ],
+   "vertex": "륜/윤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "름",
+   "syllables": [
+    "름",
+    "늠"
+   ],
+   "vertex": "늠",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "릊",
+   "syllables": [
+    "릊",
+    "늦"
+   ],
+   "vertex": "늦",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "릿",
+   "syllables": [
+    "릿",
+    "잇"
+   ],
+   "vertex": "잇",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "0bf98242992d1c80db8de0a0bf52a145d720b60dbe320c11f5ed4c416cb2a4f8"
+  },
+  {
+   "position_syllable": "맏",
+   "syllables": [
+    "맏"
+   ],
+   "vertex": "맏",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "맑",
+   "syllables": [
+    "맑"
+   ],
+   "vertex": "맑",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "맛",
+   "syllables": [
+    "맛"
+   ],
+   "vertex": "맛",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "맴",
+   "syllables": [
+    "맴"
+   ],
+   "vertex": "맴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "맵",
+   "syllables": [
+    "맵"
+   ],
+   "vertex": "맵",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "맹",
+   "syllables": [
+    "맹"
+   ],
+   "vertex": "맹",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "멕",
+   "syllables": [
+    "멕"
+   ],
+   "vertex": "멕",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "멤",
+   "syllables": [
+    "멤"
+   ],
+   "vertex": "멤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "멩",
+   "syllables": [
+    "멩"
+   ],
+   "vertex": "멩",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "멱",
+   "syllables": [
+    "멱"
+   ],
+   "vertex": "멱",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "면",
+   "syllables": [
+    "면"
+   ],
+   "vertex": "면",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "멸",
+   "syllables": [
+    "멸"
+   ],
+   "vertex": "멸",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "몹",
+   "syllables": [
+    "몹"
+   ],
+   "vertex": "몹",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "못",
+   "syllables": [
+    "못"
+   ],
+   "vertex": "못",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "몽",
+   "syllables": [
+    "몽"
+   ],
+   "vertex": "몽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뫼",
+   "syllables": [
+    "뫼"
+   ],
+   "vertex": "뫼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "뭉",
+   "syllables": [
+    "뭉"
+   ],
+   "vertex": "뭉",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뭍",
+   "syllables": [
+    "뭍"
+   ],
+   "vertex": "뭍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "뮈",
+   "syllables": [
+    "뮈"
+   ],
+   "vertex": "뮈",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뮌",
+   "syllables": [
+    "뮌"
+   ],
+   "vertex": "뮌",
+   "result_for_receiver": "L",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "106864fc874a138d8315e23154a1021af807e2ae2df60fda8ae862086c5ac1dd"
+  },
+  {
+   "position_syllable": "믄",
+   "syllables": [
+    "믄"
+   ],
+   "vertex": "믄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "믹",
+   "syllables": [
+    "믹"
+   ],
+   "vertex": "믹",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "밍",
+   "syllables": [
+    "밍"
+   ],
+   "vertex": "밍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "밑",
+   "syllables": [
+    "밑"
+   ],
+   "vertex": "밑",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "밖",
+   "syllables": [
+    "밖"
+   ],
+   "vertex": "밖",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "밴",
+   "syllables": [
+    "밴"
+   ],
+   "vertex": "밴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뱀",
+   "syllables": [
+    "뱀"
+   ],
+   "vertex": "뱀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뱁",
+   "syllables": [
+    "뱁"
+   ],
+   "vertex": "뱁",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뱐",
+   "syllables": [
+    "뱐"
+   ],
+   "vertex": "뱐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "벅",
+   "syllables": [
+    "벅"
+   ],
+   "vertex": "벅",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "벙",
+   "syllables": [
+    "벙"
+   ],
+   "vertex": "벙",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "벚",
+   "syllables": [
+    "벚"
+   ],
+   "vertex": "벚",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "벡",
+   "syllables": [
+    "벡"
+   ],
+   "vertex": "벡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "벳",
+   "syllables": [
+    "벳"
+   ],
+   "vertex": "벳",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "벽",
+   "syllables": [
+    "벽"
+   ],
+   "vertex": "벽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "볕",
+   "syllables": [
+    "볕"
+   ],
+   "vertex": "볕",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "봇",
+   "syllables": [
+    "봇"
+   ],
+   "vertex": "봇",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "붕",
+   "syllables": [
+    "붕"
+   ],
+   "vertex": "붕",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "붙",
+   "syllables": [
+    "붙"
+   ],
+   "vertex": "붙",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뷔",
+   "syllables": [
+    "뷔"
+   ],
+   "vertex": "뷔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뷰",
+   "syllables": [
+    "뷰"
+   ],
+   "vertex": "뷰",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "빅",
+   "syllables": [
+    "빅"
+   ],
+   "vertex": "빅",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "빔",
+   "syllables": [
+    "빔"
+   ],
+   "vertex": "빔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "빙",
+   "syllables": [
+    "빙"
+   ],
+   "vertex": "빙",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "빛",
+   "syllables": [
+    "빛"
+   ],
+   "vertex": "빛",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "빠",
+   "syllables": [
+    "빠"
+   ],
+   "vertex": "빠",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "빡",
+   "syllables": [
+    "빡"
+   ],
+   "vertex": "빡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "빤",
+   "syllables": [
+    "빤"
+   ],
+   "vertex": "빤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "빨",
+   "syllables": [
+    "빨"
+   ],
+   "vertex": "빨",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.006,
+   "verified": false
+  },
+  {
+   "position_syllable": "빼",
+   "syllables": [
+    "빼"
+   ],
+   "vertex": "빼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "뺀",
+   "syllables": [
+    "뺀"
+   ],
+   "vertex": "뺀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "뺌",
+   "syllables": [
+    "뺌"
+   ],
+   "vertex": "뺌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뺑",
+   "syllables": [
+    "뺑"
+   ],
+   "vertex": "뺑",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뺨",
+   "syllables": [
+    "뺨"
+   ],
+   "vertex": "뺨",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뻑",
+   "syllables": [
+    "뻑"
+   ],
+   "vertex": "뻑",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뻔",
+   "syllables": [
+    "뻔"
+   ],
+   "vertex": "뻔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뻥",
+   "syllables": [
+    "뻥"
+   ],
+   "vertex": "뻥",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "뻬",
+   "syllables": [
+    "뻬"
+   ],
+   "vertex": "뻬",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뼘",
+   "syllables": [
+    "뼘"
+   ],
+   "vertex": "뼘",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "뽈",
+   "syllables": [
+    "뽈"
+   ],
+   "vertex": "뽈",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "뽕",
+   "syllables": [
+    "뽕"
+   ],
+   "vertex": "뽕",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "뿍",
+   "syllables": [
+    "뿍"
+   ],
+   "vertex": "뿍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뿔",
+   "syllables": [
+    "뿔"
+   ],
+   "vertex": "뿔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "뿜",
+   "syllables": [
+    "뿜"
+   ],
+   "vertex": "뿜",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "삔",
+   "syllables": [
+    "삔"
+   ],
+   "vertex": "삔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "삘",
+   "syllables": [
+    "삘"
+   ],
+   "vertex": "삘",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "삥",
+   "syllables": [
+    "삥"
+   ],
+   "vertex": "삥",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "삭",
+   "syllables": [
+    "삭"
+   ],
+   "vertex": "삭",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "삽",
+   "syllables": [
+    "삽"
+   ],
+   "vertex": "삽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "샅",
+   "syllables": [
+    "샅"
+   ],
+   "vertex": "샅",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "샌",
+   "syllables": [
+    "샌"
+   ],
+   "vertex": "샌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "샥",
+   "syllables": [
+    "샥"
+   ],
+   "vertex": "샥",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "샨",
+   "syllables": [
+    "샨"
+   ],
+   "vertex": "샨",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "샬",
+   "syllables": [
+    "샬"
+   ],
+   "vertex": "샬",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "샷",
+   "syllables": [
+    "샷"
+   ],
+   "vertex": "샷",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "섀",
+   "syllables": [
+    "섀"
+   ],
+   "vertex": "섀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "섞",
+   "syllables": [
+    "섞"
+   ],
+   "vertex": "섞",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "섭",
+   "syllables": [
+    "섭"
+   ],
+   "vertex": "섭",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "섶",
+   "syllables": [
+    "섶"
+   ],
+   "vertex": "섶",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "셔",
+   "syllables": [
+    "셔"
+   ],
+   "vertex": "셔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "셧",
+   "syllables": [
+    "셧"
+   ],
+   "vertex": "셧",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "셴",
+   "syllables": [
+    "셴"
+   ],
+   "vertex": "셴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "셸",
+   "syllables": [
+    "셸"
+   ],
+   "vertex": "셸",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쇄",
+   "syllables": [
+    "쇄"
+   ],
+   "vertex": "쇄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "쇡",
+   "syllables": [
+    "쇡"
+   ],
+   "vertex": "쇡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "쇵",
+   "syllables": [
+    "쇵"
+   ],
+   "vertex": "쇵",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "숑",
+   "syllables": [
+    "숑"
+   ],
+   "vertex": "숑",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "숩",
+   "syllables": [
+    "숩"
+   ],
+   "vertex": "숩",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "숯",
+   "syllables": [
+    "숯"
+   ],
+   "vertex": "숯",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "숲",
+   "syllables": [
+    "숲"
+   ],
+   "vertex": "숲",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쉰",
+   "syllables": [
+    "쉰"
+   ],
+   "vertex": "쉰",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쉼",
+   "syllables": [
+    "쉼"
+   ],
+   "vertex": "쉼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쉽",
+   "syllables": [
+    "쉽"
+   ],
+   "vertex": "쉽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "슌",
+   "syllables": [
+    "슌"
+   ],
+   "vertex": "슌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "슐",
+   "syllables": [
+    "슐"
+   ],
+   "vertex": "슐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "슥",
+   "syllables": [
+    "슥"
+   ],
+   "vertex": "슥",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "슨",
+   "syllables": [
+    "슨"
+   ],
+   "vertex": "슨",
+   "result_for_receiver": "L",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "bf3c60305135f5959f07775b98b36fd9e637bd1297c75087e8db236142ee9cfc"
+  },
+  {
+   "position_syllable": "슴",
+   "syllables": [
+    "슴"
+   ],
+   "vertex": "슴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "싀",
+   "syllables": [
+    "싀"
+   ],
+   "vertex": "싀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "십",
+   "syllables": [
+    "십"
+   ],
+   "vertex": "십",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "싹",
+   "syllables": [
+    "싹"
+   ],
+   "vertex": "싹",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쌈",
+   "syllables": [
+    "쌈"
+   ],
+   "vertex": "쌈",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "쌔",
+   "syllables": [
+    "쌔"
+   ],
+   "vertex": "쌔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "썸",
+   "syllables": [
+    "썸"
+   ],
+   "vertex": "썸",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "썽",
+   "syllables": [
+    "썽"
+   ],
+   "vertex": "썽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "쏘",
+   "syllables": [
+    "쏘"
+   ],
+   "vertex": "쏘",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "쏜",
+   "syllables": [
+    "쏜"
+   ],
+   "vertex": "쏜",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "쏠",
+   "syllables": [
+    "쏠"
+   ],
+   "vertex": "쏠",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쏴",
+   "syllables": [
+    "쏴"
+   ],
+   "vertex": "쏴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쐐",
+   "syllables": [
+    "쐐"
+   ],
+   "vertex": "쐐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쐬",
+   "syllables": [
+    "쐬"
+   ],
+   "vertex": "쐬",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쑤",
+   "syllables": [
+    "쑤"
+   ],
+   "vertex": "쑤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쑨",
+   "syllables": [
+    "쑨"
+   ],
+   "vertex": "쑨",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "쑹",
+   "syllables": [
+    "쑹"
+   ],
+   "vertex": "쑹",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쓱",
+   "syllables": [
+    "쓱"
+   ],
+   "vertex": "쓱",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "쓴",
+   "syllables": [
+    "쓴"
+   ],
+   "vertex": "쓴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "쓸",
+   "syllables": [
+    "쓸"
+   ],
+   "vertex": "쓸",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "씁",
+   "syllables": [
+    "씁"
+   ],
+   "vertex": "씁",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "씩",
+   "syllables": [
+    "씩"
+   ],
+   "vertex": "씩",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "씽",
+   "syllables": [
+    "씽"
+   ],
+   "vertex": "씽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "앍",
+   "syllables": [
+    "앍"
+   ],
+   "vertex": "앍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "앗",
+   "syllables": [
+    "앗"
+   ],
+   "vertex": "앗",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "앙",
+   "syllables": [
+    "앙"
+   ],
+   "vertex": "앙",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "앨",
+   "syllables": [
+    "앨"
+   ],
+   "vertex": "앨",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "dea7168abfc1eeb6d62a600e9d6e2d5bf9d5a6361cf8399d5d74ed73ac4a6a37"
+  },
+  {
+   "position_syllable": "얄",
+   "syllables": [
+    "얄"
+   ],
+   "vertex": "얄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "얌",
+   "syllables": [
+    "얌"
+   ],
+   "vertex": "얌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "얍",
+   "syllables": [
+    "얍"
+   ],
+   "vertex": "얍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "얭",
+   "syllables": [
+    "얭"
+   ],
+   "vertex": "얭",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "억",
+   "syllables": [
+    "억"
+   ],
+   "vertex": "억",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "엠",
+   "syllables": [
+    "엠"
+   ],
+   "vertex": "엠",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "fa4ef9d049cbed6fb0322fd0f3dfde170459075935ee45f383c5c4be301b7631"
+  },
+  {
+   "position_syllable": "엡",
+   "syllables": [
+    "엡"
+   ],
+   "vertex": "엡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "엣",
+   "syllables": [
+    "엣"
+   ],
+   "vertex": "엣",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "옆",
+   "syllables": [
+    "옆"
+   ],
+   "vertex": "옆",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "옘",
+   "syllables": [
+    "옘"
+   ],
+   "vertex": "옘",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "왝",
+   "syllables": [
+    "왝"
+   ],
+   "vertex": "왝",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "욧",
+   "syllables": [
+    "욧"
+   ],
+   "vertex": "욧",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "욱",
+   "syllables": [
+    "욱"
+   ],
+   "vertex": "욱",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "운",
+   "syllables": [
+    "운"
+   ],
+   "vertex": "운",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "웅",
+   "syllables": [
+    "웅"
+   ],
+   "vertex": "웅",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "웜",
+   "syllables": [
+    "웜"
+   ],
+   "vertex": "웜",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "웬",
+   "syllables": [
+    "웬"
+   ],
+   "vertex": "웬",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "웰",
+   "syllables": [
+    "웰"
+   ],
+   "vertex": "웰",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "윌",
+   "syllables": [
+    "윌"
+   ],
+   "vertex": "윌",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "9a7abb0c3c67527e80ba88c513a06ebd111d46e71cbcbaff0fa54a24dcdcf767"
+  },
+  {
+   "position_syllable": "윤",
+   "syllables": [
+    "윤"
+   ],
+   "vertex": "윤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "윳",
+   "syllables": [
+    "윳"
+   ],
+   "vertex": "윳",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "윷",
+   "syllables": [
+    "윷"
+   ],
+   "vertex": "윷",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "읍",
+   "syllables": [
+    "읍"
+   ],
+   "vertex": "읍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "읏",
+   "syllables": [
+    "읏"
+   ],
+   "vertex": "읏",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "응",
+   "syllables": [
+    "응"
+   ],
+   "vertex": "응",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "잣",
+   "syllables": [
+    "잣"
+   ],
+   "vertex": "잣",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "잭",
+   "syllables": [
+    "잭"
+   ],
+   "vertex": "잭",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "2a344609611c458095bd5af16c159314fb3d218b1d24d2277e3cebe745ee9f5d"
+  },
+  {
+   "position_syllable": "잴",
+   "syllables": [
+    "잴"
+   ],
+   "vertex": "잴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쟁",
+   "syllables": [
+    "쟁"
+   ],
+   "vertex": "쟁",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쟝",
+   "syllables": [
+    "쟝"
+   ],
+   "vertex": "쟝",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "접",
+   "syllables": [
+    "접"
+   ],
+   "vertex": "접",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "젖",
+   "syllables": [
+    "젖"
+   ],
+   "vertex": "젖",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "젤",
+   "syllables": [
+    "젤"
+   ],
+   "vertex": "젤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "젬",
+   "syllables": [
+    "젬"
+   ],
+   "vertex": "젬",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "젯",
+   "syllables": [
+    "젯"
+   ],
+   "vertex": "젯",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "졋",
+   "syllables": [
+    "졋"
+   ],
+   "vertex": "졋",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "졔",
+   "syllables": [
+    "졔"
+   ],
+   "vertex": "졔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "좔",
+   "syllables": [
+    "좔"
+   ],
+   "vertex": "좔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "죔",
+   "syllables": [
+    "죔"
+   ],
+   "vertex": "죔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "죤",
+   "syllables": [
+    "죤"
+   ],
+   "vertex": "죤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "죽",
+   "syllables": [
+    "죽"
+   ],
+   "vertex": "죽",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "줍",
+   "syllables": [
+    "줍"
+   ],
+   "vertex": "줍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "즉",
+   "syllables": [
+    "즉"
+   ],
+   "vertex": "즉",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "즌",
+   "syllables": [
+    "즌"
+   ],
+   "vertex": "즌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "즐",
+   "syllables": [
+    "즐"
+   ],
+   "vertex": "즐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "즙",
+   "syllables": [
+    "즙"
+   ],
+   "vertex": "즙",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "즛",
+   "syllables": [
+    "즛"
+   ],
+   "vertex": "즛",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "짐",
+   "syllables": [
+    "짐"
+   ],
+   "vertex": "짐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "짚",
+   "syllables": [
+    "짚"
+   ],
+   "vertex": "짚",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "짠",
+   "syllables": [
+    "짠"
+   ],
+   "vertex": "짠",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "짤",
+   "syllables": [
+    "짤"
+   ],
+   "vertex": "짤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "짭",
+   "syllables": [
+    "짭"
+   ],
+   "vertex": "짭",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "짯",
+   "syllables": [
+    "짯"
+   ],
+   "vertex": "짯",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "짱",
+   "syllables": [
+    "짱"
+   ],
+   "vertex": "짱",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "쨀",
+   "syllables": [
+    "쨀"
+   ],
+   "vertex": "쨀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쨈",
+   "syllables": [
+    "쨈"
+   ],
+   "vertex": "쨈",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "쨍",
+   "syllables": [
+    "쨍"
+   ],
+   "vertex": "쨍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "쩍",
+   "syllables": [
+    "쩍"
+   ],
+   "vertex": "쩍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "쩜",
+   "syllables": [
+    "쩜"
+   ],
+   "vertex": "쩜",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "쩟",
+   "syllables": [
+    "쩟"
+   ],
+   "vertex": "쩟",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쫀",
+   "syllables": [
+    "쫀"
+   ],
+   "vertex": "쫀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "쫄",
+   "syllables": [
+    "쫄"
+   ],
+   "vertex": "쫄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쫠",
+   "syllables": [
+    "쫠"
+   ],
+   "vertex": "쫠",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "쭉",
+   "syllables": [
+    "쭉"
+   ],
+   "vertex": "쭉",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "쭌",
+   "syllables": [
+    "쭌"
+   ],
+   "vertex": "쭌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "쭝",
+   "syllables": [
+    "쭝"
+   ],
+   "vertex": "쭝",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "찍",
+   "syllables": [
+    "찍"
+   ],
+   "vertex": "찍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "찟",
+   "syllables": [
+    "찟"
+   ],
+   "vertex": "찟",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "찡",
+   "syllables": [
+    "찡"
+   ],
+   "vertex": "찡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "착",
+   "syllables": [
+    "착"
+   ],
+   "vertex": "착",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "찹",
+   "syllables": [
+    "찹"
+   ],
+   "vertex": "찹",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "창",
+   "syllables": [
+    "창"
+   ],
+   "vertex": "창",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "찾",
+   "syllables": [
+    "찾"
+   ],
+   "vertex": "찾",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "챔",
+   "syllables": [
+    "챔"
+   ],
+   "vertex": "챔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "척",
+   "syllables": [
+    "척"
+   ],
+   "vertex": "척",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "첩",
+   "syllables": [
+    "첩"
+   ],
+   "vertex": "첩",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "청",
+   "syllables": [
+    "청"
+   ],
+   "vertex": "청",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "첸",
+   "syllables": [
+    "첸"
+   ],
+   "vertex": "첸",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "첼",
+   "syllables": [
+    "첼"
+   ],
+   "vertex": "첼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "촉",
+   "syllables": [
+    "촉"
+   ],
+   "vertex": "촉",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "춘",
+   "syllables": [
+    "춘"
+   ],
+   "vertex": "춘",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "춤",
+   "syllables": [
+    "춤"
+   ],
+   "vertex": "춤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "췌",
+   "syllables": [
+    "췌"
+   ],
+   "vertex": "췌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "츤",
+   "syllables": [
+    "츤"
+   ],
+   "vertex": "츤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "츳",
+   "syllables": [
+    "츳"
+   ],
+   "vertex": "츳",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "칙",
+   "syllables": [
+    "칙"
+   ],
+   "vertex": "칙",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "bec67ca0679c9bec93cfb9b13658329ec02c85adfd8a063024b4ac243e694840"
+  },
+  {
+   "position_syllable": "칡",
+   "syllables": [
+    "칡"
+   ],
+   "vertex": "칡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "칭",
+   "syllables": [
+    "칭"
+   ],
+   "vertex": "칭",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "칵",
+   "syllables": [
+    "칵"
+   ],
+   "vertex": "칵",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "캄",
+   "syllables": [
+    "캄"
+   ],
+   "vertex": "캄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "캉",
+   "syllables": [
+    "캉"
+   ],
+   "vertex": "캉",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "캠",
+   "syllables": [
+    "캠"
+   ],
+   "vertex": "캠",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "캣",
+   "syllables": [
+    "캣"
+   ],
+   "vertex": "캣",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "캥",
+   "syllables": [
+    "캥"
+   ],
+   "vertex": "캥",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.006,
+   "verified": false
+  },
+  {
+   "position_syllable": "컵",
+   "syllables": [
+    "컵"
+   ],
+   "vertex": "컵",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "켄",
+   "syllables": [
+    "켄"
+   ],
+   "vertex": "켄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "켠",
+   "syllables": [
+    "켠"
+   ],
+   "vertex": "켠",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "콥",
+   "syllables": [
+    "콥"
+   ],
+   "vertex": "콥",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "콱",
+   "syllables": [
+    "콱"
+   ],
+   "vertex": "콱",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "콴",
+   "syllables": [
+    "콴"
+   ],
+   "vertex": "콴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "쾌",
+   "syllables": [
+    "쾌"
+   ],
+   "vertex": "쾌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "쿤",
+   "syllables": [
+    "쿤"
+   ],
+   "vertex": "쿤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "퀘",
+   "syllables": [
+    "퀘"
+   ],
+   "vertex": "퀘",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "킬",
+   "syllables": [
+    "킬"
+   ],
+   "vertex": "킬",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "탁",
+   "syllables": [
+    "탁"
+   ],
+   "vertex": "탁",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "탐",
+   "syllables": [
+    "탐"
+   ],
+   "vertex": "탐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "탯",
+   "syllables": [
+    "탯"
+   ],
+   "vertex": "탯",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.006,
+   "verified": false
+  },
+  {
+   "position_syllable": "탱",
+   "syllables": [
+    "탱"
+   ],
+   "vertex": "탱",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "턴",
+   "syllables": [
+    "턴"
+   ],
+   "vertex": "턴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "텀",
+   "syllables": [
+    "텀"
+   ],
+   "vertex": "텀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "텃",
+   "syllables": [
+    "텃"
+   ],
+   "vertex": "텃",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "템",
+   "syllables": [
+    "템"
+   ],
+   "vertex": "템",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "텡",
+   "syllables": [
+    "텡"
+   ],
+   "vertex": "텡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "톄",
+   "syllables": [
+    "톄"
+   ],
+   "vertex": "톄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "톡",
+   "syllables": [
+    "톡"
+   ],
+   "vertex": "톡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "톤",
+   "syllables": [
+    "톤"
+   ],
+   "vertex": "톤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "톰",
+   "syllables": [
+    "톰"
+   ],
+   "vertex": "톰",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "8556ba99de2e867b35fda8ba9018a80705b7eea4c6e49ccb4960316fdf1d5731"
+  },
+  {
+   "position_syllable": "톱",
+   "syllables": [
+    "톱"
+   ],
+   "vertex": "톱",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "툭",
+   "syllables": [
+    "툭"
+   ],
+   "vertex": "툭",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "툼",
+   "syllables": [
+    "툼"
+   ],
+   "vertex": "툼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "퉁",
+   "syllables": [
+    "퉁"
+   ],
+   "vertex": "퉁",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "튀",
+   "syllables": [
+    "튀"
+   ],
+   "vertex": "튀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "튐",
+   "syllables": [
+    "튐"
+   ],
+   "vertex": "튐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "튜",
+   "syllables": [
+    "튜"
+   ],
+   "vertex": "튜",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "틀",
+   "syllables": [
+    "틀"
+   ],
+   "vertex": "틀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "틈",
+   "syllables": [
+    "틈"
+   ],
+   "vertex": "틈",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "틱",
+   "syllables": [
+    "틱"
+   ],
+   "vertex": "틱",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "틴",
+   "syllables": [
+    "틴"
+   ],
+   "vertex": "틴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "틸",
+   "syllables": [
+    "틸"
+   ],
+   "vertex": "틸",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "팍",
+   "syllables": [
+    "팍"
+   ],
+   "vertex": "팍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "팜",
+   "syllables": [
+    "팜"
+   ],
+   "vertex": "팜",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "팝",
+   "syllables": [
+    "팝"
+   ],
+   "vertex": "팝",
+   "result_for_receiver": "L",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "23407af620a9e19e160107758a2a2c82e837af6b3ad260e9f2c9b482e8531f14"
+  },
+  {
+   "position_syllable": "팟",
+   "syllables": [
+    "팟"
+   ],
+   "vertex": "팟",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "팡",
+   "syllables": [
+    "팡"
+   ],
+   "vertex": "팡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "팥",
+   "syllables": [
+    "팥"
+   ],
+   "vertex": "팥",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "팰",
+   "syllables": [
+    "팰"
+   ],
+   "vertex": "팰",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "팸",
+   "syllables": [
+    "팸"
+   ],
+   "vertex": "팸",
+   "result_for_receiver": "L",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "b56adc0b0ecc75ccb32f0acc1a31cb6be003ead463a98f622fdc2702489e489c"
+  },
+  {
+   "position_syllable": "펀",
+   "syllables": [
+    "펀"
+   ],
+   "vertex": "펀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "펌",
+   "syllables": [
+    "펌"
+   ],
+   "vertex": "펌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "펙",
+   "syllables": [
+    "펙"
+   ],
+   "vertex": "펙",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "펴",
+   "syllables": [
+    "펴"
+   ],
+   "vertex": "펴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "폄",
+   "syllables": [
+    "폄"
+   ],
+   "vertex": "폄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "폐",
+   "syllables": [
+    "폐"
+   ],
+   "vertex": "폐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "폼",
+   "syllables": [
+    "폼"
+   ],
+   "vertex": "폼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "폿",
+   "syllables": [
+    "폿"
+   ],
+   "vertex": "폿",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "퐁",
+   "syllables": [
+    "퐁"
+   ],
+   "vertex": "퐁",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "1edf52e756ed50ce74a6633b25aa38672e2c255d01a8ba893aeb6b7602614fb3"
+  },
+  {
+   "position_syllable": "퐅",
+   "syllables": [
+    "퐅"
+   ],
+   "vertex": "퐅",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "푀",
+   "syllables": [
+    "푀"
+   ],
+   "vertex": "푀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "푼",
+   "syllables": [
+    "푼"
+   ],
+   "vertex": "푼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "퓌",
+   "syllables": [
+    "퓌"
+   ],
+   "vertex": "퓌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "핀",
+   "syllables": [
+    "핀"
+   ],
+   "vertex": "핀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "핍",
+   "syllables": [
+    "핍"
+   ],
+   "vertex": "핍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "학",
+   "syllables": [
+    "학"
+   ],
+   "vertex": "학",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "핫",
+   "syllables": [
+    "핫"
+   ],
+   "vertex": "핫",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "3474a9d8704d15aa020938ebd2877bbd913c7257e6cb54158bfbb7fcd4711062"
+  },
+  {
+   "position_syllable": "핵",
+   "syllables": [
+    "핵"
+   ],
+   "vertex": "핵",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "햄",
+   "syllables": [
+    "햄"
+   ],
+   "vertex": "햄",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "행",
+   "syllables": [
+    "행"
+   ],
+   "vertex": "행",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "향",
+   "syllables": [
+    "향"
+   ],
+   "vertex": "향",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "험",
+   "syllables": [
+    "험"
+   ],
+   "vertex": "험",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "헙",
+   "syllables": [
+    "헙"
+   ],
+   "vertex": "헙",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "헥",
+   "syllables": [
+    "헥"
+   ],
+   "vertex": "헥",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "헨",
+   "syllables": [
+    "헨"
+   ],
+   "vertex": "헨",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "38be42eb2f2e4ef3e18171b8e925d52c1e066b4cc28a27a0bb2f5f68f5e064d6"
+  },
+  {
+   "position_syllable": "헷",
+   "syllables": [
+    "헷"
+   ],
+   "vertex": "헷",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "헹",
+   "syllables": [
+    "헹"
+   ],
+   "vertex": "헹",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "혀",
+   "syllables": [
+    "혀"
+   ],
+   "vertex": "혀",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "혁",
+   "syllables": [
+    "혁"
+   ],
+   "vertex": "혁",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "현",
+   "syllables": [
+    "현"
+   ],
+   "vertex": "현",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "혐",
+   "syllables": [
+    "혐"
+   ],
+   "vertex": "혐",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "형",
+   "syllables": [
+    "형"
+   ],
+   "vertex": "형",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "혜",
+   "syllables": [
+    "혜"
+   ],
+   "vertex": "혜",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "혹",
+   "syllables": [
+    "혹"
+   ],
+   "vertex": "혹",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "홉",
+   "syllables": [
+    "홉"
+   ],
+   "vertex": "홉",
+   "result_for_receiver": "W",
+   "search_seconds": 0.001,
+   "verified": true,
+   "proof_sha256": "eef6c10ea4f0f33eecf87305c1dc55aae542f4317ccc940c74d7887e8db8fb5c"
+  },
+  {
+   "position_syllable": "홍",
+   "syllables": [
+    "홍"
+   ],
+   "vertex": "홍",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "확",
+   "syllables": [
+    "확"
+   ],
+   "vertex": "확",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "홧",
+   "syllables": [
+    "홧"
+   ],
+   "vertex": "홧",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "홰",
+   "syllables": [
+    "홰"
+   ],
+   "vertex": "홰",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "횃",
+   "syllables": [
+    "횃"
+   ],
+   "vertex": "횃",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "회",
+   "syllables": [
+    "회"
+   ],
+   "vertex": "회",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.046,
+   "verified": false
+  },
+  {
+   "position_syllable": "획",
+   "syllables": [
+    "획"
+   ],
+   "vertex": "획",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "횡",
+   "syllables": [
+    "횡"
+   ],
+   "vertex": "횡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "효",
+   "syllables": [
+    "효"
+   ],
+   "vertex": "효",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "훅",
+   "syllables": [
+    "훅"
+   ],
+   "vertex": "훅",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.004,
+   "verified": false
+  },
+  {
+   "position_syllable": "훔",
+   "syllables": [
+    "훔"
+   ],
+   "vertex": "훔",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "훤",
+   "syllables": [
+    "훤"
+   ],
+   "vertex": "훤",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "훨",
+   "syllables": [
+    "훨"
+   ],
+   "vertex": "훨",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.001,
+   "verified": false
+  },
+  {
+   "position_syllable": "훼",
+   "syllables": [
+    "훼"
+   ],
+   "vertex": "훼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.005,
+   "verified": false
+  },
+  {
+   "position_syllable": "휠",
+   "syllables": [
+    "휠"
+   ],
+   "vertex": "휠",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "휴",
+   "syllables": [
+    "휴"
+   ],
+   "vertex": "휴",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.0,
+   "verified": false
+  },
+  {
+   "position_syllable": "휼",
+   "syllables": [
+    "휼"
+   ],
+   "vertex": "휼",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.003,
+   "verified": false
+  },
+  {
+   "position_syllable": "흉",
+   "syllables": [
+    "흉"
+   ],
+   "vertex": "흉",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "흡",
+   "syllables": [
+    "흡"
+   ],
+   "vertex": "흡",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.002,
+   "verified": false
+  },
+  {
+   "position_syllable": "힌",
+   "syllables": [
+    "힌"
+   ],
+   "vertex": "힌",
+   "result_for_receiver": "unknown",
+   "search_seconds": 10.021,
+   "verified": false
+  }
+ ]
+}
