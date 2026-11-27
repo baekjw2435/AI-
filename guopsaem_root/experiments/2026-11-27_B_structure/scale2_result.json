@@ -1,0 +1,218 @@
+[
+ {
+  "name": "q15_s0",
+  "p": 0.15,
+  "core_words": 234,
+  "core_groups": 206,
+  "result": "loss",
+  "seconds": 0.0,
+  "nodes": 19
+ },
+ {
+  "name": "q15_s1",
+  "p": 0.15,
+  "core_words": 222,
+  "core_groups": 208,
+  "result": "loss",
+  "seconds": 0.0,
+  "nodes": 14
+ },
+ {
+  "name": "q15_s2",
+  "p": 0.15,
+  "core_words": 227,
+  "core_groups": 219,
+  "result": "loss",
+  "seconds": 0.0,
+  "nodes": 50
+ },
+ {
+  "name": "q15_s3",
+  "p": 0.15,
+  "core_words": 265,
+  "core_groups": 249,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 4
+ },
+ {
+  "name": "q20_s0",
+  "p": 0.2,
+  "core_words": 324,
+  "core_groups": 293,
+  "result": "loss",
+  "seconds": 0.0,
+  "nodes": 197
+ },
+ {
+  "name": "q20_s1",
+  "p": 0.2,
+  "core_words": 337,
+  "core_groups": 306,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 104
+ },
+ {
+  "name": "q20_s2",
+  "p": 0.2,
+  "core_words": 337,
+  "core_groups": 310,
+  "result": "loss",
+  "seconds": 0.0,
+  "nodes": 9
+ },
+ {
+  "name": "q20_s3",
+  "p": 0.2,
+  "core_words": 298,
+  "core_groups": 272,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 26
+ },
+ {
+  "name": "q25_s0",
+  "p": 0.25,
+  "core_words": 461,
+  "core_groups": 415,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 89
+ },
+ {
+  "name": "q25_s1",
+  "p": 0.25,
+  "core_words": 414,
+  "core_groups": 371,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 2
+ },
+ {
+  "name": "q25_s2",
+  "p": 0.25,
+  "core_words": 380,
+  "core_groups": 357,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 2
+ },
+ {
+  "name": "q25_s3",
+  "p": 0.25,
+  "core_words": 511,
+  "core_groups": 467,
+  "result": "loss",
+  "seconds": 0.0,
+  "nodes": 15
+ },
+ {
+  "name": "q30_s0",
+  "p": 0.3,
+  "core_words": 473,
+  "core_groups": 406,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 3
+ },
+ {
+  "name": "q30_s1",
+  "p": 0.3,
+  "core_words": 549,
+  "core_groups": 483,
+  "result": "win",
+  "seconds": 0.05,
+  "nodes": 14227
+ },
+ {
+  "name": "q30_s2",
+  "p": 0.3,
+  "core_words": 548,
+  "core_groups": 489,
+  "result": "win",
+  "seconds": 0.66,
+  "nodes": 169915
+ },
+ {
+  "name": "q30_s3",
+  "p": 0.3,
+  "core_words": 551,
+  "core_groups": 487,
+  "result": "win",
+  "seconds": 0.12,
+  "nodes": 36944
+ },
+ {
+  "name": "q40_s0",
+  "p": 0.4,
+  "core_words": 753,
+  "core_groups": 635,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 2
+ },
+ {
+  "name": "q40_s1",
+  "p": 0.4,
+  "core_words": 748,
+  "core_groups": 653,
+  "result": "win",
+  "seconds": 17.5,
+  "nodes": 6986558
+ },
+ {
+  "name": "q40_s2",
+  "p": 0.4,
+  "core_words": 795,
+  "core_groups": 698,
+  "result": "loss",
+  "seconds": 50.94,
+  "nodes": 16241536
+ },
+ {
+  "name": "q40_s3",
+  "p": 0.4,
+  "core_words": 753,
+  "core_groups": 656,
+  "result": "win",
+  "seconds": 0.03,
+  "nodes": 11603
+ },
+ {
+  "name": "q50_s0",
+  "p": 0.5,
+  "core_words": 1026,
+  "core_groups": 865,
+  "result": "win",
+  "seconds": 0.19,
+  "nodes": 40813
+ },
+ {
+  "name": "q50_s1",
+  "p": 0.5,
+  "core_words": 1041,
+  "core_groups": 892,
+  "result": "win",
+  "seconds": 0.01,
+  "nodes": 2758
+ },
+ {
+  "name": "q50_s2",
+  "p": 0.5,
+  "core_words": 1033,
+  "core_groups": 889,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 2
+ },
+ {
+  "name": "q50_s3",
+  "p": 0.5,
+  "core_words": 974,
+  "core_groups": 816,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 2
+ }
+]

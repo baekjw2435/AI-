@@ -1,0 +1,192 @@
+[
+ {
+  "name": "p20_s0",
+  "p": 0.2,
+  "core_words": 270,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p20_s1",
+  "p": 0.2,
+  "core_words": 24,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p20_s2",
+  "p": 0.2,
+  "core_words": 4,
+  "core_groups": 4,
+  "result": "loss",
+  "seconds": 0.0,
+  "nodes": 2
+ },
+ {
+  "name": "p20_s3",
+  "p": 0.2,
+  "core_words": 303,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p30_s0",
+  "p": 0.3,
+  "core_words": 469,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p30_s1",
+  "p": 0.3,
+  "core_words": 510,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p30_s2",
+  "p": 0.3,
+  "core_words": 402,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p30_s3",
+  "p": 0.3,
+  "core_words": 462,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p40_s0",
+  "p": 0.4,
+  "core_words": 133,
+  "core_groups": 117,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 4
+ },
+ {
+  "name": "p40_s1",
+  "p": 0.4,
+  "core_words": 653,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p40_s2",
+  "p": 0.4,
+  "core_words": 702,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p40_s3",
+  "p": 0.4,
+  "core_words": 736,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p50_s0",
+  "p": 0.5,
+  "core_words": 951,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p50_s1",
+  "p": 0.5,
+  "core_words": 179,
+  "core_groups": 155,
+  "result": "loss",
+  "seconds": 0.0,
+  "nodes": 178
+ },
+ {
+  "name": "p50_s2",
+  "p": 0.5,
+  "core_words": 254,
+  "core_groups": 225,
+  "result": "unknown",
+  "seconds": 60.0,
+  "nodes": 37317632
+ },
+ {
+  "name": "p50_s3",
+  "p": 0.5,
+  "core_words": 16,
+  "core_groups": 15,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 6
+ },
+ {
+  "name": "p60_s0",
+  "p": 0.6,
+  "core_words": 301,
+  "core_groups": 245,
+  "result": "win",
+  "seconds": 0.37,
+  "nodes": 254581
+ },
+ {
+  "name": "p60_s1",
+  "p": 0.6,
+  "core_words": 113,
+  "core_groups": 86,
+  "result": "loss",
+  "seconds": 0.0,
+  "nodes": 128
+ },
+ {
+  "name": "p60_s2",
+  "p": 0.6,
+  "core_words": 1152,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p60_s3",
+  "p": 0.6,
+  "core_words": 264,
+  "core_groups": 227,
+  "result": "loss",
+  "seconds": 0.07,
+  "nodes": 48379
+ },
+ {
+  "name": "p70_s0",
+  "p": 0.7,
+  "core_words": 1562,
+  "result": "static",
+  "seconds": 0.0
+ },
+ {
+  "name": "p70_s1",
+  "p": 0.7,
+  "core_words": 906,
+  "core_groups": 722,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 116
+ },
+ {
+  "name": "p70_s2",
+  "p": 0.7,
+  "core_words": 8,
+  "core_groups": 8,
+  "result": "win",
+  "seconds": 0.0,
+  "nodes": 4
+ },
+ {
+  "name": "p70_s3",
+  "p": 0.7,
+  "core_words": 384,
+  "core_groups": 325,
+  "result": "win",
+  "seconds": 0.05,
+  "nodes": 17163
+ }
+]
