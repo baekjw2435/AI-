@@ -4,7 +4,9 @@
 usage:
   shield_split.py start  present 죄 --shield 11 --dir DIR [--parts 4] [--hours 6]
   shield_split.py status --dir DIR
+  shield_split.py rebalance --dir DIR [--cores 4]     (묶음이 먼저 끝나 코어가 놀 때)
   shield_split.py finish --dir DIR --cert FILE        (모든 수가 끝났거나, 받은 쪽의 이기는 수가 하나라도 나왔을 때)
+  shield_split.py store --cert FILE --verify-json V --out DIR --name present_법_12 --question "보호막 12에서 ~법 제시"
 
 * 첫 자리 = 보호막 t(제시면 보호막-1)에서 그 음절을 받은 쪽. 낼 수 있는 수를 parts묶음으로 나눠(번갈아) C 엔진
   `part` 모드로 따로 돌린다. 수 하나가 끝날 때마다 DIR/moves/move_<i>.json에 그 수의 결과와 판정 근거가 남는다.
@@ -142,6 +144,99 @@ def cmd_finish(a):
     print(f"{res}  ({root['why']})  근거 자리 {len(nodes)}개 → {a.cert}")
 
 
+def cmd_rebalance(a):
+    """놀고 있는 코어에 남은 수를 나눠 준다. 지금 계산 중인 수는 건드리지 않고, 일이 가장 많이 남은 묶음의
+    뒤쪽 절반을 새 묶음으로 띄운다(같은 수를 두 묶음이 겹쳐 따지지 않게, 이미 맡긴 수는 다시 안 맡긴다)."""
+    d = Path(a.dir)
+    meta = json.loads((d / 'meta.json').read_text(encoding='utf-8'))
+    done = set(load_heads(d))
+    live = [(idx, pid) for idx, pid in zip(meta['parts'], meta['pids']) if alive(pid)]
+    idle = a.cores - len(live)
+    # 살아 있는 묶음마다: 지금 하는 수(첫 미완료)는 그 묶음 몫, 나머지 중 다른 살아 있는 묶음이 먼저 맡은 수는 빼고
+    claimed, pools = set(), []
+    for idx, _ in live:
+        rest = [i for i in idx if i not in done]
+        if rest:
+            claimed.add(rest[0])
+    for idx, _ in live:
+        rest = [i for i in idx if i not in done and i not in claimed]
+        pools.append(rest[::-1])     # 뒤에서부터 맡긴다(원래 묶음은 앞에서부터 하므로 겹침이 적다)
+    started = time.mktime(time.strptime(meta['started'], '%Y-%m-%d %H:%M:%S'))
+    left_h = meta['hours'] - (time.time() - started) / 3600
+    eng = sc.engine_binary()
+    given = set()
+    for _ in range(max(0, idle)):
+        pools = [[i for i in p if i not in given] for p in pools]
+        pools.sort(key=len, reverse=True)
+        if not pools or not pools[0] or left_h <= 0.05:
+            break
+        take = pools[0][:len(pools[0]) // 2 + 1]
+        given |= set(take)
+        log = open(d / f"extra{len(meta['pids'])}.log", 'a')
+        p = subprocess.Popen(['timeout', f'{left_h:.2f}h', str(eng), meta['model'], meta['syllable'], str(meta['t']),
+                              'part', ','.join(map(str, take)), str(d / 'moves')],
+                             stdout=log, stderr=log, start_new_session=True)
+        meta['pids'].append(p.pid)
+        meta['parts'].append(take)
+        print(f'놀던 코어에 {len(take)}수를 맡김(남은 한도 {left_h:.2f}시간)')
+    (d / 'meta.json').write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding='utf-8')
+    if idle <= 0:
+        print('놀고 있는 코어 없음')
+
+
+def cmd_store(a):
+    """검증을 통과한 큰 증명서를 저장소용 40MB 조각 + MANIFEST.json으로 만든다(GitHub 파일 하나 100MB 제한).
+    증명서(.json)와 그 옆 .json.route/ 폴더(루트 증명서)를 조각으로 나누고, 다시 합친 해시를 확인한다."""
+    import glob
+    import gzip
+    import hashlib
+    import io
+    import tarfile
+    cert, out = Path(a.cert), Path(a.out)
+    out.mkdir(parents=True, exist_ok=True)
+    ver = json.loads(Path(a.verify_json).read_text(encoding='utf-8'))
+    if not ver.get('verified'):
+        raise SystemExit('검증을 통과하지 않은 증명서는 보관하지 않습니다.')
+
+    def sha(b):
+        return hashlib.sha256(b).hexdigest()
+    raw = cert.read_bytes()
+    gz = gzip.compress(raw, 9)
+    buf = io.BytesIO()
+    with tarfile.open(fileobj=buf, mode='w:gz') as tar:
+        rdir = Path(str(cert) + '.route')
+        if rdir.exists():
+            for f in sorted(rdir.iterdir()):
+                if f.suffix not in ('.log', '.tt'):
+                    tar.add(f, arcname=f'{a.name}.json.route/{f.name}')
+    route = buf.getvalue()
+    size = 40 << 20
+    parts = {}
+    for label, data in ((f'{a.name}.json.gz', gz), ('route.tgz', route)):
+        for k in range(0, max(1, (len(data) + size - 1) // size)):
+            name = f'{label}.part{k:02d}'
+            chunk = data[k * size:(k + 1) * size]
+            (out / name).write_bytes(chunk)
+            parts[name] = {'bytes': len(chunk), 'sha256': sha(chunk)}
+    m = {'question': a.question, 'result': ver['result'], 'verified': True, 'nodes': ver['nodes'], 'leaves': ver['leaves'],
+         'certificate_json_sha256': sha(raw), 'certificate_json_gz_sha256': sha(gz), 'route_tgz_sha256': sha(route),
+         'parts': parts}
+    (out / 'MANIFEST.json').write_text(json.dumps(m, ensure_ascii=False, indent=1), encoding='utf-8')
+    back = b''.join((out / n).read_bytes() for n in sorted(parts) if n.startswith(f'{a.name}.json.gz'))
+    assert sha(back) == m['certificate_json_gz_sha256'] and sha(gzip.decompress(back)) == m['certificate_json_sha256']
+    (out / 'README_KO.md').write_text(f"""# {a.question} — {ver['result']} (검증 통과)
+
+근거 자리 {ver['nodes']:,}개. 파일이 커서 40MB 조각으로 나눠 두었습니다. 다시 확인하려면 이 폴더에서:
+
+```
+cat {a.name}.json.gz.part* > {a.name}.json.gz
+cat route.tgz.part* | tar xzf -
+python3 ../../../shield_verify.py {a.name}.json.gz
+```
+""", encoding='utf-8')
+    print(f"{out}: 조각 {len(parts)}개, 합친 해시 확인됨")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest='cmd', required=True)
@@ -158,8 +253,18 @@ def main():
     f = sub.add_parser('finish')
     f.add_argument('--dir', required=True)
     f.add_argument('--cert', required=True)
+    r = sub.add_parser('rebalance')
+    r.add_argument('--dir', required=True)
+    r.add_argument('--cores', type=int, default=4)
+    so = sub.add_parser('store')
+    so.add_argument('--cert', required=True, help='finish로 만든 증명서 .json (옆에 .json.route/)')
+    so.add_argument('--verify-json', required=True, help='shield_verify.py 출력(JSON)')
+    so.add_argument('--out', required=True, help='저장소 안의 보관 폴더')
+    so.add_argument('--name', required=True, help='파일 이름 앞부분, 예: present_법_12')
+    so.add_argument('--question', required=True, help='예: 보호막 12에서 ~법 제시')
     a = ap.parse_args()
-    {'start': cmd_start, 'status': cmd_status, 'finish': cmd_finish}[a.cmd](a)
+    {'start': cmd_start, 'status': cmd_status, 'finish': cmd_finish, 'rebalance': cmd_rebalance,
+     'store': cmd_store}[a.cmd](a)
 
 
 if __name__ == '__main__':
