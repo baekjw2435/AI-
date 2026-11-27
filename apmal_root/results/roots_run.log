@@ -1,1 +1,5 @@
 {"plan": "apmal_root/plans/roots.jsonl", "positions": 113, "pending": 113, "limit_seconds": 600.0, "tt_mb": 1024, "jobs": 4, "solver": "/home/user/AI-/eoinjeong_root/shield/bin/solver_v5", "verifier": "/home/user/AI-/eoinjeong_root/shield/bin/verify_v4"}
+18:17:05 2/113 R002 미확정 탐색 600.001285s
+18:17:05 3/113 R003 둘 차례인 쪽 승 탐색 157.380586s
+18:17:06 5/113 R005 미확정 탐색 600.000264s
+18:17:07 6/113 R006 미확정 탐색 600.000368s
