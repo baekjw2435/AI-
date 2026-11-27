@@ -7,7 +7,25 @@
  "verifier_build": "g++ -O2 -std=c++17 -o verify_v4 guopsaem_root/verifier_v4/verify_v4.cpp -lz",
  "solver_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714",
  "verifier_sha256": "292670d48e0b30d2e2581181e7e7adec58984678f38374fdd9003e687fc813d1",
- "limits": {"roots": {"search_seconds_per_position": 600, "tt_mb": 1024, "parallel_jobs": 4}},
+ "limits": {
+  "roots": {
+   "search_seconds_per_position": 600,
+   "tt_mb": 1024,
+   "parallel_jobs": 4
+  },
+  "roots_pass2": {
+   "fixed_before_running": "2026-11-27 (사용자 승인: \"응 이어서 해\")",
+   "applies_to": "1차(600초)에서 미확정인 루트 국면만",
+   "search_seconds_per_position": 1200,
+   "total_search_seconds_per_position": 1800,
+   "how": "1차가 저장한 탐색 상태(tt/)를 불러와 이어서 1200초 더 = 국면마다 합계 30분(사용자의 질문당 30분 한도)",
+   "tt_mb": 3072,
+   "tt_note": "표를 3072MB(실제 2GB)로 키움. 저장 상태는 표 크기와 상관없이 불러올 수 있음(solver_v5 tt_load)",
+   "tt_save_max": 4000000,
+   "parallel_jobs": 4,
+   "after": "그래도 미확정이면 미확정으로 두고 사용자에게 묻는다"
+  }
+ },
  "rule": "한도는 탐색 시간입니다. 한도에 닿으면 미확정으로 두고 한도를 늘려 다시 풀지 않습니다. 끝말잇기 루트(eoinjeong_root)와 같은 한도입니다.",
  "threads_per_job": 1,
  "acceptance": "verify_v4 수락 조건 8개(guopsaem_root/tools/solve_common.verify): 종료 코드 0, verified true, 기대 결과, state_storage deflate-exact, 사전·자리·입력·증명서 sha256 일치"
