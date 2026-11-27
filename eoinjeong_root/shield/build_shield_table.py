@@ -22,11 +22,14 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parents[1] / 'guopsaem_root' / 'verifier_v3'))
 from verify_v3 import conv  # noqa: E402
+sys.path.insert(0, str(HERE))
+import shield_files as F  # noqa: E402  (끝말잇기/앞말잇기 자료: SHIELD_GAME)
 
 
 def main():
-    dic = HERE / 'source' / '표준사전_어인정_전체단어.txt'
-    atk = HERE / 'source' / '공격단어_목록.txt'
+    # SHIELD_GAME=front: 뒤집은 앞말잇기 자료를 읽고 apmal_root/shield/에 쓴다. 단어는 원래(앞말잇기) 방향으로 적는다.
+    dic, atk, out = F.DICT, F.ATTACK, F.TABLE_DIR
+    out.mkdir(parents=True, exist_ok=True)
     words = [w.strip() for w in dic.read_text(encoding='utf-8-sig').splitlines() if w.strip()]
     first = collections.Counter(w[0] for w in words)
 
@@ -41,8 +44,9 @@ def main():
         return '0' if n == 0 else f'0~{n}'
 
     ends = sorted({w[-1] for w in words})
-    with open(HERE / 'syllable_shield_table.tsv', 'w', encoding='utf-8') as f:
-        f.write('끝음절\t이을수있는단어수(두음포함)\t두음빼면\t쓸수있는보호막\n')
+    with open(out / 'syllable_shield_table.tsv', 'w', encoding='utf-8') as f:
+        f.write('끝음절\t이을수있는단어수(두음포함)\t두음빼면\t쓸수있는보호막\n' if F.GAME == 'end' else
+                '받는음절(단어의첫음절)\t그음절로끝나는단어수(두음포함)\t두음빼면\t쓸수있는보호막\n')
         for s in sorted(ends, key=lambda s: (c1(s), s)):
             f.write(f'{s}\t{c1(s)}\t{c0(s)}\t{cap(c1(s))}\n')
     att, cur = [], None
@@ -55,10 +59,11 @@ def main():
         m = re.match(r'^깊이\s*(\d+)\s*:\s*(.*)$', line)
         if m:
             att += [(cur, int(m.group(1)), w.strip()) for w in m.group(2).split(',') if w.strip()]
-    with open(HERE / 'attack_words_shield.tsv', 'w', encoding='utf-8') as f:
-        f.write('시작음절\t공격단어\t한방\t끝음절\t이을수있는단어수\t쓸수있는보호막\n')
+    with open(out / 'attack_words_shield.tsv', 'w', encoding='utf-8') as f:
+        f.write('시작음절\t공격단어\t한방\t끝음절\t이을수있는단어수\t쓸수있는보호막\n' if F.GAME == 'end' else
+                '받은음절(공격단어의끝음절)\t공격단어\t한방\t상대가받는음절(첫음절)\t이을수있는단어수\t쓸수있는보호막\n')
         for s, d, w in att:
-            f.write(f"{s}\t{w}\t{'한방' if d == 1 else ''}\t{w[-1]}\t{c1(w[-1])}\t{cap(c1(w[-1]))}\n")
+            f.write(f"{s}\t{F.show(w)}\t{'한방' if d == 1 else ''}\t{w[-1]}\t{c1(w[-1])}\t{cap(c1(w[-1]))}\n")
     d1 = [w for _, d, w in att if d == 1]
     print(f'dictionary {len(words)} words sha256 {hashlib.sha256(dic.read_bytes()).hexdigest()}')
     print(f'attack list {len(att)} words in {len({s for s, _, _ in att})} syllables sha256 {hashlib.sha256(atk.read_bytes()).hexdigest()}')

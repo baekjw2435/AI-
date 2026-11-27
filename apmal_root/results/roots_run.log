@@ -1,0 +1,1 @@
+{"plan": "apmal_root/plans/roots.jsonl", "positions": 113, "pending": 113, "limit_seconds": 600.0, "tt_mb": 1024, "jobs": 4, "solver": "/home/user/AI-/eoinjeong_root/shield/bin/solver_v5", "verifier": "/home/user/AI-/eoinjeong_root/shield/bin/verify_v4"}
