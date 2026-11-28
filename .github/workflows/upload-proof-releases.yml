@@ -10,6 +10,8 @@ name: upload-proof-releases
 # Both jobs fetch only release_staging/<tag> of the tags given (2026-11-21): the branch keeps every staged file in its
 # history, and checking out all of them took 10-14 minutes per job. Each run puts its new files under a new tag, so the
 # upload and the download check below only see the new files.
+# A file over 90 MB is staged as NAME.partNN (GitHub refuses files over 100 MB in a push; MANIFEST lists the parts with
+# their SHA-256). Both jobs join the parts first, so the checks and the release see the whole file NAME (2026-11-28).
 
 on:
   workflow_dispatch:
@@ -51,6 +53,34 @@ jobs:
           sparse-checkout: ${{ steps.paths.outputs.list }}
           fetch-depth: 1
           filter: blob:none
+      - name: Join split files
+        run: |
+          python3 - <<'EOF'
+          import hashlib, json, os, sys
+          from pathlib import Path
+          tags = os.environ['TAGS'].split()
+          dirs = sorted(p for p in Path('release_staging').iterdir() if p.is_dir()) if tags == ['all'] else [Path('release_staging') / t for t in tags]
+          bad = 0
+          for d in dirs:
+              mf = d / 'MANIFEST.json'
+              if not mf.exists():
+                  continue
+              m = json.loads(mf.read_text(encoding='utf-8'))
+              for name, e in m['files'].items():
+                  if 'parts' not in e:
+                      continue
+                  with open(d / name, 'wb') as out:
+                      for q in e['parts']:
+                          b = (d / q['name']).read_bytes()
+                          if hashlib.sha256(b).hexdigest() != q['sha256'] or len(b) != q['bytes']:
+                              print('part differs:', d.name, q['name'])
+                              bad += 1
+                          out.write(b)
+                  for q in e['parts']:
+                      (d / q['name']).unlink()
+                  print('joined', d.name, name, len(e['parts']), 'parts')
+          sys.exit(1 if bad else 0)
+          EOF
       - name: Check the staged files against MANIFEST.json
         run: |
           python3 - <<'EOF'
@@ -106,6 +136,34 @@ jobs:
           sparse-checkout: ${{ steps.paths.outputs.list }}
           fetch-depth: 1
           filter: blob:none
+      - name: Join split files
+        run: |
+          python3 - <<'EOF'
+          import hashlib, json, os, sys
+          from pathlib import Path
+          tags = os.environ['TAGS'].split()
+          dirs = sorted(p for p in Path('release_staging').iterdir() if p.is_dir()) if tags == ['all'] else [Path('release_staging') / t for t in tags]
+          bad = 0
+          for d in dirs:
+              mf = d / 'MANIFEST.json'
+              if not mf.exists():
+                  continue
+              m = json.loads(mf.read_text(encoding='utf-8'))
+              for name, e in m['files'].items():
+                  if 'parts' not in e:
+                      continue
+                  with open(d / name, 'wb') as out:
+                      for q in e['parts']:
+                          b = (d / q['name']).read_bytes()
+                          if hashlib.sha256(b).hexdigest() != q['sha256'] or len(b) != q['bytes']:
+                              print('part differs:', d.name, q['name'])
+                              bad += 1
+                          out.write(b)
+                  for q in e['parts']:
+                      (d / q['name']).unlink()
+                  print('joined', d.name, name, len(e['parts']), 'parts')
+          sys.exit(1 if bad else 0)
+          EOF
       - name: Create the releases and attach the files
         run: |
           set -euo pipefail
@@ -113,9 +171,17 @@ jobs:
           if [ "$TAGS" = "all" ]; then TAGS=$(ls -d */ | tr -d / | tr '\n' ' '); fi
           echo "$TAGS" > "$RUNNER_TEMP/tags.txt"
           for tag in $TAGS; do
-            case "$tag" in alt817-proofs-*|alt817-states-*) ;; *) echo "unexpected tag: $tag"; exit 1 ;; esac
+            case "$tag" in alt817-proofs-*|alt817-states-*|guop3683-proofs-*|guop3683-states-*) ;; *) echo "unexpected tag: $tag"; exit 1 ;; esac
             [ -f "$tag/MANIFEST.json" ] || { echo "no staged folder for $tag"; exit 1; }
             if ! gh release view "$tag" >/dev/null 2>&1; then
+              if [ "${tag#guop3683-}" != "$tag" ]; then
+                {
+                  echo "구없샘(3,683단어, guopsaem_root/words_3683.txt) 음절별 승패 연구의 파일입니다."
+                  echo
+                  echo "- 파일 이름은 그 파일의 SHA-256입니다. 무엇의 파일인지는 첨부한 MANIFEST.json에 있습니다."
+                  echo "- 저장 상태(.tt.gz)는 계산기의 탐색 저장 파일을 gzip으로 묶은 것입니다. 판정이 아니라 탐색을 이어 가기 위한 파일입니다. 색인: basic_root/alt_first_moves/results/states/INDEX.json"
+                } > "$RUNNER_TEMP/notes.md"
+              else
               {
                 echo "한기사(817단어) '이기는 쪽의 다른 첫 수' 연구의 증명서(route-proof-v4) 파일입니다."
                 echo
@@ -124,6 +190,7 @@ jobs:
                 echo "- 검증기: guopsaem_root/verifier_v4/verify_v4.cpp"
                 echo "- 저장 상태(.tt.gz)는 계산기의 탐색 저장 파일을 gzip으로 묶은 것입니다. 판정이 아니라 탐색을 이어 가기 위한 파일입니다. 색인: basic_root/alt_first_moves/results/states/INDEX.json"
               } > "$RUNNER_TEMP/notes.md"
+              fi
               gh release create "$tag" --target "$TARGET" --title "$tag" --notes-file "$RUNNER_TEMP/notes.md" --latest=false
             fi
             ls "$tag"/* | xargs -n 10 gh release upload "$tag" --clobber

@@ -1,0 +1,38 @@
+{
+ "release_tag": "guop3683-states-2026-11-28a",
+ "files": {
+  "601d7de8500af958df899801f45fee3ff3ef3392586af4dc45893b515681665f.tt.gz": {
+   "sha256": "601d7de8500af958df899801f45fee3ff3ef3392586af4dc45893b515681665f",
+   "bytes": 182869259,
+   "state_sha256": "759e5e9e4fd2a47621a9f7a9ace2103bd2e3768836b41842bf7c4f9257ca6fba",
+   "work_path": "guop3683_A1/면/state.tt",
+   "carried_search_seconds": 600.0,
+   "parts": [
+    {
+     "name": "601d7de8500af958df899801f45fee3ff3ef3392586af4dc45893b515681665f.tt.gz.part01",
+     "sha256": "59cfefb57425b57359959b2291cae9fbd17f081fe44a41bb5e092ef1cecb18e1",
+     "bytes": 90000000
+    },
+    {
+     "name": "601d7de8500af958df899801f45fee3ff3ef3392586af4dc45893b515681665f.tt.gz.part02",
+     "sha256": "ff135a6bb46ac809f253246aa6800f67f903a0eef062463f8b9fcf5644f4702a",
+     "bytes": 90000000
+    },
+    {
+     "name": "601d7de8500af958df899801f45fee3ff3ef3392586af4dc45893b515681665f.tt.gz.part03",
+     "sha256": "a155b4a7499b5096fab729a463a762f43cbe54331d18180f835f5eb525c8a209",
+     "bytes": 2869259
+    }
+   ]
+  },
+  "bca749db7c2e32839d015c265669c73bc248508d306441fe6b006da763e579f7.tt.gz": {
+   "sha256": "bca749db7c2e32839d015c265669c73bc248508d306441fe6b006da763e579f7",
+   "bytes": 48129040,
+   "state_sha256": "d87d60cda97ea495c801a2a268048798fd964c0348f9910ce5579ea57c7ae01d",
+   "work_path": "guop3683_A1/팰/state.tt",
+   "carried_search_seconds": 600.0
+  }
+ },
+ "file_count": 2,
+ "total_bytes": 230998299
+}
