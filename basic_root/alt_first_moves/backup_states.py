@@ -10,6 +10,9 @@ usage:
         results/states/INDEX.json (status 'staged'). STATE is a path under /home/user/AI-/.work/, or FILE=RELPATH
         to back up a copy FILE (e.g. taken before a run that keeps rewriting the state) that restores to RELPATH.
         Then commit STAGING/TAG to the session branch and run the upload job (upload-proof-releases).
+        A .gz larger than SPLIT_BYTES (GitHub refuses files over 100 MB in a push) is staged as parts NAME.partNN
+        (MANIFEST 'parts': name, sha256, bytes in order); the upload job joins them, checks every part and the whole
+        file, and attaches the WHOLE file NAME to the release, so 'check' and 'restore' see one file as before.
   backup_states.py check TAG
         download every file of TAG again, compare the SHA-256 of the .gz and of the unpacked state, and write the
         result into results/states/INDEX.json.
@@ -105,6 +108,26 @@ def describe(state):
             'input_sha256': sha(state.parent / 'in.txt') if (state.parent / 'in.txt').exists() else None}
 
 
+SPLIT_BYTES = 90_000_000
+
+
+def split_parts(path):
+    """Split path into path.partNN files of at most SPLIT_BYTES; remove path. Returns the part list."""
+    parts = []
+    with open(path, 'rb') as f:
+        i = 1
+        while True:
+            b = f.read(SPLIT_BYTES)
+            if not b:
+                break
+            q = path.with_name(f'{path.name}.part{i:02d}')
+            q.write_bytes(b)
+            parts.append({'name': q.name, 'sha256': hashlib.sha256(b).hexdigest(), 'bytes': len(b)})
+            i += 1
+    path.unlink()
+    return parts
+
+
 def stage(tag, staging, note, states):
     out = Path(staging) / tag
     out.mkdir(parents=True, exist_ok=True)
@@ -128,6 +151,8 @@ def stage(tag, staging, note, states):
              'staged': time.strftime('%Y-%m-%d %H:%M:%S'), 'uploaded_verified': False, **describe(WORK / rel)}
         manifest['files'][name] = {'sha256': gz, 'bytes': e['gz_bytes'], 'state_sha256': raw, 'work_path': str(rel),
                                    'carried_search_seconds': e['carried_search_seconds']}
+        if e['gz_bytes'] > SPLIT_BYTES:
+            manifest['files'][name]['parts'] = split_parts(out / name)
         ix['states'] = [x for x in ix['states'] if not (x['release_tag'] == tag and x['work_path'] == str(rel))] + [e]
         print(rel, f'{e["carried_search_seconds"]:.0f} s in state', f'{e["gz_bytes"] / 1e6:.0f} MB', flush=True)
     manifest['file_count'] = len(manifest['files'])
