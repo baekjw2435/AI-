@@ -2536,6 +2536,46 @@
    },
    "position_sha256": "61e0020437dd5810483400ab9807a70e54d7f5d72c07ff5d60db87a5d3609c70",
    "input_sha256": "9d048d140d7a93996da6d4f04824964baa5a4fdad15df93f3584d0748cfcd027"
+  },
+  {
+   "release_tag": "guop3683-states-2026-11-28a",
+   "asset": "601d7de8500af958df899801f45fee3ff3ef3392586af4dc45893b515681665f.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/guop3683-states-2026-11-28a/601d7de8500af958df899801f45fee3ff3ef3392586af4dc45893b515681665f.tt.gz",
+   "gz_sha256": "601d7de8500af958df899801f45fee3ff3ef3392586af4dc45893b515681665f",
+   "gz_bytes": 182869259,
+   "state_sha256": "759e5e9e4fd2a47621a9f7a9ace2103bd2e3768836b41842bf7c4f9257ca6fba",
+   "state_bytes": 256000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "guop3683_A1/면/state.tt",
+   "note": "2026-11-28 구없샘 3,683단어 A1: 기본 면·기본 팰 각 600초 뒤 미확정 상태(이어 풀기용)",
+   "staged": "2026-11-28 14:04:26",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "면",
+    "history": []
+   },
+   "position_sha256": "837681c66fba2f08a0abdabc4c22682250a00d822d21277e8b54d5958811f3d5",
+   "input_sha256": "81ba9065e749db8a40af3ef01f22b67f3629662198633a230b4a8d7922c34551"
+  },
+  {
+   "release_tag": "guop3683-states-2026-11-28a",
+   "asset": "bca749db7c2e32839d015c265669c73bc248508d306441fe6b006da763e579f7.tt.gz",
+   "url": "https://github.com/baekjw2435/AI-/releases/download/guop3683-states-2026-11-28a/bca749db7c2e32839d015c265669c73bc248508d306441fe6b006da763e579f7.tt.gz",
+   "gz_sha256": "bca749db7c2e32839d015c265669c73bc248508d306441fe6b006da763e579f7",
+   "gz_bytes": 48129040,
+   "state_sha256": "d87d60cda97ea495c801a2a268048798fd964c0348f9910ce5579ea57c7ae01d",
+   "state_bytes": 64000096,
+   "carried_search_seconds": 600.0,
+   "work_path": "guop3683_A1/팰/state.tt",
+   "note": "2026-11-28 구없샘 3,683단어 A1: 기본 면·기본 팰 각 600초 뒤 미확정 상태(이어 풀기용)",
+   "staged": "2026-11-28 14:04:33",
+   "uploaded_verified": false,
+   "position": {
+    "initial_syllable": "팰",
+    "history": []
+   },
+   "position_sha256": "416992f2dbe3b90043bf347614261216b6687353b99b361d3758463af359cdf6",
+   "input_sha256": "9d5208a015b500559cf4234ce59c2e63deda62dcb604cc88b8f5ec6ca2063ee0"
   }
  ]
 }
