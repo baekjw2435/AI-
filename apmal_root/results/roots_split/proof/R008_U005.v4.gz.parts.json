@@ -1,0 +1,18 @@
+{
+ "format": "apmal-big-file-parts-1",
+ "file": "R008_U005.v4.gz",
+ "bytes": 171713789,
+ "sha256": "801dd4a52fe9b5752cb0be955d290f102b87f47b2f12c83758d7809e58e90ed3",
+ "parts": [
+  {
+   "name": "R008_U005.v4.gz.part00",
+   "bytes": 94371840,
+   "sha256": "4e5adefee7c4253438fa45fd4602e047f4855351dfe3fa58570ef4a481fe1707"
+  },
+  {
+   "name": "R008_U005.v4.gz.part01",
+   "bytes": 77341949,
+   "sha256": "771f3361f7ea09ecda39e171e3086d0ce872372b63482b0a39e6118443879f62"
+  }
+ ]
+}
