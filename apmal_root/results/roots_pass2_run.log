@@ -85,3 +85,4 @@
 09:58:19 57/62 R108 둘 차례인 쪽 승 탐색 844.194072s
 # 2026-11-28 10:03:07 컨테이너 재시작(10:00 무렵 멈춤, 57/62까지 끝남) 뒤 tools/resume_pass2.py로 이어서 실행. 남은 국면은 '1800초 − 저장된 탐색 초'만 더 풂
 {"tool": "resume_pass2.py", "pending": ["R109", "R110", "R111", "R112", "R113"], "total_limit_seconds": 1800.0, "tt_mb": 3072, "jobs": 4, "solver": "/home/user/AI-/eoinjeong_root/shield/bin/solver_v5", "verifier": "/home/user/AI-/eoinjeong_root/shield/bin/verify_v4"}
+10:11:14 1/5 R109 미확정 저장 1322.74s + 이번 탐색 477.260052s
