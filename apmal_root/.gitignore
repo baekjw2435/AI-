@@ -4,3 +4,4 @@ results/verify.lock
 shield/bin/
 shield/work/
 __pycache__/
+results/*/proof/*.tmp
