@@ -1,0 +1,8 @@
+1 q40_s1 cap=0 win sec 17.48 nodes 6986558 gens 17553128 tt_entries 3777122
+1 q40_s1 cap=1 win sec 25.79 nodes 7259303 gens 18336435 tt_entries 3929088
+1 q40_s2 cap=0 loss sec 50.65 nodes 16241536 gens 37747835 tt_entries 9046290
+1 q40_s2 cap=1 loss sec 69.21 nodes 14486523 gens 33513096 tt_entries 8090475
+2 q40_s1 cap=0 win sec 16.89 nodes 6986558 gens 17553128 tt_entries 3777122
+2 q40_s1 cap=1 win sec 26.35 nodes 7259303 gens 18336435 tt_entries 3929088
+2 q40_s2 cap=0 loss sec 51.94 nodes 16241536 gens 37747835 tt_entries 9046290
+2 q40_s2 cap=1 loss sec 66.76 nodes 14486523 gens 33513096 tt_entries 8090475
