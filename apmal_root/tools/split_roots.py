@@ -49,6 +49,7 @@ DICT = HERE / 'words_534.txt'
 NWORDS = 534
 ROOT_RES = HERE / 'results' / 'roots' / 'res'
 PLAN = HERE / 'plans' / 'roots.jsonl'
+MAIN_SYL = HERE / 'source' / '루트단어_음절1.txt'
 MAX_DEPTH = 6
 
 
@@ -324,7 +325,10 @@ class Runner:
             stop.wait(20)
 
     def run(self):
-        jobs = [(rid, bi) for rid in sorted(self.roots) for bi in range(len(self.roots[rid]['batches']))]
+        # 주요 루트 음절(source/루트단어_음절1.txt)부터 먼저, 희귀 루트 음절(음절2)은 나중에. 순서만 바뀌고 계산 양은 같음
+        main = {l.split(':')[0].strip() for l in MAIN_SYL.read_text(encoding='utf-8').splitlines() if ':' in l}
+        first = sorted(self.roots, key=lambda rid: (self.roots[rid]['syllable'] not in main, rid))
+        jobs = [(rid, bi) for rid in first for bi in range(len(self.roots[rid]['batches']))]
         print(json.dumps({'roots': len(self.roots), 'units': sum(len(R['units']) for R in self.roots.values()),
                           'batches': len(jobs), 'hours_per_batch': self.plan['hours_per_batch'],
                           'jobs': self.plan['jobs'], 'solver': sc.SOLVER, 'verifier': sc.VERIFY_V4}, ensure_ascii=False),
