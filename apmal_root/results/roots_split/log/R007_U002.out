@@ -1,0 +1,1 @@
+/home/user/AI-/eoinjeong_root/shield/bin/solver_v5 apmal_root/results/roots_split/in/R007_U002.txt --seconds 21600.0 --tt-mb 3072 --threads 1 --proof apmal_root/results/roots_split/proof/R007_U002.v4.gz --proof-format v4 --tt-save apmal_root/results/roots_split/tt/R007_U002.tt --checkpoint-seconds 180.0 --tt-save-max 4000000

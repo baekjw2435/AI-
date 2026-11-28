@@ -1,0 +1,49 @@
+{
+ "format": "apmal-root-split-cert-1",
+ "root": "R007",
+ "syllable": "굉",
+ "value": "W",
+ "rule": "둘 차례인 쪽: 다음 국면 중 하나라도 패면 승, 모두 승이면 패(낼 수 있는 수는 ModelV3로 다시 셈)",
+ "dictionary_sha256": "1271450c11a0b20e793f4f74c3bd90039f3d2d0643fcd451ecc3ad5a9434b62b",
+ "units": [
+  {
+   "history": [
+    "굉웅",
+    "웅왜"
+   ],
+   "unit": "R007_U000",
+   "value": "W",
+   "position": "apmal_root/results/roots_split/pos/R007_U000_0.json",
+   "position_sha256": "19bb3367ce8ded9cc287b6817e05f364741e2f225b0dcad71c28025778c1cea0",
+   "proof": "apmal_root/results/roots_split/proof/R007_U000.v4.gz",
+   "proof_sha256": "b703894e63d7eb1c290bf2cdae60719f6b02def3343db5cce7b9d234c9847d25",
+   "input_sha256": "ca485cf0ab9d7e0d29fcc7cfd307829d58680a8cfb2460189aa230aa88644a54"
+  },
+  {
+   "history": [
+    "굉웅",
+    "웅이남"
+   ],
+   "unit": "R007_U001",
+   "value": "W",
+   "position": "apmal_root/results/roots_split/pos/R007_U001_0.json",
+   "position_sha256": "becdc8fa7b1a9e790f310930afd6987e28b524c9a90186837c9d3700dacd5b63",
+   "proof": "apmal_root/results/roots_split/proof/R007_U001.v4.gz",
+   "proof_sha256": "3632a8605ba3863e651f489fa5035a0e601cec671dccd1994fb6800ed7c4c518",
+   "input_sha256": "bca4e47a933b506adf389a51b3ff925b182ea6b91592fdc55683d000d3e0b53e"
+  },
+  {
+   "history": [
+    "굉웅",
+    "웅차차해남"
+   ],
+   "unit": "R007_U001",
+   "value": "W",
+   "position": "apmal_root/results/roots_split/pos/R007_U001_1.json",
+   "position_sha256": "56d4677974e5b6a3bbe9b22c2422513dd04d341b94765cb6c7358dc5c6d18d8b",
+   "proof": "apmal_root/results/roots_split/proof/R007_U001.v4.gz",
+   "proof_sha256": "3632a8605ba3863e651f489fa5035a0e601cec671dccd1994fb6800ed7c4c518",
+   "input_sha256": "bca4e47a933b506adf389a51b3ff925b182ea6b91592fdc55683d000d3e0b53e"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "uid": "R007_U002",
+ "root": "R007",
+ "positions": [
+  [
+   "굉굉",
+   "굉웅"
+  ]
+ ],
+ "limit_seconds": 21600.0,
+ "tt_mb": 3072,
+ "carried_seconds_before": 0.0,
+ "run_seconds": 566.9965651035309,
+ "spent_seconds": 566.997,
+ "solver": {
+  "result": "error",
+  "returncode": -15,
+  "tail": "",
+  "state_loaded": false,
+  "state_kept": true
+ },
+ "solver_binary_sha256": "9a7cacbdb95501d04d140d2d36b4d3c9ea29f898ababe45eba14be6c8c864714",
+ "verifier_binary_sha256": "292670d48e0b30d2e2581181e7e7adec58984678f38374fdd9003e687fc813d1",
+ "dictionary_sha256": "1271450c11a0b20e793f4f74c3bd90039f3d2d0643fcd451ecc3ad5a9434b62b",
+ "input_sha256": "16966454f8c3b101e4e22847e45970e341e352256a6ccd859d40b6153fb49f3c",
+ "accepted": false,
+ "value": null,
+ "status": "stopped",
+ "wall_solve_seconds": 566.997,
+ "state_kept": true
+}

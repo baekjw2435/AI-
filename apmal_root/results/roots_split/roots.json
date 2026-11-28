@@ -1,0 +1,892 @@
+{
+ "R002": {
+  "syllable": "견",
+  "value": null,
+  "units_accepted": [
+   "R002_U001",
+   "R002_U002",
+   "R002_U003",
+   "R002_U005",
+   "R002_U006",
+   "R002_U009",
+   "R002_U010",
+   "R002_U013",
+   "R002_U014",
+   "R002_U017"
+  ],
+  "units": 18,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   5793.7,
+   1759.0,
+   3563.6,
+   5241.6
+  ]
+ },
+ "R006": {
+  "syllable": "괵",
+  "value": null,
+  "units_accepted": [],
+  "units": 9,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R007": {
+  "syllable": "굉",
+  "value": "W",
+  "units_accepted": [
+   "R007_U000",
+   "R007_U001",
+   "R007_U004"
+  ],
+  "units": 8,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   1190.5,
+   750.7,
+   567.0,
+   0.0
+  ]
+ },
+ "R008": {
+  "syllable": "궐",
+  "value": null,
+  "units_accepted": [
+   "R008_U000",
+   "R008_U001",
+   "R008_U004"
+  ],
+  "units": 29,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   1158.9,
+   1138.7,
+   0.0,
+   0.0
+  ]
+ },
+ "R009": {
+  "syllable": "궤",
+  "value": null,
+  "units_accepted": [],
+  "units": 7,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R014": {
+  "syllable": "남",
+  "value": null,
+  "units_accepted": [],
+  "units": 6,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R020": {
+  "syllable": "땡",
+  "value": null,
+  "units_accepted": [],
+  "units": 6,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R021": {
+  "syllable": "떨",
+  "value": null,
+  "units_accepted": [],
+  "units": 6,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R023": {
+  "syllable": "뚜",
+  "value": null,
+  "units_accepted": [],
+  "units": 14,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R024": {
+  "syllable": "뚤",
+  "value": null,
+  "units_accepted": [],
+  "units": 8,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R025": {
+  "syllable": "띔",
+  "value": null,
+  "units_accepted": [],
+  "units": 14,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R026": {
+  "syllable": "렉",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R029": {
+  "syllable": "룹",
+  "value": null,
+  "units_accepted": [],
+  "units": 6,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R030": {
+  "syllable": "룽",
+  "value": null,
+  "units_accepted": [],
+  "units": 18,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R033": {
+  "syllable": "몽",
+  "value": null,
+  "units_accepted": [],
+  "units": 8,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R035": {
+  "syllable": "붐",
+  "value": null,
+  "units_accepted": [],
+  "units": 11,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R036": {
+  "syllable": "빙",
+  "value": null,
+  "units_accepted": [],
+  "units": 4,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R037": {
+  "syllable": "삶",
+  "value": null,
+  "units_accepted": [],
+  "units": 9,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R038": {
+  "syllable": "섭",
+  "value": null,
+  "units_accepted": [],
+  "units": 6,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R039": {
+  "syllable": "셸",
+  "value": null,
+  "units_accepted": [],
+  "units": 10,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R041": {
+  "syllable": "숯",
+  "value": null,
+  "units_accepted": [],
+  "units": 9,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R043": {
+  "syllable": "싸",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R044": {
+  "syllable": "쑤",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R045": {
+  "syllable": "쑹",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R046": {
+  "syllable": "쓰",
+  "value": null,
+  "units_accepted": [],
+  "units": 6,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R047": {
+  "syllable": "씀",
+  "value": null,
+  "units_accepted": [],
+  "units": 9,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R048": {
+  "syllable": "씬",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R050": {
+  "syllable": "얼",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R052": {
+  "syllable": "왜",
+  "value": null,
+  "units_accepted": [],
+  "units": 12,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R056": {
+  "syllable": "융",
+  "value": null,
+  "units_accepted": [],
+  "units": 8,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R057": {
+  "syllable": "익",
+  "value": null,
+  "units_accepted": [],
+  "units": 10,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R058": {
+  "syllable": "졸",
+  "value": null,
+  "units_accepted": [],
+  "units": 4,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R060": {
+  "syllable": "쭐",
+  "value": null,
+  "units_accepted": [],
+  "units": 15,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R061": {
+  "syllable": "쯔",
+  "value": null,
+  "units_accepted": [],
+  "units": 9,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R062": {
+  "syllable": "찐",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R064": {
+  "syllable": "참",
+  "value": null,
+  "units_accepted": [],
+  "units": 9,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R065": {
+  "syllable": "첨",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R066": {
+  "syllable": "첩",
+  "value": null,
+  "units_accepted": [],
+  "units": 13,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R068": {
+  "syllable": "춘",
+  "value": null,
+  "units_accepted": [],
+  "units": 10,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R069": {
+  "syllable": "친",
+  "value": null,
+  "units_accepted": [],
+  "units": 10,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R070": {
+  "syllable": "캄",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R071": {
+  "syllable": "컥",
+  "value": null,
+  "units_accepted": [],
+  "units": 8,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R072": {
+  "syllable": "컹",
+  "value": null,
+  "units_accepted": [],
+  "units": 8,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R074": {
+  "syllable": "콜",
+  "value": null,
+  "units_accepted": [],
+  "units": 6,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R075": {
+  "syllable": "쾌",
+  "value": null,
+  "units_accepted": [],
+  "units": 4,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R078": {
+  "syllable": "킥",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R080": {
+  "syllable": "택",
+  "value": null,
+  "units_accepted": [],
+  "units": 4,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R081": {
+  "syllable": "텐",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R082": {
+  "syllable": "톡",
+  "value": null,
+  "units_accepted": [],
+  "units": 9,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R083": {
+  "syllable": "퇴",
+  "value": null,
+  "units_accepted": [],
+  "units": 11,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R086": {
+  "syllable": "펀",
+  "value": null,
+  "units_accepted": [],
+  "units": 7,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R089": {
+  "syllable": "픽",
+  "value": null,
+  "units_accepted": [],
+  "units": 4,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R091": {
+  "syllable": "핍",
+  "value": null,
+  "units_accepted": [],
+  "units": 12,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R092": {
+  "syllable": "핏",
+  "value": null,
+  "units_accepted": [],
+  "units": 9,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R094": {
+  "syllable": "향",
+  "value": null,
+  "units_accepted": [],
+  "units": 15,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R095": {
+  "syllable": "헌",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R098": {
+  "syllable": "혁",
+  "value": null,
+  "units_accepted": [],
+  "units": 4,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R099": {
+  "syllable": "혐",
+  "value": null,
+  "units_accepted": [],
+  "units": 14,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R101": {
+  "syllable": "혼",
+  "value": null,
+  "units_accepted": [],
+  "units": 14,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R102": {
+  "syllable": "확",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R105": {
+  "syllable": "훤",
+  "value": null,
+  "units_accepted": [],
+  "units": 28,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R106": {
+  "syllable": "휘",
+  "value": null,
+  "units_accepted": [],
+  "units": 4,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R107": {
+  "syllable": "휴",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R109": {
+  "syllable": "흔",
+  "value": null,
+  "units_accepted": [],
+  "units": 4,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R110": {
+  "syllable": "흡",
+  "value": null,
+  "units_accepted": [],
+  "units": 5,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R111": {
+  "syllable": "흥",
+  "value": null,
+  "units_accepted": [],
+  "units": 6,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "R112": {
+  "syllable": "희",
+  "value": null,
+  "units_accepted": [],
+  "units": 11,
+  "batches": 4,
+  "spent_seconds_by_batch": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ }
+}
