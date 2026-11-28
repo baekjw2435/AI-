@@ -1,0 +1,2 @@
+q40_s1 win nodes 7259303 cap_hits 19342210 hits_on_other_uncapped_state 3065 share 0.02%
+q40_s2 loss nodes 14486523 cap_hits 37219035 hits_on_other_uncapped_state 49040 share 0.13%

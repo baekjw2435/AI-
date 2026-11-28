@@ -1,0 +1,5 @@
+{'models': 1500, 'positions': 43273, 'nodes': 112932, 'changed_by_cap': 2590, 'with_shared': 1445, 'with_shared_loop': 1226, 'mismatches': []}
+mutant no+1 caught cap-once
+mutant nocur caught cap-search
+mutant loop caught cap-once
+ALL OK
