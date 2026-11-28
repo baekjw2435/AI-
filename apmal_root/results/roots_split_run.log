@@ -1,1 +1,2 @@
 # 2026-11-28 10:26:13 시작 전 다시 띄움: 주요 루트 음절(음절1 파일)부터 먼저 풀도록 순서만 바꿈
+{"roots": 67, "units": 578, "batches": 268, "hours_per_batch": 6.0, "jobs": 4, "solver": "/home/user/AI-/eoinjeong_root/shield/bin/solver_v5", "verifier": "/home/user/AI-/eoinjeong_root/shield/bin/verify_v4"}
